@@ -34,7 +34,7 @@ const NEW_APPS_FILE = path.join(DATA_DIR, 'new-apps-this-run.json');
 const FORUM_TOPIC_ID = 100276; // "[LIST] NEW published App in Homey App store" topic
 const DISCOURSE_BASE = 'https://community.homey.app';
 
-const POST_TO_FORUM = process.env.POST_TO_FORUM === 'true';
+const POST_TO_FORUM = process.env.POST_TO_FORUM === 'false';
 const API_KEY = process.env.DISCOURSE_API_KEY;
 const API_USERNAME = process.env.DISCOURSE_API_USERNAME;
 
