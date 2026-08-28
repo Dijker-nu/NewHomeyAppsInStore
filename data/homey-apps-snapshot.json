@@ -14409,15 +14409,6 @@
     "publishedAt": ""
   },
   {
-    "appId": "com.tuyalocal",
-    "name": "",
-    "developerName": "",
-    "developerId": "",
-    "version": "",
-    "sourceRepository": "",
-    "publishedAt": ""
-  },
-  {
     "appId": "com.3reality.cloud",
     "name": "",
     "developerName": "",
@@ -14464,6 +14455,15 @@
   },
   {
     "appId": "com.rickd.devicewatchdog",
+    "name": "",
+    "developerName": "",
+    "developerId": "",
+    "version": "",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.tuyalocal",
     "name": "",
     "developerName": "",
     "developerId": "",
