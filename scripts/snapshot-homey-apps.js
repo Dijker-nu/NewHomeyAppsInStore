@@ -4,6 +4,15 @@
  * data/ directory is checked out from and committed back to the repo
  * so state persists between runs.
  *
+ * NOTE: /app/all turns out to return thin objects (little more than
+ * IDs), not the full per-app detail (name, version, author, source,
+ * etc). The only endpoint confirmed to return that detail is
+ * /app/{appId} for a single app. So this fetches the full ID list
+ * from /app/ids (confirmed to return a plain array of ID strings),
+ * then fetches full details per app with a small concurrency pool.
+ * That means one request per app instead of one request total, so
+ * a full run takes noticeably longer than it used to.
+ *
  * Reads/writes (relative to the repo root, or $DATA_DIR if set):
  *   data/homey-apps-snapshot.json  - full snapshot of the current app list (overwritten each run)
  *   data/homey-new-apps-log.csv    - running log of newly-discovered apps, appended each run
@@ -19,13 +28,52 @@ const BASE_URL = 'https://apps-api.athom.com/api/v1';
 const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const SNAPSHOT_FILE = path.join(DATA_DIR, 'homey-apps-snapshot.json');
 const NEW_APPS_LOG = path.join(DATA_DIR, 'homey-new-apps-log.csv');
+const DETAIL_CONCURRENCY = 8; // number of /app/{appId} requests in flight at once
 
-async function fetchAllApps() {
-  const res = await fetch(`${BASE_URL}/app/all`);
+async function fetchAppIds() {
+  const res = await fetch(`${BASE_URL}/app/ids`);
   if (!res.ok) {
-    throw new Error(`Failed to fetch app list: ${res.status} ${res.statusText}`);
+    throw new Error(`Failed to fetch app IDs: ${res.status} ${res.statusText}`);
   }
   return res.json();
+}
+
+async function fetchAppDetail(id) {
+  try {
+    const res = await fetch(`${BASE_URL}/app/${encodeURIComponent(id)}`);
+    if (!res.ok) {
+      console.warn(`  Warning: failed to fetch details for "${id}" (${res.status} ${res.statusText}). Skipping it this run.`);
+      return null;
+    }
+    return await res.json();
+  } catch (err) {
+    console.warn(`  Warning: error fetching details for "${id}" (${err.message}). Skipping it this run.`);
+    return null;
+  }
+}
+
+async function fetchAllApps() {
+  const ids = await fetchAppIds();
+  console.log(`Found ${ids.length} live app IDs. Fetching full details for each (one request per app)...`);
+
+  const results = [];
+  let nextIndex = 0;
+  let completed = 0;
+
+  async function worker() {
+    while (nextIndex < ids.length) {
+      const i = nextIndex++;
+      const detail = await fetchAppDetail(ids[i]);
+      if (detail) results.push(detail);
+      completed++;
+      if (completed % 100 === 0) {
+        console.log(`  ${completed} / ${ids.length} app details fetched...`);
+      }
+    }
+  }
+
+  await Promise.all(Array.from({ length: DETAIL_CONCURRENCY }, worker));
+  return results;
 }
 
 function simplify(app) {
@@ -83,9 +131,9 @@ async function main() {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 
   console.log('Fetching current app list from apps-api.athom.com ...');
-  const rawApps = await fetchAllApps(); // keep raw objects too -- the forum poster needs more than the simplified fields
+  const rawApps = await fetchAllApps(); // full per-app detail objects -- the forum poster needs more than the simplified fields
   const currentApps = rawApps.map(simplify);
-  console.log(`Retrieved ${currentApps.length} apps.`);
+  console.log(`Retrieved details for ${currentApps.length} apps.`);
 
   const previousSnapshot = loadPreviousSnapshot();
   const runTimestamp = new Date().toISOString();
