@@ -1323,6 +1323,24 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.sony.bravia.smarttv",
+    "name": "Sony Bravia SmartTV app",
+    "developerName": "Sander Maas",
+    "developerId": "5dcaba361c90c866f9364965",
+    "version": "3.0.0",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.weatherlink",
+    "name": "WeatherLink",
+    "developerName": "Marco Gosselink",
+    "developerId": "60316f40ea27a57b4461284a",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/MarcoGos/com.weatherlink",
+    "publishedAt": ""
+  },
+  {
     "appId": "nl.rebtor.sql",
     "name": "SQL",
     "developerName": "Rens Brandwijk",
@@ -3195,6 +3213,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "ch.place4fun.teslalogger",
+    "name": "TeslaLogger",
+    "developerName": "Ronny Troxler",
+    "developerId": "649032f69a54fe7531cde50c",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/TroRon/ch.place4fun.teslalogger",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.sdn.zone-memory",
     "name": "Zone Memory",
     "developerName": "Thomas Hebendanz",
@@ -3609,6 +3636,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.galcar.alsavo",
+    "name": "Alsavo Pool Heat Pump",
+    "developerName": "Gal Carmeli",
+    "developerId": "6565bc0327556f65f0a939a7",
+    "version": "1.0.21",
+    "sourceRepository": "https://github.com/gal-car/com.galcar.alsavo",
+    "publishedAt": ""
+  },
+  {
     "appId": "nl.philips.ir",
     "name": "Philips TV",
     "developerName": "Athom B.V.",
@@ -3915,6 +3951,33 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.bambulab.3dprinter",
+    "name": "Bambu Lab",
+    "developerName": "Magnus Ohlsson",
+    "developerId": "5f91c04ed56d138aba8754c4",
+    "version": "1.0.10",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.papertrail",
+    "name": "Papertrail",
+    "developerName": "Peter Jensen",
+    "developerId": "66c4f843d17e78830705f4f9",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.gruijter.wtlm",
+    "name": "Wireless Tank Level Meter",
+    "developerName": "Robin de Gruijter",
+    "developerId": "5dcab95d1c90c866f9364089",
+    "version": "1.4.1",
+    "sourceRepository": "https://github.com/gruijter/com.gruijter.wtlm",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.smappee",
     "name": "Smappee",
     "developerName": "Edwin van de Pol",
@@ -4002,6 +4065,24 @@
     "developerId": "6a87673ea891707a1c91e05f",
     "version": "1.2.2",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.sysInternals",
+    "name": "sysInternals",
+    "developerName": "Dijker Solutions",
+    "developerId": "6a87673ea891707a1c91e05f",
+    "version": "1.2.2",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.tech-controllers",
+    "name": "TECH Controllers",
+    "developerName": "Tomasz Koperski",
+    "developerId": "62371ebacd04c7cc9ac44c3f",
+    "version": "1.1.2",
+    "sourceRepository": "https://github.com/tomaszkoperski/com.tech-controllers",
     "publishedAt": ""
   },
   {
@@ -5211,6 +5292,51 @@
     "publishedAt": ""
   },
   {
+    "appId": "eu.ketra.ntfy",
+    "name": "Ntfy",
+    "developerName": "kevin traa",
+    "developerId": "5dcabbd21c90c866f9365e9c",
+    "version": "0.1.1",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.olast.vegvesen",
+    "name": "Road cameras in Norway",
+    "developerName": "Ola Strømman",
+    "developerId": "68617a8420832e6198b6a774",
+    "version": "1.0.8",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "nl.inversion.esphome",
+    "name": "ESPhome",
+    "developerName": "Baldhor s",
+    "developerId": "64c10e4b8d3ead05ec9dfd43",
+    "version": "1.3.12",
+    "sourceRepository": "https://github.com/Baldhor/Homey-ESPhome-Enhanced",
+    "publishedAt": ""
+  },
+  {
+    "appId": "de.dresden-elektronik.zigbee",
+    "name": "Dresden Led Controllers",
+    "developerName": "Marco Ruiter",
+    "developerId": "5dcab9cb1c90c866f936449a",
+    "version": "1.0.5",
+    "sourceRepository": "https://github.com/mruiter/com.dresden.zigbee",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.iopool.api",
+    "name": "iopool Pool Monitor",
+    "developerName": "Charles-Alexandre L’Hostis",
+    "developerId": "689d1e6ab4208a20554a370a",
+    "version": "2.0.1",
+    "sourceRepository": "https://github.com/Robvred/homey-iopool-app",
+    "publishedAt": ""
+  },
+  {
     "appId": "linustechtips.vdbcomputers.nl",
     "name": "L",
     "developerName": "Jeroen van den Boogaart",
@@ -5352,6 +5478,60 @@
     "developerId": "6a84b9f0ba59f820310285f9",
     "version": "3.3.0",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "nl.arnovanrossum.flashforge",
+    "name": "FlashForge",
+    "developerName": "Arno van Rossum",
+    "developerId": "68651fd320832e6198b733c7",
+    "version": "0.0.19",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.com.hoftronic",
+    "name": "HOFTRONIC",
+    "developerName": "Yariek Koehof",
+    "developerId": "6863c50d20832e6198b7056a",
+    "version": "1.1.7",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "org.xojs.emporiavue",
+    "name": "EnergyVue",
+    "developerName": "Tim Wilkinson",
+    "developerId": "67bbabc060b8d5d3bacf9883",
+    "version": "1.2.2",
+    "sourceRepository": "https://github.com/aanon4/org.xojs.emporiavue",
+    "publishedAt": ""
+  },
+  {
+    "appId": "de.zerov.discovergymeter",
+    "name": "Inexogy Smart Meter",
+    "developerName": "Christian Völlinger",
+    "developerId": "625c705deee6bc562da7c9cf",
+    "version": "1.0.6",
+    "sourceRepository": "https://github.com/chriszero/de.zerov.discovergymeter",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.omlet.autodoor",
+    "name": "Omlet Autodoor",
+    "developerName": "Bouke Regnerus",
+    "developerId": "602b8774ea27a57b44ec0ddc",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "de.ronnywinkler.mysql",
+    "name": "MySQL",
+    "developerName": "Ronny Winkler",
+    "developerId": "6092ec6afa7856df21c21c8f",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/RonnyWinkler/homey.mysql",
     "publishedAt": ""
   },
   {
@@ -5823,6 +6003,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.somfy.tahoma",
+    "name": "Somfy TaHoma & Connexoon",
+    "developerName": "RockSoft Solutions",
+    "developerId": "5dcabc3f1c90c866f9366458",
+    "version": "4.0.124",
+    "sourceRepository": "https://github.com/AdyRock/com.somfy.tahoma",
+    "publishedAt": ""
+  },
+  {
     "appId": "net.franceweb.intesis",
     "name": "Intesis",
     "developerName": "NovaCore Labs",
@@ -6027,6 +6216,15 @@
     "developerId": "67e445b76cb23bab6c635ade",
     "version": "2.4.12",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "app.bloemendaal.clockwork",
+    "name": "C",
+    "developerName": "Casper Bloemendaal",
+    "developerId": "6905f0393c9d7a6405217d67",
+    "version": "1.0.4",
+    "sourceRepository": "https://github.com/Bloemendaal/app.bloemendaal.clockwork",
     "publishedAt": ""
   },
   {
