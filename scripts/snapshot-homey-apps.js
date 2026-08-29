@@ -76,6 +76,31 @@ async function fetchAllApps() {
   return results;
 }
 
+function communityTopicIdFromApiObject(app) {
+  const candidates = [
+    app.homeyCommunityTopicId,
+    app.communityTopicId,
+    app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+  ];
+  for (const c of candidates) {
+    if (typeof c === 'number' && Number.isFinite(c)) return c;
+    if (typeof c === 'string' && /^\d+$/.test(c)) return Number(c);
+  }
+  return null;
+}
+
+async function communityTopicIdFromAppPage(appId) {
+  try {
+    const res = await fetch(`https://homey.app/a/${encodeURIComponent(appId)}`);
+    if (!res.ok) return null;
+    const html = await res.text();
+    const match = html.match(/community\.homey\.app\/t\/(\d+)/);
+    return match ? Number(match[1]) : null;
+  } catch {
+    return null;
+  }
+}
+
 function simplify(app) {
   const build = app.liveBuild || {};
   const author = app.author || {};
@@ -87,6 +112,12 @@ function simplify(app) {
     version: app.liveVersion || '',
     sourceRepository: build.source || '',
     publishedAt: app.stateChangedAt || '',
+    // Cheap check only (no network) -- most apps won't have this field
+    // exposed via the API, so it'll often be null here. Newly-detected
+    // apps get a more thorough check (with a homey.app page fallback)
+    // further down in main(), since that's a much smaller volume of
+    // per-app network requests to spend on the scrape fallback.
+    communityTopicId: communityTopicIdFromApiObject(app),
   };
 }
 
@@ -111,14 +142,14 @@ function csvEscape(value) {
 
 function appendToNewAppsLog(newApps, discoveredAt) {
   const fileExists = fs.existsSync(NEW_APPS_LOG);
-  const header = ['Discovered At', 'Name', 'App ID', 'Developer Name', 'Developer ID', 'Version', 'Source Repository', 'Published At'];
+  const header = ['Discovered At', 'Name', 'App ID', 'Developer Name', 'Developer ID', 'Version', 'Source Repository', 'Published At', 'Community Topic ID'];
 
   const lines = [];
   if (!fileExists) lines.push(header.join(','));
 
   for (const app of newApps) {
     lines.push(
-      [discoveredAt, app.name, app.appId, app.developerName, app.developerId, app.version, app.sourceRepository, app.publishedAt]
+      [discoveredAt, app.name, app.appId, app.developerName, app.developerId, app.version, app.sourceRepository, app.publishedAt, app.communityTopicId || '']
         .map(csvEscape)
         .join(',')
     );
@@ -149,13 +180,23 @@ async function main() {
       console.log('No new apps since the last snapshot.');
     } else {
       console.log(`Found ${newApps.length} new app(s) since the last snapshot:`);
+
+      // Small volume (just this run's new apps) -- worth the extra
+      // homey.app page fetch to fill in a community topic ID when the
+      // API itself didn't expose one directly.
       for (const app of newApps) {
-        console.log(`  - ${app.name} (${app.appId}) by ${app.developerName}`);
+        if (!app.communityTopicId) {
+          app.communityTopicId = await communityTopicIdFromAppPage(app.appId);
+        }
+        console.log(`  - ${app.name} (${app.appId}) by ${app.developerName}${app.communityTopicId ? ` [topic ${app.communityTopicId}]` : ''}`);
       }
       appendToNewAppsLog(newApps, runTimestamp);
 
+      const topicIdByAppId = new Map(newApps.map((a) => [a.appId, a.communityTopicId]));
       const newIds = new Set(newApps.map((a) => a.appId));
-      newRawApps = rawApps.filter((a) => newIds.has(a.id));
+      newRawApps = rawApps
+        .filter((a) => newIds.has(a.id))
+        .map((a) => ({ ...a, communityTopicId: topicIdByAppId.get(a.id) || null }));
     }
 
     const currentIds = new Set(currentApps.map((a) => a.appId));

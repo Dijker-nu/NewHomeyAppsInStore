@@ -8,7 +8,7 @@
  *   - Only apps for Homey Pro (skips apps whose "platforms" doesn't include "local", if that field is present).
  *   - One reply per app, in the order they were published (oldest first).
  *   - Uses the language-agnostic link: https://homey.app/a/<appId>
- *   - Adds the Community Topic link too, if the app publishes one (see lib/homey-community-topic.js).
+ *   - Adds the Community Topic link too, if the app publishes one (see getCommunityTopicId below).
  *   - Mentions @AppStore, since this poster is not the app's developer.
  *
  * SAFETY: posting is a DRY RUN by default -- it only logs what it would
@@ -26,7 +26,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { getCommunityTopicId } = require('./lib/homey-community-topic');
 
 const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const NEW_APPS_FILE = path.join(DATA_DIR, 'new-apps-this-run.json');
@@ -40,6 +39,40 @@ const API_USERNAME = process.env.DISCOURSE_API_USERNAME;
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// --- Community topic lookup (inlined -- was previously a separate lib
+// file; folded in here so this script has no local require dependency) ---
+
+function communityTopicIdFromApiObject(app) {
+  const candidates = [
+    app.homeyCommunityTopicId,
+    app.communityTopicId,
+    app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+  ];
+  for (const c of candidates) {
+    if (typeof c === 'number' && Number.isFinite(c)) return c;
+    if (typeof c === 'string' && /^\d+$/.test(c)) return Number(c);
+  }
+  return null;
+}
+
+async function communityTopicIdFromAppPage(appId) {
+  try {
+    const res = await fetch(`https://homey.app/a/${encodeURIComponent(appId)}`);
+    if (!res.ok) return null;
+    const html = await res.text();
+    const match = html.match(/community\.homey\.app\/t\/(\d+)/);
+    return match ? Number(match[1]) : null;
+  } catch {
+    return null;
+  }
+}
+
+async function getCommunityTopicId(app) {
+  const fromApi = communityTopicIdFromApiObject(app);
+  if (fromApi !== null) return fromApi;
+  return communityTopicIdFromAppPage(app.id);
 }
 
 function isHomeyProCompatible(app) {
@@ -127,7 +160,10 @@ async function main() {
 
   for (const app of eligible) {
     const name = (app.liveBuild && app.liveBuild.name && (app.liveBuild.name.en || Object.values(app.liveBuild.name)[0])) || app.id;
-    const communityTopicId = await getCommunityTopicId(app);
+    // snapshot-homey-apps.js already resolves and attaches this (including
+    // the homey.app page-scrape fallback) -- only fall back to resolving
+    // it here if this script is ever run against older data that lacks it.
+    const communityTopicId = app.communityTopicId != null ? app.communityTopicId : await getCommunityTopicId(app);
     const body = buildPostBody(app, communityTopicId);
 
     console.log('----------------------------------------');
