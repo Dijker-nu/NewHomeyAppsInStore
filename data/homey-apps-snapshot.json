@@ -14470,5 +14470,23 @@
     "version": "2.3.0",
     "sourceRepository": "https://github.com/gslender/com.gslender.bondbridge",
     "publishedAt": ""
+  },
+  {
+    "appId": "com.tuyalocal",
+    "name": "",
+    "developerName": "",
+    "developerId": "",
+    "version": "",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.gslender.bondbridge",
+    "name": "",
+    "developerName": "",
+    "developerId": "",
+    "version": "",
+    "sourceRepository": "",
+    "publishedAt": ""
   }
 ]
