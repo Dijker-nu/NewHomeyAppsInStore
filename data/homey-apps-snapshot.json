@@ -990,6 +990,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.zoneluminance",
+    "name": "Zone luminance",
+    "developerName": "Jurgen Heine",
+    "developerId": "5dcabcc91c90c866f9366a7a",
+    "version": "0.0.4",
+    "sourceRepository": "https://github.com/jurgenheine/com.zoneluminance",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.yio-remote.homey",
     "name": "YIO Remote",
     "developerName": "Niels de Klerk",
@@ -3915,6 +3924,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.philips.hue.zigbee",
+    "name": "Philips Hue, without the bridge",
+    "developerName": "Johan Bendz",
+    "developerId": "5dcabbf91c90c866f936612d",
+    "version": "2.1.0",
+    "sourceRepository": "https://github.com/JohanBendz/com.philips.hue.zigbee",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.tobybonhof.s3",
     "name": "S3 Buckets",
     "developerName": "Toby Bonhof",
@@ -4239,6 +4257,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.p1",
+    "name": "P1 Smartmeter",
+    "developerName": "Leendert de Kok",
+    "developerId": "5dcab9bc1c90c866f9364426",
+    "version": "4.1.0",
+    "sourceRepository": "https://github.com/koktaildotcom/com.p1.smartmeter",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.gruijter.otgw",
     "name": "OpenTherm Gateway MQTT",
     "developerName": "Robin de Gruijter",
@@ -4389,6 +4416,15 @@
     "developerId": "67503465ba38533f5bef9f83",
     "version": "1.0.6",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "cc.xyzroe.zigusb",
+    "name": "ZigUSB",
+    "developerName": "Arun Neelicattu",
+    "developerId": "65cb5dd9e0e2f40476d6bff7",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/abn/cc.xyzroe.zigusb",
     "publishedAt": ""
   },
   {
@@ -4695,6 +4731,15 @@
     "developerId": "5dcab8e61c90c866f9363c98",
     "version": "1.1.1",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "ch.place4fun.pihole",
+    "name": "PiHole Control",
+    "developerName": "Ronny Troxler",
+    "developerId": "649032f69a54fe7531cde50c",
+    "version": "2.1.2",
+    "sourceRepository": "https://github.com/TroRon/ch.place4fun.pihole",
     "publishedAt": ""
   },
   {
