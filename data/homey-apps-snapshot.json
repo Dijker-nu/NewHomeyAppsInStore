@@ -1521,6 +1521,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "de.mhaid.permundo",
+    "name": "Permundo",
+    "developerName": "Morris Haid",
+    "developerId": "5dcabbd61c90c866f9365ee5",
+    "version": "3.2.0",
+    "sourceRepository": "https://github.com/mhaid/de.mhaid.permundo",
+    "publishedAt": ""
+  },
+  {
     "appId": "se.adamnoren.spotprices",
     "name": "Spot Prices",
     "developerName": "Adam Norén",
@@ -3255,6 +3264,15 @@
     "developerId": "65bfbbf9e0e2f40476cda092",
     "version": "2.2.0",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "no.sparegris",
+    "name": "Piggy Bank",
+    "developerName": "Frode Heggelund",
+    "developerId": "6271b7c7eee6bc562dea81b3",
+    "version": "0.21.14",
+    "sourceRepository": "https://github.com/frodeheg/no.sparegris",
     "publishedAt": ""
   },
   {
@@ -5544,6 +5562,24 @@
     "publishedAt": ""
   },
   {
+    "appId": "de.zerov.discovergymeter",
+    "name": "Inexogy Smart Meter",
+    "developerName": "Christian Völlinger",
+    "developerId": "625c705deee6bc562da7c9cf",
+    "version": "1.0.6",
+    "sourceRepository": "https://github.com/chriszero/de.zerov.discovergymeter",
+    "publishedAt": ""
+  },
+  {
+    "appId": "org.xojs.emporiavue",
+    "name": "EnergyVue",
+    "developerName": "Tim Wilkinson",
+    "developerId": "67bbabc060b8d5d3bacf9883",
+    "version": "1.2.2",
+    "sourceRepository": "https://github.com/aanon4/org.xojs.emporiavue",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.omlet.autodoor",
     "name": "Omlet Autodoor",
     "developerName": "Bouke Regnerus",
@@ -6192,6 +6228,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.somfy.tahoma",
+    "name": "Somfy TaHoma & Connexoon",
+    "developerName": "RockSoft Solutions",
+    "developerId": "5dcabc3f1c90c866f9366458",
+    "version": "4.0.124",
+    "sourceRepository": "https://github.com/AdyRock/com.somfy.tahoma",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.atios",
     "name": "Atios",
     "developerName": "Atios AG",
@@ -6333,6 +6378,15 @@
     "developerId": "6425ab37551bcd1807b0fbfb",
     "version": "1.2.1",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.galcar.netatmo",
+    "name": "Bticino/Legrand/Netatmo",
+    "developerName": "Gal Carmeli",
+    "developerId": "6565bc0327556f65f0a939a7",
+    "version": "1.2.12",
+    "sourceRepository": "https://github.com/gal-car/com.galcar.netatmo",
     "publishedAt": ""
   },
   {
