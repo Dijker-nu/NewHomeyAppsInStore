@@ -1719,6 +1719,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "nl.bochove.knmi",
+    "name": "KNMI (Netherlands)",
+    "developerName": "Jonathan van Bochove",
+    "developerId": "5dcabc5a1c90c866f9366578",
+    "version": "0.1.15",
+    "sourceRepository": "https://github.com/bochove/nl.bochove.knmi",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.gogogate.ismartgate",
     "name": "ismartgate",
     "developerName": "Iver Jordal",
@@ -3219,6 +3228,33 @@
     "developerId": "6488ccb177d2cf3688d807fb",
     "version": "1.0.2",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "io.evvr.lights",
+    "name": "EVVR Lights",
+    "developerName": "Madi Tang",
+    "developerId": "62c55ccdd13d04b0dfd1aada",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.sortedbits.incomfort",
+    "name": "Intergas Incomfort",
+    "developerName": "Wim Haanstra",
+    "developerId": "65948967e707314c73d9c155",
+    "version": "1.5.0",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "org.cflat-inc.homepageExtender",
+    "name": "Homepage Extender",
+    "developerName": "Chris Gross",
+    "developerId": "5dcab8e61c90c866f9363c98",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/cgHome/homey.homepageExtender",
     "publishedAt": ""
   },
   {
@@ -5091,6 +5127,15 @@
     "developerId": "5dcaba391c90c866f9364985",
     "version": "1.0.0",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "no.heimgard",
+    "name": "Heimgard",
+    "developerName": "Heimgard Technologies AS",
+    "developerId": "6638911539c5df66965ede44",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/Coderaxx/Heimgard",
     "publishedAt": ""
   },
   {
