@@ -1179,6 +1179,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "net.hlktech.relay",
+    "name": "Hi-Link Relays",
+    "developerName": "Jochem van de Weerthof",
+    "developerId": "5fb2490fc4ed7a7027373cb9",
+    "version": "0.0.5",
+    "sourceRepository": "https://github.com/jvdweerthof/net.hlktech.relay",
+    "publishedAt": ""
+  },
+  {
     "appId": "it.diederik.wol",
     "name": "Wake on LAN",
     "developerName": "Diederik Bakker",
@@ -2079,6 +2088,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.luke-roberts",
+    "name": "Luke Roberts",
+    "developerName": "Dennie de Groot",
+    "developerId": "5dcab8fb1c90c866f9363d10",
+    "version": "2.1.0",
+    "sourceRepository": "https://github.com/denniedegroot/com.luke.roberts",
+    "publishedAt": ""
+  },
+  {
     "appId": "fi.taelek.ecocontrol",
     "name": "ecoControl",
     "developerName": "Taelek Oy",
@@ -2430,6 +2448,24 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.sdn.lifx-lan2",
+    "name": "LIFX (LAN)",
+    "developerName": "Thomas Hebendanz",
+    "developerId": "5dfd3482e7a813cefff1e702",
+    "version": "2.0.3",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.tuya.cloud",
+    "name": "Tuya cloud",
+    "developerName": "Jurgen Heine",
+    "developerId": "5dcabcc91c90c866f9366a7a",
+    "version": "1.1.23",
+    "sourceRepository": "https://github.com/jurgenheine/com.tuya.cloud",
+    "publishedAt": ""
+  },
+  {
     "appId": "se.tstorm.nicehashremote",
     "name": "NiceHash Remote",
     "developerName": "Theodor Storm",
@@ -2706,6 +2742,15 @@
     "developerId": "619f883c04c76f49f5857bdf",
     "version": "2.2.7",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "nl.mennovanhout.insights-graphs",
+    "name": "Insights Graphs",
+    "developerName": "Menno van Hout",
+    "developerId": "6488ccb177d2cf3688d807fb",
+    "version": "2.0.5",
+    "sourceRepository": "https://github.com/mennovanhout/homey-insights-graphs",
     "publishedAt": ""
   },
   {
@@ -3456,12 +3501,30 @@
     "publishedAt": ""
   },
   {
+    "appId": "it.arturoiafrate.h-unraid-integration",
+    "name": "Unraid",
+    "developerName": "Arturo Iafrate",
+    "developerId": "64a190099a54fe753118b382",
+    "version": "1.5.0",
+    "sourceRepository": "https://github.com/arturoiafrate/it.arturoiafrate.homey-unraid",
+    "publishedAt": ""
+  },
+  {
     "appId": "Ducofocus.modbus",
     "name": "Duco",
     "developerName": "Tjarco Boerkoel",
     "developerId": "65818228559f0bfcc19e7586",
     "version": "0.3.3",
     "sourceRepository": "https://github.com/tjarb/duco.modbus",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.lidl",
+    "name": "Lidl Smart Home",
+    "developerName": "Bortbytt Software",
+    "developerId": "6287d23ef2cbfaad9d271c17",
+    "version": "0.2.5",
+    "sourceRepository": "https://github.com/JohanBendz/com.lidl",
     "publishedAt": ""
   },
   {
@@ -3525,6 +3588,42 @@
     "developerId": "669547fae74780a914de505a",
     "version": "1.2.1",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "se.luxorparts",
+    "name": "Cleverio",
+    "developerName": "Kjell & Co Elektronik AB ",
+    "developerId": "5dcabbcf1c90c866f9365e85",
+    "version": "2.0.2",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.gslender.izone.lights",
+    "name": "iZone Lighting",
+    "developerName": "G Slender",
+    "developerId": "66304bd539c5df669695f665",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "se.pax.calima",
+    "name": "Pax Calima",
+    "developerName": "Christian Ek",
+    "developerId": "5f50c646eae76b0597eaa0a5",
+    "version": "2.0.8",
+    "sourceRepository": "https://github.com/christian-ek/se.calima.pax",
+    "publishedAt": ""
+  },
+  {
+    "appId": "video.frigate",
+    "name": "Frigate NVR",
+    "developerName": "Nicolas Herment",
+    "developerId": "65928140e707314c73656a6d",
+    "version": "1.2.1",
+    "sourceRepository": "https://github.com/nherment/homey-frigate-nvr",
     "publishedAt": ""
   },
   {
@@ -4011,6 +4110,15 @@
     "developerId": "6a84336d4430c25338c20073",
     "version": "2.1.2",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.philips.hue.zigbee",
+    "name": "Philips Hue, without the bridge",
+    "developerName": "Johan Bendz",
+    "developerId": "5dcabbf91c90c866f936612d",
+    "version": "2.1.0",
+    "sourceRepository": "https://github.com/JohanBendz/com.philips.hue.zigbee",
     "publishedAt": ""
   },
   {
@@ -4713,6 +4821,15 @@
     "developerId": "67e0a1606cb23bab6c62cc44",
     "version": "1.0.3",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.eeve.willow",
+    "name": "EEVE",
+    "developerName": "Christophe Rouckhout",
+    "developerId": "625fec5feee6bc562dcf1031",
+    "version": "2.3.1",
+    "sourceRepository": "https://github.com/Tixhyl/com.eeve.willow/",
     "publishedAt": ""
   },
   {
@@ -5454,6 +5571,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "de.ronnywinkler.mysql",
+    "name": "MySQL",
+    "developerName": "Ronny Winkler",
+    "developerId": "6092ec6afa7856df21c21c8f",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/RonnyWinkler/homey.mysql",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.plejd",
     "name": "Plejd",
     "developerName": "Plejd AB",
@@ -5748,6 +5874,15 @@
     "developerId": "6284e787f2cbfaad9d807049",
     "version": "1.2.2",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.baumus.rctpowerstorage",
+    "name": "RCT Power Storage DC",
+    "developerName": "Robin Baum",
+    "developerId": "659c236de707314c73d4ead2",
+    "version": "2.1.9",
+    "sourceRepository": "https://github.com/Baumus/com.baumus.rctpowerstorage",
     "publishedAt": ""
   },
   {
