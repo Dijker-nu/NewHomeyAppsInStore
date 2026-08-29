@@ -1575,6 +1575,24 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.sdn.neopixel-on-rest",
+    "name": "D.A.L.O.R",
+    "developerName": "Thomas Hebendanz",
+    "developerId": "5dfd3482e7a813cefff1e702",
+    "version": "2.0.0",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.myiblinds",
+    "name": "iblinds V3",
+    "developerName": "Chance H",
+    "developerId": "612e450227f9ca4da0b6608e",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/chancehiblinds/Athom-Homey",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.barry.athom",
     "name": "Barry",
     "developerName": "Barry Danmark ApS",
@@ -2238,6 +2256,24 @@
     "developerId": "5dcabc451c90c866f93664b8",
     "version": "3.0.5",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.ikea.tradfri.gateway",
+    "name": "IKEA Trådfri Gateway",
+    "developerName": "Rogier Hofboer",
+    "developerId": "5dcab9921c90c866f9364262",
+    "version": "0.1.9",
+    "sourceRepository": "https://github.com/rogierhofboer/com.ikea.tradfri.gateway",
+    "publishedAt": ""
+  },
+  {
+    "appId": "dev.dadda.localapi",
+    "name": "Local API",
+    "developerName": "Paolo Dadda",
+    "developerId": "6349c65008e3ec50c7a0a1e0",
+    "version": "1.1.5",
+    "sourceRepository": "https://github.com/ilpaolino/homeylocalapi",
     "publishedAt": ""
   },
   {
@@ -4698,6 +4734,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "cc.xyzroe.zigusb",
+    "name": "ZigUSB",
+    "developerName": "Arun Neelicattu",
+    "developerId": "65cb5dd9e0e2f40476d6bff7",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/abn/cc.xyzroe.zigusb",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.microsoft.todo",
     "name": "Microsoft To Do",
     "developerName": "Kim Kokholm",
@@ -6399,6 +6444,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "com.athom.flowchecker",
+    "name": "Flow Checker",
+    "developerName": "Martijn Poppen",
+    "developerId": "5ff80f9160b08808d0bf4a68",
+    "version": "1.37.2",
+    "sourceRepository": "https://github.com/martijnpoppen/com.athom.flowchecker",
+    "publishedAt": ""
+  },
+  {
     "appId": "lektri.co.evcharger",
     "name": "LEKTRI.CO EV Charger",
     "developerName": "G Slender",
@@ -6414,6 +6468,24 @@
     "developerId": "646f50415f623de8aa55c22d",
     "version": "1.1.3",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "com.secuyou.lock",
+    "name": "Secuyou Smart Lock",
+    "developerName": "Secuyou ApS",
+    "developerId": "61ae150a04c76f49f57e6d3a",
+    "version": "4.0.2",
+    "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "pl.mobilus.mobiq",
+    "name": "Mob.iq",
+    "developerName": "Tymoteusz Grabowski",
+    "developerId": "64b8315ff6eb876fdf74d744",
+    "version": "1.1.1",
+    "sourceRepository": "https://github.com/Tymec/pl.mobilus.mobiq",
     "publishedAt": ""
   },
   {
@@ -6795,6 +6867,15 @@
     "publishedAt": ""
   },
   {
+    "appId": "nl.erikvl87.datavista",
+    "name": "DataVista",
+    "developerName": "Erik van Leeuwen",
+    "developerId": "66d710c3645b24bd5bd1ab86",
+    "version": "1.3.5",
+    "sourceRepository": "https://github.com/Erikvl87/nl.erikvl87.datavista",
+    "publishedAt": ""
+  },
+  {
     "appId": "com.stromer.bike",
     "name": "Stromer",
     "developerName": "Wout van den Dool",
@@ -6864,6 +6945,15 @@
     "developerId": "65948967e707314c73d9c155",
     "version": "1.0.3",
     "sourceRepository": "",
+    "publishedAt": ""
+  },
+  {
+    "appId": "de.ronnywinkler.homey.dwdwarnings",
+    "name": "DWD weather warnings",
+    "developerName": "Ronny Winkler",
+    "developerId": "6092ec6afa7856df21c21c8f",
+    "version": "1.2.1",
+    "sourceRepository": "https://github.com/RonnyWinkler/homey.dwdwarnings",
     "publishedAt": ""
   },
   {
