@@ -1,21 +1,44 @@
 /**
- * Snapshot the Homey App Store list and report NEW apps since the
- * last run. Designed to run in CI (e.g. GitHub Actions), where the
- * data/ directory is checked out from and committed back to the repo
- * so state persists between runs.
+ * Incrementally maintains the Homey App Store snapshot:
  *
- * NOTE: /app/all turns out to return thin objects (little more than
- * IDs), not the full per-app detail (name, version, author, source,
- * etc). The only endpoint confirmed to return that detail is
- * /app/{appId} for a single app. So this fetches the full ID list
- * from /app/ids (confirmed to return a plain array of ID strings),
- * then fetches full details per app with a small concurrency pool.
- * That means one request per app instead of one request total, so
- * a full run takes noticeably longer than it used to.
+ *   - data/homey-apps-snapshot.json  -- apps currently (or newly)
+ *     live, sorted old -> new by publishedAt. Existing entries are
+ *     NOT refreshed on later runs -- only new/re-discovered apps are
+ *     added, and an entry is removed the moment its app drops off the
+ *     live /app/ids list (see homey-removed-apps.json below).
+ *   - data/homey-removed-apps.json   -- apps that dropped off the live
+ *     list, keeping the full last-known raw API detail. Re-checked
+ *     each run against /app/{appId} directly (which can still work
+ *     for apps gone private rather than fully deleted), so liveVersion
+ *     and private stay current even after removal.
+ *   - data/homey-new-apps-log.csv    -- running log of newly- or
+ *     re-discovered apps, appended each run.
  *
- * Reads/writes (relative to the repo root, or $DATA_DIR if set):
- *   data/homey-apps-snapshot.json  - full snapshot of the current app list (overwritten each run)
- *   data/homey-new-apps-log.csv    - running log of newly-discovered apps, appended each run
+ * IMPORTANT BEHAVIOR CHANGE from earlier versions of this script: it
+ * used to re-fetch full detail for EVERY live app on EVERY run, so an
+ * already-known app's version etc. stayed current. It no longer does
+ * that -- an already-known, still-live app's snapshot entry is frozen
+ * at whatever it looked like when first discovered. Only genuinely
+ * new/re-discovered apps, and already-removed apps (for their
+ * liveVersion/private re-check), trigger a fetch. This keeps routine
+ * runs fast and cheap, but it does mean the Version column for
+ * long-standing apps won't reflect later updates.
+ *
+ * publishedAt semantics:
+ *   - For an app discovered as brand new (or re-discovered after being
+ *     removed) by this script, publishedAt = that fetch's
+ *     stateChangedAt -- for a genuinely new app that's effectively its
+ *     first-publish date.
+ *   - Apps already in the snapshot before this script started tracking
+ *     them won't have an accurate first-publish date from this script
+ *     alone -- see scripts/backfill-published-dates.js for a one-time
+ *     correction via the /app/{appId}/changelog endpoint.
+ *
+ * NOTE ON A COLD START: if homey-apps-snapshot.json doesn't exist yet
+ * (or is empty), EVERY currently-live app is treated as "brand new"
+ * this run -- so the first run after adopting this script does the
+ * same full-catalog fetch (detail + community-topic lookup) the old
+ * version always did, once. After that, it should only be small deltas.
  *
  * Run with:
  *   node scripts/snapshot-homey-apps.js
@@ -27,8 +50,9 @@ const path = require('path');
 const BASE_URL = 'https://apps-api.athom.com/api/v1';
 const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const SNAPSHOT_FILE = path.join(DATA_DIR, 'homey-apps-snapshot.json');
+const REMOVED_FILE = path.join(DATA_DIR, 'homey-removed-apps.json');
 const NEW_APPS_LOG = path.join(DATA_DIR, 'homey-new-apps-log.csv');
-const DETAIL_CONCURRENCY = 8; // number of /app/{appId} requests in flight at once
+const DETAIL_CONCURRENCY = 8;
 
 async function fetchAppIds() {
   const res = await fetch(`${BASE_URL}/app/ids`);
@@ -38,41 +62,30 @@ async function fetchAppIds() {
   return res.json();
 }
 
+// Note: this deliberately does NOT throw on a non-OK response -- a
+// removed app is expected to sometimes 404 here (fully deleted) or
+// still succeed (gone private but still individually fetchable), and
+// callers need to distinguish "fetch failed" from "app not found" cleanly.
 async function fetchAppDetail(id) {
   try {
     const res = await fetch(`${BASE_URL}/app/${encodeURIComponent(id)}`);
-    if (!res.ok) {
-      console.warn(`  Warning: failed to fetch details for "${id}" (${res.status} ${res.statusText}). Skipping it this run.`);
-      return null;
-    }
-    return await res.json();
+    if (!res.ok) return { ok: false, status: res.status };
+    return { ok: true, data: await res.json() };
   } catch (err) {
-    console.warn(`  Warning: error fetching details for "${id}" (${err.message}). Skipping it this run.`);
-    return null;
+    return { ok: false, error: err.message };
   }
 }
 
-async function fetchAllApps() {
-  const ids = await fetchAppIds();
-  console.log(`Found ${ids.length} live app IDs. Fetching full details for each (one request per app)...`);
-
-  const results = [];
+async function mapConcurrent(items, worker, concurrency) {
+  const results = new Array(items.length);
   let nextIndex = 0;
-  let completed = 0;
-
-  async function worker() {
-    while (nextIndex < ids.length) {
+  async function run() {
+    while (nextIndex < items.length) {
       const i = nextIndex++;
-      const detail = await fetchAppDetail(ids[i]);
-      if (detail) results.push(detail);
-      completed++;
-      if (completed % 100 === 0) {
-        console.log(`  ${completed} / ${ids.length} app details fetched...`);
-      }
+      results[i] = await worker(items[i], i);
     }
   }
-
-  await Promise.all(Array.from({ length: DETAIL_CONCURRENCY }, worker));
+  await Promise.all(Array.from({ length: Math.max(1, Math.min(concurrency, items.length)) }, run));
   return results;
 }
 
@@ -112,22 +125,17 @@ function simplify(app) {
     version: app.liveVersion || '',
     sourceRepository: build.source || '',
     publishedAt: app.stateChangedAt || '',
-    // Cheap check only (no network) -- most apps won't have this field
-    // exposed via the API, so it'll often be null here. Newly-detected
-    // apps get a more thorough check (with a homey.app page fallback)
-    // further down in main(), since that's a much smaller volume of
-    // per-app network requests to spend on the scrape fallback.
     communityTopicId: communityTopicIdFromApiObject(app),
   };
 }
 
-function loadPreviousSnapshot() {
-  if (!fs.existsSync(SNAPSHOT_FILE)) return null;
+function loadJson(file, fallback) {
+  if (!fs.existsSync(file)) return fallback;
   try {
-    return JSON.parse(fs.readFileSync(SNAPSHOT_FILE, 'utf8'));
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
   } catch (err) {
-    console.warn(`Warning: could not read/parse existing snapshot (${err.message}). Treating this as a first run.`);
-    return null;
+    console.warn(`Warning: could not read/parse ${file} (${err.message}). Using fallback.`);
+    return fallback;
   }
 }
 
@@ -161,58 +169,156 @@ function appendToNewAppsLog(newApps, discoveredAt) {
 async function main() {
   fs.mkdirSync(DATA_DIR, { recursive: true });
 
-  console.log('Fetching current app list from apps-api.athom.com ...');
-  const rawApps = await fetchAllApps(); // full per-app detail objects -- the forum poster needs more than the simplified fields
-  const currentApps = rawApps.map(simplify);
-  console.log(`Retrieved details for ${currentApps.length} apps.`);
+  console.log('Fetching current live app IDs...');
+  const liveIds = await fetchAppIds();
+  const liveIdSet = new Set(liveIds);
+  console.log(`Found ${liveIds.length} live app IDs.`);
 
-  const previousSnapshot = loadPreviousSnapshot();
+  const snapshot = loadJson(SNAPSHOT_FILE, []); // simplified objects, kept sorted old -> new
+  const removedList = loadJson(REMOVED_FILE, []); // removed-app records with full raw detail
+
+  const snapshotIds = new Set(snapshot.map((a) => a.appId));
+  const removedIds = new Set(removedList.map((r) => r.appId));
+
+  const brandNewIds = liveIds.filter((id) => !snapshotIds.has(id) && !removedIds.has(id));
+  const rediscoveredIds = liveIds.filter((id) => removedIds.has(id));
+  const goneIds = [...snapshotIds].filter((id) => !liveIdSet.has(id));
+
   const runTimestamp = new Date().toISOString();
-  let newRawApps = [];
+  const loggedNewApps = [];
+  const newRawApps = []; // consumed by scripts/post-new-apps-to-forum.js
 
-  if (previousSnapshot === null) {
-    console.log('No previous snapshot found -- this is the first run. Saving baseline.');
-  } else {
-    const previousIds = new Set(previousSnapshot.map((a) => a.appId));
-    const newApps = currentApps.filter((a) => !previousIds.has(a.appId));
+  // --- Brand-new + re-discovered apps: fetch full detail, add to snapshot ---
+  const toDiscover = [...brandNewIds, ...rediscoveredIds];
+  if (toDiscover.length > 0) {
+    console.log(`${brandNewIds.length} brand-new app(s), ${rediscoveredIds.length} re-discovered app(s). Fetching details...`);
 
-    if (newApps.length === 0) {
-      console.log('No new apps since the last snapshot.');
-    } else {
-      console.log(`Found ${newApps.length} new app(s) since the last snapshot:`);
-
-      // Small volume (just this run's new apps) -- worth the extra
-      // homey.app page fetch to fill in a community topic ID when the
-      // API itself didn't expose one directly.
-      for (const app of newApps) {
-        if (!app.communityTopicId) {
-          app.communityTopicId = await communityTopicIdFromAppPage(app.appId);
+    const fetched = await mapConcurrent(
+      toDiscover,
+      async (id) => {
+        const result = await fetchAppDetail(id);
+        if (!result.ok) {
+          console.warn(`  Warning: failed to fetch details for "${id}". Skipping it this run.`);
+          return null;
         }
-        console.log(`  - ${app.name} (${app.appId}) by ${app.developerName}${app.communityTopicId ? ` [topic ${app.communityTopicId}]` : ''}`);
-      }
-      appendToNewAppsLog(newApps, runTimestamp);
+        return result.data;
+      },
+      DETAIL_CONCURRENCY
+    );
 
-      const topicIdByAppId = new Map(newApps.map((a) => [a.appId, a.communityTopicId]));
-      const newIds = new Set(newApps.map((a) => a.appId));
-      newRawApps = rawApps
-        .filter((a) => newIds.has(a.id))
-        .map((a) => ({ ...a, communityTopicId: topicIdByAppId.get(a.id) || null }));
+    for (const raw of fetched.filter(Boolean)) {
+      const simplified = simplify(raw);
+      if (!simplified.communityTopicId) {
+        simplified.communityTopicId = await communityTopicIdFromAppPage(simplified.appId);
+      }
+      snapshot.push(simplified);
+      loggedNewApps.push(simplified);
+      newRawApps.push({ ...raw, communityTopicId: simplified.communityTopicId });
+      console.log(`  - ${simplified.name} (${simplified.appId}) by ${simplified.developerName}${simplified.communityTopicId ? ` [topic ${simplified.communityTopicId}]` : ''}`);
     }
 
-    const currentIds = new Set(currentApps.map((a) => a.appId));
-    const removedApps = previousSnapshot.filter((a) => !currentIds.has(a.appId));
-    if (removedApps.length > 0) {
-      console.log(`Note: ${removedApps.length} app(s) no longer listed (removed/delisted).`);
+    // Apps that came back are no longer "removed".
+    const rediscoveredSet = new Set(rediscoveredIds);
+    for (let i = removedList.length - 1; i >= 0; i--) {
+      if (rediscoveredSet.has(removedList[i].appId)) removedList.splice(i, 1);
+    }
+  } else {
+    console.log('No new or re-discovered apps this run.');
+  }
+
+  if (loggedNewApps.length > 0) {
+    appendToNewAppsLog(loggedNewApps, runTimestamp);
+  }
+
+  // --- Apps that disappeared from the live list this run: move to the removed-apps file ---
+  if (goneIds.length > 0) {
+    console.log(`${goneIds.length} app(s) dropped off the live list. Checking each individually and moving to the removed-apps file...`);
+
+    const goneSet = new Set(goneIds);
+    const goneEntries = snapshot.filter((a) => goneSet.has(a.appId));
+    for (let i = snapshot.length - 1; i >= 0; i--) {
+      if (goneSet.has(snapshot[i].appId)) snapshot.splice(i, 1);
+    }
+
+    const newlyRemoved = await mapConcurrent(
+      goneEntries,
+      async (entry) => {
+        const result = await fetchAppDetail(entry.appId);
+        const now = new Date().toISOString();
+        if (result.ok) {
+          const raw = result.data;
+          return {
+            appId: entry.appId,
+            name: entry.name,
+            developerName: entry.developerName,
+            removedAt: now,
+            lastCheckedAt: now,
+            liveVersion: raw.liveVersion || entry.version || '',
+            private: typeof raw.private === 'boolean' ? raw.private : null,
+            raw,
+          };
+        }
+        return {
+          appId: entry.appId,
+          name: entry.name,
+          developerName: entry.developerName,
+          removedAt: now,
+          lastCheckedAt: now,
+          liveVersion: entry.version || '',
+          private: null,
+          raw: null, // not fetchable individually either -- likely fully deleted
+        };
+      },
+      DETAIL_CONCURRENCY
+    );
+
+    removedList.push(...newlyRemoved);
+    for (const r of newlyRemoved) {
+      console.log(`  - removed: ${r.name} (${r.appId})${r.raw ? '' : ' (no longer fetchable individually)'}`);
     }
   }
 
-  // Full raw app objects for whatever's new THIS run -- consumed by
-  // scripts/post-new-apps-to-forum.js. Overwritten every run (empty
-  // array if nothing new), so it never grows unbounded.
-  fs.writeFileSync(path.join(DATA_DIR, 'new-apps-this-run.json'), JSON.stringify(newRawApps, null, 2), 'utf8');
+  // --- Re-check apps that were ALREADY removed (and still are), so liveVersion/private stay current ---
+  const justRemovedSet = new Set(goneIds);
+  const stillRemoved = removedList.filter((r) => !liveIdSet.has(r.appId) && !justRemovedSet.has(r.appId));
+  if (stillRemoved.length > 0) {
+    console.log(`Re-checking ${stillRemoved.length} previously-removed app(s) for updates...`);
 
-  fs.writeFileSync(SNAPSHOT_FILE, JSON.stringify(currentApps, null, 2), 'utf8');
-  console.log(`Snapshot saved (${currentApps.length} apps).`);
+    const updates = await mapConcurrent(
+      stillRemoved,
+      async (entry) => {
+        const result = await fetchAppDetail(entry.appId);
+        const now = new Date().toISOString();
+        if (result.ok) {
+          const raw = result.data;
+          return {
+            appId: entry.appId,
+            lastCheckedAt: now,
+            liveVersion: raw.liveVersion || entry.liveVersion || '',
+            private: typeof raw.private === 'boolean' ? raw.private : entry.private,
+            raw,
+          };
+        }
+        return { appId: entry.appId, lastCheckedAt: now };
+      },
+      DETAIL_CONCURRENCY
+    );
+
+    const updateById = new Map(updates.map((u) => [u.appId, u]));
+    for (let i = 0; i < removedList.length; i++) {
+      const u = updateById.get(removedList[i].appId);
+      if (u) removedList[i] = { ...removedList[i], ...u };
+    }
+  }
+
+  // Keep the snapshot sorted old -> new by publishedAt, always.
+  snapshot.sort((a, b) => new Date(a.publishedAt || 0) - new Date(b.publishedAt || 0));
+
+  fs.writeFileSync(path.join(DATA_DIR, 'new-apps-this-run.json'), JSON.stringify(newRawApps, null, 2), 'utf8');
+  fs.writeFileSync(SNAPSHOT_FILE, JSON.stringify(snapshot, null, 2), 'utf8');
+  fs.writeFileSync(REMOVED_FILE, JSON.stringify(removedList, null, 2), 'utf8');
+
+  console.log(`Done. Snapshot: ${snapshot.length} live apps. Removed: ${removedList.length} apps.`);
 }
 
 main().catch((err) => {
