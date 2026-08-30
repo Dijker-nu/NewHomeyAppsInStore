@@ -1,1 +1,11 @@
-[]
+[  {
+    "appId": "com.awox",
+    "name": "AwoX",
+    "developerName": "Dijker Solutions",
+    "developerId": "67a920e4ffb4956daea9e7b8",
+    "version": "0.1.1",
+    "sourceRepository": "",
+    "publishedAt": "2022-05-02T20:20:45.160Z",
+    "communityTopicId": 63043
+  }
+]
