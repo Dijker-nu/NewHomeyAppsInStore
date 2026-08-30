@@ -1,4 +1,5 @@
-[  {
+[
+  {
     "appId": "com.awox",
     "name": "AwoX",
     "developerName": "Dijker Solutions",
@@ -6,6 +7,420 @@
     "version": "0.1.1",
     "sourceRepository": "",
     "publishedAt": "2022-05-02T20:20:45.160Z",
-    "communityTopicId": 63043
+    "communityTopicId": 63043,
+    "lastCheckedAt": "2026-08-30T21:32:10.332Z",
+    "liveVersion": "0.1.1",
+    "private": true,
+    "raw": {
+      "id": "com.awox",
+      "rating": 5,
+      "liveBuild": {
+        "id": 10,
+        "name": {
+          "en": "AwoX"
+        },
+        "version": "0.1.1",
+        "readme": {
+          "en": "AwoX is a specialist in connected lighting.\r\nThe company has a very wide range of connected lighting products.\r\nThese are also sold under the brand EGLO Connect by AwoX\r\n\r\nTHIS APP IS DEPRICATED!\r\nPlease Migrate to Official Supported Brand the App https://homey.app/a/com.eglo/\r\n\r\n\r\nThe app is a Community initiative.\r\n\r\nAt this moment only Zigbee is supported for the devices, no Bluetooth.\r\n\r\nNote:\r\nUntil FirmWare 2.3.9, AwoX used one common Zigbee ProductID for multiple types of devices (Dim, Tunable, RGB, E27, GU10, LEDpannels, etc.)\r\nAs of Firmware 2.3.12, AwoX is giving different products their own Zigbee ProductID.\r\nAdvice: First update the Firmware via the Mobile AwoX App via Bluetooth, otherwise this will cause problems later.\r\nSee community forum for the added productIDs\r\n",
+          "de": "AwoX ist Spezialist für vernetzte Beleuchtung.\r\nDas Unternehmen verfügt über eine sehr breite Palette an vernetzten Beleuchtungsprodukten.\r\nDiese werden auch unter der Marke EGLO Connect by AwoX vertrieben\r\n\r\nDIESE APP IST VERALTET!\r\nBitte migrieren Sie zur offiziell unterstützten Marke der App https://homey.app/a/com.eglo/\r\n\r\nDie App ist eine Community initiative.\r\n\r\nMomentan wird für die Geräte nur Zigbee unterstützt, kein Bluetooth.\r\n\r\nAnmerkung:\r\nBis Firmware 2.3.9 verwendete AwoX eine gemeinsame Zigbee-Produkt-ID für mehrere Gerätetypen (Dim, Tunable, RGB, E27, GU10, LED-Panels usw.)\r\nAb Firmware 2.3.12 gibt AwoX verschiedenen Produkten eine eigene Zigbee ProductID.\r\nHinweis: Aktualisieren Sie zuerst die Firmware über die Mobile AwoX App per Bluetooth, sonst führt dies später zu Problemen.\r\nSiehe Community-Forum für die hinzugefügten Produkt-IDs\r\n",
+          "nl": "AwoX is specialist in slimme verlichting.\r\nHet bedrijf heeft een zeer breed assortiment slimme  verlichtingsproducten.\r\nDeze worden ook verkocht onder het merk EGLO Connect by AwoX\r\n\r\nDEZE APP IS VEROUDERD!\r\nMigreer naar de officieel door het merk ondersteunde  app https://homey.app/a/com.eglo/\r\n\r\nDe app is een community initiatief.\r\n\r\nOp dit moment wordt alleen Zigbee ondersteund voor de apparaten, geen Bluetooth.\r\n\r\nOpmerking:\r\nAwoX gebruikte tot FirmWare 2.3.9 één gemeenschappelijke Zigbee ProductID voor meerdere soorten apparaten (Dim, Tunable, RGB, E27, GU10, LEDpannels, etc.)\r\nVanaf Firmware 2.3.12 is AwoX verschillende producten een eigen Zigbee ProductID aan het geven.\r\nAdvies: Eerst de Firmware  updaten via de Mobile AwoX App via Bluetooth omdat dit anders later problemen geeft.\r\nZie community forum voor de toegevoegde productIDs\r\n"
+        },
+        "description": {
+          "en": "Connected Lighting"
+        },
+        "category": "lights",
+        "brandColor": "#64C6A8",
+        "icon": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/assets/icon.svg",
+        "imageSmall": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/assets/images/small.png",
+        "imageLarge": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/assets/images/large.png",
+        "drivers": [
+          {
+            "id": "tlsr82xx_dimable",
+            "name": {
+              "en": "Dimmable bulb"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_dimable/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_dimable/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_dimable/assets/icon.svg"
+          },
+          {
+            "id": "tlsr82xx_rgb",
+            "name": {
+              "en": "RGB bulb"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature",
+              "light_hue",
+              "light_saturation"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_rgb/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_rgb/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_rgb/assets/icon.svg"
+          },
+          {
+            "id": "tlsr82xx_rgb_GU10",
+            "name": {
+              "en": "RGB GU10 Spot"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature",
+              "light_hue",
+              "light_saturation"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_rgb_GU10/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_rgb_GU10/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_rgb_GU10/assets/icon.svg"
+          },
+          {
+            "id": "tlsr82xx_tunable",
+            "name": {
+              "en": "Tunable bulb"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_tunable/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_tunable/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/10/f220d35d-8ba2-47c3-b7e9-9fcd73082586/drivers/tlsr82xx_tunable/assets/icon.svg"
+          }
+        ],
+        "flow": {
+          "triggers": null,
+          "conditions": null,
+          "actions": null
+        },
+        "screensavers": [],
+        "homeyCommunityTopicId": 63043,
+        "state": "live",
+        "stateChangedAt": "2024-08-15T12:24:19.562Z",
+        "bugs": null,
+        "homepage": null,
+        "support": "https://community.homey.app/t/63043/23",
+        "source": null,
+        "contributors": {
+          "developers": [
+            {
+              "_id": "66bdf2dd6aeb56a1cffa395e",
+              "name": "Geurt Dijker"
+            }
+          ],
+          "translators": []
+        },
+        "contributing": {
+          "donate": {
+            "paypal": {
+              "username": "Dijker"
+            },
+            "patreon": {
+              "username": "Dijker"
+            }
+          }
+        },
+        "permissions": [],
+        "changelog": {
+          "en": "Bugfix"
+        },
+        "compatibility": ">=5.0.0",
+        "tags": null,
+        "platforms": [
+          "local"
+        ],
+        "sdk": 3,
+        "platformLocalRequiredFeatures": [],
+        "platformLocalOptionalFeatures": [],
+        "runtime": "nodejs"
+      },
+      "liveVersion": "0.1.1",
+      "testBuild": {
+        "id": 11,
+        "name": {
+          "en": "AwoX"
+        },
+        "version": "0.1.2",
+        "readme": {
+          "en": "AwoX is a specialist in connected lighting.\r\nThe company has a very wide range of connected lighting products.\r\nThese are also sold under the brand EGLO Connect by AwoX\r\n\r\nTHIS APP IS DEPRICATED!\r\nPlease Migrate to Official Supported Brand the App https://homey.app/a/com.eglo/\r\n\r\n\r\nThe app is a Community initiative.\r\n\r\nAt this moment only Zigbee is supported for the devices, no Bluetooth.\r\n\r\nNote:\r\nUntil FirmWare 2.3.9, AwoX used one common Zigbee ProductID for multiple types of devices (Dim, Tunable, RGB, E27, GU10, LEDpannels, etc.)\r\nAs of Firmware 2.3.12, AwoX is giving different products their own Zigbee ProductID.\r\nAdvice: First update the Firmware via the Mobile AwoX App via Bluetooth, otherwise this will cause problems later.\r\nSee community forum for the added productIDs\r\n",
+          "de": "AwoX ist Spezialist für vernetzte Beleuchtung.\r\nDas Unternehmen verfügt über eine sehr breite Palette an vernetzten Beleuchtungsprodukten.\r\nDiese werden auch unter der Marke EGLO Connect by AwoX vertrieben\r\n\r\nDIESE APP IST VERALTET!\r\nBitte migrieren Sie zur offiziell unterstützten Marke der App https://homey.app/a/com.eglo/\r\n\r\nDie App ist eine Community initiative.\r\n\r\nMomentan wird für die Geräte nur Zigbee unterstützt, kein Bluetooth.\r\n\r\nAnmerkung:\r\nBis Firmware 2.3.9 verwendete AwoX eine gemeinsame Zigbee-Produkt-ID für mehrere Gerätetypen (Dim, Tunable, RGB, E27, GU10, LED-Panels usw.)\r\nAb Firmware 2.3.12 gibt AwoX verschiedenen Produkten eine eigene Zigbee ProductID.\r\nHinweis: Aktualisieren Sie zuerst die Firmware über die Mobile AwoX App per Bluetooth, sonst führt dies später zu Problemen.\r\nSiehe Community-Forum für die hinzugefügten Produkt-IDs\r\n",
+          "nl": "AwoX is specialist in slimme verlichting.\r\nHet bedrijf heeft een zeer breed assortiment slimme  verlichtingsproducten.\r\nDeze worden ook verkocht onder het merk EGLO Connect by AwoX\r\n\r\nDEZE APP IS VEROUDERD!\r\nMigreer naar de officieel door het merk ondersteunde  app https://homey.app/a/com.eglo/\r\n\r\nDe app is een community initiatief.\r\n\r\nOp dit moment wordt alleen Zigbee ondersteund voor de apparaten, geen Bluetooth.\r\n\r\nOpmerking:\r\nAwoX gebruikte tot FirmWare 2.3.9 één gemeenschappelijke Zigbee ProductID voor meerdere soorten apparaten (Dim, Tunable, RGB, E27, GU10, LEDpannels, etc.)\r\nVanaf Firmware 2.3.12 is AwoX verschillende producten een eigen Zigbee ProductID aan het geven.\r\nAdvies: Eerst de Firmware  updaten via de Mobile AwoX App via Bluetooth omdat dit anders later problemen geeft.\r\nZie community forum voor de toegevoegde productIDs\r\n"
+        },
+        "description": {
+          "en": "Connected Lighting"
+        },
+        "category": "lights",
+        "brandColor": "#64C6A8",
+        "icon": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/assets/icon.svg",
+        "imageSmall": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/assets/images/small.png",
+        "imageLarge": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/assets/images/large.png",
+        "drivers": [
+          {
+            "id": "tlsr82xx_dimable",
+            "name": {
+              "en": "Dimmable bulb"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_dimable/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_dimable/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_dimable/assets/icon.svg"
+          },
+          {
+            "id": "tlsr82xx_rgb",
+            "name": {
+              "en": "RGB bulb"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature",
+              "light_hue",
+              "light_saturation"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_rgb/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_rgb/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_rgb/assets/icon.svg"
+          },
+          {
+            "id": "tlsr82xx_rgb_GU10",
+            "name": {
+              "en": "RGB GU10 Spot"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature",
+              "light_hue",
+              "light_saturation"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_rgb_GU10/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_rgb_GU10/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_rgb_GU10/assets/icon.svg"
+          },
+          {
+            "id": "tlsr82xx_tunable",
+            "name": {
+              "en": "Tunable bulb"
+            },
+            "class": "light",
+            "capabilities": [
+              "onoff",
+              "dim",
+              "light_temperature"
+            ],
+            "capabilitiesOptions": {
+              "dim": {
+                "opts": {
+                  "duration": true
+                }
+              },
+              "onoff": {
+                "setOnDim": false
+              }
+            },
+            "energy": null,
+            "imageSmall": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_tunable/assets/images/small.png",
+            "imageLarge": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_tunable/assets/images/large.png",
+            "platforms": [
+              "local"
+            ],
+            "connectivity": [
+              "zigbee"
+            ],
+            "icon": "https://apps.homeycdn.net/app/com.awox/11/d8020eed-340c-4dc4-9e1e-0819b72807e6/drivers/tlsr82xx_tunable/assets/icon.svg"
+          }
+        ],
+        "flow": {
+          "triggers": null,
+          "conditions": null,
+          "actions": null
+        },
+        "screensavers": [],
+        "homeyCommunityTopicId": 63043,
+        "state": "test",
+        "stateChangedAt": "2024-08-15T14:10:19.476Z",
+        "bugs": null,
+        "homepage": null,
+        "support": "https://community.homey.app/t/63043/23",
+        "source": null,
+        "contributors": {
+          "developers": [
+            {
+              "_id": "66be0c41eb75eff7b16618bb",
+              "name": "Geurt Dijker"
+            }
+          ],
+          "translators": []
+        },
+        "contributing": {
+          "donate": {
+            "paypal": {
+              "username": "Dijker"
+            },
+            "patreon": {
+              "username": "Dijker"
+            }
+          }
+        },
+        "permissions": [],
+        "changelog": {
+          "en": "Bump"
+        },
+        "compatibility": ">=5.0.0",
+        "tags": null,
+        "platforms": [
+          "local"
+        ],
+        "sdk": 3,
+        "platformLocalRequiredFeatures": [],
+        "platformLocalOptionalFeatures": [],
+        "runtime": "nodejs"
+      },
+      "testVersion": "0.1.2",
+      "private": true,
+      "sponsoredUrl": {},
+      "author": {
+        "id": "67a925b762b00d00c4d1b08c",
+        "type": "user",
+        "userId": "67a920e4ffb4956daea9e7b8",
+        "name": "Dijker Solutions",
+        "verified": true
+      }
+    }
   }
 ]
