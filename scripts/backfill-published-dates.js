@@ -45,13 +45,19 @@ async function fetchAppDetail(id) {
 // Earliest changelog entry's createdAt = closest we can get to a true
 // first-publish date (stateChangedAt only reflects the MOST RECENT
 // publish/update, which is what caused the original data-quality issue).
+//
+// The endpoint returns an OBJECT keyed by version string, e.g.
+//   { "1.0.3": { state, changelog, createdAt }, "1.0.5": { ... } }
+// not an array -- so this reads Object.values() rather than assuming
+// an array shape.
 async function fetchFirstPublishedDate(id) {
   try {
     const res = await fetch(`${BASE_URL}/app/${encodeURIComponent(id)}/changelog`);
     if (!res.ok) return null;
-    const entries = await res.json();
-    if (!Array.isArray(entries) || entries.length === 0) return null;
-    const dates = entries.map((e) => e.createdAt).filter(Boolean).sort();
+    const data = await res.json();
+    if (!data || typeof data !== 'object') return null;
+    const entries = Array.isArray(data) ? data : Object.values(data);
+    const dates = entries.map((e) => e && e.createdAt).filter(Boolean).sort();
     return dates[0] || null;
   } catch {
     return null;
