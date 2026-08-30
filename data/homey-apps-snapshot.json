@@ -1,15 +1,5 @@
 [
   {
-    "appId": "com.lg.hombot",
-    "name": "LG Hombot",
-    "developerName": "Frank van der Stad",
-    "developerId": "64146833a03de60aa9cf43ad",
-    "version": "0.9.7",
-    "sourceRepository": "",
-    "publishedAt": "2019-11-12T13:54:55.690Z",
-    "communityTopicId": null
-  },
-  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",
@@ -567,6 +557,16 @@
     "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:54:54.668Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.lg.hombot",
+    "name": "LG Hombot",
+    "developerName": "Frank van der Stad",
+    "developerId": "64146833a03de60aa9cf43ad",
+    "version": "0.9.7",
+    "sourceRepository": "",
+    "publishedAt": "2019-11-12T13:54:55.690Z",
     "communityTopicId": null
   },
   {
