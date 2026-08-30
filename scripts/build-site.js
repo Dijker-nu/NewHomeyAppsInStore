@@ -331,19 +331,19 @@ const INDEX_HTML = `<!DOCTYPE html>
           : tab === 'retired'
             ? 'No retired apps detected yet.'
             : 'No data yet. Check back after the next scheduled run.';
-        emptyEl.style.display = '';
+        emptyEl.style.display = 'block';
         captionEl.style.display = 'none';
       } else if (shown.length === 0) {
         emptyEl.textContent = 'No matches for that search.';
-        emptyEl.style.display = '';
+        emptyEl.style.display = 'block';
         captionEl.style.display = 'none';
       } else {
         emptyEl.style.display = 'none';
-        captionEl.style.display = '';
+        captionEl.style.display = 'block';
         captionEl.textContent = 'Showing ' + shown.length + ' of ' + filtered.length + ' matching app(s).';
       }
 
-      loadMoreWrap.style.display = filtered.length > shown.length ? '' : 'none';
+      loadMoreWrap.style.display = filtered.length > shown.length ? 'block' : 'none';
     }
 
     function switchTab(tab) {
