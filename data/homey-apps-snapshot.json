@@ -1,5 +1,35 @@
 [
   {
+    "appId": "com.kristerolsson63.husdatav5",
+    "name": "Husdata H66",
+    "developerName": "krister Olsson",
+    "developerId": "6a80287ac6a80eeabce30ab5",
+    "version": "21.0.0",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "dk.smartgulvvarme",
+    "name": "Smart Gulvvarme",
+    "developerName": "Henrik Lund Thomassen",
+    "developerId": "6a908a8630ac038fba70397f",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/henrikbak/smart-gulvvarme",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "io.github.passerelledio.homebox",
+    "name": "DiO HomeBox Gateway",
+    "developerName": "Nicolas Langlois",
+    "developerId": "6a80d8f3c6a80eeabce37b33",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",
