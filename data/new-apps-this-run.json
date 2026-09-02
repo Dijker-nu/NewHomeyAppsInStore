@@ -1,1 +1,3612 @@
-[]
+[
+  {
+    "id": "com.jariminnen.ws90flows",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "WS90 Weather Flows",
+        "nl": "WS90 Weerflows"
+      },
+      "version": "1.1.1",
+      "readme": {
+        "en": "WS90 Weather Flows turns data from a WS90 weather station into useful Homey\nautomations through your own MQTT broker. Get a reliable local view of the\nweather around your home and let Homey react to changes automatically.\n\nCreate flexible Flows that react to the weather in ways that make sense for your\nhome: set a custom threshold, postpone garden watering when rain starts, warn\nof frost or respond to changing conditions. The app adds calculated weather\ninsights alongside the measurements.\n\nThis app was developed with AI assistance.\n",
+        "nl": "WS90 Weerflows zet gegevens van een WS90-weerstation via je eigen MQTT-broker\nom in bruikbare Homey-automatisering. Zo zie je het lokale weer rond je huis en\nkan Homey automatisch reageren op veranderingen.\n\nMaak flexibele Flows die passen bij jouw huis: stel zelf een drempel in, stel\ntuinbewatering uit wanneer het gaat regenen, waarschuw voor vorst of reageer op\nveranderende omstandigheden. Naast de metingen geeft de app ook berekende\nweerinzichten.\n\nDeze app is ontwikkeld met AI-ondersteuning.\n"
+      },
+      "description": {
+        "en": "Turn changing weather into flexible Flow automations.",
+        "nl": "Maak van veranderend weer flexibele Flow-automatisering."
+      },
+      "category": "climate",
+      "brandColor": "#1F4E79",
+      "icon": "https://apps.homeycdn.net/app/com.jariminnen.ws90flows/2/46a332c2-c3bc-4915-9e38-2023c53594fd/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.jariminnen.ws90flows/2/46a332c2-c3bc-4915-9e38-2023c53594fd/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.jariminnen.ws90flows/2/46a332c2-c3bc-4915-9e38-2023c53594fd/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "weather_station",
+          "name": {
+            "en": "WS90 weather station",
+            "nl": "WS90 weerstation"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_temperature",
+            "measure_temperature_today_min",
+            "measure_temperature_today_max",
+            "measure_humidity",
+            "measure_pressure",
+            "measure_luminance",
+            "measure_ultraviolet",
+            "measure_wind_strength",
+            "measure_wind_angle",
+            "measure_battery",
+            "measure_rain",
+            "measure_wind_gust",
+            "measure_dew_point",
+            "measure_feels_like",
+            "measure_beaufort",
+            "alarm_raining",
+            "alarm_frost",
+            "measure_capacitor_voltage",
+            "measure_rain_rate",
+            "measure_rain_last_hour",
+            "measure_rain_today",
+            "measure_rain_24h",
+            "measure_last_rain_hours",
+            "measure_solar_drying_index",
+            "weather_pressure_trend",
+            "weather_wind_cardinal"
+          ],
+          "capabilitiesOptions": {
+            "measure_rain": {
+              "title": {
+                "en": "Total rainfall",
+                "nl": "Totale regenval"
+              }
+            },
+            "measure_wind_strength": {
+              "title": {
+                "en": "Wind speed",
+                "nl": "Windsnelheid"
+              },
+              "units": {
+                "en": "km/h",
+                "nl": "km/u"
+              },
+              "decimals": 1
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.jariminnen.ws90flows/2/46a332c2-c3bc-4915-9e38-2023c53594fd/drivers/weather_station/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.jariminnen.ws90flows/2/46a332c2-c3bc-4915-9e38-2023c53594fd/drivers/weather_station/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.jariminnen.ws90flows/2/46a332c2-c3bc-4915-9e38-2023c53594fd/drivers/weather_station/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "weather_measurement_changed",
+            "title": {
+              "en": "A weather measurement changed",
+              "nl": "Een weerwaarde is gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "metric",
+                "type": "string",
+                "title": {
+                  "en": "Measurement",
+                  "nl": "Weerwaarde"
+                }
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "New value",
+                  "nl": "Nieuwe waarde"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value",
+                  "nl": "Vorige waarde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "weather_value_rises_above",
+            "title": {
+              "en": "A weather value rises above a value",
+              "nl": "Een weerwaarde komt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "[[metric]] rises above [[amount]]",
+              "nl": "[[metric]] komt boven [[amount]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "metric",
+                "type": "dropdown",
+                "title": {
+                  "en": "Measurement",
+                  "nl": "Weerwaarde"
+                },
+                "values": [
+                  {
+                    "id": "measure_temperature",
+                    "title": {
+                      "en": "Temperature (°C)",
+                      "nl": "Temperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_min",
+                    "title": {
+                      "en": "Lowest temperature today (°C)",
+                      "nl": "Laagste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_max",
+                    "title": {
+                      "en": "Highest temperature today (°C)",
+                      "nl": "Hoogste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_feels_like",
+                    "title": {
+                      "en": "Feels like (°C)",
+                      "nl": "Gevoelstemperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_humidity",
+                    "title": {
+                      "en": "Humidity (%)",
+                      "nl": "Luchtvochtigheid (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_dew_point",
+                    "title": {
+                      "en": "Dew point (°C)",
+                      "nl": "Dauwpunt (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_pressure",
+                    "title": {
+                      "en": "Pressure (mbar)",
+                      "nl": "Luchtdruk (mbar)"
+                    }
+                  },
+                  {
+                    "id": "measure_luminance",
+                    "title": {
+                      "en": "Brightness (lux)",
+                      "nl": "Helderheid (lux)"
+                    }
+                  },
+                  {
+                    "id": "measure_ultraviolet",
+                    "title": {
+                      "en": "UV index",
+                      "nl": "UV-index"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_strength",
+                    "title": {
+                      "en": "Wind speed (km/h)",
+                      "nl": "Windsnelheid (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_gust",
+                    "title": {
+                      "en": "Wind gust (km/h)",
+                      "nl": "Windstoot (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_angle",
+                    "title": {
+                      "en": "Wind direction (°)",
+                      "nl": "Windrichting (°)"
+                    }
+                  },
+                  {
+                    "id": "measure_beaufort",
+                    "title": {
+                      "en": "Beaufort",
+                      "nl": "Beaufort"
+                    }
+                  },
+                  {
+                    "id": "measure_rain",
+                    "title": {
+                      "en": "Total rainfall (mm)",
+                      "nl": "Totale regenval (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_rate",
+                    "title": {
+                      "en": "Rain rate (mm/h)",
+                      "nl": "Regenintensiteit (mm/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_last_hour",
+                    "title": {
+                      "en": "Rain last hour (mm)",
+                      "nl": "Regen laatste uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_today",
+                    "title": {
+                      "en": "Rain today (mm)",
+                      "nl": "Regen vandaag (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_24h",
+                    "title": {
+                      "en": "Rain 24 hours (mm)",
+                      "nl": "Regen 24 uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_solar_drying_index",
+                    "title": {
+                      "en": "Solar drying index",
+                      "nl": "Droogindex"
+                    }
+                  },
+                  {
+                    "id": "measure_battery",
+                    "title": {
+                      "en": "Battery (%)",
+                      "nl": "Batterij (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_capacitor_voltage",
+                    "title": {
+                      "en": "Capacitor voltage (V)",
+                      "nl": "Condensatorspanning (V)"
+                    }
+                  },
+                  {
+                    "id": "measure_last_rain_hours",
+                    "title": {
+                      "en": "Hours since rain",
+                      "nl": "Uren sinds regen"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "New value",
+                  "nl": "Nieuwe waarde"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value",
+                  "nl": "Vorige waarde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "weather_value_falls_below",
+            "title": {
+              "en": "A weather value falls below a value",
+              "nl": "Een weerwaarde komt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "[[metric]] falls below [[amount]]",
+              "nl": "[[metric]] komt onder [[amount]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "metric",
+                "type": "dropdown",
+                "title": {
+                  "en": "Measurement",
+                  "nl": "Weerwaarde"
+                },
+                "values": [
+                  {
+                    "id": "measure_temperature",
+                    "title": {
+                      "en": "Temperature (°C)",
+                      "nl": "Temperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_min",
+                    "title": {
+                      "en": "Lowest temperature today (°C)",
+                      "nl": "Laagste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_max",
+                    "title": {
+                      "en": "Highest temperature today (°C)",
+                      "nl": "Hoogste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_feels_like",
+                    "title": {
+                      "en": "Feels like (°C)",
+                      "nl": "Gevoelstemperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_humidity",
+                    "title": {
+                      "en": "Humidity (%)",
+                      "nl": "Luchtvochtigheid (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_dew_point",
+                    "title": {
+                      "en": "Dew point (°C)",
+                      "nl": "Dauwpunt (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_pressure",
+                    "title": {
+                      "en": "Pressure (mbar)",
+                      "nl": "Luchtdruk (mbar)"
+                    }
+                  },
+                  {
+                    "id": "measure_luminance",
+                    "title": {
+                      "en": "Brightness (lux)",
+                      "nl": "Helderheid (lux)"
+                    }
+                  },
+                  {
+                    "id": "measure_ultraviolet",
+                    "title": {
+                      "en": "UV index",
+                      "nl": "UV-index"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_strength",
+                    "title": {
+                      "en": "Wind speed (km/h)",
+                      "nl": "Windsnelheid (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_gust",
+                    "title": {
+                      "en": "Wind gust (km/h)",
+                      "nl": "Windstoot (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_angle",
+                    "title": {
+                      "en": "Wind direction (°)",
+                      "nl": "Windrichting (°)"
+                    }
+                  },
+                  {
+                    "id": "measure_beaufort",
+                    "title": {
+                      "en": "Beaufort",
+                      "nl": "Beaufort"
+                    }
+                  },
+                  {
+                    "id": "measure_rain",
+                    "title": {
+                      "en": "Total rainfall (mm)",
+                      "nl": "Totale regenval (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_rate",
+                    "title": {
+                      "en": "Rain rate (mm/h)",
+                      "nl": "Regenintensiteit (mm/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_last_hour",
+                    "title": {
+                      "en": "Rain last hour (mm)",
+                      "nl": "Regen laatste uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_today",
+                    "title": {
+                      "en": "Rain today (mm)",
+                      "nl": "Regen vandaag (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_24h",
+                    "title": {
+                      "en": "Rain 24 hours (mm)",
+                      "nl": "Regen 24 uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_solar_drying_index",
+                    "title": {
+                      "en": "Solar drying index",
+                      "nl": "Droogindex"
+                    }
+                  },
+                  {
+                    "id": "measure_battery",
+                    "title": {
+                      "en": "Battery (%)",
+                      "nl": "Batterij (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_capacitor_voltage",
+                    "title": {
+                      "en": "Capacitor voltage (V)",
+                      "nl": "Condensatorspanning (V)"
+                    }
+                  },
+                  {
+                    "id": "measure_last_rain_hours",
+                    "title": {
+                      "en": "Hours since rain",
+                      "nl": "Uren sinds regen"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "New value",
+                  "nl": "Nieuwe waarde"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value",
+                  "nl": "Vorige waarde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rain_started",
+            "title": {
+              "en": "It starts raining",
+              "nl": "Het begint te regenen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "rain_stopped",
+            "title": {
+              "en": "Rain stopped",
+              "nl": "De regen is gestopt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "frost_warning_started",
+            "title": {
+              "en": "Frost warning starts",
+              "nl": "Vorstwaarschuwing begint"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "frost_warning_cleared",
+            "title": {
+              "en": "Frost warning cleared",
+              "nl": "Vorstwaarschuwing is voorbij"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "wind_direction_changed",
+            "title": {
+              "en": "Wind direction changed",
+              "nl": "Windrichting is gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "direction",
+                "type": "string",
+                "title": {
+                  "en": "New direction",
+                  "nl": "Nieuwe richting"
+                }
+              },
+              {
+                "name": "previous_direction",
+                "type": "string",
+                "title": {
+                  "en": "Previous direction",
+                  "nl": "Vorige richting"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pressure_trend_changed",
+            "title": {
+              "en": "Pressure trend changed",
+              "nl": "Druktrend is gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "trend",
+                "type": "string",
+                "title": {
+                  "en": "New trend",
+                  "nl": "Nieuwe trend"
+                }
+              },
+              {
+                "name": "previous_trend",
+                "type": "string",
+                "title": {
+                  "en": "Previous trend",
+                  "nl": "Vorige trend"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pressure_started_rising",
+            "title": {
+              "en": "Pressure starts rising",
+              "nl": "De luchtdruk begint te stijgen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "pressure_started_falling",
+            "title": {
+              "en": "Pressure starts falling",
+              "nl": "De luchtdruk begint te dalen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "rainfall_above",
+            "title": {
+              "en": "Total rainfall !{{is|is not}} greater than",
+              "nl": "Totale regenval !{{is|is niet}} groter dan"
+            },
+            "titleFormatted": {
+              "en": "Total rainfall !{{is|is not}} greater than [[amount]] mm",
+              "nl": "Totale regenval !{{is|is niet}} groter dan [[amount]] mm"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Millimetres",
+                  "nl": "Millimeters"
+                }
+              }
+            ]
+          },
+          {
+            "id": "temperature_above",
+            "title": {
+              "en": "Temperature !{{is|is not}} greater than",
+              "nl": "Temperatuur !{{is|is niet}} hoger dan"
+            },
+            "titleFormatted": {
+              "en": "Temperature !{{is|is not}} greater than [[temperature]] °C",
+              "nl": "Temperatuur !{{is|is niet}} hoger dan [[temperature]] °C"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "en": "Temperature",
+                  "nl": "Temperatuur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "weather_value_above",
+            "title": {
+              "en": "A weather value !{{is|is not}} greater than",
+              "nl": "Een weerwaarde !{{is|is niet}} hoger dan"
+            },
+            "titleFormatted": {
+              "en": "[[metric]] !{{is|is not}} greater than [[amount]]",
+              "nl": "[[metric]] !{{is|is niet}} hoger dan [[amount]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "metric",
+                "type": "dropdown",
+                "title": {
+                  "en": "Measurement",
+                  "nl": "Weerwaarde"
+                },
+                "values": [
+                  {
+                    "id": "measure_temperature",
+                    "title": {
+                      "en": "Temperature (°C)",
+                      "nl": "Temperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_min",
+                    "title": {
+                      "en": "Lowest temperature today (°C)",
+                      "nl": "Laagste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_max",
+                    "title": {
+                      "en": "Highest temperature today (°C)",
+                      "nl": "Hoogste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_feels_like",
+                    "title": {
+                      "en": "Feels like (°C)",
+                      "nl": "Gevoelstemperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_humidity",
+                    "title": {
+                      "en": "Humidity (%)",
+                      "nl": "Luchtvochtigheid (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_dew_point",
+                    "title": {
+                      "en": "Dew point (°C)",
+                      "nl": "Dauwpunt (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_pressure",
+                    "title": {
+                      "en": "Pressure (mbar)",
+                      "nl": "Luchtdruk (mbar)"
+                    }
+                  },
+                  {
+                    "id": "measure_luminance",
+                    "title": {
+                      "en": "Brightness (lux)",
+                      "nl": "Helderheid (lux)"
+                    }
+                  },
+                  {
+                    "id": "measure_ultraviolet",
+                    "title": {
+                      "en": "UV index",
+                      "nl": "UV-index"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_strength",
+                    "title": {
+                      "en": "Wind speed (km/h)",
+                      "nl": "Windsnelheid (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_gust",
+                    "title": {
+                      "en": "Wind gust (km/h)",
+                      "nl": "Windstoot (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_angle",
+                    "title": {
+                      "en": "Wind direction (°)",
+                      "nl": "Windrichting (°)"
+                    }
+                  },
+                  {
+                    "id": "measure_beaufort",
+                    "title": {
+                      "en": "Beaufort",
+                      "nl": "Beaufort"
+                    }
+                  },
+                  {
+                    "id": "measure_rain",
+                    "title": {
+                      "en": "Total rainfall (mm)",
+                      "nl": "Totale regenval (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_rate",
+                    "title": {
+                      "en": "Rain rate (mm/h)",
+                      "nl": "Regenintensiteit (mm/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_last_hour",
+                    "title": {
+                      "en": "Rain last hour (mm)",
+                      "nl": "Regen laatste uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_today",
+                    "title": {
+                      "en": "Rain today (mm)",
+                      "nl": "Regen vandaag (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_24h",
+                    "title": {
+                      "en": "Rain 24 hours (mm)",
+                      "nl": "Regen 24 uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_solar_drying_index",
+                    "title": {
+                      "en": "Solar drying index",
+                      "nl": "Droogindex"
+                    }
+                  },
+                  {
+                    "id": "measure_battery",
+                    "title": {
+                      "en": "Battery (%)",
+                      "nl": "Batterij (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_capacitor_voltage",
+                    "title": {
+                      "en": "Capacitor voltage (V)",
+                      "nl": "Condensatorspanning (V)"
+                    }
+                  },
+                  {
+                    "id": "measure_last_rain_hours",
+                    "title": {
+                      "en": "Hours since rain",
+                      "nl": "Uren sinds regen"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "weather_value_below",
+            "title": {
+              "en": "A weather value !{{is|is not}} lower than",
+              "nl": "Een weerwaarde !{{is|is niet}} lager dan"
+            },
+            "titleFormatted": {
+              "en": "[[metric]] !{{is|is not}} lower than [[amount]]",
+              "nl": "[[metric]] !{{is|is niet}} lager dan [[amount]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "metric",
+                "type": "dropdown",
+                "title": {
+                  "en": "Measurement",
+                  "nl": "Weerwaarde"
+                },
+                "values": [
+                  {
+                    "id": "measure_temperature",
+                    "title": {
+                      "en": "Temperature (°C)",
+                      "nl": "Temperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_min",
+                    "title": {
+                      "en": "Lowest temperature today (°C)",
+                      "nl": "Laagste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_temperature_today_max",
+                    "title": {
+                      "en": "Highest temperature today (°C)",
+                      "nl": "Hoogste temperatuur vandaag (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_feels_like",
+                    "title": {
+                      "en": "Feels like (°C)",
+                      "nl": "Gevoelstemperatuur (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_humidity",
+                    "title": {
+                      "en": "Humidity (%)",
+                      "nl": "Luchtvochtigheid (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_dew_point",
+                    "title": {
+                      "en": "Dew point (°C)",
+                      "nl": "Dauwpunt (°C)"
+                    }
+                  },
+                  {
+                    "id": "measure_pressure",
+                    "title": {
+                      "en": "Pressure (mbar)",
+                      "nl": "Luchtdruk (mbar)"
+                    }
+                  },
+                  {
+                    "id": "measure_luminance",
+                    "title": {
+                      "en": "Brightness (lux)",
+                      "nl": "Helderheid (lux)"
+                    }
+                  },
+                  {
+                    "id": "measure_ultraviolet",
+                    "title": {
+                      "en": "UV index",
+                      "nl": "UV-index"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_strength",
+                    "title": {
+                      "en": "Wind speed (km/h)",
+                      "nl": "Windsnelheid (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_gust",
+                    "title": {
+                      "en": "Wind gust (km/h)",
+                      "nl": "Windstoot (km/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_wind_angle",
+                    "title": {
+                      "en": "Wind direction (°)",
+                      "nl": "Windrichting (°)"
+                    }
+                  },
+                  {
+                    "id": "measure_beaufort",
+                    "title": {
+                      "en": "Beaufort",
+                      "nl": "Beaufort"
+                    }
+                  },
+                  {
+                    "id": "measure_rain",
+                    "title": {
+                      "en": "Total rainfall (mm)",
+                      "nl": "Totale regenval (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_rate",
+                    "title": {
+                      "en": "Rain rate (mm/h)",
+                      "nl": "Regenintensiteit (mm/u)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_last_hour",
+                    "title": {
+                      "en": "Rain last hour (mm)",
+                      "nl": "Regen laatste uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_today",
+                    "title": {
+                      "en": "Rain today (mm)",
+                      "nl": "Regen vandaag (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_rain_24h",
+                    "title": {
+                      "en": "Rain 24 hours (mm)",
+                      "nl": "Regen 24 uur (mm)"
+                    }
+                  },
+                  {
+                    "id": "measure_solar_drying_index",
+                    "title": {
+                      "en": "Solar drying index",
+                      "nl": "Droogindex"
+                    }
+                  },
+                  {
+                    "id": "measure_battery",
+                    "title": {
+                      "en": "Battery (%)",
+                      "nl": "Batterij (%)"
+                    }
+                  },
+                  {
+                    "id": "measure_capacitor_voltage",
+                    "title": {
+                      "en": "Capacitor voltage (V)",
+                      "nl": "Condensatorspanning (V)"
+                    }
+                  },
+                  {
+                    "id": "measure_last_rain_hours",
+                    "title": {
+                      "en": "Hours since rain",
+                      "nl": "Uren sinds regen"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "is_raining",
+            "title": {
+              "en": "It !{{is|is not}} raining",
+              "nl": "Het !{{regent|regent niet}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "frost_warning_active",
+            "title": {
+              "en": "Frost warning !{{is|is not}} active",
+              "nl": "Vorstwaarschuwing !{{is|is niet}} actief"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "wind_direction_is",
+            "title": {
+              "en": "Wind direction !{{is|is not}}",
+              "nl": "Windrichting !{{is|is niet}}"
+            },
+            "titleFormatted": {
+              "en": "Wind direction !{{is|is not}} [[direction]]",
+              "nl": "Windrichting !{{is|is niet}} [[direction]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              },
+              {
+                "name": "direction",
+                "type": "dropdown",
+                "title": {
+                  "en": "Direction",
+                  "nl": "Richting"
+                },
+                "values": [
+                  {
+                    "id": "N",
+                    "title": {
+                      "en": "N",
+                      "nl": "N"
+                    }
+                  },
+                  {
+                    "id": "NNE",
+                    "title": {
+                      "en": "NNE",
+                      "nl": "NNO"
+                    }
+                  },
+                  {
+                    "id": "NE",
+                    "title": {
+                      "en": "NE",
+                      "nl": "NO"
+                    }
+                  },
+                  {
+                    "id": "ENE",
+                    "title": {
+                      "en": "ENE",
+                      "nl": "ONO"
+                    }
+                  },
+                  {
+                    "id": "E",
+                    "title": {
+                      "en": "E",
+                      "nl": "O"
+                    }
+                  },
+                  {
+                    "id": "ESE",
+                    "title": {
+                      "en": "ESE",
+                      "nl": "OZO"
+                    }
+                  },
+                  {
+                    "id": "SE",
+                    "title": {
+                      "en": "SE",
+                      "nl": "ZO"
+                    }
+                  },
+                  {
+                    "id": "SSE",
+                    "title": {
+                      "en": "SSE",
+                      "nl": "ZZO"
+                    }
+                  },
+                  {
+                    "id": "S",
+                    "title": {
+                      "en": "S",
+                      "nl": "Z"
+                    }
+                  },
+                  {
+                    "id": "SSW",
+                    "title": {
+                      "en": "SSW",
+                      "nl": "ZZW"
+                    }
+                  },
+                  {
+                    "id": "SW",
+                    "title": {
+                      "en": "SW",
+                      "nl": "ZW"
+                    }
+                  },
+                  {
+                    "id": "WSW",
+                    "title": {
+                      "en": "WSW",
+                      "nl": "WZW"
+                    }
+                  },
+                  {
+                    "id": "W",
+                    "title": {
+                      "en": "W",
+                      "nl": "W"
+                    }
+                  },
+                  {
+                    "id": "WNW",
+                    "title": {
+                      "en": "WNW",
+                      "nl": "WNW"
+                    }
+                  },
+                  {
+                    "id": "NW",
+                    "title": {
+                      "en": "NW",
+                      "nl": "NW"
+                    }
+                  },
+                  {
+                    "id": "NNW",
+                    "title": {
+                      "en": "NNW",
+                      "nl": "NNW"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "pressure_is_rising",
+            "title": {
+              "en": "Pressure !{{is|is not}} rising",
+              "nl": "Luchtdruk !{{stijgt|stijgt niet}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "pressure_is_falling",
+            "title": {
+              "en": "Pressure !{{is|is not}} falling",
+              "nl": "Luchtdruk !{{daalt|daalt niet}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          },
+          {
+            "id": "pressure_is_steady",
+            "title": {
+              "en": "Pressure !{{is|is not}} steady",
+              "nl": "Luchtdruk !{{is|is niet}} stabiel"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=weather_station"
+              }
+            ]
+          }
+        ],
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-01T10:35:08.239Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:jarivanminnen@gmail.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Fixes Flow card titles and updates the weather-station driver icon.",
+        "nl": "Herstelt Flow-kaarttitels en werkt het driver-icoon van het weerstation bij."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "weather",
+          "weather station",
+          "automation",
+          "flows"
+        ],
+        "nl": [
+          "weer",
+          "weerstation",
+          "automatisering",
+          "flows"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.1.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a8b0a6ec6a80eeabce83a86",
+      "type": "user",
+      "userId": "5fdb5fc10aa0490c8f09bb75",
+      "name": "Jari Minnen",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.barradas.cardashboard",
+    "rating": null,
+    "liveBuild": {
+      "id": 9,
+      "name": {
+        "en": "Car Dashboard"
+      },
+      "version": "1.4.15",
+      "readme": {
+        "en": "Car Dashboard puts a small, safe remote control for your Homey Pro on the built-in display of cars running Android Automotive OS (Volvo, Polestar, Renault, GM, Honda and others with Google built-in). This is not Android Auto: nothing runs on your phone. The car talks straight to your Homey.\n\nThis app is the Homey half. Its settings page is where you decide what the car is allowed to see and do. The car half is a separate app on Google Play, currently in invitation-only testing.\n\nWHAT YOU CAN DO FROM THE CAR\n\nHome tab: a grid of large tiles you pick in Homey. Garage door, gate, front door lock, alarm, charger, temperature, power. Tiles show live state and toggle with one tap.\n\nLights tab: your lights grouped by Homey zone. On/off per light and per zone, level screen for dimmers.\n\nScenes tab: the Homey Flows you choose, as one-tap buttons.\n\nArrival and departure alerts: the car watches a geofence around your home. Leave with the garage open and the car shows a Close button. Arrive with it closed and you get an Open button. Optional.\n\nWHAT YOU CONFIGURE HERE\n\nTiles, lights and scenes are whitelists. The car only receives what you put on them.\n\nPairing: generate a one-time code in these settings, type it in the car. Codes expire in 5 minutes, work once, and lock after 8 wrong attempts. Each paired car gets its own token you can revoke.\n\nFleet: every paired car appears with its name, online status, model, Android version, app version and last-seen time.\n\nPERMISSIONS\n\nhomey:manager:api is used to read the states of the devices you whitelisted and to start the Flows you whitelisted. homey:manager:geolocation provides your home coordinates for the car's geofence. Nothing is sent anywhere except between your car and your Homey.\n\nRequires a car with Android Automotive OS and Google Play. Support and tester invitations: see the Homey Community topic.\n"
+      },
+      "description": {
+        "en": "Configure a simple, safe dashboard for your car's display (Android Automotive)."
+      },
+      "category": "tools",
+      "brandColor": "#16222C",
+      "icon": "https://apps.homeycdn.net/app/com.barradas.cardashboard/9/6e6417a9-bd42-4cd2-aaf8-9c8443dc9b00/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.barradas.cardashboard/9/6e6417a9-bd42-4cd2-aaf8-9c8443dc9b00/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.barradas.cardashboard/9/6e6417a9-bd42-4cd2-aaf8-9c8443dc9b00/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-01T09:08:05.733Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://community.homey.app/t/REPLACE-TOPIC-ID",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api",
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "New Garage and Gate tiles are automatically named after the device you pick — editable as always."
+      },
+      "compatibility": ">=8.1.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.4.15",
+    "testBuild": {
+      "id": 10,
+      "name": {
+        "en": "Car Dashboard"
+      },
+      "version": "1.4.16",
+      "readme": {
+        "en": "Car Dashboard puts a small, safe remote control for your Homey Pro on the built-in display of cars running Android Automotive OS (Volvo, Polestar, Renault, GM, Honda and others with Google built-in). This is not Android Auto: nothing runs on your phone. The car talks straight to your Homey.\n\nThis app is the Homey half. Its settings page is where you decide what the car is allowed to see and do. The car half is a separate app on Google Play, currently in invitation-only testing.\n\nWHAT YOU CAN DO FROM THE CAR\n\nHome tab: a grid of large tiles you pick in Homey. Garage door, gate, front door lock, alarm, charger, temperature, power. Tiles show live state and toggle with one tap.\n\nLights tab: your lights grouped by Homey zone. On/off per light and per zone, level screen for dimmers.\n\nScenes tab: the Homey Flows you choose, as one-tap buttons.\n\nArrival and departure alerts: the car watches a geofence around your home. Leave with the garage open and the car shows a Close button. Arrive with it closed and you get an Open button. Optional.\n\nWHAT YOU CONFIGURE HERE\n\nTiles, lights and scenes are whitelists. The car only receives what you put on them.\n\nPairing: generate a one-time code in these settings, type it in the car. Codes expire in 5 minutes, work once, and lock after 8 wrong attempts. Each paired car gets its own token you can revoke.\n\nFleet: every paired car appears with its name, online status, model, Android version, app version and last-seen time.\n\nPERMISSIONS\n\nhomey:manager:api is used to read the states of the devices you whitelisted and to start the Flows you whitelisted. homey:manager:geolocation provides your home coordinates for the car's geofence. Nothing is sent anywhere except between your car and your Homey.\n\nRequires a car with Android Automotive OS and Google Play. Support and tester invitations: see the Homey Community topic.\n"
+      },
+      "description": {
+        "en": "Configure a simple, safe dashboard for your car's display (Android Automotive)."
+      },
+      "category": "tools",
+      "brandColor": "#16222C",
+      "icon": "https://apps.homeycdn.net/app/com.barradas.cardashboard/10/ee55ce98-2e22-4d8b-b0ff-cd4cb39aff87/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.barradas.cardashboard/10/ee55ce98-2e22-4d8b-b0ff-cd4cb39aff87/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.barradas.cardashboard/10/ee55ce98-2e22-4d8b-b0ff-cd4cb39aff87/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 158804,
+      "state": "in_review",
+      "stateChangedAt": "2026-09-01T12:21:40.819Z",
+      "bugs": "https://github.com/goncalb/com.barradas.cardashboard/issues",
+      "homepage": "https://github.com/goncalb/car-dashboard-aaos",
+      "support": "https://community.homey.app/t/app-pro-car-dashboard-for-android-automotive-volvo-polestar-renault/158804",
+      "source": "https://github.com/goncalb/com.barradas.cardashboard",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api",
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "Linked the community topic and the GitHub repositories."
+      },
+      "compatibility": ">=8.1.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "testVersion": "1.4.16",
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "69ef7202384eb48fac0f4f97",
+      "type": "user",
+      "userId": "6349b8fb2ee3430bafef8d44",
+      "name": "Gonçalo Barradas",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.heatnglo.rc300",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "Heat & Glo"
+      },
+      "version": "2.0.0",
+      "readme": {
+        "en": "A gas fireplace is one of the last things in the house that still needs someone to get up, find the handset, and press a button on it. This app puts yours into Homey instead, so the fire can be lit from your phone, from a wall switch, or by a Flow that has the room warm before you get home and settles it down again at bedtime.\n\nHomey learns your own handset when you add the fireplace, so it only ever speaks to your unit and never to a neighbour's. It keeps listening afterwards as well, so when someone adjusts the fire by hand Homey notices and stays in step rather than quietly holding a stale idea of what the fireplace is doing.\n",
+        "de": "Ein Gaskamin gehört zu den letzten Dingen im Haus, für die man noch aufstehen, die Fernbedienung suchen und eine Taste drücken muss. Mit dieser App holst du ihn in Homey, sodass sich das Feuer vom Telefon, über einen Wandschalter oder mit einem Flow entzünden lässt, der den Raum warm hat, bevor du nach Hause kommst, und ihn abends wieder herunterfährt.\n\nBeim Hinzufügen des Kamins lernt Homey deine eigene Fernbedienung, spricht also nur mit deinem Gerät und nie mit dem der Nachbarn. Homey hört auch danach weiter mit: Wird das Feuer von Hand verstellt, bekommt Homey das mit und bleibt auf dem aktuellen Stand, statt still einen veralteten Zustand anzuzeigen.\n",
+        "fr": "Un foyer à gaz fait partie des dernières choses de la maison pour lesquelles il faut encore se lever, retrouver la télécommande et appuyer sur un bouton. Cette application l'amène dans Homey : le feu s'allume depuis votre téléphone, depuis un interrupteur mural, ou grâce à un Flow qui réchauffe la pièce avant votre retour et la calme au moment du coucher.\n\nLorsque vous ajoutez le foyer, Homey apprend votre propre télécommande et ne s'adresse donc qu'à votre appareil, jamais à celui du voisin. Homey continue ensuite d'écouter : si quelqu'un règle le feu à la main, Homey le remarque et reste à jour, au lieu de conserver discrètement un état dépassé.\n",
+        "nl": "Een gashaard is een van de laatste dingen in huis waarvoor je nog moet opstaan, de afstandsbediening moet zoeken en op een knop moet drukken. Met deze app zet je die in Homey, zodat het vuur aangaat vanaf je telefoon, via een wandschakelaar, of met een Flow die de kamer warm heeft voordat je thuiskomt en het 's avonds weer rustig maakt.\n\nHomey leert je eigen afstandsbediening wanneer je de haard toevoegt, zodat hij alleen met jouw toestel praat en nooit met dat van de buren. Homey blijft daarna ook luisteren: past iemand het vuur met de hand aan, dan merkt Homey dat en blijft de status kloppen in plaats van stilletjes achter te lopen.\n"
+      },
+      "description": {
+        "en": "Control your Heat & Glo gas fireplace's power, flame and fan from Homey.",
+        "nl": "Bedien je Heat & Glo gashaard vanaf Homey: aan/uit, vlamhoogte en ventilator.",
+        "de": "Steuere deinen Heat & Glo Gaskamin mit Homey: Ein/Aus, Flammenhöhe und Lüfter.",
+        "fr": "Pilotez votre foyer à gaz Heat & Glo depuis Homey : allumage, hauteur de flamme et ventilateur."
+      },
+      "category": "climate",
+      "brandColor": "#EF7024",
+      "icon": "https://apps.homeycdn.net/app/com.heatnglo.rc300/1/47196098-5982-478c-b78f-ae238d33b44f/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.heatnglo.rc300/1/47196098-5982-478c-b78f-ae238d33b44f/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.heatnglo.rc300/1/47196098-5982-478c-b78f-ae238d33b44f/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "rc300",
+          "name": {
+            "en": "IntelliFire Plus RC300"
+          },
+          "class": "heater",
+          "capabilities": [
+            "onoff",
+            "fan_level",
+            "flame_level"
+          ],
+          "capabilitiesOptions": {
+            "fan_level": {
+              "preventInsights": true
+            },
+            "flame_level": {
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.heatnglo.rc300/1/47196098-5982-478c-b78f-ae238d33b44f/drivers/rc300/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.heatnglo.rc300/1/47196098-5982-478c-b78f-ae238d33b44f/drivers/rc300/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.heatnglo.rc300/1/47196098-5982-478c-b78f-ae238d33b44f/drivers/rc300/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "set_fan_speed",
+            "title": {
+              "en": "Set fan speed",
+              "nl": "Ventilatorsnelheid instellen",
+              "de": "Lüftergeschwindigkeit einstellen",
+              "fr": "Régler la vitesse du ventilateur"
+            },
+            "titleFormatted": {
+              "en": "Set fan speed to [[speed]]",
+              "nl": "Zet ventilatorsnelheid op [[speed]]",
+              "de": "Lüftergeschwindigkeit auf [[speed]] setzen",
+              "fr": "Régler la vitesse du ventilateur sur [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=rc300"
+              },
+              {
+                "name": "speed",
+                "type": "dropdown",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid",
+                  "de": "Geschwindigkeit",
+                  "fr": "Vitesse"
+                },
+                "values": [
+                  {
+                    "id": "low",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "med",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld",
+                      "de": "Mittel",
+                      "fr": "Moyen"
+                    }
+                  },
+                  {
+                    "id": "high",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_flame_level",
+            "title": {
+              "en": "Set flame level",
+              "nl": "Vlamhoogte instellen",
+              "de": "Flammenhöhe einstellen",
+              "fr": "Régler la hauteur de flamme"
+            },
+            "titleFormatted": {
+              "en": "Set flame level to [[level]]",
+              "nl": "Zet vlamhoogte op [[level]]",
+              "de": "Flammenhöhe auf [[level]] setzen",
+              "fr": "Régler la hauteur de flamme sur [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=rc300"
+              },
+              {
+                "name": "level",
+                "type": "dropdown",
+                "title": {
+                  "en": "Level",
+                  "nl": "Niveau",
+                  "de": "Stufe",
+                  "fr": "Niveau"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium-low",
+                      "nl": "Middellaag",
+                      "de": "Mittelniedrig",
+                      "fr": "Moyen-faible"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld",
+                      "de": "Mittel",
+                      "fr": "Moyen"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "Medium-high",
+                      "nl": "Middelhoog",
+                      "de": "Mittelhoch",
+                      "fr": "Moyen-élevé"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-01T08:37:53.098Z",
+      "bugs": "https://github.com/jbothe/homey-heatnglo-rc300/issues",
+      "homepage": null,
+      "support": "https://github.com/jbothe/homey-heatnglo-rc300/issues",
+      "source": "https://github.com/jbothe/homey-heatnglo-rc300",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:433"
+      ],
+      "changelog": {
+        "en": "Rebuilt on Homey SDK v3. Adds fan speed and flame level, pairing that learns your own remote so the app only drives your fireplace, and state that follows the handset when you use it by hand.",
+        "nl": "Herbouwd op Homey SDK v3. Nieuw: ventilatorsnelheid en vlamhoogte, koppelen waarbij Homey je eigen afstandsbediening leert zodat de app alleen jouw haard aanstuurt, en een status die de afstandsbediening volgt als je die met de hand gebruikt.",
+        "de": "Neu aufgebaut auf Homey SDK v3. Neu: Lüftergeschwindigkeit und Flammenhöhe, eine Kopplung, die deine eigene Fernbedienung lernt, sodass die App nur deinen Kamin steuert, und ein Status, der der Fernbedienung bei manueller Bedienung folgt.",
+        "fr": "Reconstruit sur le SDK v3 de Homey. Nouveau : vitesse du ventilateur et hauteur de flamme, un appairage qui apprend votre propre télécommande afin que l'application ne pilote que votre foyer, et un état qui suit la télécommande lorsque vous l'utilisez à la main."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "heatnglo",
+          "intellifire",
+          "remote",
+          "rc300",
+          "fire",
+          "gas",
+          "fireplace"
+        ],
+        "nl": [
+          "heatnglo",
+          "intellifire",
+          "afstandsbediening",
+          "rc300",
+          "vuur",
+          "gas",
+          "haard",
+          "gashaard",
+          "open haard"
+        ],
+        "de": [
+          "heatnglo",
+          "intellifire",
+          "fernbedienung",
+          "rc300",
+          "feuer",
+          "gas",
+          "kamin",
+          "gaskamin"
+        ],
+        "fr": [
+          "heatnglo",
+          "intellifire",
+          "télécommande",
+          "rc300",
+          "feu",
+          "gaz",
+          "cheminée",
+          "foyer"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "2.0.0",
+    "testBuild": {
+      "id": 2,
+      "name": {
+        "en": "Heat & Glo"
+      },
+      "version": "2.0.1",
+      "readme": {
+        "en": "Most of the house runs on its own by now — the lights, the thermostat, the blinds. The gas fireplace is the exception, still waiting on its own handset. This app brings yours into Homey, so the fire can start from your phone, from a wall switch, or from a Flow that has the room warm before you get home and settles it down again at bedtime.\n\nHomey learns your own handset when you add the fireplace, so it only ever speaks to your unit and never to a neighbour's. It keeps listening afterwards as well, so when someone adjusts the fire by hand Homey notices and stays in step rather than quietly holding a stale idea of what the fireplace is doing.\n",
+        "de": "Das meiste im Haus läuft längst von selbst — Licht, Thermostat, Rollläden. Der Gaskamin ist die Ausnahme und wartet weiter auf seine eigene Fernbedienung. Mit dieser App holst du ihn in Homey, sodass sich das Feuer vom Telefon, über einen Wandschalter oder mit einem Flow entzünden lässt, der den Raum warm hat, bevor du nach Hause kommst, und ihn abends wieder herunterfährt.\n\nBeim Hinzufügen des Kamins lernt Homey deine eigene Fernbedienung, spricht also nur mit deinem Gerät und nie mit dem der Nachbarn. Homey hört auch danach weiter mit: Wird das Feuer von Hand verstellt, bekommt Homey das mit und bleibt auf dem aktuellen Stand, statt still einen veralteten Zustand anzuzeigen.\n",
+        "fr": "La plupart des choses dans la maison fonctionnent déjà toutes seules — l'éclairage, le thermostat, les volets. Le foyer à gaz fait exception : il attend toujours sa propre télécommande. Cette application l'amène dans Homey : le feu s'allume depuis votre téléphone, depuis un interrupteur mural, ou grâce à un Flow qui réchauffe la pièce avant votre retour et la calme au moment du coucher.\n\nLorsque vous ajoutez le foyer, Homey apprend votre propre télécommande et ne s'adresse donc qu'à votre appareil, jamais à celui du voisin. Homey continue ensuite d'écouter : si quelqu'un règle le feu à la main, Homey le remarque et reste à jour, au lieu de conserver discrètement un état dépassé.\n",
+        "nl": "Het meeste in huis loopt inmiddels vanzelf — de verlichting, de thermostaat, de zonwering. De gashaard is de uitzondering en wacht nog altijd op zijn eigen afstandsbediening. Met deze app komt die van jou in Homey, zodat het vuur aangaat vanaf je telefoon, via een wandschakelaar, of met een Flow die de kamer warm heeft voordat je thuiskomt en het 's avonds weer rustig maakt.\n\nHomey leert je eigen afstandsbediening wanneer je de haard toevoegt, zodat hij alleen met jouw toestel praat en nooit met dat van de buren. Homey blijft daarna ook luisteren: past iemand het vuur met de hand aan, dan merkt Homey dat en blijft de status kloppen in plaats van stilletjes achter te lopen.\n"
+      },
+      "description": {
+        "en": "Light the fire without leaving the sofa.",
+        "nl": "Steek het vuur aan zonder van de bank te komen.",
+        "de": "Entzünde das Feuer, ohne vom Sofa aufzustehen.",
+        "fr": "Allumez le feu sans quitter le canapé."
+      },
+      "category": "climate",
+      "brandColor": "#EF7024",
+      "icon": "https://apps.homeycdn.net/app/com.heatnglo.rc300/2/b5d20949-0fcf-4d1e-9f30-ebd82bb12786/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.heatnglo.rc300/2/b5d20949-0fcf-4d1e-9f30-ebd82bb12786/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.heatnglo.rc300/2/b5d20949-0fcf-4d1e-9f30-ebd82bb12786/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "rc300",
+          "name": {
+            "en": "IntelliFire Plus RC300"
+          },
+          "class": "heater",
+          "capabilities": [
+            "onoff",
+            "fan_level",
+            "flame_level"
+          ],
+          "capabilitiesOptions": {
+            "fan_level": {
+              "preventInsights": true
+            },
+            "flame_level": {
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.heatnglo.rc300/2/b5d20949-0fcf-4d1e-9f30-ebd82bb12786/drivers/rc300/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.heatnglo.rc300/2/b5d20949-0fcf-4d1e-9f30-ebd82bb12786/drivers/rc300/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.heatnglo.rc300/2/b5d20949-0fcf-4d1e-9f30-ebd82bb12786/drivers/rc300/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "set_fan_speed",
+            "title": {
+              "en": "Set fan speed",
+              "nl": "Ventilatorsnelheid instellen",
+              "de": "Lüftergeschwindigkeit einstellen",
+              "fr": "Régler la vitesse du ventilateur"
+            },
+            "titleFormatted": {
+              "en": "Set fan speed to [[speed]]",
+              "nl": "Zet ventilatorsnelheid op [[speed]]",
+              "de": "Lüftergeschwindigkeit auf [[speed]] setzen",
+              "fr": "Régler la vitesse du ventilateur sur [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=rc300"
+              },
+              {
+                "name": "speed",
+                "type": "dropdown",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid",
+                  "de": "Geschwindigkeit",
+                  "fr": "Vitesse"
+                },
+                "values": [
+                  {
+                    "id": "low",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "med",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld",
+                      "de": "Mittel",
+                      "fr": "Moyen"
+                    }
+                  },
+                  {
+                    "id": "high",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_flame_level",
+            "title": {
+              "en": "Set flame level",
+              "nl": "Vlamhoogte instellen",
+              "de": "Flammenhöhe einstellen",
+              "fr": "Régler la hauteur de flamme"
+            },
+            "titleFormatted": {
+              "en": "Set flame level to [[level]]",
+              "nl": "Zet vlamhoogte op [[level]]",
+              "de": "Flammenhöhe auf [[level]] setzen",
+              "fr": "Régler la hauteur de flamme sur [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=rc300"
+              },
+              {
+                "name": "level",
+                "type": "dropdown",
+                "title": {
+                  "en": "Level",
+                  "nl": "Niveau",
+                  "de": "Stufe",
+                  "fr": "Niveau"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium-low",
+                      "nl": "Middellaag",
+                      "de": "Mittelniedrig",
+                      "fr": "Moyen-faible"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld",
+                      "de": "Mittel",
+                      "fr": "Moyen"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "Medium-high",
+                      "nl": "Middelhoog",
+                      "de": "Mittelhoch",
+                      "fr": "Moyen-élevé"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "in_review",
+      "stateChangedAt": "2026-09-02T00:29:35.338Z",
+      "bugs": "https://github.com/jbothe/homey-heatnglo-rc300/issues",
+      "homepage": null,
+      "support": "https://github.com/jbothe/homey-heatnglo-rc300/issues",
+      "source": "https://github.com/jbothe/homey-heatnglo-rc300",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:433"
+      ],
+      "changelog": {
+        "en": "App Store listing updates.",
+        "nl": "Updates van de App Store-vermelding.",
+        "de": "Aktualisierungen des App-Store-Eintrags.",
+        "fr": "Mises à jour de la fiche App Store."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "heatnglo",
+          "intellifire",
+          "remote",
+          "rc300",
+          "fire",
+          "gas",
+          "fireplace"
+        ],
+        "nl": [
+          "heatnglo",
+          "intellifire",
+          "afstandsbediening",
+          "rc300",
+          "vuur",
+          "gas",
+          "haard",
+          "gashaard",
+          "open haard"
+        ],
+        "de": [
+          "heatnglo",
+          "intellifire",
+          "fernbedienung",
+          "rc300",
+          "feuer",
+          "gas",
+          "kamin",
+          "gaskamin"
+        ],
+        "fr": [
+          "heatnglo",
+          "intellifire",
+          "télécommande",
+          "rc300",
+          "feu",
+          "gaz",
+          "cheminée",
+          "foyer"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "testVersion": "2.0.1",
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcabc951c90c866f936675a",
+      "type": "user",
+      "userId": "5b8dde7109506f0d451367a8",
+      "name": "John Bothe",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "au.com.brivis.touch",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "Brivis"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Brivis ducted gas heating and evaporative cooling is controlled from wall-mounted Networker controllers, one for each zone of the house. This app brings them into Homey over your local network: every zone becomes a Homey device with its own target and measured temperature, alongside the controls the whole system shares, being the operating mode, circulation fan, fan speed and, on evaporative systems, the pump. Changes made at a wall controller, or in the vendor's own phone app, are picked up automatically, so Homey always shows what the system is actually doing.\n\nFrom there your heating and cooling can join your Flows like any other device: warm the bedrooms before the alarm goes off, ease off the setpoint once everyone has left for the day, switch to fan-only on a mild afternoon, or let a temperature sensor you already own decide. A Brivis Touch Wi-Fi controller module, sold previously as Rinnai Touch, needs to be installed and reachable on the same network as your Homey.\n",
+        "de": "Brivis Gas-Luftheizungen und Verdunstungskühlungen werden über Networker-Wandbediengeräte gesteuert, eines für jede Zone des Hauses. Diese App bringt sie über Ihr lokales Netzwerk in Homey: Jede Zone wird zu einem Homey-Gerät mit eigener Soll- und Ist-Temperatur, dazu die Bedienelemente, die sich das ganze System teilt, nämlich Betriebsmodus, Umluftventilator, Lüfterstufe und, bei Verdunstungsanlagen, die Pumpe. Änderungen an einem Wandbediengerät oder in der App des Herstellers werden automatisch übernommen, sodass Homey immer zeigt, was die Anlage tatsächlich tut.\n\nVon da an nehmen Heizung und Kühlung wie jedes andere Gerät an Ihren Flows teil: die Schlafzimmer vor dem Wecker aufheizen, die Solltemperatur senken, sobald alle aus dem Haus sind, an einem milden Nachmittag auf reinen Lüfterbetrieb umschalten oder einen Temperatursensor entscheiden lassen, den Sie ohnehin besitzen. Ein Brivis Touch Wi-Fi Modul, früher als Rinnai Touch verkauft, muss installiert und im selben Netzwerk wie Ihr Homey erreichbar sein.\n",
+        "fr": "Le chauffage à air pulsé au gaz et le refroidissement évaporatif Brivis se commandent depuis des boîtiers muraux Networker, un par zone de la maison. Cette app les intègre à Homey via votre réseau local : chaque zone devient un appareil Homey avec sa propre température de consigne et sa température mesurée, aux côtés des commandes communes à toute l'installation, à savoir le mode de fonctionnement, le ventilateur de circulation, la vitesse du ventilateur et, sur les systèmes évaporatifs, la pompe. Les changements faits sur un boîtier mural, ou dans l'application du fabricant, sont repris automatiquement, si bien que Homey reflète toujours l'état réel du système.\n\nVotre chauffage et votre refroidissement rejoignent alors vos Flows comme n'importe quel autre appareil : chauffer les chambres avant la sonnerie du réveil, relâcher la consigne une fois tout le monde parti, passer en ventilation seule lors d'un après-midi doux, ou laisser décider un capteur de température que vous possédez déjà. Un module Brivis Touch Wi-Fi, autrefois vendu sous le nom de Rinnai Touch, doit être installé et accessible sur le même réseau que votre Homey.\n",
+        "nl": "Brivis gasgestookte luchtverwarming en verdampingskoeling wordt bediend vanaf Networker-wandbedieningen, één voor elke zone van het huis. Deze app brengt ze via je lokale netwerk in Homey: elke zone wordt een Homey-apparaat met een eigen streeftemperatuur en gemeten temperatuur, naast de bedieningen die het hele systeem deelt, namelijk de bedrijfsmodus, de circulatieventilator, de ventilatorsnelheid en, bij verdampingssystemen, de pomp. Wijzigingen op een wandbediening, of in de app van de fabrikant, worden automatisch opgepikt, zodat Homey altijd laat zien wat het systeem werkelijk doet.\n\nDaarna doen je verwarming en koeling mee in je Flows, net als elk ander apparaat: verwarm de slaapkamers voordat de wekker gaat, laat de streeftemperatuur zakken zodra iedereen de deur uit is, schakel op een milde middag over op alleen ventileren, of laat een temperatuursensor die je al hebt beslissen. Een Brivis Touch Wi-Fi module, voorheen verkocht als Rinnai Touch, moet geïnstalleerd zijn en bereikbaar op hetzelfde netwerk als je Homey.\n"
+      },
+      "description": {
+        "en": "Control in the palm of your hand",
+        "nl": "Bediening in de palm van je hand",
+        "fr": "La maîtrise au creux de votre main",
+        "de": "Steuerung in Ihrer Handfläche"
+      },
+      "category": "climate",
+      "brandColor": "#132A4D",
+      "icon": "https://apps.homeycdn.net/app/au.com.brivis.touch/1/f476668f-83d7-4bb0-b5d5-8e356a60bce7/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/au.com.brivis.touch/1/f476668f-83d7-4bb0-b5d5-8e356a60bce7/assets/images/small.jpeg",
+      "imageLarge": "https://apps.homeycdn.net/app/au.com.brivis.touch/1/f476668f-83d7-4bb0-b5d5-8e356a60bce7/assets/images/large.jpeg",
+      "drivers": [
+        {
+          "id": "zone",
+          "name": {
+            "en": "Touch Wi-Fi Zone",
+            "nl": "Touch Wi-Fi Zone",
+            "fr": "Zone Touch Wi-Fi",
+            "de": "Touch Wi-Fi Zone"
+          },
+          "class": "thermostat",
+          "capabilities": [
+            "target_temperature",
+            "measure_temperature",
+            "rt_zone_active",
+            "rt_control_mode",
+            "rt_schedule_override",
+            "rt_schedule_period",
+            "onoff",
+            "rt_operating_mode",
+            "onoff.fan",
+            "rt_fan_speed",
+            "onoff.pump"
+          ],
+          "capabilitiesOptions": {
+            "target_temperature": {
+              "min": 8,
+              "max": 30,
+              "step": 1,
+              "decimals": 0
+            },
+            "onoff": {
+              "title": {
+                "en": "System Power",
+                "nl": "Systeem aan/uit",
+                "fr": "Système marche/arrêt",
+                "de": "System Ein/Aus"
+              }
+            },
+            "onoff.fan": {
+              "title": {
+                "en": "Circulation Fan",
+                "nl": "Circulatieventilator",
+                "fr": "Ventilateur de circulation",
+                "de": "Umluftventilator"
+              }
+            },
+            "onoff.pump": {
+              "title": {
+                "en": "Evaporative Pump",
+                "nl": "Verdampingspomp",
+                "fr": "Pompe évaporative",
+                "de": "Verdunstungspumpe"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/au.com.brivis.touch/1/f476668f-83d7-4bb0-b5d5-8e356a60bce7/drivers/zone/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/au.com.brivis.touch/1/f476668f-83d7-4bb0-b5d5-8e356a60bce7/drivers/zone/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/au.com.brivis.touch/1/f476668f-83d7-4bb0-b5d5-8e356a60bce7/drivers/zone/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "rt_operating_mode_changed",
+            "title": {
+              "en": "The operating mode changed",
+              "nl": "De bedrijfsmodus is gewijzigd",
+              "fr": "Le mode de fonctionnement a changé",
+              "de": "Der Betriebsmodus hat sich geändert"
+            },
+            "titleFormatted": {
+              "en": "The operating mode changed to [[rt_operating_mode]]",
+              "nl": "De bedrijfsmodus is gewijzigd naar [[rt_operating_mode]]",
+              "fr": "Le mode de fonctionnement est passé à [[rt_operating_mode]]",
+              "de": "Der Betriebsmodus wechselte zu [[rt_operating_mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "rt_operating_mode",
+                "type": "dropdown",
+                "title": {
+                  "en": "mode",
+                  "nl": "modus",
+                  "fr": "mode",
+                  "de": "Modus"
+                },
+                "values": [
+                  {
+                    "id": "heat",
+                    "title": {
+                      "en": "Heat",
+                      "nl": "Verwarmen",
+                      "fr": "Chauffage",
+                      "de": "Heizen"
+                    }
+                  },
+                  {
+                    "id": "cool",
+                    "title": {
+                      "en": "Cool",
+                      "nl": "Koelen",
+                      "fr": "Refroidissement",
+                      "de": "Kühlen"
+                    }
+                  },
+                  {
+                    "id": "evap",
+                    "title": {
+                      "en": "Evaporative",
+                      "nl": "Verdampingskoeling",
+                      "fr": "Refroidissement évaporatif",
+                      "de": "Verdunstungskühlung"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rt_zone_active_changed",
+            "title": {
+              "en": "Actively heating/cooling changed",
+              "nl": "Actief verwarmen/koelen is gewijzigd",
+              "fr": "L'état chauffage/refroidissement a changé",
+              "de": "Aktives Heizen/Kühlen hat sich geändert"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "rt_zone_active",
+                "type": "boolean",
+                "title": {
+                  "en": "Actively heating/cooling",
+                  "nl": "Actief verwarmen/koelen",
+                  "fr": "Chauffe/refroidit activement",
+                  "de": "Heizt/kühlt aktiv"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "rt_operating_mode_is",
+            "title": {
+              "en": "The operating mode !{{is|is not}}",
+              "nl": "De bedrijfsmodus !{{is|is niet}}",
+              "fr": "Le mode de fonctionnement !{{est|n'est pas}}",
+              "de": "Der Betriebsmodus !{{ist|ist nicht}}"
+            },
+            "titleFormatted": {
+              "en": "The operating mode !{{is|is not}} [[rt_operating_mode]]",
+              "nl": "De bedrijfsmodus !{{is|is niet}} [[rt_operating_mode]]",
+              "fr": "Le mode de fonctionnement !{{est|n'est pas}} [[rt_operating_mode]]",
+              "de": "Der Betriebsmodus !{{ist|ist nicht}} [[rt_operating_mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "rt_operating_mode",
+                "type": "dropdown",
+                "title": {
+                  "en": "mode",
+                  "nl": "modus",
+                  "fr": "mode",
+                  "de": "Modus"
+                },
+                "values": [
+                  {
+                    "id": "heat",
+                    "title": {
+                      "en": "Heat",
+                      "nl": "Verwarmen",
+                      "fr": "Chauffage",
+                      "de": "Heizen"
+                    }
+                  },
+                  {
+                    "id": "cool",
+                    "title": {
+                      "en": "Cool",
+                      "nl": "Koelen",
+                      "fr": "Refroidissement",
+                      "de": "Kühlen"
+                    }
+                  },
+                  {
+                    "id": "evap",
+                    "title": {
+                      "en": "Evaporative",
+                      "nl": "Verdampingskoeling",
+                      "fr": "Refroidissement évaporatif",
+                      "de": "Verdunstungskühlung"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "rt_zone_active_is",
+            "title": {
+              "en": "Zone !{{is|is not}} actively heating/cooling",
+              "nl": "Zone !{{is|is niet}} actief aan het verwarmen/koelen",
+              "fr": "La zone !{{est|n'est pas}} en train de chauffer/refroidir",
+              "de": "Zone !{{ist|ist nicht}} aktiv am Heizen/Kühlen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "rt_fan_speed_set",
+            "title": {
+              "en": "Set the fan speed to",
+              "nl": "Stel de ventilatorsnelheid in op",
+              "fr": "Régler la vitesse du ventilateur sur",
+              "de": "Lüfterstufe einstellen auf"
+            },
+            "titleFormatted": {
+              "en": "Set the fan speed to [[rt_fan_speed]]",
+              "nl": "Stel de ventilatorsnelheid in op [[rt_fan_speed]]",
+              "fr": "Régler la vitesse du ventilateur sur [[rt_fan_speed]]",
+              "de": "Lüfterstufe einstellen auf [[rt_fan_speed]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "rt_fan_speed",
+                "type": "number",
+                "title": {
+                  "en": "speed",
+                  "nl": "snelheid",
+                  "fr": "vitesse",
+                  "de": "Stufe"
+                },
+                "min": 1,
+                "max": 16,
+                "step": 1
+              }
+            ]
+          },
+          {
+            "id": "rt_operating_mode_set",
+            "title": {
+              "en": "Set the operating mode to",
+              "nl": "Stel de bedrijfsmodus in op",
+              "fr": "Régler le mode de fonctionnement sur",
+              "de": "Betriebsmodus einstellen auf"
+            },
+            "titleFormatted": {
+              "en": "Set the operating mode to [[rt_operating_mode]]",
+              "nl": "Stel de bedrijfsmodus in op [[rt_operating_mode]]",
+              "fr": "Régler le mode de fonctionnement sur [[rt_operating_mode]]",
+              "de": "Betriebsmodus einstellen auf [[rt_operating_mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "rt_operating_mode",
+                "type": "dropdown",
+                "title": {
+                  "en": "mode",
+                  "nl": "modus",
+                  "fr": "mode",
+                  "de": "Modus"
+                },
+                "values": [
+                  {
+                    "id": "heat",
+                    "title": {
+                      "en": "Heat",
+                      "nl": "Verwarmen",
+                      "fr": "Chauffage",
+                      "de": "Heizen"
+                    }
+                  },
+                  {
+                    "id": "cool",
+                    "title": {
+                      "en": "Cool",
+                      "nl": "Koelen",
+                      "fr": "Refroidissement",
+                      "de": "Kühlen"
+                    }
+                  },
+                  {
+                    "id": "evap",
+                    "title": {
+                      "en": "Evaporative",
+                      "nl": "Verdampingskoeling",
+                      "fr": "Refroidissement évaporatif",
+                      "de": "Verdunstungskühlung"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-01T08:59:50.234Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://github.com/jbothe/homey-brivis-touch-wifi/issues",
+      "source": "https://github.com/jbothe/homey-brivis-touch-wifi",
+      "contributors": {
+        "developers": [
+          {
+            "name": "David Matthews"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "First version!"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcabc951c90c866f936675a",
+      "type": "user",
+      "userId": "5b8dde7109506f0d451367a8",
+      "name": "John Bothe",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.bosch.ebike",
+    "rating": null,
+    "liveBuild": {
+      "id": 5,
+      "name": {
+        "en": "Bosch eBike"
+      },
+      "version": "1.0.3",
+      "readme": {
+        "en": "Monitor your Bosch Smart System eBike directly from Homey. Keep track of your battery level, remaining range in all assist modes (Eco, Tour, Sport and Turbo), odometer, motor hours, charge cycles, and per-mode riding statistics — all updated automatically every 5 minutes.\n\nConnect once using your Bosch account and Homey will continuously sync your bike's data from the Bosch cloud. Use Flow cards to get notified when your battery is low, when charging starts or stops, or to automate anything based on your bike's status. Full hardware details including battery, motor, and component serial numbers are available in the device settings.\n\nThis is an unofficial community app and is not endorsed by or affiliated with Bosch eBike Systems. It requires a Bosch Smart System eBike with the ConnectModule and an active Flow+ subscription.\n"
+      },
+      "description": {
+        "en": "Keep an eye on your eBike's battery, range and charging"
+      },
+      "category": "appliances",
+      "brandColor": "#E20015",
+      "icon": "https://apps.homeycdn.net/app/com.bosch.ebike/5/f274f56a-6f69-40b7-aaf6-c2586f943e45/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.bosch.ebike/5/f274f56a-6f69-40b7-aaf6-c2586f943e45/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.bosch.ebike/5/f274f56a-6f69-40b7-aaf6-c2586f943e45/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "ebike",
+          "name": {
+            "en": "Bosch eBike"
+          },
+          "class": "other",
+          "capabilities": [
+            "measure_battery",
+            "ebike_charging",
+            "ebike_battery_energy_remaining",
+            "ebike_battery_capacity",
+            "meter_distance",
+            "ebike_charge_cycles",
+            "ebike_charge_cycles_on_bike",
+            "ebike_charge_cycles_off_bike",
+            "ebike_lifetime_energy",
+            "measure_range_eco",
+            "measure_range_tour",
+            "measure_range_sport",
+            "measure_range_emtb",
+            "measure_range_turbo",
+            "meter_motor_hours",
+            "ebike_motor_hours_assist",
+            "ebike_max_assist_speed",
+            "ebike_dist_off",
+            "ebike_dist_eco",
+            "ebike_dist_tour",
+            "ebike_dist_sport",
+            "ebike_dist_turbo",
+            "ebike_energy_off",
+            "ebike_energy_eco",
+            "ebike_energy_tour",
+            "ebike_energy_sport",
+            "ebike_energy_turbo"
+          ],
+          "energy": {
+            "batteries": [
+              "OTHER"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.bosch.ebike/5/f274f56a-6f69-40b7-aaf6-c2586f943e45/drivers/ebike/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.bosch.ebike/5/f274f56a-6f69-40b7-aaf6-c2586f943e45/drivers/ebike/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.bosch.ebike/5/f274f56a-6f69-40b7-aaf6-c2586f943e45/drivers/ebike/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "ebike_battery_above",
+            "title": {
+              "en": "eBike battery rises above"
+            },
+            "titleFormatted": {
+              "en": "eBike battery rises above [[percentage]]%"
+            },
+            "hint": {
+              "en": "Triggers when the battery level rises above a specified percentage, e.g. to switch off a charger wall plug at 80%."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ebike"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "min": 1,
+                "max": 99,
+                "step": 1,
+                "label": {
+                  "en": "%"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ebike_battery_below",
+            "title": {
+              "en": "eBike battery drops below"
+            },
+            "titleFormatted": {
+              "en": "eBike battery drops below [[percentage]]%"
+            },
+            "hint": {
+              "en": "Triggers when the battery level drops below a specified percentage."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ebike"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "min": 1,
+                "max": 99,
+                "step": 1,
+                "label": {
+                  "en": "%"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ebike_charging_started",
+            "title": {
+              "en": "eBike charging started"
+            },
+            "hint": {
+              "en": "Triggers when the eBike is plugged in and starts charging."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ebike"
+              }
+            ]
+          },
+          {
+            "id": "ebike_charging_stopped",
+            "title": {
+              "en": "eBike charging stopped"
+            },
+            "hint": {
+              "en": "Triggers when the eBike is unplugged or charging finishes."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ebike"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "ebike_battery_level_condition",
+            "title": {
+              "en": "eBike battery is !{{above|below}}"
+            },
+            "titleFormatted": {
+              "en": "eBike battery is !{{above|below}} [[percentage]]%"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ebike"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "min": 1,
+                "max": 99,
+                "step": 1,
+                "label": {
+                  "en": "%"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ebike_is_charging",
+            "title": {
+              "en": "eBike !{{is|is not}} charging"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ebike"
+              }
+            ]
+          }
+        ],
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 154269,
+      "state": "live",
+      "stateChangedAt": "2026-09-01T11:39:29.570Z",
+      "bugs": "https://github.com/goncalb/com.bosch.ebike/issues",
+      "homepage": "https://github.com/goncalb/com.bosch.ebike",
+      "support": "https://community.homey.app/t/154269",
+      "source": "https://github.com/goncalb/com.bosch.ebike",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Fixes App Store review feedback: new description, unique driver icon and driver image."
+      },
+      "compatibility": ">=12.0.0",
+      "tags": {
+        "en": [
+          "bosch",
+          "ebike",
+          "bicycle",
+          "smart system",
+          "battery",
+          "cycling"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.3",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "69ef7202384eb48fac0f4f97",
+      "type": "user",
+      "userId": "6349b8fb2ee3430bafef8d44",
+      "name": "Gonçalo Barradas",
+      "verified": false
+    },
+    "communityTopicId": 154269
+  },
+  {
+    "id": "com.hailo.libero",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Hailo Libero",
+        "fr": "Hailo Libero"
+      },
+      "version": "1.0.2",
+      "readme": {
+        "en": "Bring your Hailo Libero 3.0 into Homey for seamless hands-free kitchen automation.\n\nControl your Libero locally from Homey and integrate it naturally into your Flows, while keeping communication inside your local network."
+      },
+      "description": {
+        "en": "Smart hands-free access for your kitchen.",
+        "fr": "L'accès mains libres intelligent pour votre cuisine."
+      },
+      "category": "appliances",
+      "brandColor": "#E30613",
+      "icon": "https://apps.homeycdn.net/app/com.hailo.libero/2/c7e8c548-de6c-496d-b652-10e02ea3821d/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.hailo.libero/2/c7e8c548-de6c-496d-b652-10e02ea3821d/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.hailo.libero/2/c7e8c548-de6c-496d-b652-10e02ea3821d/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "libero-30",
+          "name": {
+            "en": "Libero 3.0",
+            "fr": "Libero 3.0"
+          },
+          "class": "other",
+          "capabilities": [
+            "button",
+            "measure_libero_led",
+            "measure_libero_force",
+            "measure_libero_distance",
+            "led_brightness",
+            "pullout_force",
+            "detection_range",
+            "button.restart"
+          ],
+          "capabilitiesOptions": {
+            "button": {
+              "title": {
+                "en": "Open",
+                "fr": "Ouverture"
+              },
+              "preventInsights": true
+            },
+            "measure_libero_led": {
+              "preventInsights": true,
+              "preventTag": false
+            },
+            "measure_libero_force": {
+              "preventInsights": true,
+              "preventTag": false
+            },
+            "measure_libero_distance": {
+              "preventInsights": true,
+              "preventTag": false
+            },
+            "led_brightness": {
+              "preventInsights": true
+            },
+            "pullout_force": {
+              "preventInsights": true
+            },
+            "detection_range": {
+              "preventInsights": true
+            },
+            "button.restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart",
+                "fr": "Redémarrage"
+              },
+              "desc": {
+                "en": "Restart the Hailo Libero 3.0.",
+                "fr": "Redémarre le Hailo Libero 3.0."
+              },
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.hailo.libero/2/c7e8c548-de6c-496d-b652-10e02ea3821d/drivers/libero-30/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.hailo.libero/2/c7e8c548-de6c-496d-b652-10e02ea3821d/drivers/libero-30/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.hailo.libero/2/c7e8c548-de6c-496d-b652-10e02ea3821d/drivers/libero-30/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "libero_opened",
+            "title": {
+              "en": "The Libero was opened",
+              "fr": "Le Libero a été ouvert"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "libero_restarted",
+            "title": {
+              "en": "The Libero was restarted",
+              "fr": "Le Libero a été redémarré"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "libero_available",
+            "title": {
+              "en": "The Libero became available",
+              "fr": "Le Libero devient disponible"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "libero_unavailable",
+            "title": {
+              "en": "The Libero became unavailable",
+              "fr": "Le Libero devient indisponible"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_changed",
+            "title": {
+              "en": "LED brightness changed",
+              "fr": "La luminosité LED a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_above",
+            "title": {
+              "en": "LED brightness becomes greater than",
+              "fr": "La luminosité devient supérieure à"
+            },
+            "titleFormatted": {
+              "en": "LED brightness becomes greater than [[value]]",
+              "fr": "La luminosité devient supérieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_below",
+            "title": {
+              "en": "LED brightness becomes lower than",
+              "fr": "La luminosité devient inférieure à"
+            },
+            "titleFormatted": {
+              "en": "LED brightness becomes lower than [[value]]",
+              "fr": "La luminosité devient inférieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_equal",
+            "title": {
+              "en": "LED brightness becomes equal to",
+              "fr": "La luminosité devient égale à"
+            },
+            "titleFormatted": {
+              "en": "LED brightness becomes equal to [[value]]",
+              "fr": "La luminosité devient égale à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_changed",
+            "title": {
+              "en": "Pullout force changed",
+              "fr": "La force d'ouverture a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_above",
+            "title": {
+              "en": "Pullout force becomes greater than",
+              "fr": "La force devient supérieure à"
+            },
+            "titleFormatted": {
+              "en": "Pullout force becomes greater than [[value]]",
+              "fr": "La force devient supérieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_below",
+            "title": {
+              "en": "Pullout force becomes lower than",
+              "fr": "La force devient inférieure à"
+            },
+            "titleFormatted": {
+              "en": "Pullout force becomes lower than [[value]]",
+              "fr": "La force devient inférieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_equal",
+            "title": {
+              "en": "Pullout force becomes equal to",
+              "fr": "La force devient égale à"
+            },
+            "titleFormatted": {
+              "en": "Pullout force becomes equal to [[value]]",
+              "fr": "La force devient égale à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_changed",
+            "title": {
+              "en": "Detection range changed",
+              "fr": "La portée de détection a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_above",
+            "title": {
+              "en": "Detection range becomes greater than",
+              "fr": "La portée devient supérieure à"
+            },
+            "titleFormatted": {
+              "en": "Detection range becomes greater than [[value]]",
+              "fr": "La portée devient supérieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_below",
+            "title": {
+              "en": "Detection range becomes lower than",
+              "fr": "La portée devient inférieure à"
+            },
+            "titleFormatted": {
+              "en": "Detection range becomes lower than [[value]]",
+              "fr": "La portée devient inférieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_equal",
+            "title": {
+              "en": "Detection range becomes equal to",
+              "fr": "La portée devient égale à"
+            },
+            "titleFormatted": {
+              "en": "Detection range becomes equal to [[value]]",
+              "fr": "La portée devient égale à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "libero_is_available",
+            "title": {
+              "en": "The Libero is available",
+              "fr": "Le Libero est disponible"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "libero_is_unavailable",
+            "title": {
+              "en": "The Libero is unavailable",
+              "fr": "Le Libero est indisponible"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_is_above",
+            "title": {
+              "en": "LED brightness is greater than",
+              "fr": "La luminosité est supérieure à"
+            },
+            "titleFormatted": {
+              "en": "LED brightness is greater than [[value]]",
+              "fr": "La luminosité est supérieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_is_below",
+            "title": {
+              "en": "LED brightness is lower than",
+              "fr": "La luminosité est inférieure à"
+            },
+            "titleFormatted": {
+              "en": "LED brightness is lower than [[value]]",
+              "fr": "La luminosité est inférieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "led_brightness_is_equal",
+            "title": {
+              "en": "LED brightness is equal to",
+              "fr": "La luminosité est égale à"
+            },
+            "titleFormatted": {
+              "en": "LED brightness is equal to [[value]]",
+              "fr": "La luminosité est égale à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_is_above",
+            "title": {
+              "en": "Pullout force is greater than",
+              "fr": "La force est supérieure à"
+            },
+            "titleFormatted": {
+              "en": "Pullout force is greater than [[value]]",
+              "fr": "La force est supérieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_is_below",
+            "title": {
+              "en": "Pullout force is lower than",
+              "fr": "La force est inférieure à"
+            },
+            "titleFormatted": {
+              "en": "Pullout force is lower than [[value]]",
+              "fr": "La force est inférieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "pullout_force_is_equal",
+            "title": {
+              "en": "Pullout force is equal to",
+              "fr": "La force est égale à"
+            },
+            "titleFormatted": {
+              "en": "Pullout force is equal to [[value]]",
+              "fr": "La force est égale à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_is_above",
+            "title": {
+              "en": "Detection range is greater than",
+              "fr": "La portée est supérieure à"
+            },
+            "titleFormatted": {
+              "en": "Detection range is greater than [[value]]",
+              "fr": "La portée est supérieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_is_below",
+            "title": {
+              "en": "Detection range is lower than",
+              "fr": "La portée est inférieure à"
+            },
+            "titleFormatted": {
+              "en": "Detection range is lower than [[value]]",
+              "fr": "La portée est inférieure à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "detection_range_is_equal",
+            "title": {
+              "en": "Detection range is equal to",
+              "fr": "La portée est égale à"
+            },
+            "titleFormatted": {
+              "en": "Detection range is equal to [[value]]",
+              "fr": "La portée est égale à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "open_libero",
+            "title": {
+              "en": "Open the Libero",
+              "fr": "Ouvrir le Libero"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "restart_libero",
+            "title": {
+              "en": "Restart the Libero",
+              "fr": "Redémarrer le Libero"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              }
+            ]
+          },
+          {
+            "id": "set_led_brightness",
+            "title": {
+              "en": "Set LED brightness",
+              "fr": "Régler la luminosité LED"
+            },
+            "titleFormatted": {
+              "en": "Set LED brightness to [[value]]",
+              "fr": "Régler la luminosité LED à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_pullout_force",
+            "title": {
+              "en": "Set pullout force",
+              "fr": "Régler la force d'ouverture"
+            },
+            "titleFormatted": {
+              "en": "Set pullout force to [[value]]",
+              "fr": "Régler la force d'ouverture à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_detection_range",
+            "title": {
+              "en": "Set detection range",
+              "fr": "Régler la portée de détection"
+            },
+            "titleFormatted": {
+              "en": "Set detection range to [[value]]",
+              "fr": "Régler la portée de détection à [[value]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=libero-30"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "fr": "Valeur"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-01T09:35:09.354Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Improved automatic device discovery and network reliability. Removed manual IP configuration during pairing and improved credential handling."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.2",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a8aabbfc6a80eeabce82a73",
+      "type": "user",
+      "userId": "611ad48125e22f0b9e01600e",
+      "name": "Antoine Chaulieu",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]

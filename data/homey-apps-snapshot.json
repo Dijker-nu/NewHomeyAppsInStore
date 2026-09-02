@@ -30,6 +30,66 @@
     "communityTopicId": null
   },
   {
+    "appId": "com.jariminnen.ws90flows",
+    "name": "WS90 Weather Flows",
+    "developerName": "Jari Minnen",
+    "developerId": "6a8b0a6ec6a80eeabce83a86",
+    "version": "1.1.1",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.barradas.cardashboard",
+    "name": "Car Dashboard",
+    "developerName": "Gonçalo Barradas",
+    "developerId": "69ef7202384eb48fac0f4f97",
+    "version": "1.4.15",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.heatnglo.rc300",
+    "name": "Heat & Glo",
+    "developerName": "John Bothe",
+    "developerId": "5dcabc951c90c866f936675a",
+    "version": "2.0.0",
+    "sourceRepository": "https://github.com/jbothe/homey-heatnglo-rc300",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "au.com.brivis.touch",
+    "name": "Brivis",
+    "developerName": "John Bothe",
+    "developerId": "5dcabc951c90c866f936675a",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/jbothe/homey-brivis-touch-wifi",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.bosch.ebike",
+    "name": "Bosch eBike",
+    "developerName": "Gonçalo Barradas",
+    "developerId": "69ef7202384eb48fac0f4f97",
+    "version": "1.0.3",
+    "sourceRepository": "https://github.com/goncalb/com.bosch.ebike",
+    "publishedAt": "",
+    "communityTopicId": 154269
+  },
+  {
+    "appId": "com.hailo.libero",
+    "name": "Hailo Libero",
+    "developerName": "Antoine Chaulieu",
+    "developerId": "6a8aabbfc6a80eeabce82a73",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",
