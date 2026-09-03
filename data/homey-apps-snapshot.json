@@ -90,6 +90,16 @@
     "communityTopicId": null
   },
   {
+    "appId": "com.dataweavelabs.powerestimate",
+    "name": "Power Estimator",
+    "developerName": "vincent fresnel",
+    "developerId": "6a86d386c6a80eeabce73263",
+    "version": "1.0.6",
+    "sourceRepository": "https://github.com/byackee/homey-powerest",
+    "publishedAt": "",
+    "communityTopicId": 158852
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",

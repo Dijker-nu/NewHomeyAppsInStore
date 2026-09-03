@@ -8,3 +8,4 @@ Discovered At,Name,App ID,Developer Name,Developer ID,Version,Source Repository,
 2026-09-02T07:53:26.801Z,Brivis,au.com.brivis.touch,John Bothe,5dcabc951c90c866f936675a,1.0.0,https://github.com/jbothe/homey-brivis-touch-wifi,,
 2026-09-02T07:53:26.801Z,Bosch eBike,com.bosch.ebike,Gonçalo Barradas,69ef7202384eb48fac0f4f97,1.0.3,https://github.com/goncalb/com.bosch.ebike,,154269
 2026-09-02T07:53:26.801Z,Hailo Libero,com.hailo.libero,Antoine Chaulieu,6a8aabbfc6a80eeabce82a73,1.0.2,,,
+2026-09-03T08:01:13.617Z,Power Estimator,com.dataweavelabs.powerestimate,vincent fresnel,6a86d386c6a80eeabce73263,1.0.6,https://github.com/byackee/homey-powerest,,158852
