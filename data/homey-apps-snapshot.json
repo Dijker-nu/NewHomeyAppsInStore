@@ -100,6 +100,66 @@
     "communityTopicId": 158852
   },
   {
+    "appId": "com.bear.blinds",
+    "name": "Bear",
+    "developerName": "John Bothe",
+    "developerId": "5dcabc951c90c866f936675a",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/jbothe/homey-bear-blind-automation",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.hcarburants",
+    "name": "FR Carburants",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.1.7",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.hatmo",
+    "name": "FR Qualité de l'air",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.1.1",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.hibbisoft.garbagecalendar",
+    "name": "Sysav Waste Calendar",
+    "developerName": "Sebastian Johansson",
+    "developerId": "5dcab9e91c90c866f93645d9",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.mova.vacuum",
+    "name": "MOVA Vacuum",
+    "developerName": "Didier Van Uffelen",
+    "developerId": "6a988123336db3df05abe174",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/didiervanuffelen/Homey.Mova",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.hirve",
+    "name": "FR Bornes VE",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.1.3",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",

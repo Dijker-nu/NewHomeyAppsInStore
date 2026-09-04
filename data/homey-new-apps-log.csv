@@ -9,3 +9,9 @@ Discovered At,Name,App ID,Developer Name,Developer ID,Version,Source Repository,
 2026-09-02T07:53:26.801Z,Bosch eBike,com.bosch.ebike,Gonçalo Barradas,69ef7202384eb48fac0f4f97,1.0.3,https://github.com/goncalb/com.bosch.ebike,,154269
 2026-09-02T07:53:26.801Z,Hailo Libero,com.hailo.libero,Antoine Chaulieu,6a8aabbfc6a80eeabce82a73,1.0.2,,,
 2026-09-03T08:01:13.617Z,Power Estimator,com.dataweavelabs.powerestimate,vincent fresnel,6a86d386c6a80eeabce73263,1.0.6,https://github.com/byackee/homey-powerest,,158852
+2026-09-04T07:57:13.412Z,Bear,com.bear.blinds,John Bothe,5dcabc951c90c866f936675a,1.1.0,https://github.com/jbothe/homey-bear-blind-automation,,
+2026-09-04T07:57:13.412Z,FR Carburants,com.rapinology.hcarburants,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.1.7,,,
+2026-09-04T07:57:13.412Z,FR Qualité de l'air,com.rapinology.hatmo,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.1.1,,,
+2026-09-04T07:57:13.412Z,Sysav Waste Calendar,com.hibbisoft.garbagecalendar,Sebastian Johansson,5dcab9e91c90c866f93645d9,1.0.2,,,
+2026-09-04T07:57:13.412Z,MOVA Vacuum,com.mova.vacuum,Didier Van Uffelen,6a988123336db3df05abe174,1.0.0,https://github.com/didiervanuffelen/Homey.Mova,,
+2026-09-04T07:57:13.412Z,FR Bornes VE,com.rapinology.hirve,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.1.3,,,
