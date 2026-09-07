@@ -15,3 +15,7 @@ Discovered At,Name,App ID,Developer Name,Developer ID,Version,Source Repository,
 2026-09-04T07:57:13.412Z,Sysav Waste Calendar,com.hibbisoft.garbagecalendar,Sebastian Johansson,5dcab9e91c90c866f93645d9,1.0.2,,,
 2026-09-04T07:57:13.412Z,MOVA Vacuum,com.mova.vacuum,Didier Van Uffelen,6a988123336db3df05abe174,1.0.0,https://github.com/didiervanuffelen/Homey.Mova,,
 2026-09-04T07:57:13.412Z,FR Bornes VE,com.rapinology.hirve,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.1.3,,,
+2026-09-07T08:15:22.581Z,AECC Plug-and-Play Battery,nl.stekkerdeal.aecc,Roy Dorland,6a81aafdc6a80eeabce3bed4,1.0.1,https://github.com/StekkerDeal/aecc-battery-homey,,
+2026-09-07T08:15:22.581Z,Leapmotor,zperx.leapmotor,ZperX .,6a9186cd30ac038fba7073fc,0.0.7,https://github.com/4tetra4/leapmotor.homey.app,,157676
+2026-09-07T08:15:22.581Z,NovaDigital,com.gpm.novadigital,Gabriel Pedrosa Machado,69782a0e6b884a38a96c58e6,1.0.0,,,
+2026-09-07T08:15:22.581Z,iDiamant by Netatmo,com.idiamant-netatmo,ATX corp,6a8e12e83bdd81c33f8d4766,1.3.12,,,159166

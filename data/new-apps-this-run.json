@@ -1,1 +1,5662 @@
-[]
+[
+  {
+    "id": "nl.stekkerdeal.aecc",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "AECC Plug-and-Play Battery",
+        "nl": "AECC Plug-in Thuisbatterij"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "AECC Battery brings local control of AECC-platform plug-in home batteries to Homey. It connects directly to the battery over your home network, without a cloud round-trip, and shows live charge state, power flow and energy totals in Homey, alongside the ability to set a charge or discharge target and hand control back to the battery's own logic at any time. It is built for owners of Sunpura, Lunergy, Voltdeer, AEG Solarcube, AFERIY, AccuMate, JET, Oscal and other batteries that share this platform, who want their battery to show up alongside the rest of their home in Homey Energy and flows.\n\nThe battery accepts only one connection at a time, so this app cannot run alongside the vendor app's local mode or a Home Assistant integration talking to the same battery at the same time. The protocol and its quirks were worked out for the sibling Home Assistant integration and are documented for anyone who wants to read further or contribute.\n",
+        "nl": "AECC Batterij brengt lokale besturing van stekkerbatterijen op het AECC-platform naar Homey. De app maakt rechtstreeks verbinding met je batterij via je eigen netwerk, zonder omweg via de cloud, en laat de laadtoestand, het actuele vermogen en de energietotalen in Homey zien. Je stelt zelf een laad- of ontlaadvermogen in, en je geeft de besturing op elk moment weer terug aan de batterij zelf. Gemaakt voor iedereen met een Sunpura, Lunergy, Voltdeer, AEG Solarcube, AFERIY, AccuMate, JET, Oscal of een andere batterij op hetzelfde platform, die de batterij wil laten meedraaien in Homey Energie en in flows.\n\nDe batterij accepteert maar één verbinding tegelijk. Deze app kan dus niet tegelijk met de lokale modus van de app van de fabrikant of met een Home Assistant-integratie op dezelfde batterij draaien. Het protocol en alle eigenaardigheden ervan zijn uitgeplozen voor de Home Assistant-integratie van hetzelfde project en staan gedocumenteerd voor wie verder wil lezen of wil meebouwen.\n"
+      },
+      "description": {
+        "en": "Full local control, no cloud connection",
+        "nl": "Volledige lokale besturing, zonder cloud"
+      },
+      "category": "energy",
+      "brandColor": "#00b0e7",
+      "icon": "https://apps.homeycdn.net/app/nl.stekkerdeal.aecc/3/72280f29-83c7-4787-90b9-aa303a8fc9d3/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.stekkerdeal.aecc/3/72280f29-83c7-4787-90b9-aa303a8fc9d3/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.stekkerdeal.aecc/3/72280f29-83c7-4787-90b9-aa303a8fc9d3/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "battery",
+          "name": {
+            "en": "AECC home battery",
+            "nl": "AECC thuisbatterij"
+          },
+          "class": "battery",
+          "capabilities": [
+            "measure_power",
+            "measure_battery",
+            "battery_charging_state",
+            "meter_power.charged",
+            "meter_power.discharged",
+            "target_power",
+            "target_power_mode",
+            "aecc_min_soc",
+            "aecc_max_soc",
+            "aecc_last_update",
+            "button.reset_meters"
+          ],
+          "capabilitiesOptions": {
+            "measure_power": {
+              "title": {
+                "en": "Battery power",
+                "nl": "Batterijvermogen"
+              }
+            },
+            "measure_power.grid": {
+              "title": {
+                "en": "Grid power",
+                "nl": "Netvermogen"
+              }
+            },
+            "measure_power.pv": {
+              "title": {
+                "en": "PV power",
+                "nl": "PV-vermogen"
+              }
+            },
+            "measure_power.pv1": {
+              "title": {
+                "en": "PV string 1",
+                "nl": "PV-string 1"
+              }
+            },
+            "measure_power.pv2": {
+              "title": {
+                "en": "PV string 2",
+                "nl": "PV-string 2"
+              }
+            },
+            "measure_power.backup": {
+              "title": {
+                "en": "Backup power",
+                "nl": "Noodstroomvermogen"
+              }
+            },
+            "meter_power.charged": {
+              "title": {
+                "en": "Charged energy",
+                "nl": "Geladen energie"
+              }
+            },
+            "meter_power.discharged": {
+              "title": {
+                "en": "Discharged energy",
+                "nl": "Ontladen energie"
+              }
+            },
+            "target_power": {
+              "min": -2400,
+              "max": 2400,
+              "step": 10,
+              "decimals": 0
+            },
+            "target_power_mode": {
+              "values": [
+                {
+                  "id": "device",
+                  "title": {
+                    "en": "Self-consumption (AI)",
+                    "nl": "Zelfconsumptie (AI)"
+                  }
+                },
+                {
+                  "id": "homey",
+                  "title": {
+                    "en": "Homey control",
+                    "nl": "Homey-besturing"
+                  }
+                }
+              ]
+            },
+            "button.reset_meters": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Reset meters",
+                "nl": "Meters resetten"
+              },
+              "desc": {
+                "en": "Resets the charged and discharged energy meters to zero. This breaks the continuity of this device's history in Homey Energy.",
+                "nl": "Zet de meters voor geladen en ontladen energie terug naar nul. Dit onderbreekt de continuïteit van de geschiedenis van dit apparaat in Homey Energie."
+              }
+            }
+          },
+          "energy": {
+            "homeBattery": true,
+            "meterPowerImportedCapability": "meter_power.charged",
+            "meterPowerExportedCapability": "meter_power.discharged"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.stekkerdeal.aecc/3/72280f29-83c7-4787-90b9-aa303a8fc9d3/drivers/battery/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.stekkerdeal.aecc/3/72280f29-83c7-4787-90b9-aa303a8fc9d3/drivers/battery/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.stekkerdeal.aecc/3/72280f29-83c7-4787-90b9-aa303a8fc9d3/drivers/battery/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "control_write_failed",
+            "title": {
+              "en": "Control command failed",
+              "nl": "Besturingscommando mislukt"
+            },
+            "hint": {
+              "en": "Fires once all retries are exhausted without an acknowledgement from the battery.",
+              "nl": "Wordt geactiveerd nadat alle nieuwe pogingen zijn uitgeput zonder bevestiging van de batterij."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "operation",
+                "type": "string",
+                "title": {
+                  "en": "Operation",
+                  "nl": "Bewerking"
+                }
+              },
+              {
+                "name": "attempts",
+                "type": "number",
+                "title": {
+                  "en": "Attempts",
+                  "nl": "Pogingen"
+                }
+              }
+            ]
+          },
+          {
+            "id": "control_drift_corrected",
+            "title": {
+              "en": "Setpoint drift corrected",
+              "nl": "Afwijking setpoint hersteld"
+            },
+            "hint": {
+              "en": "Fires when the battery's actual setpoint no longer matched what was last written and this app restored it.",
+              "nl": "Wordt geactiveerd wanneer het werkelijke setpoint van de batterij niet meer overeenkwam met wat laatst is geschreven en deze app het heeft hersteld."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "expected",
+                "type": "number",
+                "title": {
+                  "en": "Expected power",
+                  "nl": "Verwacht vermogen"
+                }
+              },
+              {
+                "name": "found",
+                "type": "number",
+                "title": {
+                  "en": "Found power",
+                  "nl": "Gevonden vermogen"
+                }
+              }
+            ]
+          },
+          {
+            "id": "readings_became_stale",
+            "title": {
+              "en": "Readings became stale",
+              "nl": "Metingen verouderd"
+            },
+            "hint": {
+              "en": "Fires once when polling stops producing fresh data, not repeatedly while the battery stays unreachable.",
+              "nl": "Wordt eenmalig geactiveerd wanneer het pollen geen verse data meer oplevert, niet herhaaldelijk zolang de batterij onbereikbaar blijft."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds since last reading",
+                  "nl": "Seconden sinds laatste meting"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "readings_are_fresh",
+            "title": {
+              "en": "Data !{{is|is not}} fresh",
+              "nl": "Data !{{is|is niet}} vers"
+            },
+            "titleFormatted": {
+              "en": "Data !{{is|is not}} fresher than [[seconds]] seconds old",
+              "nl": "Data !{{is|is niet}} verser dan [[seconds]] seconden oud"
+            },
+            "hint": {
+              "en": "Fresh means a successful reading arrived within the given number of seconds. Use this to guard other actions from running on stale data.",
+              "nl": "Vers betekent dat er binnen het opgegeven aantal seconden een succesvolle meting is binnengekomen. Gebruik dit om andere acties te beschermen tegen verouderde data."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "nl": "Seconden"
+                },
+                "min": 5,
+                "max": 3600,
+                "step": 5
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_charge_power",
+            "title": {
+              "en": "Charge at a set power",
+              "nl": "Laad op met een ingesteld vermogen"
+            },
+            "titleFormatted": {
+              "en": "Charge at [[power]]",
+              "nl": "Laad op met [[power]]"
+            },
+            "hint": {
+              "en": "Sets the mode to Homey control and charges at this power. Also callable from HomeyScript.",
+              "nl": "Zet de modus op Homey-besturing en laadt op met dit vermogen. Ook aanroepbaar vanuit HomeyScript."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power",
+                  "nl": "Vermogen"
+                },
+                "min": 0,
+                "max": 2400,
+                "step": 10,
+                "label": {
+                  "en": "W",
+                  "nl": "W"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_discharge_power",
+            "title": {
+              "en": "Discharge at a set power",
+              "nl": "Ontlaad met een ingesteld vermogen"
+            },
+            "titleFormatted": {
+              "en": "Discharge at [[power]]",
+              "nl": "Ontlaad met [[power]]"
+            },
+            "hint": {
+              "en": "Sets the mode to Homey control and discharges at this power. Also callable from HomeyScript.",
+              "nl": "Zet de modus op Homey-besturing en ontlaadt met dit vermogen. Ook aanroepbaar vanuit HomeyScript."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power",
+                  "nl": "Vermogen"
+                },
+                "min": 0,
+                "max": 2400,
+                "step": 10,
+                "label": {
+                  "en": "W",
+                  "nl": "W"
+                }
+              }
+            ]
+          },
+          {
+            "id": "stop_battery",
+            "title": {
+              "en": "Stop",
+              "nl": "Stop"
+            },
+            "hint": {
+              "en": "Holds an active 0W setpoint with energy management still enabled, unlike switching to self-consumption mode which hands control back to the battery.",
+              "nl": "Houdt een actief setpoint van 0W aan met energiebeheer nog steeds ingeschakeld, in tegenstelling tot overschakelen naar zelfconsumptiemodus waarbij de besturing wordt teruggegeven aan de batterij."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              }
+            ]
+          },
+          {
+            "id": "set_soc_limits",
+            "title": {
+              "en": "Set charge and discharge limits",
+              "nl": "Stel oplaad- en ontlaadlimiet in"
+            },
+            "titleFormatted": {
+              "en": "Set discharge limit to [[min_soc]] and charge limit to [[max_soc]]",
+              "nl": "Stel ontlaadlimiet in op [[min_soc]] en oplaadlimiet op [[max_soc]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              },
+              {
+                "name": "min_soc",
+                "type": "number",
+                "title": {
+                  "en": "Discharge limit",
+                  "nl": "Ontlaadlimiet"
+                },
+                "min": 5,
+                "max": 50,
+                "step": 5,
+                "label": {
+                  "en": "%",
+                  "nl": "%"
+                }
+              },
+              {
+                "name": "max_soc",
+                "type": "number",
+                "title": {
+                  "en": "Charge limit",
+                  "nl": "Oplaadlimiet"
+                },
+                "min": 50,
+                "max": 100,
+                "step": 5,
+                "label": {
+                  "en": "%",
+                  "nl": "%"
+                }
+              }
+            ]
+          },
+          {
+            "id": "reapply_setpoint",
+            "title": {
+              "en": "Reapply the setpoint",
+              "nl": "Setpoint opnieuw toepassen"
+            },
+            "hint": {
+              "en": "Rewrites the current target power to the battery without changing its value. Useful as a recovery step after a failed control command.",
+              "nl": "Schrijft het huidige doelvermogen opnieuw naar de batterij zonder de waarde te wijzigen. Handig als herstelstap na een mislukt besturingscommando."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-07T06:37:57.773Z",
+      "bugs": "https://github.com/StekkerDeal/aecc-battery-homey/issues",
+      "homepage": "https://stekkerdeal.nl",
+      "support": "https://github.com/StekkerDeal/aecc-battery-homey/issues",
+      "source": "https://github.com/StekkerDeal/aecc-battery-homey",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Fossibot added as a selectable brand, confirmed on the FBP 1200. AEG Solarcube confirmed working on Homey by a user. Multi-unit stacks: manual control reaches the master only, and the README explains why and what to do if you need to control both units.",
+        "nl": "Fossibot toegevoegd als selecteerbaar merk, bevestigd op de FBP 1200. AEG Solarcube door een gebruiker bevestigd werkend op Homey. Master/slave-opstellingen: handmatige besturing bereikt alleen de master; de README legt uit waarom en wat je kunt doen als je beide batterijen wilt aansturen."
+      },
+      "compatibility": ">=12.13.0",
+      "tags": {
+        "en": [
+          "battery",
+          "home battery",
+          "plug-in battery",
+          "energy storage",
+          "local",
+          "AECC",
+          "Sunpura",
+          "Lunergy",
+          "Voltdeer",
+          "AEG",
+          "Solarcube",
+          "AFERIY",
+          "AccuMate",
+          "JET",
+          "Oscal",
+          "Fossibot"
+        ],
+        "nl": [
+          "stekkerbatterij",
+          "energieopslag",
+          "lokaal"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a81aafdc6a80eeabce3bed4",
+      "type": "user",
+      "userId": "6a7fa9309ed46c6dfd2cb47b",
+      "name": "Roy Dorland",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "zperx.leapmotor",
+    "rating": null,
+    "liveBuild": {
+      "id": 5,
+      "name": {
+        "en": "Leapmotor"
+      },
+      "version": "0.0.7",
+      "readme": {
+        "en": "Control and monitor your Leapmotor directly from Homey. No intermediary server, the app talks to Leapmotor's cloud the same way the official mobile app does. Your car becomes a first-class citizen in your flows: it reports what it is doing, and it does what you ask. Highlights:  SOC with 0.1% precision, custom range, unlimited geofencing (latitude/longitude), plug type detection (CCS / Type 2), battery temperature, battery heating, etc.\r\n\r\nIDEAS TO GET YOU STARTED\r\n- Garage door opens: unlock the car (Presuming your Bluetooth key doesn't work either)\r\n- CCS cable detected: send a notification at every 10% SOC step while fast charging\r\n- Bathroom motion after 6:00AM on a workday + below 4C° outside: start the defrost\r\n- Build your own geofencing from the latitude/longitude\r\n- Advanced charging plans around your energy tariff\r\n\r\nSETUP: USE A SECOND ACCOUNT\r\nDo not log into homey with your main Leapmotor account. Leapmotor can block unofficial access without warning, and you do not want to lose the app that opens your car. Steps:\r\n1. Create a NEW Leapmotor account in the Leapmotor mobile app. Use a second phone or tablet if you have one - the app can be removed afterwards. No spare device? Log out of your own Leapmotor app, create the new account there, then log back in with your main account.\r\n2. In the Leapmotor app with your MAIN account: Personal Center > My vehicle > tap your vehicle > Shared member > Add shared member, and give it the permissions you want Homey to have.\r\n3. Accept the shared vehicle on the second account.\r\n4. Add the vehicle in Homey using the second account.\r\n\r\nBEFORE YOU START - PLEASE READ\r\n- Unofficial and unsupported. It uses a non-official API that can change, break or behave unpredictably at any time. Verify in a safe environment what it does before you rely on it. \r\n- Rate limits are real. Too much polling or too many commands can get an account temporarily blocked. Keep it reasonable.\r\n- You are in charge. You accept responsibility for anything that follows vehicle damage, accidents, account locks or data issues.\r\n- The PIN is optional. Leave it blank and the app is read-only, all the sensor data, none of the remote commands. Fill it in and the commands unlock.\r\n\r\nKNOWN LIMITS AND HONEST SMALL PRINT\r\n- Tested on a B10. Other models (B05, C10, T03, C16) should work but may have per-vehicle quirks\r\n- The Leapmotor cryptography is heavy for older Homeys. On an early-2016 Homey it works, but it can hiccup if you ask it to do several things at once. Give commands a moment to breathe.\r\n- Not everything works on every vehicle: seat adjustment, sentry, restarting the Bluetooth key are the usual suspects.\r\n- Some API functions are deliberately not implemented: autopark, summon & Co are not available on export models. If you know the cmdId you can still fire them with the raw command card."
+      },
+      "description": {
+        "en": "Give your Leapmotor a Home[y]"
+      },
+      "category": "tools",
+      "brandColor": "#272e40",
+      "icon": "https://apps.homeycdn.net/app/zperx.leapmotor/5/8af14547-2878-4799-8900-e820f0bceb93/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/zperx.leapmotor/5/8af14547-2878-4799-8900-e820f0bceb93/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/zperx.leapmotor/5/8af14547-2878-4799-8900-e820f0bceb93/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "car",
+          "name": {
+            "en": "Leapmotor"
+          },
+          "class": "car",
+          "capabilities": [
+            "leapmotor_refresh",
+            "leapmotor_lock_control",
+            "leapmotor_windows_control",
+            "leapmotor_boot_control",
+            "leapmotor_sunshade",
+            "leapmotor_windshield_defrost",
+            "leapmotor_fast_cooling",
+            "leapmotor_fast_heating",
+            "leapmotor_mirror_heating",
+            "leapmotor_steering_wheel_heat",
+            "leapmotor_seat_heat_driver",
+            "leapmotor_seat_heat_passenger",
+            "leapmotor_seat_ventilation_driver",
+            "leapmotor_seat_ventilation_passenger",
+            "leapmotor_unlock_charger",
+            "leapmotor_charging_control",
+            "leapmotor_battery_heating_control",
+            "leapmotor_btkey_reset",
+            "leapmotor_soc",
+            "measure_battery",
+            "measure_range",
+            "measure_temperature",
+            "leapmotor_plug_type",
+            "leapmotor_charge_remaining",
+            "leapmotor_charging_power",
+            "leapmotor_cabin_heating",
+            "leapmotor_ac",
+            "leapmotor_doors",
+            "leapmotor_windows",
+            "leapmotor_locked",
+            "leapmotor_security",
+            "leapmotor_odometer",
+            "leapmotor_speed",
+            "leapmotor_gear",
+            "leapmotor_battery_temperature",
+            "leapmotor_heating",
+            "leapmotor_voltage",
+            "leapmotor_current",
+            "leapmotor_tire_pressure_front_left",
+            "leapmotor_tire_pressure_front_right",
+            "leapmotor_tire_pressure_rear_left",
+            "leapmotor_tire_pressure_rear_right",
+            "leapmotor_plugged",
+            "leapmotor_charging_power_kw",
+            "leapmotor_charging",
+            "leapmotor_tire_pressure_average",
+            "leapmotor_latitude",
+            "leapmotor_longitude"
+          ],
+          "capabilitiesOptions": {
+            "measure_battery": {
+              "title": {
+                "en": "Battery"
+              }
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Interior temperature"
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/zperx.leapmotor/5/8af14547-2878-4799-8900-e820f0bceb93/drivers/car/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/zperx.leapmotor/5/8af14547-2878-4799-8900-e820f0bceb93/drivers/car/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/zperx.leapmotor/5/8af14547-2878-4799-8900-e820f0bceb93/drivers/car/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "location_changed",
+            "title": {
+              "en": "The location changed"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "longitude",
+                "type": "number",
+                "title": {
+                  "en": "Longitude"
+                },
+                "example": 9.19
+              },
+              {
+                "name": "latitude",
+                "type": "number",
+                "title": {
+                  "en": "Latitude"
+                },
+                "example": 45.46
+              }
+            ]
+          },
+          {
+            "id": "windows_opened",
+            "title": {
+              "en": "A window was opened"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "windows_closed",
+            "title": {
+              "en": "All windows were closed"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "plug_type_changed",
+            "title": {
+              "en": "The plug type changed to..."
+            },
+            "titleFormatted": {
+              "en": "The plug type changed to [[type]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "type",
+                "title": {
+                  "en": "Plug type"
+                },
+                "values": [
+                  {
+                    "id": "no",
+                    "title": {
+                      "en": "Unplugged"
+                    }
+                  },
+                  {
+                    "id": "type2",
+                    "title": {
+                      "en": "Type2"
+                    }
+                  },
+                  {
+                    "id": "ccs",
+                    "title": {
+                      "en": "CCS"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "type",
+                "type": "string",
+                "title": {
+                  "en": "Plug type"
+                },
+                "example": "CCS"
+              }
+            ]
+          },
+          {
+            "id": "tire_pressure_changed",
+            "title": {
+              "en": "Tire pressure changed"
+            },
+            "titleFormatted": {
+              "en": "Tire pressure [[tire]] changed"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "tire",
+                "title": {
+                  "en": "Tire"
+                },
+                "values": [
+                  {
+                    "id": "any",
+                    "title": {
+                      "en": "Any"
+                    }
+                  },
+                  {
+                    "id": "average",
+                    "title": {
+                      "en": "Average"
+                    }
+                  },
+                  {
+                    "id": "front_left",
+                    "title": {
+                      "en": "Front left"
+                    }
+                  },
+                  {
+                    "id": "front_right",
+                    "title": {
+                      "en": "Front right"
+                    }
+                  },
+                  {
+                    "id": "rear_left",
+                    "title": {
+                      "en": "Rear left"
+                    }
+                  },
+                  {
+                    "id": "rear_right",
+                    "title": {
+                      "en": "Rear right"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "pressure",
+                "type": "number",
+                "title": {
+                  "en": "Pressure"
+                },
+                "example": 2.4
+              },
+              {
+                "name": "tire",
+                "type": "string",
+                "title": {
+                  "en": "Tire"
+                },
+                "example": "front left"
+              },
+              {
+                "name": "unit",
+                "type": "string",
+                "title": {
+                  "en": "Unit"
+                },
+                "example": "bar"
+              }
+            ]
+          },
+          {
+            "id": "geofence_entered",
+            "title": {
+              "en": "Car entered geofence"
+            },
+            "titleFormatted": {
+              "en": "Car entered within [[radius]] [[unit]] of [[latitude]], [[longitude]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude"
+                },
+                "min": -90,
+                "max": 90,
+                "placeholder": {
+                  "en": "-90 - 90"
+                }
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude"
+                },
+                "min": -180,
+                "max": 180,
+                "placeholder": {
+                  "en": "-180 - 180"
+                }
+              },
+              {
+                "type": "number",
+                "name": "radius",
+                "title": {
+                  "en": "Radius"
+                },
+                "min": 10,
+                "max": 100000,
+                "placeholder": {
+                  "en": "10 - 100000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "m",
+                    "title": {
+                      "en": "Meters (m)"
+                    }
+                  },
+                  {
+                    "id": "km",
+                    "title": {
+                      "en": "Kilometers (km)"
+                    }
+                  },
+                  {
+                    "id": "mi",
+                    "title": {
+                      "en": "Miles (mi)"
+                    }
+                  },
+                  {
+                    "id": "ft",
+                    "title": {
+                      "en": "Feet (ft)"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "latitude",
+                "type": "number",
+                "title": {
+                  "en": "Latitude"
+                },
+                "example": 51.5
+              },
+              {
+                "name": "longitude",
+                "type": "number",
+                "title": {
+                  "en": "Longitude"
+                },
+                "example": 7.5
+              }
+            ]
+          },
+          {
+            "id": "geofence_exited",
+            "title": {
+              "en": "Car left geofence"
+            },
+            "titleFormatted": {
+              "en": "Car left further than [[radius]] [[unit]] from [[latitude]], [[longitude]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude"
+                },
+                "min": -90,
+                "max": 90,
+                "placeholder": {
+                  "en": "-90 - 90"
+                }
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude"
+                },
+                "min": -180,
+                "max": 180,
+                "placeholder": {
+                  "en": "-180 - 180"
+                }
+              },
+              {
+                "type": "number",
+                "name": "radius",
+                "title": {
+                  "en": "Radius"
+                },
+                "min": 10,
+                "max": 100000,
+                "placeholder": {
+                  "en": "10 - 100000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "m",
+                    "title": {
+                      "en": "Meters (m)"
+                    }
+                  },
+                  {
+                    "id": "km",
+                    "title": {
+                      "en": "Kilometers (km)"
+                    }
+                  },
+                  {
+                    "id": "mi",
+                    "title": {
+                      "en": "Miles (mi)"
+                    }
+                  },
+                  {
+                    "id": "ft",
+                    "title": {
+                      "en": "Feet (ft)"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "latitude",
+                "type": "number",
+                "title": {
+                  "en": "Latitude"
+                },
+                "example": 51.5
+              },
+              {
+                "name": "longitude",
+                "type": "number",
+                "title": {
+                  "en": "Longitude"
+                },
+                "example": 7.5
+              }
+            ]
+          },
+          {
+            "id": "charging_power_below",
+            "title": {
+              "en": "Charging power is below..."
+            },
+            "titleFormatted": {
+              "en": "Charging power dropped below [[power]] kW"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "power",
+                "title": {
+                  "en": "Power threshold kW"
+                },
+                "min": 0,
+                "max": 200,
+                "placeholder": {
+                  "en": "0 - 200"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power kW"
+                },
+                "example": 2.5
+              },
+              {
+                "name": "previous_power",
+                "type": "number",
+                "title": {
+                  "en": "Previous power kW"
+                },
+                "example": 7.2
+              }
+            ]
+          },
+          {
+            "id": "charging_completed",
+            "title": {
+              "en": "Charging completed"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "soc",
+                "type": "number",
+                "title": {
+                  "en": "SOC %"
+                },
+                "example": 100
+              },
+              {
+                "name": "range",
+                "type": "number",
+                "title": {
+                  "en": "Range km"
+                },
+                "example": 300
+              }
+            ]
+          },
+          {
+            "id": "fully_charged",
+            "title": {
+              "en": "Fully charged"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "soc",
+                "type": "number",
+                "title": {
+                  "en": "SOC %"
+                },
+                "example": 99.9
+              },
+              {
+                "name": "range",
+                "type": "number",
+                "title": {
+                  "en": "Range km"
+                },
+                "example": 300
+              }
+            ]
+          },
+          {
+            "id": "charging_started",
+            "title": {
+              "en": "Charging started"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power kW"
+                },
+                "example": 7.4
+              },
+              {
+                "name": "soc",
+                "type": "number",
+                "title": {
+                  "en": "SOC %"
+                },
+                "example": 45
+              }
+            ]
+          },
+          {
+            "id": "charging_stopped",
+            "title": {
+              "en": "Charging stopped"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power kW"
+                },
+                "example": 0
+              },
+              {
+                "name": "soc",
+                "type": "number",
+                "title": {
+                  "en": "SOC %"
+                },
+                "example": 82
+              }
+            ]
+          },
+          {
+            "id": "opening_changed",
+            "title": {
+              "en": "A door, trunk, window or sunshade opened or closed"
+            },
+            "titleFormatted": {
+              "en": "The [[item]] was [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "item",
+                "title": {
+                  "en": "Item"
+                },
+                "values": [
+                  {
+                    "id": "door",
+                    "title": {
+                      "en": "door"
+                    }
+                  },
+                  {
+                    "id": "trunk",
+                    "title": {
+                      "en": "trunk"
+                    }
+                  },
+                  {
+                    "id": "window",
+                    "title": {
+                      "en": "window"
+                    }
+                  },
+                  {
+                    "id": "sunshade",
+                    "title": {
+                      "en": "sunshade"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "title": {
+                  "en": "Opened/Closed"
+                },
+                "values": [
+                  {
+                    "id": "opened",
+                    "title": {
+                      "en": "opened"
+                    }
+                  },
+                  {
+                    "id": "closed",
+                    "title": {
+                      "en": "closed"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "item",
+                "type": "string",
+                "title": {
+                  "en": "Item"
+                },
+                "example": "door"
+              },
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "state"
+                },
+                "example": "opened"
+              }
+            ]
+          },
+          {
+            "id": "data_stale",
+            "title": {
+              "en": "Last data is older than..."
+            },
+            "titleFormatted": {
+              "en": "Last data is older than [[duration]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration"
+                },
+                "min": 1,
+                "max": 10000,
+                "placeholder": {
+                  "en": "1 - 10000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "minutes",
+                    "title": {
+                      "en": "Minutes"
+                    }
+                  },
+                  {
+                    "id": "hours",
+                    "title": {
+                      "en": "Hours"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "age_minutes",
+                "type": "number",
+                "title": {
+                  "en": "Age minutes"
+                },
+                "example": 120
+              }
+            ]
+          },
+          {
+            "id": "car_parked",
+            "title": {
+              "en": "Car is parked"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "speed",
+                "type": "number",
+                "title": {
+                  "en": "Speed"
+                },
+                "example": 0
+              }
+            ]
+          },
+          {
+            "id": "car_moving",
+            "title": {
+              "en": "Car is moving"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "speed",
+                "type": "number",
+                "title": {
+                  "en": "Speed"
+                },
+                "example": 48
+              }
+            ]
+          },
+          {
+            "id": "gear_changed",
+            "title": {
+              "en": "The gear changed to..."
+            },
+            "titleFormatted": {
+              "en": "The gear changed to [[gear]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "gear",
+                "title": {
+                  "en": "Gear"
+                },
+                "values": [
+                  {
+                    "id": "any",
+                    "title": {
+                      "en": "Any"
+                    }
+                  },
+                  {
+                    "id": "park",
+                    "title": {
+                      "en": "Park"
+                    }
+                  },
+                  {
+                    "id": "drive",
+                    "title": {
+                      "en": "Drive"
+                    }
+                  },
+                  {
+                    "id": "neutral",
+                    "title": {
+                      "en": "Neutral"
+                    }
+                  },
+                  {
+                    "id": "reverse",
+                    "title": {
+                      "en": "Reverse"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "gear",
+                "type": "string",
+                "title": {
+                  "en": "Gear"
+                },
+                "example": "Park"
+              }
+            ]
+          },
+          {
+            "id": "car_locked",
+            "title": {
+              "en": "Car locked"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "car_unlocked",
+            "title": {
+              "en": "Car unlocked"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "tire_pressure_low",
+            "title": {
+              "en": "Tire pressure dropped below..."
+            },
+            "titleFormatted": {
+              "en": "Tire pressure [[tire]] dropped below [[pressure]] bar"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "tire",
+                "title": {
+                  "en": "Tire"
+                },
+                "values": [
+                  {
+                    "id": "any",
+                    "title": {
+                      "en": "Any"
+                    }
+                  },
+                  {
+                    "id": "average",
+                    "title": {
+                      "en": "Average"
+                    }
+                  },
+                  {
+                    "id": "front_left",
+                    "title": {
+                      "en": "Front left"
+                    }
+                  },
+                  {
+                    "id": "front_right",
+                    "title": {
+                      "en": "Front right"
+                    }
+                  },
+                  {
+                    "id": "rear_left",
+                    "title": {
+                      "en": "Rear left"
+                    }
+                  },
+                  {
+                    "id": "rear_right",
+                    "title": {
+                      "en": "Rear right"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "pressure",
+                "title": {
+                  "en": "Pressure threshold bar"
+                },
+                "min": 0.5,
+                "max": 5,
+                "placeholder": {
+                  "en": "0.5 - 5"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "tire",
+                "type": "string",
+                "title": {
+                  "en": "Tire"
+                },
+                "example": "front_left"
+              },
+              {
+                "name": "pressure",
+                "type": "number",
+                "title": {
+                  "en": "Pressure bar"
+                },
+                "example": 2.1
+              }
+            ]
+          },
+          {
+            "id": "range_dropped_below",
+            "title": {
+              "en": "The range became less than..."
+            },
+            "titleFormatted": {
+              "en": "The range became less than [[range]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "range",
+                "title": {
+                  "en": "Range"
+                },
+                "min": 1,
+                "max": 1000,
+                "placeholder": {
+                  "en": "1 - 1000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "km",
+                    "title": {
+                      "en": "Kilometers (km)"
+                    }
+                  },
+                  {
+                    "id": "mi",
+                    "title": {
+                      "en": "Miles (mi)"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "range",
+                "type": "number",
+                "title": {
+                  "en": "Range"
+                },
+                "example": 80
+              },
+              {
+                "name": "unit",
+                "type": "string",
+                "title": {
+                  "en": "Unit"
+                },
+                "example": "km"
+              }
+            ]
+          },
+          {
+            "id": "range_rose_above",
+            "title": {
+              "en": "The range became greater than..."
+            },
+            "titleFormatted": {
+              "en": "The range became greater than [[range]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "range",
+                "title": {
+                  "en": "Range"
+                },
+                "min": 1,
+                "max": 1000,
+                "placeholder": {
+                  "en": "1 - 1000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "km",
+                    "title": {
+                      "en": "Kilometers (km)"
+                    }
+                  },
+                  {
+                    "id": "mi",
+                    "title": {
+                      "en": "Miles (mi)"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "range",
+                "type": "number",
+                "title": {
+                  "en": "Range"
+                },
+                "example": 320
+              },
+              {
+                "name": "unit",
+                "type": "string",
+                "title": {
+                  "en": "Unit"
+                },
+                "example": "km"
+              }
+            ]
+          },
+          {
+            "id": "charge_remaining_below",
+            "title": {
+              "en": "Charging time remaining drops below..."
+            },
+            "titleFormatted": {
+              "en": "Charging time remaining drops below [[duration]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration"
+                },
+                "min": 0,
+                "max": 6000,
+                "placeholder": {
+                  "en": "0 - 6000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "minutes",
+                    "title": {
+                      "en": "Minutes"
+                    }
+                  },
+                  {
+                    "id": "hours",
+                    "title": {
+                      "en": "Hours"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "remaining",
+                "type": "number",
+                "title": {
+                  "en": "Remaining"
+                },
+                "example": 45
+              },
+              {
+                "name": "unit",
+                "type": "string",
+                "title": {
+                  "en": "Unit"
+                },
+                "example": "minutes"
+              }
+            ]
+          },
+          {
+            "id": "charge_remaining_changed",
+            "title": {
+              "en": "Charging time remaining changed"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "remaining",
+                "type": "number",
+                "title": {
+                  "en": "Remaining minutes"
+                },
+                "example": 45
+              }
+            ]
+          },
+          {
+            "id": "opening_left_open",
+            "title": {
+              "en": "Door, trunk, or window left open"
+            },
+            "titleFormatted": {
+              "en": "The [[item]] is left open for [[minutes]] minutes"
+            },
+            "hint": {
+              "en": "Fires once when a door, the trunk, a window, or the sunshade stayed open without interruption for the number of minutes you set. It only fires again after that item has been closed and opened once more. The delay before it fires depends on the polling interval: with the default 15 minute interval, a 10 minute card can take up to 25 minutes to fire."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "item",
+                "title": {
+                  "en": "Item"
+                },
+                "values": [
+                  {
+                    "id": "any",
+                    "title": {
+                      "en": "Any door, trunk, or window"
+                    }
+                  },
+                  {
+                    "id": "door",
+                    "title": {
+                      "en": "Door"
+                    }
+                  },
+                  {
+                    "id": "trunk",
+                    "title": {
+                      "en": "Trunk"
+                    }
+                  },
+                  {
+                    "id": "window",
+                    "title": {
+                      "en": "Window"
+                    }
+                  },
+                  {
+                    "id": "sunshade",
+                    "title": {
+                      "en": "Sunshade"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "title": {
+                  "en": "Minutes"
+                },
+                "min": 1,
+                "max": 600,
+                "placeholder": {
+                  "en": "1 - 600"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "item",
+                "type": "string",
+                "title": {
+                  "en": "Item"
+                },
+                "example": "door"
+              },
+              {
+                "name": "open_minutes",
+                "type": "number",
+                "title": {
+                  "en": "Minutes open"
+                },
+                "example": 12
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "is_charging",
+            "title": {
+              "en": "The car !{{is|isn't}} charging"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "is_plugged_in",
+            "title": {
+              "en": "The car !{{is|isn't}} plugged in"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "plug_type",
+            "title": {
+              "en": "The plug type is..."
+            },
+            "titleFormatted": {
+              "en": "The plug type is [[type]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "type",
+                "title": {
+                  "en": "Plug type"
+                },
+                "values": [
+                  {
+                    "id": "plugged",
+                    "title": {
+                      "en": "Plugged in"
+                    }
+                  },
+                  {
+                    "id": "no",
+                    "title": {
+                      "en": "Unplugged"
+                    }
+                  },
+                  {
+                    "id": "type2",
+                    "title": {
+                      "en": "Type2"
+                    }
+                  },
+                  {
+                    "id": "ccs",
+                    "title": {
+                      "en": "CCS"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is_locked",
+            "title": {
+              "en": "The car !{{is|isn't}} locked"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "windows_open",
+            "title": {
+              "en": "A window !{{is|isn't}} open"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "battery_below",
+            "title": {
+              "en": "The battery !{{is|isn't}} below..."
+            },
+            "titleFormatted": {
+              "en": "The battery !{{is|isn't}} below [[percentage]] %"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "percentage",
+                "title": {
+                  "en": "Percentage"
+                },
+                "min": 1,
+                "max": 100,
+                "placeholder": {
+                  "en": "1 - 100"
+                }
+              }
+            ]
+          },
+          {
+            "id": "charging_power_above",
+            "title": {
+              "en": "The charging power !{{is|isn't}} above..."
+            },
+            "titleFormatted": {
+              "en": "The charging power !{{is|isn't}} above [[power]] kW"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "power",
+                "title": {
+                  "en": "Power"
+                },
+                "min": 0,
+                "max": 200,
+                "placeholder": {
+                  "en": "0 - 200"
+                }
+              }
+            ]
+          },
+          {
+            "id": "location_within_tolerance",
+            "title": {
+              "en": "Location is within tolerance"
+            },
+            "titleFormatted": {
+              "en": "Latitude within [[latitude]] ± [[lat_tolerance]] and longitude within [[longitude]] ± [[lon_tolerance]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude"
+                },
+                "min": -90,
+                "max": 90,
+                "placeholder": {
+                  "en": "-90 - 90"
+                }
+              },
+              {
+                "type": "number",
+                "name": "lat_tolerance",
+                "title": {
+                  "en": "Latitude tolerance"
+                },
+                "min": 0.0001,
+                "max": 5,
+                "placeholder": {
+                  "en": "0.0001 - 5"
+                }
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude"
+                },
+                "min": -180,
+                "max": 180,
+                "placeholder": {
+                  "en": "-180 - 180"
+                }
+              },
+              {
+                "type": "number",
+                "name": "lon_tolerance",
+                "title": {
+                  "en": "Longitude tolerance"
+                },
+                "min": 0.0001,
+                "max": 5,
+                "placeholder": {
+                  "en": "0.0001 - 5"
+                }
+              }
+            ]
+          },
+          {
+            "id": "geofence_within",
+            "title": {
+              "en": "Car is within geofence"
+            },
+            "titleFormatted": {
+              "en": "Car is within [[radius]] [[unit]] of [[latitude]], [[longitude]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude"
+                },
+                "min": -90,
+                "max": 90,
+                "placeholder": {
+                  "en": "-90 - 90"
+                }
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude"
+                },
+                "min": -180,
+                "max": 180,
+                "placeholder": {
+                  "en": "-180 - 180"
+                }
+              },
+              {
+                "type": "number",
+                "name": "radius",
+                "title": {
+                  "en": "Radius"
+                },
+                "min": 10,
+                "max": 100000,
+                "placeholder": {
+                  "en": "10 - 100000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "m",
+                    "title": {
+                      "en": "Meters (m)"
+                    }
+                  },
+                  {
+                    "id": "km",
+                    "title": {
+                      "en": "Kilometers (km)"
+                    }
+                  },
+                  {
+                    "id": "mi",
+                    "title": {
+                      "en": "Miles (mi)"
+                    }
+                  },
+                  {
+                    "id": "ft",
+                    "title": {
+                      "en": "Feet (ft)"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "data_is_stale",
+            "title": {
+              "en": "Last data is older than..."
+            },
+            "titleFormatted": {
+              "en": "Last data is older than [[duration]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration"
+                },
+                "min": 1,
+                "max": 10000,
+                "placeholder": {
+                  "en": "1 - 10000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "minutes",
+                    "title": {
+                      "en": "Minutes"
+                    }
+                  },
+                  {
+                    "id": "hours",
+                    "title": {
+                      "en": "Hours"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "is_parked",
+            "title": {
+              "en": "Car !{{is|isn't}} parked"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "gear_is",
+            "title": {
+              "en": "The gear !{{is|isn't}}..."
+            },
+            "titleFormatted": {
+              "en": "The gear !{{is|isn't}} [[gear]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "gear",
+                "title": {
+                  "en": "Gear"
+                },
+                "values": [
+                  {
+                    "id": "park",
+                    "title": {
+                      "en": "Park"
+                    }
+                  },
+                  {
+                    "id": "drive",
+                    "title": {
+                      "en": "Drive"
+                    }
+                  },
+                  {
+                    "id": "neutral",
+                    "title": {
+                      "en": "Neutral"
+                    }
+                  },
+                  {
+                    "id": "reverse",
+                    "title": {
+                      "en": "Reverse"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "tire_pressure_below",
+            "title": {
+              "en": "Tire pressure is below..."
+            },
+            "titleFormatted": {
+              "en": "Tire pressure [[tire]] is below [[pressure]] bar"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "tire",
+                "title": {
+                  "en": "Tire"
+                },
+                "values": [
+                  {
+                    "id": "any",
+                    "title": {
+                      "en": "Any"
+                    }
+                  },
+                  {
+                    "id": "average",
+                    "title": {
+                      "en": "Average"
+                    }
+                  },
+                  {
+                    "id": "front_left",
+                    "title": {
+                      "en": "Front left"
+                    }
+                  },
+                  {
+                    "id": "front_right",
+                    "title": {
+                      "en": "Front right"
+                    }
+                  },
+                  {
+                    "id": "rear_left",
+                    "title": {
+                      "en": "Rear left"
+                    }
+                  },
+                  {
+                    "id": "rear_right",
+                    "title": {
+                      "en": "Rear right"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "pressure",
+                "title": {
+                  "en": "Pressure bar"
+                },
+                "min": 0.5,
+                "max": 5,
+                "placeholder": {
+                  "en": "0.5 - 5"
+                }
+              }
+            ]
+          },
+          {
+            "id": "range_below",
+            "title": {
+              "en": "Range is below..."
+            },
+            "titleFormatted": {
+              "en": "Range is below [[range]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "range",
+                "title": {
+                  "en": "Range"
+                },
+                "min": 1,
+                "max": 1000,
+                "placeholder": {
+                  "en": "1 - 1000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "km",
+                    "title": {
+                      "en": "Kilometers"
+                    }
+                  },
+                  {
+                    "id": "mi",
+                    "title": {
+                      "en": "Miles"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "charging_power_below",
+            "title": {
+              "en": "Charging power is below..."
+            },
+            "titleFormatted": {
+              "en": "Charging power is below [[power]] kW"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "power",
+                "title": {
+                  "en": "Power kW"
+                },
+                "min": 0,
+                "max": 200,
+                "placeholder": {
+                  "en": "0 - 200"
+                }
+              }
+            ]
+          },
+          {
+            "id": "charge_remaining_below",
+            "title": {
+              "en": "Charging time remaining is below..."
+            },
+            "titleFormatted": {
+              "en": "Charging time remaining !{{is|isn't}} below [[duration]] [[unit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration"
+                },
+                "min": 0,
+                "max": 6000,
+                "placeholder": {
+                  "en": "0 - 6000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "minutes",
+                    "title": {
+                      "en": "Minutes"
+                    }
+                  },
+                  {
+                    "id": "hours",
+                    "title": {
+                      "en": "Hours"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "charge_remaining_known",
+            "title": {
+              "en": "Charging time remaining is known"
+            },
+            "titleFormatted": {
+              "en": "Charging time remaining !{{is|isn't}} known"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "lock",
+            "title": {
+              "en": "Lock the car"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "unlock",
+            "title": {
+              "en": "Unlock the car"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "find_car",
+            "title": {
+              "en": "Find the car"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "open_trunk",
+            "title": {
+              "en": "Open the boot"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "close_trunk",
+            "title": {
+              "en": "Close the boot"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "open_windows",
+            "title": {
+              "en": "Open the windows"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "close_windows",
+            "title": {
+              "en": "Close the windows"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "open_sunroof",
+            "title": {
+              "en": "Open the sunroof"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "close_sunroof",
+            "title": {
+              "en": "Close the sunroof"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "open_sunshade",
+            "title": {
+              "en": "Open the sunshade"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "close_sunshade",
+            "title": {
+              "en": "Close the sunshade"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "quick_cool",
+            "title": {
+              "en": "Start quick cooling"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "quick_heat",
+            "title": {
+              "en": "Start quick heating"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "windshield_defrost",
+            "title": {
+              "en": "Start windshield defrost"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "climate_off",
+            "title": {
+              "en": "Turn heating/AC off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "ventilation_off",
+            "title": {
+              "en": "Turn ventilation off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "set_climate",
+            "title": {
+              "en": "Turn the climate on..."
+            },
+            "titleFormatted": {
+              "en": "Turn the climate on at [[temperature]] °C"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "temperature",
+                "title": {
+                  "en": "Temperature"
+                },
+                "min": 16,
+                "max": 32,
+                "placeholder": {
+                  "en": "16 - 32"
+                }
+              }
+            ]
+          },
+          {
+            "id": "start_charging",
+            "title": {
+              "en": "Start charging"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "stop_charging",
+            "title": {
+              "en": "Stop charging"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "unlock_charger",
+            "title": {
+              "en": "Unlock the charger"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "set_charge_limit",
+            "title": {
+              "en": "Set the charge limit..."
+            },
+            "titleFormatted": {
+              "en": "Set the charge limit to [[percentage]] %"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "percentage",
+                "title": {
+                  "en": "Percentage"
+                },
+                "min": 20,
+                "max": 100,
+                "placeholder": {
+                  "en": "20 - 100"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_charge_plan",
+            "title": {
+              "en": "Set the charge plan..."
+            },
+            "titleFormatted": {
+              "en": "[[chargeEnable]] the charge plan: charge to [[chargesoc]] % between [[starttime]] and [[endtime]] on [[cycles]] (recharge: [[recharge]])"
+            },
+            "hint": {
+              "en": "Configures the scheduled charging plan of the car (Leapmotor command 190). Leave the days empty for a one-time charging window; pick one or more days for a weekly repeating plan. This command requires the vehicle PIN."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "chargeEnable",
+                "title": {
+                  "en": "Charge plan"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "Enable"
+                    }
+                  },
+                  {
+                    "id": "0",
+                    "title": {
+                      "en": "Disable"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "time",
+                "name": "starttime",
+                "title": {
+                  "en": "Start time"
+                },
+                "placeholder": {
+                  "en": "23:00"
+                }
+              },
+              {
+                "type": "time",
+                "name": "endtime",
+                "title": {
+                  "en": "End time"
+                },
+                "placeholder": {
+                  "en": "07:00"
+                }
+              },
+              {
+                "type": "number",
+                "name": "chargesoc",
+                "title": {
+                  "en": "Charge target (%)"
+                },
+                "min": 1,
+                "max": 100,
+                "placeholder": {
+                  "en": "1 - 100"
+                }
+              },
+              {
+                "type": "multiselect",
+                "name": "cycles",
+                "title": {
+                  "en": "Active days"
+                },
+                "conjunction": "and",
+                "required": false,
+                "values": [
+                  {
+                    "id": "mon",
+                    "title": {
+                      "en": "Monday"
+                    }
+                  },
+                  {
+                    "id": "tue",
+                    "title": {
+                      "en": "Tuesday"
+                    }
+                  },
+                  {
+                    "id": "wed",
+                    "title": {
+                      "en": "Wednesday"
+                    }
+                  },
+                  {
+                    "id": "thu",
+                    "title": {
+                      "en": "Thursday"
+                    }
+                  },
+                  {
+                    "id": "fri",
+                    "title": {
+                      "en": "Friday"
+                    }
+                  },
+                  {
+                    "id": "sat",
+                    "title": {
+                      "en": "Saturday"
+                    }
+                  },
+                  {
+                    "id": "sun",
+                    "title": {
+                      "en": "Sunday"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "recharge",
+                "title": {
+                  "en": "Recharge"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "title": {
+                      "en": "Off"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "On"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "healthy_charging_on",
+            "title": {
+              "en": "Turn healthy charging on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "healthy_charging_off",
+            "title": {
+              "en": "Turn healthy charging off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "battery_preheat_on",
+            "title": {
+              "en": "Turn battery preheating on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "battery_preheat_off",
+            "title": {
+              "en": "Turn battery preheating off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "steering_wheel_heat_on",
+            "title": {
+              "en": "Turn steering wheel heating on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "steering_wheel_heat_off",
+            "title": {
+              "en": "Turn steering wheel heating off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "mirror_heat_on",
+            "title": {
+              "en": "Turn mirror heating on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "mirror_heat_off",
+            "title": {
+              "en": "Turn mirror heating off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "seat_heat",
+            "title": {
+              "en": "Set seat heating..."
+            },
+            "titleFormatted": {
+              "en": "Set seat heating for [[position]] to level [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "position",
+                "title": {
+                  "en": "Seat"
+                },
+                "values": [
+                  {
+                    "id": "3",
+                    "title": {
+                      "en": "Driver"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "title": {
+                      "en": "Passenger"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "level",
+                "title": {
+                  "en": "Level"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "title": {
+                      "en": "Off"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "Low"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "title": {
+                      "en": "Medium"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "title": {
+                      "en": "High"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "seat_ventilation",
+            "title": {
+              "en": "Set seat ventilation..."
+            },
+            "titleFormatted": {
+              "en": "Set seat ventilation for [[position]] to level [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "position",
+                "title": {
+                  "en": "Seat"
+                },
+                "values": [
+                  {
+                    "id": "3",
+                    "title": {
+                      "en": "Driver"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "title": {
+                      "en": "Passenger"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "level",
+                "title": {
+                  "en": "Level"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "title": {
+                      "en": "Off"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "Low"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "title": {
+                      "en": "Medium"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "title": {
+                      "en": "High"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ble_key_restart",
+            "title": {
+              "en": "Restart the Bluetooth key"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "sentry_mode_on",
+            "title": {
+              "en": "Turn sentry mode on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "sentry_mode_off",
+            "title": {
+              "en": "Turn sentry mode off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "set_speed_limit",
+            "title": {
+              "en": "Set the speed limit..."
+            },
+            "titleFormatted": {
+              "en": "Set the speed limit to [[speed]] [[unit]]"
+            },
+            "hint": {
+              "en": "Choose the unit the value is entered in. The limit is converted to kilometers per hour before it is sent to the car, so the result is correct regardless of the unit shown on the device."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "speed",
+                "title": {
+                  "en": "Speed"
+                },
+                "min": 0,
+                "max": 200,
+                "placeholder": {
+                  "en": "0 - 200"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "unit",
+                "title": {
+                  "en": "Unit"
+                },
+                "values": [
+                  {
+                    "id": "kmh",
+                    "title": {
+                      "en": "Kilometers per hour (km/h)"
+                    }
+                  },
+                  {
+                    "id": "mph",
+                    "title": {
+                      "en": "Miles per hour (mph)"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "refresh_status",
+            "title": {
+              "en": "Refresh the status"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              }
+            ]
+          },
+          {
+            "id": "change_refresh_rate",
+            "title": {
+              "en": "Change refresh rate"
+            },
+            "titleFormatted": {
+              "en": "Refresh every [[rate]] seconds for [[duration]] minutes"
+            },
+            "hint": {
+              "en": "Be careful, high refresh rate can block your Leapmotor account"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "rate",
+                "title": {
+                  "en": "Refresh rate (seconds)"
+                },
+                "min": 15,
+                "max": 5400,
+                "placeholder": {
+                  "en": "15 - 5400"
+                }
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration (minutes)"
+                },
+                "min": 1,
+                "max": 60,
+                "placeholder": {
+                  "en": "1 - 60"
+                }
+              }
+            ]
+          },
+          {
+            "id": "raw_command",
+            "title": {
+              "en": "Send a raw command..."
+            },
+            "titleFormatted": {
+              "en": "Send raw command [[cmdId]] with content [[cmdContent]] (PIN: [[requiresPin]])"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "text",
+                "name": "cmdId",
+                "title": {
+                  "en": "Command ID"
+                },
+                "placeholder": {
+                  "en": "110 - 510"
+                }
+              },
+              {
+                "type": "text",
+                "name": "cmdContent",
+                "title": {
+                  "en": "Command content (JSON)"
+                },
+                "placeholder": {
+                  "en": "{\"value\":\"lock\"}"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "requiresPin",
+                "title": {
+                  "en": "Requires PIN"
+                },
+                "values": [
+                  {
+                    "id": "yes",
+                    "title": {
+                      "en": "Yes"
+                    }
+                  },
+                  {
+                    "id": "no",
+                    "title": {
+                      "en": "No"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_climate_complex",
+            "title": {
+              "en": "Set climate (advanced)..."
+            },
+            "titleFormatted": {
+              "en": "Set climate [[temperature]]°C fan [[windlevel]] mode [[mode]] circle [[circle]] [[operate]] [[position]] windshield [[wshld]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "temperature",
+                "title": {
+                  "en": "Temperature"
+                },
+                "min": 16,
+                "max": 32,
+                "placeholder": {
+                  "en": "16 - 32"
+                }
+              },
+              {
+                "type": "number",
+                "name": "windlevel",
+                "title": {
+                  "en": "Fan speed"
+                },
+                "min": 1,
+                "max": 7,
+                "placeholder": {
+                  "en": "1 - 7"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "mode",
+                "title": {
+                  "en": "Mode"
+                },
+                "values": [
+                  {
+                    "id": "cold",
+                    "title": {
+                      "en": "Cold"
+                    }
+                  },
+                  {
+                    "id": "hot",
+                    "title": {
+                      "en": "Hot"
+                    }
+                  },
+                  {
+                    "id": "wind",
+                    "title": {
+                      "en": "Wind"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "circle",
+                "title": {
+                  "en": "Recirculation"
+                },
+                "values": [
+                  {
+                    "id": "in",
+                    "title": {
+                      "en": "Inside"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "title": {
+                      "en": "Outside"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "operate",
+                "title": {
+                  "en": "Operation"
+                },
+                "values": [
+                  {
+                    "id": "manual",
+                    "title": {
+                      "en": "Manual"
+                    }
+                  },
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Auto"
+                    }
+                  },
+                  {
+                    "id": "close",
+                    "title": {
+                      "en": "Off"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "position",
+                "title": {
+                  "en": "Position"
+                },
+                "values": [
+                  {
+                    "id": "all",
+                    "title": {
+                      "en": "All"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "dropdown",
+                "name": "wshld",
+                "title": {
+                  "en": "Windshield defrost"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "title": {
+                      "en": "Off"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "On"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "seat_adjust",
+            "title": {
+              "en": "Adjust front seat position..."
+            },
+            "titleFormatted": {
+              "en": "Adjust [[seat]] seat with [[adjustment]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "dropdown",
+                "name": "seat",
+                "title": {
+                  "en": "Seat"
+                },
+                "values": [
+                  {
+                    "id": "driver",
+                    "title": {
+                      "en": "Driver"
+                    }
+                  },
+                  {
+                    "id": "passenger",
+                    "title": {
+                      "en": "Passenger"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "Left front"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "title": {
+                      "en": "Copilot"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "title": {
+                      "en": "Driver (numeric)"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "title": {
+                      "en": "Right front"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "name": "adjustment",
+                "title": {
+                  "en": "Adjustment JSON"
+                },
+                "placeholder": {
+                  "en": "{\"value\":\"1,2\"} or {\"forward\":1}"
+                }
+              }
+            ]
+          },
+          {
+            "id": "send_coordinates",
+            "title": {
+              "en": "Send coordinates to car"
+            },
+            "titleFormatted": {
+              "en": "Send coordinates [[latitude]], [[longitude]] [[name]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=car"
+              },
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude"
+                },
+                "min": -90,
+                "max": 90,
+                "placeholder": {
+                  "en": "-90 - 90"
+                }
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude"
+                },
+                "min": -180,
+                "max": 180,
+                "placeholder": {
+                  "en": "-180 - 180"
+                }
+              },
+              {
+                "type": "text",
+                "name": "name",
+                "title": {
+                  "en": "Name / POI"
+                },
+                "placeholder": {
+                  "en": "Destination"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 157676,
+      "state": "live",
+      "stateChangedAt": "2026-09-07T06:46:09.772Z",
+      "bugs": "https://github.com/4tetra4/leapmotor.homey.app/issues",
+      "homepage": "https://www.youtube.com/@zperx",
+      "support": "https://community.homey.app/t/157676",
+      "source": "https://github.com/4tetra4/leapmotor.homey.app",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Updated device icon"
+      },
+      "compatibility": ">=12.5.0",
+      "tags": {
+        "en": [
+          "car",
+          "ev",
+          "electric vehicle",
+          "leapmotor",
+          "climate",
+          "charging",
+          "C10",
+          "B10",
+          "B05",
+          "T03",
+          "C16"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.0.7",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a9186cd30ac038fba7073fc",
+      "type": "user",
+      "userId": "5718b3be4e0014d27c9df5b9",
+      "name": "ZperX .",
+      "verified": false
+    },
+    "communityTopicId": 157676
+  },
+  {
+    "id": "com.gpm.novadigital",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "NovaDigital"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Adds support for NovaDigital Zigbee wall switches (1 to 6 gang) and smart plugs to Homey, with a focus on reliable behavior and correct reporting.\n\nWall switches restore both their on/off state and configuration after a power outage. The backlight can be set to remain off even when power is restored. Multi-gang models correctly report the status of each individual outlet. Devices that stop responding are shown as unavailable in Homey — even before they fully leave the Zigbee network.\n\nSmart plugs report power, current, voltage and accumulated energy, and use availability detection to avoid unnecessary polling after being unplugged.\n\nAll mains-powered devices (switches, plugs) fire a \"Reconnected after power cut\" flow trigger the moment they rejoin the Zigbee network. This works even for short outages that wouldn't normally trip the unavailability alarm. Use it to automate scenes like \"breaker came back → turn on the lights\". Detection is based on low-level firmware signals that fire only on power restore — not on periodic traffic — ensuring no false triggers. A 120-second startup delay and a 30-second cooldown provide additional protection against triggers on app restart.\n\nA Settings page (App → Settings) shows live Zigbee traffic and rejoin statistics for every paired device, useful for spotting flaky mesh coverage or a plug that keeps power-cycling.\n\nSupported devices:\n- NovaDigital wall switches — 1, 2, 2 Touch, 3, 4, 4 ZCL and 6 gang\n- NovaDigital smart plugs (with power/energy metering)\n"
+      },
+      "description": {
+        "en": "Wall switches (1-6 gang) and smart plugs for NovaDigital Zigbee devices."
+      },
+      "category": "appliances",
+      "brandColor": "#2E6AB3",
+      "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "novadigital_switch_1_gang",
+          "name": {
+            "en": "NovaDigital Switch 1 Gang",
+            "es": "Interruptor NovaDigital 1 canal",
+            "it": "Interruttore NovaDigital 1 canale",
+            "de": "NovaDigital Schalter 1-fach"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_1_gang/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_1_gang/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_1_gang/assets/icon.svg"
+        },
+        {
+          "id": "novadigital_switch_2_gang",
+          "name": {
+            "en": "NovaDigital Switch 2 Gang",
+            "es": "Interruptor NovaDigital 2 canales",
+            "it": "Interruttore NovaDigital 2 canali",
+            "de": "NovaDigital Schalter 2-fach"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_2_gang/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_2_gang/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_2_gang/assets/icon.svg"
+        },
+        {
+          "id": "novadigital_switch_2_gang_touch",
+          "name": {
+            "en": "NovaDigital Switch 2 Gang Touch",
+            "es": "Interruptor NovaDigital 2 canales Touch",
+            "it": "Interruttore NovaDigital 2 canali Touch",
+            "de": "NovaDigital Schalter 2-fach Touch"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_2_gang_touch/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_2_gang_touch/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_2_gang_touch/assets/icon.svg"
+        },
+        {
+          "id": "novadigital_switch_3_gang",
+          "name": {
+            "en": "NovaDigital Switch 3 Gang",
+            "es": "Interruptor NovaDigital 3 canales",
+            "it": "Interruttore NovaDigital 3 canali",
+            "de": "NovaDigital Schalter 3-fach"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_3_gang/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_3_gang/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_3_gang/assets/icon.svg"
+        },
+        {
+          "id": "novadigital_switch_4_gang",
+          "name": {
+            "en": "NovaDigital Switch 4 Gang",
+            "es": "Interruptor NovaDigital 4 canales",
+            "it": "Interruttore NovaDigital 4 canali",
+            "de": "NovaDigital Schalter 4-fach"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_4_gang/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_4_gang/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_4_gang/assets/icon.svg"
+        },
+        {
+          "id": "novadigital_switch_4_gang_zcl",
+          "name": {
+            "en": "NovaDigital Switch 4 Gang ZCL",
+            "es": "Interruptor NovaDigital 4 canales ZCL ZCL",
+            "it": "Interruttore NovaDigital 4 canali",
+            "de": "NovaDigital Schalter 4-fach"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_4_gang_zcl/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_4_gang_zcl/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_4_gang_zcl/assets/icon.svg"
+        },
+        {
+          "id": "novadigital_switch_6_gang",
+          "name": {
+            "en": "NovaDigital Wall Switch 6 Gang",
+            "es": "Interruptor de pared NovaDigital 6 canales",
+            "it": "Interruttore a muro NovaDigital 6 canali",
+            "de": "NovaDigital Wandschalter 6-fach"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "is_availability"
+          ],
+          "energy": {
+            "approximation": {
+              "usageOn": 0,
+              "usageOff": 0
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_6_gang/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_6_gang/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/novadigital_switch_6_gang/assets/icon.svg"
+        },
+        {
+          "id": "smartplug",
+          "name": {
+            "en": "Smart Plug with metering",
+            "es": "Enchufe inteligente con medición",
+            "it": "Presa smart con misurazione",
+            "de": "Smart Plug mit Messung"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "measure_power",
+            "meter_power",
+            "measure_current",
+            "measure_voltage",
+            "is_availability"
+          ],
+          "energy": {
+            "meterPowerImportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug/assets/icon.svg"
+        },
+        {
+          "id": "smartplug_2",
+          "name": {
+            "en": "Smart Plug (_TZ3210)",
+            "de": "Smart Plug (_TZ3210)",
+            "es": "Enchufe inteligente (_TZ3210)",
+            "it": "Presa intelligente (_TZ3210)"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "measure_power",
+            "meter_power",
+            "measure_current",
+            "measure_voltage",
+            "is_availability"
+          ],
+          "energy": {
+            "meterPowerImportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug_2/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug_2/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug_2/assets/icon.svg"
+        },
+        {
+          "id": "smartplug_3",
+          "name": {
+            "en": "Smart Plug (_TZ3000)",
+            "de": "Smart Plug (_TZ3000)",
+            "es": "Enchufe inteligente (_TZ3000)",
+            "it": "Presa intelligente (_TZ3000)"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "measure_power",
+            "meter_power",
+            "measure_current",
+            "measure_voltage",
+            "is_availability"
+          ],
+          "energy": {
+            "meterPowerImportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug_3/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug_3/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.gpm.novadigital/1/401f2689-70fd-4d5b-b0c8-5a57a9d6b7fb/drivers/smartplug_3/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "novadigital_switch_1_gang_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_1_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_1_gang_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_1_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_1_gang_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_1_gang"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_touch_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang_touch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_touch_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang_touch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_touch_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang_touch"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_3_gang_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_3_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_3_gang_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_3_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_3_gang_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_3_gang"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_zcl_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang_zcl"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_zcl_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang_zcl"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_zcl_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang_zcl"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_6_gang_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_6_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_6_gang_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_6_gang"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_6_gang_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_6_gang"
+              }
+            ]
+          },
+          {
+            "id": "smartplug_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "smartplug_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "smartplug_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug"
+              }
+            ]
+          },
+          {
+            "id": "smartplug_2_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug_2"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "smartplug_2_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug_2"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "smartplug_2_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug_2"
+              }
+            ]
+          },
+          {
+            "id": "smartplug_3_availability_turned_on",
+            "title": {
+              "en": "Became available",
+              "de": "Wurde verfügbar",
+              "es": "Pasó a estar disponible",
+              "it": "Disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes available.",
+              "de": "Wird ausgelöst, wenn dieses Gerät verfügbar wird.",
+              "es": "Se activa cuando este dispositivo pasa a estar disponible.",
+              "it": "Si attiva quando questo dispositivo diventa disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug_3"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "smartplug_3_availability_turned_off",
+            "title": {
+              "en": "Became unavailable",
+              "de": "Wurde nicht verfügbar",
+              "es": "Pasó a no estar disponible",
+              "it": "Non più disponibile"
+            },
+            "hint": {
+              "en": "Fires when this device becomes unavailable.",
+              "de": "Wird ausgelöst, wenn dieses Gerät nicht mehr verfügbar ist.",
+              "es": "Se activa cuando este dispositivo deja de estar disponible.",
+              "it": "Si attiva quando questo dispositivo non è più disponibile."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug_3"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "de": "Gerätename",
+                  "es": "Nombre del dispositivo",
+                  "it": "Nome del dispositivo"
+                }
+              },
+              {
+                "name": "timestamp",
+                "type": "string",
+                "title": {
+                  "en": "Timestamp",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "it": "Data e ora"
+                }
+              }
+            ]
+          },
+          {
+            "id": "smartplug_3_device_rejoined",
+            "title": {
+              "en": "Reconnected after power cut",
+              "de": "Nach Stromausfall wieder verbunden",
+              "es": "Reconectado tras un corte de energía",
+              "it": "Riconnesso dopo un'interruzione di corrente"
+            },
+            "hint": {
+              "en": "Fires when this device reconnects to the Zigbee network after a power cut.",
+              "de": "Wird ausgelöst, wenn sich dieses Gerät nach einem Stromausfall erneut mit dem Zigbee-Netzwerk verbindet.",
+              "es": "Se activa cuando este dispositivo se reconecta a la red Zigbee tras un corte de energía.",
+              "it": "Si attiva quando questo dispositivo si riconnette alla rete Zigbee dopo un'interruzione di corrente."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=smartplug_3"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "novadigital_switch_1_gang_backlight_is_on",
+            "title": {
+              "en": "Backlight is on",
+              "es": "La retroiluminación está encendida",
+              "it": "La retroilluminazione è accesa",
+              "de": "Hintergrundbeleuchtung ist an"
+            },
+            "hint": {
+              "en": "True when the device's physical backlight is currently on",
+              "es": "Verdadero cuando la retroiluminación física del dispositivo está encendida",
+              "it": "Vero quando la retroilluminazione fisica del dispositivo è attualmente accesa",
+              "de": "Wahr, wenn die physische Hintergrundbeleuchtung des Geräts aktuell an ist"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_1_gang&capabilities=is_availability"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_backlight_is_on",
+            "title": {
+              "en": "Backlight is on",
+              "es": "La retroiluminación está encendida",
+              "it": "La retroilluminazione è accesa",
+              "de": "Hintergrundbeleuchtung ist an"
+            },
+            "hint": {
+              "en": "True when the device's physical backlight is currently on",
+              "es": "Verdadero cuando la retroiluminación física del dispositivo está encendida",
+              "it": "Vero quando la retroilluminazione fisica del dispositivo è attualmente accesa",
+              "de": "Wahr, wenn die physische Hintergrundbeleuchtung des Geräts aktuell an ist"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang&capabilities=is_availability"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_touch_backlight_is_on",
+            "title": {
+              "en": "Backlight is on",
+              "es": "La retroiluminación está encendida",
+              "it": "La retroilluminazione è accesa",
+              "de": "Hintergrundbeleuchtung ist an"
+            },
+            "hint": {
+              "en": "True when the device's physical backlight is currently on",
+              "es": "Verdadero cuando la retroiluminación física del dispositivo está encendida",
+              "it": "Vero quando la retroilluminazione fisica del dispositivo è attualmente accesa",
+              "de": "Wahr, wenn die physische Hintergrundbeleuchtung des Geräts aktuell an ist"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang_touch&capabilities=is_availability"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_3_gang_backlight_is_on",
+            "title": {
+              "en": "Backlight is on",
+              "es": "La retroiluminación está encendida",
+              "it": "La retroilluminazione è accesa",
+              "de": "Hintergrundbeleuchtung ist an"
+            },
+            "hint": {
+              "en": "True when the device's physical backlight is currently on",
+              "es": "Verdadero cuando la retroiluminación física del dispositivo está encendida",
+              "it": "Vero quando la retroilluminazione fisica del dispositivo è attualmente accesa",
+              "de": "Wahr, wenn die physische Hintergrundbeleuchtung des Geräts aktuell an ist"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_3_gang&capabilities=is_availability"
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_zcl_backlight_is_on",
+            "title": {
+              "en": "Backlight is on",
+              "es": "La retroiluminación está encendida",
+              "it": "La retroilluminazione è accesa",
+              "de": "Hintergrundbeleuchtung ist an"
+            },
+            "hint": {
+              "en": "True when the device's physical backlight is currently on",
+              "es": "Verdadero cuando la retroiluminación física del dispositivo está encendida",
+              "it": "Vero quando la retroilluminazione fisica del dispositivo è attualmente accesa",
+              "de": "Wahr, wenn die physische Hintergrundbeleuchtung des Geräts aktuell an ist"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang_zcl&capabilities=is_availability"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "novadigital_switch_1_gang_set_backlight",
+            "title": {
+              "en": "Set backlight",
+              "es": "Configurar retroiluminación",
+              "it": "Imposta retroilluminazione",
+              "de": "Hintergrundbeleuchtung einstellen"
+            },
+            "titleFormatted": {
+              "en": "Turn backlight [[state]]",
+              "es": "Poner la retroiluminación en [[state]]",
+              "it": "Imposta la retroilluminazione su [[state]]",
+              "de": "Hintergrundbeleuchtung auf [[state]] stellen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_1_gang&capabilities=is_availability"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "On",
+                      "es": "Encendida",
+                      "it": "Accesa",
+                      "de": "An"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "es": "Apagada",
+                      "it": "Spenta",
+                      "de": "Aus"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_set_backlight",
+            "title": {
+              "en": "Set backlight",
+              "es": "Configurar retroiluminación",
+              "it": "Imposta retroilluminazione",
+              "de": "Hintergrundbeleuchtung einstellen"
+            },
+            "titleFormatted": {
+              "en": "Turn backlight [[state]]",
+              "es": "Poner la retroiluminación en [[state]]",
+              "it": "Imposta la retroilluminazione su [[state]]",
+              "de": "Hintergrundbeleuchtung auf [[state]] stellen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang&capabilities=is_availability"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "On",
+                      "es": "Encendida",
+                      "it": "Accesa",
+                      "de": "An"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "es": "Apagada",
+                      "it": "Spenta",
+                      "de": "Aus"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_2_gang_touch_set_backlight",
+            "title": {
+              "en": "Set backlight",
+              "es": "Configurar retroiluminación",
+              "it": "Imposta retroilluminazione",
+              "de": "Hintergrundbeleuchtung einstellen"
+            },
+            "titleFormatted": {
+              "en": "Turn backlight [[state]]",
+              "es": "Poner la retroiluminación en [[state]]",
+              "it": "Imposta la retroilluminazione su [[state]]",
+              "de": "Hintergrundbeleuchtung auf [[state]] stellen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_2_gang_touch&capabilities=is_availability"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "On",
+                      "es": "Encendida",
+                      "it": "Accesa",
+                      "de": "An"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "es": "Apagada",
+                      "it": "Spenta",
+                      "de": "Aus"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_3_gang_set_backlight",
+            "title": {
+              "en": "Set backlight",
+              "es": "Configurar retroiluminación",
+              "it": "Imposta retroilluminazione",
+              "de": "Hintergrundbeleuchtung einstellen"
+            },
+            "titleFormatted": {
+              "en": "Turn backlight [[state]]",
+              "es": "Poner la retroiluminación en [[state]]",
+              "it": "Imposta la retroilluminazione su [[state]]",
+              "de": "Hintergrundbeleuchtung auf [[state]] stellen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_3_gang&capabilities=is_availability"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "On",
+                      "es": "Encendida",
+                      "it": "Accesa",
+                      "de": "An"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "es": "Apagada",
+                      "it": "Spenta",
+                      "de": "Aus"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "novadigital_switch_4_gang_zcl_set_backlight",
+            "title": {
+              "en": "Set backlight",
+              "es": "Configurar retroiluminación",
+              "it": "Imposta retroilluminazione",
+              "de": "Hintergrundbeleuchtung einstellen"
+            },
+            "titleFormatted": {
+              "en": "Turn backlight [[state]]",
+              "es": "Poner la retroiluminación en [[state]]",
+              "it": "Imposta la retroilluminazione su [[state]]",
+              "de": "Hintergrundbeleuchtung auf [[state]] stellen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=novadigital_switch_4_gang_zcl&capabilities=is_availability"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "On",
+                      "es": "Encendida",
+                      "it": "Accesa",
+                      "de": "An"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "es": "Apagada",
+                      "it": "Spenta",
+                      "de": "Aus"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-07T07:31:37.985Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "First version!"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "69782a0e6b884a38a96c58e6",
+      "type": "user",
+      "userId": "6720f2fcdb877989ef7f37c3",
+      "name": "Gabriel Pedrosa Machado",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.idiamant-netatmo",
+    "rating": null,
+    "liveBuild": {
+      "id": 15,
+      "name": {
+        "en": "iDiamant by Netatmo",
+        "fr": "iDiamant by Netatmo"
+      },
+      "version": "1.3.12",
+      "readme": {
+        "en": "Control your Bubendorff shutters (iDiamant by Netatmo / Legrand \"Home + Control\") directly from Homey: open, close, set a precise position, or stop, and see their current position update automatically.\n\nRequirements\n------------\nThis app requires Homey Pro (local). It is not compatible with Homey Cloud.\n\nYou also need your own Netatmo developer app, since Netatmo does not allow sharing a single Client ID/Secret across installations:\n\n1. Go to https://dev.netatmo.com/apps and create a new app.\n2. Set its redirect URI to: https://callback.athom.com/oauth2/callback\n3. Open this app's Settings page (More > Apps > iDiamant by Netatmo > Settings), enter your Client ID and Client Secret, then click \"Connect\" and sign in with your Netatmo account.\n4. Add your shutters: Devices > Add device > iDiamant by Netatmo.\n\nSupported devices\n-----------------\nBubendorff roller shutters, tilting shutters (BSO) and swing shutters connected through a Bubendorff gateway on a Netatmo Home + Control / iDiamant account. Note: the Netatmo API does not currently expose a separate tilt control for BSO units, only an open/closed position.\n\nNotes\n-----\nThe app polls the Netatmo API to keep positions in sync: once a minute by default, or every 5 minutes if you set up an optional Netatmo webhook (see the Settings page) for near-instant updates instead.\n",
+        "fr": "Pilotez vos volets Bubendorff (iDiamant by Netatmo / Legrand \"Home + Control\") directement depuis Homey : ouverture, fermeture, position précise ou arrêt, avec mise à jour automatique de la position actuelle.\n\nPrérequis\n---------\nCette app nécessite un Homey Pro (local). Elle n'est pas compatible avec Homey Cloud.\n\nVous devez également créer votre propre app développeur Netatmo, Netatmo n'autorisant pas le partage d'un même Client ID/Secret entre plusieurs installations :\n\n1. Rendez-vous sur https://dev.netatmo.com/apps et créez une nouvelle app.\n2. Renseignez cette URI de redirection : https://callback.athom.com/oauth2/callback\n3. Ouvrez la page Réglages de cette app (Plus > Apps > iDiamant by Netatmo > Réglages), saisissez votre Client ID et Client Secret, puis cliquez sur \"Se connecter\" pour vous authentifier avec votre compte Netatmo.\n4. Ajoutez vos volets : Appareils > Ajouter un appareil > iDiamant by Netatmo.\n\nAppareils pris en charge\n-------------------------\nVolets roulants, BSO (brise-soleil orientables) et volets battants Bubendorff connectés via une passerelle Bubendorff sur un compte Netatmo Home + Control / iDiamant. À noter : l'API Netatmo n'expose pas de commande d'inclinaison distincte pour les BSO, uniquement une position ouvert/fermé.\n\nRemarques\n---------\nL'app interroge l'API Netatmo pour garder les positions synchronisées : une fois par minute par défaut, ou toutes les 5 minutes si vous configurez un webhook Netatmo optionnel (voir la page Réglages) pour des mises à jour quasi instantanées.\n"
+      },
+      "description": {
+        "en": "Control your Bubendorff shutters connected via iDiamant by Netatmo",
+        "fr": "Contrôlez vos volets Bubendorff connectés via iDiamant by Netatmo"
+      },
+      "category": "appliances",
+      "brandColor": "#4a90e2",
+      "icon": "https://apps.homeycdn.net/app/com.idiamant-netatmo/15/2c7e696d-e887-44af-977d-3a58746fb204/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.idiamant-netatmo/15/2c7e696d-e887-44af-977d-3a58746fb204/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.idiamant-netatmo/15/2c7e696d-e887-44af-977d-3a58746fb204/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "shutter",
+          "name": {
+            "en": "Bubendorff Shutter",
+            "fr": "Volet Bubendorff"
+          },
+          "class": "windowcoverings",
+          "capabilities": [
+            "windowcoverings_set",
+            "windowcoverings_state"
+          ],
+          "capabilitiesOptions": {
+            "windowcoverings_set": {
+              "title": {
+                "en": "Position",
+                "fr": "Position"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.idiamant-netatmo/15/2c7e696d-e887-44af-977d-3a58746fb204/drivers/shutter/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.idiamant-netatmo/15/2c7e696d-e887-44af-977d-3a58746fb204/drivers/shutter/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.idiamant-netatmo/15/2c7e696d-e887-44af-977d-3a58746fb204/drivers/shutter/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159166,
+      "state": "live",
+      "stateChangedAt": "2026-09-07T07:39:56.908Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": {
+        "developers": [
+          {
+            "name": "Acrotux"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "L33vius"
+          }
+        }
+      },
+      "permissions": [],
+      "changelog": {
+        "en": "Added a PayPal donation link and a link to the Homey Community forum topic to the app listing.",
+        "fr": "Ajout d'un lien de don PayPal et d'un lien vers le sujet du forum Homey Community sur la fiche de l'app."
+      },
+      "compatibility": ">=12.2.0",
+      "tags": {
+        "en": [
+          "Bubendorff",
+          "iDiamant",
+          "Netatmo"
+        ],
+        "fr": [
+          "Bubendorff",
+          "iDiamant",
+          "Netatmo"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.3.12",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a8e12e83bdd81c33f8d4766",
+      "type": "org",
+      "userId": null,
+      "name": "ATX corp",
+      "verified": false
+    },
+    "communityTopicId": 159166
+  }
+]

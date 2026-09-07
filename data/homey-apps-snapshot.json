@@ -160,6 +160,46 @@
     "communityTopicId": null
   },
   {
+    "appId": "nl.stekkerdeal.aecc",
+    "name": "AECC Plug-and-Play Battery",
+    "developerName": "Roy Dorland",
+    "developerId": "6a81aafdc6a80eeabce3bed4",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/StekkerDeal/aecc-battery-homey",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "zperx.leapmotor",
+    "name": "Leapmotor",
+    "developerName": "ZperX .",
+    "developerId": "6a9186cd30ac038fba7073fc",
+    "version": "0.0.7",
+    "sourceRepository": "https://github.com/4tetra4/leapmotor.homey.app",
+    "publishedAt": "",
+    "communityTopicId": 157676
+  },
+  {
+    "appId": "com.gpm.novadigital",
+    "name": "NovaDigital",
+    "developerName": "Gabriel Pedrosa Machado",
+    "developerId": "69782a0e6b884a38a96c58e6",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.idiamant-netatmo",
+    "name": "iDiamant by Netatmo",
+    "developerName": "ATX corp",
+    "developerId": "6a8e12e83bdd81c33f8d4766",
+    "version": "1.3.12",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": 159166
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",
