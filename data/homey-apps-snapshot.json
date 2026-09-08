@@ -200,6 +200,76 @@
     "communityTopicId": 159166
   },
   {
+    "appId": "com.rapinology.hdewpoint",
+    "name": "Dew Point & Mould Guard",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.1.2",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.hvigilance",
+    "name": "FR Vigilance",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.ephemerides",
+    "name": "Ephemerides",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.2.0",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.hiss",
+    "name": "ISS",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
+    "appId": "fi.oh2th.energy-allocator",
+    "name": "Energy Allocator",
+    "developerName": "Tapio Heiskanen",
+    "developerId": "6381b62d2c8e04f69d3bbc27",
+    "version": "0.2.1",
+    "sourceRepository": "https://github.com/oh2th/fi.oh2th.energy-allocator",
+    "publishedAt": "",
+    "communityTopicId": 159148
+  },
+  {
+    "appId": "com.dklatt.varview",
+    "name": "VarView",
+    "developerName": "Dennis Klatt",
+    "developerId": "6a9bdf22336db3df05accd76",
+    "version": "3.2.0",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": 159202
+  },
+  {
+    "appId": "com.stefanbauer.ff-agent",
+    "name": "FF-Agent",
+    "developerName": "Stefan Bauer",
+    "developerId": "6a9bfd1d336db3df05acd23a",
+    "version": "0.1.4",
+    "sourceRepository": "",
+    "publishedAt": "",
+    "communityTopicId": null
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",

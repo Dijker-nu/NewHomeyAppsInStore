@@ -19,3 +19,10 @@ Discovered At,Name,App ID,Developer Name,Developer ID,Version,Source Repository,
 2026-09-07T08:15:22.581Z,Leapmotor,zperx.leapmotor,ZperX .,6a9186cd30ac038fba7073fc,0.0.7,https://github.com/4tetra4/leapmotor.homey.app,,157676
 2026-09-07T08:15:22.581Z,NovaDigital,com.gpm.novadigital,Gabriel Pedrosa Machado,69782a0e6b884a38a96c58e6,1.0.0,,,
 2026-09-07T08:15:22.581Z,iDiamant by Netatmo,com.idiamant-netatmo,ATX corp,6a8e12e83bdd81c33f8d4766,1.3.12,,,159166
+2026-09-08T05:50:46.739Z,Dew Point & Mould Guard,com.rapinology.hdewpoint,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.1.2,,,
+2026-09-08T05:50:46.739Z,FR Vigilance,com.rapinology.hvigilance,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.0.0,,,
+2026-09-08T05:50:46.739Z,Ephemerides,com.rapinology.ephemerides,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.2.0,,,
+2026-09-08T05:50:46.739Z,ISS,com.rapinology.hiss,Henri Dominique Rapin,6a96972b30ac038fba71a2f2,1.0.1,,,
+2026-09-08T05:50:46.739Z,Energy Allocator,fi.oh2th.energy-allocator,Tapio Heiskanen,6381b62d2c8e04f69d3bbc27,0.2.1,https://github.com/oh2th/fi.oh2th.energy-allocator,,159148
+2026-09-08T05:50:46.739Z,VarView,com.dklatt.varview,Dennis Klatt,6a9bdf22336db3df05accd76,3.2.0,,,159202
+2026-09-08T05:50:46.739Z,FF-Agent,com.stefanbauer.ff-agent,Stefan Bauer,6a9bfd1d336db3df05acd23a,0.1.4,,,
