@@ -1,0 +1,91 @@
+name: Full rescan of Homey apps (daily)
+
+on:
+  schedule:
+    - cron: '17 3 * * *'   # once a day at 03:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "homey-apps-tracker"   # shared with homey-apps-discover.yml so they never race each other
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Full rescan (changes + removals)
+        run: node scripts/update-apps.js
+
+      - name: Post any newly-caught apps to Homey Community forum (dry run unless POST_TO_FORUM is enabled)
+        env:
+          POST_TO_FORUM: ${{ vars.POST_TO_FORUM || 'false' }}
+          DISCOURSE_API_KEY: ${{ secrets.DISCOURSE_API_KEY }}
+          DISCOURSE_API_USERNAME: ${{ secrets.DISCOURSE_API_USERNAME }}
+        run: node scripts/post-new-apps-to-forum.js
+
+      - name: Build static site
+        run: node scripts/build-site.js
+
+      - name: Commit updated data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+
+          if git diff --cached --quiet; then
+            echo "No data changes to commit."
+            exit 0
+          fi
+
+          git commit -m "Full rescan: refresh apps, detect changes and removals"
+
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:"${{ github.ref_name }}"; then
+              echo "Pushed successfully."
+              exit 0
+            fi
+
+            echo "Push rejected (attempt $attempt) -- fetching and rebasing onto the latest remote state..."
+            git fetch origin "${{ github.ref_name }}"
+            if ! git rebase -X ours "origin/${{ github.ref_name }}"; then
+              echo "Rebase failed -- aborting this attempt."
+              git rebase --abort
+              exit 1
+            fi
+
+            sleep $((attempt * 5))
+          done
+
+          echo "Failed to push after multiple attempts."
+          exit 1
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

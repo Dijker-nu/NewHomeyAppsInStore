@@ -80,6 +80,7 @@ function communityTopicIdFromApiObject(app) {
 function simplify(app, publishedAt) {
   const build = app.liveBuild || {};
   const author = app.author || {};
+  const resolvedPublishedAt = publishedAt || app.stateChangedAt || '';
   return {
     appId: app.id || '',
     name: (build.name && (build.name.en || Object.values(build.name)[0])) || '',
@@ -89,7 +90,11 @@ function simplify(app, publishedAt) {
     sourceRepository: build.source || '',
     // Prefer the changelog-derived first-publish date; fall back to
     // stateChangedAt (most recent update) only if the changelog lookup failed.
-    publishedAt: publishedAt || app.stateChangedAt || '',
+    publishedAt: resolvedPublishedAt,
+    // No change-detection history exists yet for a fresh backfill, so
+    // updatedAt starts equal to publishedAt. scripts/update-apps.js will
+    // move it forward once it detects an actual change.
+    updatedAt: resolvedPublishedAt,
     communityTopicId: communityTopicIdFromApiObject(app),
   };
 }

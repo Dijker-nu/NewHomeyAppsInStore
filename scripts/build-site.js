@@ -1,10 +1,11 @@
 /**
  * Prepares the static site in public/:
- *   - Converts data/homey-new-apps-log.csv to public/data/new-apps-log.json
- *   - Copies data/homey-apps-snapshot.json to public/data/homey-apps-snapshot.json
- *   - Converts data/homey-removed-apps.json (full raw detail) to a
- *     lighter public/data/removed-apps.json (summary fields only --
- *     the full raw blobs stay in the repo's data/ folder, not published)
+ *   - Copies data/homey-new-apps-log.json  -> public/data/new-apps-log.json
+ *   - Copies data/homey-apps-snapshot.json -> public/data/homey-apps-snapshot.json
+ *   - Copies data/homey-removed-apps.json  -> public/data/removed-apps.json
+ *     (all three are already minimal, flat JSON -- no transform needed
+ *     since discover-new-apps.js / update-apps.js write them in the
+ *     shape the site wants directly)
  *   - Writes public/index.html, a static shell that fetches all three
  *     JSON files client-side and renders everything in the browser.
  *
@@ -18,98 +19,26 @@ const path = require('path');
 const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const PUBLIC_DIR = process.env.PUBLIC_DIR || path.join(process.cwd(), 'public');
 const PUBLIC_DATA_DIR = path.join(PUBLIC_DIR, 'data');
-const LOG_FILE = path.join(DATA_DIR, 'homey-new-apps-log.csv');
+const NEW_APPS_LOG_FILE = path.join(DATA_DIR, 'homey-new-apps-log.json');
 const SNAPSHOT_FILE = path.join(DATA_DIR, 'homey-apps-snapshot.json');
 const REMOVED_FILE = path.join(DATA_DIR, 'homey-removed-apps.json');
+const NEW_APPS_RETENTION_DAYS = 30;
 
-// Minimal RFC4180-ish CSV parser (handles quoted fields with commas/quotes).
-function parseCsv(text) {
-  const rows = [];
-  let row = [];
-  let field = '';
-  let inQuotes = false;
-
-  for (let i = 0; i < text.length; i++) {
-    const c = text[i];
-    if (inQuotes) {
-      if (c === '"') {
-        if (text[i + 1] === '"') {
-          field += '"';
-          i++;
-        } else {
-          inQuotes = false;
-        }
-      } else {
-        field += c;
-      }
-    } else if (c === '"') {
-      inQuotes = true;
-    } else if (c === ',') {
-      row.push(field);
-      field = '';
-    } else if (c === '\n') {
-      row.push(field);
-      rows.push(row);
-      row = [];
-      field = '';
-    } else if (c === '\r') {
-      // skip
-    } else {
-      field += c;
-    }
-  }
-  if (field.length > 0 || row.length > 0) {
-    row.push(field);
-    rows.push(row);
-  }
-  return rows.filter((r) => r.length > 1 || r[0] !== '');
-}
-
-function loadNewAppsLogAsJson() {
-  if (!fs.existsSync(LOG_FILE)) return [];
-  const rows = parseCsv(fs.readFileSync(LOG_FILE, 'utf8'));
-  if (rows.length === 0) return [];
-  const [header, ...body] = rows;
-  return body.map((r) => {
-    const obj = {};
-    header.forEach((h, i) => (obj[h] = r[i] || ''));
-    return obj;
-  });
-}
-
-function loadSnapshot() {
-  if (!fs.existsSync(SNAPSHOT_FILE)) return [];
+function loadJson(file, fallback) {
+  if (!fs.existsSync(file)) return fallback;
   try {
-    return JSON.parse(fs.readFileSync(SNAPSHOT_FILE, 'utf8'));
+    return JSON.parse(fs.readFileSync(file, 'utf8'));
   } catch {
-    return [];
+    return fallback;
   }
 }
 
-function loadRemovedAppsForPublic() {
-  if (!fs.existsSync(REMOVED_FILE)) return [];
-  let list;
-  try {
-    list = JSON.parse(fs.readFileSync(REMOVED_FILE, 'utf8'));
-  } catch {
-    return [];
-  }
-  // Publish a lighter summary -- the full raw API blob per app stays in
-  // the repo's data/ folder only, so the public site doesn't ship it.
-  return list.map((r) => {
-    const build = (r.raw && r.raw.liveBuild) || {};
-    const author = (r.raw && r.raw.author) || {};
-    return {
-      appId: r.appId,
-      name: r.name || (build.name && (build.name.en || Object.values(build.name)[0])) || r.appId,
-      developerName: r.developerName || author.name || '',
-      version: r.liveVersion || '',
-      sourceRepository: build.source || '',
-      removedAt: r.removedAt || '',
-      lastCheckedAt: r.lastCheckedAt || '',
-      private: typeof r.private === 'boolean' ? r.private : null,
-    };
-  });
+function loadNewAppsLog() {
+  const entries = loadJson(NEW_APPS_LOG_FILE, []);
+  // Defensive re-prune at build time too, in case a scheduled run was
+  // skipped and an over-30-days entry is still sitting in the file.
+  const cutoff = Date.now() - NEW_APPS_RETENTION_DAYS * 24 * 60 * 60 * 1000;
+  return entries.filter((e) => e.discoveredAt && new Date(e.discoveredAt).getTime() >= cutoff);
 }
 
 const INDEX_HTML = `<!DOCTYPE html>
@@ -120,7 +49,7 @@ const INDEX_HTML = `<!DOCTYPE html>
 <title>New Homey Apps</title>
 <style>
   :root { color-scheme: light dark; }
-  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 1080px; margin: 2rem auto; padding: 0 1rem; }
+  body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 1150px; margin: 2rem auto; padding: 0 1rem; }
   h1 { margin-bottom: 0.25rem; }
   .subtitle { color: #666; margin-top: 0; margin-bottom: 1.5rem; }
   .controls { margin-bottom: 1rem; }
@@ -133,6 +62,10 @@ const INDEX_HTML = `<!DOCTYPE html>
   table.active { display: table; }
   th, td { text-align: left; padding: 0.5rem 0.6rem; border-bottom: 1px solid #eee; font-size: 0.92rem; vertical-align: middle; }
   th { position: sticky; top: 0; background: Canvas; }
+  th.sortable { cursor: pointer; user-select: none; white-space: nowrap; }
+  th.sortable:hover { background: rgba(127,127,127,0.12); }
+  th.sortable .arrow { opacity: 0.5; font-size: 0.8em; margin-left: 0.2em; }
+  th.sortable.sorted .arrow { opacity: 1; }
   tr:hover { background: rgba(127,127,127,0.08); }
   .muted { color: #888; font-size: 0.85em; }
   footer { margin-top: 2rem; color: #888; font-size: 0.85em; }
@@ -163,7 +96,13 @@ const INDEX_HTML = `<!DOCTYPE html>
   </div>
 
   <table id="tab-all" data-tab="all">
-    <thead><tr><th>Published/Updated</th><th>Name</th><th>App ID</th><th>Developer</th><th>Version</th><th>Source</th><th>Forum post</th></tr></thead>
+    <thead>
+      <tr>
+        <th class="sortable" data-sort="publishedAt">Published <span class="arrow"></span></th>
+        <th class="sortable" data-sort="updatedAt">Updated <span class="arrow"></span></th>
+        <th>Name</th><th>App ID</th><th>Developer</th><th>Version</th><th>Source</th><th>Forum post</th>
+      </tr>
+    </thead>
     <tbody></tbody>
   </table>
 
@@ -189,7 +128,7 @@ const INDEX_HTML = `<!DOCTYPE html>
     <button class="load-more-btn" id="load-more-btn" type="button">Load more</button>
   </div>
 
-  <footer>Data sourced from Athom's app-store API (apps-api.athom.com), sampled once per day. "All Apps" is sorted newest-published first; "Retired Apps" shows apps that dropped off the live store listing, re-checked periodically for version/visibility changes. The "Forum post" copy button builds the text suggested by <a href="https://community.homey.app/t/list-new-published-app-in-homey-app-store-get-em-while-theyre-hot/100276" target="_blank" rel="noopener">this Homey Community topic's guideline</a> -- review it before posting.</footer>
+  <footer>Data sourced from Athom's app-store API (apps-api.athom.com). New-app discovery runs every 4 hours; the full rescan (name/developer/version/topic-ID changes, plus removals) runs once a day, so "Updated" only moves when something actually changed. The "New Apps" list only keeps the last 30 days. The "Forum post" copy button builds the text suggested by <a href="https://community.homey.app/t/list-new-published-app-in-homey-app-store-get-em-while-theyre-hot/100276" target="_blank" rel="noopener">this Homey Community topic's guideline</a> -- review it before posting.</footer>
 
   <script>
     const PAGE_SIZE = 20;
@@ -198,6 +137,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       activeTab: 'new',
       visibleCount: { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE },
       data: { all: [], new: [], retired: [] },
+      allSort: { column: 'publishedAt', direction: 'desc' },
     };
 
     const input = document.getElementById('search');
@@ -220,6 +160,7 @@ const INDEX_HTML = `<!DOCTYPE html>
     const loadMoreWrap = document.getElementById('load-more-wrap');
     const loadMoreBtn = document.getElementById('load-more-btn');
     const subtitle = document.getElementById('subtitle');
+    const sortableHeaders = Array.from(tables.all.querySelectorAll('th.sortable'));
 
     function escapeHtml(str) {
       return String(str == null ? '' : str)
@@ -257,34 +198,66 @@ const INDEX_HTML = `<!DOCTYPE html>
         : '<span class="muted">—</span>';
     }
 
-    function renderRow(app, dateValue, opts) {
-      opts = opts || {};
+    function dateCellHtml(value) {
+      return escapeHtml(value ? String(value).slice(0, 10) : '');
+    }
+
+    function copyButtonCellHtml() {
+      return '<td><button class="copy-btn" type="button">Copy</button></td>';
+    }
+
+    function attachCopyHandler(tr, app) {
+      const btn = tr.querySelector('.copy-btn');
+      if (btn) {
+        btn.addEventListener('click', (ev) => copyToClipboard(buildForumPost(app), ev.currentTarget));
+      }
+    }
+
+    function renderAllRow(app) {
       const storeUrl = 'https://homey.app/a/' + encodeURIComponent(app.appId);
       const tr = document.createElement('tr');
-
-      let extraCell;
-      if (opts.retired) {
-        extraCell = '<td>' + (app.private === true ? '<span class="badge">private</span>' : app.private === false ? '<span class="badge">public</span>' : '<span class="muted">—</span>') + '</td>' +
-          '<td>' + sourceCellHtml(app.sourceRepository) + '</td>';
-      } else {
-        extraCell = '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
-          '<td><button class="copy-btn" type="button">Copy</button></td>';
-      }
-
       tr.innerHTML =
-        '<td>' + escapeHtml(dateValue ? String(dateValue).slice(0, 10) : '') + '</td>' +
+        '<td>' + dateCellHtml(app.publishedAt) + '</td>' +
+        '<td>' + dateCellHtml(app.updatedAt) + '</td>' +
         '<td><a href="' + storeUrl + '" target="_blank" rel="noopener">' + escapeHtml(app.name) + '</a></td>' +
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
         '<td>' + escapeHtml(app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
-        extraCell;
+        '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
+        copyButtonCellHtml();
+      attachCopyHandler(tr, app);
+      return tr;
+    }
 
-      if (!opts.retired) {
-        tr.querySelector('.copy-btn').addEventListener('click', (ev) => {
-          copyToClipboard(buildForumPost(app), ev.currentTarget);
-        });
-      }
+    function renderNewRow(app) {
+      const storeUrl = 'https://homey.app/a/' + encodeURIComponent(app.appId);
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + dateCellHtml(app.discoveredAt) + '</td>' +
+        '<td><a href="' + storeUrl + '" target="_blank" rel="noopener">' + escapeHtml(app.name) + '</a></td>' +
+        '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
+        '<td>' + escapeHtml(app.developerName) + '</td>' +
+        '<td>' + escapeHtml(app.version) + '</td>' +
+        '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
+        copyButtonCellHtml();
+      attachCopyHandler(tr, app);
+      return tr;
+    }
 
+    function renderRetiredRow(app) {
+      const storeUrl = 'https://homey.app/a/' + encodeURIComponent(app.appId);
+      const privateBadge = app.private === true ? '<span class="badge">private</span>'
+        : app.private === false ? '<span class="badge">public</span>'
+        : '<span class="muted">—</span>';
+      const tr = document.createElement('tr');
+      tr.innerHTML =
+        '<td>' + dateCellHtml(app.removedAt) + '</td>' +
+        '<td><a href="' + storeUrl + '" target="_blank" rel="noopener">' + escapeHtml(app.name) + '</a></td>' +
+        '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
+        '<td>' + escapeHtml(app.developerName) + '</td>' +
+        '<td>' + escapeHtml(app.version) + '</td>' +
+        '<td>' + privateBadge + '</td>' +
+        '<td>' + sourceCellHtml(app.sourceRepository) + '</td>';
       return tr;
     }
 
@@ -303,9 +276,20 @@ const INDEX_HTML = `<!DOCTYPE html>
       } else if (tab === 'retired') {
         filtered.sort((a, b) => new Date(b.removedAt) - new Date(a.removedAt));
       } else {
-        filtered.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        const { column, direction } = state.allSort;
+        const dir = direction === 'asc' ? 1 : -1;
+        filtered.sort((a, b) => dir * (new Date(a[column] || 0) - new Date(b[column] || 0)));
       }
       return filtered;
+    }
+
+    function updateSortIndicators() {
+      for (const th of sortableHeaders) {
+        const col = th.dataset.sort;
+        const isSorted = col === state.allSort.column;
+        th.classList.toggle('sorted', isSorted);
+        th.querySelector('.arrow').textContent = isSorted ? (state.allSort.direction === 'asc' ? '\\u25B2' : '\\u25BC') : '';
+      }
     }
 
     function renderTab(tab) {
@@ -317,17 +301,19 @@ const INDEX_HTML = `<!DOCTYPE html>
       const filtered = getSortedFiltered(tab, q);
       const shown = filtered.slice(0, state.visibleCount[tab]);
 
+      const rowRenderer = tab === 'all' ? renderAllRow : tab === 'new' ? renderNewRow : renderRetiredRow;
       for (const app of shown) {
-        const dateValue = tab === 'new' ? app.discoveredAt : tab === 'retired' ? app.removedAt : app.publishedAt;
-        tbody.appendChild(renderRow(app, dateValue, { retired: tab === 'retired' }));
+        tbody.appendChild(rowRenderer(app));
       }
+
+      if (tab === 'all') updateSortIndicators();
 
       const emptyEl = emptyEls[tab];
       const captionEl = captionEls[tab];
 
       if (state.data[tab].length === 0) {
         emptyEl.textContent = tab === 'new'
-          ? 'No new apps detected yet. Check back after the next scheduled run.'
+          ? 'No new apps detected in the last 30 days.'
           : tab === 'retired'
             ? 'No retired apps detected yet.'
             : 'No data yet. Check back after the next scheduled run.';
@@ -359,6 +345,19 @@ const INDEX_HTML = `<!DOCTYPE html>
       btn.addEventListener('click', () => switchTab(btn.dataset.tab));
     });
 
+    sortableHeaders.forEach((th) => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.sort;
+        if (state.allSort.column === col) {
+          state.allSort.direction = state.allSort.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+          state.allSort.column = col;
+          state.allSort.direction = 'desc';
+        }
+        renderTab('all');
+      });
+    });
+
     input.addEventListener('input', () => {
       state.visibleCount = { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE };
       renderTab(state.activeTab);
@@ -387,21 +386,11 @@ const INDEX_HTML = `<!DOCTYPE html>
         return;
       }
 
-      state.data.new = newLog.map((e) => ({
-        appId: e['App ID'],
-        name: e['Name'],
-        developerName: e['Developer Name'],
-        version: e['Version'],
-        sourceRepository: e['Source Repository'],
-        communityTopicId: e['Community Topic ID'] || null,
-        discoveredAt: e['Discovered At'],
-      }));
+      state.data.new = newLog;
+      state.data.all = snapshot;
+      state.data.retired = removed;
 
-      state.data.all = snapshot.map((a) => ({ ...a }));
-
-      state.data.retired = removed.map((r) => ({ ...r }));
-
-      subtitle.textContent = state.data.new.length + ' new app(s) detected so far, out of ' +
+      subtitle.textContent = state.data.new.length + ' new app(s) in the last 30 days, out of ' +
         state.data.all.length + ' apps currently in the store (' + state.data.retired.length + ' retired).';
 
       renderTab(state.activeTab);
@@ -416,13 +405,13 @@ const INDEX_HTML = `<!DOCTYPE html>
 function main() {
   fs.mkdirSync(PUBLIC_DATA_DIR, { recursive: true });
 
-  const newAppsLog = loadNewAppsLogAsJson();
+  const newAppsLog = loadNewAppsLog();
   fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'new-apps-log.json'), JSON.stringify(newAppsLog, null, 2), 'utf8');
 
-  const snapshot = loadSnapshot();
+  const snapshot = loadJson(SNAPSHOT_FILE, []);
   fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'homey-apps-snapshot.json'), JSON.stringify(snapshot, null, 2), 'utf8');
 
-  const removed = loadRemovedAppsForPublic();
+  const removed = loadJson(REMOVED_FILE, []);
   fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'removed-apps.json'), JSON.stringify(removed, null, 2), 'utf8');
 
   fs.writeFileSync(path.join(PUBLIC_DIR, 'index.html'), INDEX_HTML, 'utf8');
