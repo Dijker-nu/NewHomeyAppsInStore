@@ -330,6 +330,16 @@
     "communityTopicId": null
   },
   {
+    "appId": "org.solarassistant.homey",
+    "name": "SolarAssistant",
+    "developerName": "Morten Bech",
+    "developerId": "6a9dc466336db3df05ad31c1",
+    "version": "1.0.7",
+    "sourceRepository": "https://github.com/DrChip666/solarassistant-homey",
+    "publishedAt": "",
+    "communityTopicId": 159254
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",
