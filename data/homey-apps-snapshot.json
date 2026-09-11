@@ -10806,10 +10806,10 @@
     "name": "Simple (Sys) Log",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.36",
+    "version": "3.0.37",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.simplelog/",
     "publishedAt": "2026-09-10T21:32:48.906Z",
-    "updatedAt": "2026-09-10T21:32:48.906Z",
+    "updatedAt": "2026-09-11T08:09:36.635Z",
     "communityTopicId": 77533
   },
   {
@@ -16526,10 +16526,10 @@
     "name": "Power by the Hour",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "8.17.0",
+    "version": "8.18.0",
     "sourceRepository": "https://github.com/gruijter/com.gruijter.powerhour",
     "publishedAt": "2026-09-10T21:36:59.785Z",
-    "updatedAt": "2026-09-10T21:36:59.785Z",
+    "updatedAt": "2026-09-11T08:09:36.636Z",
     "communityTopicId": 20535
   },
   {
@@ -18132,10 +18132,10 @@
     "name": "Easee Home",
     "developerName": "Easee ASA",
     "developerId": "6a97ce55a524daf89cd42946",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-10T21:38:16.686Z",
+    "updatedAt": "2026-09-11T08:09:36.637Z",
     "communityTopicId": 31647
   },
   {
@@ -18143,10 +18143,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.651",
+    "version": "1.0.652",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-10T21:38:16.686Z",
+    "updatedAt": "2026-09-11T08:09:36.637Z",
     "communityTopicId": 156098
   }
 ]
