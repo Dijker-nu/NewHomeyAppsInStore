@@ -574,12 +574,12 @@
   {
     "appId": "nl.marcovandenhout.marantz",
     "name": "Marantz",
-    "developerName": "Marco van den Hout",
-    "developerId": "5dcabb0d1c90c866f93654db",
+    "developerName": "yann baillet",
+    "developerId": "6a908e1930ac038fba703a1d",
     "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:23:30.135Z",
-    "updatedAt": "2026-09-10T21:23:30.135Z",
+    "updatedAt": "2026-09-12T08:00:19.113Z",
     "communityTopicId": null
   },
   {
@@ -6823,11 +6823,11 @@
     "appId": "com.somfy.tahoma",
     "name": "Somfy TaHoma & Connexoon",
     "developerName": "RockSoft Solutions",
-    "developerId": "5dcabc3f1c90c866f9366458",
+    "developerId": "6a8839af94f0069d62d2bb7f",
     "version": "4.0.124",
     "sourceRepository": "https://github.com/AdyRock/com.somfy.tahoma",
     "publishedAt": "2026-09-10T21:29:14.795Z",
-    "updatedAt": "2026-09-10T21:29:14.795Z",
+    "updatedAt": "2026-09-12T08:00:19.114Z",
     "communityTopicId": 35206
   },
   {
@@ -10289,10 +10289,10 @@
     "name": "Relay.fm",
     "developerName": "Wouter Janson-Korhorn",
     "developerId": "666f3b42c783db54ae2276df",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "sourceRepository": "https://github.com/WaldoAndFriends/tv.waldoandfriends.relay",
     "publishedAt": "2026-09-10T21:32:32.037Z",
-    "updatedAt": "2026-09-10T21:32:32.037Z",
+    "updatedAt": "2026-09-12T08:00:19.115Z",
     "communityTopicId": null
   },
   {
@@ -11862,10 +11862,10 @@
     "name": "Sofar",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "1.1.52",
+    "version": "1.1.55",
     "sourceRepository": "https://github.com/AdyRock/ady.sofar",
     "publishedAt": "2026-09-10T21:33:38.219Z",
-    "updatedAt": "2026-09-10T21:33:38.219Z",
+    "updatedAt": "2026-09-12T08:00:19.115Z",
     "communityTopicId": 103017
   },
   {
@@ -13424,10 +13424,10 @@
     "name": "Dashboard Studio",
     "developerName": "Michel Satoer",
     "developerId": "6991c948cd19af4229e27966",
-    "version": "1.11.4",
+    "version": "1.11.7",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:45.107Z",
-    "updatedAt": "2026-09-10T21:34:45.107Z",
+    "updatedAt": "2026-09-12T08:00:19.115Z",
     "communityTopicId": 151169
   },
   {
@@ -13830,11 +13830,11 @@
     "appId": "com.yolink",
     "name": "YoLink",
     "developerName": "RockSoft Solutions",
-    "developerId": "5dcabc3f1c90c866f9366458",
+    "developerId": "6a8839af94f0069d62d2bb7f",
     "version": "1.0.26",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:13.074Z",
-    "updatedAt": "2026-09-10T21:35:13.074Z",
+    "updatedAt": "2026-09-12T08:00:19.115Z",
     "communityTopicId": 143373
   },
   {
@@ -13951,11 +13951,11 @@
     "appId": "com.linktap",
     "name": "LinkTap",
     "developerName": "RockSoft Solutions",
-    "developerId": "5dcabc3f1c90c866f9366458",
+    "developerId": "6a8839af94f0069d62d2bb7f",
     "version": "1.0.34",
     "sourceRepository": "https://github.com/AdyRock/com.linktap",
     "publishedAt": "2026-09-10T21:35:17.139Z",
-    "updatedAt": "2026-09-10T21:35:17.139Z",
+    "updatedAt": "2026-09-12T08:00:19.115Z",
     "communityTopicId": 43963
   },
   {
@@ -16075,10 +16075,10 @@
     "name": "Nest Protect",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/torp93/homey-nest-protect",
     "publishedAt": "2026-09-10T21:36:42.021Z",
-    "updatedAt": "2026-09-10T21:36:42.021Z",
+    "updatedAt": "2026-09-12T08:00:19.115Z",
     "communityTopicId": null
   },
   {
@@ -16416,10 +16416,10 @@
     "name": "Picnic",
     "developerName": "Sander Maas",
     "developerId": "5dcaba361c90c866f9364965",
-    "version": "3.6.0",
+    "version": "3.6.1",
     "sourceRepository": "https://github.com/Retrospected/app.picnic",
     "publishedAt": "2026-09-10T21:36:55.923Z",
-    "updatedAt": "2026-09-10T21:36:55.923Z",
+    "updatedAt": "2026-09-12T08:00:19.116Z",
     "communityTopicId": 78811
   },
   {
@@ -17384,10 +17384,10 @@
     "name": "Marctronic",
     "developerName": "yann baillet",
     "developerId": "6a908e1930ac038fba703a1d",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "sourceRepository": "https://github.com/ptiyannou/homey-marctronic",
     "publishedAt": "2026-09-10T21:37:43.946Z",
-    "updatedAt": "2026-09-10T21:37:43.946Z",
+    "updatedAt": "2026-09-12T08:00:19.116Z",
     "communityTopicId": 159149
   },
   {
@@ -18143,10 +18143,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.652",
+    "version": "1.0.653",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-11T08:09:36.637Z",
+    "updatedAt": "2026-09-12T08:00:19.116Z",
     "communityTopicId": 156098
   }
 ]
