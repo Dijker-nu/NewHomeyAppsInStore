@@ -13567,10 +13567,10 @@
     "name": "Hikvision AX PRO Alarm",
     "developerName": "Ulf Holmström",
     "developerId": "6a5bc6852ddac2379c777757",
-    "version": "1.1.7",
+    "version": "1.8.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:50.186Z",
-    "updatedAt": "2026-09-10T21:34:50.186Z",
+    "updatedAt": "2026-09-13T08:25:01.085Z",
     "communityTopicId": null
   },
   {
@@ -15239,10 +15239,10 @@
     "name": "LINAK Bed",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.0.35",
+    "version": "1.0.36",
     "sourceRepository": "https://github.com/torp93/homey-linak-bed-control",
     "publishedAt": "2026-09-10T21:36:13.216Z",
-    "updatedAt": "2026-09-10T21:36:13.216Z",
+    "updatedAt": "2026-09-13T08:25:01.085Z",
     "communityTopicId": null
   },
   {
@@ -15393,10 +15393,10 @@
     "name": "Geberit AquaClean",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.13.0",
+    "version": "1.13.1",
     "sourceRepository": "https://github.com/torp93/homey-geberit-aquaclean",
     "publishedAt": "2026-09-10T21:36:18.614Z",
-    "updatedAt": "2026-09-10T21:36:18.614Z",
+    "updatedAt": "2026-09-13T08:25:01.085Z",
     "communityTopicId": null
   },
   {
@@ -16075,10 +16075,10 @@
     "name": "Nest Protect",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.2.1",
+    "version": "1.3.1",
     "sourceRepository": "https://github.com/torp93/homey-nest-protect",
     "publishedAt": "2026-09-10T21:36:42.021Z",
-    "updatedAt": "2026-09-12T08:00:19.115Z",
+    "updatedAt": "2026-09-13T08:25:01.085Z",
     "communityTopicId": null
   },
   {
@@ -16361,10 +16361,10 @@
     "name": "Tractive",
     "developerName": "Webed Solutions",
     "developerId": "6598568fe707314c7357abbe",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:54.538Z",
-    "updatedAt": "2026-09-10T21:36:54.538Z",
+    "updatedAt": "2026-09-13T08:25:01.085Z",
     "communityTopicId": 84378
   },
   {
@@ -18143,10 +18143,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.653",
+    "version": "1.0.654",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-12T08:00:19.116Z",
+    "updatedAt": "2026-09-13T08:25:01.086Z",
     "communityTopicId": 156098
   }
 ]
