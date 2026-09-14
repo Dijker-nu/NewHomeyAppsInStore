@@ -1,727 +1,274 @@
 [
   {
-    "id": "io.cigol",
+    "id": "nl.error404.porsche",
     "rating": null,
     "liveBuild": {
-      "id": 2,
+      "id": 5,
       "name": {
-        "en": "Cigol",
-        "da": "Cigol"
+        "en": "Porsche Connect",
+        "nl": "Porsche Connect"
       },
-      "version": "1.0.1",
+      "version": "1.0.2",
       "readme": {
-        "en": "Use Cigol devices to combine professional electrical installations with intelligent control and automation in Homey. \r\n\r\nCigol Connect integrates existing LK IHC switches and outputs, allowing installed wiring and modules to remain in use while adding flexible everyday control and Flows.",
-        "da": "Brug Cigol-enheder til at kombinere professionelle elinstallationer med intelligent styring og automatisering i Homey. \r\n\r\nCigol Connect integrerer eksisterende LK IHC-tryk og -udgange, så den installerede kabling og moduler kan bevares og udvides med fleksibel daglig betjening og Flows."
+        "en": "Control and monitor recent Porsche Taycan, Macan Electric and Cayenne Electric models from Homey.\n\nFeatures:\n- Battery level, electric range and charging state\n- Climate start and stop\n- Automatic cached-status monitoring every five minutes\n- Explicit current-status refresh when you choose to wake the vehicle\n- Flow triggers when vehicle values change\n\nThis is an unofficial community integration and is not affiliated with or endorsed by Porsche AG.\n\nThe app connects directly from your Homey to Porsche services. Your Porsche password is used only during the active pairing session and is not stored. OAuth tokens are stored locally on your Homey so the connection can be refreshed.\n"
       },
       "description": {
-        "en": "Make professional electrical installations part of the smart home.",
-        "da": "Gør professionelle elinstallationer til en del af det intelligente hjem."
-      },
-      "category": "lights",
-      "brandColor": "#153C65",
-      "icon": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "cigol_connect",
-          "name": {
-            "en": "Cigol Connect",
-            "da": "Cigol Connect"
-          },
-          "class": "other",
-          "capabilities": [
-            "onoff.a1",
-            "onoff.a2",
-            "onoff.a3",
-            "onoff.a4",
-            "onoff.a5",
-            "onoff.a6",
-            "onoff.a7",
-            "onoff.a8",
-            "onoff.b1",
-            "onoff.b2",
-            "onoff.b3",
-            "onoff.b4",
-            "onoff.b5",
-            "onoff.b6",
-            "onoff.b7",
-            "onoff.b8"
-          ],
-          "capabilitiesOptions": {
-            "onoff.a1": {
-              "title": {
-                "en": "Output A.1",
-                "da": "Udgang A.1"
-              }
-            },
-            "onoff.a2": {
-              "title": {
-                "en": "Output A.2",
-                "da": "Udgang A.2"
-              }
-            },
-            "onoff.a3": {
-              "title": {
-                "en": "Output A.3",
-                "da": "Udgang A.3"
-              }
-            },
-            "onoff.a4": {
-              "title": {
-                "en": "Output A.4",
-                "da": "Udgang A.4"
-              }
-            },
-            "onoff.a5": {
-              "title": {
-                "en": "Output A.5",
-                "da": "Udgang A.5"
-              }
-            },
-            "onoff.a6": {
-              "title": {
-                "en": "Output A.6",
-                "da": "Udgang A.6"
-              }
-            },
-            "onoff.a7": {
-              "title": {
-                "en": "Output A.7",
-                "da": "Udgang A.7"
-              }
-            },
-            "onoff.a8": {
-              "title": {
-                "en": "Output A.8",
-                "da": "Udgang A.8"
-              }
-            },
-            "onoff.b1": {
-              "title": {
-                "en": "Output B.1",
-                "da": "Udgang B.1"
-              }
-            },
-            "onoff.b2": {
-              "title": {
-                "en": "Output B.2",
-                "da": "Udgang B.2"
-              }
-            },
-            "onoff.b3": {
-              "title": {
-                "en": "Output B.3",
-                "da": "Udgang B.3"
-              }
-            },
-            "onoff.b4": {
-              "title": {
-                "en": "Output B.4",
-                "da": "Udgang B.4"
-              }
-            },
-            "onoff.b5": {
-              "title": {
-                "en": "Output B.5",
-                "da": "Udgang B.5"
-              }
-            },
-            "onoff.b6": {
-              "title": {
-                "en": "Output B.6",
-                "da": "Udgang B.6"
-              }
-            },
-            "onoff.b7": {
-              "title": {
-                "en": "Output B.7",
-                "da": "Udgang B.7"
-              }
-            },
-            "onoff.b8": {
-              "title": {
-                "en": "Output B.8",
-                "da": "Udgang B.8"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/drivers/cigol_connect/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/drivers/cigol_connect/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "zigbee"
-          ],
-          "icon": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/drivers/cigol_connect/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": [
-          {
-            "id": "input_action",
-            "title": {
-              "en": "A switch input is activated",
-              "da": "En kontaktindgang aktiveres"
-            },
-            "titleFormatted": {
-              "en": "[[input]] reports [[action]]",
-              "da": "[[input]] registrerer [[action]]"
-            },
-            "hint": {
-              "en": "Starts a Flow when the selected input reports the selected button action.",
-              "da": "Starter et Flow, når den valgte indgang registrerer den valgte trykhandling."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=cigol_connect"
-              },
-              {
-                "name": "input",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Input",
-                  "da": "Indgang"
-                }
-              },
-              {
-                "name": "action",
-                "type": "dropdown",
-                "title": {
-                  "en": "Action",
-                  "da": "Handling"
-                },
-                "values": [
-                  {
-                    "id": "single",
-                    "title": {
-                      "en": "Single press",
-                      "da": "Enkelttryk"
-                    }
-                  },
-                  {
-                    "id": "double",
-                    "title": {
-                      "en": "Double press",
-                      "da": "Dobbelttryk"
-                    }
-                  },
-                  {
-                    "id": "hold",
-                    "title": {
-                      "en": "Hold",
-                      "da": "Langt tryk"
-                    }
-                  },
-                  {
-                    "id": "release",
-                    "title": {
-                      "en": "Released",
-                      "da": "Sluppet"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "input",
-                "type": "string",
-                "title": {
-                  "en": "Input",
-                  "da": "Indgang"
-                },
-                "example": "A.1"
-              },
-              {
-                "name": "action",
-                "type": "string",
-                "title": {
-                  "en": "Action",
-                  "da": "Handling"
-                },
-                "example": "single"
-              }
-            ]
-          },
-          {
-            "id": "output_state_changed",
-            "title": {
-              "en": "An output changed state",
-              "da": "En udgang skiftede tilstand"
-            },
-            "titleFormatted": {
-              "en": "[[output]] was turned [[state]]",
-              "da": "[[output]] blev [[state]]"
-            },
-            "hint": {
-              "en": "Starts a Flow when the selected output changes to the selected state.",
-              "da": "Starter et Flow, når den valgte udgang skifter til den valgte tilstand."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=cigol_connect"
-              },
-              {
-                "name": "output",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Output",
-                  "da": "Udgang"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "State",
-                  "da": "Tilstand"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "On",
-                      "da": "Tændt"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "Off",
-                      "da": "Slukket"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "output",
-                "type": "string",
-                "title": {
-                  "en": "Output",
-                  "da": "Udgang"
-                },
-                "example": {
-                  "en": "B.1",
-                  "da": "B.1"
-                }
-              },
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "da": "Tilstand"
-                },
-                "example": {
-                  "en": "on",
-                  "da": "on"
-                }
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "output_is_state",
-            "title": {
-              "en": "An output is in a state",
-              "da": "En udgang har en tilstand"
-            },
-            "titleFormatted": {
-              "en": "[[output]] is [[state]]",
-              "da": "[[output]] er [[state]]"
-            },
-            "hint": {
-              "en": "Checks whether the selected output is currently in the selected state.",
-              "da": "Kontrollerer, om den valgte udgang aktuelt har den valgte tilstand."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=cigol_connect"
-              },
-              {
-                "name": "output",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Output",
-                  "da": "Udgang"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "State",
-                  "da": "Tilstand"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "On",
-                      "da": "Tændt"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "Off",
-                      "da": "Slukket"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ],
-        "actions": [
-          {
-            "id": "set_output",
-            "title": {
-              "en": "Set an output",
-              "da": "Indstil en udgang"
-            },
-            "titleFormatted": {
-              "en": "Set [[output]] to [[state]]",
-              "da": "Sæt [[output]] til [[state]]"
-            },
-            "hint": {
-              "en": "Turns the selected output on or off, or toggles its current state.",
-              "da": "Tænder eller slukker den valgte udgang eller skifter dens aktuelle tilstand."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=cigol_connect"
-              },
-              {
-                "name": "output",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Output",
-                  "da": "Udgang"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "State",
-                  "da": "Tilstand"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "On",
-                      "da": "Tænd"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "Off",
-                      "da": "Sluk"
-                    }
-                  },
-                  {
-                    "id": "toggle",
-                    "title": {
-                      "en": "Toggle",
-                      "da": "Skift tilstand"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": null,
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-09-14T09:30:11.063Z",
-      "bugs": null,
-      "homepage": null,
-      "support": null,
-      "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [],
-      "changelog": {
-        "en": "Changed App to Homey Pro only."
-      },
-      "compatibility": ">=12.4.0",
-      "tags": null,
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "1.0.1",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6aa3cd1330dc90a8d6df9d18",
-      "type": "user",
-      "userId": "62b04919f6c9990bf15e3758",
-      "name": "Kim T. Nielsen",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "com.esko.themo",
-    "rating": null,
-    "liveBuild": {
-      "id": 7,
-      "name": {
-        "en": "Themo"
-      },
-      "version": "1.0.6",
-      "readme": {
-        "en": "Themo keeps electric floor heating comfortable while using cheaper, greener electricity. Connect your Themo account to Homey and the thermostats in each room become part of the home you already automate.\n\nSet a temperature, switch between automatic and manual heating, or turn a room off from Homey. Themo continues to follow its own schedule in automatic mode, so floors stay warm when you need them and save energy when you do not.\n"
-      },
-      "description": {
-        "en": "Heat your floors using affordable exchange electricity"
+        "en": "Vehicle status and climate control for recent Porsche Taycan, Macan Electric and Cayenne Electric models.",
+        "nl": "Voertuigstatus en klimaatbediening voor recente Porsche Taycan, Macan Electric en Cayenne Electric-modellen."
       },
       "category": "climate",
-      "brandColor": "#52469A",
-      "icon": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/assets/images/large.png",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/nl.error404.porsche/5/6bcc6d8f-037e-4482-92d3-062bdb8b6a8d/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.error404.porsche/5/6bcc6d8f-037e-4482-92d3-062bdb8b6a8d/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.error404.porsche/5/6bcc6d8f-037e-4482-92d3-062bdb8b6a8d/assets/images/large.png",
       "drivers": [
         {
-          "id": "thermostat",
+          "id": "cayenne-e4",
           "name": {
-            "en": "Themo Smart Thermostat"
+            "en": "Porsche Electric Vehicle",
+            "nl": "Porsche elektrisch voertuig"
           },
-          "class": "thermostat",
+          "class": "car",
           "capabilities": [
-            "measure_temperature",
-            "measure_temperature.floor",
-            "target_temperature",
-            "thermostat_mode",
-            "measure_power",
-            "themo_heating",
-            "themo_schedule"
+            "measure_distance.range",
+            "measure_battery",
+            "ev_charging_state",
+            "porsche_climate_on",
+            "porsche_climate_last_modified",
+            "porsche_refresh_current"
           ],
           "capabilitiesOptions": {
-            "measure_temperature": {
+            "measure_battery": {
               "title": {
-                "en": "Room Temperature"
+                "en": "Battery",
+                "nl": "Accu"
               },
-              "decimals": 1
+              "decimals": 0
             },
-            "measure_temperature.floor": {
+            "measure_distance.range": {
               "title": {
-                "en": "Floor Temperature"
+                "en": "Range",
+                "nl": "Actieradius"
               },
-              "decimals": 1
+              "units": {
+                "en": "km",
+                "nl": "km"
+              },
+              "decimals": 0
             },
-            "target_temperature": {
-              "min": 5,
-              "max": 41,
-              "step": 0.5,
-              "decimals": 1
-            },
-            "measure_power": {
+            "porsche_climate_on": {
               "title": {
-                "en": "Heating Power"
-              },
-              "decimals": 0,
-              "approximated": true
-            },
-            "thermostat_mode": {
-              "values": [
-                {
-                  "id": "auto",
-                  "title": {
-                    "en": "Automatic"
-                  }
-                },
-                {
-                  "id": "heat",
-                  "title": {
-                    "en": "Heat"
-                  }
-                },
-                {
-                  "id": "off",
-                  "title": {
-                    "en": "Off"
-                  }
-                }
-              ]
+                "en": "Climate",
+                "nl": "Klimaat"
+              }
             }
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/drivers/thermostat/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/drivers/thermostat/assets/images/large.png",
+          "energy": {
+            "electricCar": true
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.error404.porsche/5/6bcc6d8f-037e-4482-92d3-062bdb8b6a8d/drivers/cayenne-e4/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.error404.porsche/5/6bcc6d8f-037e-4482-92d3-062bdb8b6a8d/drivers/cayenne-e4/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
             "cloud"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/drivers/thermostat/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/nl.error404.porsche/5/6bcc6d8f-037e-4482-92d3-062bdb8b6a8d/drivers/cayenne-e4/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "floor_temperature_changed",
+            "id": "climate_state_changed",
             "title": {
-              "en": "The floor temperature changed"
+              "en": "Climate status changed",
+              "nl": "Klimaatstatus is gewijzigd"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=thermostat"
+                "filter": "driver_id=cayenne-e4"
               }
             ],
             "tokens": [
               {
-                "name": "temperature",
-                "type": "number",
+                "name": "is_on",
+                "type": "boolean",
                 "title": {
-                  "en": "Temperature"
-                },
-                "example": 24.5
-              }
-            ]
-          },
-          {
-            "id": "heating_started",
-            "title": {
-              "en": "Started heating"
-            },
-            "args": [
+                  "en": "Is on",
+                  "nl": "Is aan"
+                }
+              },
               {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=thermostat"
-              }
-            ]
-          },
-          {
-            "id": "heating_stopped",
-            "title": {
-              "en": "Stopped heating"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=thermostat"
-              }
-            ]
-          },
-          {
-            "id": "schedule_changed",
-            "title": {
-              "en": "The active schedule changed"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=thermostat"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "schedule",
+                "name": "last_modified",
                 "type": "string",
                 "title": {
-                  "en": "Schedule"
-                },
-                "example": "Weekday"
+                  "en": "Last modified",
+                  "nl": "Meettijd"
+                }
+              },
+              {
+                "name": "stale",
+                "type": "boolean",
+                "title": {
+                  "en": "Stale",
+                  "nl": "Verouderd"
+                }
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "floor_temperature_above",
+            "id": "climate_is_off",
             "title": {
-              "en": "The floor temperature is !{{above|below}}"
+              "en": "Climate is off",
+              "nl": "Klimaat is uit"
             },
-            "titleFormatted": {
-              "en": "The floor temperature is !{{above|below}} [[temperature]]°C"
+            "hint": {
+              "en": "Uses last stored CLIMATIZER_STATE.isOn. Stale data keeps the value but shows a warning.",
+              "nl": "Gebruikt laatste opgeslagen CLIMATIZER_STATE.isOn. Bij stale data blijft de waarde zichtbaar met waarschuwing."
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=thermostat"
-              },
-              {
-                "name": "temperature",
-                "type": "number",
-                "min": 0,
-                "max": 50,
-                "step": 0.5,
-                "placeholder": {
-                  "en": "°C"
-                }
+                "filter": "driver_id=cayenne-e4"
               }
             ]
           },
           {
-            "id": "is_heating",
+            "id": "climate_is_on",
             "title": {
-              "en": "Is !{{heating|not heating}}"
+              "en": "Climate is on",
+              "nl": "Klimaat is aan"
+            },
+            "hint": {
+              "en": "Uses last stored CLIMATIZER_STATE.isOn. Stale data keeps the value but shows a warning.",
+              "nl": "Gebruikt laatste opgeslagen CLIMATIZER_STATE.isOn. Bij stale data blijft de waarde zichtbaar met waarschuwing."
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=thermostat"
+                "filter": "driver_id=cayenne-e4"
               }
             ]
           }
         ],
-        "actions": null
+        "actions": [
+          {
+            "id": "climate_read_stored",
+            "title": {
+              "en": "Read stored climate status",
+              "nl": "Opgeslagen klimaatstatus ophalen"
+            },
+            "hint": {
+              "en": "Fetches stored overview without wake-up. Respects rate limits.",
+              "nl": "Haalt stored overview op zonder wake-up. Respecteert rate limits."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "climate_start",
+            "title": {
+              "en": "Start climate",
+              "nl": "Klimaat starten"
+            },
+            "hint": {
+              "en": "Sends REMOTE_CLIMATIZER_START. API acceptance does not confirm the vehicle is running climate.",
+              "nl": "Verstuurt REMOTE_CLIMATIZER_START. API-acceptatie bevestigt niet dat het voertuig klimaat draait."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "climate_stop",
+            "title": {
+              "en": "Stop climate",
+              "nl": "Klimaat stoppen"
+            },
+            "hint": {
+              "en": "Sends REMOTE_CLIMATIZER_STOP. API acceptance does not confirm the vehicle stopped climate.",
+              "nl": "Verstuurt REMOTE_CLIMATIZER_STOP. API-acceptatie bevestigt niet dat het voertuig klimaat stopte."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "vehicle_read_current",
+            "title": {
+              "en": "Refresh the vehicle now",
+              "nl": "Ververs het voertuig nu"
+            },
+            "hint": {
+              "en": "Wakes the vehicle and retrieves current data. This may take up to 90 seconds.",
+              "nl": "Maakt het voertuig wakker en haalt actuele gegevens op. Dit kan tot 90 seconden duren."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          }
+        ]
       },
       "widgets": null,
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-14T13:11:09.878Z",
-      "bugs": "https://github.com/esko/themo-homey/issues",
+      "stateChangedAt": "2026-09-14T17:44:33.627Z",
+      "bugs": null,
       "homepage": null,
-      "support": "mailto:esko.pyyluoma@gmail.com",
-      "source": "https://github.com/esko/themo-homey",
+      "support": "mailto:chris@23g.nl",
+      "source": null,
       "contributors": null,
       "contributing": null,
       "permissions": [],
       "changelog": {
-        "en": "App icon now matches Homey’s mask format so the wordmark is visible."
+        "en": "Minor fixes and visual improvements."
       },
       "compatibility": ">=12.4.5",
       "tags": {
         "en": [
-          "themo",
-          "thermostat",
-          "floor heating"
+          "porsche",
+          "taycan",
+          "macan",
+          "cayenne",
+          "connect",
+          "climate",
+          "electric",
+          "car"
+        ],
+        "nl": [
+          "porsche",
+          "taycan",
+          "macan",
+          "cayenne",
+          "connect",
+          "klimaat",
+          "elektrisch",
+          "auto"
         ]
       },
       "platforms": [
@@ -732,113 +279,276 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.6",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6aa51fda30dc90a8d6dfe936",
-      "type": "user",
-      "userId": "6a25db6dc7468649c89f2669",
-      "name": "Esko Pyyluoma",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "com.alpha.mohlenhoff.v2",
-    "rating": null,
-    "liveBuild": {
-      "id": 13,
+    "liveVersion": "1.0.2",
+    "testBuild": {
+      "id": 6,
       "name": {
-        "en": "Alpha Möhlenhoff V2",
-        "nl": "Alpha Möhlenhoff V2"
+        "en": "Porsche Connect",
+        "nl": "Porsche Connect"
       },
-      "version": "0.1.10",
+      "version": "1.0.3",
       "readme": {
-        "en": "This app connects your Alpha Möhlenhoff (EZR) heating controller to Homey over your local network, so you can see and adjust the temperature in every room straight from the Homey app.\n\nThermostats are found automatically once you enter the controller's IP address during pairing. All communication stays on your own network, so no cloud account is required.\n",
-        "nl": "Deze app koppelt je Alpha Möhlenhoff (EZR) verwarmingsregelaar via je lokale netwerk aan Homey, zodat je de temperatuur van elke kamer rechtstreeks vanuit de Homey-app kunt bekijken en aanpassen.\n\nThermostaten worden automatisch gevonden zodra je tijdens het koppelen het IP-adres van de controller invoert. Alle communicatie blijft binnen je eigen netwerk, dus er is geen cloudaccount nodig.\n"
+        "en": "Control and monitor recent Porsche Taycan, Macan Electric and Cayenne Electric models from Homey.\n\nFeatures:\n- Battery level, electric range and charging state\n- Climate start and stop\n- Automatic cached-status monitoring every five minutes\n- Explicit current-status refresh when you choose to wake the vehicle\n- Flow triggers when vehicle values change\n\nThis is an unofficial community integration and is not affiliated with or endorsed by Porsche AG.\n\nThe app connects directly from your Homey to Porsche services. Your Porsche password is used only during the active pairing session and is not stored. OAuth tokens are stored locally on your Homey so the connection can be refreshed.\n"
       },
       "description": {
-        "en": "The comfort of every room, exactly where you want it.",
-        "nl": "Het comfort van elke kamer, precies zoals jij het wilt."
+        "en": "Vehicle status and climate control for recent Porsche Taycan, Macan Electric and Cayenne Electric models.",
+        "nl": "Voertuigstatus en klimaatbediening voor recente Porsche Taycan, Macan Electric en Cayenne Electric-modellen."
       },
       "category": "climate",
-      "brandColor": "#b7253b",
-      "icon": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/assets/images/large.png",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/nl.error404.porsche/6/720cb155-7550-4916-b133-a5d7ccfc0f52/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.error404.porsche/6/720cb155-7550-4916-b133-a5d7ccfc0f52/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.error404.porsche/6/720cb155-7550-4916-b133-a5d7ccfc0f52/assets/images/large.png",
       "drivers": [
         {
-          "id": "alpha-mohlenhoff-v2",
+          "id": "cayenne-e4",
           "name": {
-            "en": "Alpha Möhlenhoff V2 Thermostat",
-            "nl": "Alpha Möhlenhoff V2 Thermostaat"
+            "en": "Porsche Electric Vehicle",
+            "nl": "Porsche elektrisch voertuig"
           },
-          "class": "thermostat",
+          "class": "car",
           "capabilities": [
-            "measure_temperature",
-            "target_temperature",
+            "measure_distance.range",
             "measure_battery",
-            "actuator_percent"
+            "ev_charging_state",
+            "porsche_climate_on",
+            "porsche_climate_last_modified",
+            "porsche_refresh_current"
           ],
           "capabilitiesOptions": {
-            "target_temperature": {
-              "min": 5,
-              "max": 35,
-              "step": 0.2
-            },
             "measure_battery": {
               "title": {
-                "en": "Battery level",
-                "nl": "Batterijniveau"
-              },
-              "units": {
-                "en": "%",
-                "nl": "%"
+                "en": "Battery",
+                "nl": "Accu"
               },
               "decimals": 0
+            },
+            "measure_distance.range": {
+              "title": {
+                "en": "Range",
+                "nl": "Actieradius"
+              },
+              "units": {
+                "en": "km",
+                "nl": "km"
+              },
+              "decimals": 0
+            },
+            "porsche_climate_on": {
+              "title": {
+                "en": "Climate",
+                "nl": "Klimaat"
+              }
             }
           },
           "energy": {
-            "batteries": [
-              "OTHER"
-            ]
+            "electricCar": true
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/drivers/alpha-mohlenhoff-v2/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/drivers/alpha-mohlenhoff-v2/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/nl.error404.porsche/6/720cb155-7550-4916-b133-a5d7ccfc0f52/drivers/cayenne-e4/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.error404.porsche/6/720cb155-7550-4916-b133-a5d7ccfc0f52/drivers/cayenne-e4/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "lan"
+            "cloud"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/drivers/alpha-mohlenhoff-v2/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/nl.error404.porsche/6/720cb155-7550-4916-b133-a5d7ccfc0f52/drivers/cayenne-e4/assets/icon.svg"
         }
       ],
       "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": null
+        "triggers": [
+          {
+            "id": "climate_state_changed",
+            "title": {
+              "en": "Climate status changed",
+              "nl": "Klimaatstatus is gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "is_on",
+                "type": "boolean",
+                "title": {
+                  "en": "Is on",
+                  "nl": "Is aan"
+                }
+              },
+              {
+                "name": "last_modified",
+                "type": "string",
+                "title": {
+                  "en": "Last modified",
+                  "nl": "Meettijd"
+                }
+              },
+              {
+                "name": "stale",
+                "type": "boolean",
+                "title": {
+                  "en": "Stale",
+                  "nl": "Verouderd"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "climate_is_off",
+            "title": {
+              "en": "Climate is off",
+              "nl": "Klimaat is uit"
+            },
+            "hint": {
+              "en": "Uses last stored CLIMATIZER_STATE.isOn. Stale data keeps the value but shows a warning.",
+              "nl": "Gebruikt laatste opgeslagen CLIMATIZER_STATE.isOn. Bij stale data blijft de waarde zichtbaar met waarschuwing."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "climate_is_on",
+            "title": {
+              "en": "Climate is on",
+              "nl": "Klimaat is aan"
+            },
+            "hint": {
+              "en": "Uses last stored CLIMATIZER_STATE.isOn. Stale data keeps the value but shows a warning.",
+              "nl": "Gebruikt laatste opgeslagen CLIMATIZER_STATE.isOn. Bij stale data blijft de waarde zichtbaar met waarschuwing."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "climate_read_stored",
+            "title": {
+              "en": "Read stored climate status",
+              "nl": "Opgeslagen klimaatstatus ophalen"
+            },
+            "hint": {
+              "en": "Fetches stored overview without wake-up. Respects rate limits.",
+              "nl": "Haalt stored overview op zonder wake-up. Respecteert rate limits."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "climate_start",
+            "title": {
+              "en": "Start climate",
+              "nl": "Klimaat starten"
+            },
+            "hint": {
+              "en": "Sends REMOTE_CLIMATIZER_START. API acceptance does not confirm the vehicle is running climate.",
+              "nl": "Verstuurt REMOTE_CLIMATIZER_START. API-acceptatie bevestigt niet dat het voertuig klimaat draait."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "climate_stop",
+            "title": {
+              "en": "Stop climate",
+              "nl": "Klimaat stoppen"
+            },
+            "hint": {
+              "en": "Sends REMOTE_CLIMATIZER_STOP. API acceptance does not confirm the vehicle stopped climate.",
+              "nl": "Verstuurt REMOTE_CLIMATIZER_STOP. API-acceptatie bevestigt niet dat het voertuig klimaat stopte."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          },
+          {
+            "id": "vehicle_read_current",
+            "title": {
+              "en": "Refresh the vehicle now",
+              "nl": "Ververs het voertuig nu"
+            },
+            "hint": {
+              "en": "Wakes the vehicle and retrieves current data. This may take up to 90 seconds.",
+              "nl": "Maakt het voertuig wakker en haalt actuele gegevens op. Dit kan tot 90 seconden duren."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cayenne-e4"
+              }
+            ]
+          }
+        ]
       },
       "widgets": null,
       "screensavers": [],
       "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-09-14T13:45:59.412Z",
+      "state": "in_review",
+      "stateChangedAt": "2026-09-14T18:00:49.567Z",
       "bugs": null,
       "homepage": null,
-      "support": null,
+      "support": "mailto:support@error404.nl",
       "source": null,
       "contributors": null,
       "contributing": null,
       "permissions": [],
       "changelog": {
-        "en": "driver icon svg"
+        "en": "Minor fixes and visual improvements."
       },
-      "compatibility": ">=5.0.0",
-      "tags": null,
+      "compatibility": ">=12.4.5",
+      "tags": {
+        "en": [
+          "porsche",
+          "taycan",
+          "macan",
+          "cayenne",
+          "connect",
+          "climate",
+          "electric",
+          "car"
+        ],
+        "nl": [
+          "porsche",
+          "taycan",
+          "macan",
+          "cayenne",
+          "connect",
+          "klimaat",
+          "elektrisch",
+          "auto"
+        ]
+      },
       "platforms": [
         "local"
       ],
@@ -847,16 +557,14 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.1.10",
-    "testBuild": null,
-    "testVersion": null,
+    "testVersion": "1.0.3",
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a9ab85c336db3df05ac7aa0",
-      "type": "user",
-      "userId": "5fc42164083d1b0c6b39693b",
-      "name": "Thijs te Paske",
+      "id": "6aa64db23bf2cee70a44dbf7",
+      "type": "org",
+      "userId": null,
+      "name": "error404.nl",
       "verified": false
     },
     "communityTopicId": null

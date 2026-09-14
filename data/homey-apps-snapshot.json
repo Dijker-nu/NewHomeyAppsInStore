@@ -18203,5 +18203,16 @@
     "publishedAt": "2026-09-14T17:09:23.662Z",
     "updatedAt": "2026-09-14T17:09:23.662Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "nl.error404.porsche",
+    "name": "Porsche Connect",
+    "developerName": "error404.nl",
+    "developerId": "6aa64db23bf2cee70a44dbf7",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-14T22:49:51.407Z",
+    "updatedAt": "2026-09-14T22:49:51.407Z",
+    "communityTopicId": null
   }
 ]
