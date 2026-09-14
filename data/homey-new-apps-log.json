@@ -19798,5 +19798,29 @@
     "updatedAt": "2026-09-10T21:38:16.686Z",
     "communityTopicId": 156098,
     "discoveredAt": "2026-09-10T21:22:45.879Z"
+  },
+  {
+    "appId": "nl.jessedevries.huedevicelocationsync",
+    "name": "Hue Device Location Sync",
+    "developerName": "Jesse de Vries",
+    "developerId": "6aa1a45b4b2b66c1158fb585",
+    "version": "0.2.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-14T09:03:49.293Z",
+    "updatedAt": "2026-09-14T09:03:49.293Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-14T09:03:49.292Z"
+  },
+  {
+    "appId": "com.ericj.senseenergymonitor",
+    "name": "Sense Energy Monitor",
+    "developerName": "Eric Jilot",
+    "developerId": "6a9f55434b2b66c1158d0aec",
+    "version": "1.0.4",
+    "sourceRepository": "https://github.com/EricJilot/homey-sense-energy-monitor",
+    "publishedAt": "2026-09-14T09:03:50.225Z",
+    "updatedAt": "2026-09-14T09:03:50.225Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-14T09:03:49.292Z"
   }
 ]

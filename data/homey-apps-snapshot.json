@@ -13831,10 +13831,10 @@
     "name": "YoLink",
     "developerName": "RockSoft Solutions",
     "developerId": "6a8839af94f0069d62d2bb7f",
-    "version": "1.0.26",
+    "version": "1.0.27",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:13.074Z",
-    "updatedAt": "2026-09-12T08:00:19.115Z",
+    "updatedAt": "2026-09-14T09:04:17.460Z",
     "communityTopicId": 143373
   },
   {
@@ -16218,10 +16218,10 @@
     "name": "HomeFlux",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.8.62",
+    "version": "0.8.66",
     "sourceRepository": "https://github.com/DavyBert/homey-dashboard-HomeFlux",
     "publishedAt": "2026-09-10T21:36:48.032Z",
-    "updatedAt": "2026-09-10T21:36:48.032Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": null
   },
   {
@@ -17351,10 +17351,10 @@
     "name": "Go-e",
     "developerName": "Complus",
     "developerId": "6a87e103c8d34196bd5f6109",
-    "version": "1.7.5",
+    "version": "1.7.6",
     "sourceRepository": "https://github.com/complus-fi/com.go-e",
     "publishedAt": "2026-09-10T21:37:42.368Z",
-    "updatedAt": "2026-09-10T21:37:42.368Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 155757
   },
   {
@@ -17393,12 +17393,12 @@
   {
     "appId": "com.idiamant-netatmo",
     "name": "iDiamant by Netatmo",
-    "developerName": "ATX corp",
+    "developerName": "ATX Groupe",
     "developerId": "6a8e12e83bdd81c33f8d4766",
     "version": "1.3.13",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:43.946Z",
-    "updatedAt": "2026-09-10T21:37:43.946Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 159166
   },
   {
@@ -17582,10 +17582,10 @@
     "name": "Shelly Wall Display Dashboard",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.70",
+    "version": "1.3.77",
     "sourceRepository": "https://github.com/andiwirz/com.walldisplay.dashboard",
     "publishedAt": "2026-09-10T21:37:51.559Z",
-    "updatedAt": "2026-09-10T21:37:51.559Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": null
   },
   {
@@ -17648,10 +17648,10 @@
     "name": "Flow Version History",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.21",
+    "version": "1.0.22",
     "sourceRepository": "https://github.com/smarthomesven/homey-flow-version-history",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-10T21:37:55.644Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 152775
   },
   {
@@ -17670,10 +17670,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.0.1",
+    "version": "3.1.2",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-10T21:37:55.644Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 147496
   },
   {
@@ -17725,10 +17725,10 @@
     "name": "Nordlux Smart Light",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "sourceRepository": "https://github.com/smarthomesven/homey-nordlux",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-10T21:37:55.644Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 158091
   },
   {
@@ -17978,10 +17978,10 @@
     "name": "Kia",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.2",
+    "version": "2.6.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:13.068Z",
-    "updatedAt": "2026-09-10T21:38:13.068Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 32487
   },
   {
@@ -17989,10 +17989,10 @@
     "name": "Hyundai",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.2",
+    "version": "2.6.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:13.068Z",
-    "updatedAt": "2026-09-10T21:38:13.068Z",
+    "updatedAt": "2026-09-14T09:04:17.461Z",
     "communityTopicId": 32487
   },
   {
@@ -18148,5 +18148,27 @@
     "publishedAt": "2026-09-10T21:38:16.686Z",
     "updatedAt": "2026-09-13T08:25:01.086Z",
     "communityTopicId": 156098
+  },
+  {
+    "appId": "nl.jessedevries.huedevicelocationsync",
+    "name": "Hue Device Location Sync",
+    "developerName": "Jesse de Vries",
+    "developerId": "6aa1a45b4b2b66c1158fb585",
+    "version": "0.2.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-14T09:03:49.293Z",
+    "updatedAt": "2026-09-14T09:03:49.293Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.ericj.senseenergymonitor",
+    "name": "Sense Energy Monitor",
+    "developerName": "Eric Jilot",
+    "developerId": "6a9f55434b2b66c1158d0aec",
+    "version": "1.0.4",
+    "sourceRepository": "https://github.com/EricJilot/homey-sense-energy-monitor",
+    "publishedAt": "2026-09-14T09:03:50.225Z",
+    "updatedAt": "2026-09-14T09:03:50.225Z",
+    "communityTopicId": null
   }
 ]
