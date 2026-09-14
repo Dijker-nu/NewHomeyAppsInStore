@@ -1,64 +1,445 @@
 [
   {
-    "id": "nl.jessedevries.huedevicelocationsync",
+    "id": "io.cigol",
     "rating": null,
     "liveBuild": {
-      "id": 1,
+      "id": 2,
       "name": {
-        "en": "Hue Device Location Sync"
+        "en": "Cigol",
+        "da": "Cigol"
       },
-      "version": "0.2.0",
+      "version": "1.0.1",
       "readme": {
-        "en": "Keeps your Philips Hue devices in the correct Homey zones.\n\nHomey does not know which Hue room a device belongs to, so zone placement drifts as you add and move lights. This app reads the rooms from your Hue bridge and moves the matching Homey devices into the zones you chose, automatically.\n\nHow it works\n- Connect: find your Hue bridge on the network and press its link button. The bridge is only ever read, never changed.\n- Map once: for every Hue room, pick the Homey zone it belongs to. Rooms you leave unmapped are ignored.\n- Preview: see exactly which devices would move before anything changes.\n- Start syncing: applies the mapping now and keeps it in sync on an interval you choose. Stop at any time; devices stay where they are.\n\nDetails\n- Only devices of the official Philips Hue app that belong to your paired bridge are touched, and only their zone is changed.\n- Devices already in the right zone are left alone, so repeated syncs are harmless.\n- A Flow action card lets you run a sync (or a preview) from your Flows.\n- An activity log shows every move, sync and change.\n\nNote: Homey does not allow apps to move devices with their own permissions. The app asks for a Homey API key with the Devices permission (Homey web app → Settings → API Keys); the key is stored only on your Homey.\n"
+        "en": "Use Cigol devices to combine professional electrical installations with intelligent control and automation in Homey. \r\n\r\nCigol Connect integrates existing LK IHC switches and outputs, allowing installed wiring and modules to remain in use while adding flexible everyday control and Flows.",
+        "da": "Brug Cigol-enheder til at kombinere professionelle elinstallationer med intelligent styring og automatisering i Homey. \r\n\r\nCigol Connect integrerer eksisterende LK IHC-tryk og -udgange, så den installerede kabling og moduler kan bevares og udvides med fleksibel daglig betjening og Flows."
       },
       "description": {
-        "en": "Keeps your Hue devices in the correct Homey zones by providing a one-time mapping of Hue rooms with Homey zones."
+        "en": "Make professional electrical installations part of the smart home.",
+        "da": "Gør professionelle elinstallationer til en del af det intelligente hjem."
       },
-      "category": "tools",
-      "brandColor": "#C97C69",
-      "icon": "https://apps.homeycdn.net/app/nl.jessedevries.huedevicelocationsync/1/b53908da-ed31-4400-8642-3203c0c7762b/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/nl.jessedevries.huedevicelocationsync/1/b53908da-ed31-4400-8642-3203c0c7762b/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/nl.jessedevries.huedevicelocationsync/1/b53908da-ed31-4400-8642-3203c0c7762b/assets/images/large.png",
-      "drivers": null,
+      "category": "lights",
+      "brandColor": "#153C65",
+      "icon": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "cigol_connect",
+          "name": {
+            "en": "Cigol Connect",
+            "da": "Cigol Connect"
+          },
+          "class": "other",
+          "capabilities": [
+            "onoff.a1",
+            "onoff.a2",
+            "onoff.a3",
+            "onoff.a4",
+            "onoff.a5",
+            "onoff.a6",
+            "onoff.a7",
+            "onoff.a8",
+            "onoff.b1",
+            "onoff.b2",
+            "onoff.b3",
+            "onoff.b4",
+            "onoff.b5",
+            "onoff.b6",
+            "onoff.b7",
+            "onoff.b8"
+          ],
+          "capabilitiesOptions": {
+            "onoff.a1": {
+              "title": {
+                "en": "Output A.1",
+                "da": "Udgang A.1"
+              }
+            },
+            "onoff.a2": {
+              "title": {
+                "en": "Output A.2",
+                "da": "Udgang A.2"
+              }
+            },
+            "onoff.a3": {
+              "title": {
+                "en": "Output A.3",
+                "da": "Udgang A.3"
+              }
+            },
+            "onoff.a4": {
+              "title": {
+                "en": "Output A.4",
+                "da": "Udgang A.4"
+              }
+            },
+            "onoff.a5": {
+              "title": {
+                "en": "Output A.5",
+                "da": "Udgang A.5"
+              }
+            },
+            "onoff.a6": {
+              "title": {
+                "en": "Output A.6",
+                "da": "Udgang A.6"
+              }
+            },
+            "onoff.a7": {
+              "title": {
+                "en": "Output A.7",
+                "da": "Udgang A.7"
+              }
+            },
+            "onoff.a8": {
+              "title": {
+                "en": "Output A.8",
+                "da": "Udgang A.8"
+              }
+            },
+            "onoff.b1": {
+              "title": {
+                "en": "Output B.1",
+                "da": "Udgang B.1"
+              }
+            },
+            "onoff.b2": {
+              "title": {
+                "en": "Output B.2",
+                "da": "Udgang B.2"
+              }
+            },
+            "onoff.b3": {
+              "title": {
+                "en": "Output B.3",
+                "da": "Udgang B.3"
+              }
+            },
+            "onoff.b4": {
+              "title": {
+                "en": "Output B.4",
+                "da": "Udgang B.4"
+              }
+            },
+            "onoff.b5": {
+              "title": {
+                "en": "Output B.5",
+                "da": "Udgang B.5"
+              }
+            },
+            "onoff.b6": {
+              "title": {
+                "en": "Output B.6",
+                "da": "Udgang B.6"
+              }
+            },
+            "onoff.b7": {
+              "title": {
+                "en": "Output B.7",
+                "da": "Udgang B.7"
+              }
+            },
+            "onoff.b8": {
+              "title": {
+                "en": "Output B.8",
+                "da": "Udgang B.8"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/drivers/cigol_connect/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/drivers/cigol_connect/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/io.cigol/2/4db9b080-0f5f-4a7a-b368-899993def4bc/drivers/cigol_connect/assets/icon.svg"
+        }
+      ],
       "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": [
+        "triggers": [
           {
-            "id": "sync_now",
+            "id": "input_action",
             "title": {
-              "en": "Sync Hue rooms to Homey zones now"
+              "en": "A switch input is activated",
+              "da": "En kontaktindgang aktiveres"
             },
             "titleFormatted": {
-              "en": "Sync Hue rooms to Homey zones ([[mode]])"
+              "en": "[[input]] reports [[action]]",
+              "da": "[[input]] registrerer [[action]]"
             },
             "hint": {
-              "en": "Runs one sync pass. 'As configured' follows the dry-run toggle on the app's settings page."
+              "en": "Starts a Flow when the selected input reports the selected button action.",
+              "da": "Starter et Flow, når den valgte indgang registrerer den valgte trykhandling."
             },
             "args": [
               {
-                "name": "mode",
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=cigol_connect"
+              },
+              {
+                "name": "input",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Input",
+                  "da": "Indgang"
+                }
+              },
+              {
+                "name": "action",
                 "type": "dropdown",
                 "title": {
-                  "en": "Mode"
+                  "en": "Action",
+                  "da": "Handling"
                 },
                 "values": [
                   {
-                    "id": "configured",
+                    "id": "single",
                     "title": {
-                      "en": "As configured"
+                      "en": "Single press",
+                      "da": "Enkelttryk"
                     }
                   },
                   {
-                    "id": "dry_run",
+                    "id": "double",
                     "title": {
-                      "en": "Dry run (log only)"
+                      "en": "Double press",
+                      "da": "Dobbelttryk"
                     }
                   },
                   {
-                    "id": "apply",
+                    "id": "hold",
                     "title": {
-                      "en": "Apply changes"
+                      "en": "Hold",
+                      "da": "Langt tryk"
+                    }
+                  },
+                  {
+                    "id": "release",
+                    "title": {
+                      "en": "Released",
+                      "da": "Sluppet"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "input",
+                "type": "string",
+                "title": {
+                  "en": "Input",
+                  "da": "Indgang"
+                },
+                "example": "A.1"
+              },
+              {
+                "name": "action",
+                "type": "string",
+                "title": {
+                  "en": "Action",
+                  "da": "Handling"
+                },
+                "example": "single"
+              }
+            ]
+          },
+          {
+            "id": "output_state_changed",
+            "title": {
+              "en": "An output changed state",
+              "da": "En udgang skiftede tilstand"
+            },
+            "titleFormatted": {
+              "en": "[[output]] was turned [[state]]",
+              "da": "[[output]] blev [[state]]"
+            },
+            "hint": {
+              "en": "Starts a Flow when the selected output changes to the selected state.",
+              "da": "Starter et Flow, når den valgte udgang skifter til den valgte tilstand."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cigol_connect"
+              },
+              {
+                "name": "output",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Output",
+                  "da": "Udgang"
+                }
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "title": {
+                  "en": "State",
+                  "da": "Tilstand"
+                },
+                "values": [
+                  {
+                    "id": "on",
+                    "title": {
+                      "en": "On",
+                      "da": "Tændt"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "Off",
+                      "da": "Slukket"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "output",
+                "type": "string",
+                "title": {
+                  "en": "Output",
+                  "da": "Udgang"
+                },
+                "example": {
+                  "en": "B.1",
+                  "da": "B.1"
+                }
+              },
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "da": "Tilstand"
+                },
+                "example": {
+                  "en": "on",
+                  "da": "on"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "output_is_state",
+            "title": {
+              "en": "An output is in a state",
+              "da": "En udgang har en tilstand"
+            },
+            "titleFormatted": {
+              "en": "[[output]] is [[state]]",
+              "da": "[[output]] er [[state]]"
+            },
+            "hint": {
+              "en": "Checks whether the selected output is currently in the selected state.",
+              "da": "Kontrollerer, om den valgte udgang aktuelt har den valgte tilstand."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cigol_connect"
+              },
+              {
+                "name": "output",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Output",
+                  "da": "Udgang"
+                }
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "title": {
+                  "en": "State",
+                  "da": "Tilstand"
+                },
+                "values": [
+                  {
+                    "id": "on",
+                    "title": {
+                      "en": "On",
+                      "da": "Tændt"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "Off",
+                      "da": "Slukket"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_output",
+            "title": {
+              "en": "Set an output",
+              "da": "Indstil en udgang"
+            },
+            "titleFormatted": {
+              "en": "Set [[output]] to [[state]]",
+              "da": "Sæt [[output]] til [[state]]"
+            },
+            "hint": {
+              "en": "Turns the selected output on or off, or toggles its current state.",
+              "da": "Tænder eller slukker den valgte udgang eller skifter dens aktuelle tilstand."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=cigol_connect"
+              },
+              {
+                "name": "output",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Output",
+                  "da": "Udgang"
+                }
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "title": {
+                  "en": "State",
+                  "da": "Tilstand"
+                },
+                "values": [
+                  {
+                    "id": "on",
+                    "title": {
+                      "en": "On",
+                      "da": "Tænd"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "Off",
+                      "da": "Sluk"
+                    }
+                  },
+                  {
+                    "id": "toggle",
+                    "title": {
+                      "en": "Toggle",
+                      "da": "Skift tilstand"
                     }
                   }
                 ]
@@ -71,20 +452,18 @@
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-14T07:24:22.272Z",
+      "stateChangedAt": "2026-09-14T09:30:11.063Z",
       "bugs": null,
       "homepage": null,
       "support": null,
       "source": null,
       "contributors": null,
       "contributing": null,
-      "permissions": [
-        "homey:manager:api"
-      ],
+      "permissions": [],
       "changelog": {
-        "en": "Initial working version."
+        "en": "Changed App to Homey Pro only."
       },
-      "compatibility": ">=10.0.0",
+      "compatibility": ">=12.4.0",
       "tags": null,
       "platforms": [
         "local"
@@ -94,796 +473,371 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.2.0",
+    "liveVersion": "1.0.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6aa1a45b4b2b66c1158fb585",
+      "id": "6aa3cd1330dc90a8d6df9d18",
       "type": "user",
-      "userId": "6a22c4506db3a049085e5874",
-      "name": "Jesse de Vries",
+      "userId": "62b04919f6c9990bf15e3758",
+      "name": "Kim T. Nielsen",
       "verified": false
     },
     "communityTopicId": null
   },
   {
-    "id": "com.ericj.senseenergymonitor",
+    "id": "com.esko.themo",
     "rating": null,
     "liveBuild": {
-      "id": 5,
+      "id": 7,
       "name": {
-        "en": "Sense Energy Monitor"
+        "en": "Themo"
       },
-      "version": "1.0.4",
+      "version": "1.0.6",
       "readme": {
-        "en": "Your Sense Energy Monitor already measures every watt moving through your home. This app brings those readings into Homey as they happen, so you can see what the house is drawing from the grid, what your panels are producing, and the moments when the sun is carrying the whole place on its own.\n\nBecause the numbers arrive live rather than on a schedule, they can drive automations as well as dashboards. Start the pool pump while you are sending power back to the grid, heat water on a bright afternoon, or simply keep an eye on the day's totals from a dashboard widget that shows power flowing between the grid, your home and your panels.\n"
+        "en": "Themo keeps electric floor heating comfortable while using cheaper, greener electricity. Connect your Themo account to Homey and the thermostats in each room become part of the home you already automate.\n\nSet a temperature, switch between automatic and manual heating, or turn a room off from Homey. Themo continues to follow its own schedule in automatic mode, so floors stay warm when you need them and save energy when you do not.\n"
       },
       "description": {
-        "en": "See every watt your home uses and makes"
+        "en": "Heat your floors using affordable exchange electricity"
       },
-      "category": "energy",
-      "brandColor": "#F9461C",
-      "icon": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/assets/images/large.png",
+      "category": "climate",
+      "brandColor": "#52469A",
+      "icon": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/assets/images/large.png",
       "drivers": [
         {
-          "id": "sense_monitor",
+          "id": "thermostat",
           "name": {
-            "en": "Sense Monitor"
+            "en": "Themo Smart Thermostat"
           },
-          "class": "sensor",
+          "class": "thermostat",
           "capabilities": [
+            "measure_temperature",
+            "measure_temperature.floor",
+            "target_temperature",
+            "thermostat_mode",
             "measure_power",
-            "measure_power.consumption",
-            "meter_power",
-            "meter_power.imported",
-            "meter_power.exported"
+            "themo_heating",
+            "themo_schedule"
           ],
           "capabilitiesOptions": {
+            "measure_temperature": {
+              "title": {
+                "en": "Room Temperature"
+              },
+              "decimals": 1
+            },
+            "measure_temperature.floor": {
+              "title": {
+                "en": "Floor Temperature"
+              },
+              "decimals": 1
+            },
+            "target_temperature": {
+              "min": 5,
+              "max": 41,
+              "step": 0.5,
+              "decimals": 1
+            },
             "measure_power": {
               "title": {
-                "en": "Grid"
-              }
+                "en": "Heating Power"
+              },
+              "decimals": 0,
+              "approximated": true
             },
-            "measure_power.consumption": {
-              "title": {
-                "en": "Home usage"
-              }
-            },
-            "meter_power": {
-              "title": {
-                "en": "Total used"
-              }
-            },
-            "meter_power.imported": {
-              "title": {
-                "en": "Imported"
-              }
-            },
-            "meter_power.exported": {
-              "title": {
-                "en": "Exported"
-              }
+            "thermostat_mode": {
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Automatic"
+                  }
+                },
+                {
+                  "id": "heat",
+                  "title": {
+                    "en": "Heat"
+                  }
+                },
+                {
+                  "id": "off",
+                  "title": {
+                    "en": "Off"
+                  }
+                }
+              ]
             }
           },
-          "energy": {
-            "cumulative": true,
-            "cumulativeImportedCapability": "meter_power.imported",
-            "cumulativeExportedCapability": "meter_power.exported"
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/drivers/sense_monitor/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/drivers/sense_monitor/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/drivers/thermostat/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/drivers/thermostat/assets/images/large.png",
           "platforms": [
             "local"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/drivers/sense_monitor/assets/icon.svg",
-          "connectivity": null
-        },
-        {
-          "id": "sense_solar",
-          "name": {
-            "en": "Sense Solar"
-          },
-          "class": "solarpanel",
-          "capabilities": [
-            "measure_power",
-            "meter_power"
+          "connectivity": [
+            "cloud"
           ],
-          "capabilitiesOptions": {
-            "measure_power": {
-              "title": {
-                "en": "Producing"
-              }
-            },
-            "meter_power": {
-              "title": {
-                "en": "Total produced"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/drivers/sense_solar/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/drivers/sense_solar/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/drivers/sense_solar/assets/icon.svg",
-          "connectivity": null
+          "icon": "https://apps.homeycdn.net/app/com.esko.themo/7/c8a22da2-7133-4014-b203-30f8fbccc489/drivers/thermostat/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "export_started",
+            "id": "floor_temperature_changed",
             "title": {
-              "en": "Started exporting to the grid"
-            },
-            "hint": {
-              "en": "Triggers when solar production exceeds household demand by more than the configured threshold."
+              "en": "The floor temperature changed"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=sense_monitor"
+                "filter": "driver_id=thermostat"
               }
             ],
             "tokens": [
               {
-                "name": "grid",
+                "name": "temperature",
                 "type": "number",
                 "title": {
-                  "en": "Grid"
+                  "en": "Temperature"
                 },
-                "example": -812
-              },
-              {
-                "name": "solar",
-                "type": "number",
-                "title": {
-                  "en": "Solar"
-                },
-                "example": 3200
-              },
-              {
-                "name": "consumption",
-                "type": "number",
-                "title": {
-                  "en": "Home usage"
-                },
-                "example": 2388
+                "example": 24.5
               }
             ]
           },
           {
-            "id": "export_stopped",
+            "id": "heating_started",
             "title": {
-              "en": "Stopped exporting to the grid"
+              "en": "Started heating"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=sense_monitor"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "grid",
-                "type": "number",
-                "title": {
-                  "en": "Grid"
-                },
-                "example": 430
-              },
-              {
-                "name": "solar",
-                "type": "number",
-                "title": {
-                  "en": "Solar"
-                },
-                "example": 1100
-              },
-              {
-                "name": "consumption",
-                "type": "number",
-                "title": {
-                  "en": "Home usage"
-                },
-                "example": 1530
+                "filter": "driver_id=thermostat"
               }
             ]
           },
           {
-            "id": "self_sufficient_started",
+            "id": "heating_stopped",
             "title": {
-              "en": "Became self-sufficient"
-            },
-            "hint": {
-              "en": "Triggers when solar production covers everything the home is using."
+              "en": "Stopped heating"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=sense_monitor"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "grid",
-                "type": "number",
-                "title": {
-                  "en": "Grid"
-                },
-                "example": -240
-              },
-              {
-                "name": "solar",
-                "type": "number",
-                "title": {
-                  "en": "Solar"
-                },
-                "example": 2800
-              },
-              {
-                "name": "consumption",
-                "type": "number",
-                "title": {
-                  "en": "Home usage"
-                },
-                "example": 2560
+                "filter": "driver_id=thermostat"
               }
             ]
           },
           {
-            "id": "self_sufficient_stopped",
+            "id": "schedule_changed",
             "title": {
-              "en": "Stopped being self-sufficient"
+              "en": "The active schedule changed"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=sense_monitor"
+                "filter": "driver_id=thermostat"
               }
             ],
             "tokens": [
               {
-                "name": "grid",
-                "type": "number",
+                "name": "schedule",
+                "type": "string",
                 "title": {
-                  "en": "Grid"
+                  "en": "Schedule"
                 },
-                "example": 640
-              },
-              {
-                "name": "solar",
-                "type": "number",
-                "title": {
-                  "en": "Solar"
-                },
-                "example": 900
-              },
-              {
-                "name": "consumption",
-                "type": "number",
-                "title": {
-                  "en": "Home usage"
-                },
-                "example": 1540
-              }
-            ]
-          },
-          {
-            "id": "exporting_for",
-            "title": {
-              "en": "Has been exporting for"
-            },
-            "titleFormatted": {
-              "en": "Has been exporting for [[amount]] [[unit]]"
-            },
-            "hint": {
-              "en": "Triggers once each time export has continued without interruption for the given time."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_monitor"
-              },
-              {
-                "name": "amount",
-                "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "15"
-                }
-              },
-              {
-                "name": "unit",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "seconds",
-                    "label": {
-                      "en": "seconds"
-                    }
-                  },
-                  {
-                    "id": "minutes",
-                    "label": {
-                      "en": "minutes"
-                    }
-                  },
-                  {
-                    "id": "hours",
-                    "label": {
-                      "en": "hours"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "grid",
-                "type": "number",
-                "title": {
-                  "en": "Grid"
-                },
-                "example": -812
-              },
-              {
-                "name": "solar",
-                "type": "number",
-                "title": {
-                  "en": "Solar"
-                },
-                "example": 3200
-              },
-              {
-                "name": "consumption",
-                "type": "number",
-                "title": {
-                  "en": "Home usage"
-                },
-                "example": 2388
-              }
-            ]
-          },
-          {
-            "id": "self_sufficient_for",
-            "title": {
-              "en": "Has been self-sufficient for"
-            },
-            "titleFormatted": {
-              "en": "Has been self-sufficient for [[amount]] [[unit]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_monitor"
-              },
-              {
-                "name": "amount",
-                "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "15"
-                }
-              },
-              {
-                "name": "unit",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "seconds",
-                    "label": {
-                      "en": "seconds"
-                    }
-                  },
-                  {
-                    "id": "minutes",
-                    "label": {
-                      "en": "minutes"
-                    }
-                  },
-                  {
-                    "id": "hours",
-                    "label": {
-                      "en": "hours"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "grid",
-                "type": "number",
-                "title": {
-                  "en": "Grid"
-                },
-                "example": -240
-              },
-              {
-                "name": "solar",
-                "type": "number",
-                "title": {
-                  "en": "Solar"
-                },
-                "example": 2800
-              },
-              {
-                "name": "consumption",
-                "type": "number",
-                "title": {
-                  "en": "Home usage"
-                },
-                "example": 2560
-              }
-            ]
-          },
-          {
-            "id": "production_started",
-            "title": {
-              "en": "Started producing"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_solar"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Producing"
-                },
-                "example": 240
-              }
-            ]
-          },
-          {
-            "id": "production_stopped",
-            "title": {
-              "en": "Stopped producing"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_solar"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Producing"
-                },
-                "example": 0
-              }
-            ]
-          },
-          {
-            "id": "producing_for",
-            "title": {
-              "en": "Has been producing for"
-            },
-            "titleFormatted": {
-              "en": "Has been producing for [[amount]] [[unit]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_solar"
-              },
-              {
-                "name": "amount",
-                "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "15"
-                }
-              },
-              {
-                "name": "unit",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "seconds",
-                    "label": {
-                      "en": "seconds"
-                    }
-                  },
-                  {
-                    "id": "minutes",
-                    "label": {
-                      "en": "minutes"
-                    }
-                  },
-                  {
-                    "id": "hours",
-                    "label": {
-                      "en": "hours"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Producing"
-                },
-                "example": 2400
+                "example": "Weekday"
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "is_exporting",
+            "id": "floor_temperature_above",
             "title": {
-              "en": "Is !{{exporting|not exporting}} to the grid"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_monitor"
-              }
-            ]
-          },
-          {
-            "id": "is_self_sufficient",
-            "title": {
-              "en": "Is !{{self-sufficient|not self-sufficient}}"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_monitor"
-              }
-            ]
-          },
-          {
-            "id": "has_been_exporting",
-            "title": {
-              "en": "Has !{{been|not been}} exporting for at least"
+              "en": "The floor temperature is !{{above|below}}"
             },
             "titleFormatted": {
-              "en": "Has !{{been|not been}} exporting for at least [[amount]] [[unit]]"
+              "en": "The floor temperature is !{{above|below}} [[temperature]]°C"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=sense_monitor"
+                "filter": "driver_id=thermostat"
               },
               {
-                "name": "amount",
+                "name": "temperature",
                 "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
+                "min": 0,
+                "max": 50,
+                "step": 0.5,
                 "placeholder": {
-                  "en": "15"
+                  "en": "°C"
                 }
-              },
-              {
-                "name": "unit",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "seconds",
-                    "label": {
-                      "en": "seconds"
-                    }
-                  },
-                  {
-                    "id": "minutes",
-                    "label": {
-                      "en": "minutes"
-                    }
-                  },
-                  {
-                    "id": "hours",
-                    "label": {
-                      "en": "hours"
-                    }
-                  }
-                ]
               }
             ]
           },
           {
-            "id": "has_been_self_sufficient",
+            "id": "is_heating",
             "title": {
-              "en": "Has !{{been|not been}} self-sufficient for at least"
-            },
-            "titleFormatted": {
-              "en": "Has !{{been|not been}} self-sufficient for at least [[amount]] [[unit]]"
+              "en": "Is !{{heating|not heating}}"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=sense_monitor"
-              },
-              {
-                "name": "amount",
-                "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "15"
-                }
-              },
-              {
-                "name": "unit",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "seconds",
-                    "label": {
-                      "en": "seconds"
-                    }
-                  },
-                  {
-                    "id": "minutes",
-                    "label": {
-                      "en": "minutes"
-                    }
-                  },
-                  {
-                    "id": "hours",
-                    "label": {
-                      "en": "hours"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "is_producing",
-            "title": {
-              "en": "Is !{{producing|not producing}}"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_solar"
-              }
-            ]
-          },
-          {
-            "id": "has_been_producing",
-            "title": {
-              "en": "Has !{{been|not been}} producing for at least"
-            },
-            "titleFormatted": {
-              "en": "Has !{{been|not been}} producing for at least [[amount]] [[unit]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=sense_solar"
-              },
-              {
-                "name": "amount",
-                "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "15"
-                }
-              },
-              {
-                "name": "unit",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "seconds",
-                    "label": {
-                      "en": "seconds"
-                    }
-                  },
-                  {
-                    "id": "minutes",
-                    "label": {
-                      "en": "minutes"
-                    }
-                  },
-                  {
-                    "id": "hours",
-                    "label": {
-                      "en": "hours"
-                    }
-                  }
-                ]
+                "filter": "driver_id=thermostat"
               }
             ]
           }
         ],
-        "actions": [
-          {
-            "id": "refresh_totals",
-            "title": {
-              "en": "Refresh energy totals"
-            },
-            "titleFormatted": {
-              "en": "Refresh energy totals on [[device]]"
-            },
-            "hint": {
-              "en": "Fetches the latest totals from Sense immediately, instead of waiting for the next scheduled refresh."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device"
-              }
-            ]
-          }
-        ]
+        "actions": null
       },
-      "widgets": {
-        "power-flow": {
-          "name": {
-            "en": "Power Flow"
-          },
-          "height": 200,
-          "settings": [],
-          "api": {
-            "getFlow": {
-              "method": "GET",
-              "path": "/"
-            }
-          },
-          "id": "power-flow",
-          "previewDark": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/widgets/power-flow/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/com.ericj.senseenergymonitor/5/b4cfcf0c-8546-45c3-98f3-d9c13726c4cb/widgets/power-flow/preview-light.png"
-        }
-      },
+      "widgets": null,
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-14T07:33:37.201Z",
-      "bugs": "https://github.com/EricJilot/homey-sense-energy-monitor/issues",
+      "stateChangedAt": "2026-09-14T13:11:09.878Z",
+      "bugs": "https://github.com/esko/themo-homey/issues",
       "homepage": null,
-      "support": null,
-      "source": "https://github.com/EricJilot/homey-sense-energy-monitor",
+      "support": "mailto:esko.pyyluoma@gmail.com",
+      "source": "https://github.com/esko/themo-homey",
       "contributors": null,
       "contributing": null,
       "permissions": [],
       "changelog": {
-        "en": "Added a time delay variable to keep flows from over writing"
+        "en": "App icon now matches Homey’s mask format so the wordmark is visible."
       },
-      "compatibility": ">=12.3.0",
+      "compatibility": ">=12.4.5",
+      "tags": {
+        "en": [
+          "themo",
+          "thermostat",
+          "floor heating"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.6",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6aa51fda30dc90a8d6dfe936",
+      "type": "user",
+      "userId": "6a25db6dc7468649c89f2669",
+      "name": "Esko Pyyluoma",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.alpha.mohlenhoff.v2",
+    "rating": null,
+    "liveBuild": {
+      "id": 13,
+      "name": {
+        "en": "Alpha Möhlenhoff V2",
+        "nl": "Alpha Möhlenhoff V2"
+      },
+      "version": "0.1.10",
+      "readme": {
+        "en": "This app connects your Alpha Möhlenhoff (EZR) heating controller to Homey over your local network, so you can see and adjust the temperature in every room straight from the Homey app.\n\nThermostats are found automatically once you enter the controller's IP address during pairing. All communication stays on your own network, so no cloud account is required.\n",
+        "nl": "Deze app koppelt je Alpha Möhlenhoff (EZR) verwarmingsregelaar via je lokale netwerk aan Homey, zodat je de temperatuur van elke kamer rechtstreeks vanuit de Homey-app kunt bekijken en aanpassen.\n\nThermostaten worden automatisch gevonden zodra je tijdens het koppelen het IP-adres van de controller invoert. Alle communicatie blijft binnen je eigen netwerk, dus er is geen cloudaccount nodig.\n"
+      },
+      "description": {
+        "en": "The comfort of every room, exactly where you want it.",
+        "nl": "Het comfort van elke kamer, precies zoals jij het wilt."
+      },
+      "category": "climate",
+      "brandColor": "#b7253b",
+      "icon": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "alpha-mohlenhoff-v2",
+          "name": {
+            "en": "Alpha Möhlenhoff V2 Thermostat",
+            "nl": "Alpha Möhlenhoff V2 Thermostaat"
+          },
+          "class": "thermostat",
+          "capabilities": [
+            "measure_temperature",
+            "target_temperature",
+            "measure_battery",
+            "actuator_percent"
+          ],
+          "capabilitiesOptions": {
+            "target_temperature": {
+              "min": 5,
+              "max": 35,
+              "step": 0.2
+            },
+            "measure_battery": {
+              "title": {
+                "en": "Battery level",
+                "nl": "Batterijniveau"
+              },
+              "units": {
+                "en": "%",
+                "nl": "%"
+              },
+              "decimals": 0
+            }
+          },
+          "energy": {
+            "batteries": [
+              "OTHER"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/drivers/alpha-mohlenhoff-v2/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/drivers/alpha-mohlenhoff-v2/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.alpha.mohlenhoff.v2/13/40e3c361-214a-41d2-ba51-2507d14dfd2a/drivers/alpha-mohlenhoff-v2/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-14T13:45:59.412Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "driver icon svg"
+      },
+      "compatibility": ">=5.0.0",
       "tags": null,
       "platforms": [
         "local"
@@ -893,16 +847,16 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.4",
+    "liveVersion": "0.1.10",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a9f55434b2b66c1158d0aec",
+      "id": "6a9ab85c336db3df05ac7aa0",
       "type": "user",
-      "userId": "661ddbffbebd8950e46abca7",
-      "name": "Eric Jilot",
+      "userId": "5fc42164083d1b0c6b39693b",
+      "name": "Thijs te Paske",
       "verified": false
     },
     "communityTopicId": null

@@ -18170,5 +18170,38 @@
     "publishedAt": "2026-09-14T09:03:50.225Z",
     "updatedAt": "2026-09-14T09:03:50.225Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "io.cigol",
+    "name": "Cigol",
+    "developerName": "Kim T. Nielsen",
+    "developerId": "6aa3cd1330dc90a8d6df9d18",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-14T17:09:21.668Z",
+    "updatedAt": "2026-09-14T17:09:21.668Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.esko.themo",
+    "name": "Themo",
+    "developerName": "Esko Pyyluoma",
+    "developerId": "6aa51fda30dc90a8d6dfe936",
+    "version": "1.0.6",
+    "sourceRepository": "https://github.com/esko/themo-homey",
+    "publishedAt": "2026-09-14T17:09:22.617Z",
+    "updatedAt": "2026-09-14T17:09:22.617Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.alpha.mohlenhoff.v2",
+    "name": "Alpha Möhlenhoff V2",
+    "developerName": "Thijs te Paske",
+    "developerId": "6a9ab85c336db3df05ac7aa0",
+    "version": "0.1.10",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-14T17:09:23.662Z",
+    "updatedAt": "2026-09-14T17:09:23.662Z",
+    "communityTopicId": null
   }
 ]
