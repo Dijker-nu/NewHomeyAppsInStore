@@ -18258,5 +18258,82 @@
     "publishedAt": "2026-09-16T08:53:59.631Z",
     "updatedAt": "2026-09-16T08:53:59.631Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "eu.energypriceforecast",
+    "name": "Energy Price Forecast",
+    "developerName": "Hendrik Soppa",
+    "developerId": "6a94ac0730ac038fba711ce4",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T15:41:11.360Z",
+    "updatedAt": "2026-09-16T15:41:11.360Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "se.manvarg.openeye",
+    "name": "OpenEye Events",
+    "developerName": "Ulf Holmström",
+    "developerId": "6a5bc6852ddac2379c777757",
+    "version": "1.7.7",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T15:41:12.376Z",
+    "updatedAt": "2026-09-16T15:41:12.376Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "se.krister.nuvo.grandconcerto",
+    "name": "NuVo Grand Concerto",
+    "developerName": "krister Olsson",
+    "developerId": "6a80287ac6a80eeabce30ab5",
+    "version": "0.5.12",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T15:41:13.327Z",
+    "updatedAt": "2026-09-16T15:41:13.327Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "de.ftedv.irremote",
+    "name": "Universal Remote",
+    "developerName": "Florian Trück",
+    "developerId": "6a0758532688d233be48510d",
+    "version": "1.2.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T15:41:13.991Z",
+    "updatedAt": "2026-09-16T15:41:13.991Z",
+    "communityTopicId": 159406
+  },
+  {
+    "appId": "com.winkison.ledlight",
+    "name": "iDeal LED+",
+    "developerName": "Sven Serlier",
+    "developerId": "68e268c515677f0f51ffe6f4",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/smarthomesven/homey-ideal-led",
+    "publishedAt": "2026-09-16T15:41:13.991Z",
+    "updatedAt": "2026-09-16T15:41:13.991Z",
+    "communityTopicId": 159508
+  },
+  {
+    "appId": "com.solarbuffer",
+    "name": "SolarBuffer",
+    "developerName": "Enis vd Veld",
+    "developerId": "6aa8ff6230dc90a8d6e0c90f",
+    "version": "0.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T15:41:13.991Z",
+    "updatedAt": "2026-09-16T15:41:13.991Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.patrick.brugopen",
+    "name": "Bridge Open",
+    "developerName": "Patrick Blijie",
+    "developerId": "6a9c30f0336db3df05acdb4e",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/glijie/brug-open-homey",
+    "publishedAt": "2026-09-16T15:41:14.485Z",
+    "updatedAt": "2026-09-16T15:41:14.485Z",
+    "communityTopicId": null
   }
 ]

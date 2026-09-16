@@ -1,244 +1,3324 @@
 [
   {
-    "id": "com.rapinology.hmeteo",
+    "id": "eu.energypriceforecast",
     "rating": null,
     "liveBuild": {
-      "id": 1,
+      "id": 5,
       "name": {
-        "en": "Météo France",
-        "fr": "Météo France",
-        "de": "Météo France",
-        "es": "Météo France",
-        "it": "Météo France",
-        "nl": "Météo France"
+        "en": "Energy Price Forecast",
+        "nl": "Energy Price Forecast",
+        "de": "Energy Price Forecast"
       },
-      "version": "0.1.0",
+      "version": "1.0.3",
       "readme": {
-        "en": "Météo-France publishes no documentation for its API, but the one behind its mobile app is open and needs no account, the very same one used by Home Assistant's official Météo-France integration. This app draws a live reading, forecasts, rain within the hour and weather alerts from it.\n\nOne device per town: real temperature and feels-like, wind, pressure, cloud cover, today's and tomorrow's forecast, rain within the hour, rain and frost probabilities. One device per department: the alert level for each of the nine tracked phenomena (wind, thunderstorms, heat wave, flood, snow/ice...) and the worst overall level.\n",
-        "de": "Météo-France veröffentlicht keine Dokumentation für seine API, aber die seiner mobilen App ist offen und braucht kein Konto, dieselbe, die auch die offizielle Météo-France-Integration von Home Assistant nutzt. Diese App bezieht daraus einen Live-Wert, Vorhersagen, Regen in der nächsten Stunde und Wetterwarnungen.\n\nEin Gerät pro Gemeinde: reale Temperatur und gefühlte Temperatur, Wind, Luftdruck, Bewölkung, Vorhersage für heute und morgen, Regen in der nächsten Stunde, Regen- und Frostwahrscheinlichkeit. Ein Gerät pro Departement: die Warnstufe für jedes der neun erfassten Phänomene (Wind, Gewitter, Hitzewelle, Überschwemmung, Schnee/Glätte...) und die höchste Gesamtstufe.\n",
-        "es": "Météo-France no publica ninguna documentación de su API, pero la de su app móvil es abierta y no necesita cuenta, la misma que usa la integración oficial de Météo-France en Home Assistant. Esta app obtiene de ahí un dato en directo, previsiones, lluvia en la próxima hora y alertas meteorológicas.\n\nUn aparato por municipio: temperatura real y sensación térmica, viento, presión, nubosidad, previsión de hoy y de mañana, lluvia en la próxima hora, probabilidades de lluvia y de helada. Un aparato por departamento: el nivel de alerta para cada uno de los nueve fenómenos vigilados (viento, tormentas, ola de calor, inundación, nieve-hielo...) y el peor nivel global.\n",
-        "fr": "Météo-France ne publie aucune documentation pour son API, mais celle de son app mobile est ouverte et sans compte, la même que celle utilisée par l'intégration officielle Météo-France de Home Assistant. Cette app en tire un relevé en direct, des prévisions, la pluie dans l'heure et la vigilance météo.\n\nUn appareil par commune : température réelle et ressenti, vent, pression, nébulosité, prévisions du jour et de demain, pluie dans l'heure, probabilités de pluie et de gel. Un appareil par département : le niveau de vigilance pour chacun des neuf phénomènes suivis (vent, orages, canicule, inondation, neige-verglas...) et le pire niveau global.\n",
-        "it": "Météo-France non pubblica alcuna documentazione per la sua API, ma quella della sua app mobile è aperta e non richiede account, la stessa usata dall'integrazione ufficiale Météo-France di Home Assistant. Questa app ne ricava un rilevamento in diretta, previsioni, pioggia entro un'ora e allerte meteo.\n\nUn dispositivo per comune: temperatura reale e percepita, vento, pressione, nuvolosità, previsioni di oggi e domani, pioggia entro un'ora, probabilità di pioggia e di gelo. Un dispositivo per dipartimento: il livello di allerta per ciascuno dei nove fenomeni monitorati (vento, temporali, ondata di calore, alluvione, neve-ghiaccio...) e il livello peggiore complessivo.\n",
-        "nl": "Météo-France publiceert geen documentatie voor zijn API, maar die van zijn mobiele app is open en heeft geen account nodig, dezelfde die de officiële Météo-France-integratie van Home Assistant gebruikt. Deze app haalt daar een live meting, voorspellingen, regen binnen het uur en weerwaarschuwingen uit.\n\nEén apparaat per gemeente: werkelijke temperatuur en gevoelstemperatuur, wind, luchtdruk, bewolking, voorspelling van vandaag en morgen, regen binnen het uur, kans op regen en vorst. Eén apparaat per departement: het waarschuwingsniveau voor elk van de negen gevolgde verschijnselen (wind, onweer, hittegolf, overstroming, sneeuw/ijzel...) en het ergste totale niveau.\n"
+        "en": "Plan flexible electricity use before all official day-ahead prices are available. Energy Price Forecast combines current electricity prices and grid CO2 with forecasts, then turns them into clear Homey Flow signals for EVs, heat pumps, boilers, batteries and other flexible loads. Choose the cheapest individual hours in a fixed planning block, a continuous price or CO2 window, or a weekend charging plan.\n\nWithout an API key, the app provides up to 48 hours of planning and a free Saturday-to-Monday weekend mode. An optional Energy Price Forecast Pro key extends planning to up to 120 hours and can start the weekend on Friday. Forecasts and estimated retail prices can differ from final prices; the app always shows the data source, effective horizon and freshness status.\n",
+        "de": "Plane flexible Stromverbräuche, bevor alle offiziellen Day-Ahead-Preise verfügbar sind. Energy Price Forecast verbindet aktuelle Strompreise und Netz-CO2 mit Vorhersagen und macht daraus klare Homey-Flow-Signale für E-Auto, Wärmepumpe, Boiler, Speicher und andere flexible Verbraucher. Wähle einzelne günstige Stunden in einem festen Planungsblock, ein zusammenhängendes Preis- oder CO2-Fenster oder einen Wochenendladeplan.\n\nOhne API-Key bietet die App bis zu 48 Stunden Planung und einen kostenlosen Wochenendmodus von Samstag bis Montag. Ein optionaler Energy Price Forecast Pro-Key erweitert die Planung auf bis zu 120 Stunden und kann das Wochenende bereits am Freitag beginnen lassen. Prognosen und geschätzte Gesamtpreise können von den endgültigen Preisen abweichen; Datenquelle, nutzbarer Horizont und Aktualität bleiben deshalb immer sichtbar.\n",
+        "nl": "Plan flexibel stroomverbruik voordat alle officiële day-aheadprijzen beschikbaar zijn. Energy Price Forecast combineert actuele stroomprijzen en net-CO2 met prognoses en maakt daarvan duidelijke Homey Flow-signalen voor een elektrische auto, warmtepomp, boiler, thuisbatterij en andere flexibele verbruikers. Kies losse goedkope uren binnen een vast planningsblok, een aaneengesloten prijs- of CO2-venster of een laadplan voor het weekend.\n\nZonder API-sleutel biedt de app tot 48 uur planning en een gratis weekendmodus van zaterdag tot maandag. Een optionele Energy Price Forecast Pro-sleutel verlengt de planning tot maximaal 120 uur en kan het weekend al op vrijdag laten beginnen. Prognoses en geschatte totaalprijzen kunnen afwijken van de uiteindelijke prijzen; daarom blijven databron, beschikbare horizon en actualiteitsstatus altijd zichtbaar.\n"
       },
       "description": {
-        "en": "Forecast, rain within the hour and weather alerts, straight from Météo-France.",
-        "fr": "Prévisions, pluie dans l'heure et vigilance météo, directement depuis Météo-France.",
-        "de": "Vorhersage, Regen in der nächsten Stunde und Wetterwarnungen von Météo-France.",
-        "es": "Previsión, lluvia en la próxima hora y alertas meteorológicas de Météo-France.",
-        "it": "Previsioni, pioggia nella prossima ora e allerte meteo da Météo-France.",
-        "nl": "Voorspelling, regen binnen het uur en weerwaarschuwingen van Météo-France."
+        "en": "Heat and charge when electricity is cheapest or the grid is greenest.",
+        "nl": "Verwarm en laad wanneer stroom het goedkoopst of het net het groenst is.",
+        "de": "Heizen und laden, wenn Strom günstig oder das Netz besonders grün ist."
       },
-      "category": "climate",
-      "brandColor": "#1E6BB8",
-      "icon": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/assets/images/large.png",
+      "category": "energy",
+      "brandColor": "#176B87",
+      "icon": "https://apps.homeycdn.net/app/eu.energypriceforecast/5/9a864abd-bb7c-4893-a132-d0d555d59346/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/eu.energypriceforecast/5/9a864abd-bb7c-4893-a132-d0d555d59346/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/eu.energypriceforecast/5/9a864abd-bb7c-4893-a132-d0d555d59346/assets/images/large.png",
       "drivers": [
         {
-          "id": "commune",
+          "id": "forecast",
           "name": {
-            "en": "Commune",
-            "fr": "Commune",
-            "de": "Gemeinde",
-            "es": "Municipio",
-            "it": "Comune",
-            "nl": "Gemeente"
+            "en": "Price & CO₂ Forecast",
+            "nl": "Prijs- & CO₂-prognose",
+            "de": "Preis- & CO₂-Prognose"
           },
           "class": "sensor",
           "capabilities": [
-            "measure_temperature",
-            "measure_humidity",
-            "ressenti",
-            "vent_vitesse",
-            "vent_rafale",
-            "vent_direction",
-            "pression",
-            "nebulosite",
-            "meteo_description",
-            "pluie_imminente",
-            "probabilite_pluie",
-            "probabilite_gel",
-            "temperature_min",
-            "temperature_max",
-            "precipitation_jour",
-            "uv_index",
-            "temperature_min.demain",
-            "temperature_max.demain",
-            "meteo_description.demain"
+            "measure_epf_price",
+            "measure_epf_co2",
+            "epf_cheapest_hours_active",
+            "epf_cheapest_hours_active_until",
+            "epf_cheapest_hours_next",
+            "epf_weekend_hours_active",
+            "epf_weekend_plan_status",
+            "epf_next_price_window",
+            "epf_next_green_window",
+            "epf_data_status",
+            "epf_price_window_active",
+            "epf_green_window_active",
+            "epf_balanced_window_active",
+            "epf_price_source",
+            "measure_epf_horizon",
+            "epf_last_update",
+            "epf_api_access"
           ],
-          "capabilitiesOptions": {
-            "temperature_min.demain": {
-              "title": {
-                "en": "Tomorrow's low",
-                "fr": "Minimale de demain",
-                "de": "Tagestief morgen",
-                "es": "Mínima de mañana",
-                "it": "Minima di domani",
-                "nl": "Minimum morgen"
-              }
-            },
-            "temperature_max.demain": {
-              "title": {
-                "en": "Tomorrow's high",
-                "fr": "Maximale de demain",
-                "de": "Tageshoch morgen",
-                "es": "Máxima de mañana",
-                "it": "Massima di domani",
-                "nl": "Maximum morgen"
-              }
-            },
-            "meteo_description.demain": {
-              "title": {
-                "en": "Conditions tomorrow",
-                "fr": "Conditions demain",
-                "de": "Bedingungen morgen",
-                "es": "Condiciones mañana",
-                "it": "Condizioni domani",
-                "nl": "Omstandigheden morgen"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/drivers/commune/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/drivers/commune/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/eu.energypriceforecast/5/9a864abd-bb7c-4893-a132-d0d555d59346/drivers/forecast/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/eu.energypriceforecast/5/9a864abd-bb7c-4893-a132-d0d555d59346/drivers/forecast/assets/images/large.png",
           "platforms": [
             "local"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/drivers/commune/assets/icon.svg",
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/eu.energypriceforecast/5/9a864abd-bb7c-4893-a132-d0d555d59346/drivers/forecast/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "forecast_slot_started",
+            "title": {
+              "en": "A new forecast slot started",
+              "nl": "Een nieuw prognoseblok is begonnen",
+              "de": "Ein neues Prognoseintervall hat begonnen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price",
+                  "nl": "Prijs",
+                  "de": "Preis"
+                }
+              },
+              {
+                "name": "co2",
+                "type": "number",
+                "title": {
+                  "en": "Grid CO₂",
+                  "nl": "Net-CO₂",
+                  "de": "Netz-CO₂"
+                }
+              },
+              {
+                "name": "source",
+                "type": "string",
+                "title": {
+                  "en": "Price source",
+                  "nl": "Prijsbron",
+                  "de": "Preisquelle"
+                }
+              },
+              {
+                "name": "slot_start",
+                "type": "string",
+                "title": {
+                  "en": "Slot start",
+                  "nl": "Start blok",
+                  "de": "Intervallstart"
+                }
+              },
+              {
+                "name": "slot_end",
+                "type": "string",
+                "title": {
+                  "en": "Slot end",
+                  "nl": "Einde blok",
+                  "de": "Intervallende"
+                }
+              }
+            ]
+          },
+          {
+            "id": "optimal_price_window_starts",
+            "title": {
+              "en": "The optimal price window starts",
+              "nl": "Het optimale prijsvenster begint",
+              "de": "Das optimale Preisfenster beginnt"
+            },
+            "titleFormatted": {
+              "en": "The cheapest [[duration]] hour window in the next [[horizon]] hours starts",
+              "nl": "Het goedkoopste venster van [[duration]] uur binnen [[horizon]] uur begint",
+              "de": "Das günstigste [[duration]]-Stunden-Fenster der nächsten [[horizon]] Stunden beginnt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "duration",
+                "type": "number",
+                "min": 0.25,
+                "max": 24,
+                "step": 0.25,
+                "title": {
+                  "en": "Duration",
+                  "nl": "Duur",
+                  "de": "Dauer"
+                }
+              },
+              {
+                "name": "horizon",
+                "type": "number",
+                "min": 1,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Horizon",
+                  "nl": "Horizon",
+                  "de": "Horizont"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Current price",
+                  "nl": "Huidige prijs",
+                  "de": "Aktueller Preis"
+                }
+              },
+              {
+                "name": "source",
+                "type": "string",
+                "title": {
+                  "en": "Price source",
+                  "nl": "Prijsbron",
+                  "de": "Preisquelle"
+                }
+              }
+            ]
+          },
+          {
+            "id": "optimal_green_window_starts",
+            "title": {
+              "en": "The optimal green window starts",
+              "nl": "Het optimale groene venster begint",
+              "de": "Das optimale grüne Fenster beginnt"
+            },
+            "titleFormatted": {
+              "en": "The greenest [[duration]] hour window in the next [[horizon]] hours starts",
+              "nl": "Het groenste venster van [[duration]] uur binnen [[horizon]] uur begint",
+              "de": "Das grünste [[duration]]-Stunden-Fenster der nächsten [[horizon]] Stunden beginnt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "duration",
+                "type": "number",
+                "min": 1,
+                "max": 24,
+                "step": 1,
+                "title": {
+                  "en": "Duration",
+                  "nl": "Duur",
+                  "de": "Dauer"
+                }
+              },
+              {
+                "name": "horizon",
+                "type": "number",
+                "min": 1,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Horizon",
+                  "nl": "Horizon",
+                  "de": "Horizont"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "co2",
+                "type": "number",
+                "title": {
+                  "en": "Current grid CO₂",
+                  "nl": "Huidige net-CO₂",
+                  "de": "Aktuelles Netz-CO₂"
+                }
+              }
+            ]
+          },
+          {
+            "id": "price_window_started",
+            "title": {
+              "en": "The default cheapest window started",
+              "nl": "Het standaard goedkoopste venster is begonnen",
+              "de": "Das günstigste Standardfenster hat begonnen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Average price",
+                  "nl": "Gemiddelde prijs",
+                  "de": "Durchschnittspreis"
+                }
+              },
+              {
+                "name": "window_start",
+                "type": "string",
+                "title": {
+                  "en": "Window start",
+                  "nl": "Start venster",
+                  "de": "Fensterstart"
+                }
+              },
+              {
+                "name": "window_end",
+                "type": "string",
+                "title": {
+                  "en": "Window end",
+                  "nl": "Einde venster",
+                  "de": "Fensterende"
+                }
+              }
+            ]
+          },
+          {
+            "id": "price_window_ended",
+            "title": {
+              "en": "The default cheapest window ended",
+              "nl": "Het standaard goedkoopste venster is afgelopen",
+              "de": "Das günstigste Standardfenster ist beendet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "green_window_started",
+            "title": {
+              "en": "The default greenest window started",
+              "nl": "Het standaard groenste venster is begonnen",
+              "de": "Das grünste Standardfenster hat begonnen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "co2",
+                "type": "number",
+                "title": {
+                  "en": "Average grid CO₂",
+                  "nl": "Gemiddelde net-CO₂",
+                  "de": "Durchschnittliches Netz-CO₂"
+                }
+              },
+              {
+                "name": "window_start",
+                "type": "string",
+                "title": {
+                  "en": "Window start",
+                  "nl": "Start venster",
+                  "de": "Fensterstart"
+                }
+              },
+              {
+                "name": "window_end",
+                "type": "string",
+                "title": {
+                  "en": "Window end",
+                  "nl": "Einde venster",
+                  "de": "Fensterende"
+                }
+              }
+            ]
+          },
+          {
+            "id": "green_window_ended",
+            "title": {
+              "en": "The default greenest window ended",
+              "nl": "Het standaard groenste venster is afgelopen",
+              "de": "Das grünste Standardfenster ist beendet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "cheapest_hours_started",
+            "title": {
+              "en": "A default cheapest hour started",
+              "nl": "Een standaard goedkoopste uur is begonnen",
+              "de": "Eine der günstigsten Standardstunden hat begonnen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Current price",
+                  "nl": "Huidige prijs",
+                  "de": "Aktueller Preis"
+                }
+              },
+              {
+                "name": "source",
+                "type": "string",
+                "title": {
+                  "en": "Price source",
+                  "nl": "Prijsbron",
+                  "de": "Preisquelle"
+                }
+              }
+            ]
+          },
+          {
+            "id": "cheapest_hours_ended",
+            "title": {
+              "en": "A default cheapest hour ended",
+              "nl": "Een standaard goedkoopste uur is afgelopen",
+              "de": "Eine der günstigsten Standardstunden ist beendet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "weekend_hours_started",
+            "title": {
+              "en": "A selected weekend charging hour started",
+              "nl": "Een geselecteerd weekendlaaduur is begonnen",
+              "de": "Eine ausgewählte Wochenend-Ladestunde hat begonnen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Current price",
+                  "nl": "Huidige prijs",
+                  "de": "Aktueller Preis"
+                }
+              },
+              {
+                "name": "source",
+                "type": "string",
+                "title": {
+                  "en": "Price source",
+                  "nl": "Prijsbron",
+                  "de": "Preisquelle"
+                }
+              }
+            ]
+          },
+          {
+            "id": "weekend_hours_ended",
+            "title": {
+              "en": "A selected weekend charging hour ended",
+              "nl": "Een geselecteerd weekendlaaduur is afgelopen",
+              "de": "Eine ausgewählte Wochenend-Ladestunde ist beendet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "cheapest_hours_selection_started",
+            "title": {
+              "en": "A selected cheapest hour starts",
+              "nl": "Een geselecteerd goedkoopste uur begint",
+              "de": "Eine ausgewählte günstige Stunde beginnt"
+            },
+            "titleFormatted": {
+              "en": "One of the cheapest [[count]] hours in the fixed [[horizon]] hour block starting [[start_day]] at [[start_hour]]:00 starts",
+              "nl": "Een van de goedkoopste [[count]] uur in het vaste blok van [[horizon]] uur vanaf [[start_day]] om [[start_hour]]:00 begint",
+              "de": "Eine der günstigsten [[count]] Stunden im festen [[horizon]]-Stunden-Block ab [[start_day]] um [[start_hour]]:00 beginnt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "count",
+                "type": "number",
+                "min": 1,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Selected cheap hours (N)",
+                  "nl": "Gekozen goedkope uren (N)",
+                  "de": "Ausgewählte günstige Stunden (N)"
+                }
+              },
+              {
+                "name": "horizon",
+                "type": "number",
+                "min": 2,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Fixed block length (X)",
+                  "nl": "Vaste bloklengte (X)",
+                  "de": "Feste Blocklänge (X)"
+                }
+              },
+              {
+                "name": "start_day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Reference weekday",
+                  "nl": "Referentieweekdag",
+                  "de": "Bezugswochentag"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Monday",
+                      "nl": "Maandag",
+                      "de": "Montag"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Tuesday",
+                      "nl": "Dinsdag",
+                      "de": "Dienstag"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Wednesday",
+                      "nl": "Woensdag",
+                      "de": "Mittwoch"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "Thursday",
+                      "nl": "Donderdag",
+                      "de": "Donnerstag"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Friday",
+                      "nl": "Vrijdag",
+                      "de": "Freitag"
+                    }
+                  },
+                  {
+                    "id": "6",
+                    "label": {
+                      "en": "Saturday",
+                      "nl": "Zaterdag",
+                      "de": "Samstag"
+                    }
+                  },
+                  {
+                    "id": "7",
+                    "label": {
+                      "en": "Sunday",
+                      "nl": "Zondag",
+                      "de": "Sonntag"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "start_hour",
+                "type": "number",
+                "min": 0,
+                "max": 23,
+                "step": 1,
+                "title": {
+                  "en": "Local start hour",
+                  "nl": "Lokaal startuur",
+                  "de": "Lokale Startstunde"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Current price",
+                  "nl": "Huidige prijs",
+                  "de": "Aktueller Preis"
+                }
+              },
+              {
+                "name": "source",
+                "type": "string",
+                "title": {
+                  "en": "Price source",
+                  "nl": "Prijsbron",
+                  "de": "Preisquelle"
+                }
+              }
+            ]
+          },
+          {
+            "id": "cheapest_hours_selection_ended",
+            "title": {
+              "en": "A selected cheapest hour ends",
+              "nl": "Een geselecteerd goedkoopste uur eindigt",
+              "de": "Eine ausgewählte günstige Stunde endet"
+            },
+            "titleFormatted": {
+              "en": "One of the cheapest [[count]] hours in the fixed [[horizon]] hour block starting [[start_day]] at [[start_hour]]:00 ends",
+              "nl": "Een van de goedkoopste [[count]] uur in het vaste blok van [[horizon]] uur vanaf [[start_day]] om [[start_hour]]:00 eindigt",
+              "de": "Eine der günstigsten [[count]] Stunden im festen [[horizon]]-Stunden-Block ab [[start_day]] um [[start_hour]]:00 endet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "count",
+                "type": "number",
+                "min": 1,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Selected cheap hours (N)",
+                  "nl": "Gekozen goedkope uren (N)",
+                  "de": "Ausgewählte günstige Stunden (N)"
+                }
+              },
+              {
+                "name": "horizon",
+                "type": "number",
+                "min": 2,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Fixed block length (X)",
+                  "nl": "Vaste bloklengte (X)",
+                  "de": "Feste Blocklänge (X)"
+                }
+              },
+              {
+                "name": "start_day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Reference weekday",
+                  "nl": "Referentieweekdag",
+                  "de": "Bezugswochentag"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Monday",
+                      "nl": "Maandag",
+                      "de": "Montag"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Tuesday",
+                      "nl": "Dinsdag",
+                      "de": "Dienstag"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Wednesday",
+                      "nl": "Woensdag",
+                      "de": "Mittwoch"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "Thursday",
+                      "nl": "Donderdag",
+                      "de": "Donnerstag"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Friday",
+                      "nl": "Vrijdag",
+                      "de": "Freitag"
+                    }
+                  },
+                  {
+                    "id": "6",
+                    "label": {
+                      "en": "Saturday",
+                      "nl": "Zaterdag",
+                      "de": "Samstag"
+                    }
+                  },
+                  {
+                    "id": "7",
+                    "label": {
+                      "en": "Sunday",
+                      "nl": "Zondag",
+                      "de": "Sonntag"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "start_hour",
+                "type": "number",
+                "min": 0,
+                "max": 23,
+                "step": 1,
+                "title": {
+                  "en": "Local start hour",
+                  "nl": "Lokaal startuur",
+                  "de": "Lokale Startstunde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "forecast_error",
+            "title": {
+              "en": "A forecast update failed",
+              "nl": "Een prognose-update is mislukt",
+              "de": "Eine Prognoseaktualisierung ist fehlgeschlagen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Error",
+                  "nl": "Fout",
+                  "de": "Fehler"
+                }
+              }
+            ]
+          },
+          {
+            "id": "forecast_recovered",
+            "title": {
+              "en": "Forecast data recovered",
+              "nl": "Prognosedata zijn hersteld",
+              "de": "Prognosedaten sind wieder verfügbar"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "price_window_is_active",
+            "title": {
+              "en": "The default cheapest window !{{is|isn't}} active",
+              "nl": "Het standaard goedkoopste venster !{{is|is niet}} actief",
+              "de": "Das günstigste Standardfenster !{{ist|ist nicht}} aktiv"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "green_window_is_active",
+            "title": {
+              "en": "The default greenest window !{{is|isn't}} active",
+              "nl": "Het standaard groenste venster !{{is|is niet}} actief",
+              "de": "Das grünste Standardfenster !{{ist|ist nicht}} aktiv"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "balanced_window_is_active",
+            "title": {
+              "en": "The balanced window !{{is|isn't}} active",
+              "nl": "Het gebalanceerde venster !{{is|is niet}} actief",
+              "de": "Das kombinierte Fenster !{{ist|ist nicht}} aktiv"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          },
+          {
+            "id": "current_is_cheapest_hours",
+            "title": {
+              "en": "The current hour !{{is|isn't}} among the cheapest hours",
+              "nl": "Het huidige uur !{{is|is niet}} een van de goedkoopste uren",
+              "de": "Die aktuelle Stunde !{{gehört|gehört nicht}} zu den günstigsten Stunden"
+            },
+            "titleFormatted": {
+              "en": "The current hour !{{is|isn't}} among the cheapest [[count]] in the fixed [[horizon]] hour block starting [[start_day]] at [[start_hour]]:00",
+              "nl": "Het huidige uur !{{is|is niet}} een van de goedkoopste [[count]] in het vaste blok van [[horizon]] uur vanaf [[start_day]] om [[start_hour]]:00",
+              "de": "Die aktuelle Stunde !{{gehört|gehört nicht}} zu den günstigsten [[count]] im festen [[horizon]]-Stunden-Block ab [[start_day]] um [[start_hour]]:00"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "count",
+                "type": "number",
+                "min": 1,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Selected cheap hours (N)",
+                  "nl": "Gekozen goedkope uren (N)",
+                  "de": "Ausgewählte günstige Stunden (N)"
+                }
+              },
+              {
+                "name": "horizon",
+                "type": "number",
+                "min": 2,
+                "max": 120,
+                "step": 1,
+                "title": {
+                  "en": "Fixed block length (X)",
+                  "nl": "Vaste bloklengte (X)",
+                  "de": "Feste Blocklänge (X)"
+                }
+              },
+              {
+                "name": "start_day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Reference weekday",
+                  "nl": "Referentieweekdag",
+                  "de": "Bezugswochentag"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Monday",
+                      "nl": "Maandag",
+                      "de": "Montag"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Tuesday",
+                      "nl": "Dinsdag",
+                      "de": "Dienstag"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Wednesday",
+                      "nl": "Woensdag",
+                      "de": "Mittwoch"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "Thursday",
+                      "nl": "Donderdag",
+                      "de": "Donnerstag"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Friday",
+                      "nl": "Vrijdag",
+                      "de": "Freitag"
+                    }
+                  },
+                  {
+                    "id": "6",
+                    "label": {
+                      "en": "Saturday",
+                      "nl": "Zaterdag",
+                      "de": "Samstag"
+                    }
+                  },
+                  {
+                    "id": "7",
+                    "label": {
+                      "en": "Sunday",
+                      "nl": "Zondag",
+                      "de": "Sonntag"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "start_hour",
+                "type": "number",
+                "min": 0,
+                "max": 23,
+                "step": 1,
+                "title": {
+                  "en": "Local start hour",
+                  "nl": "Lokaal startuur",
+                  "de": "Lokale Startstunde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "current_is_weekend_cheapest_hours",
+            "title": {
+              "en": "The current hour !{{is|isn't}} selected for weekend charging",
+              "nl": "Het huidige uur !{{is|is niet}} geselecteerd voor weekendladen",
+              "de": "Die aktuelle Stunde !{{ist|ist nicht}} zum Wochenendladen ausgewählt"
+            },
+            "titleFormatted": {
+              "en": "The current hour !{{is|isn't}} among the cheapest [[count]] from weekday [[start_day]] at [[start_hour]]:00 until Monday 00:00",
+              "nl": "Het huidige uur !{{is|is niet}} een van de goedkoopste [[count]] vanaf weekdag [[start_day]] om [[start_hour]]:00 tot maandag 00:00",
+              "de": "Die aktuelle Stunde !{{gehört|gehört nicht}} zu den günstigsten [[count]] ab Wochentag [[start_day]] um [[start_hour]]:00 bis Montag 00:00"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "count",
+                "type": "number",
+                "min": 1,
+                "max": 72,
+                "step": 1,
+                "title": {
+                  "en": "Charging hours",
+                  "nl": "Laaduren",
+                  "de": "Ladestunden"
+                }
+              },
+              {
+                "name": "start_day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Start day",
+                  "nl": "Startdag",
+                  "de": "Starttag"
+                },
+                "values": [
+                  {
+                    "id": "6",
+                    "label": {
+                      "en": "Saturday (free 48 h)",
+                      "nl": "Zaterdag (gratis 48 u)",
+                      "de": "Samstag (kostenlos 48 h)"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Friday (Pro)",
+                      "nl": "Vrijdag (Pro)",
+                      "de": "Freitag (Pro)"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "start_hour",
+                "type": "number",
+                "min": 0,
+                "max": 23,
+                "step": 1,
+                "title": {
+                  "en": "Start hour",
+                  "nl": "Startuur",
+                  "de": "Startstunde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "price_is_below",
+            "title": {
+              "en": "The current price !{{is|isn't}} below a limit",
+              "nl": "De huidige prijs !{{is|is niet}} onder een grens",
+              "de": "Der aktuelle Preis !{{liegt|liegt nicht}} unter einem Grenzwert"
+            },
+            "titleFormatted": {
+              "en": "The current price !{{is|isn't}} below [[limit]]",
+              "nl": "De huidige prijs !{{is|is niet}} lager dan [[limit]]",
+              "de": "Der aktuelle Preis !{{liegt|liegt nicht}} unter [[limit]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "limit",
+                "type": "number",
+                "min": -100,
+                "max": 1000,
+                "step": 0.0001,
+                "title": {
+                  "en": "Price limit",
+                  "nl": "Prijsgrens",
+                  "de": "Preisgrenze"
+                }
+              }
+            ]
+          },
+          {
+            "id": "co2_is_below",
+            "title": {
+              "en": "Grid CO₂ !{{is|isn't}} below a limit",
+              "nl": "Net-CO₂ !{{is|is niet}} onder een grens",
+              "de": "Netz-CO₂ !{{liegt|liegt nicht}} unter einem Grenzwert"
+            },
+            "titleFormatted": {
+              "en": "Grid CO₂ !{{is|isn't}} below [[limit]] g/kWh",
+              "nl": "Net-CO₂ !{{is|is niet}} lager dan [[limit]] g/kWh",
+              "de": "Netz-CO₂ !{{liegt|liegt nicht}} unter [[limit]] g/kWh"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              },
+              {
+                "name": "limit",
+                "type": "number",
+                "min": 0,
+                "max": 2000,
+                "step": 1,
+                "title": {
+                  "en": "CO₂ limit",
+                  "nl": "CO₂-grens",
+                  "de": "CO₂-Grenze"
+                }
+              }
+            ]
+          },
+          {
+            "id": "data_is_current",
+            "title": {
+              "en": "Forecast data !{{is|isn't}} current",
+              "nl": "Prognosedata !{{zijn|zijn niet}} actueel",
+              "de": "Prognosedaten !{{sind|sind nicht}} aktuell"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=forecast"
+              }
+            ]
+          }
+        ],
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T11:28:33.697Z",
+      "bugs": null,
+      "homepage": "https://energypriceforecast.eu/en/homey-electricity-price-co2-forecast/",
+      "support": "https://community.homey.app/t/app-pro-test-energy-price-forecast-electricity-prices-grid-co-and-smart-planning/158968/1",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Use the Energy Price Forecast sun for the device icon as well.",
+        "de": "Auch das Gerätesymbol zeigt jetzt die Sonne von Energy Price Forecast.",
+        "nl": "Ook het apparaatpictogram toont nu de zon van Energy Price Forecast."
+      },
+      "compatibility": ">=12.9.0",
+      "tags": {
+        "en": [
+          "forecast",
+          "electricity",
+          "price",
+          "CO2",
+          "energy"
+        ],
+        "nl": [
+          "prognose",
+          "stroom",
+          "prijs",
+          "CO2",
+          "energie"
+        ],
+        "de": [
+          "Prognose",
+          "Strom",
+          "Preis",
+          "CO2",
+          "Energie"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.3",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a94ac0730ac038fba711ce4",
+      "type": "user",
+      "userId": "6a5fff9be13c8572d4e3ec85",
+      "name": "Hendrik Soppa",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "se.manvarg.openeye",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "OpenEye Events",
+        "sv": "OpenEye Events",
+        "de": "OpenEye Events",
+        "fr": "OpenEye Events",
+        "it": "OpenEye Events",
+        "nl": "OpenEye Events",
+        "no": "OpenEye Events",
+        "da": "OpenEye Events",
+        "uk": "OpenEye Events",
+        "el": "OpenEye Events",
+        "es": "OpenEye Events",
+        "ko": "OpenEye Events",
+        "pl": "OpenEye Events",
+        "ru": "OpenEye Events",
+        "zh": "OpenEye Events"
+      },
+      "version": "1.7.7",
+      "readme": {
+        "en": "OpenEye Events connects Homey to OpenEye Web Services. Every alert that OWS raises, whether from camera analytics, an AI Visual Check, an access control system, a sensor or an I/O device connected to OpenEye, reaches Homey within seconds and can start a Flow: lights, a voice message, a push notification with the alert picture, or another system.\n\nIt also works the other way: a Homey Flow can send an event into OpenEye, so anything Homey knows about, a door contact, a temperature, a button, becomes an alert in your video system with video from the camera you choose.\n\nYour OpenEye cameras become Homey camera devices with live video, the latest alarm as video and picture, and a still image. Several OpenEye accounts can be added. Requires an OpenEye Web Services Plus or AI Pro subscription; the Standard subscription has no API access.\n\nCommunity-built app by Ulf Holmström, not an official OpenEye product. The manual is linked from the app settings.\n",
+        "sv": "OpenEye Events kopplar Homey till OpenEye Web Services. Varje larm som OWS skapar, oavsett om det kommer från kameraanalys, en AI Visual Check, ett passagesystem, en sensor eller en I/O-enhet ansluten till OpenEye, når Homey inom några sekunder och kan starta ett Flow: belysning, ett röstmeddelande, en pushnotis med larmbilden eller ett annat system.\n\nDet fungerar också åt andra hållet: ett Flow i Homey kan skicka en händelse in i OpenEye, så att allt Homey känner till, en dörrkontakt, en temperatur, en knapp, blir ett larm i ditt videosystem med video från den kamera du väljer.\n\nDina OpenEye-kameror blir kameraenheter i Homey med livevideo, senaste larmet som video och bild samt en stillbild. Flera OpenEye-konton kan läggas till. Kräver ett OpenEye Web Services Plus- eller AI Pro-abonnemang; Standard-abonnemanget saknar API-åtkomst.\n\nApp byggd av communityn, av Ulf Holmström, inte en officiell OpenEye-produkt. Manualen är länkad från appens inställningar.\n"
+      },
+      "description": {
+        "en": "Your OpenEye cameras and alerts, live in Homey.",
+        "sv": "Dina OpenEye-kameror och larm, live i Homey.",
+        "de": "Ihre OpenEye-Kameras und Alarme, live in Homey.",
+        "fr": "Vos caméras et alarmes OpenEye, en direct dans Homey.",
+        "it": "Le tue telecamere e i tuoi allarmi OpenEye, dal vivo in Homey.",
+        "nl": "Je OpenEye-camera's en alarmen, live in Homey.",
+        "no": "Dine OpenEye-kameraer og alarmer, live i Homey.",
+        "da": "Dine OpenEye-kameraer og alarmer, live i Homey.",
+        "uk": "Ваші камери та тривоги OpenEye — у Homey в реальному часі.",
+        "el": "Οι κάμερες και οι συναγερμοί OpenEye σας, ζωντανά στο Homey.",
+        "es": "Tus cámaras y alarmas OpenEye, en directo en Homey.",
+        "ko": "OpenEye 카메라와 알람을 Homey에서 실시간으로.",
+        "pl": "Twoje kamery i alarmy OpenEye, na żywo w Homey.",
+        "ru": "Ваши камеры и тревоги OpenEye — в Homey в реальном времени.",
+        "zh": "您的 OpenEye 摄像机和报警，实时呈现在 Homey 中。"
+      },
+      "category": "security",
+      "brandColor": "#1E9BF0",
+      "icon": "https://apps.homeycdn.net/app/se.manvarg.openeye/2/9c1f9c4c-6d4e-4393-8d23-534c9641b9d7/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/se.manvarg.openeye/2/9c1f9c4c-6d4e-4393-8d23-534c9641b9d7/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/se.manvarg.openeye/2/9c1f9c4c-6d4e-4393-8d23-534c9641b9d7/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "camera",
+          "name": {
+            "en": "OpenEye Camera",
+            "sv": "OpenEye-kamera",
+            "de": "OpenEye-Kamera",
+            "fr": "Caméra OpenEye",
+            "it": "Telecamera OpenEye",
+            "nl": "OpenEye-camera",
+            "no": "OpenEye-kamera",
+            "da": "OpenEye-kamera",
+            "uk": "Камера OpenEye",
+            "el": "Κάμερα OpenEye",
+            "es": "Cámara OpenEye",
+            "ko": "OpenEye 카메라",
+            "pl": "Kamera OpenEye",
+            "ru": "Камера OpenEye",
+            "zh": "OpenEye 摄像机"
+          },
+          "class": "camera",
+          "capabilities": [
+            "alarm_generic"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/se.manvarg.openeye/2/9c1f9c4c-6d4e-4393-8d23-534c9641b9d7/drivers/camera/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/se.manvarg.openeye/2/9c1f9c4c-6d4e-4393-8d23-534c9641b9d7/drivers/camera/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/se.manvarg.openeye/2/9c1f9c4c-6d4e-4393-8d23-534c9641b9d7/drivers/camera/assets/icon.svg",
           "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "openeye_event",
+            "title": {
+              "en": "An OpenEye alert was received",
+              "sv": "Ett OpenEye-larm togs emot",
+              "de": "Ein OpenEye-Alarm wurde empfangen",
+              "fr": "Une alerte OpenEye a été reçue",
+              "it": "È stato ricevuto un allarme OpenEye",
+              "nl": "Er is een OpenEye-melding ontvangen",
+              "no": "Et OpenEye-varsel ble mottatt",
+              "da": "En OpenEye-alarm blev modtaget",
+              "uk": "Отримано тривогу OpenEye",
+              "el": "Ελήφθη συναγερμός OpenEye",
+              "es": "Se ha recibido una alerta de OpenEye",
+              "ko": "OpenEye 알림을 받았습니다",
+              "pl": "Otrzymano alarm OpenEye",
+              "ru": "Получено оповещение OpenEye",
+              "zh": "收到 OpenEye 警报"
+            },
+            "titleFormatted": {
+              "en": "An OpenEye [[event_type]] alert on [[camera]] was received",
+              "sv": "Ett OpenEye-[[event_type]]-larm på [[camera]] togs emot",
+              "de": "Ein OpenEye-[[event_type]]-Alarm an [[camera]] wurde empfangen",
+              "fr": "Une alerte OpenEye [[event_type]] sur [[camera]] a été reçue",
+              "it": "È stato ricevuto un allarme OpenEye [[event_type]] su [[camera]]",
+              "nl": "Er is een OpenEye-[[event_type]]-melding op [[camera]] ontvangen",
+              "no": "Et OpenEye-[[event_type]]-varsel på [[camera]] ble mottatt",
+              "da": "En OpenEye-[[event_type]]-alarm på [[camera]] blev modtaget",
+              "uk": "Отримано тривогу OpenEye [[event_type]] на камері [[camera]]",
+              "el": "Ελήφθη συναγερμός OpenEye [[event_type]] στην [[camera]]",
+              "es": "Se ha recibido una alerta OpenEye [[event_type]] en [[camera]]",
+              "ko": "[[camera]]에서 OpenEye [[event_type]] 알림을 받았습니다",
+              "pl": "Otrzymano alarm OpenEye [[event_type]] z kamery [[camera]]",
+              "ru": "Получено оповещение OpenEye [[event_type]] с камеры [[camera]]",
+              "zh": "收到来自 [[camera]] 的 OpenEye [[event_type]] 警报"
+            },
+            "hint": {
+              "en": "Only set the Event type and Camera filters at the bottom. The coloured tags (Camera, Snapshot, Message…) are read-only — they are values this alert gives you to drop into the Then-step, not settings.",
+              "sv": "Ställ bara in filtren Händelsetyp och Kamera längst ner. De färgade taggarna (Kamera, Ögonblicksbild, Meddelande…) är läsbara — det är värden larmet ger dig att använda i Så-steget, inte inställningar.",
+              "de": "Stelle nur die Filter Ereignistyp und Kamera unten ein. Die farbigen Tags (Kamera, Schnappschuss, Nachricht…) sind schreibgeschützt – es sind Werte, die dieser Alarm liefert und die du im Dann-Schritt verwenden kannst, keine Einstellungen.",
+              "fr": "Réglez uniquement les filtres Type d'événement et Caméra en bas. Les étiquettes colorées (Caméra, Instantané, Message…) sont en lecture seule — ce sont des valeurs fournies par cette alerte à utiliser dans l'étape Alors, pas des réglages.",
+              "it": "Imposta solo i filtri Tipo di evento e Telecamera in basso. Le etichette colorate (Telecamera, Istantanea, Messaggio…) sono di sola lettura: sono valori forniti da questo allarme da usare nel passaggio Allora, non impostazioni.",
+              "nl": "Stel alleen de filters Gebeurtenistype en Camera onderaan in. De gekleurde tags (Camera, Momentopname, Bericht…) zijn alleen-lezen — het zijn waarden die deze melding je geeft om te gebruiken in de Dan-stap, geen instellingen.",
+              "no": "Still bare inn filtrene Hendelsestype og Kamera nederst. De fargede taggene (Kamera, Øyeblikksbilde, Melding…) er skrivebeskyttet — det er verdier dette varselet gir deg til bruk i Så-steget, ikke innstillinger.",
+              "da": "Indstil kun filtrene Hændelsestype og Kamera nederst. De farvede tags (Kamera, Øjebliksbillede, Besked…) er skrivebeskyttede — det er værdier, denne alarm giver dig til brug i Så-trinnet, ikke indstillinger.",
+              "uk": "Налаштовуйте лише фільтри Тип події та Камера внизу. Кольорові теги (Камера, Знімок, Повідомлення…) доступні лише для читання — це значення, які надає ця подія для використання на кроці «Тоді», а не налаштування.",
+              "el": "Ρυθμίστε μόνο τα φίλτρα Τύπος συμβάντος και Κάμερα στο κάτω μέρος. Οι έγχρωμες ετικέτες (Κάμερα, Στιγμιότυπο, Μήνυμα…) είναι μόνο για ανάγνωση — είναι τιμές που σας δίνει αυτός ο συναγερμός για χρήση στο βήμα «Τότε», όχι ρυθμίσεις.",
+              "es": "Ajuste solo los filtros Tipo de evento y Cámara de abajo. Las etiquetas de color (Cámara, Instantánea, Mensaje…) son de solo lectura: son valores que esta alerta le da para usar en el paso Entonces, no ajustes.",
+              "ko": "하단의 이벤트 유형과 카메라 필터만 설정하세요. 색상 태그(카메라, 스냅샷, 메시지…)는 읽기 전용이며, 설정이 아니라 이 알림이 제공하는 값으로 그러면 단계에서 사용할 수 있습니다.",
+              "pl": "Ustaw tylko filtry Typ zdarzenia i Kamera na dole. Kolorowe znaczniki (Kamera, Zrzut obrazu, Wiadomość…) są tylko do odczytu – to wartości tego alarmu do użycia w kroku „Wtedy”, a nie ustawienia.",
+              "ru": "Настройте только фильтры «Тип события» и «Камера» внизу. Цветные теги (Камера, Снимок, Сообщение…) доступны только для чтения — это значения оповещения для шага «Тогда», а не настройки.",
+              "zh": "只需设置底部的事件类型和摄像机筛选。彩色标签（摄像机、快照、消息…）为只读，是此警报提供给“那么”步骤使用的值，不是设置。"
+            },
+            "args": [
+              {
+                "name": "event_type",
+                "type": "dropdown",
+                "title": {
+                  "en": "Event type",
+                  "sv": "Händelsetyp",
+                  "de": "Ereignistyp",
+                  "fr": "Type d'événement",
+                  "it": "Tipo di evento",
+                  "nl": "Gebeurtenistype",
+                  "no": "Hendelsestype",
+                  "da": "Hændelsestype",
+                  "uk": "Тип події",
+                  "el": "Τύπος συμβάντος",
+                  "es": "Tipo de evento",
+                  "ko": "이벤트 유형",
+                  "pl": "Typ zdarzenia",
+                  "ru": "Тип события",
+                  "zh": "事件类型"
+                },
+                "values": [
+                  {
+                    "id": "any",
+                    "title": {
+                      "en": "Any event",
+                      "sv": "Vilket som helst",
+                      "de": "Beliebiges Ereignis",
+                      "fr": "N'importe quel événement",
+                      "it": "Qualsiasi evento",
+                      "nl": "Elke gebeurtenis",
+                      "no": "Enhver hendelse",
+                      "da": "Enhver hændelse",
+                      "uk": "Будь-яка подія",
+                      "el": "Οποιοδήποτε συμβάν",
+                      "es": "Cualquier evento",
+                      "ko": "모든 이벤트",
+                      "pl": "Dowolne zdarzenie",
+                      "ru": "Любое событие",
+                      "zh": "任意事件"
+                    }
+                  },
+                  {
+                    "id": "VISUAL_CHECK",
+                    "title": {
+                      "en": "AI Visual Check",
+                      "sv": "AI Visual Check",
+                      "de": "AI Visual Check",
+                      "fr": "AI Visual Check",
+                      "it": "AI Visual Check",
+                      "nl": "AI Visual Check",
+                      "no": "AI Visual Check",
+                      "da": "AI Visual Check",
+                      "uk": "AI Visual Check",
+                      "el": "AI Visual Check",
+                      "es": "AI Visual Check",
+                      "ko": "AI Visual Check",
+                      "pl": "AI Visual Check",
+                      "ru": "AI Visual Check",
+                      "zh": "AI Visual Check"
+                    }
+                  },
+                  {
+                    "id": "PERSON_DETECTED",
+                    "title": {
+                      "en": "Person Detected",
+                      "sv": "Person upptäckt",
+                      "de": "Person erkannt",
+                      "fr": "Personne détectée",
+                      "it": "Persona rilevata",
+                      "nl": "Persoon gedetecteerd",
+                      "no": "Person oppdaget",
+                      "da": "Person registreret",
+                      "uk": "Виявлено людину",
+                      "el": "Ανιχνεύθηκε άτομο",
+                      "es": "Persona detectada",
+                      "ko": "사람 감지",
+                      "pl": "Wykryto osobę",
+                      "ru": "Обнаружен человек",
+                      "zh": "检测到人员"
+                    }
+                  },
+                  {
+                    "id": "VEHICLE_DETECTED",
+                    "title": {
+                      "en": "Vehicle Detected",
+                      "sv": "Fordon upptäckt",
+                      "de": "Fahrzeug erkannt",
+                      "fr": "Véhicule détecté",
+                      "it": "Veicolo rilevato",
+                      "nl": "Voertuig gedetecteerd",
+                      "no": "Kjøretøy oppdaget",
+                      "da": "Køretøj registreret",
+                      "uk": "Виявлено транспорт",
+                      "el": "Ανιχνεύθηκε όχημα",
+                      "es": "Vehículo detectado",
+                      "ko": "차량 감지",
+                      "pl": "Wykryto pojazd",
+                      "ru": "Обнаружено транспортное средство",
+                      "zh": "检测到车辆"
+                    }
+                  },
+                  {
+                    "id": "LINE_CROSSED",
+                    "title": {
+                      "en": "Line Crossed",
+                      "sv": "Linje passerad",
+                      "de": "Linie überschritten",
+                      "fr": "Ligne franchie",
+                      "it": "Linea attraversata",
+                      "nl": "Lijn overschreden",
+                      "no": "Linje krysset",
+                      "da": "Linje krydset",
+                      "uk": "Перетнуто лінію",
+                      "el": "Διάβαση γραμμής",
+                      "es": "Línea cruzada",
+                      "ko": "라인 통과",
+                      "pl": "Przekroczenie linii",
+                      "ru": "Пересечение линии",
+                      "zh": "越线"
+                    }
+                  },
+                  {
+                    "id": "AREA_ENTERED",
+                    "title": {
+                      "en": "Area Entered",
+                      "sv": "Område beträtt",
+                      "de": "Bereich betreten",
+                      "fr": "Zone franchie",
+                      "it": "Area invasa",
+                      "nl": "Gebied betreden",
+                      "no": "Område inntrådt",
+                      "da": "Område betrådt",
+                      "uk": "Вхід у зону",
+                      "el": "Είσοδος σε περιοχή",
+                      "es": "Entrada en zona",
+                      "ko": "구역 진입",
+                      "pl": "Wejście do strefy",
+                      "ru": "Вход в зону",
+                      "zh": "进入区域"
+                    }
+                  },
+                  {
+                    "id": "LOITERING",
+                    "title": {
+                      "en": "Loitering",
+                      "sv": "Kringströvande",
+                      "de": "Herumlungern",
+                      "fr": "Rôdeur détecté",
+                      "it": "Bighellonare",
+                      "nl": "Rondhangen",
+                      "no": "Loffing",
+                      "da": "Færden",
+                      "uk": "Вешталання",
+                      "el": "Παραμονή σε χώρο",
+                      "es": "Merodeo",
+                      "ko": "배회",
+                      "pl": "Włóczenie się",
+                      "ru": "Праздношатание",
+                      "zh": "徘徊"
+                    }
+                  },
+                  {
+                    "id": "ANALYTIC_TAMPERING_STARTED",
+                    "title": {
+                      "en": "Camera Tampering",
+                      "sv": "Kamerasabotage",
+                      "de": "Kamera-Manipulation",
+                      "fr": "Sabotage de caméra",
+                      "it": "Manomissione telecamera",
+                      "nl": "Cameramanipulatie",
+                      "no": "Kamerasabotasje",
+                      "da": "Kamerasabotage",
+                      "uk": "Саботаж камери",
+                      "el": "Παραβίαση κάμερας",
+                      "es": "Manipulación de cámara",
+                      "ko": "카메라 훼손",
+                      "pl": "Manipulacja kamerą",
+                      "ru": "Саботаж камеры",
+                      "zh": "摄像机遮挡"
+                    }
+                  },
+                  {
+                    "id": "GLASS_BREAK",
+                    "title": {
+                      "en": "Glass Break",
+                      "sv": "Glaskross",
+                      "de": "Glasbruch",
+                      "fr": "Bris de verre",
+                      "it": "Rottura di vetro",
+                      "nl": "Glasbreuk",
+                      "no": "Glassknusing",
+                      "da": "Glasbrud",
+                      "uk": "Розбите скло",
+                      "el": "Θραύση τζαμιού",
+                      "es": "Rotura de cristal",
+                      "ko": "유리 파손",
+                      "pl": "Zbicie szyby",
+                      "ru": "Разбитие стекла",
+                      "zh": "玻璃破碎"
+                    }
+                  },
+                  {
+                    "id": "GUNSHOT",
+                    "title": {
+                      "en": "Gunshot",
+                      "sv": "Skottlossning",
+                      "de": "Schuss",
+                      "fr": "Coup de feu",
+                      "it": "Sparo",
+                      "nl": "Schot",
+                      "no": "Skudd",
+                      "da": "Skud",
+                      "uk": "Постріл",
+                      "el": "Πυροβολισμός",
+                      "es": "Disparo",
+                      "ko": "총성",
+                      "pl": "Wystrzał",
+                      "ru": "Выстрел",
+                      "zh": "枪声"
+                    }
+                  },
+                  {
+                    "id": "AREA_EXITED",
+                    "title": {
+                      "en": "Area Exited",
+                      "sv": "Område lämnat",
+                      "de": "Bereich verlassen",
+                      "fr": "Zone quittée",
+                      "it": "Area abbandonata",
+                      "nl": "Gebied verlaten",
+                      "no": "Område forlatt",
+                      "da": "Område forladt",
+                      "uk": "Вихід із зони",
+                      "el": "Έξοδος από περιοχή",
+                      "es": "Salida de zona",
+                      "ko": "구역 이탈",
+                      "pl": "Opuszczenie strefy",
+                      "ru": "Выход из зоны",
+                      "zh": "离开区域"
+                    }
+                  },
+                  {
+                    "id": "MOTION",
+                    "title": {
+                      "en": "Motion",
+                      "sv": "Rörelse",
+                      "de": "Bewegung",
+                      "fr": "Mouvement",
+                      "it": "Movimento",
+                      "nl": "Beweging",
+                      "no": "Bevegelse",
+                      "da": "Bevægelse",
+                      "uk": "Рух",
+                      "el": "Κίνηση",
+                      "es": "Movimiento",
+                      "ko": "움직임",
+                      "pl": "Ruch",
+                      "ru": "Движение",
+                      "zh": "移动"
+                    }
+                  },
+                  {
+                    "id": "SENSOR",
+                    "title": {
+                      "en": "Sensor Input",
+                      "sv": "Sensoringång",
+                      "de": "Sensoreingang",
+                      "fr": "Entrée capteur",
+                      "it": "Ingresso sensore",
+                      "nl": "Sensoringang",
+                      "no": "Sensorinngang",
+                      "da": "Sensorindgang",
+                      "uk": "Вхід датчика",
+                      "el": "Είσοδος αισθητήρα",
+                      "es": "Entrada de sensor",
+                      "ko": "센서 입력",
+                      "pl": "Wejście czujnika",
+                      "ru": "Вход датчика",
+                      "zh": "传感器输入"
+                    }
+                  },
+                  {
+                    "id": "LICENSE_PLATE",
+                    "title": {
+                      "en": "License Plate Detected",
+                      "sv": "Registreringsskylt",
+                      "de": "Kennzeichen erkannt",
+                      "fr": "Plaque détectée",
+                      "it": "Targa rilevata",
+                      "nl": "Kenteken gedetecteerd",
+                      "no": "Registreringsskilt",
+                      "da": "Nummerplade",
+                      "uk": "Номерний знак",
+                      "el": "Πινακίδα",
+                      "es": "Matrícula detectada",
+                      "ko": "번호판 감지",
+                      "pl": "Wykryto tablicę rejestracyjną",
+                      "ru": "Распознан номерной знак",
+                      "zh": "检测到车牌"
+                    }
+                  },
+                  {
+                    "id": "FACE_DETECTED",
+                    "title": {
+                      "en": "Face Detected",
+                      "sv": "Ansikte upptäckt",
+                      "de": "Gesicht erkannt",
+                      "fr": "Visage détecté",
+                      "it": "Volto rilevato",
+                      "nl": "Gezicht gedetecteerd",
+                      "no": "Ansikt oppdaget",
+                      "da": "Ansigt registreret",
+                      "uk": "Виявлено обличчя",
+                      "el": "Πρόσωπο",
+                      "es": "Rostro detectado",
+                      "ko": "얼굴 감지",
+                      "pl": "Wykryto twarz",
+                      "ru": "Обнаружено лицо",
+                      "zh": "检测到人脸"
+                    }
+                  },
+                  {
+                    "id": "APPEARING",
+                    "title": {
+                      "en": "Object Appeared",
+                      "sv": "Objekt dök upp",
+                      "de": "Objekt erschienen",
+                      "fr": "Objet apparu",
+                      "it": "Oggetto apparso",
+                      "nl": "Object verschenen",
+                      "no": "Objekt dukket opp",
+                      "da": "Objekt dukkede op",
+                      "uk": "З’явився об’єкт",
+                      "el": "Εμφάνιση αντικειμένου",
+                      "es": "Objeto aparecido",
+                      "ko": "객체 출현",
+                      "pl": "Pojawił się obiekt",
+                      "ru": "Появился объект",
+                      "zh": "出现物体"
+                    }
+                  },
+                  {
+                    "id": "GUN_DETECTED",
+                    "title": {
+                      "en": "Gun Detected",
+                      "sv": "Vapen upptäckt",
+                      "de": "Waffe erkannt",
+                      "fr": "Arme détectée",
+                      "it": "Arma rilevata",
+                      "nl": "Wapen gedetecteerd",
+                      "no": "Våpen oppdaget",
+                      "da": "Våben registreret",
+                      "uk": "Виявлено зброю",
+                      "el": "Ανίχνευση όπλου",
+                      "es": "Arma detectada",
+                      "ko": "총기 감지",
+                      "pl": "Wykryto broń",
+                      "ru": "Обнаружено оружие",
+                      "zh": "检测到枪支"
+                    }
+                  },
+                  {
+                    "id": "SCREAM",
+                    "title": {
+                      "en": "Scream",
+                      "sv": "Skrik",
+                      "de": "Schrei",
+                      "fr": "Cri",
+                      "it": "Urlo",
+                      "nl": "Schreeuw",
+                      "no": "Skrik",
+                      "da": "Skrig",
+                      "uk": "Крик",
+                      "el": "Κραυγή",
+                      "es": "Grito",
+                      "ko": "비명",
+                      "pl": "Krzyk",
+                      "ru": "Крик",
+                      "zh": "尖叫"
+                    }
+                  },
+                  {
+                    "id": "EXPLOSION",
+                    "title": {
+                      "en": "Explosion",
+                      "sv": "Explosion",
+                      "de": "Explosion",
+                      "fr": "Explosion",
+                      "it": "Esplosione",
+                      "nl": "Explosie",
+                      "no": "Eksplosjon",
+                      "da": "Eksplosion",
+                      "uk": "Вибух",
+                      "el": "Έκρηξη",
+                      "es": "Explosión",
+                      "ko": "폭발",
+                      "pl": "Eksplozja",
+                      "ru": "Взрыв",
+                      "zh": "爆炸"
+                    }
+                  },
+                  {
+                    "id": "AUDIO",
+                    "title": {
+                      "en": "Audio Detected",
+                      "sv": "Ljud upptäckt",
+                      "de": "Audio erkannt",
+                      "fr": "Son détecté",
+                      "it": "Audio rilevato",
+                      "nl": "Geluid gedetecteerd",
+                      "no": "Lyd oppdaget",
+                      "da": "Lyd registreret",
+                      "uk": "Виявлено звук",
+                      "el": "Ανίχνευση ήχου",
+                      "es": "Audio detectado",
+                      "ko": "오디오 감지",
+                      "pl": "Wykryto dźwięk",
+                      "ru": "Обнаружен звук",
+                      "zh": "检测到声音"
+                    }
+                  },
+                  {
+                    "id": "SCENARIO",
+                    "title": {
+                      "en": "Analytics Scenario",
+                      "sv": "Analysscenario",
+                      "de": "Analyse-Szenario",
+                      "fr": "Scénario analytique",
+                      "it": "Scenario analitico",
+                      "nl": "Analysescenario",
+                      "no": "Analysescenario",
+                      "da": "Analysescenarie",
+                      "uk": "Аналітичний сценарій",
+                      "el": "Σενάριο ανάλυσης",
+                      "es": "Escenario analítico",
+                      "ko": "분석 시나리오",
+                      "pl": "Scenariusz analityczny",
+                      "ru": "Аналитический сценарий",
+                      "zh": "分析场景"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "camera",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Camera",
+                  "sv": "Kamera",
+                  "de": "Kamera",
+                  "fr": "Caméra",
+                  "it": "Telecamera",
+                  "nl": "Camera",
+                  "no": "Kamera",
+                  "da": "Kamera",
+                  "uk": "Камера",
+                  "el": "Κάμερα",
+                  "es": "Cámara",
+                  "ko": "카메라",
+                  "pl": "Kamera",
+                  "ru": "Камера",
+                  "zh": "摄像机"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "event_type",
+                "type": "string",
+                "title": {
+                  "en": "Event type",
+                  "sv": "Händelsetyp",
+                  "de": "Ereignistyp",
+                  "fr": "Type d'événement",
+                  "it": "Tipo di evento",
+                  "nl": "Gebeurtenistype",
+                  "no": "Hendelsestype",
+                  "da": "Hændelsestype",
+                  "uk": "Тип події",
+                  "el": "Τύπος συμβάντος",
+                  "es": "Tipo de evento",
+                  "ko": "이벤트 유형",
+                  "pl": "Typ zdarzenia",
+                  "ru": "Тип события",
+                  "zh": "事件类型"
+                },
+                "example": "Person Detected"
+              },
+              {
+                "name": "camera",
+                "type": "string",
+                "title": {
+                  "en": "Camera",
+                  "sv": "Kamera",
+                  "de": "Kamera",
+                  "fr": "Caméra",
+                  "it": "Telecamera",
+                  "nl": "Camera",
+                  "no": "Kamera",
+                  "da": "Kamera",
+                  "uk": "Камера",
+                  "el": "Κάμερα",
+                  "es": "Cámara",
+                  "ko": "카메라",
+                  "pl": "Kamera",
+                  "ru": "Камера",
+                  "zh": "摄像机"
+                },
+                "example": "Front Door"
+              },
+              {
+                "name": "location",
+                "type": "string",
+                "title": {
+                  "en": "Location / device",
+                  "sv": "Plats / enhet",
+                  "de": "Standort / Gerät",
+                  "fr": "Site / appareil",
+                  "it": "Sede / dispositivo",
+                  "nl": "Locatie / apparaat",
+                  "no": "Sted / enhet",
+                  "da": "Lokation / enhed",
+                  "uk": "Локація / пристрій",
+                  "el": "Τοποθεσία / συσκευή",
+                  "es": "Ubicación / dispositivo",
+                  "ko": "위치 / 장치",
+                  "pl": "Lokalizacja / urządzenie",
+                  "ru": "Локация / устройство",
+                  "zh": "位置 / 设备"
+                },
+                "example": "Storvreta"
+              },
+              {
+                "name": "tenant",
+                "type": "string",
+                "title": {
+                  "en": "Account",
+                  "sv": "Konto",
+                  "de": "Konto",
+                  "fr": "Compte",
+                  "it": "Account",
+                  "nl": "Account",
+                  "no": "Konto",
+                  "da": "Konto",
+                  "uk": "Обліковий запис",
+                  "el": "Λογαριασμός",
+                  "es": "Cuenta",
+                  "ko": "계정",
+                  "pl": "Konto",
+                  "ru": "Учётная запись",
+                  "zh": "账户"
+                },
+                "example": "Home"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande",
+                  "de": "Nachricht",
+                  "fr": "Message",
+                  "it": "Messaggio",
+                  "nl": "Bericht",
+                  "no": "Melding",
+                  "da": "Besked",
+                  "uk": "Повідомлення",
+                  "el": "Μήνυμα",
+                  "es": "Mensaje",
+                  "ko": "메시지",
+                  "pl": "Wiadomość",
+                  "ru": "Сообщение",
+                  "zh": "消息"
+                },
+                "example": "Person detected at Front Door"
+              },
+              {
+                "name": "snapshot",
+                "type": "image",
+                "title": {
+                  "en": "Snapshot",
+                  "sv": "Ögonblicksbild",
+                  "de": "Schnappschuss",
+                  "fr": "Instantané",
+                  "it": "Istantanea",
+                  "nl": "Momentopname",
+                  "no": "Øyeblikksbilde",
+                  "da": "Øjebliksbillede",
+                  "uk": "Знімок",
+                  "el": "Στιγμιότυπο",
+                  "es": "Instantánea",
+                  "ko": "스냅샷",
+                  "pl": "Zrzut obrazu",
+                  "ru": "Снимок",
+                  "zh": "快照"
+                }
+              },
+              {
+                "name": "video_url",
+                "type": "string",
+                "title": {
+                  "en": "Video link",
+                  "sv": "Videolänk",
+                  "de": "Videolink",
+                  "fr": "Lien vidéo",
+                  "it": "Link video",
+                  "nl": "Videolink",
+                  "no": "Videolenke",
+                  "da": "Videolink",
+                  "uk": "Посилання на відео",
+                  "el": "Σύνδεσμος βίντεο",
+                  "es": "Enlace de vídeo",
+                  "ko": "비디오 링크",
+                  "pl": "Link do wideo",
+                  "ru": "Ссылка на видео",
+                  "zh": "视频链接"
+                },
+                "example": "https://ows.openeye.net/video/event?…"
+              }
+            ]
+          }
+        ],
+        "conditions": null,
+        "actions": [
+          {
+            "id": "send_event",
+            "title": {
+              "en": "Send an event to OpenEye",
+              "sv": "Skicka ett event till OpenEye",
+              "de": "Ein Ereignis an OpenEye senden",
+              "fr": "Envoyer un événement à OpenEye",
+              "it": "Invia un evento a OpenEye",
+              "nl": "Een gebeurtenis naar OpenEye sturen",
+              "no": "Send en hendelse til OpenEye",
+              "da": "Send en hændelse til OpenEye",
+              "uk": "Надіслати подію до OpenEye",
+              "el": "Αποστολή συμβάντος στο OpenEye",
+              "es": "Enviar un evento a OpenEye",
+              "ko": "OpenEye에 이벤트 보내기",
+              "pl": "Wyślij zdarzenie do OpenEye",
+              "ru": "Отправить событие в OpenEye",
+              "zh": "向 OpenEye 发送事件"
+            },
+            "titleFormatted": {
+              "en": "Send [[event_type]] to OpenEye for camera [[camera]]",
+              "sv": "Skicka [[event_type]] till OpenEye för kamera [[camera]]",
+              "da": "Send [[event_type]] til OpenEye for kamera [[camera]]",
+              "no": "Send [[event_type]] til OpenEye for kamera [[camera]]",
+              "de": "[[event_type]] an OpenEye senden für Kamera [[camera]]",
+              "nl": "Stuur [[event_type]] naar OpenEye voor camera [[camera]]",
+              "fr": "Envoyer [[event_type]] à OpenEye pour la caméra [[camera]]",
+              "es": "Enviar [[event_type]] a OpenEye para la cámara [[camera]]",
+              "it": "Invia [[event_type]] a OpenEye per la telecamera [[camera]]",
+              "pl": "Wyślij [[event_type]] do OpenEye dla kamery [[camera]]",
+              "ru": "Отправить [[event_type]] в OpenEye для камеры [[camera]]",
+              "uk": "Надіслати [[event_type]] в OpenEye для камери [[camera]]",
+              "el": "Αποστολή [[event_type]] στο OpenEye για την κάμερα [[camera]]",
+              "ko": "카메라 [[camera]]에 대해 [[event_type]]을(를) OpenEye로 전송",
+              "zh": "为摄像机 [[camera]] 向 OpenEye 发送 [[event_type]]"
+            },
+            "hint": {
+              "en": "Posts an analytics event for the chosen camera into OpenEye through the Event Receiver API (the account needs its AKI/AKS keys). An Alert Rule in OWS for that camera and event type turns the event into an alert with video.",
+              "sv": "Skickar en analyshändelse för vald kamera in i OpenEye via Event Receiver API (kontot behöver sina AKI/AKS-nycklar). En Alert Rule i OWS för den kameran och händelsetypen gör händelsen till ett larm med video.",
+              "da": "Sender en analysehændelse for det valgte kamera ind i OpenEye via Event Receiver API (kontoen skal have sine AKI/AKS-nøgler). En Alert Rule i OWS for det kamera og den hændelsestype gør hændelsen til en alarm med video.",
+              "no": "Sender en analysehendelse for valgt kamera inn i OpenEye via Event Receiver API (kontoen trenger sine AKI/AKS-nøkler). En Alert Rule i OWS for det kameraet og den hendelsestypen gjør hendelsen til en alarm med video.",
+              "de": "Sendet ein Analyse-Ereignis für die gewählte Kamera über die Event Receiver API an OpenEye (das Konto braucht seine AKI/AKS-Schlüssel). Eine Alert Rule in OWS für diese Kamera und diesen Ereignistyp macht daraus einen Alarm mit Video.",
+              "nl": "Stuurt een analysegebeurtenis voor de gekozen camera naar OpenEye via de Event Receiver API (het account heeft zijn AKI/AKS-sleutels nodig). Een Alert Rule in OWS voor die camera en dat gebeurtenistype maakt er een alarm met video van.",
+              "fr": "Envoie un événement d'analyse pour la caméra choisie dans OpenEye via l'Event Receiver API (le compte a besoin de ses clés AKI/AKS). Une Alert Rule dans OWS pour cette caméra et ce type d'événement le transforme en alarme avec vidéo.",
+              "es": "Envía un evento de analítica para la cámara elegida a OpenEye mediante la Event Receiver API (la cuenta necesita sus claves AKI/AKS). Una Alert Rule en OWS para esa cámara y ese tipo de evento lo convierte en una alarma con vídeo.",
+              "it": "Invia un evento di analisi per la telecamera scelta a OpenEye tramite la Event Receiver API (l'account ha bisogno delle chiavi AKI/AKS). Una Alert Rule in OWS per quella telecamera e quel tipo di evento lo trasforma in un allarme con video.",
+              "pl": "Wysyła zdarzenie analityczne dla wybranej kamery do OpenEye przez Event Receiver API (konto potrzebuje kluczy AKI/AKS). Alert Rule w OWS dla tej kamery i typu zdarzenia zamienia je w alarm z wideo.",
+              "ru": "Отправляет аналитическое событие для выбранной камеры в OpenEye через Event Receiver API (аккаунту нужны ключи AKI/AKS). Alert Rule в OWS для этой камеры и типа события превращает его в тревогу с видео.",
+              "uk": "Надсилає аналітичну подію для вибраної камери в OpenEye через Event Receiver API (обліковому запису потрібні ключі AKI/AKS). Alert Rule в OWS для цієї камери й типу події перетворює її на тривогу з відео.",
+              "el": "Στέλνει ένα συμβάν ανάλυσης για την επιλεγμένη κάμερα στο OpenEye μέσω του Event Receiver API (ο λογαριασμός χρειάζεται τα κλειδιά AKI/AKS). Ένας Alert Rule στο OWS για αυτήν την κάμερα και τον τύπο συμβάντος το μετατρέπει σε συναγερμό με βίντεο.",
+              "ko": "Event Receiver API를 통해 선택한 카메라의 분석 이벤트를 OpenEye로 보냅니다(계정에 AKI/AKS 키 필요). 해당 카메라와 이벤트 유형에 대한 OWS의 Alert Rule이 이벤트를 비디오가 있는 알람으로 바꿉니다.",
+              "zh": "通过 Event Receiver API 为所选摄像机向 OpenEye 发送分析事件（账户需要 AKI/AKS 密钥）。OWS 中针对该摄像机和事件类型的 Alert Rule 会将事件转换为带视频的报警。"
+            },
+            "args": [
+              {
+                "name": "camera",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Camera",
+                  "sv": "Kamera",
+                  "de": "Kamera",
+                  "fr": "Caméra",
+                  "it": "Telecamera",
+                  "nl": "Camera",
+                  "no": "Kamera",
+                  "da": "Kamera",
+                  "uk": "Камера",
+                  "el": "Κάμερα",
+                  "es": "Cámara",
+                  "ko": "카메라",
+                  "pl": "Kamera",
+                  "ru": "Камера",
+                  "zh": "摄像机"
+                }
+              },
+              {
+                "name": "event_type",
+                "type": "dropdown",
+                "title": {
+                  "en": "Event type",
+                  "sv": "Händelsetyp",
+                  "de": "Ereignistyp",
+                  "fr": "Type d'événement",
+                  "it": "Tipo di evento",
+                  "nl": "Gebeurtenistype",
+                  "no": "Hendelsestype",
+                  "da": "Hændelsestype",
+                  "uk": "Тип події",
+                  "el": "Τύπος συμβάντος",
+                  "es": "Tipo de evento",
+                  "ko": "이벤트 유형",
+                  "pl": "Typ zdarzenia",
+                  "ru": "Тип события",
+                  "zh": "事件类型"
+                },
+                "values": [
+                  {
+                    "id": "PERSON_DETECTED",
+                    "title": {
+                      "en": "Person Detected",
+                      "sv": "Person upptäckt",
+                      "de": "Person erkannt",
+                      "fr": "Personne détectée",
+                      "it": "Persona rilevata",
+                      "nl": "Persoon gedetecteerd",
+                      "no": "Person oppdaget",
+                      "da": "Person registreret",
+                      "uk": "Виявлено людину",
+                      "el": "Ανιχνεύθηκε άτομο",
+                      "es": "Persona detectada",
+                      "ko": "사람 감지",
+                      "pl": "Wykryto osobę",
+                      "ru": "Обнаружен человек",
+                      "zh": "检测到人员"
+                    }
+                  },
+                  {
+                    "id": "VEHICLE_DETECTED",
+                    "title": {
+                      "en": "Vehicle Detected",
+                      "sv": "Fordon upptäckt",
+                      "de": "Fahrzeug erkannt",
+                      "fr": "Véhicule détecté",
+                      "it": "Veicolo rilevato",
+                      "nl": "Voertuig gedetecteerd",
+                      "no": "Kjøretøy oppdaget",
+                      "da": "Køretøj registreret",
+                      "uk": "Виявлено транспорт",
+                      "el": "Ανιχνεύθηκε όχημα",
+                      "es": "Vehículo detectado",
+                      "ko": "차량 감지",
+                      "pl": "Wykryto pojazd",
+                      "ru": "Обнаружено транспортное средство",
+                      "zh": "检测到车辆"
+                    }
+                  },
+                  {
+                    "id": "LINE_CROSSED",
+                    "title": {
+                      "en": "Line Crossed",
+                      "sv": "Linje passerad",
+                      "de": "Linie überschritten",
+                      "fr": "Ligne franchie",
+                      "it": "Linea attraversata",
+                      "nl": "Lijn overschreden",
+                      "no": "Linje krysset",
+                      "da": "Linje krydset",
+                      "uk": "Перетнуто лінію",
+                      "el": "Διάβαση γραμμής",
+                      "es": "Línea cruzada",
+                      "ko": "라인 통과",
+                      "pl": "Przekroczenie linii",
+                      "ru": "Пересечение линии",
+                      "zh": "越线"
+                    }
+                  },
+                  {
+                    "id": "AREA_ENTERED",
+                    "title": {
+                      "en": "Area Entered",
+                      "sv": "Område beträtt",
+                      "de": "Bereich betreten",
+                      "fr": "Zone franchie",
+                      "it": "Area invasa",
+                      "nl": "Gebied betreden",
+                      "no": "Område inntrådt",
+                      "da": "Område betrådt",
+                      "uk": "Вхід у зону",
+                      "el": "Είσοδος σε περιοχή",
+                      "es": "Entrada en zona",
+                      "ko": "구역 진입",
+                      "pl": "Wejście do strefy",
+                      "ru": "Вход в зону",
+                      "zh": "进入区域"
+                    }
+                  },
+                  {
+                    "id": "AREA_EXITED",
+                    "title": {
+                      "en": "Area Exited",
+                      "sv": "Område lämnat",
+                      "de": "Bereich verlassen",
+                      "fr": "Zone quittée",
+                      "it": "Area abbandonata",
+                      "nl": "Gebied verlaten",
+                      "no": "Område forlatt",
+                      "da": "Område forladt",
+                      "uk": "Вихід із зони",
+                      "el": "Έξοδος από περιοχή",
+                      "es": "Salida de zona",
+                      "ko": "구역 이탈",
+                      "pl": "Opuszczenie strefy",
+                      "ru": "Выход из зоны",
+                      "zh": "离开区域"
+                    }
+                  },
+                  {
+                    "id": "APPEARING",
+                    "title": {
+                      "en": "Object Appeared",
+                      "sv": "Objekt dök upp",
+                      "de": "Objekt erschienen",
+                      "fr": "Objet apparu",
+                      "it": "Oggetto apparso",
+                      "nl": "Object verschenen",
+                      "no": "Objekt dukket opp",
+                      "da": "Objekt dukkede op",
+                      "uk": "З’явився об’єкт",
+                      "el": "Εμφάνιση αντικειμένου",
+                      "es": "Objeto aparecido",
+                      "ko": "객체 출현",
+                      "pl": "Pojawił się obiekt",
+                      "ru": "Появился объект",
+                      "zh": "出现物体"
+                    }
+                  },
+                  {
+                    "id": "LOITERING",
+                    "title": {
+                      "en": "Loitering",
+                      "sv": "Kringströvande",
+                      "de": "Herumlungern",
+                      "fr": "Rôdeur détecté",
+                      "it": "Bighellonare",
+                      "nl": "Rondhangen",
+                      "no": "Loffing",
+                      "da": "Færden",
+                      "uk": "Вешталання",
+                      "el": "Παραμονή σε χώρο",
+                      "es": "Merodeo",
+                      "ko": "배회",
+                      "pl": "Włóczenie się",
+                      "ru": "Праздношатание",
+                      "zh": "徘徊"
+                    }
+                  },
+                  {
+                    "id": "ANALYTIC_TAMPERING_STARTED",
+                    "title": {
+                      "en": "Camera Tampering",
+                      "sv": "Kamerasabotage",
+                      "de": "Kamera-Manipulation",
+                      "fr": "Sabotage de caméra",
+                      "it": "Manomissione telecamera",
+                      "nl": "Cameramanipulatie",
+                      "no": "Kamerasabotasje",
+                      "da": "Kamerasabotage",
+                      "uk": "Саботаж камери",
+                      "el": "Παραβίαση κάμερας",
+                      "es": "Manipulación de cámara",
+                      "ko": "카메라 훼손",
+                      "pl": "Manipulacja kamerą",
+                      "ru": "Саботаж камеры",
+                      "zh": "摄像机遮挡"
+                    }
+                  },
+                  {
+                    "id": "GLASS_BREAK",
+                    "title": {
+                      "en": "Glass Break",
+                      "sv": "Glaskross",
+                      "de": "Glasbruch",
+                      "fr": "Bris de verre",
+                      "it": "Rottura di vetro",
+                      "nl": "Glasbreuk",
+                      "no": "Glassknusing",
+                      "da": "Glasbrud",
+                      "uk": "Розбите скло",
+                      "el": "Θραύση τζαμιού",
+                      "es": "Rotura de cristal",
+                      "ko": "유리 파손",
+                      "pl": "Zbicie szyby",
+                      "ru": "Разбитие стекла",
+                      "zh": "玻璃破碎"
+                    }
+                  },
+                  {
+                    "id": "GUNSHOT",
+                    "title": {
+                      "en": "Gunshot",
+                      "sv": "Skottlossning",
+                      "de": "Schuss",
+                      "fr": "Coup de feu",
+                      "it": "Sparo",
+                      "nl": "Schot",
+                      "no": "Skudd",
+                      "da": "Skud",
+                      "uk": "Постріл",
+                      "el": "Πυροβολισμός",
+                      "es": "Disparo",
+                      "ko": "총성",
+                      "pl": "Wystrzał",
+                      "ru": "Выстрел",
+                      "zh": "枪声"
+                    }
+                  },
+                  {
+                    "id": "GUN_DETECTED",
+                    "title": {
+                      "en": "Gun Detected",
+                      "sv": "Vapen upptäckt",
+                      "de": "Waffe erkannt",
+                      "fr": "Arme détectée",
+                      "it": "Arma rilevata",
+                      "nl": "Wapen gedetecteerd",
+                      "no": "Våpen oppdaget",
+                      "da": "Våben registreret",
+                      "uk": "Виявлено зброю",
+                      "el": "Ανίχνευση όπλου",
+                      "es": "Arma detectada",
+                      "ko": "총기 감지",
+                      "pl": "Wykryto broń",
+                      "ru": "Обнаружено оружие",
+                      "zh": "检测到枪支"
+                    }
+                  },
+                  {
+                    "id": "SCREAM",
+                    "title": {
+                      "en": "Scream",
+                      "sv": "Skrik",
+                      "de": "Schrei",
+                      "fr": "Cri",
+                      "it": "Urlo",
+                      "nl": "Schreeuw",
+                      "no": "Skrik",
+                      "da": "Skrig",
+                      "uk": "Крик",
+                      "el": "Κραυγή",
+                      "es": "Grito",
+                      "ko": "비명",
+                      "pl": "Krzyk",
+                      "ru": "Крик",
+                      "zh": "尖叫"
+                    }
+                  },
+                  {
+                    "id": "EXPLOSION",
+                    "title": {
+                      "en": "Explosion",
+                      "sv": "Explosion",
+                      "de": "Explosion",
+                      "fr": "Explosion",
+                      "it": "Esplosione",
+                      "nl": "Explosie",
+                      "no": "Eksplosjon",
+                      "da": "Eksplosion",
+                      "uk": "Вибух",
+                      "el": "Έκρηξη",
+                      "es": "Explosión",
+                      "ko": "폭발",
+                      "pl": "Eksplozja",
+                      "ru": "Взрыв",
+                      "zh": "爆炸"
+                    }
+                  },
+                  {
+                    "id": "AUDIO",
+                    "title": {
+                      "en": "Audio Detected",
+                      "sv": "Ljud upptäckt",
+                      "de": "Audio erkannt",
+                      "fr": "Son détecté",
+                      "it": "Audio rilevato",
+                      "nl": "Geluid gedetecteerd",
+                      "no": "Lyd oppdaget",
+                      "da": "Lyd registreret",
+                      "uk": "Виявлено звук",
+                      "el": "Ανίχνευση ήχου",
+                      "es": "Audio detectado",
+                      "ko": "오디오 감지",
+                      "pl": "Wykryto dźwięk",
+                      "ru": "Обнаружен звук",
+                      "zh": "检测到声音"
+                    }
+                  },
+                  {
+                    "id": "FACE_DETECTED",
+                    "title": {
+                      "en": "Face Detected",
+                      "sv": "Ansikte upptäckt",
+                      "de": "Gesicht erkannt",
+                      "fr": "Visage détecté",
+                      "it": "Volto rilevato",
+                      "nl": "Gezicht gedetecteerd",
+                      "no": "Ansikt oppdaget",
+                      "da": "Ansigt registreret",
+                      "uk": "Виявлено обличчя",
+                      "el": "Πρόσωπο",
+                      "es": "Rostro detectado",
+                      "ko": "얼굴 감지",
+                      "pl": "Wykryto twarz",
+                      "ru": "Обнаружено лицо",
+                      "zh": "检测到人脸"
+                    }
+                  },
+                  {
+                    "id": "LICENSE_PLATE",
+                    "title": {
+                      "en": "License Plate Detected",
+                      "sv": "Registreringsskylt",
+                      "de": "Kennzeichen erkannt",
+                      "fr": "Plaque détectée",
+                      "it": "Targa rilevata",
+                      "nl": "Kenteken gedetecteerd",
+                      "no": "Registreringsskilt",
+                      "da": "Nummerplade",
+                      "uk": "Номерний знак",
+                      "el": "Πινακίδα",
+                      "es": "Matrícula detectada",
+                      "ko": "번호판 감지",
+                      "pl": "Wykryto tablicę rejestracyjną",
+                      "ru": "Распознан номерной знак",
+                      "zh": "检测到车牌"
+                    }
+                  },
+                  {
+                    "id": "SCENARIO",
+                    "title": {
+                      "en": "Analytics Scenario",
+                      "sv": "Analysscenario",
+                      "de": "Analyse-Szenario",
+                      "fr": "Scénario analytique",
+                      "it": "Scenario analitico",
+                      "nl": "Analysescenario",
+                      "no": "Analysescenario",
+                      "da": "Analysescenarie",
+                      "uk": "Аналітичний сценарій",
+                      "el": "Σενάριο ανάλυσης",
+                      "es": "Escenario analítico",
+                      "ko": "분석 시나리오",
+                      "pl": "Scenariusz analityczny",
+                      "ru": "Аналитический сценарий",
+                      "zh": "分析场景"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "send_scenario",
+            "title": {
+              "en": "Send a custom alert to OpenEye",
+              "sv": "Skicka ett eget larm till OpenEye",
+              "da": "Send en brugerdefineret alarm til OpenEye",
+              "no": "Send en egendefinert alarm til OpenEye",
+              "de": "Eigenen Alarm an OpenEye senden",
+              "nl": "Een eigen alarm naar OpenEye sturen",
+              "fr": "Envoyer une alarme personnalisée à OpenEye",
+              "es": "Enviar una alarma personalizada a OpenEye",
+              "it": "Invia un allarme personalizzato a OpenEye",
+              "pl": "Wyślij własny alarm do OpenEye",
+              "ru": "Отправить собственную тревогу в OpenEye",
+              "uk": "Надіслати власну тривогу в OpenEye",
+              "el": "Αποστολή προσαρμοσμένου συναγερμού στο OpenEye",
+              "ko": "OpenEye로 사용자 지정 알람 전송",
+              "zh": "向 OpenEye 发送自定义报警"
+            },
+            "titleFormatted": {
+              "en": "Send custom alert [[name]] to OpenEye for camera [[camera]]",
+              "sv": "Skicka eget larm [[name]] till OpenEye för kamera [[camera]]",
+              "da": "Send brugerdefineret alarm [[name]] til OpenEye for kamera [[camera]]",
+              "no": "Send egendefinert alarm [[name]] til OpenEye for kamera [[camera]]",
+              "de": "Eigenen Alarm [[name]] an OpenEye senden für Kamera [[camera]]",
+              "nl": "Stuur eigen alarm [[name]] naar OpenEye voor camera [[camera]]",
+              "fr": "Envoyer l'alarme personnalisée [[name]] à OpenEye pour la caméra [[camera]]",
+              "es": "Enviar la alarma personalizada [[name]] a OpenEye para la cámara [[camera]]",
+              "it": "Invia l'allarme personalizzato [[name]] a OpenEye per la telecamera [[camera]]",
+              "pl": "Wyślij własny alarm [[name]] do OpenEye dla kamery [[camera]]",
+              "ru": "Отправить собственную тревогу [[name]] в OpenEye для камеры [[camera]]",
+              "uk": "Надіслати власну тривогу [[name]] в OpenEye для камери [[camera]]",
+              "el": "Αποστολή προσαρμοσμένου συναγερμού [[name]] στο OpenEye για την κάμερα [[camera]]",
+              "ko": "카메라 [[camera]]에 대해 사용자 지정 알람 [[name]]을(를) OpenEye로 전송",
+              "zh": "为摄像机 [[camera]] 向 OpenEye 发送自定义报警 [[name]]"
+            },
+            "hint": {
+              "en": "Creates an alert with a name of your choice on the chosen camera, using OpenEye's \"Scenario\" event type (add Video → Scenario to the camera's Alert Rule in OWS). Ideal for things only Homey knows: a temperature below a limit, a door open too long, a sensor tripped.",
+              "sv": "Skapar ett larm med valfritt namn på vald kamera via OpenEyes händelsetyp \"Scenario\" (lägg till Video → Scenario i kamerans Alert Rule i OWS). Perfekt för sådant bara Homey vet: temperatur under en gräns, dörr öppen för länge, en sensor som löst ut.",
+              "da": "Opretter en alarm med et valgfrit navn på det valgte kamera via OpenEyes hændelsestype \"Scenario\" (tilføj Video → Scenario i kameraets Alert Rule i OWS). Ideelt til det, kun Homey ved: temperatur under en grænse, dør åben for længe, en sensor der er udløst.",
+              "no": "Oppretter en alarm med valgfritt navn på valgt kamera via OpenEyes hendelsestype \"Scenario\" (legg til Video → Scenario i kameraets Alert Rule i OWS). Ideelt for det bare Homey vet: temperatur under en grense, dør åpen for lenge, en sensor som er utløst.",
+              "de": "Erzeugt einen Alarm mit frei wählbarem Namen auf der gewählten Kamera über OpenEyes Ereignistyp \"Scenario\" (in OWS Video → Scenario zur Alert Rule der Kamera hinzufügen). Ideal für alles, was nur Homey weiß: Temperatur unter einem Grenzwert, Tür zu lange offen, ausgelöster Sensor.",
+              "nl": "Maakt een alarm met een zelfgekozen naam op de gekozen camera via OpenEyes gebeurtenistype \"Scenario\" (voeg in OWS Video → Scenario toe aan de Alert Rule van de camera). Ideaal voor wat alleen Homey weet: temperatuur onder een grens, deur te lang open, een sensor die afgaat.",
+              "fr": "Crée une alarme au nom de votre choix sur la caméra choisie via le type d'événement \"Scenario\" d'OpenEye (ajoutez Video → Scenario à l'Alert Rule de la caméra dans OWS). Idéal pour ce que seul Homey sait : température sous un seuil, porte ouverte trop longtemps, capteur déclenché.",
+              "es": "Crea una alarma con el nombre que elija en la cámara seleccionada mediante el tipo de evento \"Scenario\" de OpenEye (añada Video → Scenario a la Alert Rule de la cámara en OWS). Ideal para lo que solo Homey sabe: temperatura por debajo de un límite, puerta abierta demasiado tiempo, un sensor activado.",
+              "it": "Crea un allarme con un nome a scelta sulla telecamera selezionata tramite il tipo di evento \"Scenario\" di OpenEye (aggiungi Video → Scenario alla Alert Rule della telecamera in OWS). Ideale per ciò che solo Homey sa: temperatura sotto una soglia, porta aperta troppo a lungo, un sensore scattato.",
+              "pl": "Tworzy alarm o dowolnej nazwie na wybranej kamerze przez typ zdarzenia \"Scenario\" w OpenEye (dodaj Video → Scenario do Alert Rule kamery w OWS). Idealne do tego, co wie tylko Homey: temperatura poniżej progu, drzwi zbyt długo otwarte, wyzwolony czujnik.",
+              "ru": "Создаёт тревогу с произвольным именем на выбранной камере через тип события OpenEye \"Scenario\" (добавьте Video → Scenario в Alert Rule камеры в OWS). Идеально для того, что знает только Homey: температура ниже порога, дверь открыта слишком долго, сработавший датчик.",
+              "uk": "Створює тривогу з довільною назвою на вибраній камері через тип події OpenEye \"Scenario\" (додайте Video → Scenario до Alert Rule камери в OWS). Ідеально для того, що знає лише Homey: температура нижче порога, двері відчинені надто довго, спрацював датчик.",
+              "el": "Δημιουργεί συναγερμό με όνομα της επιλογής σας στην επιλεγμένη κάμερα μέσω του τύπου συμβάντος \"Scenario\" του OpenEye (προσθέστε Video → Scenario στον Alert Rule της κάμερας στο OWS). Ιδανικό για όσα ξέρει μόνο το Homey: θερμοκρασία κάτω από όριο, πόρτα ανοιχτή πολλή ώρα, αισθητήρας που ενεργοποιήθηκε.",
+              "ko": "OpenEye의 \"Scenario\" 이벤트 유형을 사용하여 선택한 카메라에 원하는 이름의 알람을 만듭니다(OWS에서 카메라의 Alert Rule에 Video → Scenario 추가). Homey만 아는 상황에 적합: 한계 이하의 온도, 너무 오래 열린 문, 작동한 센서.",
+              "zh": "使用 OpenEye 的 \"Scenario\" 事件类型在所选摄像机上创建自定义名称的报警（在 OWS 中将 Video → Scenario 添加到该摄像机的 Alert Rule）。适合只有 Homey 知道的情况：温度低于阈值、门开得太久、传感器触发。"
+            },
+            "args": [
+              {
+                "name": "camera",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Camera",
+                  "sv": "Kamera",
+                  "de": "Kamera",
+                  "fr": "Caméra",
+                  "it": "Telecamera",
+                  "nl": "Camera",
+                  "no": "Kamera",
+                  "da": "Kamera",
+                  "uk": "Камера",
+                  "el": "Κάμερα",
+                  "es": "Cámara",
+                  "ko": "카메라",
+                  "pl": "Kamera",
+                  "ru": "Камера",
+                  "zh": "摄像机"
+                }
+              },
+              {
+                "name": "name",
+                "type": "text",
+                "title": {
+                  "en": "Alert name",
+                  "sv": "Larmnamn",
+                  "da": "Alarmnavn",
+                  "no": "Alarmnavn",
+                  "de": "Alarmname",
+                  "nl": "Alarmnaam",
+                  "fr": "Nom de l'alarme",
+                  "es": "Nombre de la alarma",
+                  "it": "Nome dell'allarme",
+                  "pl": "Nazwa alarmu",
+                  "ru": "Название тревоги",
+                  "uk": "Назва тривоги",
+                  "el": "Όνομα συναγερμού",
+                  "ko": "알람 이름",
+                  "zh": "报警名称"
+                },
+                "placeholder": {
+                  "en": "e.g. Temperature below 5 °C",
+                  "sv": "t.ex. Temperatur under 5 °C",
+                  "da": "f.eks. Temperatur under 5 °C",
+                  "no": "f.eks. Temperatur under 5 °C",
+                  "de": "z. B. Temperatur unter 5 °C",
+                  "nl": "bijv. Temperatuur onder 5 °C",
+                  "fr": "p. ex. Température sous 5 °C",
+                  "es": "p. ej. Temperatura por debajo de 5 °C",
+                  "it": "es. Temperatura sotto 5 °C",
+                  "pl": "np. Temperatura poniżej 5 °C",
+                  "ru": "напр. Температура ниже 5 °C",
+                  "uk": "напр. Температура нижче 5 °C",
+                  "el": "π.χ. Θερμοκρασία κάτω από 5 °C",
+                  "ko": "예: 5 °C 미만 온도",
+                  "zh": "例如 温度低于 5 °C"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T09:55:31.173Z",
+      "bugs": null,
+      "homepage": "https://github.com/Frimurare/openeye-events-manual",
+      "support": "mailto:ulf@manvarg.se",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "First App Store release. Real-time alerts from OpenEye (Alert Push with Alert Feed backup) as Flow triggers with event type, camera and the picture from the alert moment. Cameras as Homey devices with live video, latest-alarm video and picture, and a timestamped still image. Flow actions that raise alerts in OpenEye from any Homey device. Several OpenEye accounts per Homey. 15 languages. Manual (English and Swedish) linked from the settings page.",
+        "sv": "Första utgåvan i App Store. Realtidslarm från OpenEye (Alert Push med Alert Feed som reserv) som Flow-triggers med händelsetyp, kamera och bilden från larmögonblicket. Kameror som Homey-enheter med livevideo, senaste larmets video och bild samt tidsstämplad stillbild. Flow-kort som skapar larm i OpenEye från valfri Homey-enhet. Flera OpenEye-konton per Homey. 15 språk. Manual (engelska och svenska) länkad från inställningssidan."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "openeye",
+          "ows",
+          "camera",
+          "cameras",
+          "alert",
+          "alerts",
+          "video",
+          "surveillance",
+          "security"
+        ],
+        "sv": [
+          "openeye",
+          "ows",
+          "kamera",
+          "kameror",
+          "larm",
+          "video",
+          "övervakning",
+          "säkerhet"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.7.7",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a5bc6852ddac2379c777757",
+      "type": "user",
+      "userId": "644993e61701bf0b7cc0a0b2",
+      "name": "Ulf Holmström",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "se.krister.nuvo.grandconcerto",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "NuVo Grand Concerto",
+        "sv": "NuVo Grand Concerto"
+      },
+      "version": "0.5.12",
+      "readme": {
+        "en": "Bring your NuVo Grand Concerto whole-home audio system into everyday life with simple room-by-room control from Homey Pro. Choose a source, adjust volume, play music and radio, and keep every zone synchronized with the original NuVo wall panels.\n\nThe app connects locally through an Autonomic NV-MPS4, bringing multi-room playback, live media information and spoken Flow announcements together in one clear Homey experience.\n",
+        "sv": "Gör ditt NuVo Grand Concerto-system till en naturlig del av vardagen med enkel styrning rum för rum från Homey Pro. Välj källa, justera volymen, spela musik och radio och håll alla zoner synkroniserade med de ursprungliga NuVo-panelerna.\n\nAppen ansluter lokalt via en Autonomic NV-MPS4 och samlar uppspelning i flera rum, aktuell musikinformation och talade Flow-meddelanden i en tydlig Homey-upplevelse.\n"
+      },
+      "description": {
+        "en": "Fill every room with the music you love.",
+        "sv": "Fyll hemmets alla rum med musiken du älskar."
+      },
+      "category": "music",
+      "brandColor": "#34423A",
+      "icon": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "zone",
+          "name": {
+            "en": "NuVo zone",
+            "sv": "NuVo-zon"
+          },
+          "class": "speaker",
+          "capabilities": [
+            "onoff",
+            "speaker_prev",
+            "speaker_playing",
+            "speaker_next",
+            "volume_set",
+            "volume_mute",
+            "nuvo_source",
+            "speaker_track",
+            "speaker_artist",
+            "speaker_album"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/drivers/zone/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/drivers/zone/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/drivers/zone/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "zone_power_on",
+            "title": {
+              "en": "Turn a zone on",
+              "sv": "Slå på en zon"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          },
+          {
+            "id": "zone_power_off",
+            "title": {
+              "en": "Turn a zone off",
+              "sv": "Stäng av en zon"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          },
+          {
+            "id": "zone_set_volume",
+            "title": {
+              "en": "Set zone volume",
+              "sv": "Ställ in zonvolym"
+            },
+            "titleFormatted": {
+              "en": "Set volume to [[volume]]%",
+              "sv": "Ställ volymen till [[volume]] %"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "volume",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "title": {
+                  "en": "Volume (%)",
+                  "sv": "Volym (%)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "zone_mute_on",
+            "title": {
+              "en": "Mute a zone",
+              "sv": "Tysta en zon"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          },
+          {
+            "id": "zone_mute_off",
+            "title": {
+              "en": "Unmute a zone",
+              "sv": "Slå av mute i en zon"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          },
+          {
+            "id": "zone_set_source",
+            "title": {
+              "en": "Set zone source",
+              "sv": "Byt källa i en zon"
+            },
+            "titleFormatted": {
+              "en": "Set source to [[source]]",
+              "sv": "Byt källa till [[source]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "source",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Source",
+                  "sv": "Källa"
+                },
+                "placeholder": {
+                  "en": "Choose source",
+                  "sv": "Välj källa"
+                }
+              }
+            ]
+          },
+          {
+            "id": "zone_next",
+            "title": {
+              "en": "Next track",
+              "sv": "Nästa låt"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          },
+          {
+            "id": "zone_previous",
+            "title": {
+              "en": "Previous track",
+              "sv": "Föregående låt"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              }
+            ]
+          },
+          {
+            "id": "zone_play_radio",
+            "title": {
+              "en": "Play a radio station",
+              "sv": "Spela en radiokanal"
+            },
+            "titleFormatted": {
+              "en": "Play [[station]]",
+              "sv": "Spela [[station]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "station",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Station",
+                  "sv": "Radiokanal"
+                },
+                "placeholder": {
+                  "en": "Choose station",
+                  "sv": "Välj kanal"
+                }
+              }
+            ]
+          },
+          {
+            "id": "zone_speak_text",
+            "title": {
+              "en": "Speak text in NuVo",
+              "sv": "Säg en text i NuVo"
+            },
+            "titleFormatted": {
+              "en": "Say [[text]] in [[rooms]] via [[source]] at [[volume]]%",
+              "sv": "Säg [[text]] i [[rooms]] via [[source]] med [[volume]] %"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=zone"
+              },
+              {
+                "name": "text",
+                "type": "text",
+                "title": {
+                  "en": "Text",
+                  "sv": "Text"
+                },
+                "placeholder": {
+                  "en": "Welcome home",
+                  "sv": "Välkommen hem"
+                }
+              },
+              {
+                "name": "rooms",
+                "type": "dropdown",
+                "title": {
+                  "en": "Rooms",
+                  "sv": "Rum"
+                },
+                "values": [
+                  {
+                    "id": "selected",
+                    "title": {
+                      "en": "Selected room",
+                      "sv": "Valt rum"
+                    }
+                  },
+                  {
+                    "id": "powered",
+                    "title": {
+                      "en": "All powered rooms",
+                      "sv": "Alla påslagna rum"
+                    }
+                  },
+                  {
+                    "id": "all",
+                    "title": {
+                      "en": "All rooms",
+                      "sv": "Alla rum"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "source",
+                "type": "dropdown",
+                "title": {
+                  "en": "Announcement source",
+                  "sv": "Talkälla"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "title": {
+                      "en": "Music Server A",
+                      "sv": "Music Server A"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "title": {
+                      "en": "Music Server B",
+                      "sv": "Music Server B"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "title": {
+                      "en": "Music Server C",
+                      "sv": "Music Server C"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "title": {
+                      "en": "Music Server D",
+                      "sv": "Music Server D"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "volume",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "title": {
+                  "en": "Volume (%)",
+                  "sv": "Volym (%)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": {
+        "nuvo-control": {
+          "id": "nuvo-control",
+          "name": {
+            "en": "NuVo Control",
+            "sv": "NuVo-kontroll"
+          },
+          "height": 330,
+          "transparent": false,
+          "settings": [],
+          "api": {
+            "getState": {
+              "method": "GET",
+              "path": "/state"
+            },
+            "command": {
+              "method": "POST",
+              "path": "/command"
+            },
+            "search": {
+              "method": "POST",
+              "path": "/search"
+            }
+          },
+          "previewDark": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/widgets/nuvo-control/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/se.krister.nuvo.grandconcerto/3/ef2e26b0-f557-4e54-9217-7401b6d8c35b/widgets/nuvo-control/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T14:37:06.599Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Adds automatic NV-MPS4 discovery and refreshes the App Store text, hardware artwork, icons and widget previews for certification.",
+        "sv": "Lägger till automatisk upptäckt av NV-MPS4 och uppdaterar butikstext, hårdvarubilder, ikoner och widgetbilder inför certifiering."
+      },
+      "compatibility": ">=12.6.1",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.5.12",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a80287ac6a80eeabce30ab5",
+      "type": "user",
+      "userId": "6559ef03757c154b8150ab64",
+      "name": "krister Olsson",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "de.ftedv.irremote",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Universal Remote",
+        "de": "Universal Remote"
+      },
+      "version": "1.2.1",
+      "readme": {
+        "en": "Create virtual remotes for the devices you already control by hand. Learn button commands through an ESPHome/MQTT receiver or enter compatible codes manually, then send them from the Homey device interface or from Flow. Each virtual remote can transmit through Homey and its selected Bridge or through an ESPHome IR blaster over MQTT.\n\nButtons can be added, renamed, tested, relearned or removed at any time. Each remote also has its own portable JSON backup in the Repair view, making it easy to preserve or restore its buttons and output configuration without changing the Homey device identity or Bridge assignment.\n",
+        "de": "Erstelle virtuelle Fernbedienungen für Geräte, die du bisher von Hand steuerst. Tastenbefehle lassen sich über einen ESPHome/MQTT-Empfänger anlernen oder als kompatible Codes manuell eintragen und anschließend direkt aus der Homey-Geräteansicht oder per Flow senden. Jede virtuelle Fernbedienung kann wahlweise über Homey und die ausgewählte Bridge oder über einen ESPHome-IR-Blaster per MQTT senden.\n\nTasten können jederzeit hinzugefügt, umbenannt, getestet, neu angelernt oder gelöscht werden. Jede Fernbedienung besitzt außerdem eine eigene portable JSON-Sicherung in der Reparaturansicht, mit der sich Tasten und Ausgabekonfiguration sichern oder wiederherstellen lassen, ohne die Homey-Geräte-ID oder die Bridge-Zuordnung zu verändern.\n"
+      },
+      "description": {
+        "en": "Turn everyday remotes into flexible virtual controls",
+        "de": "Macht klassische Fernbedienungen zu flexiblen virtuellen Steuerungen"
+      },
+      "category": "tools",
+      "brandColor": "#D64A2F",
+      "icon": "https://apps.homeycdn.net/app/de.ftedv.irremote/4/a2d00ebe-f262-4fda-9c0f-c0d009a50f5d/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/de.ftedv.irremote/4/a2d00ebe-f262-4fda-9c0f-c0d009a50f5d/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/de.ftedv.irremote/4/a2d00ebe-f262-4fda-9c0f-c0d009a50f5d/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "ir_remote",
+          "name": {
+            "en": "Remote Control",
+            "de": "Fernbedienung"
+          },
+          "class": "remote",
+          "capabilities": [],
+          "imageSmall": "https://apps.homeycdn.net/app/de.ftedv.irremote/4/a2d00ebe-f262-4fda-9c0f-c0d009a50f5d/drivers/ir_remote/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/de.ftedv.irremote/4/a2d00ebe-f262-4fda-9c0f-c0d009a50f5d/drivers/ir_remote/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "infrared",
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/de.ftedv.irremote/4/a2d00ebe-f262-4fda-9c0f-c0d009a50f5d/drivers/ir_remote/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "send_button",
+            "title": {
+              "en": "Send a button",
+              "de": "Taste senden"
+            },
+            "titleFormatted": {
+              "en": "Send [[button]]",
+              "de": "[[button]] senden"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ir_remote"
+              },
+              {
+                "name": "button",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Button",
+                  "de": "Taste"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159406,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T14:35:26.247Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://community.homey.app/t/app-pro-universal-remote/159406",
+      "source": null,
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "ftrueck"
+          },
+          "patreon": {
+            "username": "ftrueck"
+          }
+        }
+      },
+      "permissions": [
+        "homey:wireless:ir"
+      ],
+      "changelog": {
+        "en": "Rework on assets"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "remote control",
+          "television",
+          "audio",
+          "automation"
+        ],
+        "de": [
+          "Fernbedienung",
+          "Fernseher",
+          "Audio",
+          "Automation"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.2.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a0758532688d233be48510d",
+      "type": "user",
+      "userId": "6a005ef33f53b92dab181843",
+      "name": "Florian Trück",
+      "verified": false
+    },
+    "communityTopicId": 159406
+  },
+  {
+    "id": "com.winkison.ledlight",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "iDeal LED+"
+      },
+      "version": "1.0.2",
+      "readme": {
+        "en": "Connect your ideal LED+ smart fairy lights to Homey. When controlling the device for the first time since a restart, it may take a while to connect to the device. Note that the connection is stateless, which means that any status changes made from the ideal LED+ mobile app or the remote control won't get reflected in Homey."
+      },
+      "description": {
+        "en": "Affordable smart fairy lights"
+      },
+      "category": "lights",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/com.winkison.ledlight/3/ae313b3c-8e1a-4b59-83f8-b069783ec005/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.winkison.ledlight/3/ae313b3c-8e1a-4b59-83f8-b069783ec005/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.winkison.ledlight/3/ae313b3c-8e1a-4b59-83f8-b069783ec005/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "fairy-lights",
+          "name": {
+            "en": "Fairy lights"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "light_mode"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.winkison.ledlight/3/ae313b3c-8e1a-4b59-83f8-b069783ec005/drivers/fairy-lights/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.winkison.ledlight/3/ae313b3c-8e1a-4b59-83f8-b069783ec005/drivers/fairy-lights/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "ble"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.winkison.ledlight/3/ae313b3c-8e1a-4b59-83f8-b069783ec005/drivers/fairy-lights/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159508,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T14:06:26.410Z",
+      "bugs": "https://github.com/smarthomesven/homey-ideal-led/issues",
+      "homepage": null,
+      "support": null,
+      "source": "https://github.com/smarthomesven/homey-ideal-led",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:ble"
+      ],
+      "changelog": {
+        "en": "Fixed images"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "electight"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.2",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "68e268c515677f0f51ffe6f4",
+      "type": "user",
+      "userId": "61a14172451f950bc20cc18a",
+      "name": "Sven Serlier",
+      "verified": false
+    },
+    "communityTopicId": 159508
+  },
+  {
+    "id": "com.solarbuffer",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "SolarBuffer",
+        "nl": "SolarBuffer"
+      },
+      "version": "0.1.2",
+      "readme": {
+        "en": "Your solar panels produce more than your house uses, and the surplus goes back to the grid for a fraction of what you pay for it. SolarBuffer puts that surplus into your water heater instead, so you shower on your own sunshine.\n\nA SolarBuffer sits between the wall socket and your electric water heater. It measures what your smart meter is doing and continuously adjusts the heater to match your surplus. Not on or off, but exactly the power that would otherwise be exported. A cloud passes, the heater follows.\n\nThis app brings that to Homey.\n\nWHAT YOU SEE\n\nThe status of your installation in one word, your grid power, and for every SolarBuffer what it is drawing and how much it used today. Have solar measurement or a home battery connected, then you see those too, including the battery level.\n\nWHAT YOU CAN DO\n\nSwitch the regulation, schedules, anti-legionella and holiday mode. Turn each SolarBuffer on or off, set it by hand, or give it a boost. With a Zendure battery connected you can also set the battery mode, direction and power.\n\nAll of it works in Flows, so you can combine your hot water with everything else in your home.\n\nGOOD TO KNOW\n\nYour SolarBuffer keeps working on its own, also when Homey is off. This app is the window onto it, not the brain behind it.\n\nEverything runs locally over your own network. No cloud, no account with us, nothing leaves your house.\n\nYou need a SolarBuffer installation with the hub. Because the hub lives on your local network, this app works on Homey Pro and Homey Self-Hosted Server, not on Homey Cloud or a Homey Bridge.\n\nMore at solarbuffer.nl\n",
+        "nl": "Je zonnepanelen wekken meer op dan je huis verbruikt, en dat overschot gaat het net op voor een fractie van wat je er zelf voor betaalt. SolarBuffer stopt dat overschot in je boiler, zodat je doucht op je eigen zon.\n\nEen SolarBuffer zit tussen het stopcontact en je elektrische boiler. Hij meet wat je slimme meter doet en stuurt het vermogen van die boiler doorlopend mee met je overschot. Niet aan of uit, maar precies het vermogen dat anders teruggeleverd zou worden. Trekt er een wolk over, dan zakt de boiler mee.\n\nDeze app brengt dat naar Homey.\n\nWAT JE ZIET\n\nDe toestand van je installatie in één woord, je netvermogen, en per SolarBuffer wat hij trekt en hoeveel hij vandaag heeft verbruikt. Heb je een zonnemeting of een thuisbatterij gekoppeld, dan zie je die er ook bij, inclusief de laadstand.\n\nWAT JE KUNT DOEN\n\nDe regeling, tijdschema's, anti-legionella en de vakantiestand aan en uit zetten. Elke SolarBuffer aan of uit, handmatig op een stand zetten, of een boost geven. Met een gekoppelde Zendure ook de accustand, de richting en het vermogen.\n\nHet werkt allemaal in Flows, dus je kunt je warm water combineren met alles wat er verder in huis gebeurt.\n\nGOED OM TE WETEN\n\nJe SolarBuffer blijft gewoon zijn werk doen, ook als Homey uit staat. Deze app is het venster erop, niet het brein erachter.\n\nAlles loopt lokaal over je eigen netwerk. Geen cloud, geen account bij ons, er verlaat niets je huis.\n\nJe hebt een SolarBuffer-installatie met de hub nodig. Omdat die hub op je eigen netwerk staat, werkt deze app op Homey Pro en Homey Self-Hosted Server, en niet op Homey Cloud of een Homey Bridge.\n\nMeer op solarbuffer.nl\n"
+      },
+      "description": {
+        "en": "Turn your solar surplus into hot water, and keep an eye on your boiler and home battery from Homey.",
+        "nl": "Zet je zonoverschot om in warm water en houd je boiler en thuisbatterij in de gaten vanuit Homey."
+      },
+      "category": "energy",
+      "brandColor": "#E8821E",
+      "icon": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "buffer",
+          "name": {
+            "en": "SolarBuffer",
+            "nl": "SolarBuffer"
+          },
+          "class": "heater",
+          "capabilities": [
+            "sb_status",
+            "onoff",
+            "dim",
+            "measure_power",
+            "meter_power",
+            "button"
+          ],
+          "capabilitiesOptions": {
+            "dim": {
+              "title": {
+                "en": "Output",
+                "nl": "Stand"
+              }
+            },
+            "meter_power": {
+              "title": {
+                "en": "Energy today",
+                "nl": "Energie vandaag"
+              }
+            },
+            "button": {
+              "title": {
+                "en": "Boost",
+                "nl": "Boost"
+              },
+              "maintenanceAction": false
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/drivers/buffer/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/drivers/buffer/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/drivers/buffer/assets/icon.svg"
         },
         {
-          "id": "departement",
+          "id": "hub",
           "name": {
-            "en": "Vigilance",
-            "fr": "Vigilance",
-            "de": "Wachsamkeit",
-            "es": "Vigilancia",
-            "it": "Vigilanza",
-            "nl": "Waakzaamheid"
+            "en": "SolarBuffer Hub",
+            "nl": "SolarBuffer Hub"
           },
           "class": "sensor",
           "capabilities": [
-            "phenomene",
-            "phenomene.vent",
-            "phenomene.pluie_inondation",
-            "phenomene.orages",
-            "phenomene.inondation",
-            "phenomene.neige_verglas",
-            "phenomene.canicule",
-            "phenomene.grand_froid",
-            "phenomene.avalanches",
-            "phenomene.vagues_submersion"
+            "sb_status",
+            "onoff",
+            "onoff.schedules",
+            "onoff.legionella",
+            "onoff.vacation",
+            "measure_power"
           ],
           "capabilitiesOptions": {
-            "phenomene": {
+            "onoff": {
               "title": {
-                "en": "Worst level",
-                "fr": "Pire niveau",
-                "de": "Höchste Stufe",
-                "es": "Peor nivel",
-                "it": "Livello peggiore",
-                "nl": "Ergste niveau"
+                "en": "Regulation",
+                "nl": "Regeling"
               }
             },
-            "phenomene.vent": {
+            "onoff.schedules": {
               "title": {
-                "en": "Wind",
-                "fr": "Vent violent",
-                "de": "Starker Wind",
-                "es": "Viento fuerte",
-                "it": "Vento forte",
-                "nl": "Harde wind"
+                "en": "Schedules",
+                "nl": "Tijdschema's"
               }
             },
-            "phenomene.pluie_inondation": {
+            "onoff.legionella": {
               "title": {
-                "en": "Rain-flood",
-                "fr": "Pluie-inondation",
-                "de": "Regen-Überschwemmung",
-                "es": "Lluvia-inundación",
-                "it": "Pioggia-alluvione",
-                "nl": "Regen-overstroming"
+                "en": "Anti-legionella",
+                "nl": "Anti-legionella"
               }
             },
-            "phenomene.orages": {
+            "onoff.vacation": {
               "title": {
-                "en": "Thunderstorms",
-                "fr": "Orages",
-                "de": "Gewitter",
-                "es": "Tormentas",
-                "it": "Temporali",
-                "nl": "Onweer"
+                "en": "Vacation mode",
+                "nl": "Vakantiestand"
               }
             },
-            "phenomene.inondation": {
+            "measure_power": {
               "title": {
-                "en": "Flood",
-                "fr": "Inondation",
-                "de": "Überschwemmung",
-                "es": "Inundación",
-                "it": "Alluvione",
-                "nl": "Overstroming"
+                "en": "Grid power",
+                "nl": "Netvermogen"
               }
             },
-            "phenomene.neige_verglas": {
+            "measure_power.solar": {
               "title": {
-                "en": "Snow/ice",
-                "fr": "Neige-verglas",
-                "de": "Schnee/Glätte",
-                "es": "Nieve-hielo",
-                "it": "Neve-ghiaccio",
-                "nl": "Sneeuw/ijzel"
+                "en": "Solar power",
+                "nl": "Zonnevermogen"
               }
             },
-            "phenomene.canicule": {
+            "measure_power.battery": {
               "title": {
-                "en": "Heat wave",
-                "fr": "Canicule",
-                "de": "Hitzewelle",
-                "es": "Ola de calor",
-                "it": "Ondata di calore",
-                "nl": "Hittegolf"
-              }
-            },
-            "phenomene.grand_froid": {
-              "title": {
-                "en": "Extreme cold",
-                "fr": "Grand froid",
-                "de": "Extreme Kälte",
-                "es": "Frío extremo",
-                "it": "Freddo estremo",
-                "nl": "Extreme kou"
-              }
-            },
-            "phenomene.avalanches": {
-              "title": {
-                "en": "Avalanches",
-                "fr": "Avalanches",
-                "de": "Lawinen",
-                "es": "Avalanchas",
-                "it": "Valanghe",
-                "nl": "Lawines"
-              }
-            },
-            "phenomene.vagues_submersion": {
-              "title": {
-                "en": "Coastal event",
-                "fr": "Vagues-submersion",
-                "de": "Küstenereignis",
-                "es": "Olas-sumersión",
-                "it": "Onde-sommersione",
-                "nl": "Kustgebeurtenis"
+                "en": "Battery power",
+                "nl": "Accuvermogen"
               }
             }
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/drivers/departement/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/drivers/departement/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/drivers/hub/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/drivers/hub/assets/images/large.png",
           "platforms": [
             "local"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.rapinology.hmeteo/1/28a3a3a1-614e-4b0c-bf1d-7215d2d6e260/drivers/departement/assets/icon.svg",
-          "connectivity": null
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.solarbuffer/2/9dbf20c3-10cb-4431-9d65-36624c43e3f0/drivers/hub/assets/icon.svg"
         }
       ],
       "flow": {
@@ -250,67 +3330,697 @@
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-16T08:53:56.749Z",
+      "stateChangedAt": "2026-09-16T14:05:10.987Z",
       "bugs": null,
-      "homepage": "https://www.rapinology.com",
-      "support": "mailto:info@rapinology.com",
+      "homepage": "https://www.solarbuffer.nl",
+      "support": "mailto:info@solarbuffer.nl",
       "source": null,
-      "contributors": {
-        "developers": [
-          {
-            "name": "Henri Dominique Rapin"
-          }
-        ],
-        "translators": []
-      },
+      "contributors": null,
       "contributing": null,
       "permissions": [],
       "changelog": {
-        "en": "Version initiale"
+        "en": "Eerste versie."
       },
-      "compatibility": ">=12.2.0",
+      "compatibility": ">=12.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.1.2",
+    "testBuild": {
+      "id": 5,
+      "name": {
+        "en": "SolarBuffer",
+        "nl": "SolarBuffer"
+      },
+      "version": "0.1.5",
+      "readme": {
+        "en": "Your solar panels produce more than your house uses, and the surplus goes back to the grid for a fraction of what you pay for it. SolarBuffer puts that surplus into your water heater instead, so you shower on your own sunshine.\n\nA SolarBuffer sits between the wall socket and your electric water heater. It measures what your smart meter is doing and continuously adjusts the heater to match your surplus. Not on or off, but exactly the power that would otherwise be exported. A cloud passes, the heater follows.\n\nThis app brings that to Homey.\n\nWHAT YOU SEE\n\nThe status of your installation in one word, your grid power, and for every SolarBuffer what it is drawing and how much it used today. Have solar measurement or a home battery connected, then you see those too, including the battery level.\n\nWHAT YOU CAN DO\n\nSwitch the regulation, schedules, anti-legionella and holiday mode. Turn each SolarBuffer on or off, set it by hand, or give it a boost. With a Zendure battery connected you can also set the battery mode, direction and power.\n\nAll of it works in Flows, so you can combine your hot water with everything else in your home.\n\nGOOD TO KNOW\n\nYour SolarBuffer keeps working on its own, also when Homey is off. This app is the window onto it, not the brain behind it.\n\nEverything runs locally over your own network. No cloud, no account with us, nothing leaves your house.\n\nYou need a SolarBuffer installation with the hub. Because the hub lives on your local network, this app works on Homey Pro and Homey Self-Hosted Server, not on Homey Cloud or a Homey Bridge.\n\nMore at solarbuffer.nl\n",
+        "nl": "Je zonnepanelen wekken meer op dan je huis verbruikt, en dat overschot gaat het net op voor een fractie van wat je er zelf voor betaalt. SolarBuffer stopt dat overschot in je boiler, zodat je doucht op je eigen zon.\n\nEen SolarBuffer zit tussen het stopcontact en je elektrische boiler. Hij meet wat je slimme meter doet en stuurt het vermogen van die boiler doorlopend mee met je overschot. Niet aan of uit, maar precies het vermogen dat anders teruggeleverd zou worden. Trekt er een wolk over, dan zakt de boiler mee.\n\nDeze app brengt dat naar Homey.\n\nWAT JE ZIET\n\nDe toestand van je installatie in één woord, je netvermogen, en per SolarBuffer wat hij trekt en hoeveel hij vandaag heeft verbruikt. Heb je een zonnemeting of een thuisbatterij gekoppeld, dan zie je die er ook bij, inclusief de laadstand.\n\nWAT JE KUNT DOEN\n\nDe regeling, tijdschema's, anti-legionella en de vakantiestand aan en uit zetten. Elke SolarBuffer aan of uit, handmatig op een stand zetten, of een boost geven. Met een gekoppelde Zendure ook de accustand, de richting en het vermogen.\n\nHet werkt allemaal in Flows, dus je kunt je warm water combineren met alles wat er verder in huis gebeurt.\n\nGOED OM TE WETEN\n\nJe SolarBuffer blijft gewoon zijn werk doen, ook als Homey uit staat. Deze app is het venster erop, niet het brein erachter.\n\nAlles loopt lokaal over je eigen netwerk. Geen cloud, geen account bij ons, er verlaat niets je huis.\n\nJe hebt een SolarBuffer-installatie met de hub nodig. Omdat die hub op je eigen netwerk staat, werkt deze app op Homey Pro en Homey Self-Hosted Server, en niet op Homey Cloud of een Homey Bridge.\n\nMeer op solarbuffer.nl\n"
+      },
+      "description": {
+        "en": "Turn your solar surplus into hot water",
+        "nl": "Zet je zonoverschot om in warm water"
+      },
+      "category": "energy",
+      "brandColor": "#E8821E",
+      "icon": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "buffer",
+          "name": {
+            "en": "SolarBuffer",
+            "nl": "SolarBuffer"
+          },
+          "class": "heater",
+          "capabilities": [
+            "sb_status",
+            "onoff",
+            "dim",
+            "measure_power",
+            "meter_power",
+            "button"
+          ],
+          "capabilitiesOptions": {
+            "dim": {
+              "title": {
+                "en": "Output",
+                "nl": "Stand"
+              }
+            },
+            "meter_power": {
+              "title": {
+                "en": "Energy today",
+                "nl": "Energie vandaag"
+              }
+            },
+            "button": {
+              "title": {
+                "en": "Boost",
+                "nl": "Boost"
+              },
+              "maintenanceAction": false
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/drivers/buffer/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/drivers/buffer/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/drivers/buffer/assets/icon.svg"
+        },
+        {
+          "id": "hub",
+          "name": {
+            "en": "SolarBuffer Hub",
+            "nl": "SolarBuffer Hub"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "sb_status",
+            "onoff",
+            "onoff.schedules",
+            "onoff.legionella",
+            "onoff.vacation",
+            "measure_power"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Regulation",
+                "nl": "Regeling"
+              }
+            },
+            "onoff.schedules": {
+              "title": {
+                "en": "Schedules",
+                "nl": "Tijdschema's"
+              }
+            },
+            "onoff.legionella": {
+              "title": {
+                "en": "Anti-legionella",
+                "nl": "Anti-legionella"
+              }
+            },
+            "onoff.vacation": {
+              "title": {
+                "en": "Vacation mode",
+                "nl": "Vakantiestand"
+              }
+            },
+            "measure_power": {
+              "title": {
+                "en": "Grid power",
+                "nl": "Netvermogen"
+              }
+            },
+            "measure_power.solar": {
+              "title": {
+                "en": "Solar power",
+                "nl": "Zonnevermogen"
+              }
+            },
+            "measure_power.battery": {
+              "title": {
+                "en": "Battery power",
+                "nl": "Accuvermogen"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/drivers/hub/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/drivers/hub/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.solarbuffer/5/f2ba0d52-3f89-4ef5-b2dd-98243d41efc3/drivers/hub/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "in_review",
+      "stateChangedAt": "2026-09-16T15:26:38.139Z",
+      "bugs": null,
+      "homepage": "https://www.solarbuffer.nl",
+      "support": "mailto:info@solarbuffer.nl",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "App-icoon met een uitgeschreven kleur, zodat het overal getekend wordt."
+      },
+      "compatibility": ">=12.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "testVersion": "0.1.5",
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6aa8ff6230dc90a8d6e0c90f",
+      "type": "user",
+      "userId": "6aa864686ac78887331395ed",
+      "name": "Enis vd Veld",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.patrick.brugopen",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Bridge Open",
+        "nl": "Brug Open"
+      },
+      "version": "1.0.2",
+      "readme": {
+        "en": "Add bridges in the Netherlands to Homey and see whether road traffic can pass. Search uses public Rijkswaterstaat data and, when needed, PDOK/Kadaster location data to recognize common bridge names. Use current and announced bridge openings in Flow for notifications and automations.\n\nStatus information is based on public NDW and Rijkswaterstaat data. Timing, coverage and completeness depend on the information supplied by these sources. PDOK Location API data is provided by Kadaster/PDOK under CC BY 4.0.\n",
+        "nl": "Voeg bruggen in Nederland toe aan Homey en zie of het wegverkeer kan passeren. De zoekfunctie gebruikt openbare Rijkswaterstaat-gegevens en, wanneer nodig, PDOK/Kadaster-locatiegegevens om gangbare brugnamen te herkennen. Gebruik actuele en aangekondigde brugopeningen in Flow voor meldingen en automatiseringen.\n\nStatusinformatie is gebaseerd op openbare gegevens van NDW en Rijkswaterstaat. Tijdigheid, dekking en volledigheid hangen af van de informatie die deze bronnen leveren. Gegevens uit de PDOK Location API worden geleverd door Kadaster/PDOK onder CC BY 4.0.\n"
+      },
+      "description": {
+        "en": "Know when a bridge may interrupt your route.",
+        "nl": "Weet wanneer een brug je route kan onderbreken."
+      },
+      "category": "tools",
+      "brandColor": "#0F667E",
+      "icon": "https://apps.homeycdn.net/app/com.patrick.brugopen/2/08acc51a-6393-4dda-b16e-dcf7f706ef89/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.patrick.brugopen/2/08acc51a-6393-4dda-b16e-dcf7f706ef89/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.patrick.brugopen/2/08acc51a-6393-4dda-b16e-dcf7f706ef89/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "bridge",
+          "name": {
+            "en": "Bridge",
+            "nl": "Brug"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "bridge_status",
+            "bridge_open_state",
+            "bridge_next_opening",
+            "bridge_last_check",
+            "bridge_data_status"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.patrick.brugopen/2/08acc51a-6393-4dda-b16e-dcf7f706ef89/drivers/bridge/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.patrick.brugopen/2/08acc51a-6393-4dda-b16e-dcf7f706ef89/drivers/bridge/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.patrick.brugopen/2/08acc51a-6393-4dda-b16e-dcf7f706ef89/drivers/bridge/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "bridge_closed",
+            "title": {
+              "en": "Bridge closed",
+              "nl": "Brug gesloten"
+            },
+            "hint": {
+              "en": "Triggers when the bridge becomes available to road traffic again.",
+              "nl": "Start wanneer de brug weer beschikbaar is voor wegverkeer."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "ended_at",
+                "type": "string",
+                "title": {
+                  "en": "Ended at",
+                  "nl": "Gesloten om"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bridge_opened",
+            "title": {
+              "en": "Bridge opened",
+              "nl": "Brug geopend"
+            },
+            "hint": {
+              "en": "Triggers when NDW reports that road traffic can no longer pass the bridge.",
+              "nl": "Start wanneer NDW meldt dat wegverkeer de brug niet meer kan passeren."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "started_at",
+                "type": "string",
+                "title": {
+                  "en": "Started at",
+                  "nl": "Gestart om"
+                }
+              },
+              {
+                "name": "expected_end",
+                "type": "string",
+                "title": {
+                  "en": "Expected end",
+                  "nl": "Verwacht einde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bridge_planned",
+            "title": {
+              "en": "Opening announced",
+              "nl": "Opening aangekondigd"
+            },
+            "hint": {
+              "en": "Triggers when NDW announces an upcoming bridge opening.",
+              "nl": "Start wanneer NDW een komende brugopening aankondigt."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "planned_start",
+                "type": "string",
+                "title": {
+                  "en": "Planned start",
+                  "nl": "Geplande start"
+                }
+              },
+              {
+                "name": "planned_end",
+                "type": "string",
+                "title": {
+                  "en": "Planned end",
+                  "nl": "Gepland einde"
+                }
+              },
+              {
+                "name": "probability",
+                "type": "string",
+                "title": {
+                  "en": "Probability",
+                  "nl": "Waarschijnlijkheid"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bridge_status_changed",
+            "title": {
+              "en": "Bridge status changed",
+              "nl": "Brugstatus gewijzigd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "previous_status",
+                "type": "string",
+                "title": {
+                  "en": "Previous status",
+                  "nl": "Vorige status"
+                }
+              },
+              {
+                "name": "previous_status_id",
+                "type": "string",
+                "title": {
+                  "en": "Previous status ID",
+                  "nl": "Vorige status-ID"
+                }
+              },
+              {
+                "name": "planned_start",
+                "type": "string",
+                "title": {
+                  "en": "Planned start",
+                  "nl": "Geplande start"
+                }
+              },
+              {
+                "name": "planned_end",
+                "type": "string",
+                "title": {
+                  "en": "Planned end",
+                  "nl": "Gepland einde"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "bridge_is_closed",
+            "title": {
+              "en": "Bridge is closed",
+              "nl": "Brug is dicht"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          },
+          {
+            "id": "bridge_is_open",
+            "title": {
+              "en": "Bridge is open",
+              "nl": "Brug is open"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          },
+          {
+            "id": "bridge_is_planned",
+            "title": {
+              "en": "Opening is announced",
+              "nl": "Opening is aangekondigd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          },
+          {
+            "id": "bridge_status_is",
+            "title": {
+              "en": "Bridge status is...",
+              "nl": "Brugstatus is..."
+            },
+            "titleFormatted": {
+              "en": "Bridge status is [[status]]",
+              "nl": "Brugstatus is [[status]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              },
+              {
+                "name": "status",
+                "type": "dropdown",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "values": [
+                  {
+                    "id": "unknown",
+                    "title": {
+                      "en": "Unknown",
+                      "nl": "Onbekend"
+                    }
+                  },
+                  {
+                    "id": "planned",
+                    "title": {
+                      "en": "Announced",
+                      "nl": "Aangekondigd"
+                    }
+                  },
+                  {
+                    "id": "open",
+                    "title": {
+                      "en": "Open",
+                      "nl": "Open"
+                    }
+                  },
+                  {
+                    "id": "closed",
+                    "title": {
+                      "en": "Closed",
+                      "nl": "Dicht"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "refresh_bridge_status",
+            "title": {
+              "en": "Refresh bridge status",
+              "nl": "Brugstatus verversen"
+            },
+            "hint": {
+              "en": "Immediately checks the NDW bridge feed.",
+              "nl": "Controleert direct de NDW-bruggenfeed."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T10:59:11.064Z",
+      "bugs": "https://github.com/glijie/brug-open-homey/issues",
+      "homepage": null,
+      "support": "https://github.com/glijie/brug-open-homey/issues",
+      "source": "https://github.com/glijie/brug-open-homey",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Nationwide bridge search improved using Rijkswaterstaat bridge, opening and ISRS names, with PDOK/Kadaster as a public-name fallback.",
+        "nl": "Landelijk brug zoeken verbeterd met Rijkswaterstaat brug-, doorvaartopening- en ISRS-namen, met PDOK/Kadaster als vangnet voor publieksnamen."
+      },
+      "compatibility": ">=7.4.0",
       "tags": {
         "en": [
-          "weather",
-          "forecast",
-          "rain",
-          "vigilance",
-          "France"
-        ],
-        "fr": [
-          "météo",
-          "prévisions",
-          "pluie",
-          "vigilance",
-          "France"
-        ],
-        "de": [
-          "Wetter",
-          "Vorhersage",
-          "Regen",
-          "Wachsamkeit",
-          "Frankreich"
-        ],
-        "es": [
-          "tiempo",
-          "previsión",
-          "lluvia",
-          "vigilancia",
-          "Francia"
-        ],
-        "it": [
-          "meteo",
-          "previsioni",
-          "pioggia",
-          "vigilanza",
-          "Francia"
+          "bridge",
+          "traffic",
+          "NDW",
+          "Netherlands",
+          "Flow"
         ],
         "nl": [
-          "weer",
-          "voorspelling",
-          "regen",
-          "waakzaamheid",
-          "Frankrijk"
+          "brug",
+          "verkeer",
+          "NDW",
+          "Nederland",
+          "Flow"
         ]
       },
       "platforms": [
@@ -321,16 +4031,512 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.1.0",
-    "testBuild": null,
-    "testVersion": null,
+    "liveVersion": "1.0.2",
+    "testBuild": {
+      "id": 3,
+      "name": {
+        "en": "Bridge Open",
+        "nl": "Brug Open"
+      },
+      "version": "1.0.3",
+      "readme": {
+        "en": "Add bridges in the Netherlands to Homey and see whether road traffic can pass. Search uses public Rijkswaterstaat data and, when needed, PDOK/Kadaster location data to recognize common bridge names. Use current and announced bridge openings in Flow for notifications and automations.\n\nStatus information is based on public NDW and Rijkswaterstaat data. Timing, coverage and completeness depend on the information supplied by these sources. PDOK Location API data is provided by Kadaster/PDOK under CC BY 4.0.\n",
+        "nl": "Voeg bruggen in Nederland toe aan Homey en zie of het wegverkeer kan passeren. De zoekfunctie gebruikt openbare Rijkswaterstaat-gegevens en, wanneer nodig, PDOK/Kadaster-locatiegegevens om gangbare brugnamen te herkennen. Gebruik actuele en aangekondigde brugopeningen in Flow voor meldingen en automatiseringen.\n\nStatusinformatie is gebaseerd op openbare gegevens van NDW en Rijkswaterstaat. Tijdigheid, dekking en volledigheid hangen af van de informatie die deze bronnen leveren. Gegevens uit de PDOK Location API worden geleverd door Kadaster/PDOK onder CC BY 4.0.\n"
+      },
+      "description": {
+        "en": "Know when a bridge may interrupt your route.",
+        "nl": "Weet wanneer een brug je route kan onderbreken."
+      },
+      "category": "tools",
+      "brandColor": "#0F667E",
+      "icon": "https://apps.homeycdn.net/app/com.patrick.brugopen/3/2be4d4ee-77a4-4871-a549-4fad2665dbf0/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.patrick.brugopen/3/2be4d4ee-77a4-4871-a549-4fad2665dbf0/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.patrick.brugopen/3/2be4d4ee-77a4-4871-a549-4fad2665dbf0/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "bridge",
+          "name": {
+            "en": "Bridge",
+            "nl": "Brug"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "bridge_status",
+            "bridge_open_state",
+            "bridge_next_opening",
+            "bridge_last_check",
+            "bridge_data_status"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.patrick.brugopen/3/2be4d4ee-77a4-4871-a549-4fad2665dbf0/drivers/bridge/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.patrick.brugopen/3/2be4d4ee-77a4-4871-a549-4fad2665dbf0/drivers/bridge/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.patrick.brugopen/3/2be4d4ee-77a4-4871-a549-4fad2665dbf0/drivers/bridge/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "bridge_closed",
+            "title": {
+              "en": "Bridge closed",
+              "nl": "Brug gesloten"
+            },
+            "hint": {
+              "en": "Triggers when the bridge becomes available to road traffic again.",
+              "nl": "Start wanneer de brug weer beschikbaar is voor wegverkeer."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "ended_at",
+                "type": "string",
+                "title": {
+                  "en": "Ended at",
+                  "nl": "Gesloten om"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bridge_opened",
+            "title": {
+              "en": "Bridge opened",
+              "nl": "Brug geopend"
+            },
+            "hint": {
+              "en": "Triggers when NDW reports that road traffic can no longer pass the bridge.",
+              "nl": "Start wanneer NDW meldt dat wegverkeer de brug niet meer kan passeren."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "started_at",
+                "type": "string",
+                "title": {
+                  "en": "Started at",
+                  "nl": "Gestart om"
+                }
+              },
+              {
+                "name": "expected_end",
+                "type": "string",
+                "title": {
+                  "en": "Expected end",
+                  "nl": "Verwacht einde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bridge_planned",
+            "title": {
+              "en": "Opening announced",
+              "nl": "Opening aangekondigd"
+            },
+            "hint": {
+              "en": "Triggers when NDW announces an upcoming bridge opening.",
+              "nl": "Start wanneer NDW een komende brugopening aankondigt."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "planned_start",
+                "type": "string",
+                "title": {
+                  "en": "Planned start",
+                  "nl": "Geplande start"
+                }
+              },
+              {
+                "name": "planned_end",
+                "type": "string",
+                "title": {
+                  "en": "Planned end",
+                  "nl": "Gepland einde"
+                }
+              },
+              {
+                "name": "probability",
+                "type": "string",
+                "title": {
+                  "en": "Probability",
+                  "nl": "Waarschijnlijkheid"
+                }
+              }
+            ]
+          },
+          {
+            "id": "bridge_status_changed",
+            "title": {
+              "en": "Bridge status changed",
+              "nl": "Brugstatus gewijzigd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "bridge_name",
+                "type": "string",
+                "title": {
+                  "en": "Bridge",
+                  "nl": "Brug"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_id",
+                "type": "string",
+                "title": {
+                  "en": "Status ID",
+                  "nl": "Status-ID"
+                }
+              },
+              {
+                "name": "previous_status",
+                "type": "string",
+                "title": {
+                  "en": "Previous status",
+                  "nl": "Vorige status"
+                }
+              },
+              {
+                "name": "previous_status_id",
+                "type": "string",
+                "title": {
+                  "en": "Previous status ID",
+                  "nl": "Vorige status-ID"
+                }
+              },
+              {
+                "name": "planned_start",
+                "type": "string",
+                "title": {
+                  "en": "Planned start",
+                  "nl": "Geplande start"
+                }
+              },
+              {
+                "name": "planned_end",
+                "type": "string",
+                "title": {
+                  "en": "Planned end",
+                  "nl": "Gepland einde"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "bridge_is_closed",
+            "title": {
+              "en": "Bridge is closed",
+              "nl": "Brug is dicht"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          },
+          {
+            "id": "bridge_is_open",
+            "title": {
+              "en": "Bridge is open",
+              "nl": "Brug is open"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          },
+          {
+            "id": "bridge_is_planned",
+            "title": {
+              "en": "Opening is announced",
+              "nl": "Opening is aangekondigd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          },
+          {
+            "id": "bridge_status_is",
+            "title": {
+              "en": "Bridge status is...",
+              "nl": "Brugstatus is..."
+            },
+            "titleFormatted": {
+              "en": "Bridge status is [[status]]",
+              "nl": "Brugstatus is [[status]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              },
+              {
+                "name": "status",
+                "type": "dropdown",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "values": [
+                  {
+                    "id": "unknown",
+                    "title": {
+                      "en": "Unknown",
+                      "nl": "Onbekend"
+                    }
+                  },
+                  {
+                    "id": "planned",
+                    "title": {
+                      "en": "Announced",
+                      "nl": "Aangekondigd"
+                    }
+                  },
+                  {
+                    "id": "open",
+                    "title": {
+                      "en": "Open",
+                      "nl": "Open"
+                    }
+                  },
+                  {
+                    "id": "closed",
+                    "title": {
+                      "en": "Closed",
+                      "nl": "Dicht"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "refresh_bridge_status",
+            "title": {
+              "en": "Refresh bridge status",
+              "nl": "Brugstatus verversen"
+            },
+            "hint": {
+              "en": "Immediately checks the NDW bridge feed.",
+              "nl": "Controleert direct de NDW-bruggenfeed."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat"
+                },
+                "filter": "driver_id=bridge"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "test",
+      "stateChangedAt": "2026-09-16T14:49:14.177Z",
+      "bugs": "https://github.com/glijie/brug-open-homey/issues",
+      "homepage": null,
+      "support": "https://github.com/glijie/brug-open-homey/issues",
+      "source": "https://github.com/glijie/brug-open-homey",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "App Store image updated.",
+        "nl": "App Store-afbeelding vernieuwd."
+      },
+      "compatibility": ">=7.4.0",
+      "tags": {
+        "en": [
+          "bridge",
+          "traffic",
+          "NDW",
+          "Netherlands",
+          "Flow"
+        ],
+        "nl": [
+          "brug",
+          "verkeer",
+          "NDW",
+          "Nederland",
+          "Flow"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "testVersion": "1.0.3",
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a96972b30ac038fba71a2f2",
+      "id": "6a9c30f0336db3df05acdb4e",
       "type": "user",
-      "userId": "66e2d2b3f0e7b530640ef902",
-      "name": "Henri Dominique Rapin",
+      "userId": "5746a06c2b5ebe541b913ff8",
+      "name": "Patrick Blijie",
       "verified": false
     },
     "communityTopicId": null
