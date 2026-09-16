@@ -18247,5 +18247,16 @@
     "publishedAt": "2026-09-16T08:41:34.355Z",
     "updatedAt": "2026-09-16T08:41:34.355Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.hmeteo",
+    "name": "Météo France",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "0.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T08:53:59.631Z",
+    "updatedAt": "2026-09-16T08:53:59.631Z",
+    "communityTopicId": null
   }
 ]
