@@ -19870,5 +19870,41 @@
     "updatedAt": "2026-09-14T22:49:51.407Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-14T22:49:51.407Z"
+  },
+  {
+    "appId": "com.thomassidor.lightkeeper",
+    "name": "Lightkeeper",
+    "developerName": "Thomas R. Sidor",
+    "developerId": "6a7cc169c6a80eeabce1bb26",
+    "version": "0.5.1",
+    "sourceRepository": "https://github.com/thomassidor/lightkeeper",
+    "publishedAt": "2026-09-16T08:41:33.359Z",
+    "updatedAt": "2026-09-16T08:41:33.359Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-16T08:41:33.359Z"
+  },
+  {
+    "appId": "nl.lrvdlinden.nlalert-widget",
+    "name": "NL-Alert",
+    "developerName": "PixelForges .",
+    "developerId": "65ae251ae366acd9f09f6a16",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T08:41:34.355Z",
+    "updatedAt": "2026-09-16T08:41:34.355Z",
+    "communityTopicId": 154795,
+    "discoveredAt": "2026-09-16T08:41:33.359Z"
+  },
+  {
+    "appId": "com.lottecon.homenet",
+    "name": "Lotte SmartHome",
+    "developerName": "롯데 스마트홈",
+    "developerId": "6a549d12ce38f245588e5c3f",
+    "version": "1.2.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T08:41:34.355Z",
+    "updatedAt": "2026-09-16T08:41:34.355Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-16T08:41:33.359Z"
   }
 ]

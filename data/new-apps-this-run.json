@@ -1,1 +1,752 @@
-[]
+[
+  {
+    "id": "com.thomassidor.lightkeeper",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Lightkeeper"
+      },
+      "version": "0.5.1",
+      "readme": {
+        "en": "Lightkeeper does three things to lights you have already paired. It turns a remote, switch or dial you already own into a controller for them: pick the lights, and say what each press, hold or turn should do. It puts lights on a schedule: when they come on, when they go off, on the days you choose, at a brightness and warmth you set. And it follows the colour of the day, either from two settings — how warm, how cool — or from a curve you draw yourself.\n\nLight controllers and schedules write the Homey Flows for you and keep them maintained, so you never open the Flow editor. Homey does not let an app create Flows on its own, so those two need a Personal API Key with Flow permissions; circadian and Curve lights write to your lights directly and need no key. Everything runs on your Homey — no cloud, no telemetry. Designed and written with AI, directed and verified on real hardware.\n"
+      },
+      "description": {
+        "en": "Easy control for the lights you already have."
+      },
+      "category": "tools",
+      "brandColor": "#180E32",
+      "icon": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "circadian",
+          "name": {
+            "en": "Circadian light"
+          },
+          "class": "service",
+          "capabilities": [
+            "onoff"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Circadian active"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/circadian/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/circadian/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/circadian/assets/icon.svg"
+        },
+        {
+          "id": "controller",
+          "name": {
+            "en": "Light controller"
+          },
+          "class": "service",
+          "capabilities": [],
+          "imageSmall": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/controller/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/controller/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/controller/assets/icon.svg"
+        },
+        {
+          "id": "curve",
+          "name": {
+            "en": "Curve light"
+          },
+          "class": "service",
+          "capabilities": [
+            "onoff"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Curve active"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/curve/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/curve/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/curve/assets/icon.svg"
+        },
+        {
+          "id": "schedule",
+          "name": {
+            "en": "Light schedule"
+          },
+          "class": "service",
+          "capabilities": [
+            "onoff"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Schedule active"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/schedule/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/schedule/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.thomassidor.lightkeeper/2/6093d82f-9b0f-4a15-84b8-46d04fe5d8e4/drivers/schedule/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": []
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T08:38:13.980Z",
+      "bugs": "https://github.com/thomassidor/lightkeeper/issues",
+      "homepage": "https://github.com/thomassidor/lightkeeper#readme",
+      "support": "https://github.com/thomassidor/lightkeeper/issues",
+      "source": "https://github.com/thomassidor/lightkeeper",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api"
+      ],
+      "changelog": {
+        "en": "A tidier App Store listing. The description is much shorter and gets to the point, this What's new section reads as a paragraph instead of a wall of markup, and the four device icons have been redrawn so they are legible in the small circle the store draws them in. Nothing about how the app works has changed."
+      },
+      "compatibility": ">=12.9.0",
+      "tags": {
+        "en": [
+          "remote control",
+          "smart lights",
+          "schedule",
+          "timer",
+          "time of day",
+          "circadian",
+          "adaptive lighting",
+          "colour temperature",
+          "dimmer",
+          "rotary dial",
+          "button",
+          "flow",
+          "zigbee",
+          "matter"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.5.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a7cc169c6a80eeabce1bb26",
+      "type": "user",
+      "userId": "649706e6b091050b7d4c6510",
+      "name": "Thomas R. Sidor",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "nl.lrvdlinden.nlalert-widget",
+    "rating": null,
+    "liveBuild": {
+      "id": 24,
+      "name": {
+        "en": "NL-Alert",
+        "nl": "NL-Alert"
+      },
+      "version": "1.0.4",
+      "readme": {
+        "en": "NL-Alert is the emergency warning system of the Dutch government. During a disaster, serious incident or crisis, the authorities determine the area in which an NL-Alert is broadcast. With NL-Alert for Homey, active alerts are also available in Homey. The app uses your configured Homey location and displays current warnings through Dashboard widgets, including a map view.\n\nImportant: this app is an independent Homey integration and should never be relied upon as the sole source of emergency information. Always follow official channels, including NL-Alert on your phone, public warning sirens and information from the Dutch government.\n",
+        "nl": "NL-Alert is het alarmmiddel van de Nederlandse overheid. Tijdens een ramp, ernstig incident of crisis bepaalt de overheid in welk gebied een NL-Alert wordt uitgezonden. Met NL-Alert voor Homey ontvang je actieve NL-Alerts ook in Homey. De app gebruikt de ingestelde locatie van je Homey en maakt actuele waarschuwingen zichtbaar via de Dashboard-widgets, waaronder een kaartweergave.\n\nBelangrijk: deze app is een onafhankelijke Homey-integratie en mag bij een noodsituatie nooit als enige waarschuwingsbron worden gebruikt. Vertrouw altijd op de officiële kanalen, zoals NL-Alert op je telefoon, de sirenes en informatie van de Nederlandse overheid.\n"
+      },
+      "description": {
+        "en": "Stay informed when an NL-Alert affects your area.",
+        "nl": "Blijf op de hoogte wanneer een NL-Alert voor jouw omgeving geldt."
+      },
+      "category": "security",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": [
+          {
+            "id": "alert_received",
+            "title": {
+              "en": "NL Alert received",
+              "nl": "NL Alert ontvangen"
+            },
+            "titleFormatted": {
+              "en": "A new emergency alert is active in your area",
+              "nl": "Er is een nieuwe noodmelding actief in jouw omgeving"
+            },
+            "hint": {
+              "en": "Triggers whenever a newly issued NL-Alert applies to the current Homey location.",
+              "nl": "Wordt geactiveerd zodra een nieuw NL-Alert van toepassing is op de huidige locatie van Homey."
+            },
+            "tokens": [
+              {
+                "name": "alert_id",
+                "type": "string",
+                "title": {
+                  "en": "Alert ID",
+                  "nl": "Alert-ID"
+                }
+              },
+              {
+                "name": "alert_message",
+                "type": "string",
+                "title": {
+                  "en": "Alert message",
+                  "nl": "Alertbericht"
+                }
+              },
+              {
+                "name": "alert_start_at",
+                "type": "string",
+                "title": {
+                  "en": "Start time",
+                  "nl": "Starttijd"
+                }
+              },
+              {
+                "name": "alert_stop_at",
+                "type": "string",
+                "title": {
+                  "en": "End time",
+                  "nl": "Eindtijd"
+                }
+              }
+            ],
+            "platforms": [
+              "local",
+              "cloud"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "alert_active",
+            "title": {
+              "en": "An NL Alert is active",
+              "nl": "Er is een actieve NL Alert"
+            },
+            "titleFormatted": {
+              "en": "!{{An emergency alert is currently active in your area|There are currently no active emergency alerts in your area}}",
+              "nl": "!{{Er is momenteel een noodmelding actief in jouw omgeving|Er zijn momenteel geen actieve noodmeldingen in jouw omgeving}}"
+            },
+            "hint": {
+              "en": "Checks whether an active NL-Alert currently applies to the Homey location.",
+              "nl": "Controleert of er op dit moment een actief NL-Alert geldt voor de locatie van Homey."
+            },
+            "platforms": [
+              "local",
+              "cloud"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "get_alerts",
+            "title": {
+              "en": "Get active NL Alerts",
+              "nl": "Haal actieve NL Alerts op"
+            },
+            "titleFormatted": {
+              "en": "Get all active NL Alerts for your location",
+              "nl": "Haal alle actieve NL Alerts op voor jouw locatie"
+            },
+            "hint": {
+              "en": "Retrieves all currently active NL Alerts affecting your Homey's location.",
+              "nl": "Haalt alle momenteel actieve NL Alerts op die invloed hebben op de locatie van jouw Homey."
+            },
+            "tokens": [
+              {
+                "name": "count",
+                "type": "number",
+                "title": {
+                  "en": "Number of alerts",
+                  "nl": "Aantal alerts"
+                }
+              },
+              {
+                "name": "first_message",
+                "type": "string",
+                "title": {
+                  "en": "First alert message",
+                  "nl": "Eerste alertbericht"
+                }
+              },
+              {
+                "name": "alerts_json",
+                "type": "string",
+                "title": {
+                  "en": "Alerts (JSON)",
+                  "nl": "Alerts (JSON)"
+                }
+              }
+            ],
+            "platforms": [
+              "local",
+              "cloud"
+            ]
+          }
+        ]
+      },
+      "widgets": {
+        "nlalert-map": {
+          "name": {
+            "en": "NL-Alert Map",
+            "nl": "NL-Alert Kaart"
+          },
+          "height": 500,
+          "settings": [],
+          "api": {
+            "getData": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "id": "nlalert-map",
+          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/widgets/nlalert-map/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/widgets/nlalert-map/preview-light.png"
+        },
+        "nlalert-pager": {
+          "name": {
+            "en": "NL-Alert Pager",
+            "nl": "NL-Alert Pager"
+          },
+          "height": 280,
+          "api": {
+            "getAlerts": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "location_input",
+              "type": "text",
+              "title": {
+                "en": "Location / search text",
+                "nl": "Plaatsnaam / zoektekst"
+              },
+              "value": ""
+            }
+          ],
+          "id": "nlalert-pager",
+          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/widgets/nlalert-pager/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.nlalert-widget/24/5bf7fbe9-5419-4cab-9349-5600ce5c1f6a/widgets/nlalert-pager/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 154795,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T08:39:08.145Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:hallo@pixelforges.nl",
+      "source": null,
+      "contributors": {
+        "translators": [
+          {
+            "name": "🇬🇧 Léon"
+          },
+          {
+            "name": "🇳🇱 Léon"
+          }
+        ],
+        "developers": []
+      },
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "lrvdlinden"
+          },
+          "bunq": {
+            "username": "lrvdlinden"
+          }
+        }
+      },
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "App Store certification improvements",
+        "nl": "Verbeteringen voor App Store-certificering"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "alert",
+          "alarm",
+          "warning",
+          "emergency",
+          "nl-alert",
+          "notification",
+          "safety",
+          "Widgets"
+        ],
+        "nl": [
+          "alert",
+          "alarm",
+          "waarschuwing",
+          "noodsituatie",
+          "nl-alert",
+          "melding",
+          "veiligheid",
+          "Widgets"
+        ]
+      },
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.4",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "65ae251ae366acd9f09f6a16",
+      "type": "user",
+      "userId": "65ae19782cc242fe976b7529",
+      "name": "PixelForges .",
+      "verified": true
+    },
+    "communityTopicId": 154795
+  },
+  {
+    "id": "com.lottecon.homenet",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Lotte SmartHome",
+        "ko": "롯데 스마트홈"
+      },
+      "version": "1.2.0",
+      "readme": {
+        "en": "Lotte SmartHome connects your compatible smart home devices with Homey, allowing you to monitor device status and control your home conveniently from the Homey app.\r\n\r\nCreate a smarter and more convenient living environment by integrating Lotte SmartHome devices into Homey Flows and automating your everyday routines.\r\n",
+        "ko": "롯데 스마트홈은 호환되는 스마트홈 기기를 Homey와 연결하여 기기 상태를 확인하고 Homey 앱에서 편리하게 제어할 수 있도록 지원합니다.\r\n\r\n롯데 스마트홈 연동 기기를 Homey Flow와 연동하여 일상적인 기기 제어를 자동화하고 더욱 편리한 스마트홈 환경을 구성할 수 있습니다."
+      },
+      "description": {
+        "en": "Experience Premium Smart Living with Lotte SmartHome.",
+        "ko": "더 편리하고 품격 있는 일상, 롯데 스마트홈이 만드는 프리미엄 스마트 라이프"
+      },
+      "category": "appliances",
+      "brandColor": "#6700B6",
+      "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "boiler",
+          "name": {
+            "en": "Boiler",
+            "ko": "보일러"
+          },
+          "class": "thermostat",
+          "capabilities": [
+            "onoff",
+            "target_temperature",
+            "measure_temperature",
+            "thermostat_mode",
+            "sync_trigger"
+          ],
+          "capabilitiesOptions": {
+            "target_temperature": {
+              "min": 5,
+              "max": 40,
+              "step": 1,
+              "decimals": 0
+            },
+            "thermostat_mode": {
+              "title": {
+                "en": "Operation Mode",
+                "ko": "운전 모드"
+              },
+              "values": [
+                {
+                  "id": "heat",
+                  "title": {
+                    "en": "Heat",
+                    "ko": "난방"
+                  }
+                },
+                {
+                  "id": "off",
+                  "title": {
+                    "en": "Outing",
+                    "ko": "외출"
+                  }
+                }
+              ]
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/boiler/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/boiler/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/boiler/assets/icon.svg"
+        },
+        {
+          "id": "color_light",
+          "name": {
+            "en": "Color Light",
+            "ko": "색온도등"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_temperature",
+            "sync_trigger"
+          ],
+          "capabilitiesOptions": {
+            "dim": {
+              "min": 0.1,
+              "max": 1,
+              "step": 0.1
+            },
+            "light_temperature": {
+              "min": 0.1,
+              "max": 1,
+              "step": 0.1
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/color_light/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/color_light/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/color_light/assets/icon.svg"
+        },
+        {
+          "id": "curtain",
+          "name": {
+            "en": "Curtain",
+            "ko": "커튼"
+          },
+          "class": "curtain",
+          "capabilities": [
+            "windowcoverings_set",
+            "sync_trigger"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/curtain/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/curtain/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/curtain/assets/icon.svg"
+        },
+        {
+          "id": "dimmer_switch",
+          "name": {
+            "en": "Dimmer Switch",
+            "ko": "디밍스위치"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "sync_trigger"
+          ],
+          "capabilitiesOptions": {
+            "dim": {
+              "min": 0.1,
+              "max": 1,
+              "step": 0.1
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/dimmer_switch/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/dimmer_switch/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/dimmer_switch/assets/icon.svg"
+        },
+        {
+          "id": "gas_valve",
+          "name": {
+            "en": "Gas Valve",
+            "ko": "가스밸브"
+          },
+          "class": "lock",
+          "capabilities": [
+            "locked",
+            "sync_trigger"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/gas_valve/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/gas_valve/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/gas_valve/assets/icon.svg"
+        },
+        {
+          "id": "light",
+          "name": {
+            "en": "Light",
+            "ko": "조명"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "sync_trigger"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/light/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/light/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/light/assets/icon.svg"
+        },
+        {
+          "id": "standby_power",
+          "name": {
+            "en": "Standby Power",
+            "ko": "대기전력"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "ltc_oper_mode",
+            "sync_trigger"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/standby_power/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/standby_power/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/standby_power/assets/icon.svg"
+        },
+        {
+          "id": "ventilation_fan",
+          "name": {
+            "en": "Ventilation Fan",
+            "ko": "환풍기"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "sync_trigger"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/ventilation_fan/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/ventilation_fan/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lottecon.homenet/2/d2aa8e44-1ade-4429-9d66-e8837e7b3a2e/drivers/ventilation_fan/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-16T08:38:21.099Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "renewal"
+      },
+      "compatibility": ">=5.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.2.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a549d12ce38f245588e5c3f",
+      "type": "user",
+      "userId": "6a50892c9ed46c6dfd8a8ab5",
+      "name": "롯데 스마트홈",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]

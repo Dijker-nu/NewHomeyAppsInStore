@@ -12225,10 +12225,10 @@
     "name": "Hail Protection Switzerland",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "sourceRepository": "https://github.com/andiwirz/ch.hagelschutz.homey",
     "publishedAt": "2026-09-10T21:33:53.089Z",
-    "updatedAt": "2026-09-15T08:47:43.511Z",
+    "updatedAt": "2026-09-16T08:42:01.252Z",
     "communityTopicId": 152992
   },
   {
@@ -13763,12 +13763,12 @@
   {
     "appId": "nl.robinpeters.imoulife",
     "name": "IMOU Life",
-    "developerName": "Robin Peters",
-    "developerId": "6a686b5032b0f6166a4c9bfb",
+    "developerName": "Remco Gykm",
+    "developerId": "6a208efc095776559e79a6e6",
     "version": "0.4.10",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:00.477Z",
-    "updatedAt": "2026-09-10T21:35:00.477Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": null
   },
   {
@@ -13787,10 +13787,10 @@
     "name": "BenQ Network Projector",
     "developerName": "Fred Hill",
     "developerId": "69e8532dfb6dd7068a7d5c5f",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "sourceRepository": "https://github.com/fredhill/homey-benq-projector",
     "publishedAt": "2026-09-10T21:35:11.164Z",
-    "updatedAt": "2026-09-10T21:35:11.164Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": null
   },
   {
@@ -15349,10 +15349,10 @@
     "name": "Misol and Ecowitt",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "0.2.33",
+    "version": "0.2.34",
     "sourceRepository": "https://github.com/AdyRock/com.misol",
     "publishedAt": "2026-09-10T21:36:18.614Z",
-    "updatedAt": "2026-09-10T21:36:18.614Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 47076
   },
   {
@@ -15591,10 +15591,10 @@
     "name": "Ollama",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.5",
+    "version": "1.2.7",
     "sourceRepository": "https://github.com/smarthomesven/homey-ollama",
     "publishedAt": "2026-09-10T21:36:27.964Z",
-    "updatedAt": "2026-09-10T21:36:27.964Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 143768
   },
   {
@@ -15921,10 +15921,10 @@
     "name": "Olisto",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.17",
+    "version": "1.1.18",
     "sourceRepository": "https://github.com/smarthomesven/homey-olisto",
     "publishedAt": "2026-09-10T21:36:39.321Z",
-    "updatedAt": "2026-09-10T21:36:39.321Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 144831
   },
   {
@@ -15932,10 +15932,10 @@
     "name": "Link2Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/smarthomesven/homey-link2home",
     "publishedAt": "2026-09-10T21:36:39.321Z",
-    "updatedAt": "2026-09-10T21:36:39.321Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 157174
   },
   {
@@ -16152,10 +16152,10 @@
     "name": "Amazon Echo",
     "developerName": "Stefan Schweiger",
     "developerId": "65c34188e0e2f404761c8b51",
-    "version": "2.2.3",
+    "version": "2.2.4",
     "sourceRepository": "https://github.com/stefan-schweiger/dev.schweiger.echo",
     "publishedAt": "2026-09-10T21:36:44.655Z",
-    "updatedAt": "2026-09-10T21:36:44.655Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 120365
   },
   {
@@ -16416,10 +16416,10 @@
     "name": "Picnic",
     "developerName": "Sander Maas",
     "developerId": "5dcaba361c90c866f9364965",
-    "version": "3.6.1",
+    "version": "3.6.2",
     "sourceRepository": "https://github.com/Retrospected/app.picnic",
     "publishedAt": "2026-09-10T21:36:55.923Z",
-    "updatedAt": "2026-09-12T08:00:19.116Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 78811
   },
   {
@@ -16526,10 +16526,10 @@
     "name": "Power by the Hour",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "8.18.0",
+    "version": "8.19.0",
     "sourceRepository": "https://github.com/gruijter/com.gruijter.powerhour",
     "publishedAt": "2026-09-10T21:36:59.785Z",
-    "updatedAt": "2026-09-11T08:09:36.636Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 20535
   },
   {
@@ -17604,10 +17604,10 @@
     "name": "WarmteWizard",
     "developerName": "Warmte Wizard",
     "developerId": "68ed4f8b78936837cbe81bee",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:53.144Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": null
   },
   {
@@ -17648,10 +17648,10 @@
     "name": "Flow Version History",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.22",
+    "version": "1.0.23",
     "sourceRepository": "https://github.com/smarthomesven/homey-flow-version-history",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-14T09:04:17.461Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 152775
   },
   {
@@ -17802,10 +17802,10 @@
     "name": "Shelly Control",
     "developerName": "Allterco Robotics",
     "developerId": "6a8c4b90222a4450aa38d020",
-    "version": "0.16.0",
+    "version": "0.16.1",
     "sourceRepository": "https://github.com/drenso/cloud.shelly.control",
     "publishedAt": "2026-09-10T21:37:56.528Z",
-    "updatedAt": "2026-09-10T21:37:56.528Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": 152695
   },
   {
@@ -17824,10 +17824,10 @@
     "name": "Airsend",
     "developerName": "Pierre Verron",
     "developerId": "65044d4d6d8019ba165e62a1",
-    "version": "1.1.3",
+    "version": "1.2.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:57.652Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-16T08:42:01.253Z",
     "communityTopicId": null
   },
   {
@@ -18213,6 +18213,39 @@
     "sourceRepository": "",
     "publishedAt": "2026-09-14T22:49:51.407Z",
     "updatedAt": "2026-09-14T22:49:51.407Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.thomassidor.lightkeeper",
+    "name": "Lightkeeper",
+    "developerName": "Thomas R. Sidor",
+    "developerId": "6a7cc169c6a80eeabce1bb26",
+    "version": "0.5.1",
+    "sourceRepository": "https://github.com/thomassidor/lightkeeper",
+    "publishedAt": "2026-09-16T08:41:33.359Z",
+    "updatedAt": "2026-09-16T08:41:33.359Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.lrvdlinden.nlalert-widget",
+    "name": "NL-Alert",
+    "developerName": "PixelForges .",
+    "developerId": "65ae251ae366acd9f09f6a16",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T08:41:34.355Z",
+    "updatedAt": "2026-09-16T08:41:34.355Z",
+    "communityTopicId": 154795
+  },
+  {
+    "appId": "com.lottecon.homenet",
+    "name": "Lotte SmartHome",
+    "developerName": "롯데 스마트홈",
+    "developerId": "6a549d12ce38f245588e5c3f",
+    "version": "1.2.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-16T08:41:34.355Z",
+    "updatedAt": "2026-09-16T08:41:34.355Z",
     "communityTopicId": null
   }
 ]
