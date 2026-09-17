@@ -20050,5 +20050,17 @@
     "updatedAt": "2026-09-17T08:45:15.031Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-17T08:45:13.047Z"
+  },
+  {
+    "appId": "com.ziglar.fordvehicledata",
+    "name": "Ford Vehicle Data",
+    "developerName": "Bas de Jong",
+    "developerId": "6a9d56c5336db3df05ad20be",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T15:47:24.097Z",
+    "updatedAt": "2026-09-17T15:47:24.097Z",
+    "communityTopicId": 159236,
+    "discoveredAt": "2026-09-17T15:47:24.097Z"
   }
 ]
