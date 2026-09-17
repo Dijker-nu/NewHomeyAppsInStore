@@ -2996,10 +2996,10 @@
     "name": "Advanced Triggers",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "1.5.7",
+    "version": "1.6.0",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.advancedtriggers/",
     "publishedAt": "2026-09-10T21:25:47.813Z",
-    "updatedAt": "2026-09-10T21:25:47.813Z",
+    "updatedAt": "2026-09-17T08:45:41.052Z",
     "communityTopicId": 65651
   },
   {
@@ -3128,10 +3128,10 @@
     "name": "Google Services",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "1.10.2",
+    "version": "1.11.0",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.googleservices/",
     "publishedAt": "2026-09-10T21:25:54.771Z",
-    "updatedAt": "2026-09-10T21:25:54.771Z",
+    "updatedAt": "2026-09-17T08:45:41.053Z",
     "communityTopicId": 43257
   },
   {
@@ -5548,10 +5548,10 @@
     "name": "Sure Petcare",
     "developerName": "Leendert de Kok",
     "developerId": "5dcab9bc1c90c866f9364426",
-    "version": "2.0.10",
+    "version": "3.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:28:10.617Z",
-    "updatedAt": "2026-09-10T21:28:10.617Z",
+    "updatedAt": "2026-09-17T08:45:41.053Z",
     "communityTopicId": 24127
   },
   {
@@ -5933,10 +5933,10 @@
     "name": "Chronograph",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "2.1.10",
+    "version": "2.2.0",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.chronograph/",
     "publishedAt": "2026-09-10T21:28:29.025Z",
-    "updatedAt": "2026-09-10T21:28:29.025Z",
+    "updatedAt": "2026-09-17T08:45:41.053Z",
     "communityTopicId": 18214
   },
   {
@@ -7748,10 +7748,10 @@
     "name": "enigma2",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "1.2.6",
+    "version": "1.2.8",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:30:09.126Z",
-    "updatedAt": "2026-09-10T21:30:09.126Z",
+    "updatedAt": "2026-09-17T08:45:41.054Z",
     "communityTopicId": 9427
   },
   {
@@ -10795,10 +10795,10 @@
     "name": "Better Logic Library",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.4.18",
+    "version": "3.5.0",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.BetterLogic/",
     "publishedAt": "2026-09-10T21:32:48.906Z",
-    "updatedAt": "2026-09-10T21:32:48.906Z",
+    "updatedAt": "2026-09-17T08:45:41.054Z",
     "communityTopicId": 5568
   },
   {
@@ -10806,10 +10806,10 @@
     "name": "Simple (Sys) Log",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.37",
+    "version": "3.1.0",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.simplelog/",
     "publishedAt": "2026-09-10T21:32:48.906Z",
-    "updatedAt": "2026-09-11T08:09:36.635Z",
+    "updatedAt": "2026-09-17T08:45:41.054Z",
     "communityTopicId": 77533
   },
   {
@@ -11543,10 +11543,10 @@
     "name": "Wallbox Charger",
     "developerName": "Roy Kokkelkoren",
     "developerId": "5dcabacd1c90c866f93651b1",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "sourceRepository": "https://github.com/rkokkelk/nl.xseth.wallbox",
     "publishedAt": "2026-09-10T21:33:26.437Z",
-    "updatedAt": "2026-09-10T21:33:26.437Z",
+    "updatedAt": "2026-09-17T08:45:41.054Z",
     "communityTopicId": 139333
   },
   {
@@ -11609,10 +11609,10 @@
     "name": "Quatt Home Battery",
     "developerName": "Sylvester Mussche",
     "developerId": "69efab1d384eb48fac0f637c",
-    "version": "1.0.19",
+    "version": "2.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:28.760Z",
-    "updatedAt": "2026-09-10T21:33:28.760Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": null
   },
   {
@@ -12225,10 +12225,10 @@
     "name": "Hail Protection Switzerland",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.10",
+    "version": "1.0.12",
     "sourceRepository": "https://github.com/andiwirz/ch.hagelschutz.homey",
     "publishedAt": "2026-09-10T21:33:53.089Z",
-    "updatedAt": "2026-09-16T08:42:01.252Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": 152992
   },
   {
@@ -13500,11 +13500,11 @@
     "appId": "com.namron.simplify",
     "name": "Namron Simplify",
     "developerName": "Namron AS",
-    "developerId": "68496ca79181f12fe14ccf9f",
+    "developerId": "6aaaadaf99b954171239f0bf",
     "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:48.505Z",
-    "updatedAt": "2026-09-10T21:34:48.505Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": 142621
   },
   {
@@ -13721,10 +13721,10 @@
     "name": "Worx and Openmower Mowers",
     "developerName": "Martin Verbeek",
     "developerId": "602ad593ea27a57b44539bd7",
-    "version": "6.0.9",
+    "version": "6.0.13",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:59.817Z",
-    "updatedAt": "2026-09-10T21:34:59.817Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": 64441
   },
   {
@@ -13886,10 +13886,10 @@
     "name": "Aquatronica",
     "developerName": "Artur Łukowski",
     "developerId": "6a4bc10d06caaec2005d7639",
-    "version": "2.4.7",
+    "version": "2.5.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:13.807Z",
-    "updatedAt": "2026-09-10T21:35:13.807Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": null
   },
   {
@@ -14326,10 +14326,10 @@
     "name": "HEMS Controller",
     "developerName": "Andreas Kjörk",
     "developerId": "690a7cfaae1d27bf099ebff9",
-    "version": "1.16.0",
+    "version": "1.18.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:32.330Z",
-    "updatedAt": "2026-09-10T21:35:32.330Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": null
   },
   {
@@ -15426,10 +15426,10 @@
     "name": "Broadlink",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "3.1.70",
+    "version": "3.1.73",
     "sourceRepository": "https://github.com/shaarkys/com.broadlink",
     "publishedAt": "2026-09-10T21:36:20.465Z",
-    "updatedAt": "2026-09-10T21:36:20.465Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": 6389
   },
   {
@@ -15569,11 +15569,11 @@
     "name": "French School Holidays",
     "developerName": "Cédric Andrietti",
     "developerId": "6a6e465f32b0f6166a4e6270",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "sourceRepository": "https://github.com/cedric07/homey-frenchholidays",
     "publishedAt": "2026-09-10T21:36:27.193Z",
-    "updatedAt": "2026-09-10T21:36:27.193Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-17T08:45:41.055Z",
+    "communityTopicId": 159691
   },
   {
     "appId": "nl.terryhendrix.smartpresence",
@@ -15888,10 +15888,10 @@
     "name": "Virtual Devices",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "1.3.2",
+    "version": "1.4.1",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.virtualdevices/",
     "publishedAt": "2026-09-10T21:36:38.669Z",
-    "updatedAt": "2026-09-10T21:36:38.669Z",
+    "updatedAt": "2026-09-17T08:45:41.055Z",
     "communityTopicId": 1723
   },
   {
@@ -16383,10 +16383,10 @@
     "name": "Zemismart",
     "developerName": "Zemismart Technology Limited",
     "developerId": "6746ce3eba38533f5bee284c",
-    "version": "2.0.30",
+    "version": "2.0.32",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:54.538Z",
-    "updatedAt": "2026-09-10T21:36:54.538Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -16416,10 +16416,10 @@
     "name": "Picnic",
     "developerName": "Sander Maas",
     "developerId": "5dcaba361c90c866f9364965",
-    "version": "3.6.2",
+    "version": "3.7.0",
     "sourceRepository": "https://github.com/Retrospected/app.picnic",
     "publishedAt": "2026-09-10T21:36:55.923Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 78811
   },
   {
@@ -16515,10 +16515,10 @@
     "name": "UNDOK / OKTIV Radio",
     "developerName": "Tim de Bruin",
     "developerId": "69fdeff0f1880fc8963a17c4",
-    "version": "1.3.3",
+    "version": "1.4.0",
     "sourceRepository": "https://github.com/TimdeBruinNL/com.timdebruin.undok",
     "publishedAt": "2026-09-10T21:36:59.785Z",
-    "updatedAt": "2026-09-10T21:36:59.785Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 154664
   },
   {
@@ -16548,10 +16548,10 @@
     "name": "Nibe Live",
     "developerName": "Love Thyresson",
     "developerId": "67718e3ee5ac96c52a6ba4e0",
-    "version": "1.3.1",
+    "version": "1.3.3",
     "sourceRepository": "https://github.com/lovethyresson/com.nibe.local",
     "publishedAt": "2026-09-10T21:36:59.785Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 157330
   },
   {
@@ -16677,13 +16677,13 @@
   },
   {
     "appId": "com.energyprices.app",
-    "name": "SlimLaden Home & Car (EMS)",
+    "name": "SlimLaden Home & Car",
     "developerName": "Roedi de Lion",
     "developerId": "67dda0b46cb23bab6c6261e5",
-    "version": "9.9.23",
+    "version": "9.9.38",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:15.085Z",
-    "updatedAt": "2026-09-10T21:37:15.085Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 140156
   },
   {
@@ -16977,10 +16977,10 @@
     "name": "AECC Plug-and-Play Battery",
     "developerName": "Roy Dorland",
     "developerId": "6a81aafdc6a80eeabce3bed4",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "sourceRepository": "https://github.com/StekkerDeal/aecc-battery-homey",
     "publishedAt": "2026-09-10T21:37:32.679Z",
-    "updatedAt": "2026-09-10T21:37:32.679Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -17208,10 +17208,10 @@
     "name": "MOVA Vacuum",
     "developerName": "Didier Van Uffelen",
     "developerId": "6a988123336db3df05abe174",
-    "version": "1.0.5",
+    "version": "1.1.0",
     "sourceRepository": "https://github.com/didiervanuffelen/Homey.Mova",
     "publishedAt": "2026-09-10T21:37:38.464Z",
-    "updatedAt": "2026-09-10T21:37:38.464Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 159177
   },
   {
@@ -17340,10 +17340,10 @@
     "name": "Huawei FusionSolar Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.2.218",
+    "version": "1.2.236",
     "sourceRepository": "https://github.com/andiwirz/com.huawei.fusionsolar",
     "publishedAt": "2026-09-10T21:37:42.368Z",
-    "updatedAt": "2026-09-10T21:37:42.368Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 153353
   },
   {
@@ -17395,10 +17395,10 @@
     "name": "iDiamant by Netatmo",
     "developerName": "ATX Groupe",
     "developerId": "6a8e12e83bdd81c33f8d4766",
-    "version": "1.3.13",
+    "version": "1.3.14",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:43.946Z",
-    "updatedAt": "2026-09-14T09:04:17.461Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 159166
   },
   {
@@ -17450,10 +17450,10 @@
     "name": "Ratio Electric Charger",
     "developerName": "Ron van de Graaf",
     "developerId": "6a985a8f336db3df05abd814",
-    "version": "1.0.19",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:46.449Z",
-    "updatedAt": "2026-09-10T21:37:46.449Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 159271
   },
   {
@@ -17538,10 +17538,10 @@
     "name": "Tuya Local",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.230",
+    "version": "1.0.232",
     "sourceRepository": "https://github.com/andiwirz/com.tuyalocal",
     "publishedAt": "2026-09-10T21:37:50.699Z",
-    "updatedAt": "2026-09-10T21:37:50.699Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 154077
   },
   {
@@ -17615,10 +17615,10 @@
     "name": "Arlo Connect",
     "developerName": "Mikael Creson",
     "developerId": "6a6f91f632b0f6166a4ed359",
-    "version": "1.0.35",
+    "version": "1.0.38",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:53.986Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -17626,10 +17626,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.33",
+    "version": "1.9.34",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-09-10T21:37:54.870Z",
-    "updatedAt": "2026-09-10T21:37:54.870Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 157537
   },
   {
@@ -17637,10 +17637,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "4.17.0",
+    "version": "4.18.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:54.870Z",
-    "updatedAt": "2026-09-10T21:37:54.870Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -17670,10 +17670,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.1.2",
+    "version": "3.2.1",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-14T09:04:17.461Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 147496
   },
   {
@@ -17813,10 +17813,10 @@
     "name": "VW Group Vehicles",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "0.0.74",
+    "version": "0.0.76",
     "sourceRepository": "https://github.com/andiwirz/com.vwgroup.vehiclevata",
     "publishedAt": "2026-09-10T21:37:56.528Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": 156345
   },
   {
@@ -18176,10 +18176,10 @@
     "name": "Cigol",
     "developerName": "Kim T. Nielsen",
     "developerId": "6aa3cd1330dc90a8d6df9d18",
-    "version": "1.0.1",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-14T17:09:21.668Z",
-    "updatedAt": "2026-09-14T17:09:21.668Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -18209,10 +18209,10 @@
     "name": "Porsche Connect",
     "developerName": "error404.nl",
     "developerId": "6aa64db23bf2cee70a44dbf7",
-    "version": "1.0.2",
+    "version": "1.4.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-14T22:49:51.407Z",
-    "updatedAt": "2026-09-14T22:49:51.407Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -18220,10 +18220,10 @@
     "name": "Lightkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "0.5.1",
+    "version": "0.6.0",
     "sourceRepository": "https://github.com/thomassidor/lightkeeper",
     "publishedAt": "2026-09-16T08:41:33.359Z",
-    "updatedAt": "2026-09-16T08:41:33.359Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -18253,10 +18253,10 @@
     "name": "Météo France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T08:53:59.631Z",
-    "updatedAt": "2026-09-16T08:53:59.631Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -18319,10 +18319,10 @@
     "name": "SolarBuffer",
     "developerName": "Enis vd Veld",
     "developerId": "6aa8ff6230dc90a8d6e0c90f",
-    "version": "0.1.2",
+    "version": "0.1.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T15:41:13.991Z",
-    "updatedAt": "2026-09-16T15:41:13.991Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -18330,10 +18330,10 @@
     "name": "Bridge Open",
     "developerName": "Patrick Blijie",
     "developerId": "6a9c30f0336db3df05acdb4e",
-    "version": "1.0.2",
+    "version": "1.1.1",
     "sourceRepository": "https://github.com/glijie/brug-open-homey",
     "publishedAt": "2026-09-16T15:41:14.485Z",
-    "updatedAt": "2026-09-16T15:41:14.485Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
     "communityTopicId": null
   },
   {
@@ -18341,10 +18341,43 @@
     "name": "AlphaESS",
     "developerName": "AlphaESS",
     "developerId": "6a9104f3003391430735937e",
-    "version": "0.7.1",
+    "version": "0.7.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T19:10:09.507Z",
-    "updatedAt": "2026-09-16T19:10:09.507Z",
+    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.jackery.flowapp",
+    "name": "Jackery",
+    "developerName": "Jackery Tech",
+    "developerId": "6a291fdc56adb8c38bbaeb60",
+    "version": "1.0.12",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T08:45:13.047Z",
+    "updatedAt": "2026-09-17T08:45:13.047Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.homeflux.ems",
+    "name": "HomeFlux EMS",
+    "developerName": "Davy Bert",
+    "developerId": "6a7c412dc6a80eeabce17592",
+    "version": "0.7.12",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T08:45:14.130Z",
+    "updatedAt": "2026-09-17T08:45:14.130Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.dennisweel.flowbackup",
+    "name": "Backup Center",
+    "developerName": "Dennis Weel",
+    "developerId": "6aa84b8430dc90a8d6e097a5",
+    "version": "0.4.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T08:45:15.031Z",
+    "updatedAt": "2026-09-17T08:45:15.031Z",
     "communityTopicId": null
   }
 ]

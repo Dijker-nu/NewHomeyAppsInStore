@@ -20014,5 +20014,41 @@
     "updatedAt": "2026-09-16T19:10:09.507Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-16T19:10:09.507Z"
+  },
+  {
+    "appId": "com.jackery.flowapp",
+    "name": "Jackery",
+    "developerName": "Jackery Tech",
+    "developerId": "6a291fdc56adb8c38bbaeb60",
+    "version": "1.0.12",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T08:45:13.047Z",
+    "updatedAt": "2026-09-17T08:45:13.047Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-17T08:45:13.047Z"
+  },
+  {
+    "appId": "com.homeflux.ems",
+    "name": "HomeFlux EMS",
+    "developerName": "Davy Bert",
+    "developerId": "6a7c412dc6a80eeabce17592",
+    "version": "0.7.12",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T08:45:14.130Z",
+    "updatedAt": "2026-09-17T08:45:14.130Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-17T08:45:13.047Z"
+  },
+  {
+    "appId": "nl.dennisweel.flowbackup",
+    "name": "Backup Center",
+    "developerName": "Dennis Weel",
+    "developerId": "6aa84b8430dc90a8d6e097a5",
+    "version": "0.4.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-17T08:45:15.031Z",
+    "updatedAt": "2026-09-17T08:45:15.031Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-17T08:45:13.047Z"
   }
 ]
