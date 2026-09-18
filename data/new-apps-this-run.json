@@ -1,161 +1,2050 @@
 [
   {
-    "id": "at.dsnet.wnsm",
+    "id": "com.wemolocal",
     "rating": null,
     "liveBuild": {
-      "id": 2,
+      "id": 4,
       "name": {
-        "en": "Wiener Netze Smart Meter"
+        "en": "Wemo",
+        "fr": "Wemo"
       },
-      "version": "2.11.2",
+      "version": "0.4.13",
       "readme": {
-        "en": "Bring your Wiener Netze smart meter into Homey. The app signs in to your Smart Meter portal account, discovers every Zaehlpunkt on it, and adds each one as a device so yesterday's consumption and meter reading land right next to the rest of your home.\n\nThe values arrive as standard energy capabilities, so they flow straight into Homey Energy and into any Flow you build. Get notified when a fresh reading comes in, react to a day's usage, or just keep a quiet eye on where your kilowatt-hours go. Set up once and it keeps itself up to date.\n"
+        "en": "Control compatible legacy Belkin Wemo devices directly on your local network with Homey Pro, without a Wemo cloud account. Discover your devices, switch them on and off, adjust supported dimmers and use Insight power and energy readings in your Flows. This independent community app is not affiliated with or endorsed by Belkin.\n\nThis is a test release. For new or reset devices, a guided iPhone setup using the free Scriptable app is included; it currently supports WPA2/AES and 8–63 character ASCII Wi-Fi passwords. Scriptable is only needed for initial Wi-Fi setup, not daily control. Hardware and firmware compatibility varies; please use the linked community topic for setup instructions, tested models and feedback.\n",
+        "fr": "Pilotez les anciens appareils Belkin Wemo compatibles directement sur votre réseau local avec Homey Pro, sans compte cloud Wemo. Découvrez vos appareils, allumez-les, réglez les variateurs compatibles et utilisez les mesures de puissance et d’énergie Insight dans vos Flows. Cette application communautaire indépendante n’est ni affiliée à Belkin ni approuvée par Belkin.\n\nIl s’agit d’une version de test. Pour les appareils neufs ou réinitialisés, un parcours guidé sur iPhone avec l’application gratuite Scriptable est inclus ; il prend actuellement en charge WPA2/AES et les mots de passe Wi-Fi de 8 à 63 caractères ASCII. Scriptable sert uniquement à la configuration Wi-Fi initiale. La compatibilité dépend du modèle et du firmware ; consultez le sujet communautaire lié pour les instructions, les modèles testés et vos retours.\n"
       },
       "description": {
-        "en": "Keep an eye on your energy use.",
-        "de": "Behalte deinen Energieverbrauch im Blick."
+        "en": "Keep your legacy devices connected, with local control.",
+        "fr": "Gardez vos anciens appareils connectés grâce au pilotage local."
       },
-      "category": "energy",
-      "brandColor": "#bb005d",
-      "icon": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/assets/images/large.png",
+      "category": "appliances",
+      "brandColor": "#55A63A",
+      "icon": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/assets/images/large.png",
       "drivers": [
         {
-          "id": "smartmeter",
+          "id": "wemo-dimmer",
           "name": {
-            "en": "Wiener Netze Smart Meter"
+            "en": "Wemo Dimmer",
+            "fr": "Variateur Wemo"
           },
-          "class": "sensor",
+          "class": "light",
           "capabilities": [
-            "meter_power",
-            "meter_power.daily"
+            "onoff",
+            "dim"
           ],
-          "capabilitiesOptions": {
-            "meter_power": {
-              "title": {
-                "en": "Meter reading (yesterday)",
-                "de": "Zählerstand (gestern)"
-              }
-            },
-            "meter_power.daily": {
-              "title": {
-                "en": "Daily consumption (yesterday)",
-                "de": "Tagesverbrauch (gestern)"
-              }
-            }
-          },
-          "energy": {
-            "cumulative": true,
-            "cumulativeImportedCapability": "meter_power"
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/drivers/smartmeter/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/drivers/smartmeter/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-dimmer/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-dimmer/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "cloud"
+            "lan"
           ],
-          "icon": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/drivers/smartmeter/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-dimmer/assets/icon.svg"
+        },
+        {
+          "id": "wemo-insight",
+          "name": {
+            "en": "Wemo Insight",
+            "fr": "Wemo Insight"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "measure_power",
+            "meter_power"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-insight/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-insight/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-insight/assets/icon.svg"
+        },
+        {
+          "id": "wemo-light-switch",
+          "name": {
+            "en": "Wemo Light Switch",
+            "fr": "Interrupteur mural Wemo"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-light-switch/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-light-switch/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-light-switch/assets/icon.svg"
+        },
+        {
+          "id": "wemo-switch",
+          "name": {
+            "en": "Wemo Plug / Switch",
+            "fr": "Prise / interrupteur Wemo"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-switch/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-switch/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.wemolocal/4/77d2438e-4069-41c6-b497-1c46fec6dbd4/drivers/wemo-switch/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "daily_consumption_updated",
+            "id": "dimmer_state_changed",
             "title": {
-              "en": "Daily consumption was updated",
-              "de": "Tagesverbrauch wurde aktualisiert"
+              "en": "State changed",
+              "fr": "L'état a changé"
+            },
+            "hint": {
+              "en": "Starts when the on/off state reported by the Wemo changes.",
+              "fr": "Se déclenche lorsque l'état marche/arrêt remonté par la Wemo change."
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=smartmeter"
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
               }
             ],
             "tokens": [
               {
-                "name": "kwh",
-                "type": "number",
+                "name": "state",
+                "type": "boolean",
                 "title": {
-                  "en": "kWh",
-                  "de": "kWh"
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
                 },
                 "example": {
-                  "en": "12.345"
+                  "en": "On",
+                  "fr": "Allumée"
                 }
               },
               {
-                "name": "day",
+                "name": "ip",
                 "type": "string",
                 "title": {
-                  "en": "Day",
-                  "de": "Tag"
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              }
+            ]
+          },
+          {
+            "id": "dimmer_reachable",
+            "title": {
+              "en": "Became reachable",
+              "fr": "Est redevenue joignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo"
+              }
+            ]
+          },
+          {
+            "id": "dimmer_unreachable",
+            "title": {
+              "en": "Became unreachable",
+              "fr": "Est devenue injoignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "fr": "Raison"
                 },
                 "example": {
-                  "en": "2026-06-14"
+                  "en": "Connection timed out",
+                  "fr": "Délai de connexion dépassé"
                 }
               }
             ]
           },
           {
-            "id": "meter_reading_updated",
+            "id": "dimmer_address_changed",
             "title": {
-              "en": "Meter reading was updated",
-              "de": "Zählerstand wurde aktualisiert"
+              "en": "Local address changed",
+              "fr": "L'adresse locale a changé"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=smartmeter"
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
               }
             ],
             "tokens": [
               {
-                "name": "kwh",
+                "name": "old_ip",
+                "type": "string",
+                "title": {
+                  "en": "Previous IP address",
+                  "fr": "Ancienne adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "new_ip",
+                "type": "string",
+                "title": {
+                  "en": "New IP address",
+                  "fr": "Nouvelle adresse IP"
+                },
+                "example": "192.168.1.86"
+              }
+            ]
+          },
+          {
+            "id": "dimmer_brightness_changed",
+            "title": {
+              "en": "Brightness changed",
+              "fr": "La luminosité a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "brightness",
                 "type": "number",
                 "title": {
-                  "en": "kWh",
-                  "de": "kWh"
+                  "en": "Brightness (%)",
+                  "fr": "Luminosité (%)"
+                },
+                "example": 50
+              },
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              }
+            ]
+          },
+          {
+            "id": "insight_state_changed",
+            "title": {
+              "en": "State changed",
+              "fr": "L'état a changé"
+            },
+            "hint": {
+              "en": "Starts when the on/off state reported by the Wemo changes.",
+              "fr": "Se déclenche lorsque l'état marche/arrêt remonté par la Wemo change."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
                 },
                 "example": {
-                  "en": "12345.678"
+                  "en": "On",
+                  "fr": "Allumée"
                 }
               },
               {
-                "name": "day",
+                "name": "ip",
                 "type": "string",
                 "title": {
-                  "en": "Day",
-                  "de": "Tag"
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              }
+            ]
+          },
+          {
+            "id": "insight_reachable",
+            "title": {
+              "en": "Became reachable",
+              "fr": "Est redevenue joignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo"
+              }
+            ]
+          },
+          {
+            "id": "insight_unreachable",
+            "title": {
+              "en": "Became unreachable",
+              "fr": "Est devenue injoignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "fr": "Raison"
                 },
                 "example": {
-                  "en": "2026-06-14"
+                  "en": "Connection timed out",
+                  "fr": "Délai de connexion dépassé"
                 }
+              }
+            ]
+          },
+          {
+            "id": "insight_address_changed",
+            "title": {
+              "en": "Local address changed",
+              "fr": "L'adresse locale a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "old_ip",
+                "type": "string",
+                "title": {
+                  "en": "Previous IP address",
+                  "fr": "Ancienne adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "new_ip",
+                "type": "string",
+                "title": {
+                  "en": "New IP address",
+                  "fr": "Nouvelle adresse IP"
+                },
+                "example": "192.168.1.86"
+              }
+            ]
+          },
+          {
+            "id": "insight_power_changed",
+            "title": {
+              "en": "Power changed",
+              "fr": "La puissance a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power_w",
+                "type": "number",
+                "title": {
+                  "en": "Power (W)",
+                  "fr": "Puissance (W)"
+                },
+                "example": 12.5
+              },
+              {
+                "name": "today_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Energy today (kWh)",
+                  "fr": "Énergie aujourd'hui (kWh)"
+                },
+                "example": 0.42
+              },
+              {
+                "name": "total_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Total energy (kWh)",
+                  "fr": "Énergie totale (kWh)"
+                },
+                "example": 123.45
+              }
+            ]
+          },
+          {
+            "id": "insight_energy_changed",
+            "title": {
+              "en": "Energy changed",
+              "fr": "La consommation a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "today_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Energy today (kWh)",
+                  "fr": "Énergie aujourd'hui (kWh)"
+                },
+                "example": 0.42
+              },
+              {
+                "name": "total_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Total energy (kWh)",
+                  "fr": "Énergie totale (kWh)"
+                },
+                "example": 123.45
+              }
+            ]
+          },
+          {
+            "id": "insight_standby_changed",
+            "title": {
+              "en": "Standby state changed",
+              "fr": "L'état de veille a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "standby",
+                "type": "boolean",
+                "title": {
+                  "en": "Standby",
+                  "fr": "Veille"
+                },
+                "example": true
+              },
+              {
+                "name": "power_w",
+                "type": "number",
+                "title": {
+                  "en": "Power (W)",
+                  "fr": "Puissance (W)"
+                },
+                "example": 0.8
+              }
+            ]
+          },
+          {
+            "id": "insight_power_equals",
+            "title": {
+              "fr": "La puissance est égale à…",
+              "en": "Power equals…"
+            },
+            "titleFormatted": {
+              "fr": "La puissance est égale à [[target]] W (± [[tolerance]] W)",
+              "en": "Power equals [[target]] W (± [[tolerance]] W)"
+            },
+            "hint": {
+              "fr": "Se déclenche à l’entrée dans la plage valeur ± tolérance, pas à chaque relevé. Tolérance 0 : égalité exacte. Aucun déclenchement au premier relevé. Si la mesure saute la plage, le Flow ne démarre pas.",
+              "en": "Triggers on entering the target ± tolerance range, not on every reading. Tolerance 0 means exact equality. No trigger on the first reading. Skipping the range does not trigger the Flow."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              },
+              {
+                "name": "target",
+                "type": "number",
+                "title": {
+                  "fr": "Valeur (W)",
+                  "en": "Value (W)"
+                },
+                "min": 0,
+                "step": 0.1
+              },
+              {
+                "name": "tolerance",
+                "type": "number",
+                "title": {
+                  "fr": "Tolérance (W)",
+                  "en": "Tolerance (W)"
+                },
+                "min": 0,
+                "step": 0.1,
+                "value": 0
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power_w",
+                "type": "number",
+                "title": {
+                  "en": "Power (W)",
+                  "fr": "Puissance (W)"
+                },
+                "example": 12.5
+              },
+              {
+                "name": "today_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Energy today (kWh)",
+                  "fr": "Énergie aujourd'hui (kWh)"
+                },
+                "example": 0.42
+              },
+              {
+                "name": "total_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Total energy (kWh)",
+                  "fr": "Énergie totale (kWh)"
+                },
+                "example": 123.45
+              }
+            ]
+          },
+          {
+            "id": "insight_energy_equals",
+            "title": {
+              "fr": "L’énergie totale est égale à…",
+              "en": "Total energy equals…"
+            },
+            "titleFormatted": {
+              "fr": "L’énergie totale est égale à [[target]] kWh (± [[tolerance]] kWh)",
+              "en": "Total energy equals [[target]] kWh (± [[tolerance]] kWh)"
+            },
+            "hint": {
+              "fr": "Se déclenche à l’entrée dans la plage valeur ± tolérance, pas à chaque relevé. Tolérance 0 : égalité exacte. Aucun déclenchement au premier relevé. Si la mesure saute la plage, le Flow ne démarre pas.",
+              "en": "Triggers on entering the target ± tolerance range, not on every reading. Tolerance 0 means exact equality. No trigger on the first reading. Skipping the range does not trigger the Flow."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              },
+              {
+                "name": "target",
+                "type": "number",
+                "title": {
+                  "fr": "Valeur (kWh)",
+                  "en": "Value (kWh)"
+                },
+                "min": 0,
+                "step": 0.001
+              },
+              {
+                "name": "tolerance",
+                "type": "number",
+                "title": {
+                  "fr": "Tolérance (kWh)",
+                  "en": "Tolerance (kWh)"
+                },
+                "min": 0,
+                "step": 0.001,
+                "value": 0
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power_w",
+                "type": "number",
+                "title": {
+                  "en": "Power (W)",
+                  "fr": "Puissance (W)"
+                },
+                "example": 12.5
+              },
+              {
+                "name": "today_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Energy today (kWh)",
+                  "fr": "Énergie aujourd'hui (kWh)"
+                },
+                "example": 0.42
+              },
+              {
+                "name": "total_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Total energy (kWh)",
+                  "fr": "Énergie totale (kWh)"
+                },
+                "example": 123.45
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_state_changed",
+            "title": {
+              "en": "State changed",
+              "fr": "L'état a changé"
+            },
+            "hint": {
+              "en": "Starts when the on/off state reported by the Wemo changes.",
+              "fr": "Se déclenche lorsque l'état marche/arrêt remonté par la Wemo change."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
+                },
+                "example": {
+                  "en": "On",
+                  "fr": "Allumée"
+                }
+              },
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_reachable",
+            "title": {
+              "en": "Became reachable",
+              "fr": "Est redevenue joignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo"
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_unreachable",
+            "title": {
+              "en": "Became unreachable",
+              "fr": "Est devenue injoignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "fr": "Raison"
+                },
+                "example": {
+                  "en": "Connection timed out",
+                  "fr": "Délai de connexion dépassé"
+                }
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_address_changed",
+            "title": {
+              "en": "Local address changed",
+              "fr": "L'adresse locale a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "old_ip",
+                "type": "string",
+                "title": {
+                  "en": "Previous IP address",
+                  "fr": "Ancienne adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "new_ip",
+                "type": "string",
+                "title": {
+                  "en": "New IP address",
+                  "fr": "Nouvelle adresse IP"
+                },
+                "example": "192.168.1.86"
+              }
+            ]
+          },
+          {
+            "id": "wemo_state_changed",
+            "title": {
+              "en": "State changed",
+              "fr": "L'état a changé"
+            },
+            "hint": {
+              "en": "Starts when the on/off state reported by the Wemo changes.",
+              "fr": "Se déclenche lorsque l'état marche/arrêt remonté par la Wemo change."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
+                },
+                "example": {
+                  "en": "On",
+                  "fr": "Allumée"
+                }
+              },
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              }
+            ]
+          },
+          {
+            "id": "wemo_reachable",
+            "title": {
+              "en": "Became reachable",
+              "fr": "Est redevenue joignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo"
+              }
+            ]
+          },
+          {
+            "id": "wemo_unreachable",
+            "title": {
+              "en": "Became unreachable",
+              "fr": "Est devenue injoignable"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "fr": "Raison"
+                },
+                "example": {
+                  "en": "Connection timed out",
+                  "fr": "Délai de connexion dépassé"
+                }
+              }
+            ]
+          },
+          {
+            "id": "wemo_address_changed",
+            "title": {
+              "en": "Local address changed",
+              "fr": "L'adresse locale a changé"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "old_ip",
+                "type": "string",
+                "title": {
+                  "en": "Previous IP address",
+                  "fr": "Ancienne adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "new_ip",
+                "type": "string",
+                "title": {
+                  "en": "New IP address",
+                  "fr": "Nouvelle adresse IP"
+                },
+                "example": "192.168.1.86"
               }
             ]
           }
         ],
-        "conditions": null,
-        "actions": [
+        "conditions": [
           {
-            "id": "refresh_now",
+            "id": "dimmer_is_reachable",
             "title": {
-              "en": "Refresh now",
-              "de": "Jetzt aktualisieren"
+              "en": "Is !{{reachable|unreachable}}",
+              "fr": "Est !{{joignable|injoignable}}"
             },
             "hint": {
-              "en": "Force an immediate poll of the Smart Meter portal.",
-              "de": "Erzwingt eine sofortige Abfrage des Smart-Meter-Portals."
+              "en": "Checks whether the Wemo currently responds on the local network.",
+              "fr": "Vérifie si la Wemo répond actuellement sur le réseau local."
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=smartmeter"
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ]
+          },
+          {
+            "id": "dimmer_brightness_above",
+            "title": {
+              "en": "Brightness is above...",
+              "fr": "La luminosité est supérieure à..."
+            },
+            "titleFormatted": {
+              "en": "Brightness is above [[brightness]]%",
+              "fr": "La luminosité est supérieure à [[brightness]] %"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              },
+              {
+                "type": "number",
+                "name": "brightness",
+                "title": {
+                  "en": "Brightness",
+                  "fr": "Luminosité"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 1
+              }
+            ]
+          },
+          {
+            "id": "insight_is_reachable",
+            "title": {
+              "en": "Is !{{reachable|unreachable}}",
+              "fr": "Est !{{joignable|injoignable}}"
+            },
+            "hint": {
+              "en": "Checks whether the Wemo currently responds on the local network.",
+              "fr": "Vérifie si la Wemo répond actuellement sur le réseau local."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ]
+          },
+          {
+            "id": "insight_power_above",
+            "title": {
+              "en": "Power is above...",
+              "fr": "La puissance est supérieure à..."
+            },
+            "titleFormatted": {
+              "en": "Power is above [[watts]] W",
+              "fr": "La puissance est supérieure à [[watts]] W"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              },
+              {
+                "type": "number",
+                "name": "watts",
+                "title": {
+                  "en": "Power",
+                  "fr": "Puissance"
+                },
+                "min": 0,
+                "step": 0.1
+              }
+            ]
+          },
+          {
+            "id": "insight_is_standby",
+            "title": {
+              "en": "Is in standby",
+              "fr": "Est en veille"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_is_reachable",
+            "title": {
+              "en": "Is !{{reachable|unreachable}}",
+              "fr": "Est !{{joignable|injoignable}}"
+            },
+            "hint": {
+              "en": "Checks whether the Wemo currently responds on the local network.",
+              "fr": "Vérifie si la Wemo répond actuellement sur le réseau local."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ]
+          },
+          {
+            "id": "wemo_is_reachable",
+            "title": {
+              "en": "Is !{{reachable|unreachable}}",
+              "fr": "Est !{{joignable|injoignable}}"
+            },
+            "hint": {
+              "en": "Checks whether the Wemo currently responds on the local network.",
+              "fr": "Vérifie si la Wemo répond actuellement sur le réseau local."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "dimmer_sync_state",
+            "title": {
+              "en": "Synchronize state",
+              "fr": "Synchroniser l'état"
+            },
+            "hint": {
+              "en": "Immediately reads the real state from the Wemo.",
+              "fr": "Lit immédiatement l'état réel de la Wemo."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ]
+          },
+          {
+            "id": "dimmer_refresh_description",
+            "title": {
+              "en": "Refresh device information",
+              "fr": "Actualiser les informations"
+            },
+            "hint": {
+              "en": "Reads the latest model, firmware and network information and updates its Tags.",
+              "fr": "Relit le modèle, le firmware et les informations réseau puis met à jour ses Tags."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ]
+          },
+          {
+            "id": "dimmer_refresh_info",
+            "title": {
+              "en": "Read local information",
+              "fr": "Lire les informations locales"
+            },
+            "hint": {
+              "en": "Returns local device information as Tags in Advanced Flow.",
+              "fr": "Renvoie les informations locales sous forme de Tags dans Advanced Flow."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
+                },
+                "example": {
+                  "en": "On",
+                  "fr": "Allumée"
+                }
+              },
+              {
+                "name": "reachable",
+                "type": "boolean",
+                "title": {
+                  "en": "Reachable",
+                  "fr": "Joignable"
+                },
+                "example": true
+              },
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "fr": "Nom de l’appareil"
+                },
+                "example": "Prise Établi"
+              },
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "port",
+                "type": "number",
+                "title": {
+                  "en": "Port",
+                  "fr": "Port"
+                },
+                "example": 49153
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo Switch"
+              },
+              {
+                "name": "model_number",
+                "type": "string",
+                "title": {
+                  "en": "Model number",
+                  "fr": "Numéro de modèle"
+                },
+                "example": "F7C027"
+              },
+              {
+                "name": "serial_number",
+                "type": "string",
+                "title": {
+                  "en": "Serial number",
+                  "fr": "Numéro de série"
+                },
+                "example": "XXXXXXXX"
+              },
+              {
+                "name": "firmware_version",
+                "type": "string",
+                "title": {
+                  "en": "Firmware",
+                  "fr": "Firmware"
+                },
+                "example": "WeMo_WW_2.00.x"
+              },
+              {
+                "name": "mac_address",
+                "type": "string",
+                "title": {
+                  "en": "MAC address",
+                  "fr": "Adresse MAC"
+                },
+                "example": "AA:BB:CC:DD:EE:FF"
+              },
+              {
+                "name": "udn",
+                "type": "string",
+                "title": {
+                  "en": "UDN",
+                  "fr": "UDN"
+                },
+                "example": "uuid:Socket-1_0-XXXXXXXX"
+              },
+              {
+                "name": "brightness",
+                "type": "number",
+                "title": {
+                  "en": "Brightness (%)",
+                  "fr": "Luminosité (%)"
+                },
+                "example": 50
+              }
+            ]
+          },
+          {
+            "id": "dimmer_set_brightness",
+            "title": {
+              "en": "Set brightness",
+              "fr": "Régler la luminosité"
+            },
+            "titleFormatted": {
+              "en": "Set brightness to [[brightness]]%",
+              "fr": "Régler la luminosité à [[brightness]] %"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-dimmer"
+              },
+              {
+                "type": "range",
+                "name": "brightness",
+                "title": {
+                  "en": "Brightness",
+                  "fr": "Luminosité"
+                },
+                "min": 0,
+                "max": 1,
+                "step": 0.01,
+                "label": "%",
+                "labelMultiplier": 100,
+                "labelDecimals": 0
+              }
+            ]
+          },
+          {
+            "id": "insight_sync_state",
+            "title": {
+              "en": "Synchronize state",
+              "fr": "Synchroniser l'état"
+            },
+            "hint": {
+              "en": "Immediately reads the real state from the Wemo.",
+              "fr": "Lit immédiatement l'état réel de la Wemo."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ]
+          },
+          {
+            "id": "insight_refresh_description",
+            "title": {
+              "en": "Refresh device information",
+              "fr": "Actualiser les informations"
+            },
+            "hint": {
+              "en": "Reads the latest model, firmware and network information and updates its Tags.",
+              "fr": "Relit le modèle, le firmware et les informations réseau puis met à jour ses Tags."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ]
+          },
+          {
+            "id": "insight_refresh_info",
+            "title": {
+              "en": "Read local information",
+              "fr": "Lire les informations locales"
+            },
+            "hint": {
+              "en": "Returns local device information as Tags in Advanced Flow.",
+              "fr": "Renvoie les informations locales sous forme de Tags dans Advanced Flow."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
+                },
+                "example": {
+                  "en": "On",
+                  "fr": "Allumée"
+                }
+              },
+              {
+                "name": "reachable",
+                "type": "boolean",
+                "title": {
+                  "en": "Reachable",
+                  "fr": "Joignable"
+                },
+                "example": true
+              },
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "fr": "Nom de l’appareil"
+                },
+                "example": "Prise Établi"
+              },
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "port",
+                "type": "number",
+                "title": {
+                  "en": "Port",
+                  "fr": "Port"
+                },
+                "example": 49153
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo Switch"
+              },
+              {
+                "name": "model_number",
+                "type": "string",
+                "title": {
+                  "en": "Model number",
+                  "fr": "Numéro de modèle"
+                },
+                "example": "F7C027"
+              },
+              {
+                "name": "serial_number",
+                "type": "string",
+                "title": {
+                  "en": "Serial number",
+                  "fr": "Numéro de série"
+                },
+                "example": "XXXXXXXX"
+              },
+              {
+                "name": "firmware_version",
+                "type": "string",
+                "title": {
+                  "en": "Firmware",
+                  "fr": "Firmware"
+                },
+                "example": "WeMo_WW_2.00.x"
+              },
+              {
+                "name": "mac_address",
+                "type": "string",
+                "title": {
+                  "en": "MAC address",
+                  "fr": "Adresse MAC"
+                },
+                "example": "AA:BB:CC:DD:EE:FF"
+              },
+              {
+                "name": "udn",
+                "type": "string",
+                "title": {
+                  "en": "UDN",
+                  "fr": "UDN"
+                },
+                "example": "uuid:Socket-1_0-XXXXXXXX"
+              },
+              {
+                "name": "power_w",
+                "type": "number",
+                "title": {
+                  "en": "Power",
+                  "fr": "Puissance"
+                },
+                "example": 12.5
+              },
+              {
+                "name": "today_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Energy today",
+                  "fr": "Énergie aujourd'hui"
+                },
+                "example": 0.42
+              },
+              {
+                "name": "total_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Total energy",
+                  "fr": "Énergie totale"
+                },
+                "example": 123.45
+              },
+              {
+                "name": "standby",
+                "type": "boolean",
+                "title": {
+                  "en": "Standby",
+                  "fr": "Veille"
+                },
+                "example": false
+              },
+              {
+                "name": "on_today_seconds",
+                "type": "number",
+                "title": {
+                  "en": "On time today (s)",
+                  "fr": "Temps allumé aujourd'hui (s)"
+                },
+                "example": 3600
+              },
+              {
+                "name": "on_total_seconds",
+                "type": "number",
+                "title": {
+                  "en": "Total on time (s)",
+                  "fr": "Temps total allumé (s)"
+                },
+                "example": 86400
+              },
+              {
+                "name": "wifi_power",
+                "type": "number",
+                "title": {
+                  "en": "Wi-Fi signal",
+                  "fr": "Signal Wi-Fi"
+                },
+                "example": -45
+              },
+              {
+                "name": "power_threshold_w",
+                "type": "number",
+                "title": {
+                  "en": "Standby threshold",
+                  "fr": "Seuil de veille"
+                },
+                "example": 2
+              }
+            ]
+          },
+          {
+            "id": "insight_refresh_energy",
+            "title": {
+              "en": "Refresh energy measurements",
+              "fr": "Actualiser les mesures énergétiques"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ]
+          },
+          {
+            "id": "insight_read_energy",
+            "title": {
+              "en": "Read energy measurements",
+              "fr": "Lire les mesures énergétiques"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-insight"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "power_w",
+                "type": "number",
+                "title": {
+                  "en": "Power",
+                  "fr": "Puissance"
+                },
+                "example": 12.5
+              },
+              {
+                "name": "today_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Energy today",
+                  "fr": "Énergie aujourd'hui"
+                },
+                "example": 0.42
+              },
+              {
+                "name": "total_kwh",
+                "type": "number",
+                "title": {
+                  "en": "Total energy",
+                  "fr": "Énergie totale"
+                },
+                "example": 123.45
+              },
+              {
+                "name": "standby",
+                "type": "boolean",
+                "title": {
+                  "en": "Standby",
+                  "fr": "Veille"
+                },
+                "example": false
+              },
+              {
+                "name": "on_today_seconds",
+                "type": "number",
+                "title": {
+                  "en": "On time today (s)",
+                  "fr": "Temps allumé aujourd'hui (s)"
+                },
+                "example": 3600
+              },
+              {
+                "name": "on_total_seconds",
+                "type": "number",
+                "title": {
+                  "en": "Total on time (s)",
+                  "fr": "Temps total allumé (s)"
+                },
+                "example": 86400
+              },
+              {
+                "name": "wifi_power",
+                "type": "number",
+                "title": {
+                  "en": "Wi-Fi signal",
+                  "fr": "Signal Wi-Fi"
+                },
+                "example": -45
+              },
+              {
+                "name": "power_threshold_w",
+                "type": "number",
+                "title": {
+                  "en": "Standby threshold",
+                  "fr": "Seuil de veille"
+                },
+                "example": 2
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_sync_state",
+            "title": {
+              "en": "Synchronize state",
+              "fr": "Synchroniser l'état"
+            },
+            "hint": {
+              "en": "Immediately reads the real state from the Wemo.",
+              "fr": "Lit immédiatement l'état réel de la Wemo."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_refresh_description",
+            "title": {
+              "en": "Refresh device information",
+              "fr": "Actualiser les informations"
+            },
+            "hint": {
+              "en": "Reads the latest model, firmware and network information and updates its Tags.",
+              "fr": "Relit le modèle, le firmware et les informations réseau puis met à jour ses Tags."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ]
+          },
+          {
+            "id": "lightswitch_refresh_info",
+            "title": {
+              "en": "Read local information",
+              "fr": "Lire les informations locales"
+            },
+            "hint": {
+              "en": "Returns local device information as Tags in Advanced Flow.",
+              "fr": "Renvoie les informations locales sous forme de Tags dans Advanced Flow."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-light-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
+                },
+                "example": {
+                  "en": "On",
+                  "fr": "Allumée"
+                }
+              },
+              {
+                "name": "reachable",
+                "type": "boolean",
+                "title": {
+                  "en": "Reachable",
+                  "fr": "Joignable"
+                },
+                "example": true
+              },
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "fr": "Nom de l’appareil"
+                },
+                "example": "Prise Établi"
+              },
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "port",
+                "type": "number",
+                "title": {
+                  "en": "Port",
+                  "fr": "Port"
+                },
+                "example": 49153
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo Switch"
+              },
+              {
+                "name": "model_number",
+                "type": "string",
+                "title": {
+                  "en": "Model number",
+                  "fr": "Numéro de modèle"
+                },
+                "example": "F7C027"
+              },
+              {
+                "name": "serial_number",
+                "type": "string",
+                "title": {
+                  "en": "Serial number",
+                  "fr": "Numéro de série"
+                },
+                "example": "XXXXXXXX"
+              },
+              {
+                "name": "firmware_version",
+                "type": "string",
+                "title": {
+                  "en": "Firmware",
+                  "fr": "Firmware"
+                },
+                "example": "WeMo_WW_2.00.x"
+              },
+              {
+                "name": "mac_address",
+                "type": "string",
+                "title": {
+                  "en": "MAC address",
+                  "fr": "Adresse MAC"
+                },
+                "example": "AA:BB:CC:DD:EE:FF"
+              },
+              {
+                "name": "udn",
+                "type": "string",
+                "title": {
+                  "en": "UDN",
+                  "fr": "UDN"
+                },
+                "example": "uuid:Socket-1_0-XXXXXXXX"
+              }
+            ]
+          },
+          {
+            "id": "wemo_sync_state",
+            "title": {
+              "en": "Synchronize state",
+              "fr": "Synchroniser l'état"
+            },
+            "hint": {
+              "en": "Immediately reads the real state from the Wemo.",
+              "fr": "Lit immédiatement l'état réel de la Wemo."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ]
+          },
+          {
+            "id": "wemo_refresh_description",
+            "title": {
+              "en": "Refresh device information",
+              "fr": "Actualiser les informations"
+            },
+            "hint": {
+              "en": "Reads the latest model, firmware and network information and updates its Tags.",
+              "fr": "Relit le modèle, le firmware et les informations réseau puis met à jour ses Tags."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ]
+          },
+          {
+            "id": "wemo_refresh_info",
+            "title": {
+              "en": "Read local information",
+              "fr": "Lire les informations locales"
+            },
+            "hint": {
+              "en": "Returns local device information as Tags in Advanced Flow.",
+              "fr": "Renvoie les informations locales sous forme de Tags dans Advanced Flow."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=wemo-switch"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "boolean",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                },
+                "example": true
+              },
+              {
+                "name": "state_text",
+                "type": "string",
+                "title": {
+                  "en": "State text",
+                  "fr": "État en texte"
+                },
+                "example": {
+                  "en": "On",
+                  "fr": "Allumée"
+                }
+              },
+              {
+                "name": "reachable",
+                "type": "boolean",
+                "title": {
+                  "en": "Reachable",
+                  "fr": "Joignable"
+                },
+                "example": true
+              },
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device name",
+                  "fr": "Nom de l’appareil"
+                },
+                "example": "Prise Établi"
+              },
+              {
+                "name": "ip",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                },
+                "example": "192.168.1.85"
+              },
+              {
+                "name": "port",
+                "type": "number",
+                "title": {
+                  "en": "Port",
+                  "fr": "Port"
+                },
+                "example": 49153
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "fr": "Modèle"
+                },
+                "example": "Wemo Switch"
+              },
+              {
+                "name": "model_number",
+                "type": "string",
+                "title": {
+                  "en": "Model number",
+                  "fr": "Numéro de modèle"
+                },
+                "example": "F7C027"
+              },
+              {
+                "name": "serial_number",
+                "type": "string",
+                "title": {
+                  "en": "Serial number",
+                  "fr": "Numéro de série"
+                },
+                "example": "XXXXXXXX"
+              },
+              {
+                "name": "firmware_version",
+                "type": "string",
+                "title": {
+                  "en": "Firmware",
+                  "fr": "Firmware"
+                },
+                "example": "WeMo_WW_2.00.x"
+              },
+              {
+                "name": "mac_address",
+                "type": "string",
+                "title": {
+                  "en": "MAC address",
+                  "fr": "Adresse MAC"
+                },
+                "example": "AA:BB:CC:DD:EE:FF"
+              },
+              {
+                "name": "udn",
+                "type": "string",
+                "title": {
+                  "en": "UDN",
+                  "fr": "UDN"
+                },
+                "example": "uuid:Socket-1_0-XXXXXXXX"
               }
             ]
           }
@@ -163,21 +2052,668 @@
       },
       "widgets": null,
       "screensavers": [],
-      "homeyCommunityTopicId": null,
+      "homeyCommunityTopicId": 159683,
       "state": "live",
-      "stateChangedAt": "2026-09-18T08:17:34.627Z",
+      "stateChangedAt": "2026-09-18T10:21:15.339Z",
       "bugs": null,
       "homepage": null,
-      "support": "mailto:homeyapps@dsnet.at",
+      "support": "https://community.homey.app/t/159683",
       "source": null,
       "contributors": null,
       "contributing": null,
       "permissions": [],
       "changelog": {
-        "en": "Adds a dedicated icon for the Smart Meter device so it is easier to recognise when adding one. Internal dependency and version metadata cleaned up.",
-        "de": "Das Smart-Meter-Gerät hat jetzt ein eigenes Symbol und ist beim Hinzufügen leichter zu erkennen. Interne Abhängigkeits- und Versionsangaben bereinigt."
+        "en": "Normalize the Dimmer icon to a square 960 x 960 canvas without changing its proportions. Verify the included iPhone setup companion 0.2.1 and manual setup instructions.",
+        "fr": "Icône Dimmer adaptée au canevas carré 960 × 960 sans déformation. Vérification du compagnon iPhone 0.2.1 inclus et des instructions de configuration manuelle."
       },
-      "compatibility": ">=12.9.0",
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "Wemo",
+          "Belkin",
+          "local",
+          "smart plug",
+          "switch",
+          "dimmer",
+          "Insight",
+          "energy"
+        ],
+        "fr": [
+          "Wemo",
+          "Belkin",
+          "local",
+          "prise connectée",
+          "interrupteur",
+          "variateur",
+          "Insight",
+          "énergie"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.4.13",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a8aabbfc6a80eeabce82a73",
+      "type": "user",
+      "userId": "611ad48125e22f0b9e01600e",
+      "name": "Antoine Chaulieu",
+      "verified": false
+    },
+    "communityTopicId": 159683
+  },
+  {
+    "id": "no.joymyr.sesam-pay",
+    "rating": null,
+    "liveBuild": {
+      "id": 11,
+      "name": {
+        "en": "Sesam Pay",
+        "no": "Sesam Pay"
+      },
+      "version": "1.0.10",
+      "readme": {
+        "en": "Avoid parking service fees and save money on parking with Sesam Pay for Homey Pro. Parking apps like Sesam Sesam and EasyPark charge a service fee per parking session on camera-based parking facilities. If you disable automatic charging in your parking app and pay directly on the operator website within 48 hours after leaving the facility, you avoid this service fee completely. The main challenge is remembering the 48-hour deadline before invoices or extra fees are issued.\n\nSesam Pay automatically monitors your registered vehicles by regularly checking for unpaid parking sessions. As soon as a new parking session is detected, you can receive alerts on your Homey Timeline, smartphone, Slack, or email. The app also reminds you when less than 12 hours remain before the payment deadline expires, and lets you copy direct payment links to complete payment with BankID in your browser. With flexible Flow cards, you can build automations based on detected parkings, remaining time, and completed payments.\n\nBecause standard Homey push notifications do not support clickable links, sending notifications through Slack or email in your flows is recommended for the smoothest experience, allowing you to open the payment link directly.\n\nThis is an unofficial app developed independently for Homey and is not affiliated with, sponsored by, or endorsed by Hi Tech Mobility AS, Sesam Sesam, EasyPark, or Bergen Parkering. All trademarks belong to their respective owners.\n",
+        "no": "Unngå servicetillegg og spar penger på parkering med Sesam Pay for Homey Pro. Parkeringsapper som Sesam Sesam og EasyPark legger på et servicetillegg per parkering på skiltgjenkjente parkeringsanlegg. Hvis du deaktiverer automatisk trekk i appen og i stedet betaler direkte på nettsiden innen 48 timer etter utkjøring, slipper du dette tillegget helt. Utfordringen er å huske 48-timersfristen før faktura eller purregebyr påløper.\n\nSesam Pay overvåker automatisk dine registrerte kjøretøy ved å jevnlig sjekke etter ubetalte parkeringer. Så snart en ny parkering oppdages, kan du få varsler på Homey Tidslinje, mobil, Slack eller e-post. Appen gir deg også påminnelser når det er under 12 timer igjen av betalingsfristen, og lar deg kopiere direkte betalingslenke for enkel betaling med BankID i nettleseren. Med allsidige Flow-kort kan du bygge automatiseringer basert på nye parkeringer, gjenstående tid og fullførte betalinger.\n\nSiden standard push-varsler i Homey ikke støtter klikkbare lenker, anbefales det å sende varsler via Slack eller e-post i flytene dine, slik at du kan åpne betalingslenken direkte.\n\nDette er en uoffisiell app utviklet uavhengig for Homey, og er ikke tilknyttet, sponset av eller godkjent av Hi Tech Mobility AS, Sesam Sesam, EasyPark eller Bergen Parkering. Alle varemerker tilhører sine respektive eiere.\n"
+      },
+      "description": {
+        "en": "Never pay a parking service fee again.",
+        "no": "Aldri betal servicetillegg på parkering igjen."
+      },
+      "category": "tools",
+      "brandColor": "#2563eb",
+      "icon": "https://apps.homeycdn.net/app/no.joymyr.sesam-pay/11/d731b0d1-6ec1-41e5-bcb1-7464502b916b/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/no.joymyr.sesam-pay/11/d731b0d1-6ec1-41e5-bcb1-7464502b916b/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/no.joymyr.sesam-pay/11/d731b0d1-6ec1-41e5-bcb1-7464502b916b/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "vehicle",
+          "name": {
+            "en": "Vehicle",
+            "no": "Kjøretøy"
+          },
+          "class": "other",
+          "capabilities": [
+            "alarm_generic",
+            "sesam_unpaid_amount",
+            "sesam_hours_remaining",
+            "sesam_facility",
+            "sesam_payment_status"
+          ],
+          "capabilitiesOptions": {
+            "alarm_generic": {
+              "title": {
+                "en": "Unpaid Parking",
+                "no": "Ubetalt parkering"
+              },
+              "insightsTitleTrue": {
+                "en": "Unpaid parking detected",
+                "no": "Ubetalt parkering oppdaget"
+              },
+              "insightsTitleFalse": {
+                "en": "No unpaid parking",
+                "no": "Ingen ubetalt parkering"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/no.joymyr.sesam-pay/11/d731b0d1-6ec1-41e5-bcb1-7464502b916b/drivers/vehicle/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/no.joymyr.sesam-pay/11/d731b0d1-6ec1-41e5-bcb1-7464502b916b/drivers/vehicle/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/no.joymyr.sesam-pay/11/d731b0d1-6ec1-41e5-bcb1-7464502b916b/drivers/vehicle/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "unpaid_parking_found",
+            "title": {
+              "en": "Unpaid parking detected",
+              "no": "Ubetalt parkering oppdaget"
+            },
+            "hint": {
+              "en": "Triggers when a new unpaid parking is detected for this vehicle.",
+              "no": "Utløses når en ny ubetalt parkering oppdages for dette kjøretøyet."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "regnr",
+                "type": "string",
+                "title": {
+                  "en": "Registration number",
+                  "no": "Registreringsnummer"
+                },
+                "example": "AB12345"
+              },
+              {
+                "name": "facility",
+                "type": "string",
+                "title": {
+                  "en": "Parking facility",
+                  "no": "Parkeringsanlegg"
+                },
+                "example": "BP Bygarasjen"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Amount (kr)",
+                  "no": "Beløp (kr)"
+                },
+                "example": 24
+              },
+              {
+                "name": "hours_remaining",
+                "type": "number",
+                "title": {
+                  "en": "Hours remaining",
+                  "no": "Timer gjenstår av frist"
+                },
+                "example": 47.5
+              },
+              {
+                "name": "deadline_str",
+                "type": "string",
+                "title": {
+                  "en": "Deadline (date/time)",
+                  "no": "Betalingsfrist (dato/tid)"
+                },
+                "example": "11.09.2026 11:39"
+              },
+              {
+                "name": "formatted_message",
+                "type": "string",
+                "title": {
+                  "en": "Formatted message",
+                  "no": "Ferdig formatert varseltekst"
+                },
+                "example": "🚗 Ubetalt parkering: BP Bygarasjen (24 kr)..."
+              },
+              {
+                "name": "payment_url",
+                "type": "string",
+                "title": {
+                  "en": "Payment link",
+                  "no": "Betalingslenke"
+                },
+                "example": "https://psp-ecommerce.payex.com/..."
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "title": {
+                  "en": "Exit time",
+                  "no": "Utkjøringstidspunkt"
+                },
+                "example": "09.09.2026 11:39"
+              }
+            ]
+          },
+          {
+            "id": "deadline_approaching",
+            "title": {
+              "en": "Payment deadline is approaching",
+              "no": "Betalingsfristen utløper snart"
+            },
+            "hint": {
+              "en": "Triggers when less than 12 hours remain of the 48-hour payment deadline.",
+              "no": "Utløses når det er under 12 timer igjen av betalingsfristen på 48 timer."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "regnr",
+                "type": "string",
+                "title": {
+                  "en": "Registration number",
+                  "no": "Registreringsnummer"
+                },
+                "example": "AB12345"
+              },
+              {
+                "name": "facility",
+                "type": "string",
+                "title": {
+                  "en": "Parking facility",
+                  "no": "Parkeringsanlegg"
+                },
+                "example": "BP Bygarasjen"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Amount (kr)",
+                  "no": "Beløp (kr)"
+                },
+                "example": 24
+              },
+              {
+                "name": "hours_remaining",
+                "type": "number",
+                "title": {
+                  "en": "Hours remaining",
+                  "no": "Timer gjenstår av frist"
+                },
+                "example": 11.5
+              },
+              {
+                "name": "deadline_str",
+                "type": "string",
+                "title": {
+                  "en": "Deadline (date/time)",
+                  "no": "Betalingsfrist (dato/tid)"
+                },
+                "example": "11.09.2026 11:39"
+              },
+              {
+                "name": "formatted_message",
+                "type": "string",
+                "title": {
+                  "en": "Formatted message",
+                  "no": "Ferdig formatert varseltekst"
+                },
+                "example": "⏳ Frist utløper snart: BP Bygarasjen..."
+              },
+              {
+                "name": "payment_url",
+                "type": "string",
+                "title": {
+                  "en": "Payment link",
+                  "no": "Betalingslenke"
+                },
+                "example": "https://psp-ecommerce.payex.com/..."
+              }
+            ]
+          },
+          {
+            "id": "parking_paid",
+            "title": {
+              "en": "Parking has been paid",
+              "no": "Parkering er betalt"
+            },
+            "hint": {
+              "en": "Triggers when a parking is paid or settled for this vehicle.",
+              "no": "Utløses når en parkering er betalt eller oppgjort for dette kjøretøyet."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "regnr",
+                "type": "string",
+                "title": {
+                  "en": "Registration number",
+                  "no": "Registreringsnummer"
+                },
+                "example": "AB12345"
+              },
+              {
+                "name": "facility",
+                "type": "string",
+                "title": {
+                  "en": "Parking facility",
+                  "no": "Parkeringsanlegg"
+                },
+                "example": "BP Bygarasjen"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Amount (kr)",
+                  "no": "Beløp (kr)"
+                },
+                "example": 24
+              }
+            ]
+          },
+          {
+            "id": "any_unpaid_parking_found",
+            "title": {
+              "en": "Unpaid parking detected",
+              "no": "Ubetalt parkering oppdaget"
+            },
+            "hint": {
+              "en": "Triggers when unpaid parking is detected for any vehicle.",
+              "no": "Utløses når en ubetalt parkering oppdages for et hvilket som helst kjøretøy."
+            },
+            "tokens": [
+              {
+                "name": "vehicle_name",
+                "type": "string",
+                "title": {
+                  "en": "Vehicle name",
+                  "no": "Kjøretøynavn"
+                },
+                "example": "Min bil"
+              },
+              {
+                "name": "regnr",
+                "type": "string",
+                "title": {
+                  "en": "Registration number",
+                  "no": "Registreringsnummer"
+                },
+                "example": "AB12345"
+              },
+              {
+                "name": "facility",
+                "type": "string",
+                "title": {
+                  "en": "Parking facility",
+                  "no": "Parkeringsanlegg"
+                },
+                "example": "BP Bygarasjen"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Amount (kr)",
+                  "no": "Beløp (kr)"
+                },
+                "example": 24
+              },
+              {
+                "name": "hours_remaining",
+                "type": "number",
+                "title": {
+                  "en": "Hours remaining",
+                  "no": "Timer gjenstår av frist"
+                },
+                "example": 47.5
+              },
+              {
+                "name": "deadline_str",
+                "type": "string",
+                "title": {
+                  "en": "Deadline (date/time)",
+                  "no": "Betalingsfrist (dato/tid)"
+                },
+                "example": "11.09.2026 11:39"
+              },
+              {
+                "name": "formatted_message",
+                "type": "string",
+                "title": {
+                  "en": "Formatted message",
+                  "no": "Ferdig formatert varseltekst"
+                },
+                "example": "🚗 Ubetalt parkering: BP Bygarasjen (24 kr)..."
+              },
+              {
+                "name": "payment_url",
+                "type": "string",
+                "title": {
+                  "en": "Payment link",
+                  "no": "Betalingslenke"
+                },
+                "example": "https://psp-ecommerce.payex.com/..."
+              },
+              {
+                "name": "end_time",
+                "type": "string",
+                "title": {
+                  "en": "Exit time",
+                  "no": "Utkjøringstidspunkt"
+                },
+                "example": "09.09.2026 11:39"
+              }
+            ]
+          },
+          {
+            "id": "any_deadline_approaching",
+            "title": {
+              "en": "Payment deadline is approaching",
+              "no": "Betalingsfristen utløper snart"
+            },
+            "hint": {
+              "en": "Triggers when less than 12 hours remain of the payment deadline for any vehicle.",
+              "no": "Utløses når det er under 12 timer igjen av betalingsfristen for et hvilket som helst kjøretøy."
+            },
+            "tokens": [
+              {
+                "name": "vehicle_name",
+                "type": "string",
+                "title": {
+                  "en": "Vehicle name",
+                  "no": "Kjøretøynavn"
+                },
+                "example": "Min bil"
+              },
+              {
+                "name": "regnr",
+                "type": "string",
+                "title": {
+                  "en": "Registration number",
+                  "no": "Registreringsnummer"
+                },
+                "example": "AB12345"
+              },
+              {
+                "name": "facility",
+                "type": "string",
+                "title": {
+                  "en": "Parking facility",
+                  "no": "Parkeringsanlegg"
+                },
+                "example": "BP Bygarasjen"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Amount (kr)",
+                  "no": "Beløp (kr)"
+                },
+                "example": 24
+              },
+              {
+                "name": "hours_remaining",
+                "type": "number",
+                "title": {
+                  "en": "Hours remaining",
+                  "no": "Timer gjenstår av frist"
+                },
+                "example": 11.5
+              },
+              {
+                "name": "deadline_str",
+                "type": "string",
+                "title": {
+                  "en": "Deadline (date/time)",
+                  "no": "Betalingsfrist (dato/tid)"
+                },
+                "example": "11.09.2026 11:39"
+              },
+              {
+                "name": "formatted_message",
+                "type": "string",
+                "title": {
+                  "en": "Formatted message",
+                  "no": "Ferdig formatert varseltekst"
+                },
+                "example": "⏳ Frist utløper snart: BP Bygarasjen..."
+              },
+              {
+                "name": "payment_url",
+                "type": "string",
+                "title": {
+                  "en": "Payment link",
+                  "no": "Betalingslenke"
+                },
+                "example": "https://psp-ecommerce.payex.com/..."
+              }
+            ]
+          },
+          {
+            "id": "any_parking_paid",
+            "title": {
+              "en": "Parking has been paid",
+              "no": "Parkering er betalt"
+            },
+            "hint": {
+              "en": "Triggers when a parking is paid or settled for any vehicle.",
+              "no": "Utløses når en parkering er betalt eller oppgjort for et hvilket som helst kjøretøy."
+            },
+            "tokens": [
+              {
+                "name": "vehicle_name",
+                "type": "string",
+                "title": {
+                  "en": "Vehicle name",
+                  "no": "Kjøretøynavn"
+                },
+                "example": "Min bil"
+              },
+              {
+                "name": "regnr",
+                "type": "string",
+                "title": {
+                  "en": "Registration number",
+                  "no": "Registreringsnummer"
+                },
+                "example": "AB12345"
+              },
+              {
+                "name": "facility",
+                "type": "string",
+                "title": {
+                  "en": "Parking facility",
+                  "no": "Parkeringsanlegg"
+                },
+                "example": "BP Bygarasjen"
+              },
+              {
+                "name": "amount",
+                "type": "number",
+                "title": {
+                  "en": "Amount (kr)",
+                  "no": "Beløp (kr)"
+                },
+                "example": 24
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "has_unpaid_parking",
+            "title": {
+              "en": "!{{Has|Does not have}} unpaid parking",
+              "no": "!{{Har|Har ikke}} ubetalt parkering"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          },
+          {
+            "id": "any_has_unpaid_parking",
+            "title": {
+              "en": "!{{At least one|No}} vehicle has unpaid parking",
+              "no": "!{{Minst ett|Ingen}} kjøretøy har ubetalt parkering"
+            },
+            "args": []
+          }
+        ],
+        "actions": [
+          {
+            "id": "check_unpaid_now",
+            "title": {
+              "en": "Check unpaid parkings now",
+              "no": "Sjekk ubetalte parkeringer nå"
+            },
+            "hint": {
+              "en": "Checks this vehicle for unpaid parkings immediately.",
+              "no": "Sjekker dette kjøretøyet for ubetalte parkeringer umiddelbart."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          },
+          {
+            "id": "check_all_vehicles_now",
+            "title": {
+              "en": "Check all vehicles now",
+              "no": "Sjekk alle kjøretøy nå"
+            },
+            "hint": {
+              "en": "Checks all registered vehicles for unpaid parkings immediately.",
+              "no": "Sjekker alle registrerte kjøretøy for ubetalte parkeringer umiddelbart."
+            },
+            "args": []
+          },
+          {
+            "id": "send_timeline_notification",
+            "title": {
+              "en": "Send payment notification to Timeline",
+              "no": "Send betalingsvarsel til Tidslinjen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159405,
+      "state": "live",
+      "stateChangedAt": "2026-09-18T09:32:35.623Z",
+      "bugs": "https://github.com/joymyr/sesam_pay/issues",
+      "homepage": null,
+      "support": null,
+      "source": "https://github.com/joymyr/sesam_pay",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Fixed white background and added padding to driver images"
+      },
+      "compatibility": ">=12.4.0",
       "tags": null,
       "platforms": [
         "local"
@@ -187,18 +2723,18 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "2.11.2",
+    "liveVersion": "1.0.10",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a302523771c1d03c09f189a",
+      "id": "689fa6c8b4208a20554af944",
       "type": "user",
-      "userId": "689deb186311ec2ad2d12e44",
-      "name": "David Schoefberger",
+      "userId": "685115134cd9c62f5501db12",
+      "name": "Jon Harald Øymyr",
       "verified": false
     },
-    "communityTopicId": null
+    "communityTopicId": 159405
   }
 ]

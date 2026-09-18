@@ -20074,5 +20074,29 @@
     "updatedAt": "2026-09-18T08:20:55.428Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-18T08:20:55.428Z"
+  },
+  {
+    "appId": "com.wemolocal",
+    "name": "Wemo",
+    "developerName": "Antoine Chaulieu",
+    "developerId": "6a8aabbfc6a80eeabce82a73",
+    "version": "0.4.13",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-18T15:20:11.997Z",
+    "updatedAt": "2026-09-18T15:20:11.997Z",
+    "communityTopicId": 159683,
+    "discoveredAt": "2026-09-18T15:20:11.997Z"
+  },
+  {
+    "appId": "no.joymyr.sesam-pay",
+    "name": "Sesam Pay",
+    "developerName": "Jon Harald Øymyr",
+    "developerId": "689fa6c8b4208a20554af944",
+    "version": "1.0.10",
+    "sourceRepository": "https://github.com/joymyr/sesam_pay",
+    "publishedAt": "2026-09-18T15:20:11.997Z",
+    "updatedAt": "2026-09-18T15:20:11.997Z",
+    "communityTopicId": 159405,
+    "discoveredAt": "2026-09-18T15:20:11.997Z"
   }
 ]
