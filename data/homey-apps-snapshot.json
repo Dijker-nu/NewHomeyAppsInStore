@@ -4622,12 +4622,12 @@
   {
     "appId": "com.philips.hue.zigbee",
     "name": "Philips Hue, without the bridge",
-    "developerName": "Johan Bendz",
-    "developerId": "5dcabbf91c90c866f936612d",
+    "developerName": "Bortbytt Software",
+    "developerId": "6aabeabb2c418bed593c1551",
     "version": "2.1.0",
     "sourceRepository": "https://github.com/JohanBendz/com.philips.hue.zigbee",
     "publishedAt": "2026-09-10T21:27:15.226Z",
-    "updatedAt": "2026-09-10T21:27:15.226Z",
+    "updatedAt": "2026-09-18T08:21:39.749Z",
     "communityTopicId": 29734
   },
   {
@@ -9176,12 +9176,12 @@
   {
     "appId": "com.tuya.zigbee",
     "name": "Tuya Zigbee",
-    "developerName": "Johan Bendz",
-    "developerId": "5dcabbf91c90c866f936612d",
+    "developerName": "Bortbytt Software",
+    "developerId": "6aabeabb2c418bed593c1551",
     "version": "0.2.76",
     "sourceRepository": "https://github.com/JohanBendz/com.tuya.zigbee",
     "publishedAt": "2026-09-10T21:31:30.340Z",
-    "updatedAt": "2026-09-10T21:31:30.340Z",
+    "updatedAt": "2026-09-18T08:21:39.750Z",
     "communityTopicId": 26439
   },
   {
@@ -11268,10 +11268,10 @@
     "name": "HT Cloud",
     "developerName": "hyundai HT",
     "developerId": "698c0105608b9fa107cd35cc",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:13.389Z",
-    "updatedAt": "2026-09-10T21:33:13.389Z",
+    "updatedAt": "2026-09-18T08:21:39.750Z",
     "communityTopicId": null
   },
   {
@@ -11312,10 +11312,10 @@
     "name": "Waveshare Modbus Relay",
     "developerName": "Ian Hudson",
     "developerId": "6a1a718d4d288cb6b9877222",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:14.858Z",
-    "updatedAt": "2026-09-10T21:33:14.858Z",
+    "updatedAt": "2026-09-18T08:21:39.750Z",
     "communityTopicId": null
   },
   {
@@ -12918,10 +12918,10 @@
     "name": "AduroSmart ERIA",
     "developerName": "Aduro Technologies",
     "developerId": "67ac52a860b8d5d3bacc7d1c",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:26.853Z",
-    "updatedAt": "2026-09-10T21:34:26.853Z",
+    "updatedAt": "2026-09-18T08:21:39.750Z",
     "communityTopicId": null
   },
   {
@@ -14953,10 +14953,10 @@
     "name": "MELCloud extension",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "25.3.3",
+    "version": "25.3.4",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud.extension",
     "publishedAt": "2026-09-10T21:35:56.931Z",
-    "updatedAt": "2026-09-10T21:35:56.931Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": 73094
   },
   {
@@ -15447,11 +15447,11 @@
     "appId": "net.filllip-namron",
     "name": "Namron",
     "developerName": "Namron AS",
-    "developerId": "5f1eb074bfcb366fa36ef228",
+    "developerId": "6aaaadaf99b954171239f0bf",
     "version": "2.3.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:21.178Z",
-    "updatedAt": "2026-09-10T21:36:21.178Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": null
   },
   {
@@ -15745,10 +15745,10 @@
     "name": "H",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "23.3.4",
+    "version": "23.3.7",
     "sourceRepository": "https://github.com/OlivierZal/com.heatzy",
     "publishedAt": "2026-09-10T21:36:34.113Z",
-    "updatedAt": "2026-09-10T21:36:34.113Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": 76406
   },
   {
@@ -16504,10 +16504,10 @@
     "name": "Shelly (Legacy)",
     "developerName": "Allterco Robotics",
     "developerId": "6a8c4b90222a4450aa38d020",
-    "version": "3.65.0",
+    "version": "3.65.1",
     "sourceRepository": "https://github.com/Drenso/cloud.shelly",
     "publishedAt": "2026-09-10T21:36:59.785Z",
-    "updatedAt": "2026-09-10T21:36:59.785Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": 765
   },
   {
@@ -17582,10 +17582,10 @@
     "name": "Shelly Wall Display Dashboard",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.78",
+    "version": "1.3.80",
     "sourceRepository": "https://github.com/andiwirz/com.walldisplay.dashboard",
     "publishedAt": "2026-09-10T21:37:51.559Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": null
   },
   {
@@ -17780,10 +17780,10 @@
     "name": "VarView",
     "developerName": "Dennis Klatt",
     "developerId": "6a9bdf22336db3df05accd76",
-    "version": "4.0.0",
+    "version": "4.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:56.528Z",
-    "updatedAt": "2026-09-10T21:37:56.528Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": 159202
   },
   {
@@ -18374,10 +18374,10 @@
     "name": "Backup Center",
     "developerName": "Dennis Weel",
     "developerId": "6aa84b8430dc90a8d6e097a5",
-    "version": "0.4.2",
+    "version": "0.4.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:15.031Z",
-    "updatedAt": "2026-09-17T08:45:15.031Z",
+    "updatedAt": "2026-09-18T08:21:39.751Z",
     "communityTopicId": null
   },
   {
@@ -18390,5 +18390,16 @@
     "publishedAt": "2026-09-17T15:47:24.097Z",
     "updatedAt": "2026-09-17T15:47:24.097Z",
     "communityTopicId": 159236
+  },
+  {
+    "appId": "at.dsnet.wnsm",
+    "name": "Wiener Netze Smart Meter",
+    "developerName": "David Schoefberger",
+    "developerId": "6a302523771c1d03c09f189a",
+    "version": "2.11.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-18T08:20:55.428Z",
+    "updatedAt": "2026-09-18T08:20:55.428Z",
+    "communityTopicId": null
   }
 ]

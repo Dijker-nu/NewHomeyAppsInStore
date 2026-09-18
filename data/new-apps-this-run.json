@@ -1,584 +1,183 @@
 [
   {
-    "id": "com.ziglar.fordvehicledata",
+    "id": "at.dsnet.wnsm",
     "rating": null,
     "liveBuild": {
-      "id": 5,
+      "id": 2,
       "name": {
-        "en": "Ford Vehicle Data",
-        "nl": "Ford Voertuiggegevens"
+        "en": "Wiener Netze Smart Meter"
       },
-      "version": "1.0.4",
+      "version": "2.11.2",
       "readme": {
-        "en": "Ford Vehicle Data reads data from your Ford vehicle exclusively through Ford's official FordConnect Query API: lock status, doors and windows, location (home/work/away), fuel, oil, tire pressure, 12V battery, ignition status, and warning lights. Use this data in your own Flows, for example to get a notification when your car arrives home but isn't locked.\n\nThis app cannot control your car: there is no functionality to lock, remote-start, charge, or otherwise operate it. Every installation uses its own Ford Developer registration (Client ID and Client Secret), configured through the app's settings.\n",
-        "nl": "Ford Vehicle Data leest uitsluitend gegevens van je Ford-voertuig uit via Ford's officiële FordConnect Query API: slotstatus, deuren en ramen, locatie (thuis/werk/weg), brandstof, olie, bandenspanning, 12V-accu, contactstatus en waarschuwingslampjes. Gebruik deze gegevens in je eigen Flows, bijvoorbeeld voor een melding als je auto thuiskomt maar niet vergrendeld is.\n\nDeze app kan je auto niet bedienen: er zit geen enkele functie in om te vergrendelen, op afstand te starten, te laden of anderszins te bedienen. Elke installatie gebruikt zijn eigen Ford Developer-registratie (Client ID en Client Secret), in te stellen via de instellingen van de app.\n"
+        "en": "Bring your Wiener Netze smart meter into Homey. The app signs in to your Smart Meter portal account, discovers every Zaehlpunkt on it, and adds each one as a device so yesterday's consumption and meter reading land right next to the rest of your home.\n\nThe values arrive as standard energy capabilities, so they flow straight into Homey Energy and into any Flow you build. Get notified when a fresh reading comes in, react to a day's usage, or just keep a quiet eye on where your kilowatt-hours go. Set up once and it keeps itself up to date.\n"
       },
       "description": {
-        "en": "Your Ford's status, always within reach.",
-        "nl": "De status van je Ford, altijd binnen handbereik."
+        "en": "Keep an eye on your energy use.",
+        "de": "Behalte deinen Energieverbrauch im Blick."
       },
-      "category": "appliances",
-      "brandColor": "#00095B",
-      "icon": "https://apps.homeycdn.net/app/com.ziglar.fordvehicledata/5/ae1616f3-eef5-4cf5-9968-88481130b95a/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.ziglar.fordvehicledata/5/ae1616f3-eef5-4cf5-9968-88481130b95a/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.ziglar.fordvehicledata/5/ae1616f3-eef5-4cf5-9968-88481130b95a/assets/images/large.png",
+      "category": "energy",
+      "brandColor": "#bb005d",
+      "icon": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/assets/images/large.png",
       "drivers": [
         {
-          "id": "vehicle",
+          "id": "smartmeter",
           "name": {
-            "en": "Ford Vehicle",
-            "nl": "Ford-voertuig"
+            "en": "Wiener Netze Smart Meter"
           },
           "class": "sensor",
-          "capabilities": [],
+          "capabilities": [
+            "meter_power",
+            "meter_power.daily"
+          ],
           "capabilitiesOptions": {
-            "door_status.front_left": {
+            "meter_power": {
               "title": {
-                "en": "Front left door",
-                "nl": "Deur linksvoor"
+                "en": "Meter reading (yesterday)",
+                "de": "Zählerstand (gestern)"
               }
             },
-            "door_status.front_right": {
+            "meter_power.daily": {
               "title": {
-                "en": "Front right door",
-                "nl": "Deur rechtsvoor"
-              }
-            },
-            "door_status.rear_left": {
-              "title": {
-                "en": "Rear left door",
-                "nl": "Deur linksachter"
-              }
-            },
-            "door_status.rear_right": {
-              "title": {
-                "en": "Rear right door",
-                "nl": "Deur rechtsachter"
-              }
-            },
-            "window_status.front_left": {
-              "title": {
-                "en": "Front left window",
-                "nl": "Raam linksvoor"
-              }
-            },
-            "window_status.front_right": {
-              "title": {
-                "en": "Front right window",
-                "nl": "Raam rechtsvoor"
-              }
-            },
-            "window_status.rear_left": {
-              "title": {
-                "en": "Rear left window",
-                "nl": "Raam linksachter"
-              }
-            },
-            "window_status.rear_right": {
-              "title": {
-                "en": "Rear right window",
-                "nl": "Raam rechtsachter"
-              }
-            },
-            "window_status.tailgate": {
-              "title": {
-                "en": "Tailgate window",
-                "nl": "Raam achterklep"
-              }
-            },
-            "measure_tire_pressure.front_left": {
-              "title": {
-                "en": "Tire pressure front left",
-                "nl": "Bandenspanning linksvoor"
-              }
-            },
-            "measure_tire_pressure.front_right": {
-              "title": {
-                "en": "Tire pressure front right",
-                "nl": "Bandenspanning rechtsvoor"
-              }
-            },
-            "measure_tire_pressure.rear_left": {
-              "title": {
-                "en": "Tire pressure rear left",
-                "nl": "Bandenspanning linksachter"
-              }
-            },
-            "measure_tire_pressure.rear_right": {
-              "title": {
-                "en": "Tire pressure rear right",
-                "nl": "Bandenspanning rechtsachter"
-              }
-            },
-            "alarm_tire_pressure.front_left": {
-              "title": {
-                "en": "Tire pressure warning front left",
-                "nl": "Banddrukalarm Linksvoor"
-              }
-            },
-            "alarm_tire_pressure.front_right": {
-              "title": {
-                "en": "Tire pressure warning front right",
-                "nl": "Banddrukalarm Rechtsvoor"
-              }
-            },
-            "alarm_tire_pressure.rear_left": {
-              "title": {
-                "en": "Tire pressure warning rear left",
-                "nl": "Banddrukalarm Linksachter"
-              }
-            },
-            "alarm_tire_pressure.rear_right": {
-              "title": {
-                "en": "Tire pressure warning rear right",
-                "nl": "Banddrukalarm Rechtsachter"
+                "en": "Daily consumption (yesterday)",
+                "de": "Tagesverbrauch (gestern)"
               }
             }
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.ziglar.fordvehicledata/5/ae1616f3-eef5-4cf5-9968-88481130b95a/drivers/vehicle/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.ziglar.fordvehicledata/5/ae1616f3-eef5-4cf5-9968-88481130b95a/drivers/vehicle/assets/images/large.png",
+          "energy": {
+            "cumulative": true,
+            "cumulativeImportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/drivers/smartmeter/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/drivers/smartmeter/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
             "cloud"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.ziglar.fordvehicledata/5/ae1616f3-eef5-4cf5-9968-88481130b95a/drivers/vehicle/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/at.dsnet.wnsm/2/07fbb09b-57c6-4e97-96d3-513271971245/drivers/smartmeter/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "vehicle_locked",
+            "id": "daily_consumption_updated",
             "title": {
-              "en": "The vehicle has been locked",
-              "nl": "De auto is vergrendeld"
+              "en": "Daily consumption was updated",
+              "de": "Tagesverbrauch wurde aktualisiert"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "vehicle_unlocked",
-            "title": {
-              "en": "The vehicle has been unlocked",
-              "nl": "De auto is ontgrendeld"
-            },
-            "args": [
-              {
                 "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "vehicle_arrived_home",
-            "title": {
-              "en": "The vehicle arrived home",
-              "nl": "De auto is thuisgekomen"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "vehicle_left_home",
-            "title": {
-              "en": "The vehicle left home",
-              "nl": "De auto heeft de thuislocatie verlaten"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "vehicle_entered_zone",
-            "title": {
-              "en": "The vehicle entered a zone",
-              "nl": "De auto is een zone binnengekomen"
-            },
-            "titleFormatted": {
-              "en": "The vehicle entered zone [[zone]]",
-              "nl": "De auto is de zone [[zone]] binnengekomen"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "name": "zone",
-                "type": "dropdown",
-                "title": {
-                  "en": "Zone",
-                  "nl": "Zone"
-                },
-                "values": [
-                  {
-                    "id": "home",
-                    "label": {
-                      "en": "Home",
-                      "nl": "Huis"
-                    }
-                  },
-                  {
-                    "id": "work",
-                    "label": {
-                      "en": "Work",
-                      "nl": "Werk"
-                    }
-                  }
-                ]
+                "filter": "driver_id=smartmeter"
               }
             ],
             "tokens": [
               {
-                "name": "zone",
+                "name": "kwh",
+                "type": "number",
+                "title": {
+                  "en": "kWh",
+                  "de": "kWh"
+                },
+                "example": {
+                  "en": "12.345"
+                }
+              },
+              {
+                "name": "day",
                 "type": "string",
                 "title": {
-                  "en": "Zone",
-                  "nl": "Zone"
+                  "en": "Day",
+                  "de": "Tag"
                 },
-                "example": "home"
+                "example": {
+                  "en": "2026-06-14"
+                }
               }
             ]
           },
           {
-            "id": "fuel_below_threshold",
+            "id": "meter_reading_updated",
             "title": {
-              "en": "Fuel level drops below a percentage",
-              "nl": "Brandstofniveau komt onder een percentage"
-            },
-            "titleFormatted": {
-              "en": "Fuel level drops below [[threshold]]%",
-              "nl": "Brandstofniveau komt onder [[threshold]]%"
+              "en": "Meter reading was updated",
+              "de": "Zählerstand wurde aktualisiert"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
+                "type": "device",
+                "filter": "driver_id=smartmeter"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "kwh",
+                "type": "number",
+                "title": {
+                  "en": "kWh",
+                  "de": "kWh"
+                },
+                "example": {
+                  "en": "12345.678"
+                }
               },
               {
-                "name": "threshold",
-                "type": "number",
-                "title": {
-                  "en": "Percentage",
-                  "nl": "Percentage"
-                },
-                "min": 0,
-                "max": 100
-              }
-            ],
-            "tokens": [
-              {
-                "name": "fuel_level",
-                "type": "number",
-                "title": {
-                  "en": "Fuel level (%)",
-                  "nl": "Brandstofniveau (%)"
-                },
-                "example": 42
-              }
-            ]
-          },
-          {
-            "id": "oil_life_below_threshold",
-            "title": {
-              "en": "Oil life remaining drops below a percentage",
-              "nl": "Olielevensduur komt onder een percentage"
-            },
-            "titleFormatted": {
-              "en": "Oil life remaining drops below [[threshold]]%",
-              "nl": "Olielevensduur komt onder [[threshold]]%"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "name": "threshold",
-                "type": "number",
-                "title": {
-                  "en": "Percentage",
-                  "nl": "Percentage"
-                },
-                "min": 0,
-                "max": 100
-              }
-            ],
-            "tokens": [
-              {
-                "name": "oil_life",
-                "type": "number",
-                "title": {
-                  "en": "Oil life remaining (%)",
-                  "nl": "Resterende olielevensduur (%)"
-                },
-                "example": 42
-              }
-            ]
-          },
-          {
-            "id": "tire_pressure_low",
-            "title": {
-              "en": "Low tire pressure detected",
-              "nl": "Lage bandenspanning gedetecteerd"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "wheel",
+                "name": "day",
                 "type": "string",
                 "title": {
-                  "en": "Wheel",
-                  "nl": "Wiel"
+                  "en": "Day",
+                  "de": "Tag"
                 },
-                "example": "front_left"
-              }
-            ]
-          },
-          {
-            "id": "ford_data_stale",
-            "title": {
-              "en": "Ford data has become outdated",
-              "nl": "Ford-data is te oud geworden"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "ford_data_fresh_again",
-            "title": {
-              "en": "Ford data is up to date again",
-              "nl": "Ford-data is weer actueel"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
+                "example": {
+                  "en": "2026-06-14"
+                }
               }
             ]
           }
         ],
-        "conditions": [
+        "conditions": null,
+        "actions": [
           {
-            "id": "is_locked",
+            "id": "refresh_now",
             "title": {
-              "en": "Vehicle !{{is|is not}} locked",
-              "nl": "Voertuig !{{is|is niet}} vergrendeld"
+              "en": "Refresh now",
+              "de": "Jetzt aktualisieren"
+            },
+            "hint": {
+              "en": "Force an immediate poll of the Smart Meter portal.",
+              "de": "Erzwingt eine sofortige Abfrage des Smart-Meter-Portals."
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "is_unlocked",
-            "title": {
-              "en": "Vehicle !{{is|is not}} explicitly unlocked",
-              "nl": "Voertuig !{{is|is niet}} expliciet ontgrendeld"
-            },
-            "args": [
-              {
                 "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "is_home",
-            "title": {
-              "en": "Vehicle !{{is|is not}} home",
-              "nl": "Voertuig !{{is|is niet}} thuis"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "is_at_work",
-            "title": {
-              "en": "Vehicle !{{is|is not}} at work",
-              "nl": "Voertuig !{{is|is niet}} op werk"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "data_is_fresh",
-            "title": {
-              "en": "Ford data !{{is|is not}} up to date",
-              "nl": "Ford-data !{{is|is niet}} actueel"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "ignition_off",
-            "title": {
-              "en": "Ignition !{{is|is not}} off",
-              "nl": "Contact !{{staat|staat niet}} uit"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "all_doors_closed",
-            "title": {
-              "en": "All doors !{{are|are not}} closed",
-              "nl": "Alle deuren !{{zijn|zijn niet}} gesloten"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "fuel_below",
-            "title": {
-              "en": "Fuel level !{{is|is not}} below a percentage",
-              "nl": "Brandstof !{{is|is niet}} lager dan een percentage"
-            },
-            "titleFormatted": {
-              "en": "Fuel level !{{is|is not}} below [[threshold]]%",
-              "nl": "Brandstof !{{is|is niet}} lager dan [[threshold]]%"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "name": "threshold",
-                "type": "number",
-                "title": {
-                  "en": "Percentage",
-                  "nl": "Percentage"
-                },
-                "min": 0,
-                "max": 100
-              }
-            ]
-          },
-          {
-            "id": "oil_life_below",
-            "title": {
-              "en": "Oil life remaining !{{is|is not}} below a percentage",
-              "nl": "Olielevensduur !{{is|is niet}} lager dan een percentage"
-            },
-            "titleFormatted": {
-              "en": "Oil life remaining !{{is|is not}} below [[threshold]]%",
-              "nl": "Olielevensduur !{{is|is niet}} lager dan [[threshold]]%"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "name": "threshold",
-                "type": "number",
-                "title": {
-                  "en": "Percentage",
-                  "nl": "Percentage"
-                },
-                "min": 0,
-                "max": 100
-              }
-            ]
-          },
-          {
-            "id": "tire_pressure_low",
-            "title": {
-              "en": "Tire pressure warning !{{is|is not}} active",
-              "nl": "Bandenspanningswaarschuwing !{{is|is niet}} actief"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
+                "filter": "driver_id=smartmeter"
               }
             ]
           }
-        ],
-        "actions": null
+        ]
       },
       "widgets": null,
       "screensavers": [],
-      "homeyCommunityTopicId": 159236,
+      "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-17T10:06:43.214Z",
+      "stateChangedAt": "2026-09-18T08:17:34.627Z",
       "bugs": null,
       "homepage": null,
-      "support": null,
+      "support": "mailto:homeyapps@dsnet.at",
       "source": null,
       "contributors": null,
       "contributing": null,
-      "permissions": [
-        "homey:manager:geolocation"
-      ],
+      "permissions": [],
       "changelog": {
-        "en": "Edited Icons, Description and security"
+        "en": "Adds a dedicated icon for the Smart Meter device so it is easier to recognise when adding one. Internal dependency and version metadata cleaned up.",
+        "de": "Das Smart-Meter-Gerät hat jetzt ein eigenes Symbol und ist beim Hinzufügen leichter zu erkennen. Interne Abhängigkeits- und Versionsangaben bereinigt."
       },
-      "compatibility": ">=5.0.0",
+      "compatibility": ">=12.9.0",
       "tags": null,
       "platforms": [
         "local"
@@ -588,18 +187,18 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.4",
+    "liveVersion": "2.11.2",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a9d56c5336db3df05ad20be",
+      "id": "6a302523771c1d03c09f189a",
       "type": "user",
-      "userId": "55621db338d1dd0a3371c463",
-      "name": "Bas de Jong",
+      "userId": "689deb186311ec2ad2d12e44",
+      "name": "David Schoefberger",
       "verified": false
     },
-    "communityTopicId": 159236
+    "communityTopicId": null
   }
 ]

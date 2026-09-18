@@ -20062,5 +20062,17 @@
     "updatedAt": "2026-09-17T15:47:24.097Z",
     "communityTopicId": 159236,
     "discoveredAt": "2026-09-17T15:47:24.097Z"
+  },
+  {
+    "appId": "at.dsnet.wnsm",
+    "name": "Wiener Netze Smart Meter",
+    "developerName": "David Schoefberger",
+    "developerId": "6a302523771c1d03c09f189a",
+    "version": "2.11.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-18T08:20:55.428Z",
+    "updatedAt": "2026-09-18T08:20:55.428Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-18T08:20:55.428Z"
   }
 ]
