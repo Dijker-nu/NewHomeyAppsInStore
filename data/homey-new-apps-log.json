@@ -20098,5 +20098,17 @@
     "updatedAt": "2026-09-18T15:20:11.997Z",
     "communityTopicId": 159405,
     "discoveredAt": "2026-09-18T15:20:11.997Z"
+  },
+  {
+    "appId": "nl.rvginkel.tickertapes",
+    "name": "Ticker Tapes",
+    "developerName": "Rene van Ginkel",
+    "developerId": "6aa2d6504b2b66c115905e09",
+    "version": "0.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-19T08:08:54.962Z",
+    "updatedAt": "2026-09-19T08:08:54.962Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-19T08:08:54.962Z"
   }
 ]

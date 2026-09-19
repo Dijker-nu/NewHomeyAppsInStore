@@ -5482,10 +5482,10 @@
     "name": "Shoppinglist",
     "developerName": "Smarthome Assistent",
     "developerId": "673de6a7065f03b3ce39d234",
-    "version": "1.1.0",
+    "version": "1.2.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:27:57.211Z",
-    "updatedAt": "2026-09-10T21:27:57.211Z",
+    "updatedAt": "2026-09-19T08:09:35.374Z",
     "communityTopicId": null
   },
   {
@@ -5933,10 +5933,10 @@
     "name": "Chronograph",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "2.2.0",
+    "version": "2.2.2",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.chronograph/",
     "publishedAt": "2026-09-10T21:28:29.025Z",
-    "updatedAt": "2026-09-17T08:45:41.053Z",
+    "updatedAt": "2026-09-19T08:09:35.375Z",
     "communityTopicId": 18214
   },
   {
@@ -8881,10 +8881,10 @@
     "name": "Androidworld",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "sourceRepository": "https://github.com/smarthomesven/homey-androidworld",
     "publishedAt": "2026-09-10T21:31:18.430Z",
-    "updatedAt": "2026-09-10T21:31:18.430Z",
+    "updatedAt": "2026-09-19T08:09:35.375Z",
     "communityTopicId": 144911
   },
   {
@@ -10795,10 +10795,10 @@
     "name": "Better Logic Library",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.5.0",
+    "version": "3.5.1",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.BetterLogic/",
     "publishedAt": "2026-09-10T21:32:48.906Z",
-    "updatedAt": "2026-09-17T08:45:41.054Z",
+    "updatedAt": "2026-09-19T08:09:35.375Z",
     "communityTopicId": 5568
   },
   {
@@ -10806,10 +10806,10 @@
     "name": "Simple (Sys) Log",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.simplelog/",
     "publishedAt": "2026-09-10T21:32:48.906Z",
-    "updatedAt": "2026-09-17T08:45:41.054Z",
+    "updatedAt": "2026-09-19T08:09:35.375Z",
     "communityTopicId": 77533
   },
   {
@@ -11576,10 +11576,10 @@
     "name": "ClimateControl",
     "developerName": "Sebastiaan Tammer",
     "developerId": "68f222d290cb8c20ed168a6b",
-    "version": "0.10.5",
+    "version": "0.11.1",
     "sourceRepository": "https://github.com/tammert/net.protoart.clima",
     "publishedAt": "2026-09-10T21:33:28.044Z",
-    "updatedAt": "2026-09-10T21:33:28.044Z",
+    "updatedAt": "2026-09-19T08:09:35.375Z",
     "communityTopicId": 145121
   },
   {
@@ -11706,12 +11706,12 @@
   {
     "appId": "de.ftedv.librecgm",
     "name": "Freestyle Libre",
-    "developerName": "Florian Trück",
-    "developerId": "6a0758532688d233be48510d",
+    "developerName": "ftEDV.de",
+    "developerId": "6aaafb7a3bf2cee70a211daa",
     "version": "1.3.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:31.853Z",
-    "updatedAt": "2026-09-10T21:33:31.853Z",
+    "updatedAt": "2026-09-19T08:09:35.375Z",
     "communityTopicId": 155006
   },
   {
@@ -13501,10 +13501,10 @@
     "name": "Namron Simplify",
     "developerName": "Namron AS",
     "developerId": "6aaaadaf99b954171239f0bf",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:48.505Z",
-    "updatedAt": "2026-09-17T08:45:41.055Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 142621
   },
   {
@@ -13919,10 +13919,10 @@
     "name": "Web Proxy",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.14",
+    "version": "1.1.16",
     "sourceRepository": "https://github.com/smarthomesven/homey-web-proxy",
     "publishedAt": "2026-09-10T21:35:15.136Z",
-    "updatedAt": "2026-09-10T21:35:15.136Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 147450
   },
   {
@@ -14238,10 +14238,10 @@
     "name": "Android Planet",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "sourceRepository": "https://github.com/smarthomesven/homey-androidplanet",
     "publishedAt": "2026-09-10T21:35:27.784Z",
-    "updatedAt": "2026-09-10T21:35:27.784Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 144940
   },
   {
@@ -15448,10 +15448,10 @@
     "name": "Namron",
     "developerName": "Namron AS",
     "developerId": "6aaaadaf99b954171239f0bf",
-    "version": "2.3.3",
+    "version": "2.3.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:21.178Z",
-    "updatedAt": "2026-09-18T08:21:39.751Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": null
   },
   {
@@ -15591,10 +15591,10 @@
     "name": "Ollama",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "sourceRepository": "https://github.com/smarthomesven/homey-ollama",
     "publishedAt": "2026-09-10T21:36:27.964Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 143768
   },
   {
@@ -15745,10 +15745,10 @@
     "name": "H",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "23.3.7",
+    "version": "23.3.8",
     "sourceRepository": "https://github.com/OlivierZal/com.heatzy",
     "publishedAt": "2026-09-10T21:36:34.113Z",
-    "updatedAt": "2026-09-18T08:21:39.751Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 76406
   },
   {
@@ -15899,10 +15899,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "2.16.4",
+    "version": "2.17.3",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.devicecapabilities/",
     "publishedAt": "2026-09-10T21:36:38.669Z",
-    "updatedAt": "2026-09-10T21:36:38.669Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 43287
   },
   {
@@ -15921,10 +15921,10 @@
     "name": "Olisto",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.18",
+    "version": "1.1.19",
     "sourceRepository": "https://github.com/smarthomesven/homey-olisto",
     "publishedAt": "2026-09-10T21:36:39.321Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 144831
   },
   {
@@ -15932,10 +15932,10 @@
     "name": "Link2Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "sourceRepository": "https://github.com/smarthomesven/homey-link2home",
     "publishedAt": "2026-09-10T21:36:39.321Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 157174
   },
   {
@@ -16020,10 +16020,10 @@
     "name": "Home Overview",
     "developerName": "Erik van Oosten",
     "developerId": "69f795bc2e89d815c5e502ad",
-    "version": "1.9.60",
+    "version": "1.10.150",
     "sourceRepository": "https://github.com/evoosten/com.homeoverview",
     "publishedAt": "2026-09-10T21:36:39.321Z",
-    "updatedAt": "2026-09-10T21:36:39.321Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 158364
   },
   {
@@ -16108,10 +16108,10 @@
     "name": "ThirdReality Hub",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "sourceRepository": "https://github.com/smarthomesven/homey-thirdreality-hub",
     "publishedAt": "2026-09-10T21:36:43.737Z",
-    "updatedAt": "2026-09-10T21:36:43.737Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 154176
   },
   {
@@ -16372,10 +16372,10 @@
     "name": "Heatit Controls",
     "developerName": "Heatit Controls AS",
     "developerId": "6a917dfda524daf89cb5fe38",
-    "version": "4.5.1",
+    "version": "4.5.2",
     "sourceRepository": "https://github.com/Heatit-Controls/no.ThermoFloor",
     "publishedAt": "2026-09-10T21:36:54.538Z",
-    "updatedAt": "2026-09-10T21:36:54.538Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 49914
   },
   {
@@ -16656,12 +16656,12 @@
   {
     "appId": "de.ftedv.thermopro",
     "name": "BLE Sensors",
-    "developerName": "Florian Trück",
-    "developerId": "6a0758532688d233be48510d",
+    "developerName": "ftEDV.de",
+    "developerId": "6aaafb7a3bf2cee70a211daa",
     "version": "1.6.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:14.376Z",
-    "updatedAt": "2026-09-10T21:37:14.376Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 156903
   },
   {
@@ -16757,10 +16757,10 @@
     "name": "Mode Switch",
     "developerName": "Erik van Oosten",
     "developerId": "69f795bc2e89d815c5e502ad",
-    "version": "3.3.11",
+    "version": "3.3.12",
     "sourceRepository": "https://github.com/evoosten/com.modeswitch",
     "publishedAt": "2026-09-10T21:37:17.588Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 154885
   },
   {
@@ -17054,10 +17054,10 @@
     "name": "Duux Gen2",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "2.10.0",
+    "version": "2.10.1",
     "sourceRepository": "https://github.com/smarthomesven/homey-duux-gen2",
     "publishedAt": "2026-09-10T21:37:35.142Z",
-    "updatedAt": "2026-09-10T21:37:35.142Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 145511
   },
   {
@@ -17230,10 +17230,10 @@
     "name": "AWTRIX",
     "developerName": "Radovan Kepák",
     "developerId": "5fd92566aac5e426e0601fc8",
-    "version": "2.2.11",
+    "version": "2.2.12",
     "sourceRepository": "https://github.com/bckp/de.blueforcer.awtrixlight",
     "publishedAt": "2026-09-10T21:37:39.416Z",
-    "updatedAt": "2026-09-10T21:37:39.416Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 91888
   },
   {
@@ -17670,10 +17670,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.2.1",
+    "version": "3.3.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 147496
   },
   {
@@ -17901,10 +17901,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.7.3",
+    "version": "46.7.4",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2026-09-10T21:38:11.975Z",
-    "updatedAt": "2026-09-10T21:38:11.975Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 73094
   },
   {
@@ -18143,10 +18143,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.654",
+    "version": "1.0.676",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-13T08:25:01.086Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 156098
   },
   {
@@ -18295,12 +18295,12 @@
   {
     "appId": "de.ftedv.irremote",
     "name": "Universal Remote",
-    "developerName": "Florian Trück",
-    "developerId": "6a0758532688d233be48510d",
+    "developerName": "ftEDV.de",
+    "developerId": "6aaafb7a3bf2cee70a211daa",
     "version": "1.2.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T15:41:13.991Z",
-    "updatedAt": "2026-09-16T15:41:13.991Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 159406
   },
   {
@@ -18363,10 +18363,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.7.12",
+    "version": "0.7.14",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-09-17T08:45:14.130Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": null
   },
   {
@@ -18374,10 +18374,10 @@
     "name": "Backup Center",
     "developerName": "Dennis Weel",
     "developerId": "6aa84b8430dc90a8d6e097a5",
-    "version": "0.4.5",
+    "version": "0.4.6",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:15.031Z",
-    "updatedAt": "2026-09-18T08:21:39.751Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": null
   },
   {
@@ -18385,10 +18385,10 @@
     "name": "Ford Vehicle Data",
     "developerName": "Bas de Jong",
     "developerId": "6a9d56c5336db3df05ad20be",
-    "version": "1.0.4",
+    "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T15:47:24.097Z",
-    "updatedAt": "2026-09-17T15:47:24.097Z",
+    "updatedAt": "2026-09-19T08:09:35.376Z",
     "communityTopicId": 159236
   },
   {
@@ -18423,5 +18423,16 @@
     "publishedAt": "2026-09-18T15:20:11.997Z",
     "updatedAt": "2026-09-18T15:20:11.997Z",
     "communityTopicId": 159405
+  },
+  {
+    "appId": "nl.rvginkel.tickertapes",
+    "name": "Ticker Tapes",
+    "developerName": "Rene van Ginkel",
+    "developerId": "6aa2d6504b2b66c115905e09",
+    "version": "0.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-19T08:08:54.962Z",
+    "updatedAt": "2026-09-19T08:08:54.962Z",
+    "communityTopicId": null
   }
 ]
