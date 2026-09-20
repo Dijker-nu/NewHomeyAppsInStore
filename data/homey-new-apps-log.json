@@ -20110,5 +20110,29 @@
     "updatedAt": "2026-09-19T08:08:54.962Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-19T08:08:54.962Z"
+  },
+  {
+    "appId": "net.weejewel.sshclient",
+    "name": "SSH Client",
+    "developerName": "Emile Nijssen",
+    "developerId": "5dcaba391c90c866f9364985",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-20T15:00:59.327Z",
+    "updatedAt": "2026-09-20T15:00:59.327Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-20T15:00:59.327Z"
+  },
+  {
+    "appId": "de.ozerov.fully",
+    "name": "Fully Kiosk Browser",
+    "developerName": "Emile Nijssen",
+    "developerId": "5dcaba391c90c866f9364985",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-20T15:01:00.031Z",
+    "updatedAt": "2026-09-20T15:01:00.031Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-20T15:00:59.327Z"
   }
 ]

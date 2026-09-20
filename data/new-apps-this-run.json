@@ -1,1 +1,294 @@
-[]
+[
+  {
+    "id": "net.weejewel.sshclient",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "SSH Client"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Connect & execute commands on a remote SSH Server.\n\nAuthentication is done exclusively with a public key that resides on Homey itself.\n\nFlow Cards can execute commands, and return stdout, stderr, exit code and exit signal as tags."
+      },
+      "description": {
+        "en": "Connect & execute commands on a remote SSH Server."
+      },
+      "category": "tools",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "ssh-server",
+          "name": {
+            "en": "SSH Server"
+          },
+          "class": "other",
+          "capabilities": [],
+          "imageSmall": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/drivers/ssh-server/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/drivers/ssh-server/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/drivers/ssh-server/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "execute_command",
+            "title": {
+              "en": "Execute Command"
+            },
+            "titleFormatted": {
+              "en": "Execute [[command]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=ssh-server"
+              },
+              {
+                "name": "command",
+                "type": "text",
+                "title": {
+                  "en": "Command"
+                },
+                "placeholder": {
+                  "en": "ls -la /"
+                }
+              }
+            ]
+          },
+          {
+            "id": "execute_command_and_return",
+            "title": {
+              "en": "Execute Command and return Tags"
+            },
+            "titleFormatted": {
+              "en": "Execute [[command]] and return Tags"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=ssh-server"
+              },
+              {
+                "name": "command",
+                "type": "text",
+                "title": {
+                  "en": "Command"
+                },
+                "placeholder": {
+                  "en": "ls -la /"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "title": {
+                  "en": "stdout"
+                },
+                "name": "stdout",
+                "type": "string"
+              },
+              {
+                "title": {
+                  "en": "stderr"
+                },
+                "name": "stderr",
+                "type": "string"
+              },
+              {
+                "title": {
+                  "en": "Code"
+                },
+                "name": "code",
+                "type": "number"
+              },
+              {
+                "title": {
+                  "en": "Signal"
+                },
+                "name": "signal",
+                "type": "string"
+              }
+            ],
+            "advanced": true
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-20T11:33:11.043Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:emile@athom.nl",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "First version!"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcaba391c90c866f9364985",
+      "type": "user",
+      "userId": "5531600e09adaac11cee4c5f",
+      "name": "Emile Nijssen",
+      "verified": true
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "de.ozerov.fully",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Fully Kiosk Browser"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "Control your Fully Kiosk Browser running on Android.\n\nTurn the display on, off, or launch a custom webpage from a Flow.\n\nBefore adding a new device, please enable Remote Administration, and configure a Remote Admin Password first in the Fully Kiosk Browser Web UI first."
+      },
+      "description": {
+        "en": "Control your Fully Kiosk Browser running on Android"
+      },
+      "category": "tools",
+      "brandColor": "#2A01E9",
+      "icon": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "fully-kiosk-browser",
+          "name": {
+            "en": "Fully Kiosk Browser"
+          },
+          "class": "other",
+          "capabilities": [
+            "onoff"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/drivers/fully-kiosk-browser/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/drivers/fully-kiosk-browser/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/drivers/fully-kiosk-browser/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "cmd_loadStartUrl",
+            "title": {
+              "en": "Load Start URL"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fully-kiosk-browser"
+              }
+            ]
+          },
+          {
+            "id": "cmd_loadUrl",
+            "title": {
+              "en": "Load URL"
+            },
+            "titleFormatted": {
+              "en": "Load [[url]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fully-kiosk-browser"
+              },
+              {
+                "name": "url",
+                "type": "text",
+                "title": {
+                  "en": "URL"
+                },
+                "placeholder": {
+                  "en": "Enter URL"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-20T11:37:32.696Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:emile@athom.nl",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Updated README."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcaba391c90c866f9364985",
+      "type": "user",
+      "userId": "5531600e09adaac11cee4c5f",
+      "name": "Emile Nijssen",
+      "verified": true
+    },
+    "communityTopicId": null
+  }
+]
