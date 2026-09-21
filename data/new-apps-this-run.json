@@ -1,454 +1,69 @@
 [
   {
-    "id": "com.rapinology.nubes",
+    "id": "com.trmnl.companion",
     "rating": null,
     "liveBuild": {
-      "id": 1,
+      "id": 15,
       "name": {
-        "en": "Nubes",
-        "fr": "Nubes",
-        "de": "Nubes",
-        "es": "Nubes",
-        "it": "Nubes",
-        "nl": "Nubes"
+        "en": "TRMNL"
       },
-      "version": "1.0.0",
+      "version": "0.4.6",
       "readme": {
-        "en": "A dashboard widget that loops through the latest Meteosat pictures, so you can watch a front cross the continent instead of reading a number. The imagery comes from EUMETView, the public map service run by EUMETSAT, and covers Europe from the Atlantic to the Caspian.\n",
-        "de": "Ein Dashboard-Widget, das die neuesten Meteosat-Bilder als Schleife abspielt, damit Sie eine Front über den Kontinent ziehen sehen, statt eine Zahl zu lesen. Die Bilder stammen von EUMETView, dem öffentlichen Kartendienst von EUMETSAT, und zeigen Europa vom Atlantik bis zum Kaspischen Meer.\n",
-        "es": "Un widget de panel que reproduce en bucle las últimas imágenes Meteosat, para ver un frente cruzar el continente en lugar de leer una cifra. Las imágenes proceden de EUMETView, el servicio público de mapas de EUMETSAT, y cubren Europa del Atlántico al Caspio.\n",
-        "fr": "Un widget de tableau de bord qui fait défiler les dernières images Meteosat, pour voir un front traverser le continent au lieu de lire un chiffre. Les images viennent d'EUMETView, le service de cartes public d'EUMETSAT, et couvrent l'Europe de l'Atlantique à la Caspienne.\n",
-        "it": "Un widget da cruscotto che scorre in ciclo le ultime immagini Meteosat, per vedere un fronte attraversare il continente invece di leggere un numero. Le immagini provengono da EUMETView, il servizio cartografico pubblico di EUMETSAT, e coprono l'Europa dall'Atlantico al Caspio.\n",
-        "nl": "Een dashboardwidget die de nieuwste Meteosat-beelden als lus afspeelt, zodat u een front over het continent ziet trekken in plaats van een getal te lezen. De beelden komen van EUMETView, de openbare kaartendienst van EUMETSAT, en tonen Europa van de Atlantische Oceaan tot de Kaspische Zee.\n"
+        "en": "Your Homey knows what's on, how warm each room is and what's drawing power. This app puts that on a TRMNL e-ink screen: always on, glanceable, no phone required.\n\nPaste your Push URL into the app settings and you're done. The screen updates on a timer you pick, or the moment a device changes. On the TRMNL side, pick a ready-made screen (energy, climate, home status, zones) or fork one and make it yours. The app and the screens are open source.\n"
       },
       "description": {
-        "en": "See the sky above Europe as the satellites see it.",
-        "fr": "Voyez le ciel d'Europe comme le voient les satellites.",
-        "de": "Sehen Sie den Himmel uber Europa so, wie die Satelliten ihn sehen.",
-        "es": "Vea el cielo de Europa como lo ven los satelites.",
-        "it": "Guarda il cielo d'Europa come lo vedono i satelliti.",
-        "nl": "Zie de lucht boven Europa zoals de satellieten hem zien."
+        "en": "Your home without distractions"
       },
-      "category": "climate",
-      "brandColor": "#1B3A5C",
-      "icon": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/assets/images/small.jpg",
-      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/assets/images/large.jpg",
+      "category": "tools",
+      "brandColor": "#F8654B",
+      "icon": "https://apps.homeycdn.net/app/com.trmnl.companion/15/6550e97e-6792-4bb4-a7a5-33630fd193ff/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.trmnl.companion/15/6550e97e-6792-4bb4-a7a5-33630fd193ff/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.trmnl.companion/15/6550e97e-6792-4bb4-a7a5-33630fd193ff/assets/images/large.png",
       "drivers": null,
       "flow": {
         "triggers": null,
         "conditions": null,
-        "actions": null
-      },
-      "widgets": {
-        "ciel": {
-          "name": {
-            "en": "Europe from space",
-            "fr": "L'Europe vue du ciel",
-            "de": "Europa aus dem All",
-            "es": "Europa vista desde el espacio",
-            "it": "L'Europa vista dallo spazio",
-            "nl": "Europa vanuit de ruimte"
-          },
-          "height": "99%",
-          "transparent": false,
-          "settings": [
-            {
-              "id": "zone",
-              "type": "dropdown",
-              "value": "europe",
-              "title": {
-                "en": "Area",
-                "fr": "Zone",
-                "de": "Gebiet",
-                "es": "Zona",
-                "it": "Area",
-                "nl": "Gebied"
-              },
-              "hint": {
-                "en": "Which part of Europe to show.",
-                "fr": "La partie de l'Europe a afficher.",
-                "de": "Welcher Teil Europas gezeigt wird.",
-                "es": "Que parte de Europa mostrar.",
-                "it": "Quale parte d'Europa mostrare.",
-                "nl": "Welk deel van Europa wordt getoond."
-              },
-              "values": [
-                {
-                  "id": "europe",
-                  "title": {
-                    "en": "All of Europe",
-                    "fr": "Europe entiere",
-                    "de": "Ganz Europa",
-                    "es": "Toda Europa",
-                    "it": "Tutta l Europa",
-                    "nl": "Heel Europa"
-                  }
-                },
-                {
-                  "id": "ouest",
-                  "title": {
-                    "en": "Western Europe",
-                    "fr": "Europe de l Ouest",
-                    "de": "Westeuropa",
-                    "es": "Europa occidental",
-                    "it": "Europa occidentale",
-                    "nl": "West-Europa"
-                  }
-                },
-                {
-                  "id": "france",
-                  "title": {
-                    "en": "France",
-                    "fr": "France",
-                    "de": "Frankreich",
-                    "es": "Francia",
-                    "it": "Francia",
-                    "nl": "Frankrijk"
-                  }
-                },
-                {
-                  "id": "britanniques",
-                  "title": {
-                    "en": "British Isles",
-                    "fr": "Iles Britanniques",
-                    "de": "Britische Inseln",
-                    "es": "Islas britanicas",
-                    "it": "Isole britanniche",
-                    "nl": "Britse Eilanden"
-                  }
-                },
-                {
-                  "id": "iberie",
-                  "title": {
-                    "en": "Iberian Peninsula",
-                    "fr": "Peninsule Iberique",
-                    "de": "Iberische Halbinsel",
-                    "es": "Peninsula iberica",
-                    "it": "Penisola iberica",
-                    "nl": "Iberisch Schiereiland"
-                  }
-                },
-                {
-                  "id": "centrale",
-                  "title": {
-                    "en": "Central Europe",
-                    "fr": "Europe centrale",
-                    "de": "Mitteleuropa",
-                    "es": "Europa central",
-                    "it": "Europa centrale",
-                    "nl": "Midden-Europa"
-                  }
-                },
-                {
-                  "id": "italieBalkans",
-                  "title": {
-                    "en": "Italy and the Balkans",
-                    "fr": "Italie et Balkans",
-                    "de": "Italien und Balkan",
-                    "es": "Italia y los Balcanes",
-                    "it": "Italia e Balcani",
-                    "nl": "Italie en de Balkan"
-                  }
-                },
-                {
-                  "id": "scandinavie",
-                  "title": {
-                    "en": "Scandinavia",
-                    "fr": "Scandinavie",
-                    "de": "Skandinavien",
-                    "es": "Escandinavia",
-                    "it": "Scandinavia",
-                    "nl": "Scandinavie"
-                  }
-                },
-                {
-                  "id": "autour",
-                  "title": {
-                    "en": "Around my Homey",
-                    "fr": "Autour de mon Homey",
-                    "de": "Rund um meinen Homey",
-                    "es": "Alrededor de mi Homey",
-                    "it": "Intorno al mio Homey",
-                    "nl": "Rondom mijn Homey"
-                  }
-                }
-              ]
+        "actions": [
+          {
+            "id": "send_home",
+            "title": {
+              "en": "Send home to TRMNL"
             },
-            {
-              "id": "couche",
-              "type": "dropdown",
-              "value": "geocolour",
-              "title": {
-                "en": "Picture type",
-                "fr": "Type d'image",
-                "de": "Bildart",
-                "es": "Tipo de imagen",
-                "it": "Tipo di immagine",
-                "nl": "Soort beeld"
-              },
-              "hint": {
-                "en": "Day and night colour is readable at any hour. Infrared shows clouds even in the dark. True colour goes black at night.",
-                "fr": "Les couleurs jour et nuit sont lisibles a toute heure. L'infrarouge montre les nuages meme dans le noir. Les couleurs reelles laissent une image noire la nuit.",
-                "de": "Farben bei Tag und Nacht sind zu jeder Stunde lesbar. Infrarot zeigt Wolken auch im Dunkeln. Echte Farben bleiben nachts schwarz.",
-                "es": "El color de dia y de noche se lee a cualquier hora. El infrarrojo muestra las nubes incluso a oscuras. El color real queda negro de noche.",
-                "it": "I colori giorno e notte si leggono a qualsiasi ora. L'infrarosso mostra le nuvole anche al buio. I colori reali restano neri di notte.",
-                "nl": "Kleur bij dag en nacht is op elk uur leesbaar. Infrarood toont wolken ook in het donker. Echte kleuren blijven 's nachts zwart."
-              },
-              "values": [
-                {
-                  "id": "geocolour",
-                  "title": {
-                    "en": "Day and night colour",
-                    "fr": "Couleurs jour et nuit",
-                    "de": "Farben bei Tag und Nacht",
-                    "es": "Color de dia y de noche",
-                    "it": "Colori giorno e notte",
-                    "nl": "Kleur bij dag en nacht"
-                  }
-                },
-                {
-                  "id": "infrarouge",
-                  "title": {
-                    "en": "Infrared",
-                    "fr": "Infrarouge",
-                    "de": "Infrarot",
-                    "es": "Infrarrojo",
-                    "it": "Infrarosso",
-                    "nl": "Infrarood"
-                  }
-                },
-                {
-                  "id": "couleursReelles",
-                  "title": {
-                    "en": "True colour",
-                    "fr": "Couleurs reelles",
-                    "de": "Echte Farben",
-                    "es": "Color real",
-                    "it": "Colori reali",
-                    "nl": "Echte kleuren"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "animation",
-              "type": "dropdown",
-              "value": "troisHeures",
-              "title": {
-                "en": "Animation",
-                "fr": "Animation",
-                "de": "Animation",
-                "es": "Animacion",
-                "it": "Animazione",
-                "nl": "Animatie"
-              },
-              "hint": {
-                "en": "Loop through the most recent pictures to see the clouds move. Long periods use a wider time step, so the loop stays about twenty pictures.",
-                "fr": "Faire defiler les dernieres images pour voir les nuages bouger. Les longues periodes espacent le pas, pour que la boucle reste d'une vingtaine d'images.",
-                "de": "Die neuesten Bilder als Schleife abspielen, um die Wolken ziehen zu sehen. Lange Zeitraume nutzen einen groberen Schritt, damit die Schleife bei etwa zwanzig Bildern bleibt.",
-                "es": "Reproducir en bucle las ultimas imagenes para ver moverse las nubes. Los periodos largos usan un paso mas amplio, para que el bucle se quede en unas veinte imagenes.",
-                "it": "Scorrere in ciclo le ultime immagini per vedere muoversi le nuvole. I periodi lunghi usano un passo piu ampio, cosi il ciclo resta di una ventina di immagini.",
-                "nl": "De nieuwste beelden als lus afspelen om de wolken te zien trekken. Lange periodes gebruiken een grotere stap, zodat de lus rond twintig beelden blijft."
-              },
-              "values": [
-                {
-                  "id": "aucune",
-                  "title": {
-                    "en": "Off",
-                    "fr": "Desactivee",
-                    "de": "Aus",
-                    "es": "Desactivada",
-                    "it": "Disattivata",
-                    "nl": "Uit"
-                  }
-                },
-                {
-                  "id": "uneHeure",
-                  "title": {
-                    "en": "Last hour",
-                    "fr": "Une heure",
-                    "de": "Letzte Stunde",
-                    "es": "Ultima hora",
-                    "it": "Ultima ora",
-                    "nl": "Afgelopen uur"
-                  }
-                },
-                {
-                  "id": "troisHeures",
-                  "title": {
-                    "en": "Last 3 hours",
-                    "fr": "Trois heures",
-                    "de": "Letzte 3 Stunden",
-                    "es": "Ultimas 3 horas",
-                    "it": "Ultime 3 ore",
-                    "nl": "Afgelopen 3 uur"
-                  }
-                },
-                {
-                  "id": "sixHeures",
-                  "title": {
-                    "en": "Last 6 hours",
-                    "fr": "Six heures",
-                    "de": "Letzte 6 Stunden",
-                    "es": "Ultimas 6 horas",
-                    "it": "Ultime 6 ore",
-                    "nl": "Afgelopen 6 uur"
-                  }
-                },
-                {
-                  "id": "douzeHeures",
-                  "title": {
-                    "en": "Last 12 hours",
-                    "fr": "Douze heures",
-                    "de": "Letzte 12 Stunden",
-                    "es": "Ultimas 12 horas",
-                    "it": "Ultime 12 ore",
-                    "nl": "Afgelopen 12 uur"
-                  }
-                },
-                {
-                  "id": "vingtQuatreHeures",
-                  "title": {
-                    "en": "Last 24 hours",
-                    "fr": "Vingt-quatre heures",
-                    "de": "Letzte 24 Stunden",
-                    "es": "Ultimas 24 horas",
-                    "it": "Ultime 24 ore",
-                    "nl": "Afgelopen 24 uur"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "traits",
-              "type": "checkbox",
-              "value": true,
-              "title": {
-                "en": "Coastlines and borders",
-                "fr": "Traits de cote et frontieres",
-                "de": "Kusten und Grenzen",
-                "es": "Costas y fronteras",
-                "it": "Coste e confini",
-                "nl": "Kustlijnen en grenzen"
-              },
-              "hint": {
-                "en": "Draw coastlines and country borders over the picture.",
-                "fr": "Tracer les cotes et les frontieres par-dessus l'image.",
-                "de": "Kustenlinien und Landesgrenzen uber das Bild zeichnen.",
-                "es": "Dibujar las costas y las fronteras sobre la imagen.",
-                "it": "Tracciare coste e confini sopra l'immagine.",
-                "nl": "Kustlijnen en landsgrenzen over het beeld tekenen."
-              }
-            },
-            {
-              "id": "repere",
-              "type": "checkbox",
-              "value": true,
-              "title": {
-                "en": "Mark my Homey",
-                "fr": "Repere de mon Homey",
-                "de": "Meinen Homey markieren",
-                "es": "Marcar mi Homey",
-                "it": "Segna il mio Homey",
-                "nl": "Mijn Homey markeren"
-              },
-              "hint": {
-                "en": "Show a dot where your Homey is. Your position stays on your Homey.",
-                "fr": "Afficher un point a l'emplacement de votre Homey. Votre position ne quitte pas la box.",
-                "de": "Einen Punkt am Standort Ihres Homey anzeigen. Ihr Standort verlasst den Homey nicht.",
-                "es": "Mostrar un punto donde esta su Homey. Su posicion no sale del Homey.",
-                "it": "Mostrare un punto dove si trova il tuo Homey. La tua posizione non lascia l'Homey.",
-                "nl": "Een punt tonen waar uw Homey staat. Uw locatie verlaat de Homey niet."
-              }
+            "hint": {
+              "en": "Sends every device and zone to your TRMNL screen right away. Each run counts against the hourly push allowance."
             }
-          ],
-          "api": {
-            "getVue": {
-              "method": "GET",
-              "path": "/vue"
-            },
-            "getSecours": {
-              "method": "GET",
-              "path": "/secours"
-            }
-          },
-          "id": "ciel",
-          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/widgets/ciel/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/widgets/ciel/preview-light.png"
-        }
+          }
+        ]
       },
+      "widgets": null,
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-21T08:39:56.721Z",
-      "bugs": null,
-      "homepage": "https://www.rapinology.com",
-      "support": "mailto:info@rapinology.com",
-      "source": null,
-      "contributors": {
-        "developers": [
-          {
-            "name": "Henri Dominique Rapin"
-          }
-        ],
-        "translators": []
-      },
+      "stateChangedAt": "2026-09-21T15:04:36.684Z",
+      "bugs": "https://github.com/usetrmnl/trmnl-homey-app/issues",
+      "homepage": "https://trmnl.com/integrations/homey",
+      "support": "https://help.trmnl.com/en/articles/16527414-homey",
+      "source": "https://github.com/usetrmnl/trmnl-homey-app",
+      "contributors": null,
       "contributing": null,
       "permissions": [
-        "homey:manager:geolocation"
+        "homey:manager:api"
       ],
       "changelog": {
-        "en": "First release.",
-        "fr": "Première version.",
-        "de": "Erste Version.",
-        "es": "Primera versión.",
-        "it": "Prima versione.",
-        "nl": "Eerste versie."
+        "en": "Enlarged the app icon to fill its canvas."
       },
-      "compatibility": ">=12.3.0",
+      "compatibility": ">=12.0.0",
       "tags": {
         "en": [
-          "satellite",
-          "clouds",
-          "sky",
-          "europe",
-          "meteosat"
-        ],
-        "fr": [
-          "satellite",
-          "nuages",
-          "ciel",
-          "europe",
-          "meteosat"
-        ],
-        "de": [
-          "satellit",
-          "wolken",
-          "himmel",
-          "europa",
-          "meteosat"
-        ],
-        "es": [
-          "satelite",
-          "nubes",
-          "cielo",
-          "europa",
-          "meteosat"
-        ],
-        "it": [
-          "satellite",
-          "nuvole",
-          "cielo",
-          "europa",
-          "meteosat"
-        ],
-        "nl": [
-          "satelliet",
-          "wolken",
-          "lucht",
-          "europa",
-          "meteosat"
+          "TRMNL",
+          "e-ink",
+          "eink",
+          "e-paper",
+          "display",
+          "dashboard",
+          "screen",
+          "energy",
+          "climate"
         ]
       },
       "platforms": [
@@ -459,18 +74,1411 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.0",
+    "liveVersion": "0.4.6",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a96972b30ac038fba71a2f2",
-      "type": "user",
-      "userId": "66e2d2b3f0e7b530640ef902",
-      "name": "Henri Dominique Rapin",
-      "verified": false
+      "id": "6a8eb3b23bdd81c33fa5674e",
+      "type": "org",
+      "userId": null,
+      "name": "TRMNL",
+      "verified": true
     },
     "communityTopicId": null
+  },
+  {
+    "id": "com.ady.zonetracks",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "ZoneTracks",
+        "no": "ZoneTracks",
+        "nl": "ZoneTracks",
+        "de": "ZoneTracks",
+        "fr": "ZoneTracks",
+        "es": "ZoneTracks",
+        "pt": "ZoneTracks",
+        "it": "ZoneTracks",
+        "pl": "ZoneTracks",
+        "ru": "ZoneTracks",
+        "ko": "ZoneTracks"
+      },
+      "version": "1.1.2",
+      "readme": {
+        "en": "ZoneTracks turns your Homey into a smart family locator by using OwnTracks on your mobile phone to report real-time location updates.\r\nIt helps you see where your loved ones are, automate home routines based on arrival and departure, and get better visibility into daily movement.\r\nPerfect for smarter arrivals, home presence automation, and a more connected household.\r\n\r\n**Map tiles:** When you view a map, ZoneTracks requests the required map tiles from the OpenStreetMap Foundation's community tile service. These requests disclose the approximate map area being viewed and normal network information, such as the Homey connection's IP address and the ZoneTracks application identifier. ZoneTracks does not send names, stored journeys, zone names, avatars, or raw OwnTracks location reports to OpenStreetMap. See the [OSMF Privacy Policy](https://osmfoundation.org/wiki/Privacy_Policy).\r\n"
+      },
+      "description": {
+        "en": "Keep track of the family with the OwnTracks app",
+        "no": "Hold øye med familien med OwnTracks-appen",
+        "nl": "Houd de familie in de gaten met de OwnTracks-app",
+        "de": "Verfolgen Sie Ihre Familie mit der OwnTracks-App",
+        "fr": "Suivez votre famille avec l'application OwnTracks",
+        "es": "Sigue a tu familia con la aplicación OwnTracks",
+        "pt": "Acompanhe a família com o aplicativo OwnTracks",
+        "it": "Tieni traccia della famiglia con l'app OwnTracks",
+        "pl": "Śledź swoją rodzinę za pomocą aplikacji OwnTracks",
+        "ru": "Следите за семьёй с помощью приложения OwnTracks",
+        "ko": "OwnTracks 앱으로 가족 위치를 추적하세요"
+      },
+      "category": "tools",
+      "brandColor": "#0091ff",
+      "icon": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "user",
+          "name": {
+            "en": "User",
+            "no": "Bruker",
+            "nl": "Gebruiker",
+            "de": "Benutzer",
+            "fr": "Utilisateur",
+            "es": "Usuario",
+            "pt": "Usuário",
+            "it": "Utente",
+            "pl": "Użytkownik",
+            "ru": "Пользователь",
+            "ko": "사용자"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "alarm_presence",
+            "zone",
+            "measure_battery",
+            "speed",
+            "last_seen",
+            "last_coordinates"
+          ],
+          "capabilitiesOptions": {
+            "zone": {
+              "title": {
+                "en": "zone",
+                "no": "Sone (waypoint)",
+                "nl": "zone",
+                "de": "zone",
+                "fr": "Zone (point de repère)",
+                "es": "Zona (waypoint)",
+                "pt": "Zona (waypoint)",
+                "it": "Zona (waypoint)",
+                "pl": "Strefa (waypoint)",
+                "ru": "Зона (waypoint)",
+                "ko": "구역(웨이포인트)"
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "OTHER"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/drivers/user/assets/images/small.jpg",
+          "imageLarge": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/drivers/user/assets/images/large.jpg",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/drivers/user/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "person_entered_zone",
+            "title": {
+              "en": "A person entered a zone",
+              "no": "En person kom inn i en sone (waypoint)",
+              "nl": "Iemand is een zone binnengegaan (waypoint)",
+              "de": "Eine Person hat eine Zone betreten (Waypoint)",
+              "fr": "Une personne est entrée dans une zone (point de repère)",
+              "es": "Una persona entró en una zona (waypoint)",
+              "pt": "Uma pessoa entrou em uma zona (waypoint)",
+              "it": "Una persona è entrata in una zona (waypoint)",
+              "pl": "Osoba weszła do strefy (waypoint)",
+              "ru": "Человек вошёл в зону (waypoint)",
+              "ko": "사람이 구역(웨이포인트)에 들어갔습니다"
+            },
+            "titleFormatted": {
+              "en": "A person entered a zone",
+              "no": "En person kom inn i en sone (waypoint)",
+              "nl": "Iemand is een zone binnengegaan (waypoint)",
+              "de": "Eine Person hat eine Zone betreten (Waypoint)",
+              "fr": "Une personne est entrée dans une zone (point de repère)",
+              "es": "Una persona entró en una zona (waypoint)",
+              "pt": "Uma pessoa entrou em uma zona (waypoint)",
+              "it": "Una persona è entrata in una zona (waypoint)",
+              "pl": "Osoba weszła do strefy (waypoint)",
+              "ru": "Человек вошёл в зону (waypoint)",
+              "ko": "사람이 구역(웨이포인트)에 들어갔습니다"
+            },
+            "tokens": [
+              {
+                "name": "user",
+                "type": "string",
+                "title": {
+                  "en": "user",
+                  "no": "bruker",
+                  "nl": "gebruiker",
+                  "de": "Benutzer",
+                  "fr": "utilisateur",
+                  "es": "usuario",
+                  "pt": "usuário",
+                  "it": "utente",
+                  "pl": "użytkownik",
+                  "ru": "пользователь",
+                  "ko": "사용자"
+                },
+                "example": {
+                  "en": "Adrian"
+                }
+              },
+              {
+                "name": "zone",
+                "type": "string",
+                "title": {
+                  "en": "zone",
+                  "no": "sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "zone (point de repère)",
+                  "es": "zona (waypoint)",
+                  "pt": "zona (waypoint)",
+                  "it": "zona (waypoint)",
+                  "pl": "strefa (waypoint)",
+                  "ru": "зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                },
+                "example": {
+                  "en": "Home"
+                }
+              }
+            ]
+          },
+          {
+            "id": "person_left_zone",
+            "title": {
+              "en": "A person left a zone",
+              "no": "En person forlot en sone (waypoint)",
+              "nl": "Iemand heeft een zone verlaten (waypoint)",
+              "de": "Eine Person hat eine Zone verlassen (Waypoint)",
+              "fr": "Une personne a quitté une zone (point de repère)",
+              "es": "Una persona salió de una zona (waypoint)",
+              "pt": "Uma pessoa saiu de uma zona (waypoint)",
+              "it": "Una persona è uscita da una zona (waypoint)",
+              "pl": "Osoba opuściła strefę (waypoint)",
+              "ru": "Человек вышел из зоны (waypoint)",
+              "ko": "사람이 구역(웨이포인트)에서 나갔습니다"
+            },
+            "titleFormatted": {
+              "en": "A person left a zone",
+              "no": "En person forlot en sone (waypoint)",
+              "nl": "Iemand heeft een zone verlaten (waypoint)",
+              "de": "Eine Person hat eine Zone verlassen (Waypoint)",
+              "fr": "Une personne a quitté une zone (point de repère)",
+              "es": "Una persona salió de una zona (waypoint)",
+              "pt": "Uma pessoa saiu de uma zona (waypoint)",
+              "it": "Una persona è uscita da una zona (waypoint)",
+              "pl": "Osoba opuściła strefę (waypoint)",
+              "ru": "Человек вышел из зоны (waypoint)",
+              "ko": "사람이 구역(웨이포인트)에서 나갔습니다"
+            },
+            "tokens": [
+              {
+                "name": "user",
+                "type": "string",
+                "title": {
+                  "en": "user",
+                  "no": "bruker",
+                  "nl": "gebruiker",
+                  "de": "Benutzer",
+                  "fr": "utilisateur",
+                  "es": "usuario",
+                  "pt": "usuário",
+                  "it": "utente",
+                  "pl": "użytkownik",
+                  "ru": "пользователь",
+                  "ko": "사용자"
+                },
+                "example": {
+                  "en": "Adrian"
+                }
+              },
+              {
+                "name": "zone",
+                "type": "string",
+                "title": {
+                  "en": "zone",
+                  "no": "sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "zone (point de repère)",
+                  "es": "zona (waypoint)",
+                  "pt": "zona (waypoint)",
+                  "it": "zona (waypoint)",
+                  "pl": "strefa (waypoint)",
+                  "ru": "зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                },
+                "example": {
+                  "en": "Home"
+                }
+              }
+            ]
+          },
+          {
+            "id": "entered_zone",
+            "title": {
+              "en": "Entered [[zone]] zone",
+              "no": "Kom inn i [[zone]]-sonen (waypoint)",
+              "nl": "Betreed [[zone]] zone",
+              "de": "[[zone]]-Zone betreten (Waypoint)",
+              "fr": "Entré dans la zone [[zone]] (point de repère)",
+              "es": "Entró en la zona [[zone]] (waypoint)",
+              "pt": "Entrou na zona [[zone]] (waypoint)",
+              "it": "Entrata nella zona [[zone]] (waypoint)",
+              "pl": "Wszedł do strefy [[zone]] (waypoint)",
+              "ru": "Вошёл в зону [[zone]] (waypoint)",
+              "ko": "[[zone]] 구역(웨이포인트)에 들어갔습니다"
+            },
+            "titleFormatted": {
+              "en": "Entered [[zone]] zone",
+              "no": "Kom inn i [[zone]]-sonen (waypoint)",
+              "nl": "Betreed [[zone]] zone",
+              "de": "[[zone]]-Zone betreten (Waypoint)",
+              "fr": "Entré dans la zone [[zone]] (point de repère)",
+              "es": "Entró en la zona [[zone]] (waypoint)",
+              "pt": "Entrou na zona [[zone]] (waypoint)",
+              "it": "Entrata nella zona [[zone]] (waypoint)",
+              "pl": "Wszedł do strefy [[zone]] (waypoint)",
+              "ru": "Вошёл в зону [[zone]] (waypoint)",
+              "ko": "[[zone]] 구역(웨이포인트)에 들어갔습니다"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=user"
+              },
+              {
+                "name": "zone",
+                "type": "autocomplete",
+                "title": {
+                  "en": "zone",
+                  "no": "Sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "Zone (point de repère)",
+                  "es": "Zona (waypoint)",
+                  "pt": "Zona (waypoint)",
+                  "it": "Zona (waypoint)",
+                  "pl": "Strefa (waypoint)",
+                  "ru": "Зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "zone",
+                "type": "string",
+                "title": {
+                  "en": "zone",
+                  "no": "sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "zone (point de repère)",
+                  "es": "zona (waypoint)",
+                  "pt": "zona (waypoint)",
+                  "it": "zona (waypoint)",
+                  "pl": "strefa (waypoint)",
+                  "ru": "зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                },
+                "example": {
+                  "en": "Home"
+                }
+              }
+            ]
+          },
+          {
+            "id": "left_zone",
+            "title": {
+              "en": "Left [[zone]] zone",
+              "no": "Forlot [[zone]]-sonen (waypoint)",
+              "nl": "Verliet [[zone]] zone",
+              "de": "[[zone]]-Zone verlassen (Waypoint)",
+              "fr": "A quitté la zone [[zone]] (point de repère)",
+              "es": "Salió de la zona [[zone]] (waypoint)",
+              "pt": "Saiu da zona [[zone]] (waypoint)",
+              "it": "Uscita dalla zona [[zone]] (waypoint)",
+              "pl": "Opuścił strefę [[zone]] (waypoint)",
+              "ru": "Вышел из зоны [[zone]] (waypoint)",
+              "ko": "[[zone]] 구역(웨이포인트)에서 나갔습니다"
+            },
+            "titleFormatted": {
+              "en": "Left [[zone]] zone",
+              "no": "Forlot [[zone]]-sonen (waypoint)",
+              "nl": "Verliet [[zone]] zone",
+              "de": "[[zone]]-Zone verlassen (Waypoint)",
+              "fr": "A quitté la zone [[zone]] (point de repère)",
+              "es": "Salió de la zona [[zone]] (waypoint)",
+              "pt": "Saiu da zona [[zone]] (waypoint)",
+              "it": "Uscita dalla zona [[zone]] (waypoint)",
+              "pl": "Opuścił strefę [[zone]] (waypoint)",
+              "ru": "Вышел из зоны [[zone]] (waypoint)",
+              "ko": "[[zone]] 구역(웨이포인트)에서 나갔습니다"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=user"
+              },
+              {
+                "name": "zone",
+                "type": "autocomplete",
+                "title": {
+                  "en": "zone",
+                  "no": "Sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "Zone (point de repère)",
+                  "es": "Zona (waypoint)",
+                  "pt": "Zona (waypoint)",
+                  "it": "Zona (waypoint)",
+                  "pl": "Strefa (waypoint)",
+                  "ru": "Зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "zone",
+                "type": "string",
+                "title": {
+                  "en": "zone",
+                  "no": "sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "zone (point de repère)",
+                  "es": "zona (waypoint)",
+                  "pt": "zona (waypoint)",
+                  "it": "zona (waypoint)",
+                  "pl": "strefa (waypoint)",
+                  "ru": "зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                },
+                "example": {
+                  "en": "Home"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "zone_is",
+            "title": {
+              "en": "The zone !{{is|isn't}} [[zone]]",
+              "no": "Sonen (waypoint) !{{er|er ikke}} [[zone]]",
+              "nl": "De zone !{{is|is niet}} [[zone]]",
+              "de": "Die zone !{{ist|ist nicht}} [[zone]]",
+              "fr": "La zone (point de repère) !{{est|n'est pas}} [[zone]]",
+              "es": "La zona (waypoint) !{{está|no está}} [[zone]]",
+              "pt": "A zona (waypoint) !{{está|não está}} [[zone]]",
+              "it": "La zona (waypoint) !{{è|non è}} [[zone]]",
+              "pl": "Strefa (waypoint) !{{jest|nie jest}} [[zone]]",
+              "ru": "Зона (waypoint) !{{равна|не равна}} [[zone]]",
+              "ko": "구역(웨이포인트)이 [[zone]] !{{입니다|아닙니다}}"
+            },
+            "titleFormatted": {
+              "en": "The zone !{{is|isn't}} [[zone]]",
+              "no": "Sonen (waypoint) !{{er|er ikke}} [[zone]]",
+              "nl": "De zone !{{is|is niet}} [[zone]]",
+              "de": "Die zone !{{ist|ist nicht}} [[zone]]",
+              "fr": "La zone (point de repère) !{{est|n'est pas}} [[zone]]",
+              "es": "La zona (waypoint) !{{está|no está}} [[zone]]",
+              "pt": "A zona (waypoint) !{{está|não está}} [[zone]]",
+              "it": "La zona (waypoint) !{{è|non è}} [[zone]]",
+              "pl": "Strefa (waypoint) !{{jest|nie jest}} [[zone]]",
+              "ru": "Зона (waypoint) !{{равна|не равна}} [[zone]]",
+              "ko": "구역(웨이포인트)이 [[zone]] !{{입니다|아닙니다}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=user"
+              },
+              {
+                "name": "zone",
+                "type": "autocomplete",
+                "title": {
+                  "en": "zone",
+                  "no": "Sone (waypoint)",
+                  "nl": "zone",
+                  "de": "zone",
+                  "fr": "Zone (point de repère)",
+                  "es": "Zona (waypoint)",
+                  "pt": "Zona (waypoint)",
+                  "it": "Zona (waypoint)",
+                  "pl": "Strefa (waypoint)",
+                  "ru": "Зона (waypoint)",
+                  "ko": "구역(웨이포인트)"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": null
+      },
+      "widgets": {
+        "map": {
+          "name": {
+            "en": "Map",
+            "no": "Kart",
+            "nl": "Kaart",
+            "de": "Karte",
+            "fr": "Carte",
+            "es": "Mapa",
+            "pt": "Mapa",
+            "it": "Mappa",
+            "pl": "Mapa",
+            "ru": "Карта",
+            "ko": "지도"
+          },
+          "height": 350,
+          "devices": {
+            "type": "app",
+            "singular": false
+          },
+          "settings": [
+            {
+              "id": "showZones",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Show zones",
+                "no": "Vis soner",
+                "nl": "Zones tonen",
+                "de": "Zonen anzeigen",
+                "fr": "Afficher les zones",
+                "es": "Mostrar zonas",
+                "pt": "Mostrar zonas",
+                "it": "Mostra zone",
+                "pl": "Pokaż strefy",
+                "ru": "Показывать зоны",
+                "ko": "구역 표시"
+              }
+            },
+            {
+              "id": "showTracks",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Show recent tracks",
+                "no": "Vis nylige spor",
+                "nl": "Recente routes tonen",
+                "de": "Letzte Routen anzeigen",
+                "fr": "Afficher les trajets récents",
+                "es": "Mostrar rutas recientes",
+                "pt": "Mostrar percursos recentes",
+                "it": "Mostra percorsi recenti",
+                "pl": "Pokaż ostatnie trasy",
+                "ru": "Показывать недавние маршруты",
+                "ko": "최근 경로 표시"
+              }
+            },
+            {
+              "id": "showJourneys",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Show journeys",
+                "no": "Vis reiser",
+                "nl": "Ritten tonen",
+                "de": "Fahrten anzeigen",
+                "fr": "Afficher les trajets",
+                "es": "Mostrar trayectos",
+                "pt": "Mostrar viagens",
+                "it": "Mostra viaggi",
+                "pl": "Pokaż podróże",
+                "ru": "Показывать поездки",
+                "ko": "여정 표시"
+              }
+            },
+            {
+              "id": "lastJourneyOnly",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Show only the last journey",
+                "no": "Vis kun siste reise",
+                "nl": "Alleen laatste rit tonen",
+                "de": "Nur die letzte Fahrt anzeigen",
+                "fr": "Afficher uniquement le dernier trajet",
+                "es": "Mostrar solo el último trayecto",
+                "pt": "Mostrar apenas a última viagem",
+                "it": "Mostra solo l'ultimo viaggio",
+                "pl": "Pokaż tylko ostatnią podróż",
+                "ru": "Показывать только последнюю поездку",
+                "ko": "마지막 여정만 표시"
+              }
+            }
+          ],
+          "api": {
+            "getData": {
+              "method": "GET",
+              "path": "/"
+            },
+            "getMapTile": {
+              "method": "GET",
+              "path": "/tiles/:zoom/:tileX/:tileY"
+            },
+            "setVisibility": {
+              "method": "POST",
+              "path": "/visibility"
+            },
+            "setTracksVisibility": {
+              "method": "POST",
+              "path": "/tracks-visibility"
+            }
+          },
+          "id": "map",
+          "previewDark": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/widgets/map/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.ady.zonetracks/2/97df9b2c-b81c-483d-8e1a-e440b8dbf097/widgets/map/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 158877,
+      "state": "live",
+      "stateChangedAt": "2026-09-21T09:34:14.439Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://github.com/AdyRock/com.ady.zonetracks/issues",
+      "source": null,
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "adyrock"
+          }
+        }
+      },
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "Fixed minor bugs and improved performance.",
+        "nl": "Kleine bugs opgelost en prestaties verbeterd.",
+        "fr": "Correction de petits bugs et amélioration des performances.",
+        "de": "Kleine Fehler behoben und Leistung verbessert.",
+        "es": "Corrección de errores menores y mejora del rendimiento.",
+        "it": "Correzione di piccoli bug e miglioramento delle prestazioni.",
+        "pt": "Correção de pequenos bugs e melhoria do desempenho.",
+        "ru": "Исправлены мелкие ошибки и улучшена производительность.",
+        "zh": "修复了小错误并提高了性能。",
+        "ja": "小さなバグを修正し、パフォーマンスを向上させました。",
+        "ko": "사소한 버그를 수정하고 성능을 향상시켰습니다."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "tracking",
+          "family",
+          "location",
+          "presence",
+          "OwnTracks"
+        ],
+        "no": [
+          "sporing",
+          "familie",
+          "posisjon",
+          "tilstedeværelse",
+          "OwnTracks"
+        ],
+        "nl": [
+          "tracking",
+          "familie",
+          "locatie",
+          "aanwezigheid",
+          "OwnTracks"
+        ],
+        "de": [
+          "Verfolgung",
+          "Familie",
+          "Standort",
+          "Anwesenheit",
+          "OwnTracks"
+        ],
+        "fr": [
+          "suivi",
+          "famille",
+          "emplacement",
+          "présence",
+          "OwnTracks"
+        ],
+        "es": [
+          "seguimiento",
+          "familia",
+          "ubicación",
+          "presencia",
+          "OwnTracks"
+        ],
+        "pt": [
+          "rastreamento",
+          "família",
+          "localização",
+          "presença",
+          "OwnTracks"
+        ],
+        "it": [
+          "tracciamento",
+          "famiglia",
+          "posizione",
+          "presenza",
+          "OwnTracks"
+        ],
+        "pl": [
+          "śledzenie",
+          "rodzina",
+          "lokalizacja",
+          "obecność",
+          "OwnTracks"
+        ],
+        "ru": [
+          "отслеживание",
+          "семья",
+          "местоположение",
+          "присутствие",
+          "OwnTracks"
+        ],
+        "ko": [
+          "추적",
+          "가족",
+          "위치",
+          "현황",
+          "OwnTracks"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.1.2",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6582174b559f0bfcc1d7bce5",
+      "type": "user",
+      "userId": "658212448f2df793167e137c",
+      "name": "Adrian Rockall",
+      "verified": false
+    },
+    "communityTopicId": 158877
+  },
+  {
+    "id": "nl.lrvdlinden.postnl",
+    "rating": null,
+    "liveBuild": {
+      "id": 20,
+      "name": {
+        "en": "PostNL",
+        "nl": "PostNL"
+      },
+      "version": "1.1.0",
+      "readme": {
+        "en": "PostNL for Homey\n\nView expected mail items and PostNL parcels directly in Homey. Every My PostNL device is connected to its own PostNL account, so multiple accounts can be used side by side with separate widgets, capabilities, Flow cards and Flow tokens.\n\nFeatures\n- My Post widget with the 10 most recent mail items and horizontally scrollable scans.\n- My Package widget with the 5 most recent parcels and Incoming, In transit or Delivered status.\n- Device-dependent Flow triggers, conditions, actions and tokens.\n- Local archive of mail scans for up to 21 days.\n- Automatic synchronization every 5 minutes plus additional checks around midnight.\n- Privacy-safe diagnostics: tokens, callbacks and authorization codes are never shown in logs.\n- Timeline notification when an account's credentials expire and reconnection is required.\n\nConnect a PostNL account\n1. Download the PostNL Homey Login Helper from this app's Homey Community topic.\n2. Install the helper as a Chrome extension as described in the topic.\n3. In Homey, go to Add Device → PostNL → My PostNL.\n4. Choose Open PostNL and sign in to the PostNL account you want to connect to this device.\n5. The helper captures the postnl://login callback. Copy the callback.\n6. Paste the callback in Homey's pairing screen and choose Connect account.\n7. Repeat these steps to add another PostNL account as a separate device.\n\nReconnect an account\nIf PostNL revokes or expires the credentials, only the affected device is impacted. Homey creates one Timeline notification asking you to reconnect that account. Use Repair on the affected My PostNL device and complete the PostNL sign-in again. Other PostNL devices continue to work.\n\nThe app uses PostNL's personal, non-public interfaces. Changes to PostNL's mobile app or sign-in procedure can therefore require an app update.\n",
+        "nl": "PostNL voor Homey\n\nBekijk je verwachte poststukken en PostNL-pakketten rechtstreeks in Homey. Elk Mijn PostNL-apparaat is gekoppeld aan één eigen PostNL-account. Daardoor kun je meerdere PostNL-accounts naast elkaar gebruiken, met per account eigen widgets, capabilities, Flow-kaarten en Flow-tokens.\n\nMogelijkheden\n- Mijn Post-widget met de 10 meest recente poststukken en horizontaal scrollbare scans.\n- Mijn Pakket-widget met de 5 meest recente pakketten en status Inkomend, Onderweg of Bezorgd.\n- Device-afhankelijke Flow-triggers, conditions, actions en tokens.\n- Lokale opslag van poststukscans (maximaal 21 dagen).\n- Automatische synchronisatie iedere 5 minuten en extra controles rond middernacht.\n- Privacyveilige diagnostiek: tokens, callbacks en autorisatiecodes worden nooit in logs getoond.\n- Timeline-melding wanneer de credentials van een account verlopen en opnieuw koppelen nodig is.\n\nPostNL-account koppelen\n1. Download de PostNL Homey Login Helper via het Homey Community-topic van deze app.\n2. Installeer de helper als Chrome-extensie zoals beschreven in het topic.\n3. Ga in Homey naar Apparaat toevoegen → PostNL → Mijn PostNL.\n4. Kies Open PostNL en meld je aan bij het PostNL-account dat je aan dit device wilt koppelen.\n5. De helper vangt de postnl://login callback op. Kopieer de callback.\n6. Plak de callback in het koppelvenster van Homey en kies Account koppelen.\n7. Herhaal deze stappen om een tweede of volgend PostNL-account als apart device toe te voegen.\n\nOpnieuw koppelen\nAls PostNL de credentials intrekt of laat verlopen, wordt alleen het betreffende device geraakt. Homey plaatst één Timeline-melding met het verzoek dat account opnieuw te koppelen. Gebruik Repareren bij dat Mijn PostNL-device en doorloop opnieuw de PostNL-login. Andere PostNL-devices blijven gewoon functioneren.\n\nDe app gebruikt PostNL's persoonlijke, niet-publieke interfaces. Een wijziging in de PostNL-app of aanmeldprocedure kan daarom een app-update vereisen.\n"
+      },
+      "description": {
+        "en": "See incoming mail and PostNL parcels in Homey, with widgets and Flow cards.",
+        "nl": "Bekijk verwachte post en PostNL-pakketten in Homey, met widgets en Flow-kaarten."
+      },
+      "category": "internet",
+      "brandColor": "#FB6200",
+      "icon": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "account",
+          "name": {
+            "en": "My PostNL",
+            "nl": "Mijn PostNL"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "postnl_mail_expected",
+            "postnl_mail_count",
+            "postnl_package_count",
+            "postnl_next_delivery",
+            "postnl_status",
+            "postnl_last_update"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/drivers/account/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/drivers/account/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/drivers/account/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "new_mail",
+            "title": {
+              "en": "New mail is expected",
+              "nl": "Er is nieuwe post onderweg"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "count",
+                "type": "number",
+                "title": {
+                  "en": "Number of mail items",
+                  "nl": "Aantal poststukken"
+                }
+              },
+              {
+                "name": "id",
+                "type": "string",
+                "title": {
+                  "en": "Mail item ID",
+                  "nl": "Poststuk-ID"
+                }
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": {
+                  "en": "Mail item",
+                  "nl": "Poststuk"
+                }
+              },
+              {
+                "name": "sender",
+                "type": "string",
+                "title": {
+                  "en": "Sender (if available)",
+                  "nl": "Afzender (indien beschikbaar)"
+                }
+              },
+              {
+                "name": "date",
+                "type": "string",
+                "title": {
+                  "en": "Delivery date",
+                  "nl": "Bezorgdatum"
+                }
+              },
+              {
+                "name": "unread",
+                "type": "boolean",
+                "title": {
+                  "en": "Unread",
+                  "nl": "Ongelezen"
+                }
+              },
+              {
+                "name": "image_available",
+                "type": "boolean",
+                "title": {
+                  "en": "Image available",
+                  "nl": "Afbeelding beschikbaar"
+                }
+              },
+              {
+                "name": "image",
+                "type": "image",
+                "title": {
+                  "en": "Mail item image",
+                  "nl": "Afbeelding poststuk"
+                }
+              }
+            ]
+          },
+          {
+            "id": "new_package",
+            "title": {
+              "en": "A new parcel was found",
+              "nl": "Er is een nieuw pakket gevonden"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "id",
+                "type": "string",
+                "title": {
+                  "en": "Shipment ID",
+                  "nl": "Zending-ID"
+                }
+              },
+              {
+                "name": "sender",
+                "type": "string",
+                "title": {
+                  "en": "Sender",
+                  "nl": "Afzender"
+                }
+              },
+              {
+                "name": "receiver",
+                "type": "string",
+                "title": {
+                  "en": "Receiver",
+                  "nl": "Ontvanger"
+                }
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": {
+                  "en": "Parcel",
+                  "nl": "Pakket"
+                }
+              },
+              {
+                "name": "barcode",
+                "type": "string",
+                "title": {
+                  "en": "Barcode",
+                  "nl": "Barcode"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "delivery_date",
+                "type": "string",
+                "title": {
+                  "en": "Delivery date",
+                  "nl": "Bezorgdatum"
+                }
+              },
+              {
+                "name": "delivery_window",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window",
+                  "nl": "Bezorgvenster"
+                }
+              },
+              {
+                "name": "delivery_window_from",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window from",
+                  "nl": "Bezorgvenster vanaf"
+                }
+              },
+              {
+                "name": "delivery_window_to",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window to",
+                  "nl": "Bezorgvenster tot"
+                }
+              },
+              {
+                "name": "delivery_window_type",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window type",
+                  "nl": "Type bezorgvenster"
+                }
+              },
+              {
+                "name": "details_url",
+                "type": "string",
+                "title": {
+                  "en": "Tracking URL",
+                  "nl": "Tracking-URL"
+                }
+              },
+              {
+                "name": "shipment_type",
+                "type": "string",
+                "title": {
+                  "en": "Shipment type",
+                  "nl": "Zendingstype"
+                }
+              },
+              {
+                "name": "delivery_address_type",
+                "type": "string",
+                "title": {
+                  "en": "Delivery address type",
+                  "nl": "Type bezorgadres"
+                }
+              },
+              {
+                "name": "direction",
+                "type": "string",
+                "title": {
+                  "en": "Direction",
+                  "nl": "Richting"
+                }
+              },
+              {
+                "name": "created_at",
+                "type": "string",
+                "title": {
+                  "en": "Created at",
+                  "nl": "Aangemaakt op"
+                }
+              },
+              {
+                "name": "delivered",
+                "type": "boolean",
+                "title": {
+                  "en": "Delivered",
+                  "nl": "Bezorgd"
+                }
+              },
+              {
+                "name": "shared_from",
+                "type": "string",
+                "title": {
+                  "en": "Shared from",
+                  "nl": "Gedeeld via"
+                }
+              },
+              {
+                "name": "source_account_id",
+                "type": "string",
+                "title": {
+                  "en": "Source account ID",
+                  "nl": "Bronaccount-ID"
+                }
+              }
+            ]
+          },
+          {
+            "id": "package_status_changed",
+            "title": {
+              "en": "A parcel status changed",
+              "nl": "De status van een pakket is gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "old_status",
+                "type": "string",
+                "title": {
+                  "en": "Previous status",
+                  "nl": "Vorige status"
+                }
+              },
+              {
+                "name": "id",
+                "type": "string",
+                "title": {
+                  "en": "Shipment ID",
+                  "nl": "Zending-ID"
+                }
+              },
+              {
+                "name": "sender",
+                "type": "string",
+                "title": {
+                  "en": "Sender",
+                  "nl": "Afzender"
+                }
+              },
+              {
+                "name": "receiver",
+                "type": "string",
+                "title": {
+                  "en": "Receiver",
+                  "nl": "Ontvanger"
+                }
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": {
+                  "en": "Parcel",
+                  "nl": "Pakket"
+                }
+              },
+              {
+                "name": "barcode",
+                "type": "string",
+                "title": {
+                  "en": "Barcode",
+                  "nl": "Barcode"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "delivery_date",
+                "type": "string",
+                "title": {
+                  "en": "Delivery date",
+                  "nl": "Bezorgdatum"
+                }
+              },
+              {
+                "name": "delivery_window",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window",
+                  "nl": "Bezorgvenster"
+                }
+              },
+              {
+                "name": "delivery_window_from",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window from",
+                  "nl": "Bezorgvenster vanaf"
+                }
+              },
+              {
+                "name": "delivery_window_to",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window to",
+                  "nl": "Bezorgvenster tot"
+                }
+              },
+              {
+                "name": "delivery_window_type",
+                "type": "string",
+                "title": {
+                  "en": "Delivery window type",
+                  "nl": "Type bezorgvenster"
+                }
+              },
+              {
+                "name": "details_url",
+                "type": "string",
+                "title": {
+                  "en": "Tracking URL",
+                  "nl": "Tracking-URL"
+                }
+              },
+              {
+                "name": "shipment_type",
+                "type": "string",
+                "title": {
+                  "en": "Shipment type",
+                  "nl": "Zendingstype"
+                }
+              },
+              {
+                "name": "delivery_address_type",
+                "type": "string",
+                "title": {
+                  "en": "Delivery address type",
+                  "nl": "Type bezorgadres"
+                }
+              },
+              {
+                "name": "direction",
+                "type": "string",
+                "title": {
+                  "en": "Direction",
+                  "nl": "Richting"
+                }
+              },
+              {
+                "name": "created_at",
+                "type": "string",
+                "title": {
+                  "en": "Created at",
+                  "nl": "Aangemaakt op"
+                }
+              },
+              {
+                "name": "delivered",
+                "type": "boolean",
+                "title": {
+                  "en": "Delivered",
+                  "nl": "Bezorgd"
+                }
+              },
+              {
+                "name": "shared_from",
+                "type": "string",
+                "title": {
+                  "en": "Shared from",
+                  "nl": "Gedeeld via"
+                }
+              },
+              {
+                "name": "source_account_id",
+                "type": "string",
+                "title": {
+                  "en": "Source account ID",
+                  "nl": "Bronaccount-ID"
+                }
+              }
+            ]
+          },
+          {
+            "id": "sync_failed",
+            "title": {
+              "en": "PostNL synchronization failed",
+              "nl": "PostNL-synchronisatie is mislukt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "error",
+                "type": "string",
+                "title": {
+                  "en": "Error",
+                  "nl": "Foutmelding"
+                }
+              }
+            ]
+          },
+          {
+            "id": "login_expired",
+            "title": {
+              "en": "The PostNL login expired",
+              "nl": "De PostNL-aanmelding is verlopen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "mail_expected",
+            "title": {
+              "en": "Mail is expected",
+              "nl": "Er wordt post verwacht"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ]
+          },
+          {
+            "id": "packages_underway",
+            "title": {
+              "en": "Parcels are underway",
+              "nl": "Er zijn pakketten onderweg"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "sync_now",
+            "title": {
+              "en": "Synchronize PostNL",
+              "nl": "Synchroniseer PostNL"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=account"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": {
+        "mijn-post": {
+          "name": {
+            "en": "My Post",
+            "nl": "Mijn Post"
+          },
+          "height": 250,
+          "api": {
+            "getData": {
+              "method": "GET",
+              "path": "/"
+            },
+            "sync": {
+              "method": "POST",
+              "path": "/sync"
+            }
+          },
+          "devices": {
+            "type": "app",
+            "singular": true,
+            "filter": {
+              "capabilities": "postnl_mail_count"
+            }
+          },
+          "id": "mijn-post",
+          "settings": [],
+          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/widgets/mijn-post/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/widgets/mijn-post/preview-light.png"
+        },
+        "mijn-pakket": {
+          "name": {
+            "en": "My Package",
+            "nl": "Mijn Pakket"
+          },
+          "height": 360,
+          "api": {
+            "getData": {
+              "method": "GET",
+              "path": "/"
+            },
+            "sync": {
+              "method": "POST",
+              "path": "/sync"
+            }
+          },
+          "devices": {
+            "type": "app",
+            "singular": true,
+            "filter": {
+              "capabilities": "postnl_package_count"
+            }
+          },
+          "id": "mijn-pakket",
+          "settings": [],
+          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/widgets/mijn-pakket/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.postnl/20/6d0a4f86-57ea-4864-acd5-7cb508815e38/widgets/mijn-pakket/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 159674,
+      "state": "live",
+      "stateChangedAt": "2026-09-21T12:21:42.667Z",
+      "bugs": "https://community.homey.app/t/app-pro-postnl-for-homey/159674",
+      "homepage": "https://lrvdlinden.app",
+      "support": "https://community.homey.app/t/app-pro-postnl-for-homey/159674",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Moved PostNL authentication from App Settings to per-device pairing and repair. Multiple PostNL accounts are now supported, with separate credentials, snapshots, widgets, capabilities, Flow cards and tokens per device. Added a one-time localized Timeline notification when an account needs to be reconnected.",
+        "nl": "PostNL-authenticatie verplaatst van App-instellingen naar pairing en reparatie per device. Meerdere PostNL-accounts worden nu ondersteund, met per device eigen credentials, snapshot, widgets, capabilities, Flow-kaarten en tokens. Daarnaast wordt één gelokaliseerde Timeline-melding geplaatst wanneer een account opnieuw gekoppeld moet worden."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": {
+        "en": [
+          "postnl",
+          "post",
+          "mail",
+          "mail delivery",
+          "letters",
+          "parcels",
+          "packages",
+          "package tracking",
+          "delivery",
+          "shipment",
+          "tracking",
+          "postal service",
+          "my post",
+          "my package",
+          "automation"
+        ],
+        "nl": [
+          "postnl",
+          "post",
+          "brieven",
+          "poststukken",
+          "pakketten",
+          "pakket",
+          "pakket volgen",
+          "bezorging",
+          "zending",
+          "tracking",
+          "postbezorging",
+          "mijn post",
+          "mijn pakket",
+          "automatisering",
+          "bezorgen"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.1.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "649eefe59a54fe7531821578",
+      "type": "user",
+      "userId": "5d4da77a2c836a50f6936070",
+      "name": "Léon van der Linden",
+      "verified": false
+    },
+    "communityTopicId": 159674
   }
 ]

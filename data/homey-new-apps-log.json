@@ -20146,5 +20146,41 @@
     "updatedAt": "2026-09-21T09:05:12.546Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-21T09:05:12.546Z"
+  },
+  {
+    "appId": "com.trmnl.companion",
+    "name": "TRMNL",
+    "developerName": "TRMNL",
+    "developerId": "6a8eb3b23bdd81c33fa5674e",
+    "version": "0.4.6",
+    "sourceRepository": "https://github.com/usetrmnl/trmnl-homey-app",
+    "publishedAt": "2026-09-21T17:18:35.168Z",
+    "updatedAt": "2026-09-21T17:18:35.168Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-21T17:18:35.168Z"
+  },
+  {
+    "appId": "com.ady.zonetracks",
+    "name": "ZoneTracks",
+    "developerName": "Adrian Rockall",
+    "developerId": "6582174b559f0bfcc1d7bce5",
+    "version": "1.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-21T17:18:36.046Z",
+    "updatedAt": "2026-09-21T17:18:36.046Z",
+    "communityTopicId": 158877,
+    "discoveredAt": "2026-09-21T17:18:35.168Z"
+  },
+  {
+    "appId": "nl.lrvdlinden.postnl",
+    "name": "PostNL",
+    "developerName": "Léon van der Linden",
+    "developerId": "649eefe59a54fe7531821578",
+    "version": "1.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-21T17:18:36.046Z",
+    "updatedAt": "2026-09-21T17:18:36.046Z",
+    "communityTopicId": 159674,
+    "discoveredAt": "2026-09-21T17:18:35.168Z"
   }
 ]
