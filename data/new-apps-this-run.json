@@ -1,149 +1,456 @@
 [
   {
-    "id": "net.weejewel.sshclient",
+    "id": "com.rapinology.nubes",
     "rating": null,
     "liveBuild": {
       "id": 1,
       "name": {
-        "en": "SSH Client"
+        "en": "Nubes",
+        "fr": "Nubes",
+        "de": "Nubes",
+        "es": "Nubes",
+        "it": "Nubes",
+        "nl": "Nubes"
       },
       "version": "1.0.0",
       "readme": {
-        "en": "Connect & execute commands on a remote SSH Server.\n\nAuthentication is done exclusively with a public key that resides on Homey itself.\n\nFlow Cards can execute commands, and return stdout, stderr, exit code and exit signal as tags."
+        "en": "A dashboard widget that loops through the latest Meteosat pictures, so you can watch a front cross the continent instead of reading a number. The imagery comes from EUMETView, the public map service run by EUMETSAT, and covers Europe from the Atlantic to the Caspian.\n",
+        "de": "Ein Dashboard-Widget, das die neuesten Meteosat-Bilder als Schleife abspielt, damit Sie eine Front über den Kontinent ziehen sehen, statt eine Zahl zu lesen. Die Bilder stammen von EUMETView, dem öffentlichen Kartendienst von EUMETSAT, und zeigen Europa vom Atlantik bis zum Kaspischen Meer.\n",
+        "es": "Un widget de panel que reproduce en bucle las últimas imágenes Meteosat, para ver un frente cruzar el continente en lugar de leer una cifra. Las imágenes proceden de EUMETView, el servicio público de mapas de EUMETSAT, y cubren Europa del Atlántico al Caspio.\n",
+        "fr": "Un widget de tableau de bord qui fait défiler les dernières images Meteosat, pour voir un front traverser le continent au lieu de lire un chiffre. Les images viennent d'EUMETView, le service de cartes public d'EUMETSAT, et couvrent l'Europe de l'Atlantique à la Caspienne.\n",
+        "it": "Un widget da cruscotto che scorre in ciclo le ultime immagini Meteosat, per vedere un fronte attraversare il continente invece di leggere un numero. Le immagini provengono da EUMETView, il servizio cartografico pubblico di EUMETSAT, e coprono l'Europa dall'Atlantico al Caspio.\n",
+        "nl": "Een dashboardwidget die de nieuwste Meteosat-beelden als lus afspeelt, zodat u een front over het continent ziet trekken in plaats van een getal te lezen. De beelden komen van EUMETView, de openbare kaartendienst van EUMETSAT, en tonen Europa van de Atlantische Oceaan tot de Kaspische Zee.\n"
       },
       "description": {
-        "en": "Connect & execute commands on a remote SSH Server."
+        "en": "See the sky above Europe as the satellites see it.",
+        "fr": "Voyez le ciel d'Europe comme le voient les satellites.",
+        "de": "Sehen Sie den Himmel uber Europa so, wie die Satelliten ihn sehen.",
+        "es": "Vea el cielo de Europa como lo ven los satelites.",
+        "it": "Guarda il cielo d'Europa come lo vedono i satelliti.",
+        "nl": "Zie de lucht boven Europa zoals de satellieten hem zien."
       },
-      "category": "tools",
-      "brandColor": "#000000",
-      "icon": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "ssh-server",
-          "name": {
-            "en": "SSH Server"
-          },
-          "class": "other",
-          "capabilities": [],
-          "imageSmall": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/drivers/ssh-server/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/drivers/ssh-server/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/net.weejewel.sshclient/1/5492206a-51f2-41fa-a390-c73a9524ba46/drivers/ssh-server/assets/icon.svg"
-        }
-      ],
+      "category": "climate",
+      "brandColor": "#1B3A5C",
+      "icon": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/assets/images/large.jpg",
+      "drivers": null,
       "flow": {
         "triggers": null,
         "conditions": null,
-        "actions": [
-          {
-            "id": "execute_command",
-            "title": {
-              "en": "Execute Command"
-            },
-            "titleFormatted": {
-              "en": "Execute [[command]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=ssh-server"
-              },
-              {
-                "name": "command",
-                "type": "text",
-                "title": {
-                  "en": "Command"
-                },
-                "placeholder": {
-                  "en": "ls -la /"
-                }
-              }
-            ]
-          },
-          {
-            "id": "execute_command_and_return",
-            "title": {
-              "en": "Execute Command and return Tags"
-            },
-            "titleFormatted": {
-              "en": "Execute [[command]] and return Tags"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=ssh-server"
-              },
-              {
-                "name": "command",
-                "type": "text",
-                "title": {
-                  "en": "Command"
-                },
-                "placeholder": {
-                  "en": "ls -la /"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "title": {
-                  "en": "stdout"
-                },
-                "name": "stdout",
-                "type": "string"
-              },
-              {
-                "title": {
-                  "en": "stderr"
-                },
-                "name": "stderr",
-                "type": "string"
-              },
-              {
-                "title": {
-                  "en": "Code"
-                },
-                "name": "code",
-                "type": "number"
-              },
-              {
-                "title": {
-                  "en": "Signal"
-                },
-                "name": "signal",
-                "type": "string"
-              }
-            ],
-            "advanced": true
-          }
-        ]
+        "actions": null
       },
-      "widgets": null,
+      "widgets": {
+        "ciel": {
+          "name": {
+            "en": "Europe from space",
+            "fr": "L'Europe vue du ciel",
+            "de": "Europa aus dem All",
+            "es": "Europa vista desde el espacio",
+            "it": "L'Europa vista dallo spazio",
+            "nl": "Europa vanuit de ruimte"
+          },
+          "height": "99%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "zone",
+              "type": "dropdown",
+              "value": "europe",
+              "title": {
+                "en": "Area",
+                "fr": "Zone",
+                "de": "Gebiet",
+                "es": "Zona",
+                "it": "Area",
+                "nl": "Gebied"
+              },
+              "hint": {
+                "en": "Which part of Europe to show.",
+                "fr": "La partie de l'Europe a afficher.",
+                "de": "Welcher Teil Europas gezeigt wird.",
+                "es": "Que parte de Europa mostrar.",
+                "it": "Quale parte d'Europa mostrare.",
+                "nl": "Welk deel van Europa wordt getoond."
+              },
+              "values": [
+                {
+                  "id": "europe",
+                  "title": {
+                    "en": "All of Europe",
+                    "fr": "Europe entiere",
+                    "de": "Ganz Europa",
+                    "es": "Toda Europa",
+                    "it": "Tutta l Europa",
+                    "nl": "Heel Europa"
+                  }
+                },
+                {
+                  "id": "ouest",
+                  "title": {
+                    "en": "Western Europe",
+                    "fr": "Europe de l Ouest",
+                    "de": "Westeuropa",
+                    "es": "Europa occidental",
+                    "it": "Europa occidentale",
+                    "nl": "West-Europa"
+                  }
+                },
+                {
+                  "id": "france",
+                  "title": {
+                    "en": "France",
+                    "fr": "France",
+                    "de": "Frankreich",
+                    "es": "Francia",
+                    "it": "Francia",
+                    "nl": "Frankrijk"
+                  }
+                },
+                {
+                  "id": "britanniques",
+                  "title": {
+                    "en": "British Isles",
+                    "fr": "Iles Britanniques",
+                    "de": "Britische Inseln",
+                    "es": "Islas britanicas",
+                    "it": "Isole britanniche",
+                    "nl": "Britse Eilanden"
+                  }
+                },
+                {
+                  "id": "iberie",
+                  "title": {
+                    "en": "Iberian Peninsula",
+                    "fr": "Peninsule Iberique",
+                    "de": "Iberische Halbinsel",
+                    "es": "Peninsula iberica",
+                    "it": "Penisola iberica",
+                    "nl": "Iberisch Schiereiland"
+                  }
+                },
+                {
+                  "id": "centrale",
+                  "title": {
+                    "en": "Central Europe",
+                    "fr": "Europe centrale",
+                    "de": "Mitteleuropa",
+                    "es": "Europa central",
+                    "it": "Europa centrale",
+                    "nl": "Midden-Europa"
+                  }
+                },
+                {
+                  "id": "italieBalkans",
+                  "title": {
+                    "en": "Italy and the Balkans",
+                    "fr": "Italie et Balkans",
+                    "de": "Italien und Balkan",
+                    "es": "Italia y los Balcanes",
+                    "it": "Italia e Balcani",
+                    "nl": "Italie en de Balkan"
+                  }
+                },
+                {
+                  "id": "scandinavie",
+                  "title": {
+                    "en": "Scandinavia",
+                    "fr": "Scandinavie",
+                    "de": "Skandinavien",
+                    "es": "Escandinavia",
+                    "it": "Scandinavia",
+                    "nl": "Scandinavie"
+                  }
+                },
+                {
+                  "id": "autour",
+                  "title": {
+                    "en": "Around my Homey",
+                    "fr": "Autour de mon Homey",
+                    "de": "Rund um meinen Homey",
+                    "es": "Alrededor de mi Homey",
+                    "it": "Intorno al mio Homey",
+                    "nl": "Rondom mijn Homey"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "couche",
+              "type": "dropdown",
+              "value": "geocolour",
+              "title": {
+                "en": "Picture type",
+                "fr": "Type d'image",
+                "de": "Bildart",
+                "es": "Tipo de imagen",
+                "it": "Tipo di immagine",
+                "nl": "Soort beeld"
+              },
+              "hint": {
+                "en": "Day and night colour is readable at any hour. Infrared shows clouds even in the dark. True colour goes black at night.",
+                "fr": "Les couleurs jour et nuit sont lisibles a toute heure. L'infrarouge montre les nuages meme dans le noir. Les couleurs reelles laissent une image noire la nuit.",
+                "de": "Farben bei Tag und Nacht sind zu jeder Stunde lesbar. Infrarot zeigt Wolken auch im Dunkeln. Echte Farben bleiben nachts schwarz.",
+                "es": "El color de dia y de noche se lee a cualquier hora. El infrarrojo muestra las nubes incluso a oscuras. El color real queda negro de noche.",
+                "it": "I colori giorno e notte si leggono a qualsiasi ora. L'infrarosso mostra le nuvole anche al buio. I colori reali restano neri di notte.",
+                "nl": "Kleur bij dag en nacht is op elk uur leesbaar. Infrarood toont wolken ook in het donker. Echte kleuren blijven 's nachts zwart."
+              },
+              "values": [
+                {
+                  "id": "geocolour",
+                  "title": {
+                    "en": "Day and night colour",
+                    "fr": "Couleurs jour et nuit",
+                    "de": "Farben bei Tag und Nacht",
+                    "es": "Color de dia y de noche",
+                    "it": "Colori giorno e notte",
+                    "nl": "Kleur bij dag en nacht"
+                  }
+                },
+                {
+                  "id": "infrarouge",
+                  "title": {
+                    "en": "Infrared",
+                    "fr": "Infrarouge",
+                    "de": "Infrarot",
+                    "es": "Infrarrojo",
+                    "it": "Infrarosso",
+                    "nl": "Infrarood"
+                  }
+                },
+                {
+                  "id": "couleursReelles",
+                  "title": {
+                    "en": "True colour",
+                    "fr": "Couleurs reelles",
+                    "de": "Echte Farben",
+                    "es": "Color real",
+                    "it": "Colori reali",
+                    "nl": "Echte kleuren"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "animation",
+              "type": "dropdown",
+              "value": "troisHeures",
+              "title": {
+                "en": "Animation",
+                "fr": "Animation",
+                "de": "Animation",
+                "es": "Animacion",
+                "it": "Animazione",
+                "nl": "Animatie"
+              },
+              "hint": {
+                "en": "Loop through the most recent pictures to see the clouds move. Long periods use a wider time step, so the loop stays about twenty pictures.",
+                "fr": "Faire defiler les dernieres images pour voir les nuages bouger. Les longues periodes espacent le pas, pour que la boucle reste d'une vingtaine d'images.",
+                "de": "Die neuesten Bilder als Schleife abspielen, um die Wolken ziehen zu sehen. Lange Zeitraume nutzen einen groberen Schritt, damit die Schleife bei etwa zwanzig Bildern bleibt.",
+                "es": "Reproducir en bucle las ultimas imagenes para ver moverse las nubes. Los periodos largos usan un paso mas amplio, para que el bucle se quede en unas veinte imagenes.",
+                "it": "Scorrere in ciclo le ultime immagini per vedere muoversi le nuvole. I periodi lunghi usano un passo piu ampio, cosi il ciclo resta di una ventina di immagini.",
+                "nl": "De nieuwste beelden als lus afspelen om de wolken te zien trekken. Lange periodes gebruiken een grotere stap, zodat de lus rond twintig beelden blijft."
+              },
+              "values": [
+                {
+                  "id": "aucune",
+                  "title": {
+                    "en": "Off",
+                    "fr": "Desactivee",
+                    "de": "Aus",
+                    "es": "Desactivada",
+                    "it": "Disattivata",
+                    "nl": "Uit"
+                  }
+                },
+                {
+                  "id": "uneHeure",
+                  "title": {
+                    "en": "Last hour",
+                    "fr": "Une heure",
+                    "de": "Letzte Stunde",
+                    "es": "Ultima hora",
+                    "it": "Ultima ora",
+                    "nl": "Afgelopen uur"
+                  }
+                },
+                {
+                  "id": "troisHeures",
+                  "title": {
+                    "en": "Last 3 hours",
+                    "fr": "Trois heures",
+                    "de": "Letzte 3 Stunden",
+                    "es": "Ultimas 3 horas",
+                    "it": "Ultime 3 ore",
+                    "nl": "Afgelopen 3 uur"
+                  }
+                },
+                {
+                  "id": "sixHeures",
+                  "title": {
+                    "en": "Last 6 hours",
+                    "fr": "Six heures",
+                    "de": "Letzte 6 Stunden",
+                    "es": "Ultimas 6 horas",
+                    "it": "Ultime 6 ore",
+                    "nl": "Afgelopen 6 uur"
+                  }
+                },
+                {
+                  "id": "douzeHeures",
+                  "title": {
+                    "en": "Last 12 hours",
+                    "fr": "Douze heures",
+                    "de": "Letzte 12 Stunden",
+                    "es": "Ultimas 12 horas",
+                    "it": "Ultime 12 ore",
+                    "nl": "Afgelopen 12 uur"
+                  }
+                },
+                {
+                  "id": "vingtQuatreHeures",
+                  "title": {
+                    "en": "Last 24 hours",
+                    "fr": "Vingt-quatre heures",
+                    "de": "Letzte 24 Stunden",
+                    "es": "Ultimas 24 horas",
+                    "it": "Ultime 24 ore",
+                    "nl": "Afgelopen 24 uur"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "traits",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Coastlines and borders",
+                "fr": "Traits de cote et frontieres",
+                "de": "Kusten und Grenzen",
+                "es": "Costas y fronteras",
+                "it": "Coste e confini",
+                "nl": "Kustlijnen en grenzen"
+              },
+              "hint": {
+                "en": "Draw coastlines and country borders over the picture.",
+                "fr": "Tracer les cotes et les frontieres par-dessus l'image.",
+                "de": "Kustenlinien und Landesgrenzen uber das Bild zeichnen.",
+                "es": "Dibujar las costas y las fronteras sobre la imagen.",
+                "it": "Tracciare coste e confini sopra l'immagine.",
+                "nl": "Kustlijnen en landsgrenzen over het beeld tekenen."
+              }
+            },
+            {
+              "id": "repere",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Mark my Homey",
+                "fr": "Repere de mon Homey",
+                "de": "Meinen Homey markieren",
+                "es": "Marcar mi Homey",
+                "it": "Segna il mio Homey",
+                "nl": "Mijn Homey markeren"
+              },
+              "hint": {
+                "en": "Show a dot where your Homey is. Your position stays on your Homey.",
+                "fr": "Afficher un point a l'emplacement de votre Homey. Votre position ne quitte pas la box.",
+                "de": "Einen Punkt am Standort Ihres Homey anzeigen. Ihr Standort verlasst den Homey nicht.",
+                "es": "Mostrar un punto donde esta su Homey. Su posicion no sale del Homey.",
+                "it": "Mostrare un punto dove si trova il tuo Homey. La tua posizione non lascia l'Homey.",
+                "nl": "Een punt tonen waar uw Homey staat. Uw locatie verlaat de Homey niet."
+              }
+            }
+          ],
+          "api": {
+            "getVue": {
+              "method": "GET",
+              "path": "/vue"
+            },
+            "getSecours": {
+              "method": "GET",
+              "path": "/secours"
+            }
+          },
+          "id": "ciel",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/widgets/ciel/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.nubes/1/5838f2be-d2bb-4ef6-ba54-685c8ce706a7/widgets/ciel/preview-light.png"
+        }
+      },
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-09-20T11:33:11.043Z",
+      "stateChangedAt": "2026-09-21T08:39:56.721Z",
       "bugs": null,
-      "homepage": null,
-      "support": "mailto:emile@athom.nl",
+      "homepage": "https://www.rapinology.com",
+      "support": "mailto:info@rapinology.com",
       "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [],
-      "changelog": {
-        "en": "First version!"
+      "contributors": {
+        "developers": [
+          {
+            "name": "Henri Dominique Rapin"
+          }
+        ],
+        "translators": []
       },
-      "compatibility": ">=12.4.0",
-      "tags": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "First release.",
+        "fr": "Première version.",
+        "de": "Erste Version.",
+        "es": "Primera versión.",
+        "it": "Prima versione.",
+        "nl": "Eerste versie."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": {
+        "en": [
+          "satellite",
+          "clouds",
+          "sky",
+          "europe",
+          "meteosat"
+        ],
+        "fr": [
+          "satellite",
+          "nuages",
+          "ciel",
+          "europe",
+          "meteosat"
+        ],
+        "de": [
+          "satellit",
+          "wolken",
+          "himmel",
+          "europa",
+          "meteosat"
+        ],
+        "es": [
+          "satelite",
+          "nubes",
+          "cielo",
+          "europa",
+          "meteosat"
+        ],
+        "it": [
+          "satellite",
+          "nuvole",
+          "cielo",
+          "europa",
+          "meteosat"
+        ],
+        "nl": [
+          "satelliet",
+          "wolken",
+          "lucht",
+          "europa",
+          "meteosat"
+        ]
+      },
       "platforms": [
         "local"
       ],
@@ -158,136 +465,11 @@
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "5dcaba391c90c866f9364985",
+      "id": "6a96972b30ac038fba71a2f2",
       "type": "user",
-      "userId": "5531600e09adaac11cee4c5f",
-      "name": "Emile Nijssen",
-      "verified": true
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "de.ozerov.fully",
-    "rating": null,
-    "liveBuild": {
-      "id": 2,
-      "name": {
-        "en": "Fully Kiosk Browser"
-      },
-      "version": "1.0.1",
-      "readme": {
-        "en": "Control your Fully Kiosk Browser running on Android.\n\nTurn the display on, off, or launch a custom webpage from a Flow.\n\nBefore adding a new device, please enable Remote Administration, and configure a Remote Admin Password first in the Fully Kiosk Browser Web UI first."
-      },
-      "description": {
-        "en": "Control your Fully Kiosk Browser running on Android"
-      },
-      "category": "tools",
-      "brandColor": "#2A01E9",
-      "icon": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "fully-kiosk-browser",
-          "name": {
-            "en": "Fully Kiosk Browser"
-          },
-          "class": "other",
-          "capabilities": [
-            "onoff"
-          ],
-          "imageSmall": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/drivers/fully-kiosk-browser/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/drivers/fully-kiosk-browser/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/de.ozerov.fully/2/22fd7f43-d7e0-49c8-ade3-8ce4f0655526/drivers/fully-kiosk-browser/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": [
-          {
-            "id": "cmd_loadStartUrl",
-            "title": {
-              "en": "Load Start URL"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=fully-kiosk-browser"
-              }
-            ]
-          },
-          {
-            "id": "cmd_loadUrl",
-            "title": {
-              "en": "Load URL"
-            },
-            "titleFormatted": {
-              "en": "Load [[url]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=fully-kiosk-browser"
-              },
-              {
-                "name": "url",
-                "type": "text",
-                "title": {
-                  "en": "URL"
-                },
-                "placeholder": {
-                  "en": "Enter URL"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": null,
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-09-20T11:37:32.696Z",
-      "bugs": null,
-      "homepage": null,
-      "support": "mailto:emile@athom.nl",
-      "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [],
-      "changelog": {
-        "en": "Updated README."
-      },
-      "compatibility": ">=12.4.0",
-      "tags": null,
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "1.0.1",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "5dcaba391c90c866f9364985",
-      "type": "user",
-      "userId": "5531600e09adaac11cee4c5f",
-      "name": "Emile Nijssen",
-      "verified": true
+      "userId": "66e2d2b3f0e7b530640ef902",
+      "name": "Henri Dominique Rapin",
+      "verified": false
     },
     "communityTopicId": null
   }

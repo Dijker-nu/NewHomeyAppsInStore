@@ -20134,5 +20134,17 @@
     "updatedAt": "2026-09-20T15:01:00.031Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-20T15:00:59.327Z"
+  },
+  {
+    "appId": "com.rapinology.nubes",
+    "name": "Nubes",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-21T09:05:12.546Z",
+    "updatedAt": "2026-09-21T09:05:12.546Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-21T09:05:12.546Z"
   }
 ]
