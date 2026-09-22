@@ -20182,5 +20182,17 @@
     "updatedAt": "2026-09-21T17:18:36.046Z",
     "communityTopicId": 159674,
     "discoveredAt": "2026-09-21T17:18:35.168Z"
+  },
+  {
+    "appId": "com.basmilius.jev",
+    "name": "Jev",
+    "developerName": "Bas Milius",
+    "developerId": "67feb54bad3776de40f10636",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/basmilius/homey-jev",
+    "publishedAt": "2026-09-22T08:51:55.452Z",
+    "updatedAt": "2026-09-22T08:51:55.452Z",
+    "communityTopicId": 159835,
+    "discoveredAt": "2026-09-22T08:51:55.452Z"
   }
 ]

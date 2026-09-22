@@ -1,1 +1,1322 @@
-[]
+[
+  {
+    "id": "com.basmilius.jev",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "Jev",
+        "nl": "Jev",
+        "de": "Jev",
+        "fr": "Jev",
+        "es": "Jev",
+        "da": "Jev",
+        "no": "Jev",
+        "sv": "Jev",
+        "it": "Jev",
+        "pl": "Jev",
+        "ru": "Jev",
+        "ko": "Jev",
+        "ar": "Jev"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Jev helps your Homey Flows make decisions based on what is happening at home. Choose a suitable lighting scene, decide whether a notification can wait, or assess how much extra light is needed.\n\nYou describe the situation yourself with text and Flow tags. Jev uses only the context you provide. The app does not read your devices or build a snapshot of your home.\n\nFour action cards:\n- Ask a yes/no question and receive a boolean answer and the probability of yes.\n- Choose from a list of 2 to 255 answers, one per line.\n- Score a situation against three levels you describe. Scores range from 0 to 2, including fractions.\n- Use the advanced JSON card for structured state and questions.\n\nUse the result tags in Advanced Flow to determine what happens next. Simple cards have an adjustable acceptance threshold. When the answer is uncertain, they follow the error path, where you can connect a fallback action.\n\nRequirements:\n- A local Homey running version 12.4 or newer.\n- A TypeSafe account with an API key and credit.\n- Internet access. The context and questions you supply are sent to TypeSafe for evaluation.\n- Advanced Flow to connect result tags to other cards.\n\nAdd your API key in the app settings. Configure questions and answers directly on your Flow cards.\n",
+        "ar": "يساعد Jev تدفقات Homey على اتخاذ قرارات تناسب الوضع في المنزل. اختر مشهد إضاءة مناسبًا، أو حدد ما إذا كان الإشعار يستطيع الانتظار، أو قيّم الحاجة إلى إضاءة إضافية.\n\nتصف الوضع بنفسك باستخدام النص ووسوم Flow. يستخدم Jev السياق الذي تقدمه فقط. لا يقرأ التطبيق أجهزتك ولا يجمع صورة شاملة عن منزلك.\n\nأربع بطاقات إجراءات:\n- اطرح سؤالًا بنعم أو لا واحصل على إجابة منطقية واحتمال نعم.\n- اختر من قائمة تضم من 2 إلى 255 إجابة، واحدة في كل سطر.\n- قيّم الوضع وفق ثلاثة مستويات تصفها بنفسك. تتراوح الدرجة من 0 إلى 2 وتشمل الكسور.\n- استخدم بطاقة JSON المتقدمة للحالات والأسئلة المنظمة.\n\nاستخدم وسوم النتائج في Advanced Flow لتحديد الإجراءات التالية. تحتوي البطاقات البسيطة على حد قابل للضبط. عند عدم اليقين، تتبع مسار الخطأ الذي يمكنك توصيل إجراء بديل به.\n\nالمتطلبات:\n- جهاز Homey محلي بالإصدار 12.4 أو أحدث.\n- حساب TypeSafe مع مفتاح API ورصيد.\n- اتصال بالإنترنت. يُرسل السياق والأسئلة التي تقدمها إلى TypeSafe للتقييم.\n- Advanced Flow لربط وسوم النتائج ببطاقات أخرى.\n\nأضف مفتاح API في إعدادات التطبيق. اضبط الأسئلة والإجابات مباشرة في بطاقات Flow.\n",
+        "da": "Jev hjælper dine Homey Flows med at træffe beslutninger ud fra situationen derhjemme. Vælg en passende lysscene, afgør om en besked kan vente, eller vurder behovet for ekstra lys.\n\nDu beskriver selv situationen med tekst og Flow-tags. Jev bruger kun den kontekst, du angiver. Appen læser ikke dine enheder og laver ikke en oversigt over dit hjem.\n\nFire handlingskort:\n- Stil et ja/nej-spørgsmål og få et boolesk svar samt sandsynligheden for ja.\n- Vælg fra en liste med 2 til 255 svar, ét pr. linje.\n- Vurder en situation ud fra tre niveauer, som du selv beskriver. Scoren går fra 0 til 2 med decimaler.\n- Brug det avancerede JSON-kort til strukturerede tilstande og spørgsmål.\n\nBrug resultaternes tags i Advanced Flow til at bestemme de næste handlinger. De enkle kort har en justerbar tærskel. Ved usikkerhed følger de fejlstien, hvor du kan tilslutte en alternativ handling.\n\nKrav:\n- En lokal Homey med version 12.4 eller nyere.\n- En TypeSafe-konto med API-nøgle og kredit.\n- Internetadgang. Den angivne kontekst og spørgsmålene sendes til TypeSafe til vurdering.\n- Advanced Flow til at forbinde resultattags med andre kort.\n\nTilføj din API-nøgle i appens indstillinger. Spørgsmål og svar opsættes direkte på Flow-kortene.\n",
+        "de": "Jev hilft deinen Homey Flows, Entscheidungen anhand der Situation zu Hause zu treffen. Wähle eine passende Lichtszene, entscheide, ob eine Nachricht warten kann, oder bewerte, wie viel zusätzliches Licht benötigt wird.\n\nDu beschreibst die Situation selbst mit Text und Flow-Tags. Jev verwendet nur den Kontext, den du angibst. Die App liest keine Geräte aus und erstellt keine Übersicht deines Zuhauses.\n\nVier Aktionskarten:\n- Stelle eine Ja/Nein-Frage und erhalte eine boolesche Antwort samt Wahrscheinlichkeit für Ja.\n- Wähle aus einer Liste mit 2 bis 255 Antworten, eine pro Zeile.\n- Bewerte eine Situation anhand von drei selbst beschriebenen Stufen. Die Bewertung reicht von 0 bis 2, auch mit Nachkommastellen.\n- Nutze die erweiterte JSON-Karte für strukturierte Zustände und Fragen.\n\nVerwende die Ergebnis-Tags in Advanced Flow, um deine nächsten Aktionen zu bestimmen. Die einfachen Karten haben einen einstellbaren Schwellenwert. Bei Unsicherheit wird der Fehlerpfad verwendet, an den du eine Alternative anschließen kannst.\n\nVoraussetzungen:\n- Ein lokaler Homey mit Version 12.4 oder neuer.\n- Ein TypeSafe-Konto mit API-Schlüssel und Guthaben.\n- Internetzugang. Der von dir angegebene Kontext und die Fragen werden zur Auswertung an TypeSafe gesendet.\n- Advanced Flow, um Ergebnis-Tags mit weiteren Karten zu verknüpfen.\n\nTrage deinen API-Schlüssel in den App-Einstellungen ein. Die Fragen und Antworten konfigurierst du direkt auf den Flow-Karten.\n",
+        "es": "Jev ayuda a tus Homey Flows a tomar decisiones según la situación en casa. Elige una escena de iluminación, decide si una notificación puede esperar o evalúa cuánta luz adicional hace falta.\n\nTú describes la situación con texto y etiquetas Flow. Jev solo usa el contexto que proporcionas. La app no consulta tus dispositivos ni crea un inventario de tu hogar.\n\nCuatro tarjetas de acción:\n- Haz una pregunta de sí/no y recibe una respuesta booleana y la probabilidad de sí.\n- Elige de una lista de 2 a 255 respuestas, una por línea.\n- Evalúa una situación con tres niveles que tú describes. La puntuación va de 0 a 2, con decimales.\n- Usa la tarjeta JSON avanzada para estados y preguntas estructurados.\n\nUsa las etiquetas de resultado en Advanced Flow para determinar las siguientes acciones. Las tarjetas simples tienen un umbral ajustable. Ante la incertidumbre, siguen la ruta de error, donde puedes conectar una alternativa.\n\nRequisitos:\n- Un Homey local con la versión 12.4 o posterior.\n- Una cuenta de TypeSafe con clave API y crédito.\n- Acceso a Internet. El contexto y las preguntas que proporcionas se envían a TypeSafe para evaluarlos.\n- Advanced Flow para conectar etiquetas de resultado con otras tarjetas.\n\nAñade tu clave API en los ajustes de la app. Configura las preguntas y las respuestas directamente en las tarjetas Flow.\n",
+        "fr": "Jev aide vos Homey Flows à prendre des décisions selon la situation à la maison. Choisissez une scène lumineuse adaptée, décidez si une notification peut attendre ou évaluez le besoin d’éclairage supplémentaire.\n\nVous décrivez vous-même la situation avec du texte et des tags Flow. Jev utilise uniquement le contexte fourni. L’app ne lit pas vos appareils et ne crée pas d’inventaire de votre maison.\n\nQuatre cartes d’action :\n- Posez une question oui/non et obtenez une réponse booléenne avec la probabilité de oui.\n- Choisissez dans une liste de 2 à 255 réponses, une par ligne.\n- Évaluez une situation selon trois niveaux que vous décrivez. Le score va de 0 à 2, décimales comprises.\n- Utilisez la carte JSON avancée pour des états et des questions structurés.\n\nUtilisez les tags de résultat dans Advanced Flow pour déterminer les actions suivantes. Les cartes simples ont un seuil réglable. En cas d’incertitude, elles empruntent le chemin d’erreur, auquel vous pouvez connecter une solution de repli.\n\nPrérequis :\n- Un Homey local avec la version 12.4 ou ultérieure.\n- Un compte TypeSafe avec une clé API et du crédit.\n- Un accès Internet. Le contexte et les questions fournis sont envoyés à TypeSafe pour évaluation.\n- Advanced Flow pour relier les tags de résultat à d’autres cartes.\n\nAjoutez votre clé API dans les paramètres de l’app. Configurez les questions et les réponses directement sur les cartes Flow.\n",
+        "it": "Jev aiuta i tuoi Homey Flow a prendere decisioni in base alla situazione a casa. Scegli una scena luminosa adatta, decidi se una notifica può aspettare o valuta quanta luce aggiuntiva serve.\n\nDescrivi tu la situazione con testo e tag Flow. Jev usa solo il contesto che fornisci. L’app non legge i tuoi dispositivi e non crea una panoramica della tua casa.\n\nQuattro schede di azione:\n- Poni una domanda sì/no e ricevi una risposta booleana con la probabilità di sì.\n- Scegli da un elenco di 2–255 risposte, una per riga.\n- Valuta una situazione su tre livelli descritti da te. Il punteggio va da 0 a 2, anche con decimali.\n- Usa la scheda JSON avanzata per stati e domande strutturati.\n\nUsa i tag dei risultati in Advanced Flow per determinare le azioni successive. Le schede semplici hanno una soglia regolabile. In caso di incertezza seguono il percorso di errore, dove puoi collegare un’azione alternativa.\n\nRequisiti:\n- Un Homey locale con versione 12.4 o successiva.\n- Un account TypeSafe con chiave API e credito.\n- Accesso a Internet. Il contesto e le domande forniti vengono inviati a TypeSafe per la valutazione.\n- Advanced Flow per collegare i tag dei risultati ad altre schede.\n\nAggiungi la chiave API nelle impostazioni dell’app. Configura domande e risposte direttamente nelle schede Flow.\n",
+        "ko": "Jev는 집 안 상황에 따라 Homey Flow가 결정을 내리도록 돕습니다. 어울리는 조명 장면을 고르거나, 알림을 나중에 보내도 되는지 판단하거나, 추가 조명이 얼마나 필요한지 평가할 수 있습니다.\n\n텍스트와 Flow 태그로 상황을 직접 설명합니다. Jev는 제공한 맥락만 사용합니다. 앱이 기기를 읽거나 집 전체의 상태를 수집하지 않습니다.\n\n네 가지 실행 카드:\n- 예/아니요 질문으로 불리언 답변과 예일 확률을 받습니다.\n- 한 줄에 하나씩 입력한 2–255개 답변 목록에서 선택합니다.\n- 직접 설명한 세 단계로 상황을 평가합니다. 점수는 소수를 포함해 0–2입니다.\n- 구조화된 상태와 질문에는 고급 JSON 카드를 사용합니다.\n\nAdvanced Flow에서 결과 태그로 다음 동작을 결정하세요. 기본 카드에는 조절 가능한 기준값이 있습니다. 답변이 불확실하면 오류 경로로 진행하므로 대체 동작을 연결할 수 있습니다.\n\n요구 사항:\n- 버전 12.4 이상의 로컬 Homey.\n- API 키와 크레딧이 있는 TypeSafe 계정.\n- 인터넷 연결. 제공한 맥락과 질문은 평가를 위해 TypeSafe로 전송됩니다.\n- 결과 태그를 다른 카드에 연결하려면 Advanced Flow가 필요합니다.\n\n앱 설정에 API 키를 추가하세요. 질문과 답변은 Flow 카드에서 직접 설정합니다.\n",
+        "nl": "Jev helpt je Homey Flows om beslissingen te nemen op basis van de situatie in huis. Kies een passende lichtscène, bepaal of een melding kan wachten of beoordeel hoeveel extra verlichting nodig is.\n\nJe beschrijft zelf de situatie met tekst en Flow-tags. Jev gebruikt alleen de context die jij aanlevert. De app leest geen apparaten uit en maakt geen overzicht van je huis.\n\nVier Dan-kaarten:\n- Stel een ja/nee-vraag en krijg een boolean-antwoord en de kans op ja terug.\n- Kies uit een lijst met 2 tot 255 antwoorden, één per regel.\n- Beoordeel een situatie op drie niveaus die je zelf beschrijft. De score loopt van 0 tot 2, inclusief tussenwaarden.\n- Gebruik de geavanceerde JSON-kaart voor gestructureerde state en vragen.\n\nGebruik de resultaat-tags in Advanced Flow om te bepalen wat er daarna gebeurt. De eenvoudige kaarten hebben een instelbare acceptatiegrens. Bij twijfel volgen ze het foutpad, waar je een alternatieve actie op kunt aansluiten.\n\nVereisten:\n- Een lokale Homey met versie 12.4 of nieuwer.\n- Een TypeSafe-account met API-key en tegoed.\n- Internettoegang. De context en vragen die je aanlevert worden naar TypeSafe gestuurd voor beoordeling.\n- Advanced Flow om resultaat-tags aan andere kaarten te koppelen.\n\nVoeg je API-key toe in de app-instellingen. Vragen en antwoorden stel je direct op de Flow-kaarten in.\n",
+        "no": "Jev hjelper dine Homey Flows med å ta beslutninger ut fra situasjonen hjemme. Velg en passende lysscene, avgjør om et varsel kan vente, eller vurder behovet for ekstra lys.\n\nDu beskriver selv situasjonen med tekst og Flow-tagger. Jev bruker bare konteksten du oppgir. Appen leser ikke enhetene dine og lager ingen oversikt over hjemmet ditt.\n\nFire handlingskort:\n- Still et ja/nei-spørsmål og få et boolsk svar og sannsynligheten for ja.\n- Velg fra en liste med 2 til 255 svar, ett per linje.\n- Vurder en situasjon ut fra tre nivåer du selv beskriver. Poengsummen går fra 0 til 2 med desimaler.\n- Bruk det avanserte JSON-kortet for strukturerte tilstander og spørsmål.\n\nBruk resultattaggene i Advanced Flow til å bestemme de neste handlingene. De enkle kortene har en justerbar terskel. Ved usikkerhet følger de feilbanen, der du kan koble til en alternativ handling.\n\nKrav:\n- En lokal Homey med versjon 12.4 eller nyere.\n- En TypeSafe-konto med API-nøkkel og kreditt.\n- Internettilgang. Konteksten og spørsmålene du oppgir, sendes til TypeSafe for vurdering.\n- Advanced Flow for å koble resultattagger til andre kort.\n\nLegg til API-nøkkelen i appinnstillingene. Spørsmål og svar konfigureres direkte på Flow-kortene.\n",
+        "pl": "Jev pomaga Twoim Homey Flow podejmować decyzje na podstawie sytuacji w domu. Wybierz odpowiednią scenę oświetlenia, zdecyduj, czy powiadomienie może poczekać, lub oceń potrzebę dodatkowego światła.\n\nSamodzielnie opisujesz sytuację tekstem i znacznikami Flow. Jev korzysta wyłącznie z podanego kontekstu. Aplikacja nie odczytuje urządzeń ani nie tworzy obrazu całego domu.\n\nCztery karty akcji:\n- Zadaj pytanie tak/nie i otrzymaj odpowiedź logiczną oraz prawdopodobieństwo odpowiedzi tak.\n- Wybierz z listy od 2 do 255 odpowiedzi, po jednej w wierszu.\n- Oceń sytuację na trzech samodzielnie opisanych poziomach. Ocena mieści się w zakresie od 0 do 2, również z wartościami ułamkowymi.\n- Użyj zaawansowanej karty JSON do uporządkowanych stanów i pytań.\n\nUżywaj znaczników wyników w Advanced Flow, aby określać kolejne akcje. Proste karty mają regulowany próg. Przy niepewności wybierają ścieżkę błędu, do której możesz podłączyć alternatywną akcję.\n\nWymagania:\n- Lokalny Homey z wersją 12.4 lub nowszą.\n- Konto TypeSafe z kluczem API i środkami.\n- Dostęp do Internetu. Podany kontekst i pytania są wysyłane do TypeSafe w celu oceny.\n- Advanced Flow do łączenia znaczników wyników z innymi kartami.\n\nDodaj klucz API w ustawieniach aplikacji. Pytania i odpowiedzi konfigurujesz bezpośrednio na kartach Flow.\n",
+        "ru": "Jev помогает вашим Homey Flow принимать решения с учётом ситуации дома. Выберите подходящую световую сцену, решите, может ли уведомление подождать, или оцените потребность в дополнительном свете.\n\nВы сами описываете ситуацию текстом и тегами Flow. Jev использует только указанный контекст. Приложение не считывает устройства и не составляет обзор вашего дома.\n\nЧетыре карточки действий:\n- Задайте вопрос да/нет и получите логический ответ и вероятность ответа да.\n- Выберите из списка от 2 до 255 ответов, по одному в строке.\n- Оцените ситуацию по трём уровням, которые вы описываете сами. Оценка от 0 до 2 может быть дробной.\n- Используйте расширенную карточку JSON для структурированных состояний и вопросов.\n\nИспользуйте теги результатов в Advanced Flow для выбора следующих действий. У простых карточек настраивается порог принятия ответа. При неуверенности выполняется ветка ошибки, к которой можно подключить альтернативное действие.\n\nТребования:\n- Локальный Homey версии 12.4 или новее.\n- Учётная запись TypeSafe с API-ключом и средствами на балансе.\n- Доступ к Интернету. Указанные контекст и вопросы отправляются в TypeSafe для оценки.\n- Advanced Flow для связи тегов результатов с другими карточками.\n\nДобавьте API-ключ в настройках приложения. Вопросы и ответы настраиваются прямо в карточках Flow.\n",
+        "sv": "Jev hjälper dina Homey Flows att fatta beslut utifrån situationen hemma. Välj en passande ljusscen, avgör om ett meddelande kan vänta eller bedöm behovet av extra ljus.\n\nDu beskriver själv situationen med text och Flow-taggar. Jev använder bara den kontext du anger. Appen läser inte dina enheter och skapar ingen översikt över ditt hem.\n\nFyra åtgärdskort:\n- Ställ en ja/nej-fråga och få ett booleskt svar samt sannolikheten för ja.\n- Välj från en lista med 2 till 255 svar, ett per rad.\n- Bedöm en situation utifrån tre nivåer som du själv beskriver. Poängen går från 0 till 2 med decimaler.\n- Använd det avancerade JSON-kortet för strukturerade tillstånd och frågor.\n\nAnvänd resultattaggarna i Advanced Flow för att bestämma nästa åtgärder. De enkla korten har en justerbar tröskel. Vid osäkerhet följer de felvägen, där du kan koppla in en alternativ åtgärd.\n\nKrav:\n- En lokal Homey med version 12.4 eller senare.\n- Ett TypeSafe-konto med API-nyckel och kredit.\n- Internetanslutning. Den kontext och de frågor du anger skickas till TypeSafe för bedömning.\n- Advanced Flow för att koppla resultattaggar till andra kort.\n\nLägg till din API-nyckel i appinställningarna. Frågor och svar konfigureras direkt på Flow-korten.\n"
+      },
+      "description": {
+        "en": "Make decisions in your Flows with your own context.",
+        "nl": "Neem beslissingen in je Flows met je eigen context.",
+        "de": "Entscheidungen in deinen Flows mit deinem eigenen Kontext.",
+        "fr": "Prenez des décisions dans vos Flows avec votre propre contexte.",
+        "es": "Toma decisiones en tus Flows con tu propio contexto.",
+        "da": "Træf beslutninger i dine Flows med din egen kontekst.",
+        "no": "Ta beslutninger i dine Flows med din egen kontekst.",
+        "sv": "Fatta beslut i dina Flows med din egen kontext.",
+        "it": "Prendi decisioni nei tuoi Flow usando il tuo contesto.",
+        "pl": "Podejmuj decyzje w swoich Flow na podstawie własnego kontekstu.",
+        "ru": "Принимайте решения в Flow на основе вашего контекста.",
+        "ko": "직접 제공한 맥락으로 Flow에서 결정을 내리세요.",
+        "ar": "اتخذ قرارات في تدفقاتك باستخدام السياق الذي تقدمه."
+      },
+      "category": "tools",
+      "brandColor": "#E351B9",
+      "icon": "https://apps.homeycdn.net/app/com.basmilius.jev/3/6b3e8a4f-2b8f-4bfa-b423-10221d2c454f/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.basmilius.jev/3/6b3e8a4f-2b8f-4bfa-b423-10221d2c454f/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.basmilius.jev/3/6b3e8a4f-2b8f-4bfa-b423-10221d2c454f/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "advanced",
+            "title": {
+              "en": "Evaluate state and questions from JSON",
+              "nl": "Evalueer state en vragen uit JSON",
+              "de": "Zustand und Fragen aus JSON auswerten",
+              "fr": "Évaluer un état et des questions en JSON",
+              "es": "Evaluar estado y preguntas desde JSON",
+              "da": "Vurder tilstand og spørgsmål fra JSON",
+              "no": "Vurder tilstand og spørsmål fra JSON",
+              "sv": "Bedöm tillstånd och frågor från JSON",
+              "it": "Valuta stato e domande da JSON",
+              "pl": "Oceń stan i pytania z JSON",
+              "ru": "Оценить состояние и вопросы из JSON",
+              "ko": "JSON의 상태와 질문 평가",
+              "ar": "تقييم الحالة والأسئلة من JSON"
+            },
+            "titleFormatted": {
+              "en": "Evaluate [[json]]",
+              "nl": "Evalueer [[json]]",
+              "de": "[[json]] auswerten",
+              "fr": "Évaluer [[json]]",
+              "es": "Evaluar [[json]]",
+              "da": "Vurder [[json]]",
+              "no": "Vurder [[json]]",
+              "sv": "Bedöm [[json]]",
+              "it": "Valuta [[json]]",
+              "pl": "Oceń [[json]]",
+              "ru": "Оценить [[json]]",
+              "ko": "[[json]] 평가",
+              "ar": "تقييم [[json]]"
+            },
+            "hint": {
+              "en": "Paste {\"state\":…, \"questions\":{…}}. Supports choice, noul and score, up to 64 questions. Returns all raw answers as JSON; apply your own probability and confidence checks. Uses the model in settings. Use descriptive state fields, e.g. {\"bas_is_sleeping\":true}, and include units for measurements.",
+              "nl": "Plak {\"state\":…, \"questions\":{…}}. Ondersteunt choice, noul en score, maximaal 64 vragen. Geeft alle ruwe antwoorden als JSON; controleer zelf kans en confidence. Gebruikt het model uit instellingen. Gebruik beschrijvende velden in state, bijvoorbeeld {\"bas_slaapt\":true}, en vermeld eenheden bij metingen.",
+              "de": "Füge {\"state\":…, \"questions\":{…}} ein. Unterstützt choice, noul und score mit bis zu 64 Fragen. Liefert die Rohantworten als JSON. Prüfe Wahrscheinlichkeit und Konfidenz selbst. Verwendet das Modell aus den Einstellungen. Beschreibe die Zustandswerte und gib Maßeinheiten an.",
+              "fr": "Collez {\"state\":…, \"questions\":{…}}. Accepte choice, noul et score, jusqu’à 64 questions. Renvoie les réponses brutes en JSON. Vérifiez vous-même les probabilités et la confiance. Utilise le modèle des paramètres. Décrivez les valeurs de l’état et indiquez les unités.",
+              "es": "Pega {\"state\":…, \"questions\":{…}}. Admite choice, noul y score, hasta 64 preguntas. Devuelve las respuestas sin procesar en JSON. Comprueba la probabilidad y la confianza. Usa el modelo de los ajustes. Describe los valores del estado e incluye las unidades.",
+              "da": "Indsæt {\"state\":…, \"questions\":{…}}. Understøtter choice, noul og score med op til 64 spørgsmål. Returnerer rå svar som JSON. Kontroller selv sandsynlighed og sikkerhed. Bruger modellen fra indstillingerne. Beskriv tilstandens værdier og angiv måleenheder.",
+              "no": "Lim inn {\"state\":…, \"questions\":{…}}. Støtter choice, noul og score med opptil 64 spørsmål. Returnerer rå svar som JSON. Kontroller sannsynlighet og sikkerhet selv. Bruker modellen fra innstillingene. Beskriv tilstandsverdiene og oppgi måleenheter.",
+              "sv": "Klistra in {\"state\":…, \"questions\":{…}}. Stöder choice, noul och score med upp till 64 frågor. Returnerar råa svar som JSON. Kontrollera sannolikhet och säkerhet själv. Använder modellen från inställningarna. Beskriv tillståndets värden och ange måttenheter.",
+              "it": "Incolla {\"state\":…, \"questions\":{…}}. Supporta choice, noul e score, fino a 64 domande. Restituisce le risposte grezze in JSON. Verifica probabilità e confidenza. Usa il modello delle impostazioni. Descrivi i valori dello stato e indica le unità di misura.",
+              "pl": "Wklej {\"state\":…, \"questions\":{…}}. Obsługuje choice, noul i score, do 64 pytań. Zwraca surowe odpowiedzi w JSON. Samodzielnie sprawdzaj prawdopodobieństwo i pewność. Używa modelu z ustawień. Opisz wartości stanu i podaj jednostki.",
+              "ru": "Вставьте {\"state\":…, \"questions\":{…}}. Поддерживает choice, noul и score, до 64 вопросов. Возвращает исходные ответы в JSON. Проверяйте вероятность и уверенность самостоятельно. Использует модель из настроек. Опишите значения состояния и укажите единицы измерения.",
+              "ko": "{\"state\":…, \"questions\":{…}}를 붙여 넣으세요. choice, noul, score와 최대 64개 질문을 지원합니다. 원본 답변을 JSON으로 반환합니다. 확률과 신뢰도는 직접 확인하세요. 설정의 모델을 사용합니다. 상태 값의 의미와 측정 단위를 적어 주세요.",
+              "ar": "ألصق {\"state\":…, \"questions\":{…}}. يدعم choice وnoul وscore حتى 64 سؤالًا. يعيد الإجابات الخام بصيغة JSON. تحقق بنفسك من الاحتمالات والثقة. يستخدم النموذج المحدد في الإعدادات. اشرح قيم الحالة وأضف وحدات القياس."
+            },
+            "args": [
+              {
+                "name": "json",
+                "type": "text",
+                "title": {
+                  "en": "Request JSON",
+                  "nl": "Aanvraag-JSON",
+                  "de": "Anfrage als JSON",
+                  "fr": "Requête JSON",
+                  "es": "Solicitud JSON",
+                  "da": "JSON-anmodning",
+                  "no": "JSON-forespørsel",
+                  "sv": "JSON-förfrågan",
+                  "it": "Richiesta JSON",
+                  "pl": "Żądanie JSON",
+                  "ru": "Запрос JSON",
+                  "ko": "요청 JSON",
+                  "ar": "طلب JSON"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "answers",
+                "type": "string",
+                "title": {
+                  "en": "Answers (JSON)",
+                  "nl": "Antwoorden (JSON)",
+                  "de": "Antworten (JSON)",
+                  "fr": "Réponses (JSON)",
+                  "es": "Respuestas (JSON)",
+                  "da": "Svar (JSON)",
+                  "no": "Svar (JSON)",
+                  "sv": "Svar (JSON)",
+                  "it": "Risposte (JSON)",
+                  "pl": "Odpowiedzi (JSON)",
+                  "ru": "Ответы (JSON)",
+                  "ko": "답변 (JSON)",
+                  "ar": "الإجابات (JSON)"
+                }
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "nl": "Model",
+                  "de": "Modell",
+                  "fr": "Modèle",
+                  "es": "Modelo",
+                  "da": "Model",
+                  "no": "Modell",
+                  "sv": "Modell",
+                  "it": "Modello",
+                  "pl": "Model",
+                  "ru": "Модель",
+                  "ko": "모델",
+                  "ar": "النموذج"
+                }
+              },
+              {
+                "name": "input_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Input tokens",
+                  "nl": "Inputtokens",
+                  "de": "Eingabetokens",
+                  "fr": "Tokens en entrée",
+                  "es": "Tokens de entrada",
+                  "da": "Inputtokens",
+                  "no": "Inndatatokener",
+                  "sv": "Indatatoken",
+                  "it": "Token di input",
+                  "pl": "Tokeny wejściowe",
+                  "ru": "Входные токены",
+                  "ko": "입력 토큰",
+                  "ar": "رموز الإدخال"
+                }
+              },
+              {
+                "name": "output_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Output tokens",
+                  "nl": "Outputtokens",
+                  "de": "Ausgabetokens",
+                  "fr": "Tokens en sortie",
+                  "es": "Tokens de salida",
+                  "da": "Outputtokens",
+                  "no": "Utdatatokener",
+                  "sv": "Utdatatoken",
+                  "it": "Token di output",
+                  "pl": "Tokeny wyjściowe",
+                  "ru": "Выходные токены",
+                  "ko": "출력 토큰",
+                  "ar": "رموز الإخراج"
+                }
+              },
+              {
+                "name": "request_id",
+                "type": "string",
+                "title": {
+                  "en": "Evaluation ID",
+                  "nl": "Evaluatie-ID",
+                  "de": "Auswertungs-ID",
+                  "fr": "Identifiant d’évaluation",
+                  "es": "ID de evaluación",
+                  "da": "Vurderings-ID",
+                  "no": "Vurderings-ID",
+                  "sv": "Bedömnings-ID",
+                  "it": "ID valutazione",
+                  "pl": "ID oceny",
+                  "ru": "ID оценки",
+                  "ko": "평가 ID",
+                  "ar": "معرّف التقييم"
+                }
+              },
+              {
+                "name": "duration_ms",
+                "type": "number",
+                "title": {
+                  "en": "Duration (ms)",
+                  "nl": "Duur (ms)",
+                  "de": "Dauer (ms)",
+                  "fr": "Durée (ms)",
+                  "es": "Duración (ms)",
+                  "da": "Varighed (ms)",
+                  "no": "Varighet (ms)",
+                  "sv": "Varaktighet (ms)",
+                  "it": "Durata (ms)",
+                  "pl": "Czas trwania (ms)",
+                  "ru": "Длительность (мс)",
+                  "ko": "소요 시간 (ms)",
+                  "ar": "المدة (مللي ثانية)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "choice_list",
+            "title": {
+              "en": "Choose from a list",
+              "nl": "Kies uit een lijst",
+              "de": "Aus einer Liste wählen",
+              "fr": "Choisir dans une liste",
+              "es": "Elegir de una lista",
+              "da": "Vælg fra en liste",
+              "no": "Velg fra en liste",
+              "sv": "Välj från en lista",
+              "it": "Scegli da un elenco",
+              "pl": "Wybierz z listy",
+              "ru": "Выбрать из списка",
+              "ko": "목록에서 선택",
+              "ar": "اختيار من قائمة"
+            },
+            "titleFormatted": {
+              "en": "Choose for [[question]] with state [[state]] from [[answers]] with minimum confidence [[minimum]]",
+              "nl": "Kies voor [[question]] met state [[state]] uit [[answers]] met minimale confidence [[minimum]]",
+              "de": "Für [[question]] mit Zustand [[state]] aus [[answers]] mit Mindestkonfidenz [[minimum]] wählen",
+              "fr": "Pour [[question]], choisir dans [[answers]] avec l’état [[state]] et une confiance minimale de [[minimum]]",
+              "es": "Para [[question]], elegir de [[answers]] con estado [[state]] y confianza mínima [[minimum]]",
+              "da": "Vælg for [[question]] med tilstand [[state]] fra [[answers]] med mindst sikkerhed [[minimum]]",
+              "no": "Velg for [[question]] med tilstand [[state]] fra [[answers]] med minste sikkerhet [[minimum]]",
+              "sv": "Välj för [[question]] med tillstånd [[state]] från [[answers]] med minsta säkerhet [[minimum]]",
+              "it": "Per [[question]], scegli da [[answers]] con stato [[state]] e confidenza minima [[minimum]]",
+              "pl": "Dla [[question]] wybierz z [[answers]] przy stanie [[state]] i minimalnej pewności [[minimum]]",
+              "ru": "Для [[question]] выбрать из [[answers]] при состоянии [[state]] с минимальной уверенностью [[minimum]]",
+              "ko": "상태 [[state]]에서 [[question]]에 대해 최소 신뢰도 [[minimum]]으로 [[answers]] 중 선택",
+              "ar": "اختر لسؤال [[question]] مع الحالة [[state]] من [[answers]] بحد أدنى للثقة [[minimum]]"
+            },
+            "hint": {
+              "en": "Supply one question and describe what each value in state means, including units. Enter 2–255 different answers, one per line, or insert a text Flow tag containing the list. Blank lines are ignored. Returns the selected text and its position starting at 1. A result below the minimum confidence follows the error path.",
+              "nl": "Stel één vraag en beschrijf wat elke waarde in state betekent, inclusief eenheden. Geef 2–255 verschillende antwoorden, één per regel, of voeg een teksttag met de lijst in. Lege regels worden genegeerd. Geeft de gekozen tekst en de positie vanaf 1 terug. Een resultaat onder de minimale confidence volgt het foutpad.",
+              "de": "Stelle eine Frage und beschreibe die Zustandswerte samt Einheiten. Gib 2–255 unterschiedliche Antworten ein, eine pro Zeile, oder nutze ein Text-Tag mit der Liste. Leerzeilen werden ignoriert. Liefert die gewählte Antwort und ihre Position ab 1. Unterhalb der Mindestkonfidenz wird der Fehlerpfad verwendet.",
+              "fr": "Posez une question et décrivez les valeurs de l’état avec leurs unités. Saisissez 2 à 255 réponses distinctes, une par ligne, ou insérez un tag texte contenant la liste. Les lignes vides sont ignorées. Renvoie le texte choisi et sa position à partir de 1. Une confiance insuffisante déclenche le chemin d’erreur.",
+              "es": "Haz una pregunta y describe los valores del estado con sus unidades. Introduce entre 2 y 255 respuestas diferentes, una por línea, o inserta una etiqueta de texto con la lista. Se ignoran las líneas vacías. Devuelve el texto elegido y su posición desde 1. Una confianza insuficiente activa la ruta de error.",
+              "da": "Stil ét spørgsmål og beskriv tilstandens værdier med enheder. Angiv 2–255 forskellige svar, ét pr. linje, eller indsæt et teksttag med listen. Tomme linjer ignoreres. Returnerer det valgte svar og dets position fra 1. For lav sikkerhed aktiverer fejlstien.",
+              "no": "Still ett spørsmål og beskriv tilstandsverdiene med enheter. Oppgi 2–255 ulike svar, ett per linje, eller sett inn en teksttagg med listen. Tomme linjer ignoreres. Returnerer valgt tekst og plasseringen fra 1. For lav sikkerhet aktiverer feilbanen.",
+              "sv": "Ställ en fråga och beskriv tillståndets värden med enheter. Ange 2–255 olika svar, ett per rad, eller infoga en texttagg med listan. Tomma rader ignoreras. Returnerar vald text och dess position från 1. För låg säkerhet aktiverar felvägen.",
+              "it": "Poni una domanda e descrivi i valori dello stato con le unità. Inserisci da 2 a 255 risposte diverse, una per riga, oppure un tag di testo con l’elenco. Le righe vuote vengono ignorate. Restituisce il testo scelto e la posizione a partire da 1. Una confidenza insufficiente attiva il percorso di errore.",
+              "pl": "Zadaj jedno pytanie i opisz wartości stanu wraz z jednostkami. Podaj 2–255 różnych odpowiedzi, po jednej w wierszu, lub wstaw znacznik tekstowy z listą. Puste wiersze są pomijane. Zwraca wybrany tekst i pozycję liczoną od 1. Zbyt niska pewność uruchamia ścieżkę błędu.",
+              "ru": "Задайте один вопрос и опишите значения состояния с единицами измерения. Укажите 2–255 разных ответов, по одному в строке, или вставьте текстовый тег со списком. Пустые строки игнорируются. Возвращает выбранный текст и позицию начиная с 1. При недостаточной уверенности выполняется ветка ошибки.",
+              "ko": "질문 하나를 입력하고 상태 값의 의미와 단위를 설명하세요. 서로 다른 답변 2–255개를 한 줄에 하나씩 입력하거나 목록이 담긴 텍스트 태그를 넣으세요. 빈 줄은 무시됩니다. 선택한 텍스트와 1부터 시작하는 위치를 반환합니다. 신뢰도가 부족하면 오류 경로로 진행합니다.",
+              "ar": "اطرح سؤالًا واحدًا واشرح قيم الحالة ووحداتها. أدخل من 2 إلى 255 إجابة مختلفة، واحدة في كل سطر، أو أدرج وسمًا نصيًا يحتوي على القائمة. تُتجاهل الأسطر الفارغة. يعيد النص المختار وموضعه بدءًا من 1. إذا انخفضت الثقة عن الحد الأدنى، يُتّبع مسار الخطأ."
+            },
+            "args": [
+              {
+                "name": "state",
+                "type": "text",
+                "title": {
+                  "en": "State",
+                  "nl": "State",
+                  "de": "Zustand",
+                  "fr": "État",
+                  "es": "Estado",
+                  "da": "Tilstand",
+                  "no": "Tilstand",
+                  "sv": "Tillstånd",
+                  "it": "Stato",
+                  "pl": "Stan",
+                  "ru": "Состояние",
+                  "ko": "상태",
+                  "ar": "الحالة"
+                }
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "nl": "Vraag",
+                  "de": "Frage",
+                  "fr": "Question",
+                  "es": "Pregunta",
+                  "da": "Spørgsmål",
+                  "no": "Spørsmål",
+                  "sv": "Fråga",
+                  "it": "Domanda",
+                  "pl": "Pytanie",
+                  "ru": "Вопрос",
+                  "ko": "질문",
+                  "ar": "السؤال"
+                }
+              },
+              {
+                "name": "answers",
+                "type": "text",
+                "title": {
+                  "en": "Answers (one per line)",
+                  "nl": "Antwoorden (één per regel)",
+                  "de": "Antworten (eine pro Zeile)",
+                  "fr": "Réponses (une par ligne)",
+                  "es": "Respuestas (una por línea)",
+                  "da": "Svar (ét pr. linje)",
+                  "no": "Svar (ett per linje)",
+                  "sv": "Svar (ett per rad)",
+                  "it": "Risposte (una per riga)",
+                  "pl": "Odpowiedzi (jedna w wierszu)",
+                  "ru": "Ответы (по одному в строке)",
+                  "ko": "답변 (한 줄에 하나)",
+                  "ar": "الإجابات (واحدة في كل سطر)"
+                },
+                "placeholder": {
+                  "en": "Film watching\nReading\nSocializing",
+                  "nl": "Film kijken\nLezen\nGezellig samenzijn",
+                  "de": "Film schauen\nLesen\nZeit mit Gästen verbringen",
+                  "fr": "Regarder un film\nLire\nRecevoir des invités",
+                  "es": "Ver una película\nLeer\nEstar con invitados",
+                  "da": "Se film\nLæse\nVære sammen med gæster",
+                  "no": "Se film\nLese\nVære sammen med gjester",
+                  "sv": "Titta på film\nLäsa\nUmgås med gäster",
+                  "it": "Guardare un film\nLeggere\nStare con gli ospiti",
+                  "pl": "Oglądanie filmu\nCzytanie\nSpotkanie z gośćmi",
+                  "ru": "Просмотр фильма\nЧтение\nОбщение с гостями",
+                  "ko": "영화 보기\n독서\n손님과 대화",
+                  "ar": "مشاهدة فيلم\nالقراءة\nالجلوس مع الضيوف"
+                }
+              },
+              {
+                "name": "minimum",
+                "type": "number",
+                "title": {
+                  "en": "Minimum confidence (0–1)",
+                  "nl": "Minimale confidence (0–1)",
+                  "de": "Mindestkonfidenz (0–1)",
+                  "fr": "Confiance minimale (0–1)",
+                  "es": "Confianza mínima (0–1)",
+                  "da": "Mindste sikkerhed (0–1)",
+                  "no": "Minste sikkerhet (0–1)",
+                  "sv": "Minsta säkerhet (0–1)",
+                  "it": "Confidenza minima (0–1)",
+                  "pl": "Minimalna pewność (0–1)",
+                  "ru": "Минимальная уверенность (0–1)",
+                  "ko": "최소 신뢰도 (0–1)",
+                  "ar": "الحد الأدنى للثقة (0–1)"
+                },
+                "min": 0,
+                "max": 1,
+                "step": 0.01,
+                "value": 0.8
+              }
+            ],
+            "tokens": [
+              {
+                "name": "answer",
+                "type": "string",
+                "title": {
+                  "en": "Answer",
+                  "nl": "Antwoord",
+                  "de": "Antwort",
+                  "fr": "Réponse",
+                  "es": "Respuesta",
+                  "da": "Svar",
+                  "no": "Svar",
+                  "sv": "Svar",
+                  "it": "Risposta",
+                  "pl": "Odpowiedź",
+                  "ru": "Ответ",
+                  "ko": "답변",
+                  "ar": "الإجابة"
+                }
+              },
+              {
+                "name": "answer_number",
+                "type": "number",
+                "title": {
+                  "en": "Answer number",
+                  "nl": "Antwoordnummer",
+                  "de": "Antwortnummer",
+                  "fr": "Numéro de réponse",
+                  "es": "Número de respuesta",
+                  "da": "Svarnummer",
+                  "no": "Svarnummer",
+                  "sv": "Svarsnummer",
+                  "it": "Numero della risposta",
+                  "pl": "Numer odpowiedzi",
+                  "ru": "Номер ответа",
+                  "ko": "답변 번호",
+                  "ar": "رقم الإجابة"
+                }
+              },
+              {
+                "name": "confidence",
+                "type": "number",
+                "title": {
+                  "en": "Confidence",
+                  "nl": "Confidence",
+                  "de": "Konfidenz",
+                  "fr": "Confiance",
+                  "es": "Confianza",
+                  "da": "Sikkerhed",
+                  "no": "Sikkerhet",
+                  "sv": "Säkerhet",
+                  "it": "Confidenza",
+                  "pl": "Pewność",
+                  "ru": "Уверенность",
+                  "ko": "신뢰도",
+                  "ar": "الثقة"
+                }
+              },
+              {
+                "name": "probability",
+                "type": "number",
+                "title": {
+                  "en": "Probability of selected answer",
+                  "nl": "Kans van gekozen antwoord",
+                  "de": "Wahrscheinlichkeit der gewählten Antwort",
+                  "fr": "Probabilité de la réponse choisie",
+                  "es": "Probabilidad de la respuesta elegida",
+                  "da": "Sandsynlighed for det valgte svar",
+                  "no": "Sannsynlighet for valgt svar",
+                  "sv": "Sannolikhet för valt svar",
+                  "it": "Probabilità della risposta scelta",
+                  "pl": "Prawdopodobieństwo wybranej odpowiedzi",
+                  "ru": "Вероятность выбранного ответа",
+                  "ko": "선택한 답변의 확률",
+                  "ar": "احتمال الإجابة المختارة"
+                }
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "nl": "Model",
+                  "de": "Modell",
+                  "fr": "Modèle",
+                  "es": "Modelo",
+                  "da": "Model",
+                  "no": "Modell",
+                  "sv": "Modell",
+                  "it": "Modello",
+                  "pl": "Model",
+                  "ru": "Модель",
+                  "ko": "모델",
+                  "ar": "النموذج"
+                }
+              },
+              {
+                "name": "input_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Input tokens",
+                  "nl": "Inputtokens",
+                  "de": "Eingabetokens",
+                  "fr": "Tokens en entrée",
+                  "es": "Tokens de entrada",
+                  "da": "Inputtokens",
+                  "no": "Inndatatokener",
+                  "sv": "Indatatoken",
+                  "it": "Token di input",
+                  "pl": "Tokeny wejściowe",
+                  "ru": "Входные токены",
+                  "ko": "입력 토큰",
+                  "ar": "رموز الإدخال"
+                }
+              },
+              {
+                "name": "output_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Output tokens",
+                  "nl": "Outputtokens",
+                  "de": "Ausgabetokens",
+                  "fr": "Tokens en sortie",
+                  "es": "Tokens de salida",
+                  "da": "Outputtokens",
+                  "no": "Utdatatokener",
+                  "sv": "Utdatatoken",
+                  "it": "Token di output",
+                  "pl": "Tokeny wyjściowe",
+                  "ru": "Выходные токены",
+                  "ko": "출력 토큰",
+                  "ar": "رموز الإخراج"
+                }
+              },
+              {
+                "name": "request_id",
+                "type": "string",
+                "title": {
+                  "en": "Evaluation ID",
+                  "nl": "Evaluatie-ID",
+                  "de": "Auswertungs-ID",
+                  "fr": "Identifiant d’évaluation",
+                  "es": "ID de evaluación",
+                  "da": "Vurderings-ID",
+                  "no": "Vurderings-ID",
+                  "sv": "Bedömnings-ID",
+                  "it": "ID valutazione",
+                  "pl": "ID oceny",
+                  "ru": "ID оценки",
+                  "ko": "평가 ID",
+                  "ar": "معرّف التقييم"
+                }
+              },
+              {
+                "name": "duration_ms",
+                "type": "number",
+                "title": {
+                  "en": "Duration (ms)",
+                  "nl": "Duur (ms)",
+                  "de": "Dauer (ms)",
+                  "fr": "Durée (ms)",
+                  "es": "Duración (ms)",
+                  "da": "Varighed (ms)",
+                  "no": "Varighet (ms)",
+                  "sv": "Varaktighet (ms)",
+                  "it": "Durata (ms)",
+                  "pl": "Czas trwania (ms)",
+                  "ru": "Длительность (мс)",
+                  "ko": "소요 시간 (ms)",
+                  "ar": "المدة (مللي ثانية)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "score",
+            "title": {
+              "en": "Score a question with 3 levels",
+              "nl": "Beoordeel een vraag met 3 niveaus",
+              "de": "Eine Frage mit 3 Stufen bewerten",
+              "fr": "Évaluer une question sur 3 niveaux",
+              "es": "Puntuar una pregunta con 3 niveles",
+              "da": "Vurder et spørgsmål med 3 niveauer",
+              "no": "Vurder et spørsmål med 3 nivåer",
+              "sv": "Bedöm en fråga med 3 nivåer",
+              "it": "Valuta una domanda su 3 livelli",
+              "pl": "Oceń pytanie na 3 poziomach",
+              "ru": "Оценить вопрос по 3 уровням",
+              "ko": "질문을 3단계로 평가",
+              "ar": "تقييم سؤال على 3 مستويات"
+            },
+            "titleFormatted": {
+              "en": "Score [[question]] with state [[state]] on levels [[low]] / [[middle]] / [[high]] with minimum confidence [[minimum]]",
+              "nl": "Beoordeel [[question]] met state [[state]] op niveaus [[low]] / [[middle]] / [[high]] met minimale confidence [[minimum]]",
+              "de": "[[question]] mit Zustand [[state]] auf den Stufen [[low]] / [[middle]] / [[high]] mit Mindestkonfidenz [[minimum]] bewerten",
+              "fr": "Évaluer [[question]] avec l’état [[state]], les niveaux [[low]] / [[middle]] / [[high]] et une confiance minimale de [[minimum]]",
+              "es": "Puntuar [[question]] con estado [[state]], niveles [[low]] / [[middle]] / [[high]] y confianza mínima [[minimum]]",
+              "da": "Vurder [[question]] med tilstand [[state]] på niveauerne [[low]] / [[middle]] / [[high]] med mindst sikkerhed [[minimum]]",
+              "no": "Vurder [[question]] med tilstand [[state]] på nivåene [[low]] / [[middle]] / [[high]] med minste sikkerhet [[minimum]]",
+              "sv": "Bedöm [[question]] med tillstånd [[state]] på nivåerna [[low]] / [[middle]] / [[high]] med minsta säkerhet [[minimum]]",
+              "it": "Valuta [[question]] con stato [[state]], livelli [[low]] / [[middle]] / [[high]] e confidenza minima [[minimum]]",
+              "pl": "Oceń [[question]] przy stanie [[state]], poziomach [[low]] / [[middle]] / [[high]] i minimalnej pewności [[minimum]]",
+              "ru": "Оценить [[question]] при состоянии [[state]] по уровням [[low]] / [[middle]] / [[high]] с минимальной уверенностью [[minimum]]",
+              "ko": "상태 [[state]]에서 [[question]]을 [[low]] / [[middle]] / [[high]] 단계로 최소 신뢰도 [[minimum]]으로 평가",
+              "ar": "قيّم [[question]] مع الحالة [[state]] على المستويات [[low]] / [[middle]] / [[high]] بحد أدنى للثقة [[minimum]]"
+            },
+            "hint": {
+              "en": "Describe what each value in state means. Example: \"Bas is sleeping: [Asleep]\"; insert the Flow tag at [Asleep]. Include units for measurements. Ask one question. Describe concrete situations for the low, middle and high levels, rather than just numbers. Returns a score from 0 to 2, including fractions. The score is a position on your scale, not a dimming percentage or temperature. A result below the minimum confidence follows the error path.",
+              "nl": "Beschrijf in state wat elke waarde betekent. Bijvoorbeeld: \"Bas slaapt: [Slapend]\"; voeg op [Slapend] de Flow-tag in. Vermeld bij metingen ook de eenheid. Stel één vraag. Beschrijf concrete situaties voor het lage, middelste en hoge niveau, in plaats van alleen getallen. Geeft een score van 0 tot 2, ook met decimalen. De score is een positie op je schaal, geen dimpercentage of temperatuur. Een resultaat onder de minimale confidence volgt het foutpad.",
+              "de": "Beschreibe die Zustandswerte samt Einheiten, z. B. „Bas schläft: [Schläft]“ mit einem Flow-Tag. Stelle eine Frage und beschreibe konkrete Situationen für die drei Stufen. Liefert einen Wert von 0 bis 2, auch mit Nachkommastellen. Dies ist eine Position auf deiner Skala, kein Dimmwert oder Temperaturwert. Bei zu geringer Konfidenz wird der Fehlerpfad verwendet.",
+              "fr": "Décrivez les valeurs de l’état et leurs unités, par exemple « Bas dort : [Endormi] » avec un tag Flow. Posez une question et décrivez des situations concrètes pour les trois niveaux. Renvoie un score de 0 à 2, décimales comprises. Il situe la réponse sur votre échelle, ce n’est pas un pourcentage d’éclairage ni une température. Une confiance insuffisante déclenche le chemin d’erreur.",
+              "es": "Describe los valores del estado y sus unidades, por ejemplo «Bas está durmiendo: [Dormido]» con una etiqueta Flow. Haz una pregunta y describe situaciones concretas para los tres niveles. Devuelve una puntuación de 0 a 2, con decimales. Es una posición en tu escala, no un porcentaje de iluminación ni una temperatura. Una confianza insuficiente activa la ruta de error.",
+              "da": "Beskriv tilstandens værdier og enheder, f.eks. \"Bas sover: [Sover]\" med et Flow-tag. Stil ét spørgsmål og beskriv konkrete situationer for de tre niveauer. Returnerer en score fra 0 til 2 med decimaler. Det er en position på din skala, ikke en dæmpningsprocent eller temperatur. For lav sikkerhed aktiverer fejlstien.",
+              "no": "Beskriv tilstandsverdiene og enhetene, f.eks. \"Bas sover: [Sover]\" med en Flow-tagg. Still ett spørsmål og beskriv konkrete situasjoner for de tre nivåene. Returnerer en poengsum fra 0 til 2 med desimaler. Dette er en plassering på skalaen din, ikke en dimmeprosent eller temperatur. For lav sikkerhet aktiverer feilbanen.",
+              "sv": "Beskriv tillståndets värden och enheter, t.ex. \"Bas sover: [Sover]\" med en Flow-tagg. Ställ en fråga och beskriv konkreta situationer för de tre nivåerna. Returnerar en poäng från 0 till 2 med decimaler. Det är en position på din skala, inte en dimningsprocent eller temperatur. För låg säkerhet aktiverar felvägen.",
+              "it": "Descrivi i valori dello stato e le unità, ad esempio \"Bas sta dormendo: [Addormentato]\" con un tag Flow. Poni una domanda e descrivi situazioni concrete per i tre livelli. Restituisce un punteggio da 0 a 2, anche decimale. È una posizione sulla tua scala, non una percentuale di luminosità o una temperatura. Una confidenza insufficiente attiva il percorso di errore.",
+              "pl": "Opisz wartości stanu i jednostki, np. „Bas śpi: [Śpi]” ze znacznikiem Flow. Zadaj jedno pytanie i opisz konkretne sytuacje dla trzech poziomów. Zwraca ocenę od 0 do 2, również ułamkową. To pozycja na Twojej skali, nie procent jasności ani temperatura. Zbyt niska pewność uruchamia ścieżkę błędu.",
+              "ru": "Опишите значения состояния и единицы, например «Бас спит: [Спит]» с тегом Flow. Задайте один вопрос и опишите конкретные ситуации для трёх уровней. Возвращает оценку от 0 до 2, включая дробные значения. Это позиция на вашей шкале, а не процент яркости или температура. При недостаточной уверенности выполняется ветка ошибки.",
+              "ko": "상태 값과 단위를 설명하세요. 예: Flow 태그를 넣은 \"Bas가 자고 있음: [수면 중]\". 질문 하나와 세 단계에 해당하는 구체적인 상황을 적으세요. 소수를 포함한 0–2 점수를 반환합니다. 점수는 정의한 척도상의 위치이며 밝기 비율이나 온도가 아닙니다. 신뢰도가 부족하면 오류 경로로 진행합니다.",
+              "ar": "اشرح قيم الحالة ووحداتها، مثل \"باس نائم: [نائم]\" باستخدام وسم Flow. اطرح سؤالًا واحدًا وصف حالات محددة للمستويات الثلاثة. يعيد درجة من 0 إلى 2، بما فيها الكسور. الدرجة موضع على مقياسك وليست نسبة سطوع أو درجة حرارة. إذا كانت الثقة غير كافية، يُتّبع مسار الخطأ."
+            },
+            "args": [
+              {
+                "name": "state",
+                "type": "text",
+                "title": {
+                  "en": "State",
+                  "nl": "State",
+                  "de": "Zustand",
+                  "fr": "État",
+                  "es": "Estado",
+                  "da": "Tilstand",
+                  "no": "Tilstand",
+                  "sv": "Tillstånd",
+                  "it": "Stato",
+                  "pl": "Stan",
+                  "ru": "Состояние",
+                  "ko": "상태",
+                  "ar": "الحالة"
+                }
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "nl": "Vraag",
+                  "de": "Frage",
+                  "fr": "Question",
+                  "es": "Pregunta",
+                  "da": "Spørgsmål",
+                  "no": "Spørsmål",
+                  "sv": "Fråga",
+                  "it": "Domanda",
+                  "pl": "Pytanie",
+                  "ru": "Вопрос",
+                  "ko": "질문",
+                  "ar": "السؤال"
+                }
+              },
+              {
+                "name": "low",
+                "type": "text",
+                "title": {
+                  "en": "Low level (0)",
+                  "nl": "Laag niveau (0)",
+                  "de": "Niedrige Stufe (0)",
+                  "fr": "Niveau bas (0)",
+                  "es": "Nivel bajo (0)",
+                  "da": "Lavt niveau (0)",
+                  "no": "Lavt nivå (0)",
+                  "sv": "Låg nivå (0)",
+                  "it": "Livello basso (0)",
+                  "pl": "Niski poziom (0)",
+                  "ru": "Низкий уровень (0)",
+                  "ko": "낮은 단계 (0)",
+                  "ar": "المستوى المنخفض (0)"
+                }
+              },
+              {
+                "name": "middle",
+                "type": "text",
+                "title": {
+                  "en": "Middle level (1)",
+                  "nl": "Middelste niveau (1)",
+                  "de": "Mittlere Stufe (1)",
+                  "fr": "Niveau moyen (1)",
+                  "es": "Nivel medio (1)",
+                  "da": "Mellemste niveau (1)",
+                  "no": "Middels nivå (1)",
+                  "sv": "Mellannivå (1)",
+                  "it": "Livello medio (1)",
+                  "pl": "Średni poziom (1)",
+                  "ru": "Средний уровень (1)",
+                  "ko": "중간 단계 (1)",
+                  "ar": "المستوى المتوسط (1)"
+                }
+              },
+              {
+                "name": "high",
+                "type": "text",
+                "title": {
+                  "en": "High level (2)",
+                  "nl": "Hoog niveau (2)",
+                  "de": "Hohe Stufe (2)",
+                  "fr": "Niveau élevé (2)",
+                  "es": "Nivel alto (2)",
+                  "da": "Højt niveau (2)",
+                  "no": "Høyt nivå (2)",
+                  "sv": "Hög nivå (2)",
+                  "it": "Livello alto (2)",
+                  "pl": "Wysoki poziom (2)",
+                  "ru": "Высокий уровень (2)",
+                  "ko": "높은 단계 (2)",
+                  "ar": "المستوى المرتفع (2)"
+                }
+              },
+              {
+                "name": "minimum",
+                "type": "number",
+                "title": {
+                  "en": "Minimum confidence (0–1)",
+                  "nl": "Minimale confidence (0–1)",
+                  "de": "Mindestkonfidenz (0–1)",
+                  "fr": "Confiance minimale (0–1)",
+                  "es": "Confianza mínima (0–1)",
+                  "da": "Mindste sikkerhed (0–1)",
+                  "no": "Minste sikkerhet (0–1)",
+                  "sv": "Minsta säkerhet (0–1)",
+                  "it": "Confidenza minima (0–1)",
+                  "pl": "Minimalna pewność (0–1)",
+                  "ru": "Минимальная уверенность (0–1)",
+                  "ko": "최소 신뢰도 (0–1)",
+                  "ar": "الحد الأدنى للثقة (0–1)"
+                },
+                "min": 0,
+                "max": 1,
+                "step": 0.01,
+                "value": 0.8
+              }
+            ],
+            "tokens": [
+              {
+                "name": "score",
+                "type": "number",
+                "title": {
+                  "en": "Score (0–2)",
+                  "nl": "Score (0–2)",
+                  "de": "Bewertung (0–2)",
+                  "fr": "Score (0–2)",
+                  "es": "Puntuación (0–2)",
+                  "da": "Score (0–2)",
+                  "no": "Poengsum (0–2)",
+                  "sv": "Poäng (0–2)",
+                  "it": "Punteggio (0–2)",
+                  "pl": "Ocena (0–2)",
+                  "ru": "Оценка (0–2)",
+                  "ko": "점수 (0–2)",
+                  "ar": "الدرجة (0–2)"
+                }
+              },
+              {
+                "name": "confidence",
+                "type": "number",
+                "title": {
+                  "en": "Confidence",
+                  "nl": "Confidence",
+                  "de": "Konfidenz",
+                  "fr": "Confiance",
+                  "es": "Confianza",
+                  "da": "Sikkerhed",
+                  "no": "Sikkerhet",
+                  "sv": "Säkerhet",
+                  "it": "Confidenza",
+                  "pl": "Pewność",
+                  "ru": "Уверенность",
+                  "ko": "신뢰도",
+                  "ar": "الثقة"
+                }
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "nl": "Model",
+                  "de": "Modell",
+                  "fr": "Modèle",
+                  "es": "Modelo",
+                  "da": "Model",
+                  "no": "Modell",
+                  "sv": "Modell",
+                  "it": "Modello",
+                  "pl": "Model",
+                  "ru": "Модель",
+                  "ko": "모델",
+                  "ar": "النموذج"
+                }
+              },
+              {
+                "name": "input_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Input tokens",
+                  "nl": "Inputtokens",
+                  "de": "Eingabetokens",
+                  "fr": "Tokens en entrée",
+                  "es": "Tokens de entrada",
+                  "da": "Inputtokens",
+                  "no": "Inndatatokener",
+                  "sv": "Indatatoken",
+                  "it": "Token di input",
+                  "pl": "Tokeny wejściowe",
+                  "ru": "Входные токены",
+                  "ko": "입력 토큰",
+                  "ar": "رموز الإدخال"
+                }
+              },
+              {
+                "name": "output_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Output tokens",
+                  "nl": "Outputtokens",
+                  "de": "Ausgabetokens",
+                  "fr": "Tokens en sortie",
+                  "es": "Tokens de salida",
+                  "da": "Outputtokens",
+                  "no": "Utdatatokener",
+                  "sv": "Utdatatoken",
+                  "it": "Token di output",
+                  "pl": "Tokeny wyjściowe",
+                  "ru": "Выходные токены",
+                  "ko": "출력 토큰",
+                  "ar": "رموز الإخراج"
+                }
+              },
+              {
+                "name": "request_id",
+                "type": "string",
+                "title": {
+                  "en": "Evaluation ID",
+                  "nl": "Evaluatie-ID",
+                  "de": "Auswertungs-ID",
+                  "fr": "Identifiant d’évaluation",
+                  "es": "ID de evaluación",
+                  "da": "Vurderings-ID",
+                  "no": "Vurderings-ID",
+                  "sv": "Bedömnings-ID",
+                  "it": "ID valutazione",
+                  "pl": "ID oceny",
+                  "ru": "ID оценки",
+                  "ko": "평가 ID",
+                  "ar": "معرّف التقييم"
+                }
+              },
+              {
+                "name": "duration_ms",
+                "type": "number",
+                "title": {
+                  "en": "Duration (ms)",
+                  "nl": "Duur (ms)",
+                  "de": "Dauer (ms)",
+                  "fr": "Durée (ms)",
+                  "es": "Duración (ms)",
+                  "da": "Varighed (ms)",
+                  "no": "Varighet (ms)",
+                  "sv": "Varaktighet (ms)",
+                  "it": "Durata (ms)",
+                  "pl": "Czas trwania (ms)",
+                  "ru": "Длительность (мс)",
+                  "ko": "소요 시간 (ms)",
+                  "ar": "المدة (مللي ثانية)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "yes_no",
+            "title": {
+              "en": "Ask a yes/no question",
+              "nl": "Stel een ja/nee-vraag",
+              "de": "Eine Ja/Nein-Frage stellen",
+              "fr": "Poser une question oui/non",
+              "es": "Hacer una pregunta de sí/no",
+              "da": "Stil et ja/nej-spørgsmål",
+              "no": "Still et ja/nei-spørsmål",
+              "sv": "Ställ en ja/nej-fråga",
+              "it": "Poni una domanda sì/no",
+              "pl": "Zadaj pytanie tak/nie",
+              "ru": "Задать вопрос да/нет",
+              "ko": "예/아니요 질문하기",
+              "ar": "طرح سؤال بنعم أو لا"
+            },
+            "titleFormatted": {
+              "en": "Ask [[question]] with state [[state]] with minimum probability [[minimum]]",
+              "nl": "Stel [[question]] met state [[state]] met minimale kans [[minimum]]",
+              "de": "[[question]] mit Zustand [[state]] und Mindestwahrscheinlichkeit [[minimum]] fragen",
+              "fr": "Poser [[question]] avec l’état [[state]] et une probabilité minimale de [[minimum]]",
+              "es": "Preguntar [[question]] con estado [[state]] y probabilidad mínima [[minimum]]",
+              "da": "Stil [[question]] med tilstand [[state]] og mindste sandsynlighed [[minimum]]",
+              "no": "Still [[question]] med tilstand [[state]] og minste sannsynlighet [[minimum]]",
+              "sv": "Ställ [[question]] med tillstånd [[state]] och minsta sannolikhet [[minimum]]",
+              "it": "Chiedi [[question]] con stato [[state]] e probabilità minima [[minimum]]",
+              "pl": "Zapytaj [[question]] przy stanie [[state]] i minimalnym prawdopodobieństwie [[minimum]]",
+              "ru": "Задать [[question]] при состоянии [[state]] с минимальной вероятностью [[minimum]]",
+              "ko": "상태 [[state]]에서 최소 확률 [[minimum]]으로 [[question]] 질문",
+              "ar": "اطرح [[question]] مع الحالة [[state]] بحد أدنى للاحتمال [[minimum]]"
+            },
+            "hint": {
+              "en": "Describe what each value in state means. Example: \"Bas is sleeping: [Asleep]\"; insert the Flow tag at [Asleep]. Include units for measurements. One question. Returns a boolean Answer tag for use in Advanced Flow. Accept yes when its probability meets the minimum, no when it is at most 1 minus the minimum. Uncertainty and API errors stop the card.",
+              "nl": "Beschrijf in state wat elke waarde betekent. Bijvoorbeeld: \"Bas slaapt: [Slapend]\"; voeg op [Slapend] de Flow-tag in. Vermeld bij metingen ook de eenheid. Eén vraag. Geeft een boolean-tag Antwoord terug voor gebruik in Advanced Flow. Ja bij een kans vanaf het minimum, nee bij maximaal 1 min het minimum. Twijfel en API-fouten stoppen de kaart.",
+              "de": "Beschreibe die Zustandswerte samt Einheiten, z. B. „Bas schläft: [Schläft]“ mit einem Flow-Tag. Eine Frage, ein boolesches Antwort-Tag für Advanced Flow. Ja ab der Mindestwahrscheinlichkeit, Nein bei höchstens 1 minus diesem Wert. Unsicherheit und API-Fehler stoppen die Karte.",
+              "fr": "Décrivez les valeurs de l’état et leurs unités, par exemple « Bas dort : [Endormi] » avec un tag Flow. Une question, un tag Réponse booléen pour Advanced Flow. Oui si la probabilité atteint le minimum, non si elle est au plus égale à 1 moins ce minimum. L’incertitude et les erreurs API arrêtent la carte.",
+              "es": "Describe los valores del estado y sus unidades, por ejemplo «Bas está durmiendo: [Dormido]» con una etiqueta Flow. Una pregunta, una etiqueta Respuesta booleana para Advanced Flow. Sí cuando la probabilidad alcanza el mínimo, no cuando es como máximo 1 menos ese mínimo. La incertidumbre y los errores de API detienen la tarjeta.",
+              "da": "Beskriv tilstandens værdier og enheder, f.eks. \"Bas sover: [Sover]\" med et Flow-tag. Ét spørgsmål giver et boolesk Svar-tag til Advanced Flow. Ja når sandsynligheden når minimum, nej når den højst er 1 minus minimum. Usikkerhed og API-fejl stopper kortet.",
+              "no": "Beskriv tilstandsverdiene og enhetene, f.eks. \"Bas sover: [Sover]\" med en Flow-tagg. Ett spørsmål gir en boolsk Svar-tagg for Advanced Flow. Ja når sannsynligheten når minimum, nei når den er høyst 1 minus minimum. Usikkerhet og API-feil stopper kortet.",
+              "sv": "Beskriv tillståndets värden och enheter, t.ex. \"Bas sover: [Sover]\" med en Flow-tagg. En fråga ger en boolesk Svar-tagg för Advanced Flow. Ja när sannolikheten når minimum, nej när den är högst 1 minus minimum. Osäkerhet och API-fel stoppar kortet.",
+              "it": "Descrivi i valori dello stato e le unità, ad esempio \"Bas sta dormendo: [Addormentato]\" con un tag Flow. Una domanda restituisce un tag Risposta booleano per Advanced Flow. Sì se la probabilità raggiunge il minimo, no se è al massimo 1 meno il minimo. Incertezza ed errori API interrompono la scheda.",
+              "pl": "Opisz wartości stanu i jednostki, np. „Bas śpi: [Śpi]” ze znacznikiem Flow. Jedno pytanie zwraca logiczny znacznik Odpowiedź do Advanced Flow. Tak, gdy prawdopodobieństwo osiąga minimum; nie, gdy wynosi najwyżej 1 minus minimum. Niepewność i błędy API zatrzymują kartę.",
+              "ru": "Опишите значения состояния и единицы, например «Бас спит: [Спит]» с тегом Flow. Один вопрос возвращает логический тег «Ответ» для Advanced Flow. Да, если вероятность достигает минимума; нет, если она не больше 1 минус минимум. Неуверенность и ошибки API останавливают карточку.",
+              "ko": "상태 값과 단위를 설명하세요. 예: Flow 태그를 넣은 \"Bas가 자고 있음: [수면 중]\". 질문 하나에 대해 Advanced Flow용 불리언 답변 태그를 반환합니다. 확률이 최솟값 이상이면 예, 1에서 최솟값을 뺀 값 이하이면 아니요입니다. 불확실하거나 API 오류가 발생하면 카드가 중단됩니다.",
+              "ar": "اشرح قيم الحالة ووحداتها، مثل \"باس نائم: [نائم]\" باستخدام وسم Flow. يعيد سؤال واحد وسم إجابة منطقيًا لاستخدامه في Advanced Flow. نعم عندما يبلغ الاحتمال الحد الأدنى، ولا عندما لا يتجاوز 1 ناقص الحد الأدنى. عدم اليقين وأخطاء API يوقفان البطاقة."
+            },
+            "args": [
+              {
+                "name": "state",
+                "type": "text",
+                "title": {
+                  "en": "State",
+                  "nl": "State",
+                  "de": "Zustand",
+                  "fr": "État",
+                  "es": "Estado",
+                  "da": "Tilstand",
+                  "no": "Tilstand",
+                  "sv": "Tillstånd",
+                  "it": "Stato",
+                  "pl": "Stan",
+                  "ru": "Состояние",
+                  "ko": "상태",
+                  "ar": "الحالة"
+                }
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "nl": "Vraag",
+                  "de": "Frage",
+                  "fr": "Question",
+                  "es": "Pregunta",
+                  "da": "Spørgsmål",
+                  "no": "Spørsmål",
+                  "sv": "Fråga",
+                  "it": "Domanda",
+                  "pl": "Pytanie",
+                  "ru": "Вопрос",
+                  "ko": "질문",
+                  "ar": "السؤال"
+                }
+              },
+              {
+                "name": "minimum",
+                "type": "number",
+                "title": {
+                  "en": "Minimum probability (0.51–1)",
+                  "nl": "Minimale kans (0,51–1)",
+                  "de": "Mindestwahrscheinlichkeit (0,51–1)",
+                  "fr": "Probabilité minimale (0,51–1)",
+                  "es": "Probabilidad mínima (0,51–1)",
+                  "da": "Mindste sandsynlighed (0,51–1)",
+                  "no": "Minste sannsynlighet (0,51–1)",
+                  "sv": "Minsta sannolikhet (0,51–1)",
+                  "it": "Probabilità minima (0,51–1)",
+                  "pl": "Minimalne prawdopodobieństwo (0,51–1)",
+                  "ru": "Минимальная вероятность (0,51–1)",
+                  "ko": "최소 확률 (0.51–1)",
+                  "ar": "الحد الأدنى للاحتمال (0.51–1)"
+                },
+                "min": 0.51,
+                "max": 1,
+                "step": 0.01,
+                "value": 0.8
+              }
+            ],
+            "tokens": [
+              {
+                "name": "answer",
+                "type": "boolean",
+                "title": {
+                  "en": "Answer",
+                  "nl": "Antwoord",
+                  "de": "Antwort",
+                  "fr": "Réponse",
+                  "es": "Respuesta",
+                  "da": "Svar",
+                  "no": "Svar",
+                  "sv": "Svar",
+                  "it": "Risposta",
+                  "pl": "Odpowiedź",
+                  "ru": "Ответ",
+                  "ko": "답변",
+                  "ar": "الإجابة"
+                }
+              },
+              {
+                "name": "probability",
+                "type": "number",
+                "title": {
+                  "en": "Probability of yes",
+                  "nl": "Kans op ja",
+                  "de": "Wahrscheinlichkeit für Ja",
+                  "fr": "Probabilité de oui",
+                  "es": "Probabilidad de sí",
+                  "da": "Sandsynlighed for ja",
+                  "no": "Sannsynlighet for ja",
+                  "sv": "Sannolikhet för ja",
+                  "it": "Probabilità di sì",
+                  "pl": "Prawdopodobieństwo odpowiedzi tak",
+                  "ru": "Вероятность ответа да",
+                  "ko": "예일 확률",
+                  "ar": "احتمال نعم"
+                }
+              },
+              {
+                "name": "model",
+                "type": "string",
+                "title": {
+                  "en": "Model",
+                  "nl": "Model",
+                  "de": "Modell",
+                  "fr": "Modèle",
+                  "es": "Modelo",
+                  "da": "Model",
+                  "no": "Modell",
+                  "sv": "Modell",
+                  "it": "Modello",
+                  "pl": "Model",
+                  "ru": "Модель",
+                  "ko": "모델",
+                  "ar": "النموذج"
+                }
+              },
+              {
+                "name": "input_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Input tokens",
+                  "nl": "Inputtokens",
+                  "de": "Eingabetokens",
+                  "fr": "Tokens en entrée",
+                  "es": "Tokens de entrada",
+                  "da": "Inputtokens",
+                  "no": "Inndatatokener",
+                  "sv": "Indatatoken",
+                  "it": "Token di input",
+                  "pl": "Tokeny wejściowe",
+                  "ru": "Входные токены",
+                  "ko": "입력 토큰",
+                  "ar": "رموز الإدخال"
+                }
+              },
+              {
+                "name": "output_tokens",
+                "type": "number",
+                "title": {
+                  "en": "Output tokens",
+                  "nl": "Outputtokens",
+                  "de": "Ausgabetokens",
+                  "fr": "Tokens en sortie",
+                  "es": "Tokens de salida",
+                  "da": "Outputtokens",
+                  "no": "Utdatatokener",
+                  "sv": "Utdatatoken",
+                  "it": "Token di output",
+                  "pl": "Tokeny wyjściowe",
+                  "ru": "Выходные токены",
+                  "ko": "출력 토큰",
+                  "ar": "رموز الإخراج"
+                }
+              },
+              {
+                "name": "request_id",
+                "type": "string",
+                "title": {
+                  "en": "Evaluation ID",
+                  "nl": "Evaluatie-ID",
+                  "de": "Auswertungs-ID",
+                  "fr": "Identifiant d’évaluation",
+                  "es": "ID de evaluación",
+                  "da": "Vurderings-ID",
+                  "no": "Vurderings-ID",
+                  "sv": "Bedömnings-ID",
+                  "it": "ID valutazione",
+                  "pl": "ID oceny",
+                  "ru": "ID оценки",
+                  "ko": "평가 ID",
+                  "ar": "معرّف التقييم"
+                }
+              },
+              {
+                "name": "duration_ms",
+                "type": "number",
+                "title": {
+                  "en": "Duration (ms)",
+                  "nl": "Duur (ms)",
+                  "de": "Dauer (ms)",
+                  "fr": "Durée (ms)",
+                  "es": "Duración (ms)",
+                  "da": "Varighed (ms)",
+                  "no": "Varighet (ms)",
+                  "sv": "Varaktighet (ms)",
+                  "it": "Durata (ms)",
+                  "pl": "Czas trwania (ms)",
+                  "ru": "Длительность (мс)",
+                  "ko": "소요 시간 (ms)",
+                  "ar": "المدة (مللي ثانية)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159835,
+      "state": "live",
+      "stateChangedAt": "2026-09-22T08:50:16.480Z",
+      "bugs": "https://github.com/basmilius/homey-jev/issues",
+      "homepage": "https://bas.dev",
+      "support": "https://github.com/basmilius/homey-jev/issues",
+      "source": "https://github.com/basmilius/homey-jev",
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "basmilius"
+          },
+          "githubSponsors": {
+            "username": "basmilius"
+          }
+        }
+      },
+      "permissions": [],
+      "changelog": {
+        "en": "First release of Jev - AI decisions in your Homey Flows."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "artificial intelligence",
+          "decisions",
+          "context",
+          "choice",
+          "score"
+        ],
+        "nl": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "kunstmatige intelligentie",
+          "beslissingen",
+          "context",
+          "keuze",
+          "score"
+        ],
+        "de": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "künstliche Intelligenz",
+          "Entscheidungen",
+          "Kontext",
+          "Auswahl",
+          "Bewertung"
+        ],
+        "fr": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "intelligence artificielle",
+          "décisions",
+          "contexte",
+          "choix",
+          "score"
+        ],
+        "es": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "inteligencia artificial",
+          "decisiones",
+          "contexto",
+          "elección",
+          "puntuación"
+        ],
+        "da": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "kunstig intelligens",
+          "beslutninger",
+          "kontekst",
+          "valg",
+          "score"
+        ],
+        "no": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "kunstig intelligens",
+          "beslutninger",
+          "kontekst",
+          "valg",
+          "poengsum"
+        ],
+        "sv": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "artificiell intelligens",
+          "beslut",
+          "kontext",
+          "val",
+          "poäng"
+        ],
+        "it": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "intelligenza artificiale",
+          "decisioni",
+          "contesto",
+          "scelta",
+          "punteggio"
+        ],
+        "pl": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "sztuczna inteligencja",
+          "decyzje",
+          "kontekst",
+          "wybór",
+          "ocena"
+        ],
+        "ru": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "искусственный интеллект",
+          "решения",
+          "контекст",
+          "выбор",
+          "оценка"
+        ],
+        "ko": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "인공지능",
+          "결정",
+          "맥락",
+          "선택",
+          "점수"
+        ],
+        "ar": [
+          "jev",
+          "typesafe",
+          "ai",
+          "flow",
+          "advanced flow",
+          "ذكاء اصطناعي",
+          "قرارات",
+          "سياق",
+          "اختيار",
+          "تقييم"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "67feb54bad3776de40f10636",
+      "type": "user",
+      "userId": "6728cf8412cfbcfce7c9513d",
+      "name": "Bas Milius",
+      "verified": false
+    },
+    "communityTopicId": 159835
+  }
+]
