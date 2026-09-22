@@ -2468,10 +2468,10 @@
     "name": "BeNext",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "1.3.7",
+    "version": "1.3.8",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.benext/",
     "publishedAt": "2026-09-10T21:25:23.987Z",
-    "updatedAt": "2026-09-10T21:25:23.987Z",
+    "updatedAt": "2026-09-22T08:39:37.424Z",
     "communityTopicId": 76104
   },
   {
@@ -6923,10 +6923,10 @@
     "name": "Reflexion",
     "developerName": "Fredric Georgsson",
     "developerId": "6322145c42462586558b3306",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:29:18.827Z",
-    "updatedAt": "2026-09-10T21:29:18.827Z",
+    "updatedAt": "2026-09-22T08:39:37.424Z",
     "communityTopicId": 143601
   },
   {
@@ -8265,10 +8265,10 @@
     "name": "Trakt",
     "developerName": "Wouter Janson-Korhorn",
     "developerId": "666f3b42c783db54ae2276df",
-    "version": "1.2.3",
+    "version": "1.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:30:36.875Z",
-    "updatedAt": "2026-09-10T21:30:36.875Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 117955
   },
   {
@@ -9695,10 +9695,10 @@
     "name": "Lists",
     "developerName": "Bas Milius",
     "developerId": "67feb54bad3776de40f10636",
-    "version": "1.3.4",
+    "version": "1.4.0",
     "sourceRepository": "https://github.com/basmilius/homey-listri",
     "publishedAt": "2026-09-10T21:31:52.510Z",
-    "updatedAt": "2026-09-10T21:31:52.510Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 147274
   },
   {
@@ -9739,10 +9739,10 @@
     "name": "Claude",
     "developerName": "Bas Milius",
     "developerId": "67feb54bad3776de40f10636",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "sourceRepository": "https://github.com/basmilius/homey-claude",
     "publishedAt": "2026-09-10T21:31:53.935Z",
-    "updatedAt": "2026-09-10T21:31:53.935Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 152648
   },
   {
@@ -10762,10 +10762,10 @@
     "name": "Adax with Power Estimation",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "0.3.42",
+    "version": "0.3.43",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:32:48.068Z",
-    "updatedAt": "2026-09-10T21:32:48.068Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -11851,10 +11851,10 @@
     "name": "FlowBits",
     "developerName": "Bas Milius",
     "developerId": "67feb54bad3776de40f10636",
-    "version": "1.19.4",
+    "version": "1.20.0",
     "sourceRepository": "https://github.com/basmilius/homey-flowbits",
     "publishedAt": "2026-09-10T21:33:38.219Z",
-    "updatedAt": "2026-09-10T21:33:38.219Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 145855
   },
   {
@@ -12291,10 +12291,10 @@
     "name": "Button +",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "0.7.38",
+    "version": "1.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:55.033Z",
-    "updatedAt": "2026-09-10T21:33:55.033Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 89931
   },
   {
@@ -12445,10 +12445,10 @@
     "name": "SolPlanet",
     "developerName": "Maikel Reijnders",
     "developerId": "65e0836a896842f4abaf27a9",
-    "version": "1.3.0",
+    "version": "1.3.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:58.508Z",
-    "updatedAt": "2026-09-10T21:33:58.508Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 105742
   },
   {
@@ -14128,10 +14128,10 @@
     "name": "Cuchen",
     "developerName": "co.kr cuchen",
     "developerId": "698af67c608b9fa107ccc198",
-    "version": "1.1.10",
+    "version": "1.1.23",
     "sourceRepository": "https://github.com/ts-ha/ST-Connector",
     "publishedAt": "2026-09-10T21:35:24.100Z",
-    "updatedAt": "2026-09-10T21:35:24.100Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -14326,10 +14326,10 @@
     "name": "HEMS Controller",
     "developerName": "Andreas Kjörk",
     "developerId": "690a7cfaae1d27bf099ebff9",
-    "version": "1.18.0",
+    "version": "1.19.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:32.330Z",
-    "updatedAt": "2026-09-17T08:45:41.055Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -15085,10 +15085,10 @@
     "name": "Sonos (LocalAPI)",
     "developerName": "Dennis Nederhof",
     "developerId": "695123682f0b99832c05bb2d",
-    "version": "2.6.4",
+    "version": "2.8.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:00.682Z",
-    "updatedAt": "2026-09-10T21:36:00.682Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 147985
   },
   {
@@ -15822,10 +15822,10 @@
     "name": "LOQED",
     "developerName": "LOQED BV",
     "developerId": "5f846566d56d138aba4529d7",
-    "version": "3.4.10",
+    "version": "3.5.3",
     "sourceRepository": "https://github.com/loqed-nl/homey-app",
     "publishedAt": "2026-09-10T21:36:35.748Z",
-    "updatedAt": "2026-09-10T21:36:35.748Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 89816
   },
   {
@@ -16119,10 +16119,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-09-10T21:36:43.737Z",
-    "updatedAt": "2026-09-20T08:41:35.046Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 158618
   },
   {
@@ -16240,10 +16240,10 @@
     "name": "OpenQuatt",
     "developerName": "OpenQuatt",
     "developerId": "6a88174ac8d34196bd67ba17",
-    "version": "1.4.1",
+    "version": "1.5.0",
     "sourceRepository": "https://github.com/OpenQuatt/homey-openquatt",
     "publishedAt": "2026-09-10T21:36:49.688Z",
-    "updatedAt": "2026-09-10T21:36:49.688Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -16537,10 +16537,10 @@
     "name": "BLE Mower MQTT",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:59.785Z",
-    "updatedAt": "2026-09-10T21:36:59.785Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 157241
   },
   {
@@ -16911,10 +16911,10 @@
     "name": "Luxtronik Heat Pump Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "2.1.8",
+    "version": "2.1.9",
     "sourceRepository": "https://github.com/andiwirz/com.luxtronik.heatpump",
     "publishedAt": "2026-09-10T21:37:29.245Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -17285,10 +17285,10 @@
     "name": "Ubiquiti UniFi Protect and Access",
     "developerName": "Stèphan Eizinga (MonkeySoft)",
     "developerId": "5dcabc991c90c866f936678e",
-    "version": "1.12.4",
+    "version": "1.12.7",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:41.399Z",
-    "updatedAt": "2026-09-10T21:37:41.399Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 42966
   },
   {
@@ -17538,10 +17538,10 @@
     "name": "Tuya Local",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.232",
+    "version": "1.0.237",
     "sourceRepository": "https://github.com/andiwirz/com.tuyalocal",
     "publishedAt": "2026-09-10T21:37:50.699Z",
-    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 154077
   },
   {
@@ -17582,10 +17582,10 @@
     "name": "Shelly Wall Display Dashboard",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.82",
+    "version": "1.3.83",
     "sourceRepository": "https://github.com/andiwirz/com.walldisplay.dashboard",
     "publishedAt": "2026-09-10T21:37:51.559Z",
-    "updatedAt": "2026-09-21T09:05:42.257Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -17626,10 +17626,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.34",
+    "version": "1.9.35",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-09-10T21:37:54.870Z",
-    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 157537
   },
   {
@@ -17670,10 +17670,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.3.0",
+    "version": "3.6.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-19T08:09:35.376Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": 147496
   },
   {
@@ -18154,10 +18154,10 @@
     "name": "Hue Device Location Sync",
     "developerName": "Jesse de Vries",
     "developerId": "6aa1a45b4b2b66c1158fb585",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-14T09:03:49.293Z",
-    "updatedAt": "2026-09-14T09:03:49.293Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -18187,10 +18187,10 @@
     "name": "Themo",
     "developerName": "Esko Pyyluoma",
     "developerId": "6aa51fda30dc90a8d6dfe936",
-    "version": "1.0.6",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/esko/themo-homey",
     "publishedAt": "2026-09-14T17:09:22.617Z",
-    "updatedAt": "2026-09-14T17:09:22.617Z",
+    "updatedAt": "2026-09-22T08:39:37.425Z",
     "communityTopicId": null
   },
   {
@@ -18363,10 +18363,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.7.14",
+    "version": "0.7.15",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-09-19T08:09:35.376Z",
+    "updatedAt": "2026-09-22T08:39:37.426Z",
     "communityTopicId": null
   },
   {
@@ -18418,10 +18418,10 @@
     "name": "Sesam Pay",
     "developerName": "Jon Harald Øymyr",
     "developerId": "689fa6c8b4208a20554af944",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "sourceRepository": "https://github.com/joymyr/sesam_pay",
     "publishedAt": "2026-09-18T15:20:11.997Z",
-    "updatedAt": "2026-09-18T15:20:11.997Z",
+    "updatedAt": "2026-09-22T08:39:37.426Z",
     "communityTopicId": 159405
   },
   {
@@ -18462,10 +18462,10 @@
     "name": "Nubes",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-21T09:05:12.546Z",
-    "updatedAt": "2026-09-21T09:05:12.546Z",
+    "updatedAt": "2026-09-22T08:39:37.426Z",
     "communityTopicId": null
   },
   {
@@ -18495,10 +18495,10 @@
     "name": "PostNL",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-21T17:18:36.046Z",
-    "updatedAt": "2026-09-21T17:18:36.046Z",
+    "updatedAt": "2026-09-22T08:39:37.426Z",
     "communityTopicId": 159674
   }
 ]
