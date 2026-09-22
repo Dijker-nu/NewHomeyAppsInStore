@@ -1,5 +1,13 @@
 [
   {
+    "appId": "com.homeytogether",
+    "name": "Homey Together",
+    "developerName": "Athom B.V.",
+    "developerId": "6a84336d4430c25338c20073",
+    "version": "1.0.8",
+    "updatedAt": "2026-09-22T20:39:55.675Z"
+  },
+  {
     "appId": "be.hln.headlines",
     "name": "HLN Headlines",
     "developerName": "Marco van 't Klooster",
@@ -7262,12 +7270,12 @@
   {
     "appId": "se.andreas.kvartspris",
     "name": "Kvartspris",
-    "developerName": "Andreas Kjörk",
+    "developerName": "PowerGravio -",
     "developerId": "690a7cfaae1d27bf099ebff9",
     "version": "1.2.14",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:29:39.356Z",
-    "updatedAt": "2026-09-10T21:29:39.356Z",
+    "updatedAt": "2026-09-22T20:39:55.673Z",
     "communityTopicId": null
   },
   {
@@ -7968,10 +7976,10 @@
     "name": "AI Chat Control",
     "developerName": "Jeroen van Menen",
     "developerId": "68ffa8313c9d7a64051f0773",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "sourceRepository": "https://github.com/jvmenen/homey-ai-chat-control",
     "publishedAt": "2026-09-10T21:30:22.510Z",
-    "updatedAt": "2026-09-10T21:30:22.510Z",
+    "updatedAt": "2026-09-22T20:39:55.674Z",
     "communityTopicId": 144644
   },
   {
@@ -8329,12 +8337,12 @@
   {
     "appId": "se.andreas.kvartspris.nordpool",
     "name": "Spot Scheduler",
-    "developerName": "Andreas Kjörk",
+    "developerName": "PowerGravio -",
     "developerId": "690a7cfaae1d27bf099ebff9",
     "version": "1.0.26",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:30:37.600Z",
-    "updatedAt": "2026-09-10T21:30:37.600Z",
+    "updatedAt": "2026-09-22T20:39:55.674Z",
     "communityTopicId": null
   },
   {
@@ -14324,12 +14332,12 @@
   {
     "appId": "com.hems.controller",
     "name": "HEMS Controller",
-    "developerName": "Andreas Kjörk",
+    "developerName": "PowerGravio -",
     "developerId": "690a7cfaae1d27bf099ebff9",
     "version": "1.19.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:32.330Z",
-    "updatedAt": "2026-09-22T08:39:37.425Z",
+    "updatedAt": "2026-09-22T20:39:55.674Z",
     "communityTopicId": null
   },
   {
@@ -17626,10 +17634,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.35",
+    "version": "1.9.36",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-09-10T21:37:54.870Z",
-    "updatedAt": "2026-09-22T08:39:37.425Z",
+    "updatedAt": "2026-09-22T20:39:55.675Z",
     "communityTopicId": 157537
   },
   {
@@ -17932,12 +17940,12 @@
   {
     "appId": "se.andreas.fronius-modbus-control",
     "name": "Fronius Control",
-    "developerName": "Andreas Kjörk",
+    "developerName": "PowerGravio -",
     "developerId": "690a7cfaae1d27bf099ebff9",
     "version": "1.4.8",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:11.975Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-22T20:39:55.675Z",
     "communityTopicId": 158855
   },
   {
@@ -18000,10 +18008,10 @@
     "name": "Renault and Dacia",
     "developerName": "Oreste Dimaggio",
     "developerId": "64be70c98d3ead05ece852a1",
-    "version": "2.7.7",
+    "version": "2.7.9",
     "sourceRepository": "https://github.com/bypo/se.cohen.renaultze-master",
     "publishedAt": "2026-09-10T21:38:13.068Z",
-    "updatedAt": "2026-09-10T21:38:13.068Z",
+    "updatedAt": "2026-09-22T20:39:55.675Z",
     "communityTopicId": 71850
   },
   {
@@ -18511,8 +18519,5 @@
     "publishedAt": "2026-09-22T08:51:55.452Z",
     "updatedAt": "2026-09-22T08:51:55.452Z",
     "communityTopicId": 159835
-  },
-  {
-   "appId": "com.homeytogether" 
   }
 ]
