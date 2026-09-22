@@ -34,7 +34,7 @@ const SNAPSHOT_FILE = path.join(DATA_DIR, 'homey-apps-snapshot.json');
 const REMOVED_FILE = path.join(DATA_DIR, 'homey-removed-apps.json');
 const NEW_APPS_LOG_FILE = path.join(DATA_DIR, 'homey-new-apps-log.json');
 const DETAIL_CONCURRENCY = 8;
-const NEW_APPS_RETENTION_DAYS = 30;
+const NEW_APPS_RETENTION_DAYS = 5;
 
 async function fetchAppIds() {
   const res = await fetch(`${BASE_URL}/app/ids`);
