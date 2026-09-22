@@ -1,4 +1,14 @@
 [
+    {
+    "appId": "com.all.acz",
+    "name": " ",
+    "developerName": " ",
+    "developerId": " ",
+    "version": "1.1.10",
+    "removedAt": "2026-09-22T20:47:36.013Z",
+    "lastCheckedAt": "2026-09-22T21:24:30.233Z",
+    "private": true
+  },
   {
     "appId": "com.homeytogether",
     "name": "Homey Together",
