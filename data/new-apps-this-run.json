@@ -1,1 +1,813 @@
-[]
+[
+  {
+    "id": "com.rapinology.nubesamerica",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "Nubes America",
+        "fr": "Nubes America",
+        "nl": "Nubes America",
+        "de": "Nubes America",
+        "es": "Nubes America",
+        "it": "Nubes America"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "A dashboard widget that loops through the latest GOES pictures, so you can watch a front cross the continent instead of reading a number. Imagery is courtesy of NASA's Global Imagery Browse Services and covers the Americas from Alaska to Patagonia.\n",
+        "de": "Ein Dashboard-Widget, das die neuesten GOES-Bilder als Schleife abspielt, damit Sie eine Front über den Kontinent ziehen sehen, statt eine Zahl zu lesen. Die Bilder stammen von den Global Imagery Browse Services der NASA und zeigen Amerika von Alaska bis Patagonien.\n",
+        "es": "Un widget de panel que reproduce en bucle las últimas imágenes GOES, para ver un frente cruzar el continente en lugar de leer una cifra. Las imágenes proceden de los Global Imagery Browse Services de la NASA y cubren América, de Alaska a la Patagonia.\n",
+        "fr": "Un widget de tableau de bord qui fait défiler les dernières images GOES, pour voir un front traverser le continent au lieu de lire un chiffre. Les images sont fournies par les Global Imagery Browse Services de la NASA et couvrent les Amériques, de l'Alaska à la Patagonie.\n",
+        "it": "Un widget da cruscotto che scorre in ciclo le ultime immagini GOES, per vedere un fronte attraversare il continente invece di leggere un numero. Le immagini provengono dai Global Imagery Browse Services della NASA e coprono le Americhe, dall'Alaska alla Patagonia.\n",
+        "nl": "Een dashboardwidget die de nieuwste GOES-beelden als lus afspeelt, zodat u een front over het continent ziet trekken in plaats van een getal te lezen. De beelden komen van de Global Imagery Browse Services van NASA en tonen Amerika, van Alaska tot Patagonië.\n"
+      },
+      "description": {
+        "en": "Watch the weather cross the Americas, live from orbit.",
+        "fr": "Regardez le temps traverser les Amériques, en direct depuis l’orbite.",
+        "nl": "Zie het weer over Amerika trekken, live vanuit een baan om de aarde.",
+        "de": "Sehen Sie das Wetter über Amerika ziehen, live aus dem Orbit.",
+        "es": "Vea el tiempo cruzar América, en directo desde la órbita.",
+        "it": "Guarda il tempo attraversare le Americhe, in diretta dall’orbita."
+      },
+      "category": "climate",
+      "brandColor": "#14304A",
+      "icon": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/assets/images/large.jpg",
+      "drivers": null,
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": {
+        "ciel": {
+          "name": {
+            "en": "The Americas from space",
+            "fr": "Les Amériques vues du ciel",
+            "nl": "Amerika vanuit de ruimte",
+            "de": "Amerika aus dem All",
+            "es": "América vista desde el espacio",
+            "it": "Le Americhe viste dallo spazio"
+          },
+          "height": "87%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "zone",
+              "type": "dropdown",
+              "value": "etatsUnis",
+              "title": {
+                "en": "Area",
+                "fr": "Zone",
+                "nl": "Gebied",
+                "de": "Gebiet",
+                "es": "Zona",
+                "it": "Area"
+              },
+              "hint": {
+                "en": "Which part of the Americas to show. The satellite is chosen for you: GOES-East, or GOES-West for the Pacific coast and Alaska.",
+                "fr": "La partie des Amériques à afficher. Le satellite est choisi pour vous : GOES-East, ou GOES-West pour la côte Pacifique et l'Alaska.",
+                "nl": "Welk deel van Amerika wordt getoond. De satelliet wordt voor u gekozen: GOES-East, of GOES-West voor de Pacifische kust en Alaska.",
+                "de": "Welcher Teil Amerikas gezeigt wird. Der Satellit wird für Sie gewählt: GOES-East, oder GOES-West für die Pazifikküste und Alaska.",
+                "es": "Qué parte de América mostrar. El satélite se elige por usted: GOES-East, o GOES-West para la costa del Pacífico y Alaska.",
+                "it": "Quale parte delle Americhe mostrare. Il satellite è scelto per te: GOES-East, o GOES-West per la costa del Pacifico e l'Alaska."
+              },
+              "values": [
+                {
+                  "id": "nord",
+                  "title": {
+                    "en": "North America",
+                    "fr": "Amérique du Nord",
+                    "nl": "Noord-Amerika",
+                    "de": "Nordamerika",
+                    "es": "América del Norte",
+                    "it": "America del Nord"
+                  }
+                },
+                {
+                  "id": "etatsUnis",
+                  "title": {
+                    "en": "United States and neighbours",
+                    "fr": "États-Unis et voisins",
+                    "nl": "Verenigde Staten en buren",
+                    "de": "USA und Nachbarn",
+                    "es": "Estados Unidos y vecinos",
+                    "it": "Stati Uniti e vicini"
+                  }
+                },
+                {
+                  "id": "cotEst",
+                  "title": {
+                    "en": "East Coast",
+                    "fr": "Côte Est",
+                    "nl": "Oostkust",
+                    "de": "Ostküste",
+                    "es": "Costa Este",
+                    "it": "Costa orientale"
+                  }
+                },
+                {
+                  "id": "cotOuest",
+                  "title": {
+                    "en": "West Coast",
+                    "fr": "Côte Ouest",
+                    "nl": "Westkust",
+                    "de": "Westküste",
+                    "es": "Costa Oeste",
+                    "it": "Costa occidentale"
+                  }
+                },
+                {
+                  "id": "golfe",
+                  "title": {
+                    "en": "Gulf and Caribbean",
+                    "fr": "Golfe et Caraïbes",
+                    "nl": "Golf en Caraïben",
+                    "de": "Golf und Karibik",
+                    "es": "Golfo y Caribe",
+                    "it": "Golfo e Caraibi"
+                  }
+                },
+                {
+                  "id": "amCentrale",
+                  "title": {
+                    "en": "Central America",
+                    "fr": "Amérique centrale",
+                    "nl": "Midden-Amerika",
+                    "de": "Mittelamerika",
+                    "es": "América Central",
+                    "it": "America centrale"
+                  }
+                },
+                {
+                  "id": "amSud",
+                  "title": {
+                    "en": "South America",
+                    "fr": "Amérique du Sud",
+                    "nl": "Zuid-Amerika",
+                    "de": "Südamerika",
+                    "es": "América del Sur",
+                    "it": "America del Sud"
+                  }
+                },
+                {
+                  "id": "bresil",
+                  "title": {
+                    "en": "Brazil",
+                    "fr": "Brésil",
+                    "nl": "Brazilië",
+                    "de": "Brasilien",
+                    "es": "Brasil",
+                    "it": "Brasile"
+                  }
+                },
+                {
+                  "id": "alaska",
+                  "title": {
+                    "en": "Alaska",
+                    "fr": "Alaska",
+                    "nl": "Alaska",
+                    "de": "Alaska",
+                    "es": "Alaska",
+                    "it": "Alaska"
+                  }
+                },
+                {
+                  "id": "autour",
+                  "title": {
+                    "en": "Around my Homey",
+                    "fr": "Autour de mon Homey",
+                    "nl": "Rondom mijn Homey",
+                    "de": "Rund um meinen Homey",
+                    "es": "Alrededor de mi Homey",
+                    "it": "Intorno al mio Homey"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "couche",
+              "type": "dropdown",
+              "value": "geocolour",
+              "title": {
+                "en": "Picture type",
+                "fr": "Type d'image",
+                "nl": "Soort beeld",
+                "de": "Bildart",
+                "es": "Tipo de imagen",
+                "it": "Tipo di immagine"
+              },
+              "hint": {
+                "en": "Day and night colour is readable at any hour. Infrared shows clouds even in the dark. Visible light goes black at night.",
+                "fr": "Les couleurs jour et nuit sont lisibles à toute heure. L'infrarouge montre les nuages même dans le noir. La lumière visible laisse une image noire la nuit.",
+                "nl": "Kleur bij dag en nacht is op elk uur leesbaar. Infrarood toont wolken ook in het donker. Zichtbaar licht blijft 's nachts zwart.",
+                "de": "Farben bei Tag und Nacht sind zu jeder Stunde lesbar. Infrarot zeigt Wolken auch im Dunkeln. Sichtbares Licht bleibt nachts schwarz.",
+                "es": "El color de día y de noche se lee a cualquier hora. El infrarrojo muestra las nubes incluso a oscuras. La luz visible queda negra de noche.",
+                "it": "I colori giorno e notte si leggono a qualsiasi ora. L'infrarosso mostra le nuvole anche al buio. La luce visibile resta nera di notte."
+              },
+              "values": [
+                {
+                  "id": "geocolour",
+                  "title": {
+                    "en": "Day and night colour",
+                    "fr": "Couleurs jour et nuit",
+                    "nl": "Kleur bij dag en nacht",
+                    "de": "Farben bei Tag und Nacht",
+                    "es": "Color de día y de noche",
+                    "it": "Colori giorno e notte"
+                  }
+                },
+                {
+                  "id": "infrarouge",
+                  "title": {
+                    "en": "Infrared",
+                    "fr": "Infrarouge",
+                    "nl": "Infrarood",
+                    "de": "Infrarot",
+                    "es": "Infrarrojo",
+                    "it": "Infrarosso"
+                  }
+                },
+                {
+                  "id": "visible",
+                  "title": {
+                    "en": "Visible light",
+                    "fr": "Lumière visible",
+                    "nl": "Zichtbaar licht",
+                    "de": "Sichtbares Licht",
+                    "es": "Luz visible",
+                    "it": "Luce visibile"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "animation",
+              "type": "dropdown",
+              "value": "troisHeures",
+              "title": {
+                "en": "Animation",
+                "fr": "Animation",
+                "nl": "Animatie",
+                "de": "Animation",
+                "es": "Animación",
+                "it": "Animazione"
+              },
+              "hint": {
+                "en": "Loop through the most recent pictures to see the clouds move. Long periods use a wider time step, so the loop stays about twenty pictures.",
+                "fr": "Faire défiler les dernières images pour voir les nuages bouger. Les longues périodes espacent le pas, pour que la boucle reste d'une vingtaine d'images.",
+                "nl": "De nieuwste beelden als lus afspelen om de wolken te zien trekken. Lange periodes gebruiken een grotere stap, zodat de lus rond twintig beelden blijft.",
+                "de": "Die neuesten Bilder als Schleife abspielen, um die Wolken ziehen zu sehen. Lange Zeiträume nutzen einen gröberen Schritt, damit die Schleife bei etwa zwanzig Bildern bleibt.",
+                "es": "Reproducir en bucle las últimas imágenes para ver moverse las nubes. Los períodos largos usan un paso más amplio, para que el bucle se quede en unas veinte imágenes.",
+                "it": "Scorrere in ciclo le ultime immagini per vedere muoversi le nuvole. I periodi lunghi usano un passo più ampio, così il ciclo resta di una ventina di immagini."
+              },
+              "values": [
+                {
+                  "id": "aucune",
+                  "title": {
+                    "en": "Off",
+                    "fr": "Désactivée",
+                    "nl": "Uit",
+                    "de": "Aus",
+                    "es": "Desactivada",
+                    "it": "Disattivata"
+                  }
+                },
+                {
+                  "id": "uneHeure",
+                  "title": {
+                    "en": "Last hour",
+                    "fr": "Une heure",
+                    "nl": "Afgelopen uur",
+                    "de": "Letzte Stunde",
+                    "es": "Última hora",
+                    "it": "Ultima ora"
+                  }
+                },
+                {
+                  "id": "troisHeures",
+                  "title": {
+                    "en": "Last 3 hours",
+                    "fr": "Trois heures",
+                    "nl": "Afgelopen 3 uur",
+                    "de": "Letzte 3 Stunden",
+                    "es": "Últimas 3 horas",
+                    "it": "Ultime 3 ore"
+                  }
+                },
+                {
+                  "id": "sixHeures",
+                  "title": {
+                    "en": "Last 6 hours",
+                    "fr": "Six heures",
+                    "nl": "Afgelopen 6 uur",
+                    "de": "Letzte 6 Stunden",
+                    "es": "Últimas 6 horas",
+                    "it": "Ultime 6 ore"
+                  }
+                },
+                {
+                  "id": "douzeHeures",
+                  "title": {
+                    "en": "Last 12 hours",
+                    "fr": "Douze heures",
+                    "nl": "Afgelopen 12 uur",
+                    "de": "Letzte 12 Stunden",
+                    "es": "Últimas 12 horas",
+                    "it": "Ultime 12 ore"
+                  }
+                },
+                {
+                  "id": "vingtQuatreHeures",
+                  "title": {
+                    "en": "Last 24 hours",
+                    "fr": "Vingt-quatre heures",
+                    "nl": "Afgelopen 24 uur",
+                    "de": "Letzte 24 Stunden",
+                    "es": "Últimas 24 horas",
+                    "it": "Ultime 24 ore"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "repere",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Mark my Homey",
+                "fr": "Repère de mon Homey",
+                "nl": "Mijn Homey markeren",
+                "de": "Meinen Homey markieren",
+                "es": "Marcar mi Homey",
+                "it": "Segna il mio Homey"
+              },
+              "hint": {
+                "en": "Show a dot where your Homey is. Your position stays on your Homey.",
+                "fr": "Afficher un point à l'emplacement de votre Homey. Votre position ne quitte pas la box.",
+                "nl": "Een punt tonen waar uw Homey staat. Uw locatie verlaat de Homey niet.",
+                "de": "Einen Punkt am Standort Ihres Homey anzeigen. Ihr Standort verlässt den Homey nicht.",
+                "es": "Mostrar un punto donde está su Homey. Su posición no sale del Homey.",
+                "it": "Mostrare un punto dove si trova il tuo Homey. La tua posizione non lascia l'Homey."
+              }
+            }
+          ],
+          "api": {
+            "getVue": {
+              "method": "GET",
+              "path": "/vue"
+            },
+            "getSecours": {
+              "method": "GET",
+              "path": "/secours"
+            }
+          },
+          "id": "ciel",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/widgets/ciel/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/widgets/ciel/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-23T08:16:58.070Z",
+      "bugs": null,
+      "homepage": "https://www.rapinology.com",
+      "support": "mailto:info@rapinology.com",
+      "source": null,
+      "contributors": {
+        "developers": [
+          {
+            "name": "Henri Dominique Rapin"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": null,
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "First release.",
+        "fr": "Première version.",
+        "nl": "Eerste versie.",
+        "de": "Erste Version.",
+        "es": "Primera versión.",
+        "it": "Prima versione."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": {
+        "en": [
+          "satellite",
+          "clouds",
+          "sky",
+          "america",
+          "goes"
+        ],
+        "fr": [
+          "satellite",
+          "nuages",
+          "ciel",
+          "amérique",
+          "goes"
+        ],
+        "nl": [
+          "satelliet",
+          "wolken",
+          "lucht",
+          "amerika",
+          "goes"
+        ],
+        "de": [
+          "satellit",
+          "wolken",
+          "himmel",
+          "amerika",
+          "goes"
+        ],
+        "es": [
+          "satélite",
+          "nubes",
+          "cielo",
+          "américa",
+          "goes"
+        ],
+        "it": [
+          "satellite",
+          "nuvole",
+          "cielo",
+          "america",
+          "goes"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a96972b30ac038fba71a2f2",
+      "type": "user",
+      "userId": "66e2d2b3f0e7b530640ef902",
+      "name": "Henri Dominique Rapin",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.marco.luxven",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "de": "LuxVen",
+        "en": "LuxVen"
+      },
+      "version": "1.1.1",
+      "readme": {
+        "en": "Bring your ceiling fan into your daily routines. Set a gentle breeze for the evening or switch it off with a Homey Flow.\n\nThis community app currently supports only the tested LuxVen 433 MHz configuration with remote DIP switches 1–3 down and 4 up. Other models and DIP settings are not verified. The displayed speed is the last command sent through Homey; the original remote and actual motor state are not monitored.\n"
+      },
+      "description": {
+        "de": "Eine frische Brise, passend zu deinem Alltag",
+        "en": "A fresh breeze that fits your day"
+      },
+      "category": "climate",
+      "brandColor": "#263238",
+      "icon": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "luxven",
+          "name": {
+            "de": "Ventilator – getestete DIP-Stellung",
+            "en": "Fan – tested DIP setting"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "luxven_speed"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/drivers/luxven/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/drivers/luxven/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/drivers/luxven/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "became_off",
+            "title": {
+              "de": "Auf Aus gewechselt",
+              "en": "Changed to Off"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "became_1",
+            "title": {
+              "de": "Auf Stufe 1 gewechselt",
+              "en": "Changed to Speed 1"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "became_2",
+            "title": {
+              "de": "Auf Stufe 2 gewechselt",
+              "en": "Changed to Speed 2"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "became_3",
+            "title": {
+              "de": "Auf Stufe 3 gewechselt",
+              "en": "Changed to Speed 3"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "speed_changed",
+            "title": {
+              "de": "Stufe wurde geändert",
+              "en": "Speed changed"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "speed",
+                "type": "string",
+                "title": {
+                  "de": "Stufe",
+                  "en": "Speed"
+                }
+              },
+              {
+                "name": "source",
+                "type": "string",
+                "title": {
+                  "de": "Quelle",
+                  "en": "Source"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "is_off",
+            "title": {
+              "de": "Aus ist !{{gesetzt|nicht gesetzt}}",
+              "en": "Off is !{{set|not set}}"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "is_1",
+            "title": {
+              "de": "Stufe 1 ist !{{gesetzt|nicht gesetzt}}",
+              "en": "Speed 1 is !{{set|not set}}"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "is_2",
+            "title": {
+              "de": "Stufe 2 ist !{{gesetzt|nicht gesetzt}}",
+              "en": "Speed 2 is !{{set|not set}}"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "is_3",
+            "title": {
+              "de": "Stufe 3 ist !{{gesetzt|nicht gesetzt}}",
+              "en": "Speed 3 is !{{set|not set}}"
+            },
+            "hint": {
+              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
+              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_off",
+            "title": {
+              "de": "Ausschalten",
+              "en": "Turn off"
+            },
+            "hint": {
+              "de": "Sendet den getesteten Funkbefehl.",
+              "en": "Sends the tested RF command."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "set_1",
+            "title": {
+              "de": "Auf Stufe 1 schalten",
+              "en": "Set Speed 1"
+            },
+            "hint": {
+              "de": "Sendet den getesteten Funkbefehl.",
+              "en": "Sends the tested RF command."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "set_2",
+            "title": {
+              "de": "Auf Stufe 2 schalten",
+              "en": "Set Speed 2"
+            },
+            "hint": {
+              "de": "Sendet den getesteten Funkbefehl.",
+              "en": "Sends the tested RF command."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          },
+          {
+            "id": "set_3",
+            "title": {
+              "de": "Auf Stufe 3 schalten",
+              "en": "Set Speed 3"
+            },
+            "hint": {
+              "de": "Sendet den getesteten Funkbefehl.",
+              "en": "Sends the tested RF command."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxven"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-23T08:13:06.739Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:433"
+      ],
+      "changelog": {
+        "de": "Store-Bilder überarbeitet und englischen Fallback für ungültige Stufen ergänzt.",
+        "en": "Refresh App Store imagery and use an English fallback for invalid speeds."
+      },
+      "compatibility": ">=12.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.1.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6aadbe7430dc90a8d6e223e2",
+      "type": "user",
+      "userId": "6161e27f2aaa500bbf1d656a",
+      "name": "Marco Ahlers",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]
