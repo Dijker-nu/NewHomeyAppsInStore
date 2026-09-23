@@ -142,5 +142,29 @@
     "updatedAt": "2026-09-23T08:41:11.202Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-23T08:41:10.243Z"
+  },
+  {
+    "appId": "com.dklatt.ventaxia",
+    "name": "Vent-Axia",
+    "developerName": "Dennis Klatt",
+    "developerId": "6a9bdf22336db3df05accd76",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-23T15:41:29.708Z",
+    "updatedAt": "2026-09-23T15:41:29.708Z",
+    "communityTopicId": 159805,
+    "discoveredAt": "2026-09-23T15:41:29.708Z"
+  },
+  {
+    "appId": "com.drchip666.mqttbridge",
+    "name": "MQTT Bridge",
+    "developerName": "Morten Bech",
+    "developerId": "6a9dc466336db3df05ad31c1",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/DrChip666/homey-mqtt-bridge",
+    "publishedAt": "2026-09-23T15:41:29.708Z",
+    "updatedAt": "2026-09-23T15:41:29.708Z",
+    "communityTopicId": 159424,
+    "discoveredAt": "2026-09-23T15:41:29.708Z"
   }
 ]

@@ -1,768 +1,625 @@
 [
   {
-    "id": "com.rapinology.nubesamerica",
+    "id": "com.dklatt.ventaxia",
     "rating": null,
     "liveBuild": {
-      "id": 1,
+      "id": 3,
       "name": {
-        "en": "Nubes America",
-        "fr": "Nubes America",
-        "nl": "Nubes America",
-        "de": "Nubes America",
-        "es": "Nubes America",
-        "it": "Nubes America"
+        "en": "Vent-Axia",
+        "nl": "Vent-Axia"
       },
-      "version": "1.0.0",
+      "version": "1.0.2",
       "readme": {
-        "en": "A dashboard widget that loops through the latest GOES pictures, so you can watch a front cross the continent instead of reading a number. Imagery is courtesy of NASA's Global Imagery Browse Services and covers the Americas from Alaska to Patagonia.\n",
-        "de": "Ein Dashboard-Widget, das die neuesten GOES-Bilder als Schleife abspielt, damit Sie eine Front über den Kontinent ziehen sehen, statt eine Zahl zu lesen. Die Bilder stammen von den Global Imagery Browse Services der NASA und zeigen Amerika von Alaska bis Patagonien.\n",
-        "es": "Un widget de panel que reproduce en bucle las últimas imágenes GOES, para ver un frente cruzar el continente en lugar de leer una cifra. Las imágenes proceden de los Global Imagery Browse Services de la NASA y cubren América, de Alaska a la Patagonia.\n",
-        "fr": "Un widget de tableau de bord qui fait défiler les dernières images GOES, pour voir un front traverser le continent au lieu de lire un chiffre. Les images sont fournies par les Global Imagery Browse Services de la NASA et couvrent les Amériques, de l'Alaska à la Patagonie.\n",
-        "it": "Un widget da cruscotto che scorre in ciclo le ultime immagini GOES, per vedere un fronte attraversare il continente invece di leggere un numero. Le immagini provengono dai Global Imagery Browse Services della NASA e coprono le Americhe, dall'Alaska alla Patagonia.\n",
-        "nl": "Een dashboardwidget die de nieuwste GOES-beelden als lus afspeelt, zodat u een front over het continent ziet trekken in plaats van een getal te lezen. De beelden komen van de Global Imagery Browse Services van NASA en tonen Amerika, van Alaska tot Patagonië.\n"
+        "en": "The Vent-Axia Svensa is a smart extractor fan that measures humidity, air quality, light and temperature, but out of the box you can only reach it with the manufacturer's phone app, one person at a time, standing in the room. This app puts the fan in Homey instead: set its speed, start a boost, pause it, and tune how eagerly it reacts to moisture, odours and movement, while its sensors become tiles the rest of your home can use.\nEverything runs locally over Bluetooth Low Energy, so there is no cloud, account or gateway involved. Your Homey Pro does need to be within Bluetooth range of the fan, and pairing asks the fan for its own PIN code, which takes a few presses on the unit itself. The full instructions, the flow cards and the known quirks are covered in the Homey Community topic for this app. This is an independent app, not made, supported or endorsed by Vent-Axia.\n",
+        "nl": "De Vent-Axia Lo-Carbon Svensa is een slimme ventilator die vochtigheid, luchtkwaliteit, licht en temperatuur meet, maar standaard kom je er alleen bij met de app van de fabrikant, met een persoon tegelijk, staand in de ruimte. Deze app zet de ventilator in Homey: je regelt het toerental, start een boost, pauzeert hem en stelt in hoe fel hij op vocht, geur en beweging reageert, terwijl zijn sensoren tegels worden waar de rest van je huis mee kan werken.\nAlles gebeurt lokaal via Bluetooth Low Energy, dus zonder cloud, account of gateway. Je Homey Pro moet wel binnen bluetoothbereik van de ventilator hangen, en bij het koppelen haalt de app de pincode bij de ventilator zelf op, wat een paar handelingen op het apparaat vraagt. De volledige uitleg, de flowkaarten en de bekende eigenaardigheden staan in het Homey Community-topic van deze app. Dit is een onafhankelijke app, niet gemaakt, ondersteund of goedgekeurd door Vent-Axia.\n"
       },
       "description": {
-        "en": "Watch the weather cross the Americas, live from orbit.",
-        "fr": "Regardez le temps traverser les Amériques, en direct depuis l’orbite.",
-        "nl": "Zie het weer over Amerika trekken, live vanuit een baan om de aarde.",
-        "de": "Sehen Sie das Wetter über Amerika ziehen, live aus dem Orbit.",
-        "es": "Vea el tiempo cruzar América, en directo desde la órbita.",
-        "it": "Guarda il tempo attraversare le Americhe, in diretta dall’orbita."
+        "en": "Let your home breathe.",
+        "nl": "Laat je huis ademen."
       },
       "category": "climate",
-      "brandColor": "#14304A",
-      "icon": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/assets/images/small.jpg",
-      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/assets/images/large.jpg",
-      "drivers": null,
-      "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": null
-      },
-      "widgets": {
-        "ciel": {
-          "name": {
-            "en": "The Americas from space",
-            "fr": "Les Amériques vues du ciel",
-            "nl": "Amerika vanuit de ruimte",
-            "de": "Amerika aus dem All",
-            "es": "América vista desde el espacio",
-            "it": "Le Americhe viste dallo spazio"
-          },
-          "height": "87%",
-          "transparent": false,
-          "settings": [
-            {
-              "id": "zone",
-              "type": "dropdown",
-              "value": "etatsUnis",
-              "title": {
-                "en": "Area",
-                "fr": "Zone",
-                "nl": "Gebied",
-                "de": "Gebiet",
-                "es": "Zona",
-                "it": "Area"
-              },
-              "hint": {
-                "en": "Which part of the Americas to show. The satellite is chosen for you: GOES-East, or GOES-West for the Pacific coast and Alaska.",
-                "fr": "La partie des Amériques à afficher. Le satellite est choisi pour vous : GOES-East, ou GOES-West pour la côte Pacifique et l'Alaska.",
-                "nl": "Welk deel van Amerika wordt getoond. De satelliet wordt voor u gekozen: GOES-East, of GOES-West voor de Pacifische kust en Alaska.",
-                "de": "Welcher Teil Amerikas gezeigt wird. Der Satellit wird für Sie gewählt: GOES-East, oder GOES-West für die Pazifikküste und Alaska.",
-                "es": "Qué parte de América mostrar. El satélite se elige por usted: GOES-East, o GOES-West para la costa del Pacífico y Alaska.",
-                "it": "Quale parte delle Americhe mostrare. Il satellite è scelto per te: GOES-East, o GOES-West per la costa del Pacifico e l'Alaska."
-              },
-              "values": [
-                {
-                  "id": "nord",
-                  "title": {
-                    "en": "North America",
-                    "fr": "Amérique du Nord",
-                    "nl": "Noord-Amerika",
-                    "de": "Nordamerika",
-                    "es": "América del Norte",
-                    "it": "America del Nord"
-                  }
-                },
-                {
-                  "id": "etatsUnis",
-                  "title": {
-                    "en": "United States and neighbours",
-                    "fr": "États-Unis et voisins",
-                    "nl": "Verenigde Staten en buren",
-                    "de": "USA und Nachbarn",
-                    "es": "Estados Unidos y vecinos",
-                    "it": "Stati Uniti e vicini"
-                  }
-                },
-                {
-                  "id": "cotEst",
-                  "title": {
-                    "en": "East Coast",
-                    "fr": "Côte Est",
-                    "nl": "Oostkust",
-                    "de": "Ostküste",
-                    "es": "Costa Este",
-                    "it": "Costa orientale"
-                  }
-                },
-                {
-                  "id": "cotOuest",
-                  "title": {
-                    "en": "West Coast",
-                    "fr": "Côte Ouest",
-                    "nl": "Westkust",
-                    "de": "Westküste",
-                    "es": "Costa Oeste",
-                    "it": "Costa occidentale"
-                  }
-                },
-                {
-                  "id": "golfe",
-                  "title": {
-                    "en": "Gulf and Caribbean",
-                    "fr": "Golfe et Caraïbes",
-                    "nl": "Golf en Caraïben",
-                    "de": "Golf und Karibik",
-                    "es": "Golfo y Caribe",
-                    "it": "Golfo e Caraibi"
-                  }
-                },
-                {
-                  "id": "amCentrale",
-                  "title": {
-                    "en": "Central America",
-                    "fr": "Amérique centrale",
-                    "nl": "Midden-Amerika",
-                    "de": "Mittelamerika",
-                    "es": "América Central",
-                    "it": "America centrale"
-                  }
-                },
-                {
-                  "id": "amSud",
-                  "title": {
-                    "en": "South America",
-                    "fr": "Amérique du Sud",
-                    "nl": "Zuid-Amerika",
-                    "de": "Südamerika",
-                    "es": "América del Sur",
-                    "it": "America del Sud"
-                  }
-                },
-                {
-                  "id": "bresil",
-                  "title": {
-                    "en": "Brazil",
-                    "fr": "Brésil",
-                    "nl": "Brazilië",
-                    "de": "Brasilien",
-                    "es": "Brasil",
-                    "it": "Brasile"
-                  }
-                },
-                {
-                  "id": "alaska",
-                  "title": {
-                    "en": "Alaska",
-                    "fr": "Alaska",
-                    "nl": "Alaska",
-                    "de": "Alaska",
-                    "es": "Alaska",
-                    "it": "Alaska"
-                  }
-                },
-                {
-                  "id": "autour",
-                  "title": {
-                    "en": "Around my Homey",
-                    "fr": "Autour de mon Homey",
-                    "nl": "Rondom mijn Homey",
-                    "de": "Rund um meinen Homey",
-                    "es": "Alrededor de mi Homey",
-                    "it": "Intorno al mio Homey"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "couche",
-              "type": "dropdown",
-              "value": "geocolour",
-              "title": {
-                "en": "Picture type",
-                "fr": "Type d'image",
-                "nl": "Soort beeld",
-                "de": "Bildart",
-                "es": "Tipo de imagen",
-                "it": "Tipo di immagine"
-              },
-              "hint": {
-                "en": "Day and night colour is readable at any hour. Infrared shows clouds even in the dark. Visible light goes black at night.",
-                "fr": "Les couleurs jour et nuit sont lisibles à toute heure. L'infrarouge montre les nuages même dans le noir. La lumière visible laisse une image noire la nuit.",
-                "nl": "Kleur bij dag en nacht is op elk uur leesbaar. Infrarood toont wolken ook in het donker. Zichtbaar licht blijft 's nachts zwart.",
-                "de": "Farben bei Tag und Nacht sind zu jeder Stunde lesbar. Infrarot zeigt Wolken auch im Dunkeln. Sichtbares Licht bleibt nachts schwarz.",
-                "es": "El color de día y de noche se lee a cualquier hora. El infrarrojo muestra las nubes incluso a oscuras. La luz visible queda negra de noche.",
-                "it": "I colori giorno e notte si leggono a qualsiasi ora. L'infrarosso mostra le nuvole anche al buio. La luce visibile resta nera di notte."
-              },
-              "values": [
-                {
-                  "id": "geocolour",
-                  "title": {
-                    "en": "Day and night colour",
-                    "fr": "Couleurs jour et nuit",
-                    "nl": "Kleur bij dag en nacht",
-                    "de": "Farben bei Tag und Nacht",
-                    "es": "Color de día y de noche",
-                    "it": "Colori giorno e notte"
-                  }
-                },
-                {
-                  "id": "infrarouge",
-                  "title": {
-                    "en": "Infrared",
-                    "fr": "Infrarouge",
-                    "nl": "Infrarood",
-                    "de": "Infrarot",
-                    "es": "Infrarrojo",
-                    "it": "Infrarosso"
-                  }
-                },
-                {
-                  "id": "visible",
-                  "title": {
-                    "en": "Visible light",
-                    "fr": "Lumière visible",
-                    "nl": "Zichtbaar licht",
-                    "de": "Sichtbares Licht",
-                    "es": "Luz visible",
-                    "it": "Luce visibile"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "animation",
-              "type": "dropdown",
-              "value": "troisHeures",
-              "title": {
-                "en": "Animation",
-                "fr": "Animation",
-                "nl": "Animatie",
-                "de": "Animation",
-                "es": "Animación",
-                "it": "Animazione"
-              },
-              "hint": {
-                "en": "Loop through the most recent pictures to see the clouds move. Long periods use a wider time step, so the loop stays about twenty pictures.",
-                "fr": "Faire défiler les dernières images pour voir les nuages bouger. Les longues périodes espacent le pas, pour que la boucle reste d'une vingtaine d'images.",
-                "nl": "De nieuwste beelden als lus afspelen om de wolken te zien trekken. Lange periodes gebruiken een grotere stap, zodat de lus rond twintig beelden blijft.",
-                "de": "Die neuesten Bilder als Schleife abspielen, um die Wolken ziehen zu sehen. Lange Zeiträume nutzen einen gröberen Schritt, damit die Schleife bei etwa zwanzig Bildern bleibt.",
-                "es": "Reproducir en bucle las últimas imágenes para ver moverse las nubes. Los períodos largos usan un paso más amplio, para que el bucle se quede en unas veinte imágenes.",
-                "it": "Scorrere in ciclo le ultime immagini per vedere muoversi le nuvole. I periodi lunghi usano un passo più ampio, così il ciclo resta di una ventina di immagini."
-              },
-              "values": [
-                {
-                  "id": "aucune",
-                  "title": {
-                    "en": "Off",
-                    "fr": "Désactivée",
-                    "nl": "Uit",
-                    "de": "Aus",
-                    "es": "Desactivada",
-                    "it": "Disattivata"
-                  }
-                },
-                {
-                  "id": "uneHeure",
-                  "title": {
-                    "en": "Last hour",
-                    "fr": "Une heure",
-                    "nl": "Afgelopen uur",
-                    "de": "Letzte Stunde",
-                    "es": "Última hora",
-                    "it": "Ultima ora"
-                  }
-                },
-                {
-                  "id": "troisHeures",
-                  "title": {
-                    "en": "Last 3 hours",
-                    "fr": "Trois heures",
-                    "nl": "Afgelopen 3 uur",
-                    "de": "Letzte 3 Stunden",
-                    "es": "Últimas 3 horas",
-                    "it": "Ultime 3 ore"
-                  }
-                },
-                {
-                  "id": "sixHeures",
-                  "title": {
-                    "en": "Last 6 hours",
-                    "fr": "Six heures",
-                    "nl": "Afgelopen 6 uur",
-                    "de": "Letzte 6 Stunden",
-                    "es": "Últimas 6 horas",
-                    "it": "Ultime 6 ore"
-                  }
-                },
-                {
-                  "id": "douzeHeures",
-                  "title": {
-                    "en": "Last 12 hours",
-                    "fr": "Douze heures",
-                    "nl": "Afgelopen 12 uur",
-                    "de": "Letzte 12 Stunden",
-                    "es": "Últimas 12 horas",
-                    "it": "Ultime 12 ore"
-                  }
-                },
-                {
-                  "id": "vingtQuatreHeures",
-                  "title": {
-                    "en": "Last 24 hours",
-                    "fr": "Vingt-quatre heures",
-                    "nl": "Afgelopen 24 uur",
-                    "de": "Letzte 24 Stunden",
-                    "es": "Últimas 24 horas",
-                    "it": "Ultime 24 ore"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "repere",
-              "type": "checkbox",
-              "value": true,
-              "title": {
-                "en": "Mark my Homey",
-                "fr": "Repère de mon Homey",
-                "nl": "Mijn Homey markeren",
-                "de": "Meinen Homey markieren",
-                "es": "Marcar mi Homey",
-                "it": "Segna il mio Homey"
-              },
-              "hint": {
-                "en": "Show a dot where your Homey is. Your position stays on your Homey.",
-                "fr": "Afficher un point à l'emplacement de votre Homey. Votre position ne quitte pas la box.",
-                "nl": "Een punt tonen waar uw Homey staat. Uw locatie verlaat de Homey niet.",
-                "de": "Einen Punkt am Standort Ihres Homey anzeigen. Ihr Standort verlässt den Homey nicht.",
-                "es": "Mostrar un punto donde está su Homey. Su posición no sale del Homey.",
-                "it": "Mostrare un punto dove si trova il tuo Homey. La tua posizione non lascia l'Homey."
-              }
-            }
-          ],
-          "api": {
-            "getVue": {
-              "method": "GET",
-              "path": "/vue"
-            },
-            "getSecours": {
-              "method": "GET",
-              "path": "/secours"
-            }
-          },
-          "id": "ciel",
-          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/widgets/ciel/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.nubesamerica/1/2adf0380-e896-46ea-aca4-c1b02f337c67/widgets/ciel/preview-light.png"
-        }
-      },
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-09-23T08:16:58.070Z",
-      "bugs": null,
-      "homepage": "https://www.rapinology.com",
-      "support": "mailto:info@rapinology.com",
-      "source": null,
-      "contributors": {
-        "developers": [
-          {
-            "name": "Henri Dominique Rapin"
-          }
-        ],
-        "translators": []
-      },
-      "contributing": null,
-      "permissions": [
-        "homey:manager:geolocation"
-      ],
-      "changelog": {
-        "en": "First release.",
-        "fr": "Première version.",
-        "nl": "Eerste versie.",
-        "de": "Erste Version.",
-        "es": "Primera versión.",
-        "it": "Prima versione."
-      },
-      "compatibility": ">=12.3.0",
-      "tags": {
-        "en": [
-          "satellite",
-          "clouds",
-          "sky",
-          "america",
-          "goes"
-        ],
-        "fr": [
-          "satellite",
-          "nuages",
-          "ciel",
-          "amérique",
-          "goes"
-        ],
-        "nl": [
-          "satelliet",
-          "wolken",
-          "lucht",
-          "amerika",
-          "goes"
-        ],
-        "de": [
-          "satellit",
-          "wolken",
-          "himmel",
-          "amerika",
-          "goes"
-        ],
-        "es": [
-          "satélite",
-          "nubes",
-          "cielo",
-          "américa",
-          "goes"
-        ],
-        "it": [
-          "satellite",
-          "nuvole",
-          "cielo",
-          "america",
-          "goes"
-        ]
-      },
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "1.0.0",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6a96972b30ac038fba71a2f2",
-      "type": "user",
-      "userId": "66e2d2b3f0e7b530640ef902",
-      "name": "Henri Dominique Rapin",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "com.marco.luxven",
-    "rating": null,
-    "liveBuild": {
-      "id": 2,
-      "name": {
-        "de": "LuxVen",
-        "en": "LuxVen"
-      },
-      "version": "1.1.1",
-      "readme": {
-        "en": "Bring your ceiling fan into your daily routines. Set a gentle breeze for the evening or switch it off with a Homey Flow.\n\nThis community app currently supports only the tested LuxVen 433 MHz configuration with remote DIP switches 1–3 down and 4 up. Other models and DIP settings are not verified. The displayed speed is the last command sent through Homey; the original remote and actual motor state are not monitored.\n"
-      },
-      "description": {
-        "de": "Eine frische Brise, passend zu deinem Alltag",
-        "en": "A fresh breeze that fits your day"
-      },
-      "category": "climate",
-      "brandColor": "#263238",
-      "icon": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/assets/images/large.png",
+      "brandColor": "#0069B4",
+      "icon": "https://apps.homeycdn.net/app/com.dklatt.ventaxia/3/dee8dee7-6b07-42e5-ba84-a415dd7b685e/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.dklatt.ventaxia/3/dee8dee7-6b07-42e5-ba84-a415dd7b685e/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.dklatt.ventaxia/3/dee8dee7-6b07-42e5-ba84-a415dd7b685e/assets/images/large.png",
       "drivers": [
         {
-          "id": "luxven",
+          "id": "svensa",
           "name": {
-            "de": "Ventilator – getestete DIP-Stellung",
-            "en": "Fan – tested DIP setting"
+            "en": "Svensa",
+            "nl": "Svensa"
           },
           "class": "fan",
           "capabilities": [
             "onoff",
-            "luxven_speed"
+            "svensa_speed",
+            "svensa_boost",
+            "svensa_pause",
+            "svensa_trigger",
+            "svensa_sens_humidity",
+            "svensa_sens_airquality",
+            "svensa_sens_presence",
+            "measure_temperature",
+            "measure_humidity",
+            "measure_luminance",
+            "measure_airquality",
+            "measure_rpm",
+            "measure_airflow"
           ],
-          "imageSmall": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/drivers/luxven/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/drivers/luxven/assets/images/large.png",
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Continuous operation",
+                "nl": "Continubedrijf"
+              },
+              "insightsTitleTrue": {
+                "en": "Continuous operation on",
+                "nl": "Continubedrijf aan"
+              },
+              "insightsTitleFalse": {
+                "en": "Continuous operation off",
+                "nl": "Continubedrijf uit"
+              }
+            },
+            "measure_humidity": {
+              "title": {
+                "en": "Humidity",
+                "nl": "Vochtigheid"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.dklatt.ventaxia/3/dee8dee7-6b07-42e5-ba84-a415dd7b685e/drivers/svensa/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.dklatt.ventaxia/3/dee8dee7-6b07-42e5-ba84-a415dd7b685e/drivers/svensa/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "rf433"
+            "ble"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.marco.luxven/2/ac4b73a7-640f-4c9e-9067-73da34d6655d/drivers/luxven/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/com.dklatt.ventaxia/3/dee8dee7-6b07-42e5-ba84-a415dd7b685e/drivers/svensa/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "became_off",
+            "id": "trigger_changed",
             "title": {
-              "de": "Auf Aus gewechselt",
-              "en": "Changed to Off"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
+              "en": "The active trigger changed",
+              "nl": "De actieve trigger is veranderd"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
-              }
-            ]
-          },
-          {
-            "id": "became_1",
-            "title": {
-              "de": "Auf Stufe 1 gewechselt",
-              "en": "Changed to Speed 1"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=luxven"
-              }
-            ]
-          },
-          {
-            "id": "became_2",
-            "title": {
-              "de": "Auf Stufe 2 gewechselt",
-              "en": "Changed to Speed 2"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=luxven"
-              }
-            ]
-          },
-          {
-            "id": "became_3",
-            "title": {
-              "de": "Auf Stufe 3 gewechselt",
-              "en": "Changed to Speed 3"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=luxven"
-              }
-            ]
-          },
-          {
-            "id": "speed_changed",
-            "title": {
-              "de": "Stufe wurde geändert",
-              "en": "Speed changed"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
               }
             ],
             "tokens": [
               {
-                "name": "speed",
+                "name": "trigger",
                 "type": "string",
                 "title": {
-                  "de": "Stufe",
-                  "en": "Speed"
+                  "en": "Trigger",
+                  "nl": "Trigger"
+                },
+                "example": {
+                  "en": "humidity"
                 }
-              },
+              }
+            ]
+          },
+          {
+            "id": "boost_started",
+            "title": {
+              "en": "Boost started",
+              "nl": "Boost gestart"
+            },
+            "args": [
               {
-                "name": "source",
-                "type": "string",
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              }
+            ]
+          },
+          {
+            "id": "boost_stopped",
+            "title": {
+              "en": "Boost stopped",
+              "nl": "Boost gestopt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              }
+            ]
+          },
+          {
+            "id": "airquality_changed",
+            "title": {
+              "en": "Air quality changed",
+              "nl": "Luchtkwaliteit is veranderd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "airquality",
+                "type": "number",
                 "title": {
-                  "de": "Quelle",
-                  "en": "Source"
-                }
+                  "en": "VOC index",
+                  "nl": "VOC-index"
+                },
+                "example": 120
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "is_off",
+            "id": "is_boosting",
             "title": {
-              "de": "Aus ist !{{gesetzt|nicht gesetzt}}",
-              "en": "Off is !{{set|not set}}"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
+              "en": "Boost !{{is|is not}} active",
+              "nl": "Boost !{{is|is niet}} actief"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
               }
             ]
           },
           {
-            "id": "is_1",
+            "id": "is_paused",
             "title": {
-              "de": "Stufe 1 ist !{{gesetzt|nicht gesetzt}}",
-              "en": "Speed 1 is !{{set|not set}}"
-            },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
+              "en": "The fan !{{is|is not}} paused",
+              "nl": "De ventilator !{{is|is niet}} gepauzeerd"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
               }
             ]
           },
           {
-            "id": "is_2",
+            "id": "airquality_above",
             "title": {
-              "de": "Stufe 2 ist !{{gesetzt|nicht gesetzt}}",
-              "en": "Speed 2 is !{{set|not set}}"
+              "en": "Air quality index !{{is|is not}} above",
+              "nl": "Luchtkwaliteitsindex !{{is|is niet}} hoger dan"
             },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            "titleFormatted": {
+              "en": "Air quality index !{{is|is not}} above [[value]]",
+              "nl": "Luchtkwaliteitsindex !{{is|is niet}} hoger dan [[value]]"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "number",
+                "name": "value",
+                "title": {
+                  "en": "VOC index",
+                  "nl": "VOC-index"
+                },
+                "min": 0,
+                "max": 65535,
+                "step": 1,
+                "placeholder": {
+                  "en": "Index",
+                  "nl": "Index"
+                }
               }
             ]
           },
           {
-            "id": "is_3",
+            "id": "rpm_above",
             "title": {
-              "de": "Stufe 3 ist !{{gesetzt|nicht gesetzt}}",
-              "en": "Speed 3 is !{{set|not set}}"
+              "en": "Fan speed !{{is|is not}} above",
+              "nl": "Toerental !{{is|is niet}} hoger dan"
             },
-            "hint": {
-              "de": "Bezieht sich auf die zuletzt über Homey gesetzte Stufe. Keine Rückmeldung vom Ventilator.",
-              "en": "Based on the last speed set through Homey. No feedback from the fan."
+            "titleFormatted": {
+              "en": "Fan speed !{{is|is not}} above [[value]] rpm",
+              "nl": "Toerental !{{is|is niet}} hoger dan [[value]] rpm"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "number",
+                "name": "value",
+                "title": {
+                  "en": "Fan speed",
+                  "nl": "Toerental"
+                },
+                "min": 0,
+                "max": 2500,
+                "step": 25,
+                "placeholder": {
+                  "en": "rpm"
+                }
               }
             ]
           }
         ],
         "actions": [
           {
-            "id": "set_off",
+            "id": "start_boost",
             "title": {
-              "de": "Ausschalten",
-              "en": "Turn off"
+              "en": "Start boost",
+              "nl": "Start boost"
             },
-            "hint": {
-              "de": "Sendet den getesteten Funkbefehl.",
-              "en": "Sends the tested RF command."
+            "titleFormatted": {
+              "en": "Start boost at [[speed]] rpm for [[minutes]] minutes",
+              "nl": "Start boost op [[speed]] rpm gedurende [[minutes]] minuten"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "number",
+                "name": "speed",
+                "title": {
+                  "en": "Boost speed",
+                  "nl": "Boostsnelheid"
+                },
+                "min": 800,
+                "max": 2500,
+                "step": 25,
+                "value": 2400,
+                "placeholder": {
+                  "en": "rpm"
+                }
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "title": {
+                  "en": "Duration",
+                  "nl": "Duur"
+                },
+                "min": 1,
+                "max": 120,
+                "step": 1,
+                "value": 15,
+                "placeholder": {
+                  "en": "Minutes",
+                  "nl": "Minuten"
+                }
               }
             ]
           },
           {
-            "id": "set_1",
+            "id": "stop_boost",
             "title": {
-              "de": "Auf Stufe 1 schalten",
-              "en": "Set Speed 1"
-            },
-            "hint": {
-              "de": "Sendet den getesteten Funkbefehl.",
-              "en": "Sends the tested RF command."
+              "en": "Stop boost",
+              "nl": "Stop boost"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
               }
             ]
           },
           {
-            "id": "set_2",
+            "id": "set_constant_speed",
             "title": {
-              "de": "Auf Stufe 2 schalten",
-              "en": "Set Speed 2"
+              "en": "Set continuous operation",
+              "nl": "Continubedrijf instellen"
             },
-            "hint": {
-              "de": "Sendet den getesteten Funkbefehl.",
-              "en": "Sends the tested RF command."
+            "titleFormatted": {
+              "en": "Set continuous operation [[state]] at [[speed]] rpm",
+              "nl": "Zet continubedrijf [[state]] op [[speed]] rpm"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "title": {
+                  "en": "Continuous operation",
+                  "nl": "Continubedrijf"
+                },
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "on",
+                      "nl": "aan"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "off",
+                      "nl": "uit"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "speed",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid"
+                },
+                "min": 0,
+                "max": 2500,
+                "step": 25,
+                "value": 1000,
+                "placeholder": {
+                  "en": "rpm"
+                }
               }
             ]
           },
           {
-            "id": "set_3",
+            "id": "pause_fan",
             "title": {
-              "de": "Auf Stufe 3 schalten",
-              "en": "Set Speed 3"
+              "en": "Pause the fan",
+              "nl": "Pauzeer de ventilator"
             },
-            "hint": {
-              "de": "Sendet den getesteten Funkbefehl.",
-              "en": "Sends the tested RF command."
+            "titleFormatted": {
+              "en": "Pause the fan for [[minutes]] minutes",
+              "nl": "Pauzeer de ventilator [[minutes]] minuten"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=luxven"
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "title": {
+                  "en": "Duration",
+                  "nl": "Duur"
+                },
+                "min": 1,
+                "max": 240,
+                "step": 1,
+                "value": 60,
+                "placeholder": {
+                  "en": "Minutes",
+                  "nl": "Minuten"
+                }
+              }
+            ]
+          },
+          {
+            "id": "resume_fan",
+            "title": {
+              "en": "Resume the fan",
+              "nl": "Hervat de ventilator"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              }
+            ]
+          },
+          {
+            "id": "set_humidity_sensitivity",
+            "title": {
+              "en": "Set humidity sensitivity",
+              "nl": "Gevoeligheid vochtigheid instellen"
+            },
+            "titleFormatted": {
+              "en": "Set humidity sensitivity to [[level]] at [[speed]] rpm",
+              "nl": "Zet gevoeligheid vochtigheid op [[level]] met [[speed]] rpm"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "dropdown",
+                "name": "level",
+                "title": {
+                  "en": "Sensitivity",
+                  "nl": "Gevoeligheid"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Off",
+                      "nl": "Uit"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "speed",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid"
+                },
+                "min": 0,
+                "max": 2500,
+                "step": 25,
+                "value": 2250,
+                "placeholder": {
+                  "en": "rpm"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_airquality_sensitivity",
+            "title": {
+              "en": "Set air quality sensitivity",
+              "nl": "Gevoeligheid luchtkwaliteit instellen"
+            },
+            "titleFormatted": {
+              "en": "Set air quality sensitivity to [[level]]",
+              "nl": "Zet gevoeligheid luchtkwaliteit op [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "dropdown",
+                "name": "level",
+                "title": {
+                  "en": "Sensitivity",
+                  "nl": "Gevoeligheid"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Off",
+                      "nl": "Uit"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_presence_sensitivity",
+            "title": {
+              "en": "Set presence sensitivity",
+              "nl": "Gevoeligheid aanwezigheid instellen"
+            },
+            "titleFormatted": {
+              "en": "Set presence sensitivity to [[level]]",
+              "nl": "Zet gevoeligheid aanwezigheid op [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
+              },
+              {
+                "type": "dropdown",
+                "name": "level",
+                "title": {
+                  "en": "Sensitivity",
+                  "nl": "Gevoeligheid"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Off",
+                      "nl": "Uit"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium",
+                      "nl": "Gemiddeld"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "sync_now",
+            "title": {
+              "en": "Read the fan now",
+              "nl": "Lees de ventilator nu uit"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=svensa"
               }
             ]
           }
@@ -770,24 +627,53 @@
       },
       "widgets": null,
       "screensavers": [],
-      "homeyCommunityTopicId": null,
+      "homeyCommunityTopicId": 159805,
       "state": "live",
-      "stateChangedAt": "2026-09-23T08:13:06.739Z",
+      "stateChangedAt": "2026-09-23T09:51:43.090Z",
       "bugs": null,
       "homepage": null,
-      "support": null,
+      "support": "https://community.homey.app/t/nieuwe-app-vent-axia-bedien-je-svensa/159805",
       "source": null,
       "contributors": null,
-      "contributing": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "DennisKlatt"
+          }
+        }
+      },
       "permissions": [
-        "homey:wireless:433"
+        "homey:wireless:ble"
       ],
       "changelog": {
-        "de": "Store-Bilder überarbeitet und englischen Fallback für ungültige Stufen ergänzt.",
-        "en": "Refresh App Store imagery and use an English fallback for invalid speeds."
+        "en": "Shorter App Store text, a new tagline, a distinct app image, and clearer pairing instructions.",
+        "nl": "Kortere App Store-tekst, een nieuwe tagline, een eigen app-afbeelding en duidelijkere koppelinstructies."
       },
-      "compatibility": ">=12.0.0",
-      "tags": null,
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "ventaxia",
+          "vent-axia",
+          "svensa",
+          "pureair",
+          "pax",
+          "fan",
+          "ventilation",
+          "ble",
+          "bluetooth"
+        ],
+        "nl": [
+          "ventaxia",
+          "vent-axia",
+          "svensa",
+          "pureair",
+          "pax",
+          "ventilator",
+          "ventilatie",
+          "ble",
+          "bluetooth"
+        ]
+      },
       "platforms": [
         "local"
       ],
@@ -796,18 +682,230 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.1.1",
+    "liveVersion": "1.0.2",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6aadbe7430dc90a8d6e223e2",
+      "id": "6a9bdf22336db3df05accd76",
       "type": "user",
-      "userId": "6161e27f2aaa500bbf1d656a",
-      "name": "Marco Ahlers",
+      "userId": "601540e8d6f4fb0bde6a4210",
+      "name": "Dennis Klatt",
       "verified": false
     },
-    "communityTopicId": null
+    "communityTopicId": 159805
+  },
+  {
+    "id": "com.drchip666.mqttbridge",
+    "rating": null,
+    "liveBuild": {
+      "id": 5,
+      "name": {
+        "en": "MQTT Bridge",
+        "da": "MQTT Bro"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "MQTT Bridge quietly mirrors messages between two MQTT brokers, so devices and services that live outside the Homey ecosystem, such as a solar inverter monitor, can talk to your Flows in real time. Messages travel in both directions using topic rules you set yourself, so only the data you care about crosses over, and a built-in safeguard keeps the two brokers from talking over each other in an endless loop.\n\nOnce connected, values published on the other broker instantly become available to Homey Flows, and Flows can publish values straight back, so your energy monitor or other MQTT-enabled equipment feels like a native part of your smart home.\n",
+        "da": "MQTT Bridge spejler stille og roligt beskeder mellem to MQTT-brokere, så enheder og tjenester uden for Homeys økosystem, som fx en overvågningsenhed til en solcelleinverter, kan tale sammen med dine Flows i realtid. Beskeder sendes i begge retninger ud fra topic-regler du selv bestemmer, så kun den data du er interesseret i krydser over, og en indbygget sikkerhedsmekanisme forhindrer de to brokere i at tale i munden på hinanden i en uendelig løkke.\n\nNår forbindelsen er oprettet, bliver værdier udgivet på den anden broker øjeblikkeligt tilgængelige for Homey Flows, og Flows kan sende værdier direkte tilbage, så din energimåler eller andet MQTT-udstyr føles som en naturlig del af dit smarte hjem.\n"
+      },
+      "description": {
+        "en": "Keep every MQTT broker on your network perfectly in sync.",
+        "da": "Hold alle dine MQTT-brokere perfekt synkroniseret."
+      },
+      "category": "tools",
+      "brandColor": "#3B6EA5",
+      "icon": "https://apps.homeycdn.net/app/com.drchip666.mqttbridge/5/45c826ed-4dfd-4a04-bb1d-5c18d1975e2c/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.drchip666.mqttbridge/5/45c826ed-4dfd-4a04-bb1d-5c18d1975e2c/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.drchip666.mqttbridge/5/45c826ed-4dfd-4a04-bb1d-5c18d1975e2c/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": [
+          {
+            "id": "message_bridged",
+            "title": {
+              "en": "A message was bridged",
+              "da": "En besked blev sendt over broen"
+            },
+            "tokens": [
+              {
+                "name": "direction",
+                "type": "string",
+                "title": {
+                  "en": "Direction",
+                  "da": "Retning"
+                },
+                "example": "remote_to_local"
+              },
+              {
+                "name": "topic",
+                "type": "string",
+                "title": {
+                  "en": "Topic",
+                  "da": "Emne (topic)"
+                },
+                "example": "solar_assistant/total/battery_state_of_charge/state"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Message",
+                  "da": "Besked"
+                },
+                "example": "87"
+              }
+            ]
+          }
+        ],
+        "conditions": null,
+        "actions": [
+          {
+            "id": "publish_local",
+            "title": {
+              "en": "Publish to local Homey broker",
+              "da": "Udgiv til den lokale Homey-broker"
+            },
+            "titleFormatted": {
+              "en": "Publish [[message]] on [[topic]] to local Homey broker, retain [[retain]]",
+              "da": "Udgiv [[message]] på [[topic]] til den lokale Homey-broker, retain [[retain]]"
+            },
+            "args": [
+              {
+                "name": "topic",
+                "type": "text",
+                "title": {
+                  "en": "Topic",
+                  "da": "Emne (topic)"
+                },
+                "placeholder": {
+                  "en": "homey/example",
+                  "da": "homey/eksempel"
+                }
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "da": "Besked"
+                }
+              },
+              {
+                "name": "retain",
+                "type": "checkbox",
+                "title": {
+                  "en": "Retain",
+                  "da": "Behold (retain)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "publish_remote",
+            "title": {
+              "en": "Publish to remote broker",
+              "da": "Udgiv til den eksterne broker"
+            },
+            "titleFormatted": {
+              "en": "Publish [[message]] on [[topic]] to remote broker, retain [[retain]]",
+              "da": "Udgiv [[message]] på [[topic]] til den eksterne broker, retain [[retain]]"
+            },
+            "args": [
+              {
+                "name": "topic",
+                "type": "text",
+                "title": {
+                  "en": "Topic",
+                  "da": "Emne (topic)"
+                },
+                "placeholder": {
+                  "en": "solar_assistant/example",
+                  "da": "solar_assistant/eksempel"
+                }
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "da": "Besked"
+                }
+              },
+              {
+                "name": "retain",
+                "type": "checkbox",
+                "title": {
+                  "en": "Retain",
+                  "da": "Behold (retain)"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159424,
+      "state": "live",
+      "stateChangedAt": "2026-09-23T10:02:18.412Z",
+      "bugs": "https://github.com/DrChip666/homey-mqtt-bridge/issues",
+      "homepage": null,
+      "support": "https://github.com/DrChip666/homey-mqtt-bridge/issues",
+      "source": "https://github.com/DrChip666/homey-mqtt-bridge",
+      "contributors": {
+        "developers": [
+          {
+            "name": "Claude (Anthropic), AI coding assistant"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "MortenBech241"
+          }
+        }
+      },
+      "permissions": [],
+      "changelog": {
+        "en": "Add comunity topic"
+      },
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "mqtt",
+          "bridge",
+          "broker"
+        ],
+        "da": [
+          "mqtt",
+          "bro",
+          "broker"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a9dc466336db3df05ad31c1",
+      "type": "user",
+      "userId": "6894d16591e117ddd321b50e",
+      "name": "Morten Bech",
+      "verified": false
+    },
+    "communityTopicId": 159424
   }
 ]
