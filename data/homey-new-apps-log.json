@@ -1,41 +1,5 @@
 [
   {
-    "appId": "com.wemolocal",
-    "name": "Wemo",
-    "developerName": "Antoine Chaulieu",
-    "developerId": "6a8aabbfc6a80eeabce82a73",
-    "version": "0.4.13",
-    "sourceRepository": "",
-    "publishedAt": "2026-09-18T15:20:11.997Z",
-    "updatedAt": "2026-09-18T15:20:11.997Z",
-    "communityTopicId": 159683,
-    "discoveredAt": "2026-09-18T15:20:11.997Z"
-  },
-  {
-    "appId": "no.joymyr.sesam-pay",
-    "name": "Sesam Pay",
-    "developerName": "Jon Harald Øymyr",
-    "developerId": "689fa6c8b4208a20554af944",
-    "version": "1.0.10",
-    "sourceRepository": "https://github.com/joymyr/sesam_pay",
-    "publishedAt": "2026-09-18T15:20:11.997Z",
-    "updatedAt": "2026-09-18T15:20:11.997Z",
-    "communityTopicId": 159405,
-    "discoveredAt": "2026-09-18T15:20:11.997Z"
-  },
-  {
-    "appId": "nl.rvginkel.tickertapes",
-    "name": "Ticker Tapes",
-    "developerName": "Rene van Ginkel",
-    "developerId": "6aa2d6504b2b66c115905e09",
-    "version": "0.1.2",
-    "sourceRepository": "",
-    "publishedAt": "2026-09-19T08:08:54.962Z",
-    "updatedAt": "2026-09-19T08:08:54.962Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-09-19T08:08:54.962Z"
-  },
-  {
     "appId": "net.weejewel.sshclient",
     "name": "SSH Client",
     "developerName": "Emile Nijssen",
@@ -166,5 +130,53 @@
     "updatedAt": "2026-09-23T15:41:29.708Z",
     "communityTopicId": 159424,
     "discoveredAt": "2026-09-23T15:41:29.708Z"
+  },
+  {
+    "appId": "com.anker.solix",
+    "name": "Anker SOLIX",
+    "developerName": "Anker Solix",
+    "developerId": "6a851214c6a80eeabce66d45",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-24T08:33:49.632Z",
+    "updatedAt": "2026-09-24T08:33:49.632Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-24T08:33:49.632Z"
+  },
+  {
+    "appId": "com.onlycat.cloud",
+    "name": "OnlyCat",
+    "developerName": "Love Thyresson",
+    "developerId": "67718e3ee5ac96c52a6ba4e0",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/lovethyresson/com.onlycat.cloud",
+    "publishedAt": "2026-09-24T08:33:51.661Z",
+    "updatedAt": "2026-09-24T08:33:51.661Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-24T08:33:49.632Z"
+  },
+  {
+    "appId": "nl.smarthomeassistent.bookswipe",
+    "name": "BookSwipe",
+    "developerName": "Smarthome Assistent",
+    "developerId": "673de6a7065f03b3ce39d234",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-24T08:33:52.617Z",
+    "updatedAt": "2026-09-24T08:33:52.617Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-24T08:33:49.632Z"
+  },
+  {
+    "appId": "com.cedric07.presencefusion",
+    "name": "Presence Fusion",
+    "developerName": "Cédric Andrietti",
+    "developerId": "6a6e465f32b0f6166a4e6270",
+    "version": "1.1.3",
+    "sourceRepository": "https://github.com/cedric07/homey-presence-fusion",
+    "publishedAt": "2026-09-24T08:33:53.418Z",
+    "updatedAt": "2026-09-24T08:33:53.418Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-24T08:33:49.632Z"
   }
 ]

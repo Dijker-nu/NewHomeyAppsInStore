@@ -2113,10 +2113,10 @@
     "name": "Satel Integra Alarm",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "4.0.0",
+    "version": "5.2.1",
     "sourceRepository": "https://github.com/mickelluiten/com.satelintegra",
     "publishedAt": "2026-09-10T21:25:07.970Z",
-    "updatedAt": "2026-09-10T21:25:07.970Z",
+    "updatedAt": "2026-09-24T08:34:40.834Z",
     "communityTopicId": 36654
   },
   {
@@ -8724,10 +8724,10 @@
     "name": "Happy Spot Price",
     "developerName": "Fredrik Eidlert",
     "developerId": "6332db19424625865593b51f",
-    "version": "3.2.0",
+    "version": "4.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:30:57.572Z",
-    "updatedAt": "2026-09-10T21:30:57.572Z",
+    "updatedAt": "2026-09-24T08:34:40.835Z",
     "communityTopicId": null
   },
   {
@@ -9681,10 +9681,10 @@
     "name": "MCOHome",
     "developerName": "MCOHome Technology Co.,Ltd",
     "developerId": "69e702dcfb6dd7068a7c3cbe",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:31:51.759Z",
-    "updatedAt": "2026-09-10T21:31:51.759Z",
+    "updatedAt": "2026-09-24T08:34:40.835Z",
     "communityTopicId": 159
   },
   {
@@ -9736,10 +9736,10 @@
     "name": "Apple TV & HomePod",
     "developerName": "Bas Milius",
     "developerId": "67feb54bad3776de40f10636",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "sourceRepository": "https://github.com/basmilius/homey-apple",
     "publishedAt": "2026-09-10T21:31:53.935Z",
-    "updatedAt": "2026-09-10T21:31:53.935Z",
+    "updatedAt": "2026-09-24T08:34:40.835Z",
     "communityTopicId": 147663
   },
   {
@@ -10209,10 +10209,10 @@
     "name": "everHome",
     "developerName": "everHome GmbH",
     "developerId": "6849861b9181f12fe14cd22f",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:32:27.782Z",
-    "updatedAt": "2026-09-10T21:32:27.782Z",
+    "updatedAt": "2026-09-24T08:34:40.835Z",
     "communityTopicId": null
   },
   {
@@ -11166,10 +11166,10 @@
     "name": "Solax",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "4.1.4",
+    "version": "4.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:02.923Z",
-    "updatedAt": "2026-09-10T21:33:02.923Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": 66471
   },
   {
@@ -11914,10 +11914,10 @@
     "name": "tado°",
     "developerName": "Athom B.V.",
     "developerId": "6a84336d4430c25338c20073",
-    "version": "1.5.2",
+    "version": "1.5.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:39.193Z",
-    "updatedAt": "2026-09-10T21:33:39.193Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": null
   },
   {
@@ -12915,10 +12915,10 @@
     "name": "frient",
     "developerName": "frient A/S",
     "developerId": "5ef3a8d3bded7e23093d549d",
-    "version": "2.8.1",
+    "version": "3.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:26.853Z",
-    "updatedAt": "2026-09-10T21:34:26.853Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": 76161
   },
   {
@@ -13421,10 +13421,10 @@
     "name": "Music Assistant",
     "developerName": "Cyril Hendriks",
     "developerId": "6996ebeccd19af4229e539d5",
-    "version": "2.0.4",
+    "version": "2.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:45.107Z",
-    "updatedAt": "2026-09-10T21:34:45.107Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": 151738
   },
   {
@@ -13773,10 +13773,10 @@
     "name": "IMOU Life",
     "developerName": "Remco Gykm",
     "developerId": "6a208efc095776559e79a6e6",
-    "version": "0.4.10",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:00.477Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": null
   },
   {
@@ -14838,12 +14838,12 @@
   {
     "appId": "be.functor.skoda",
     "name": "Skoda",
-    "developerName": "Kenny Moens",
-    "developerId": "66ffa09c645b24bd5bc1b47f",
+    "developerName": "Škoda Auto",
+    "developerId": "6aa8fe2a3bf2cee70abf525a",
     "version": "0.5.1",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/skoda",
     "publishedAt": "2026-09-10T21:35:51.374Z",
-    "updatedAt": "2026-09-10T21:35:51.374Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": 152568
   },
   {
@@ -15830,10 +15830,10 @@
     "name": "LOQED",
     "developerName": "LOQED BV",
     "developerId": "5f846566d56d138aba4529d7",
-    "version": "3.5.4",
+    "version": "3.5.6",
     "sourceRepository": "https://github.com/loqed-nl/homey-app",
     "publishedAt": "2026-09-10T21:36:35.748Z",
-    "updatedAt": "2026-09-23T08:41:41.163Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": 89816
   },
   {
@@ -15907,10 +15907,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "2.17.3",
+    "version": "2.17.5",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.devicecapabilities/",
     "publishedAt": "2026-09-10T21:36:38.669Z",
-    "updatedAt": "2026-09-19T08:09:35.376Z",
+    "updatedAt": "2026-09-24T08:34:40.836Z",
     "communityTopicId": 43287
   },
   {
@@ -16083,10 +16083,10 @@
     "name": "Nest Protect",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.3.5",
+    "version": "1.3.7",
     "sourceRepository": "https://github.com/torp93/homey-nest-protect",
     "publishedAt": "2026-09-10T21:36:42.021Z",
-    "updatedAt": "2026-09-23T08:41:41.163Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": null
   },
   {
@@ -16358,10 +16358,10 @@
     "name": "Teslemetry",
     "developerName": "Teslemetry .com",
     "developerId": "694912082f0b99832c0311e8",
-    "version": "1.3.0",
+    "version": "1.4.1",
     "sourceRepository": "https://github.com/teslemetry/homey",
     "publishedAt": "2026-09-10T21:36:54.538Z",
-    "updatedAt": "2026-09-10T21:36:54.538Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 147636
   },
   {
@@ -16468,10 +16468,10 @@
     "name": "Tuya",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.5.8",
+    "version": "1.5.9",
     "sourceRepository": "https://github.com/Drenso/com.tuya2",
     "publishedAt": "2026-09-10T21:36:57.002Z",
-    "updatedAt": "2026-09-10T21:36:57.002Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 146735
   },
   {
@@ -17271,10 +17271,10 @@
     "name": "Ultimate EMS",
     "developerName": "Menno De Braak",
     "developerId": "6a2d9d28771c1d03c09e8701",
-    "version": "2.4.9",
+    "version": "2.5.94",
     "sourceRepository": "https://github.com/b2hvty299s-ux/com.ems.homey",
     "publishedAt": "2026-09-10T21:37:40.238Z",
-    "updatedAt": "2026-09-10T21:37:40.238Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": null
   },
   {
@@ -17458,10 +17458,10 @@
     "name": "Ratio Electric Charger",
     "developerName": "Ron van de Graaf",
     "developerId": "6a985a8f336db3df05abd814",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:46.449Z",
-    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 159271
   },
   {
@@ -17678,10 +17678,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.6.0",
+    "version": "3.7.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-22T08:39:37.425Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 147496
   },
   {
@@ -17733,10 +17733,10 @@
     "name": "Nordlux Smart Light",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.6",
+    "version": "1.4.2",
     "sourceRepository": "https://github.com/smarthomesven/homey-nordlux",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-14T09:04:17.461Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 158091
   },
   {
@@ -18041,10 +18041,10 @@
     "name": "Android Automotive",
     "developerName": "Simone Di Maio",
     "developerId": "68ceb8fccbb72125ed109820",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "sourceRepository": "https://github.com/s-dimaio/com.dimapp.aaos",
     "publishedAt": "2026-09-10T21:38:14.026Z",
-    "updatedAt": "2026-09-10T21:38:14.026Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 155279
   },
   {
@@ -18151,10 +18151,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.681",
+    "version": "1.0.689",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-21T09:05:42.257Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": 156098
   },
   {
@@ -18371,10 +18371,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.7.15",
+    "version": "0.8.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-09-22T08:39:37.426Z",
+    "updatedAt": "2026-09-24T08:34:40.837Z",
     "communityTopicId": null
   },
   {
@@ -18563,5 +18563,49 @@
     "publishedAt": "2026-09-23T15:41:29.708Z",
     "updatedAt": "2026-09-23T15:41:29.708Z",
     "communityTopicId": 159424
+  },
+  {
+    "appId": "com.anker.solix",
+    "name": "Anker SOLIX",
+    "developerName": "Anker Solix",
+    "developerId": "6a851214c6a80eeabce66d45",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-24T08:33:49.632Z",
+    "updatedAt": "2026-09-24T08:33:49.632Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.onlycat.cloud",
+    "name": "OnlyCat",
+    "developerName": "Love Thyresson",
+    "developerId": "67718e3ee5ac96c52a6ba4e0",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/lovethyresson/com.onlycat.cloud",
+    "publishedAt": "2026-09-24T08:33:51.661Z",
+    "updatedAt": "2026-09-24T08:33:51.661Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.smarthomeassistent.bookswipe",
+    "name": "BookSwipe",
+    "developerName": "Smarthome Assistent",
+    "developerId": "673de6a7065f03b3ce39d234",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-24T08:33:52.617Z",
+    "updatedAt": "2026-09-24T08:33:52.617Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.cedric07.presencefusion",
+    "name": "Presence Fusion",
+    "developerName": "Cédric Andrietti",
+    "developerId": "6a6e465f32b0f6166a4e6270",
+    "version": "1.1.3",
+    "sourceRepository": "https://github.com/cedric07/homey-presence-fusion",
+    "publishedAt": "2026-09-24T08:33:53.418Z",
+    "updatedAt": "2026-09-24T08:33:53.418Z",
+    "communityTopicId": null
   }
 ]
