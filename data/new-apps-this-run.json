@@ -1,187 +1,68 @@
 [
   {
-    "id": "com.chargee.sparky",
+    "id": "com.sgsmart.csrmesh",
     "rating": null,
     "liveBuild": {
-      "id": 13,
+      "id": 8,
       "name": {
-        "en": "Chargee Sparky",
-        "nl": "Chargee Sparky"
+        "en": "SG LEDDim",
+        "no": "SG LEDDim"
       },
-      "version": "1.0.13",
+      "version": "2.0.9",
       "readme": {
-        "en": "Unlock your smart meter data in Homey, by accessing your Sparky P1 meter data through the local API.\nThe app supports all versions of the Sparky, with firmware 95 or higher.\n"
+        "en": "Homey Pro talks to first-generation CSRmesh wall dimmers over Bluetooth, so no gateway or bridge is needed. Pairing scans for nodes in range and lists them by the name they broadcast; add one device per dimmer, and a group device if you want one tile that drives all of them together. On/off and dim level are supported, and Homey can poll the dimmers so it follows along when someone uses the wall switch. Commands are encrypted with your installation's network passphrase - most use 1234, and it can be changed in the device settings.\n\nRequires Homey Pro; Bluetooth LE is not available to apps on Homey Bridge. This app is unofficial and is not affiliated with, endorsed by or supported by SG, and it does not work with SG Smart 3.0. It was written with the help of AI, on top of protocol work that is not mine: nkaminski reverse-engineered CSRmesh itself, and fromm1990, einaros and erlwes worked out that these dimmers speak it. Those people shared what they found, which is why this app is possible at all - so it is published here for the same reason, rather than kept on one Homey. The source is open.\n"
       },
       "description": {
-        "en": "Unlock the full potential of smart energy through Chargee Sparky and Homey.",
-        "nl": "Unlock het volledige potentieel van slimme energie via Chargee Sparky en Homey."
+        "en": "Gateway-free Bluetooth dimming for the lights that were smart before the hub arrived.",
+        "no": "Bluetooth-dimming uten gateway, for lysene som var smarte før smarthuset kom."
       },
-      "category": "energy",
-      "brandColor": "#1D1543",
-      "icon": "https://apps.homeycdn.net/app/com.chargee.sparky/13/82a7e286-e370-4335-8720-74a6123d33cb/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.chargee.sparky/13/82a7e286-e370-4335-8720-74a6123d33cb/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.chargee.sparky/13/82a7e286-e370-4335-8720-74a6123d33cb/assets/images/large.png",
+      "category": "lights",
+      "brandColor": "#E30613",
+      "icon": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/assets/images/large.png",
       "drivers": [
         {
-          "id": "sparky",
+          "id": "sg_group",
           "name": {
-            "en": "Sparky",
-            "nl": "Sparky"
+            "en": "Group",
+            "no": "Gruppe"
           },
-          "class": "sensor",
+          "class": "light",
           "capabilities": [
-            "meter_power",
-            "meter_gas",
-            "measure_power",
-            "measure_voltage.L1",
-            "measure_voltage.L2",
-            "measure_voltage.L3",
-            "measure_current.L1",
-            "measure_current.L2",
-            "measure_current.L3",
-            "meter_power.imported",
-            "meter_power.exported",
-            "meter_power.consumedPeak",
-            "meter_power.consumedOffPeak",
-            "meter_power.producedPeak",
-            "meter_power.producedOffPeak",
-            "meter_power.produced",
-            "meter_power.consumed"
+            "onoff",
+            "dim"
           ],
-          "capabilitiesOptions": {
-            "meter_power": {
-              "title": {
-                "en": "Total consumption",
-                "nl": "Totale elektriciteitsverbruik",
-                "unit": "kWh"
-              }
-            },
-            "measure_power": {
-              "title": {
-                "en": "Power",
-                "nl": "Vermogen",
-                "unit": "W"
-              }
-            },
-            "meter_gas": {
-              "title": {
-                "en": "Total gas consumption",
-                "nl": "Totale gasverbruik",
-                "unit": "m³"
-              }
-            },
-            "measure_current.L1": {
-              "title": {
-                "en": "Current L1",
-                "nl": "Stroomsterkte fase 1",
-                "unit": "A"
-              }
-            },
-            "measure_current.L2": {
-              "title": {
-                "en": "Current L2",
-                "nl": "Stroomsterkte fase ",
-                "unit": "A"
-              }
-            },
-            "measure_current.L3": {
-              "title": {
-                "en": "Current L3",
-                "nl": "Stroomsterkte fase 3"
-              }
-            },
-            "measure_voltage.L1": {
-              "title": {
-                "en": "Voltage L1",
-                "nl": "Spanning fase 1",
-                "unit": "V"
-              }
-            },
-            "measure_voltage.L2": {
-              "title": {
-                "en": "Voltage L2",
-                "nl": "Spanning fase 2",
-                "unit": "V"
-              }
-            },
-            "measure_voltage.L3": {
-              "title": {
-                "en": "Voltage L3",
-                "nl": "Spanning fase 3",
-                "unit": "V"
-              }
-            },
-            "meter_power.imported": {
-              "title": {
-                "en": "Imported energy",
-                "nl": "Totaal geleverde energie",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.exported": {
-              "title": {
-                "en": "Exported energy",
-                "nl": "Totaal teruggeleverde energie",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.consumedPeak": {
-              "title": {
-                "en": "Consumed peak",
-                "nl": "Totaal verbruik Piek",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.consumedOffPeak": {
-              "title": {
-                "en": "Total consumed off peak",
-                "nl": "Totaal verbruik Dal",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.producedPeak": {
-              "title": {
-                "en": "Total produced peak",
-                "nl": "Totale opwek piek",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.producedOffPeak": {
-              "title": {
-                "en": "Total produced off peak",
-                "nl": "Totaal opwek dal",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.produced": {
-              "title": {
-                "en": "Total produced energy",
-                "nl": "Totaal opgewekte energie",
-                "unit": "kWh"
-              }
-            },
-            "meter_power.consumed": {
-              "title": {
-                "en": "Consumed energy",
-                "nl": "Totaal geleverde energie",
-                "unit": "kWh"
-              }
-            }
-          },
-          "energy": {
-            "cumulative": true,
-            "cumulativeImportedCapability": "meter_power.imported",
-            "cumulativeExportedCapability": "meter_power.exported"
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.chargee.sparky/13/82a7e286-e370-4335-8720-74a6123d33cb/drivers/sparky/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.chargee.sparky/13/82a7e286-e370-4335-8720-74a6123d33cb/drivers/sparky/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_group/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_group/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "lan"
+            "ble"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.chargee.sparky/13/82a7e286-e370-4335-8720-74a6123d33cb/drivers/sparky/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_group/assets/icon.svg"
+        },
+        {
+          "id": "sg_mesh",
+          "name": {
+            "en": "Dimmer",
+            "no": "Dimmer"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_mesh/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_mesh/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "ble"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_mesh/assets/icon.svg"
         }
       ],
       "flow": {
@@ -191,34 +72,31 @@
       },
       "widgets": null,
       "screensavers": [],
-      "homeyCommunityTopicId": 121732,
+      "homeyCommunityTopicId": 159464,
       "state": "live",
-      "stateChangedAt": "2026-03-09T20:09:27.822Z",
-      "bugs": "https://github.com/chargee-energy/sparky-homey/issues",
-      "homepage": "https://chargee.energy",
-      "support": "mailto:support@chargee.energy",
-      "source": "https://github.com/chargee-energy/sparky-homey",
-      "contributors": null,
-      "contributing": null,
-      "permissions": [],
-      "changelog": {
-        "en": "Added mDNS + new local API for Sparky"
-      },
-      "compatibility": ">=5.0.0",
-      "tags": {
-        "en": [
-          "smart energy",
-          "smart meter",
-          "P1",
-          "realtime"
+      "stateChangedAt": "2026-09-24T10:13:16.597Z",
+      "bugs": "https://github.com/fiskentnt/com.sgsmart.csrmesh/issues",
+      "homepage": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
+      "support": "https://github.com/fiskentnt/com.sgsmart.csrmesh/issues",
+      "source": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
+      "contributors": {
+        "developers": [
+          {
+            "name": "Trond"
+          }
         ],
-        "nl": [
-          "slimme energie",
-          "slimme meter",
-          "P1",
-          "realtime"
-        ]
+        "translators": []
       },
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:ble"
+      ],
+      "changelog": {
+        "en": "The group device now works. It drives the dimmers you pick when you add it, and you can change them under Repair; switching it on brings each dimmer back to its own level. New experimental app setting: keep the Bluetooth connection open for up to a minute after a command, so the next commands are fast.",
+        "no": "Gruppeenheten virker nå. Den styrer de dimmerne du velger når du legger den til, og du kan endre dem under Reparer. Når du slår den på, går hver dimmer tilbake til sitt eget nivå. Ny eksperimentell innstilling i appen: hold Bluetooth-tilkoblingen åpen i opptil ett minutt etter en kommando, så går de neste kommandoene raskt."
+      },
+      "compatibility": ">=12.0.0",
+      "tags": null,
       "platforms": [
         "local"
       ],
@@ -227,18 +105,18 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.13",
+    "liveVersion": "2.0.9",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "67434f6a065f03b3ce3a9aec",
+      "id": "6a9f88284b2b66c1158ea7af",
       "type": "user",
-      "userId": "66193976e8b95bdf7f366204",
-      "name": "Chargee B.V.",
-      "verified": true
+      "userId": "60e88d8922c7780c0ce7de0b",
+      "name": "Trond Bildøy",
+      "verified": false
     },
-    "communityTopicId": 121732
+    "communityTopicId": 159464
   }
 ]

@@ -190,5 +190,17 @@
     "updatedAt": "2026-09-24T08:49:10.469Z",
     "communityTopicId": 121732,
     "discoveredAt": "2026-09-24T08:49:10.469Z"
+  },
+  {
+    "appId": "com.sgsmart.csrmesh",
+    "name": "SG LEDDim",
+    "developerName": "Trond Bildøy",
+    "developerId": "6a9f88284b2b66c1158ea7af",
+    "version": "2.0.9",
+    "sourceRepository": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
+    "publishedAt": "2026-09-24T16:02:23.949Z",
+    "updatedAt": "2026-09-24T16:02:23.949Z",
+    "communityTopicId": 159464,
+    "discoveredAt": "2026-09-24T16:02:23.949Z"
   }
 ]
