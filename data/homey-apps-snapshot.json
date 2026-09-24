@@ -18607,5 +18607,16 @@
     "publishedAt": "2026-09-24T08:33:53.418Z",
     "updatedAt": "2026-09-24T08:33:53.418Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.chargee.sparky",
+    "name": "Chargee Sparky",
+    "developerName": "Chargee B.V.",
+    "developerId": "67434f6a065f03b3ce3a9aec",
+    "version": "1.0.13",
+    "sourceRepository": "https://github.com/chargee-energy/sparky-homey",
+    "publishedAt": "2026-09-24T08:49:10.469Z",
+    "updatedAt": "2026-09-24T08:49:10.469Z",
+    "communityTopicId": 121732
   }
 ]
