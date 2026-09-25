@@ -202,5 +202,17 @@
     "updatedAt": "2026-09-24T16:02:23.949Z",
     "communityTopicId": 159464,
     "discoveredAt": "2026-09-24T16:02:23.949Z"
+  },
+  {
+    "appId": "com.lepro",
+    "name": "Lepro",
+    "developerName": "Sven Serlier",
+    "developerId": "68e268c515677f0f51ffe6f4",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/smarthomesven/homey-lepro",
+    "publishedAt": "2026-09-25T08:55:34.645Z",
+    "updatedAt": "2026-09-25T08:55:34.645Z",
+    "communityTopicId": 159951,
+    "discoveredAt": "2026-09-25T08:55:34.645Z"
   }
 ]

@@ -1,68 +1,48 @@
 [
   {
-    "id": "com.sgsmart.csrmesh",
+    "id": "com.lepro",
     "rating": null,
     "liveBuild": {
-      "id": 8,
+      "id": 2,
       "name": {
-        "en": "SG LEDDim",
-        "no": "SG LEDDim"
+        "en": "Lepro"
       },
-      "version": "2.0.9",
+      "version": "1.0.1",
       "readme": {
-        "en": "Homey Pro talks to first-generation CSRmesh wall dimmers over Bluetooth, so no gateway or bridge is needed. Pairing scans for nodes in range and lists them by the name they broadcast; add one device per dimmer, and a group device if you want one tile that drives all of them together. On/off and dim level are supported, and Homey can poll the dimmers so it follows along when someone uses the wall switch. Commands are encrypted with your installation's network passphrase - most use 1234, and it can be changed in the device settings.\n\nRequires Homey Pro; Bluetooth LE is not available to apps on Homey Bridge. This app is unofficial and is not affiliated with, endorsed by or supported by SG, and it does not work with SG Smart 3.0. It was written with the help of AI, on top of protocol work that is not mine: nkaminski reverse-engineered CSRmesh itself, and fromm1990, einaros and erlwes worked out that these dimmers speak it. Those people shared what they found, which is why this app is possible at all - so it is published here for the same reason, rather than kept on one Homey. The source is open.\n"
+        "en": "Add your Lepro lights to Homey and use all of your lights in your Flows. If any light that you use is missing, please let me know in the forum topic! Note that Lepro only allows one connection per account, so it's recommended to create a second Lepro account and share your devices with that account using Lepro's \"Share\" feature. This way, you can keep using both Homey and the Lepro mobile app."
       },
       "description": {
-        "en": "Gateway-free Bluetooth dimming for the lights that were smart before the hub arrived.",
-        "no": "Bluetooth-dimming uten gateway, for lysene som var smarte før smarthuset kom."
+        "en": "Designed for Future Spaces"
       },
       "category": "lights",
-      "brandColor": "#E30613",
-      "icon": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/assets/images/large.png",
+      "brandColor": "#FB7000",
+      "icon": "https://apps.homeycdn.net/app/com.lepro/2/2bc338ce-1c22-4f4c-acf3-7239314a654e/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.lepro/2/2bc338ce-1c22-4f4c-acf3-7239314a654e/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.lepro/2/2bc338ce-1c22-4f4c-acf3-7239314a654e/assets/images/large.png",
       "drivers": [
         {
-          "id": "sg_group",
+          "id": "b3",
           "name": {
-            "en": "Group",
-            "no": "Gruppe"
+            "en": "B3"
           },
           "class": "light",
           "capabilities": [
             "onoff",
-            "dim"
+            "dim",
+            "light_saturation",
+            "light_temperature",
+            "light_hue",
+            "light_mode"
           ],
-          "imageSmall": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_group/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_group/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/com.lepro/2/2bc338ce-1c22-4f4c-acf3-7239314a654e/drivers/b3/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lepro/2/2bc338ce-1c22-4f4c-acf3-7239314a654e/drivers/b3/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "ble"
+            "cloud"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_group/assets/icon.svg"
-        },
-        {
-          "id": "sg_mesh",
-          "name": {
-            "en": "Dimmer",
-            "no": "Dimmer"
-          },
-          "class": "light",
-          "capabilities": [
-            "onoff",
-            "dim"
-          ],
-          "imageSmall": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_mesh/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_mesh/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "ble"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.sgsmart.csrmesh/8/0f7010eb-e3ce-4349-837d-b3a9ec7a72ee/drivers/sg_mesh/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/com.lepro/2/2bc338ce-1c22-4f4c-acf3-7239314a654e/drivers/b3/assets/icon.svg"
         }
       ],
       "flow": {
@@ -72,30 +52,22 @@
       },
       "widgets": null,
       "screensavers": [],
-      "homeyCommunityTopicId": 159464,
+      "homeyCommunityTopicId": 159951,
       "state": "live",
-      "stateChangedAt": "2026-09-24T10:13:16.597Z",
-      "bugs": "https://github.com/fiskentnt/com.sgsmart.csrmesh/issues",
-      "homepage": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
-      "support": "https://github.com/fiskentnt/com.sgsmart.csrmesh/issues",
-      "source": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
-      "contributors": {
-        "developers": [
-          {
-            "name": "Trond"
-          }
-        ],
-        "translators": []
-      },
+      "stateChangedAt": "2026-09-25T08:50:56.292Z",
+      "bugs": "https://github.com/smarthomesven/homey-lepro/issues",
+      "homepage": null,
+      "support": null,
+      "source": "https://github.com/smarthomesven/homey-lepro",
+      "contributors": null,
       "contributing": null,
       "permissions": [
         "homey:wireless:ble"
       ],
       "changelog": {
-        "en": "The group device now works. It drives the dimmers you pick when you add it, and you can change them under Repair; switching it on brings each dimmer back to its own level. New experimental app setting: keep the Bluetooth connection open for up to a minute after a command, so the next commands are fast.",
-        "no": "Gruppeenheten virker nå. Den styrer de dimmerne du velger når du legger den til, og du kan endre dem under Reparer. Når du slår den på, går hver dimmer tilbake til sitt eget nivå. Ny eksperimentell innstilling i appen: hold Bluetooth-tilkoblingen åpen i opptil ett minutt etter en kommando, så går de neste kommandoene raskt."
+        "en": "Added forum topic id"
       },
-      "compatibility": ">=12.0.0",
+      "compatibility": ">=12.4.0",
       "tags": null,
       "platforms": [
         "local"
@@ -105,18 +77,18 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "2.0.9",
+    "liveVersion": "1.0.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a9f88284b2b66c1158ea7af",
+      "id": "68e268c515677f0f51ffe6f4",
       "type": "user",
-      "userId": "60e88d8922c7780c0ce7de0b",
-      "name": "Trond Bildøy",
+      "userId": "61a14172451f950bc20cc18a",
+      "name": "Sven Serlier",
       "verified": false
     },
-    "communityTopicId": 159464
+    "communityTopicId": 159951
   }
 ]
