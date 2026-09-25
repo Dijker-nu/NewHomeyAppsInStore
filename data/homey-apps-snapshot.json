@@ -18640,5 +18640,16 @@
     "publishedAt": "2026-09-25T08:55:34.645Z",
     "updatedAt": "2026-09-25T08:55:34.645Z",
     "communityTopicId": 159951
+  },
+  {
+    "appId": "com.kircuvaloglu.macmonitor",
+    "name": "Mac Monitor",
+    "developerName": "Guray Kircuvaloglu",
+    "developerId": "6998c049cd19af4229e59694",
+    "version": "1.5.2",
+    "sourceRepository": "https://github.com/kircuvaloglu/homey-mac-monitor",
+    "publishedAt": "2026-09-25T16:02:45.769Z",
+    "updatedAt": "2026-09-25T16:02:45.769Z",
+    "communityTopicId": 159695
   }
 ]
