@@ -8724,10 +8724,10 @@
     "name": "Happy Spot Price",
     "developerName": "Fredrik Eidlert",
     "developerId": "6332db19424625865593b51f",
-    "version": "4.0.1",
+    "version": "4.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:30:57.572Z",
-    "updatedAt": "2026-09-24T08:34:40.835Z",
+    "updatedAt": "2026-09-27T09:22:27.374Z",
     "communityTopicId": null
   },
   {
@@ -13421,10 +13421,10 @@
     "name": "Music Assistant",
     "developerName": "Cyril Hendriks",
     "developerId": "6996ebeccd19af4229e539d5",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:45.107Z",
-    "updatedAt": "2026-09-24T08:34:40.836Z",
+    "updatedAt": "2026-09-27T09:22:27.375Z",
     "communityTopicId": 151738
   },
   {
@@ -13815,12 +13815,12 @@
   {
     "appId": "com.maxitrol.fireplace",
     "name": "Maxitrol",
-    "developerName": "Michael D",
+    "developerName": "Michael Dove",
     "developerId": "5e7691be244cb068de8df0f8",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "sourceRepository": "https://github.com/michaeldove/homey-maxitrol-fireplace",
     "publishedAt": "2026-09-10T21:35:12.286Z",
-    "updatedAt": "2026-09-10T21:35:12.286Z",
+    "updatedAt": "2026-09-27T09:22:27.375Z",
     "communityTopicId": null
   },
   {
@@ -15071,10 +15071,10 @@
     "name": "SwitchBot",
     "developerName": "SwitchBot",
     "developerId": "6a87f49394f0069d62c7f0c6",
-    "version": "2.0.94",
+    "version": "2.0.95",
     "sourceRepository": "https://github.com/AdyRock/com.switchbot",
     "publishedAt": "2026-09-10T21:36:00.682Z",
-    "updatedAt": "2026-09-25T08:56:13.173Z",
+    "updatedAt": "2026-09-27T09:22:27.376Z",
     "communityTopicId": 42296
   },
   {
@@ -16127,10 +16127,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-09-10T21:36:43.737Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-09-27T09:22:27.376Z",
     "communityTopicId": 158618
   },
   {
@@ -17337,10 +17337,10 @@
     "name": "IcalCalendar",
     "developerName": "Rune Moskvil Lyngås",
     "developerId": "5ed7b0396d2bd86d07c27b5f",
-    "version": "3.3.1",
+    "version": "3.3.2",
     "sourceRepository": "https://github.com/runely/calendar-homey",
     "publishedAt": "2026-09-10T21:37:42.368Z",
-    "updatedAt": "2026-09-10T21:37:42.368Z",
+    "updatedAt": "2026-09-27T09:22:27.376Z",
     "communityTopicId": 80708
   },
   {
@@ -17348,10 +17348,10 @@
     "name": "Huawei FusionSolar Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.2.258",
+    "version": "1.2.260",
     "sourceRepository": "https://github.com/andiwirz/com.huawei.fusionsolar",
     "publishedAt": "2026-09-10T21:37:42.368Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-09-27T09:22:27.376Z",
     "communityTopicId": 153353
   },
   {
@@ -18371,10 +18371,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.9.1",
+    "version": "0.9.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-09-27T09:22:27.376Z",
     "communityTopicId": null
   },
   {
