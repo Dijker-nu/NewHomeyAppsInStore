@@ -3,10 +3,11 @@
  *   - Copies data/homey-new-apps-log.json  -> public/data/new-apps-log.json
  *   - Copies data/homey-apps-snapshot.json -> public/data/homey-apps-snapshot.json
  *   - Copies data/homey-removed-apps.json  -> public/data/removed-apps.json
- *     (all three are already minimal, flat JSON -- no transform needed
+ *   - Copies data/homey-developers.json    -> public/data/developers.json
+ *     (all four are already minimal, flat JSON -- no transform needed
  *     since discover-new-apps.js / update-apps.js write them in the
  *     shape the site wants directly)
- *   - Writes public/index.html, a static shell that fetches all three
+ *   - Writes public/index.html, a static shell that fetches all four
  *     JSON files client-side and renders everything in the browser.
  *
  * Run with:
@@ -22,6 +23,7 @@ const PUBLIC_DATA_DIR = path.join(PUBLIC_DIR, 'data');
 const NEW_APPS_LOG_FILE = path.join(DATA_DIR, 'homey-new-apps-log.json');
 const SNAPSHOT_FILE = path.join(DATA_DIR, 'homey-apps-snapshot.json');
 const REMOVED_FILE = path.join(DATA_DIR, 'homey-removed-apps.json');
+const DEVELOPERS_FILE = path.join(DATA_DIR, 'homey-developers.json');
 const NEW_APPS_RETENTION_DAYS = 30;
 
 function loadJson(file, fallback) {
@@ -92,6 +94,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       <button class="tab-btn" type="button" data-tab="all">All Apps</button>
       <button class="tab-btn active" type="button" data-tab="new">New Apps</button>
       <button class="tab-btn" type="button" data-tab="retired">Retired Apps</button>
+      <button class="tab-btn" type="button" data-tab="developers">Developers</button>
     </div>
   </div>
 
@@ -116,27 +119,34 @@ const INDEX_HTML = `<!DOCTYPE html>
     <tbody></tbody>
   </table>
 
+  <table id="tab-developers" data-tab="developers">
+    <thead><tr><th>Developer</th><th>Developer ID</th><th>Apps</th><th>Forum Profile</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
   <p class="empty" id="all-empty"></p>
   <p class="empty" id="new-empty"></p>
   <p class="empty" id="retired-empty"></p>
+  <p class="empty" id="developers-empty"></p>
 
   <p class="caption" id="all-caption"></p>
   <p class="caption" id="new-caption"></p>
   <p class="caption" id="retired-caption"></p>
+  <p class="caption" id="developers-caption"></p>
 
   <div class="load-more-wrap" id="load-more-wrap">
     <button class="load-more-btn" id="load-more-btn" type="button">Load more</button>
   </div>
 
-  <footer>Data sourced from Athom's app-store API (apps-api.athom.com). New-app discovery runs every 4 hours; the full rescan (name/developer/version/topic-ID changes, plus removals) runs once a day, so "Updated" only moves when something actually changed. The "New Apps" list only keeps the last 30 days. The "Forum post" copy button builds the text suggested by <a href="https://community.homey.app/t/list-new-published-app-in-homey-app-store-get-em-while-theyre-hot/100276" target="_blank" rel="noopener">this Homey Community topic's guideline</a> -- review it before posting.</footer>
+  <footer>Data sourced from Athom's app-store API (apps-api.athom.com). New-app discovery runs every 4 hours; the full rescan (name/developer/version/topic-ID changes, plus removals) runs once a day, so "Updated" only moves when something actually changed. The "New Apps" list only keeps the last 30 days. "Developers" shows each developer's forum account, resolved from the first post of one of their apps' community topics where available. The "Forum post" copy button builds the text suggested by <a href="https://community.homey.app/t/list-new-published-app-in-homey-app-store-get-em-while-theyre-hot/100276" target="_blank" rel="noopener">this Homey Community topic's guideline</a> -- review it before posting.</footer>
 
   <script>
     const PAGE_SIZE = 20;
 
     const state = {
       activeTab: 'new',
-      visibleCount: { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE },
-      data: { all: [], new: [], retired: [] },
+      visibleCount: { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE, developers: PAGE_SIZE },
+      data: { all: [], new: [], retired: [], developers: [] },
       allSort: { column: 'publishedAt', direction: 'desc' },
     };
 
@@ -146,16 +156,19 @@ const INDEX_HTML = `<!DOCTYPE html>
       all: document.getElementById('tab-all'),
       new: document.getElementById('tab-new'),
       retired: document.getElementById('tab-retired'),
+      developers: document.getElementById('tab-developers'),
     };
     const emptyEls = {
       all: document.getElementById('all-empty'),
       new: document.getElementById('new-empty'),
       retired: document.getElementById('retired-empty'),
+      developers: document.getElementById('developers-empty'),
     };
     const captionEls = {
       all: document.getElementById('all-caption'),
       new: document.getElementById('new-caption'),
       retired: document.getElementById('retired-caption'),
+      developers: document.getElementById('developers-caption'),
     };
     const loadMoreWrap = document.getElementById('load-more-wrap');
     const loadMoreBtn = document.getElementById('load-more-btn');
@@ -261,12 +274,31 @@ const INDEX_HTML = `<!DOCTYPE html>
       return tr;
     }
 
+    function appCountFor(developerId) {
+      const inAll = state.data.all.filter((a) => a.developerId === developerId).length;
+      const inRetired = state.data.retired.filter((a) => a.developerId === developerId).length;
+      return inAll + inRetired;
+    }
+
+    function renderDevelopersRow(dev) {
+      const tr = document.createElement('tr');
+      const profileCell = dev.forumUsername
+        ? '<a href="https://community.homey.app/u/' + encodeURIComponent(dev.forumUsername) + '" target="_blank" rel="noopener">' + escapeHtml(dev.forumUsername) + '</a>'
+        : '<span class="muted">—</span>';
+      tr.innerHTML =
+        '<td>' + escapeHtml(dev.developerName) + '</td>' +
+        '<td class="muted">' + escapeHtml(dev.developerId) + '</td>' +
+        '<td>' + appCountFor(dev.developerId) + '</td>' +
+        '<td>' + profileCell + '</td>';
+      return tr;
+    }
+
     function currentQuery() {
       return input.value.trim().toLowerCase();
     }
 
     function matches(app, q) {
-      return ((app.name || '') + ' ' + (app.developerName || '')).toLowerCase().includes(q);
+      return ((app.name || '') + ' ' + (app.developerName || '') + ' ' + (app.developerId || '')).toLowerCase().includes(q);
     }
 
     function getSortedFiltered(tab, q) {
@@ -275,6 +307,8 @@ const INDEX_HTML = `<!DOCTYPE html>
         filtered.sort((a, b) => new Date(b.discoveredAt) - new Date(a.discoveredAt));
       } else if (tab === 'retired') {
         filtered.sort((a, b) => new Date(b.removedAt) - new Date(a.removedAt));
+      } else if (tab === 'developers') {
+        filtered.sort((a, b) => (a.developerName || '').localeCompare(b.developerName || ''));
       } else {
         const { column, direction } = state.allSort;
         const dir = direction === 'asc' ? 1 : -1;
@@ -301,7 +335,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       const filtered = getSortedFiltered(tab, q);
       const shown = filtered.slice(0, state.visibleCount[tab]);
 
-      const rowRenderer = tab === 'all' ? renderAllRow : tab === 'new' ? renderNewRow : renderRetiredRow;
+      const rowRenderer = tab === 'all' ? renderAllRow : tab === 'new' ? renderNewRow : tab === 'retired' ? renderRetiredRow : renderDevelopersRow;
       for (const app of shown) {
         tbody.appendChild(rowRenderer(app));
       }
@@ -316,7 +350,9 @@ const INDEX_HTML = `<!DOCTYPE html>
           ? 'No new apps detected in the last 30 days.'
           : tab === 'retired'
             ? 'No retired apps detected yet.'
-            : 'No data yet. Check back after the next scheduled run.';
+            : tab === 'developers'
+              ? 'No developer data yet. Check back after the next daily update.'
+              : 'No data yet. Check back after the next scheduled run.';
         emptyEl.style.display = 'block';
         captionEl.style.display = 'none';
       } else if (shown.length === 0) {
@@ -359,7 +395,7 @@ const INDEX_HTML = `<!DOCTYPE html>
     });
 
     input.addEventListener('input', () => {
-      state.visibleCount = { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE };
+      state.visibleCount = { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE, developers: PAGE_SIZE };
       renderTab(state.activeTab);
     });
 
@@ -372,15 +408,18 @@ const INDEX_HTML = `<!DOCTYPE html>
       let newLog = [];
       let snapshot = [];
       let removed = [];
+      let developers = [];
       try {
-        const [newRes, snapRes, removedRes] = await Promise.all([
+        const [newRes, snapRes, removedRes, developersRes] = await Promise.all([
           fetch('./data/new-apps-log.json'),
           fetch('./data/homey-apps-snapshot.json'),
           fetch('./data/removed-apps.json'),
+          fetch('./data/developers.json'),
         ]);
         newLog = newRes.ok ? await newRes.json() : [];
         snapshot = snapRes.ok ? await snapRes.json() : [];
         removed = removedRes.ok ? await removedRes.json() : [];
+        developers = developersRes.ok ? await developersRes.json() : [];
       } catch (err) {
         subtitle.textContent = 'Failed to load data: ' + err.message;
         return;
@@ -389,9 +428,11 @@ const INDEX_HTML = `<!DOCTYPE html>
       state.data.new = newLog;
       state.data.all = snapshot;
       state.data.retired = removed;
+      state.data.developers = developers;
 
       subtitle.textContent = state.data.new.length + ' new app(s) in the last 30 days, out of ' +
-        state.data.all.length + ' apps currently in the store (' + state.data.retired.length + ' retired).';
+        state.data.all.length + ' apps currently in the store (' + state.data.retired.length + ' retired, ' +
+        state.data.developers.length + ' developers).';
 
       renderTab(state.activeTab);
     }
@@ -414,9 +455,12 @@ function main() {
   const removed = loadJson(REMOVED_FILE, []);
   fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'removed-apps.json'), JSON.stringify(removed, null, 2), 'utf8');
 
+  const developers = loadJson(DEVELOPERS_FILE, []);
+  fs.writeFileSync(path.join(PUBLIC_DATA_DIR, 'developers.json'), JSON.stringify(developers, null, 2), 'utf8');
+
   fs.writeFileSync(path.join(PUBLIC_DIR, 'index.html'), INDEX_HTML, 'utf8');
 
-  console.log(`Built public/index.html + data files: ${newAppsLog.length} new-app log entries, ${snapshot.length} apps in snapshot, ${removed.length} retired apps.`);
+  console.log(`Built public/index.html + data files: ${newAppsLog.length} new-app log entries, ${snapshot.length} apps in snapshot, ${removed.length} retired apps, ${developers.length} developers.`);
 }
 
 main();
