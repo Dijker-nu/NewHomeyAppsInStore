@@ -11,6 +11,11 @@
  *     removed list is treated as newly discovered here too (in case a
  *     scripts/discover-new-apps.js run was missed) -- and logged the
  *     same way discover-new-apps.js would.
+ *   - Maintains data/homey-developers.json: one entry per developerId
+ *     (developerName, forumUserID, forumUsername), resolved from the
+ *     first post of one of that developer's apps' community topics.
+ *     Resolution happens once per developer and is cached -- an
+ *     already-resolved developer isn't re-fetched on later runs.
  *
  * This does one API request per already-known app (plus a community
  * topic ID check that's a free field read, not a network request), so
@@ -33,6 +38,7 @@ const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), 'data');
 const SNAPSHOT_FILE = path.join(DATA_DIR, 'homey-apps-snapshot.json');
 const REMOVED_FILE = path.join(DATA_DIR, 'homey-removed-apps.json');
 const NEW_APPS_LOG_FILE = path.join(DATA_DIR, 'homey-new-apps-log.json');
+const DEVELOPERS_FILE = path.join(DATA_DIR, 'homey-developers.json');
 const DETAIL_CONCURRENCY = 8;
 const NEW_APPS_RETENTION_DAYS = 30;
 
@@ -49,6 +55,28 @@ async function fetchAppDetail(id) {
     return { ok: true, data: await res.json() };
   } catch (err) {
     return { ok: false, error: err.message };
+  }
+}
+
+// A community topic's first post is the developer's own announcement, so
+// its author is the developer's forum account. Discourse's standard
+// public JSON view of a topic exposes the post stream -- this reads
+// posts[0] for its user_id/username. NOTE: this response shape follows
+// standard Discourse conventions but hasn't been directly verified
+// against community.homey.app specifically, so treat a failure here as
+// "couldn't resolve yet" rather than a sign something is broken.
+async function fetchTopicFirstPoster(topicId) {
+  try {
+    const res = await fetch(`https://community.homey.app/t/${topicId}.json`);
+    if (!res.ok) return null;
+    const data = await res.json();
+    const posts = data && data.post_stream && data.post_stream.posts;
+    if (!Array.isArray(posts) || posts.length === 0) return null;
+    const first = posts[0];
+    if (!first || typeof first.user_id === 'undefined') return null;
+    return { forumUserID: first.user_id, forumUsername: first.username || null };
+  } catch {
+    return null;
   }
 }
 
@@ -300,12 +328,68 @@ async function main() {
 
   snapshot.sort((a, b) => new Date(a.publishedAt || 0) - new Date(b.publishedAt || 0));
 
+  // --- Developer directory: one entry per developerId, with a resolved
+  // forum user (via the first post of one of their apps' community topics) ---
+  console.log('Updating developer directory...');
+  const existingDevelopers = loadJson(DEVELOPERS_FILE, []);
+  const developersById = new Map(existingDevelopers.map((d) => [d.developerId, d]));
+
+  // Pick, per developer, their name (most recent seen) and one candidate
+  // community topic ID to resolve a forum user from, from apps live or retired.
+  const candidatesById = new Map();
+  for (const app of [...snapshot, ...removedList]) {
+    if (!app.developerId) continue;
+    const existing = candidatesById.get(app.developerId);
+    if (!existing) {
+      candidatesById.set(app.developerId, { developerName: app.developerName, candidateTopicId: app.communityTopicId || null });
+    } else {
+      if (app.developerName) existing.developerName = app.developerName;
+      if (!existing.candidateTopicId && app.communityTopicId) existing.candidateTopicId = app.communityTopicId;
+    }
+  }
+
+  const toResolve = [];
+  for (const [developerId, candidate] of candidatesById) {
+    let entry = developersById.get(developerId);
+    if (!entry) {
+      entry = { developerId, developerName: candidate.developerName, forumUserID: null, forumUsername: null };
+      developersById.set(developerId, entry);
+    } else {
+      entry.developerName = candidate.developerName; // keep name current, mirrors app-level name-change tracking
+    }
+    if (!entry.forumUserID && candidate.candidateTopicId) {
+      toResolve.push({ developerId, topicId: candidate.candidateTopicId });
+    }
+  }
+
+  if (toResolve.length > 0) {
+    console.log(`Resolving forum user for ${toResolve.length} developer(s) via their app's community topic...`);
+    const resolved = await mapConcurrent(
+      toResolve,
+      async ({ developerId, topicId }) => ({ developerId, poster: await fetchTopicFirstPoster(topicId) }),
+      DETAIL_CONCURRENCY
+    );
+    let resolvedCount = 0;
+    for (const { developerId, poster } of resolved) {
+      if (poster) {
+        const entry = developersById.get(developerId);
+        entry.forumUserID = poster.forumUserID;
+        entry.forumUsername = poster.forumUsername;
+        resolvedCount++;
+      }
+    }
+    console.log(`Resolved ${resolvedCount} / ${toResolve.length} forum user(s). Unresolved ones will be retried on the next run.`);
+  }
+
+  const developers = Array.from(developersById.values()).sort((a, b) => (a.developerName || '').localeCompare(b.developerName || ''));
+  fs.writeFileSync(DEVELOPERS_FILE, JSON.stringify(developers, null, 2), 'utf8');
+
   appendAndPruneNewAppsLog(newLogEntries);
   fs.writeFileSync(SNAPSHOT_FILE, JSON.stringify(snapshot, null, 2), 'utf8');
   fs.writeFileSync(REMOVED_FILE, JSON.stringify(removedList, null, 2), 'utf8');
   fs.writeFileSync(path.join(DATA_DIR, 'new-apps-this-run.json'), JSON.stringify(newRawApps, null, 2), 'utf8');
 
-  console.log(`Done. Snapshot: ${snapshot.length} live apps (${changedCount} updated). Removed: ${removedList.length} apps.`);
+  console.log(`Done. Snapshot: ${snapshot.length} live apps (${changedCount} updated). Removed: ${removedList.length} apps. Developers: ${developers.length} (${developers.filter((d) => d.forumUserID).length} with a resolved forum user).`);
 }
 
 main().catch((err) => {
