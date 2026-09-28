@@ -274,5 +274,17 @@
     "updatedAt": "2026-09-28T09:56:22.527Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-28T09:56:20.116Z"
+  },
+  {
+    "appId": "dk.kvols.ankerprime",
+    "name": "Anker Prime Power Bank",
+    "developerName": "Mads Kvols Hansen",
+    "developerId": "6ab8d2b930dc90a8d6e535c0",
+    "version": "2.0.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T18:52:09.356Z",
+    "updatedAt": "2026-09-28T18:52:09.356Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-28T18:52:09.355Z"
   }
 ]
