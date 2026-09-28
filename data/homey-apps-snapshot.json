@@ -3697,10 +3697,10 @@
     "name": "Tapo",
     "developerName": "Tudor Popescu",
     "developerId": "65b2c359e0e92b510cb923b0",
-    "version": "3.0.4",
+    "version": "3.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:26:26.064Z",
-    "updatedAt": "2026-09-10T21:26:26.064Z",
+    "updatedAt": "2026-09-28T09:56:53.551Z",
     "communityTopicId": 102707
   },
   {
@@ -8306,10 +8306,10 @@
     "name": "Pushover",
     "developerName": "Kim Kokholm",
     "developerId": "65500c3600b0a0bcb17b9287",
-    "version": "1.0.20",
+    "version": "1.0.21",
     "sourceRepository": "https://github.com/HarpunDK/Homey.Pushover",
     "publishedAt": "2026-09-10T21:30:37.600Z",
-    "updatedAt": "2026-09-10T21:30:37.600Z",
+    "updatedAt": "2026-09-28T09:56:53.552Z",
     "communityTopicId": 95675
   },
   {
@@ -8317,10 +8317,10 @@
     "name": "Nilan Air",
     "developerName": "Kim Kokholm",
     "developerId": "65500c3600b0a0bcb17b9287",
-    "version": "1.2.2",
+    "version": "1.4.0",
     "sourceRepository": "https://github.com/oskarirauta/homey-nilan-app",
     "publishedAt": "2026-09-10T21:30:37.600Z",
-    "updatedAt": "2026-09-10T21:30:37.600Z",
+    "updatedAt": "2026-09-28T09:56:53.552Z",
     "communityTopicId": 100504
   },
   {
@@ -8449,10 +8449,10 @@
     "name": "Virtual Room Occupancy",
     "developerName": "Ole Anders Stokker",
     "developerId": "696e21112c2f5e3cd202990d",
-    "version": "1.1.0",
+    "version": "1.2.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:30:41.929Z",
-    "updatedAt": "2026-09-10T21:30:41.929Z",
+    "updatedAt": "2026-09-28T09:56:53.552Z",
     "communityTopicId": null
   },
   {
@@ -9252,10 +9252,10 @@
     "name": "Mood State",
     "developerName": "Kjetil Volden",
     "developerId": "68b3e9902fee65054eaf86a5",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "https://github.com/kvolden/com.moodstate",
     "publishedAt": "2026-09-10T21:31:33.836Z",
-    "updatedAt": "2026-09-10T21:31:33.836Z",
+    "updatedAt": "2026-09-28T09:56:53.552Z",
     "communityTopicId": 148596
   },
   {
@@ -10066,10 +10066,10 @@
     "name": "Delta Dore Tydom",
     "developerName": "Jo Goossens",
     "developerId": "69e73665fb6dd7068a7cbff1",
-    "version": "1.0.6",
+    "version": "1.3.0",
     "sourceRepository": "https://github.com/jogoossens/net.evenh.tydom",
     "publishedAt": "2026-09-10T21:32:20.419Z",
-    "updatedAt": "2026-09-10T21:32:20.419Z",
+    "updatedAt": "2026-09-28T09:56:53.552Z",
     "communityTopicId": null
   },
   {
@@ -10770,10 +10770,10 @@
     "name": "Adax with Power Estimation",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "0.3.43",
+    "version": "0.3.44",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:32:48.068Z",
-    "updatedAt": "2026-09-22T08:39:37.425Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": null
   },
   {
@@ -12453,10 +12453,10 @@
     "name": "SolPlanet",
     "developerName": "Maikel Reijnders",
     "developerId": "65e0836a896842f4abaf27a9",
-    "version": "1.3.4",
+    "version": "1.3.6",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:33:58.508Z",
-    "updatedAt": "2026-09-22T08:39:37.425Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 105742
   },
   {
@@ -12739,10 +12739,10 @@
     "name": "JavaScript Logic",
     "developerName": "Rune Moskvil Lyngås",
     "developerId": "5ed7b0396d2bd86d07c27b5f",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "sourceRepository": "https://github.com/runely/jslogic-homey",
     "publishedAt": "2026-09-10T21:34:18.896Z",
-    "updatedAt": "2026-09-10T21:34:18.896Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": null
   },
   {
@@ -12992,10 +12992,10 @@
     "name": "Aqara",
     "developerName": "Lumi Technology Co., Ltd.",
     "developerId": "63ada7ec2c8e04f69dfd1c67",
-    "version": "1.16.3",
+    "version": "1.17.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:30.429Z",
-    "updatedAt": "2026-09-10T21:34:30.429Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 156
   },
   {
@@ -13047,10 +13047,10 @@
     "name": "Creality",
     "developerName": "Uğur BENEK",
     "developerId": "697f46341aed127334df8978",
-    "version": "1.2.10",
+    "version": "1.2.11",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:34:32.811Z",
-    "updatedAt": "2026-09-10T21:34:32.811Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 150419
   },
   {
@@ -13916,10 +13916,10 @@
     "name": "NextDNS",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.29",
+    "version": "1.0.30",
     "sourceRepository": "https://github.com/smarthomesven/homey-nextdns",
     "publishedAt": "2026-09-10T21:35:15.136Z",
-    "updatedAt": "2026-09-10T21:35:15.136Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 144903
   },
   {
@@ -13927,10 +13927,10 @@
     "name": "Web Proxy",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.16",
+    "version": "1.1.17",
     "sourceRepository": "https://github.com/smarthomesven/homey-web-proxy",
     "publishedAt": "2026-09-10T21:35:15.136Z",
-    "updatedAt": "2026-09-19T08:09:35.376Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 147450
   },
   {
@@ -16039,10 +16039,10 @@
     "name": "Nous",
     "developerName": "NovaCore Labs",
     "developerId": "6a8bdd7a94f0069d62618521",
-    "version": "2.19.5",
+    "version": "2.20.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:39.321Z",
-    "updatedAt": "2026-09-10T21:36:39.321Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 99614
   },
   {
@@ -16292,10 +16292,10 @@
     "name": "OSAIO",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.5",
+    "version": "1.1.6",
     "sourceRepository": "https://github.com/smarthomesven/homey-osaio",
     "publishedAt": "2026-09-10T21:36:52.988Z",
-    "updatedAt": "2026-09-20T08:41:35.046Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 157336
   },
   {
@@ -16985,10 +16985,10 @@
     "name": "AECC Plug-and-Play Battery",
     "developerName": "Roy Dorland",
     "developerId": "6a81aafdc6a80eeabce3bed4",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "sourceRepository": "https://github.com/StekkerDeal/aecc-battery-homey",
     "publishedAt": "2026-09-10T21:37:32.679Z",
-    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": null
   },
   {
@@ -17073,10 +17073,10 @@
     "name": "Eaton xComfort",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.7.59",
+    "version": "1.7.60",
     "sourceRepository": "https://github.com/MikeTase/Eaton-xComfort-Bridge-Homey",
     "publishedAt": "2026-09-10T21:37:35.142Z",
-    "updatedAt": "2026-09-10T21:37:35.142Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 839
   },
   {
@@ -17282,10 +17282,10 @@
     "name": "Vitrum v3",
     "developerName": "Oreste Dimaggio",
     "developerId": "64be70c98d3ead05ece852a1",
-    "version": "4.0.4",
+    "version": "4.0.5",
     "sourceRepository": "https://github.com/bypo/com.vitrum.v3",
     "publishedAt": "2026-09-10T21:37:41.399Z",
-    "updatedAt": "2026-09-10T21:37:41.399Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": 85296
   },
   {
@@ -17612,10 +17612,10 @@
     "name": "WarmteWizard",
     "developerName": "Warmte Wizard",
     "developerId": "68ed4f8b78936837cbe81bee",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:53.144Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-28T09:56:53.553Z",
     "communityTopicId": null
   },
   {
@@ -17678,10 +17678,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.8.1",
+    "version": "3.8.2",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-25T08:56:13.174Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 147496
   },
   {
@@ -17711,10 +17711,10 @@
     "name": "Zyxel Nebula",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.20",
+    "version": "1.0.21",
     "sourceRepository": "https://github.com/smarthomesven/homey-zyxel-nebula",
     "publishedAt": "2026-09-10T21:37:55.644Z",
-    "updatedAt": "2026-09-10T21:37:55.644Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 148409
   },
   {
@@ -17788,10 +17788,10 @@
     "name": "VarView",
     "developerName": "Dennis Klatt",
     "developerId": "6a9bdf22336db3df05accd76",
-    "version": "4.2.0",
+    "version": "4.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:56.528Z",
-    "updatedAt": "2026-09-18T08:21:39.751Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 159202
   },
   {
@@ -17821,10 +17821,10 @@
     "name": "VW Group Vehicles",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "0.0.83",
+    "version": "0.0.85",
     "sourceRepository": "https://github.com/andiwirz/com.vwgroup.vehiclevata",
     "publishedAt": "2026-09-10T21:37:56.528Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 156345
   },
   {
@@ -17832,10 +17832,10 @@
     "name": "Airsend",
     "developerName": "Pierre Verron",
     "developerId": "65044d4d6d8019ba165e62a1",
-    "version": "1.2.1",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:37:57.652Z",
-    "updatedAt": "2026-09-16T08:42:01.253Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": null
   },
   {
@@ -18041,10 +18041,10 @@
     "name": "Android Automotive",
     "developerName": "Simone Di Maio",
     "developerId": "68ceb8fccbb72125ed109820",
-    "version": "1.3.0",
+    "version": "1.4.1",
     "sourceRepository": "https://github.com/s-dimaio/com.dimapp.aaos",
     "publishedAt": "2026-09-10T21:38:14.026Z",
-    "updatedAt": "2026-09-24T08:34:40.837Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 155279
   },
   {
@@ -18140,10 +18140,10 @@
     "name": "Easee Home",
     "developerName": "Easee ASA",
     "developerId": "6a97ce55a524daf89cd42946",
-    "version": "2.0.5",
+    "version": "3.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-15T08:47:43.514Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 31647
   },
   {
@@ -18151,10 +18151,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.690",
+    "version": "1.0.694",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:38:16.686Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-09-28T09:56:53.554Z",
     "communityTopicId": 156098
   },
   {
@@ -18651,5 +18651,49 @@
     "publishedAt": "2026-09-25T16:02:45.769Z",
     "updatedAt": "2026-09-25T16:02:45.769Z",
     "communityTopicId": 159695
+  },
+  {
+    "appId": "com.rapinology.littlemonkey",
+    "name": "Little Monkey",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "0.1.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T09:56:20.116Z",
+    "updatedAt": "2026-09-28T09:56:20.116Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.koelman.goodwesems",
+    "name": "GoodWe SEMS",
+    "developerName": "Wisse Koelman",
+    "developerId": "6a9e8ad4336db3df05ad62f1",
+    "version": "5.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T09:56:21.066Z",
+    "updatedAt": "2026-09-28T09:56:21.066Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.ferroamp.power",
+    "name": "Ferroamp Control",
+    "developerName": "Dennis Berggren",
+    "developerId": "69a55242af832c1e46293cd8",
+    "version": "0.3.0",
+    "sourceRepository": "https://github.com/DennisBerggren/Homey_Ferroamp_Control",
+    "publishedAt": "2026-09-28T09:56:21.715Z",
+    "updatedAt": "2026-09-28T09:56:21.715Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "se.innomenta.aikion",
+    "name": "Aikion",
+    "developerName": "Innomenta",
+    "developerId": "6ab0409e2c418bed59fba3ec",
+    "version": "2.12.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T09:56:22.527Z",
+    "updatedAt": "2026-09-28T09:56:22.527Z",
+    "communityTopicId": null
   }
 ]

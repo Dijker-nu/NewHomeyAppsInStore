@@ -226,5 +226,53 @@
     "updatedAt": "2026-09-25T16:02:45.769Z",
     "communityTopicId": 159695,
     "discoveredAt": "2026-09-25T16:02:45.769Z"
+  },
+  {
+    "appId": "com.rapinology.littlemonkey",
+    "name": "Little Monkey",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "0.1.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T09:56:20.116Z",
+    "updatedAt": "2026-09-28T09:56:20.116Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-28T09:56:20.116Z"
+  },
+  {
+    "appId": "nl.koelman.goodwesems",
+    "name": "GoodWe SEMS",
+    "developerName": "Wisse Koelman",
+    "developerId": "6a9e8ad4336db3df05ad62f1",
+    "version": "5.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T09:56:21.066Z",
+    "updatedAt": "2026-09-28T09:56:21.066Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-28T09:56:20.116Z"
+  },
+  {
+    "appId": "com.ferroamp.power",
+    "name": "Ferroamp Control",
+    "developerName": "Dennis Berggren",
+    "developerId": "69a55242af832c1e46293cd8",
+    "version": "0.3.0",
+    "sourceRepository": "https://github.com/DennisBerggren/Homey_Ferroamp_Control",
+    "publishedAt": "2026-09-28T09:56:21.715Z",
+    "updatedAt": "2026-09-28T09:56:21.715Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-28T09:56:20.116Z"
+  },
+  {
+    "appId": "se.innomenta.aikion",
+    "name": "Aikion",
+    "developerName": "Innomenta",
+    "developerId": "6ab0409e2c418bed59fba3ec",
+    "version": "2.12.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-28T09:56:22.527Z",
+    "updatedAt": "2026-09-28T09:56:22.527Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-28T09:56:20.116Z"
   }
 ]
