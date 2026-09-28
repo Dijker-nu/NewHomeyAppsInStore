@@ -5952,10 +5952,10 @@
     "name": "OWON",
     "developerName": "Oskari Rauta",
     "developerId": "6806183a61abe0f3b0bd1f83",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "sourceRepository": "https://github.com/oskarirauta/homey-owon-driver",
     "publishedAt": "2026-09-10T21:28:29.025Z",
-    "updatedAt": "2026-09-10T21:28:29.025Z",
+    "updatedAt": "2026-09-28T21:11:56.195Z",
     "communityTopicId": 135236
   },
   {
@@ -8317,10 +8317,10 @@
     "name": "Nilan Air",
     "developerName": "Kim Kokholm",
     "developerId": "65500c3600b0a0bcb17b9287",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "sourceRepository": "https://github.com/oskarirauta/homey-nilan-app",
     "publishedAt": "2026-09-10T21:30:37.600Z",
-    "updatedAt": "2026-09-28T09:56:53.552Z",
+    "updatedAt": "2026-09-28T21:11:56.196Z",
     "communityTopicId": 100504
   },
   {
@@ -10066,10 +10066,10 @@
     "name": "Delta Dore Tydom",
     "developerName": "Jo Goossens",
     "developerId": "69e73665fb6dd7068a7cbff1",
-    "version": "1.3.0",
+    "version": "1.3.3",
     "sourceRepository": "https://github.com/jogoossens/net.evenh.tydom",
     "publishedAt": "2026-09-10T21:32:20.419Z",
-    "updatedAt": "2026-09-28T09:56:53.552Z",
+    "updatedAt": "2026-09-28T21:11:56.196Z",
     "communityTopicId": null
   },
   {
@@ -10990,10 +10990,10 @@
     "name": "Kraken Energy",
     "developerName": "David Piper",
     "developerId": "68f67ab090cb8c20ed173cc4",
-    "version": "1.2.14",
+    "version": "1.2.16",
     "sourceRepository": "https://github.com/db-piper/com.kraken.energy",
     "publishedAt": "2026-09-10T21:32:53.743Z",
-    "updatedAt": "2026-09-10T21:32:53.743Z",
+    "updatedAt": "2026-09-28T21:11:56.196Z",
     "communityTopicId": 136685
   },
   {
@@ -13839,10 +13839,10 @@
     "name": "YoLink",
     "developerName": "RockSoft Solutions",
     "developerId": "6a8839af94f0069d62d2bb7f",
-    "version": "1.0.27",
+    "version": "1.0.28",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:13.074Z",
-    "updatedAt": "2026-09-14T09:04:17.460Z",
+    "updatedAt": "2026-09-28T21:11:56.196Z",
     "communityTopicId": 143373
   },
   {
@@ -14939,10 +14939,10 @@
     "name": "Arylic",
     "developerName": "Rakoit",
     "developerId": "6ab4f11299b9541712fa2dd1",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:35:56.276Z",
-    "updatedAt": "2026-09-25T08:56:13.173Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": null
   },
   {
@@ -15082,10 +15082,10 @@
     "name": "EasyLighting",
     "developerName": "Wang Wendong",
     "developerId": "5dcabc7f1c90c866f93666b4",
-    "version": "1.3.11",
+    "version": "1.3.12",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:00.682Z",
-    "updatedAt": "2026-09-10T21:36:00.682Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 65588
   },
   {
@@ -15808,10 +15808,10 @@
     "name": "HomeKit Device Bridge",
     "developerName": "Uğur BENEK",
     "developerId": "697f46341aed127334df8978",
-    "version": "2.1.35",
+    "version": "2.1.36",
     "sourceRepository": "",
     "publishedAt": "2026-09-10T21:36:35.748Z",
-    "updatedAt": "2026-09-21T09:05:42.256Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 150931
   },
   {
@@ -16127,10 +16127,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-09-10T21:36:43.737Z",
-    "updatedAt": "2026-09-27T09:22:27.376Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 158618
   },
   {
@@ -16424,10 +16424,10 @@
     "name": "Picnic",
     "developerName": "Sander Maas",
     "developerId": "5dcaba361c90c866f9364965",
-    "version": "3.7.0",
+    "version": "3.8.1",
     "sourceRepository": "https://github.com/Retrospected/app.picnic",
     "publishedAt": "2026-09-10T21:36:55.923Z",
-    "updatedAt": "2026-09-17T08:45:41.056Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 78811
   },
   {
@@ -16435,10 +16435,10 @@
     "name": "AI Voice Assistant",
     "developerName": "Arve Bjørnerud",
     "developerId": "68b76dd42fee65054eb014e1",
-    "version": "1.5.4",
+    "version": "1.5.5",
     "sourceRepository": "https://github.com/arvebjoe/no.arvebjoe.ai-voice-assistant",
     "publishedAt": "2026-09-10T21:36:55.923Z",
-    "updatedAt": "2026-09-10T21:36:55.923Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 142532
   },
   {
@@ -17150,10 +17150,10 @@
     "name": "Jura Connect",
     "developerName": "Wout Van der Aa",
     "developerId": "6a784365ac45e8acfcb8708a",
-    "version": "0.6.0",
+    "version": "0.12.2",
     "sourceRepository": "https://github.com/WoutvanderAa/homey-jura-connect",
     "publishedAt": "2026-09-10T21:37:36.788Z",
-    "updatedAt": "2026-09-10T21:37:36.788Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": null
   },
   {
@@ -17348,10 +17348,10 @@
     "name": "Huawei FusionSolar Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.2.260",
+    "version": "1.2.261",
     "sourceRepository": "https://github.com/andiwirz/com.huawei.fusionsolar",
     "publishedAt": "2026-09-10T21:37:42.368Z",
-    "updatedAt": "2026-09-27T09:22:27.376Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 153353
   },
   {
@@ -17634,10 +17634,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.44",
+    "version": "1.9.45",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-09-10T21:37:54.870Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-09-28T21:11:56.197Z",
     "communityTopicId": 157537
   },
   {
@@ -18228,11 +18228,11 @@
     "name": "Lightkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "sourceRepository": "https://github.com/thomassidor/lightkeeper",
     "publishedAt": "2026-09-16T08:41:33.359Z",
-    "updatedAt": "2026-09-25T08:56:13.174Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-28T21:11:56.197Z",
+    "communityTopicId": 159938
   },
   {
     "appId": "nl.lrvdlinden.nlalert-widget",
@@ -18602,11 +18602,11 @@
     "name": "Presence Fusion",
     "developerName": "Cédric Andrietti",
     "developerId": "6a6e465f32b0f6166a4e6270",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "sourceRepository": "https://github.com/cedric07/homey-presence-fusion",
     "publishedAt": "2026-09-24T08:33:53.418Z",
-    "updatedAt": "2026-09-24T08:33:53.418Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-28T21:11:56.197Z",
+    "communityTopicId": 160019
   },
   {
     "appId": "com.chargee.sparky",
