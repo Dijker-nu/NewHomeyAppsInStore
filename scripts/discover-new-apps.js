@@ -72,6 +72,7 @@ function communityTopicIdFromApiObject(app) {
     app.homeyCommunityTopicId,
     app.communityTopicId,
     app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+    app.testBuild && app.testBuild.homeyCommunityTopicId,
   ];
   for (const c of candidates) {
     if (typeof c === 'number' && Number.isFinite(c)) return c;
@@ -92,8 +93,11 @@ async function communityTopicIdFromAppPage(appId) {
   }
 }
 
+// When liveBuild is null (e.g. a test-only app, or an app currently
+// between live states), the same fields -- name, version, source -- are
+// available under testBuild instead.
 function simplify(app) {
-  const build = app.liveBuild || {};
+  const build = app.liveBuild || app.testBuild || {};
   const author = app.author || {};
   const foundAt = app.stateChangedAt || new Date().toISOString();
   return {
@@ -101,7 +105,7 @@ function simplify(app) {
     name: (build.name && (build.name.en || Object.values(build.name)[0])) || '',
     developerName: author.name || '',
     developerId: author.id || '',
-    version: app.liveVersion || '',
+    version: app.liveVersion || (app.testBuild && app.testBuild.version) || '',
     sourceRepository: build.source || '',
     // First time we ever saw this app. Never touched again after creation.
     publishedAt: foundAt,

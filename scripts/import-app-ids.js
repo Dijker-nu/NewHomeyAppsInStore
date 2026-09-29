@@ -138,6 +138,7 @@ function communityTopicIdFromApiObject(app) {
     app.homeyCommunityTopicId,
     app.communityTopicId,
     app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+    app.testBuild && app.testBuild.homeyCommunityTopicId,
   ];
   for (const c of candidates) {
     if (typeof c === 'number' && Number.isFinite(c)) return c;
@@ -152,14 +153,17 @@ async function classify(appId, liveIdSet) {
 
   if (result.ok) {
     const app = result.data;
-    const build = app.liveBuild || {};
+    // liveBuild is null for a test-only app -- name/version/source live
+    // under testBuild instead in that case (confirmed: /app/{appId} still
+    // returns 200 with liveBuild: null and a populated testBuild object).
+    const build = app.liveBuild || app.testBuild || {};
     const author = app.author || {};
     const base = {
       appId,
       name: (build.name && (build.name.en || Object.values(build.name)[0])) || appId,
       developerName: author.name || '',
       developerId: author.id || '',
-      version: app.liveVersion || '',
+      version: app.liveVersion || (app.testBuild && app.testBuild.version) || '',
       sourceRepository: build.source || '',
       communityTopicId: communityTopicIdFromApiObject(app),
       publishedAt: app.stateChangedAt || '',
@@ -173,7 +177,8 @@ async function classify(appId, liveIdSet) {
       const type = liveIdSet.has(appId) ? 'public' : 'private';
       return { ...base, type, found: true };
     }
-    // Never been live -- test-only.
+    // Never been live -- test-only. Note base.name/version/source are
+    // still populated here from testBuild, not left blank.
     return { ...base, type: 'test', found: true };
   }
 

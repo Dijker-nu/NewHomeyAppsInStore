@@ -69,6 +69,7 @@ function communityTopicIdFromApiObject(app) {
     app.homeyCommunityTopicId,
     app.communityTopicId,
     app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+    app.testBuild && app.testBuild.homeyCommunityTopicId,
   ];
   for (const c of candidates) {
     if (typeof c === 'number' && Number.isFinite(c)) return c;
@@ -77,8 +78,10 @@ function communityTopicIdFromApiObject(app) {
   return null;
 }
 
+// When liveBuild is null (e.g. a test-only app), the same fields --
+// name, version, source -- are available under testBuild instead.
 function simplify(app, publishedAt) {
-  const build = app.liveBuild || {};
+  const build = app.liveBuild || app.testBuild || {};
   const author = app.author || {};
   const resolvedPublishedAt = publishedAt || app.stateChangedAt || '';
   return {
@@ -86,7 +89,7 @@ function simplify(app, publishedAt) {
     name: (build.name && (build.name.en || Object.values(build.name)[0])) || '',
     developerName: author.name || '',
     developerId: author.id || '',
-    version: app.liveVersion || '',
+    version: app.liveVersion || (app.testBuild && app.testBuild.version) || '',
     sourceRepository: build.source || '',
     // Prefer the changelog-derived first-publish date; fall back to
     // stateChangedAt (most recent update) only if the changelog lookup failed.

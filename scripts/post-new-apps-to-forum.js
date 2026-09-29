@@ -49,6 +49,7 @@ function communityTopicIdFromApiObject(app) {
     app.homeyCommunityTopicId,
     app.communityTopicId,
     app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+    app.testBuild && app.testBuild.homeyCommunityTopicId,
   ];
   for (const c of candidates) {
     if (typeof c === 'number' && Number.isFinite(c)) return c;
@@ -159,7 +160,8 @@ async function main() {
   }
 
   for (const app of eligible) {
-    const name = (app.liveBuild && app.liveBuild.name && (app.liveBuild.name.en || Object.values(app.liveBuild.name)[0])) || app.id;
+    const build = app.liveBuild || app.testBuild || {};
+    const name = (build.name && (build.name.en || Object.values(build.name)[0])) || app.id;
     // snapshot-homey-apps.js already resolves and attaches this (including
     // the homey.app page-scrape fallback) -- only fall back to resolving
     // it here if this script is ever run against older data that lacks it.

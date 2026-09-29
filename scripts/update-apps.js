@@ -101,6 +101,7 @@ function communityTopicIdFromApiObject(app) {
     app.homeyCommunityTopicId,
     app.communityTopicId,
     app.liveBuild && app.liveBuild.homeyCommunityTopicId,
+    app.testBuild && app.testBuild.homeyCommunityTopicId,
   ];
   for (const c of candidates) {
     if (typeof c === 'number' && Number.isFinite(c)) return c;
@@ -121,8 +122,10 @@ async function communityTopicIdFromAppPage(appId) {
   }
 }
 
+// When liveBuild is null (e.g. a test-only app), the same fields --
+// name, version, source -- are available under testBuild instead.
 function simplify(app) {
-  const build = app.liveBuild || {};
+  const build = app.liveBuild || app.testBuild || {};
   const author = app.author || {};
   const foundAt = app.stateChangedAt || new Date().toISOString();
   return {
@@ -130,7 +133,7 @@ function simplify(app) {
     name: (build.name && (build.name.en || Object.values(build.name)[0])) || '',
     developerName: author.name || '',
     developerId: author.id || '',
-    version: app.liveVersion || '',
+    version: app.liveVersion || (app.testBuild && app.testBuild.version) || '',
     sourceRepository: build.source || '',
     publishedAt: foundAt,
     updatedAt: foundAt,
@@ -264,18 +267,19 @@ async function main() {
         const now = new Date().toISOString();
         if (result.ok) {
           const raw = result.data;
+          const fresh = simplify(raw);
           // No live version at all -> effectively test-only now. Otherwise,
           // the API's own private flag decides Private vs a generic Removed
           // (still gone from the public listing for some other reason).
           const type = !raw.liveVersion ? 'test' : raw.private === true ? 'private' : 'removed';
           return {
             appId: entry.appId,
-            name: entry.name,
-            developerName: entry.developerName,
-            developerId: entry.developerId,
-            version: raw.liveVersion || entry.version || '',
-            sourceRepository: entry.sourceRepository,
-            communityTopicId: entry.communityTopicId,
+            name: fresh.name || entry.name,
+            developerName: fresh.developerName || entry.developerName,
+            developerId: fresh.developerId || entry.developerId,
+            version: fresh.version || entry.version || '',
+            sourceRepository: fresh.sourceRepository || entry.sourceRepository,
+            communityTopicId: fresh.communityTopicId || entry.communityTopicId,
             publishedAt: entry.publishedAt,
             removedAt: now,
             lastCheckedAt: now,
@@ -317,11 +321,14 @@ async function main() {
         const now = new Date().toISOString();
         if (result.ok) {
           const raw = result.data;
+          const fresh = simplify(raw);
           const type = !raw.liveVersion ? 'test' : raw.private === true ? 'private' : 'removed';
           return {
             appId: entry.appId,
             lastCheckedAt: now,
-            version: raw.liveVersion || entry.version || '',
+            version: fresh.version || entry.version || '',
+            sourceRepository: fresh.sourceRepository || entry.sourceRepository,
+            communityTopicId: fresh.communityTopicId || entry.communityTopicId,
             private: typeof raw.private === 'boolean' ? raw.private : entry.private,
             type,
           };
