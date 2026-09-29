@@ -10760,10 +10760,10 @@
     "name": "Elmax Phantom64",
     "developerName": "Daniele Bortolotti",
     "developerId": "67da005f6cb23bab6c61caaf",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2025-03-18T23:23:11.983Z",
-    "updatedAt": "2026-03-12T22:22:09.654Z",
+    "updatedAt": "2026-09-29T06:18:41.458Z",
     "communityTopicId": null
   },
   {
@@ -12619,10 +12619,10 @@
     "name": "Reolink",
     "developerName": "Reolink Innovation Limited",
     "developerId": "6a8d40389b7803d15aeea8ca",
-    "version": "1.4.14",
+    "version": "1.5.10",
     "sourceRepository": "",
     "publishedAt": "2025-12-17T13:38:47.738Z",
-    "updatedAt": "2026-09-25T10:44:48.651Z",
+    "updatedAt": "2026-09-29T06:18:41.458Z",
     "communityTopicId": 151761
   },
   {
@@ -15985,10 +15985,10 @@
     "name": "Garage Gateway",
     "developerName": "Fred Hill",
     "developerId": "69e8532dfb6dd7068a7d5c5f",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/fredhill/homey-garage-gateway",
     "publishedAt": "2026-05-26T02:36:38.312Z",
-    "updatedAt": "2026-09-13T01:02:20.510Z",
+    "updatedAt": "2026-09-29T06:18:41.459Z",
     "communityTopicId": null
   },
   {
