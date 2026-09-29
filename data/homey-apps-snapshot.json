@@ -5208,19 +5208,10 @@
     "developerName": "Athom B.V.",
     "developerId": "6a84336d4430c25338c20073",
     "version": "1.0.8",
-    "updatedAt": "2021-03-31T18:36:28.315Z",
-    "publishedAt": "2021-03-29T19:03:05.062Z"
-  },
-  {
-    "appId": "com.homeytogether",
-    "name": "Homey Together",
-    "developerName": "Athom B.V.",
-    "developerId": "6a84336d4430c25338c20073",
-    "version": "1.0.8",
     "sourceRepository": "",
     "publishedAt": "2021-03-29T19:03:05.062Z",
     "updatedAt": "2021-03-31T18:36:28.315Z",
-    "communityTopicId": null
+    "communityTopicId": 45582
   },
   {
     "appId": "solaredge.modbus",
