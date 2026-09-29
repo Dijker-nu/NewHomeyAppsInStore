@@ -1,0 +1,7 @@
+# One Homey app ID per line. Lines starting with # are ignored.
+# Run: node scripts/import-app-ids.js
+#
+# Examples:
+com.tuya
+eu.elro.homeeasy
+com.djordie.grokconnect
