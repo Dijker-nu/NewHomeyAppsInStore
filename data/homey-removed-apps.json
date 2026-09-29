@@ -8,7 +8,7 @@
     "sourceRepository": "",
     "publishedAt": "2022-05-02T20:20:45.160Z",
     "communityTopicId": 63043,
-    "lastCheckedAt": "2026-09-29T17:35:13.683Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.497Z",
     "removedAt": "2026-09-22T21:00:34.629Z",
     "liveVersion": "0.1.1",
     "private": true,
@@ -21,9 +21,10 @@
     "developerId": "68be80a592a3a87a4b59b1ee",
     "version": "1.1.10",
     "removedAt": "2026-09-22T20:47:36.013Z",
-    "lastCheckedAt": "2026-09-29T17:35:14.060Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.990Z",
     "private": true,
-    "type": "private"
+    "type": "private",
+    "communityTopicId": 145469
   },
   {
     "appId": "com.tuya",

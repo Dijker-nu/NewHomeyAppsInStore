@@ -623,8 +623,8 @@
     "version": "0.9.7",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:54:55.690Z",
-    "updatedAt": "2023-03-22T11:44:34.159Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-29T17:57:30.403Z",
+    "communityTopicId": 78092
   },
   {
     "appId": "com.lg.ir",
@@ -3395,8 +3395,8 @@
     "version": "1.0.33",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:06:55.795Z",
-    "updatedAt": "2020-07-15T10:43:05.128Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-29T17:57:30.404Z",
+    "communityTopicId": 32419
   },
   {
     "appId": "com.prayerssapp",
@@ -8158,8 +8158,8 @@
     "version": "0.3.0",
     "sourceRepository": "https://github.com/CsabaSzabo/dev.csabaszabo.computhermthermostat",
     "publishedAt": "2023-10-20T16:11:46.982Z",
-    "updatedAt": "2023-10-28T18:49:35.481Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-29T17:57:30.405Z",
+    "communityTopicId": 93053
   },
   {
     "appId": "com.thirdreality.app",
@@ -9478,8 +9478,8 @@
     "version": "1.2.0",
     "sourceRepository": "https://github.com/airgradienthq/airgradient-homey",
     "publishedAt": "2024-07-20T11:41:09.139Z",
-    "updatedAt": "2026-09-23T14:03:10.707Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-29T17:57:30.405Z",
+    "communityTopicId": 143075
   },
   {
     "appId": "com.lomohome.sihas",
@@ -14692,8 +14692,8 @@
     "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-03-29T16:50:59.707Z",
-    "updatedAt": "2026-09-14T11:09:51.860Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-29T17:57:30.405Z",
+    "communityTopicId": 153938
   },
   {
     "appId": "com.basmilius.changelogs",
@@ -18696,7 +18696,7 @@
     "version": "2.0.6",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T18:52:09.356Z",
-    "updatedAt": "2026-09-28T18:52:09.356Z",
-    "communityTopicId": null
+    "updatedAt": "2026-09-29T17:57:30.406Z",
+    "communityTopicId": 160134
   }
 ]
