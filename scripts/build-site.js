@@ -48,7 +48,7 @@ const INDEX_HTML = `<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Homey Apps</title>
+<title>Homey Apps Index</title>
 <style>
   :root { color-scheme: light dark; }
   body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 1150px; margin: 2rem auto; padding: 0 1rem; }
@@ -85,7 +85,7 @@ const INDEX_HTML = `<!DOCTYPE html>
 </style>
 </head>
 <body>
-  <h1>New Homey Apps</h1>
+  <h1>Homey Apps Index</h1>
   <p class="subtitle" id="subtitle">Loading data...</p>
 
   <div class="controls">
@@ -120,7 +120,14 @@ const INDEX_HTML = `<!DOCTYPE html>
   </table>
 
   <table id="tab-developers" data-tab="developers">
-    <thead><tr><th>Developer</th><th>Developer ID</th><th>Apps</th><th>Forum Profile</th></tr></thead>
+    <thead>
+      <tr>
+        <th class="sortable" data-sort="developerName">Developer <span class="arrow"></span></th>
+        <th>Developer ID</th>
+        <th class="sortable" data-sort="apps">Apps <span class="arrow"></span></th>
+        <th class="sortable" data-sort="forumUsername">Forum Profile <span class="arrow"></span></th>
+      </tr>
+    </thead>
     <tbody></tbody>
   </table>
 
@@ -148,6 +155,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       visibleCount: { all: PAGE_SIZE, new: PAGE_SIZE, retired: PAGE_SIZE, developers: PAGE_SIZE },
       data: { all: [], new: [], retired: [], developers: [] },
       allSort: { column: 'publishedAt', direction: 'desc' },
+      developersSort: { column: 'developerName', direction: 'asc' },
     };
 
     const input = document.getElementById('search');
@@ -174,23 +182,43 @@ const INDEX_HTML = `<!DOCTYPE html>
     const loadMoreBtn = document.getElementById('load-more-btn');
     const subtitle = document.getElementById('subtitle');
     const sortableHeaders = Array.from(tables.all.querySelectorAll('th.sortable'));
+    const developersSortableHeaders = Array.from(tables.developers.querySelectorAll('th.sortable'));
 
     function escapeHtml(str) {
       return String(str == null ? '' : str)
         .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
     }
 
+    function developerLinkHtml(developerId, developerName) {
+      if (!developerId) return escapeHtml(developerName);
+      return '<a href="https://homey.app/author/' + encodeURIComponent(developerId) + '/" target="_blank" rel="noopener">' + escapeHtml(developerName) + '</a>';
+    }
+
+    function shortDeveloperId(id) {
+      if (!id) return '';
+      const str = String(id);
+      return str.length <= 6 ? str : '...' + str.slice(-6);
+    }
+
+    function forumUsernameForDeveloper(developerId) {
+      const dev = state.data.developers.find((d) => d.developerId === developerId);
+      return dev && dev.forumUsername ? dev.forumUsername : null;
+    }
+
     // Builds the forum reply text per community.homey.app/t/.../100276's
     // guideline: a plain link (leading space keeps it un-oneboxed), a
     // blank bare link (Discourse auto-oneboxes it into a rich card), and
-    // an optional community-topic link, all followed by an @AppStore mention.
+    // an optional community-topic link. Mentions the developer's own
+    // forum account when we've resolved one, falling back to @AppStore
+    // when we haven't (or when posting about someone else's app).
     function buildForumPost(app) {
       const appUrl = 'https://homey.app/a/' + app.appId;
       const lines = [' ' + appUrl, '', appUrl];
       if (app.communityTopicId) {
         lines.push('', ' https://community.homey.app/t/' + app.communityTopicId);
       }
-      lines.push('', '@AppStore');
+      const mentionUsername = forumUsernameForDeveloper(app.developerId);
+      lines.push('', '@' + (mentionUsername || 'AppStore'));
       return lines.join('\\n');
     }
 
@@ -234,7 +262,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td>' + dateCellHtml(app.updatedAt) + '</td>' +
         '<td><a href="' + storeUrl + '" target="_blank" rel="noopener">' + escapeHtml(app.name) + '</a></td>' +
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
-        '<td>' + escapeHtml(app.developerName) + '</td>' +
+        '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
         copyButtonCellHtml();
@@ -249,7 +277,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td>' + dateCellHtml(app.discoveredAt) + '</td>' +
         '<td><a href="' + storeUrl + '" target="_blank" rel="noopener">' + escapeHtml(app.name) + '</a></td>' +
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
-        '<td>' + escapeHtml(app.developerName) + '</td>' +
+        '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
         copyButtonCellHtml();
@@ -267,7 +295,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td>' + dateCellHtml(app.removedAt) + '</td>' +
         '<td><a href="' + storeUrl + '" target="_blank" rel="noopener">' + escapeHtml(app.name) + '</a></td>' +
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
-        '<td>' + escapeHtml(app.developerName) + '</td>' +
+        '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
         '<td>' + privateBadge + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>';
@@ -286,8 +314,8 @@ const INDEX_HTML = `<!DOCTYPE html>
         ? '<a href="https://community.homey.app/u/' + encodeURIComponent(dev.forumUsername) + '" target="_blank" rel="noopener">' + escapeHtml(dev.forumUsername) + '</a>'
         : '<span class="muted">—</span>';
       tr.innerHTML =
-        '<td>' + escapeHtml(dev.developerName) + '</td>' +
-        '<td class="muted">' + escapeHtml(dev.developerId) + '</td>' +
+        '<td>' + developerLinkHtml(dev.developerId, dev.developerName) + '</td>' +
+        '<td class="muted">' + escapeHtml(shortDeveloperId(dev.developerId)) + '</td>' +
         '<td>' + appCountFor(dev.developerId) + '</td>' +
         '<td>' + profileCell + '</td>';
       return tr;
@@ -308,7 +336,16 @@ const INDEX_HTML = `<!DOCTYPE html>
       } else if (tab === 'retired') {
         filtered.sort((a, b) => new Date(b.removedAt) - new Date(a.removedAt));
       } else if (tab === 'developers') {
-        filtered.sort((a, b) => (a.developerName || '').localeCompare(b.developerName || ''));
+        const { column, direction } = state.developersSort;
+        const dir = direction === 'asc' ? 1 : -1;
+        filtered.sort((a, b) => {
+          if (column === 'apps') {
+            return dir * (appCountFor(a.developerId) - appCountFor(b.developerId));
+          }
+          const av = (column === 'forumUsername' ? a.forumUsername : a.developerName) || '';
+          const bv = (column === 'forumUsername' ? b.forumUsername : b.developerName) || '';
+          return dir * av.localeCompare(bv);
+        });
       } else {
         const { column, direction } = state.allSort;
         const dir = direction === 'asc' ? 1 : -1;
@@ -317,12 +354,12 @@ const INDEX_HTML = `<!DOCTYPE html>
       return filtered;
     }
 
-    function updateSortIndicators() {
-      for (const th of sortableHeaders) {
+    function updateSortIndicatorsFor(headers, sortState) {
+      for (const th of headers) {
         const col = th.dataset.sort;
-        const isSorted = col === state.allSort.column;
+        const isSorted = col === sortState.column;
         th.classList.toggle('sorted', isSorted);
-        th.querySelector('.arrow').textContent = isSorted ? (state.allSort.direction === 'asc' ? '\\u25B2' : '\\u25BC') : '';
+        th.querySelector('.arrow').textContent = isSorted ? (sortState.direction === 'asc' ? '\\u25B2' : '\\u25BC') : '';
       }
     }
 
@@ -340,7 +377,8 @@ const INDEX_HTML = `<!DOCTYPE html>
         tbody.appendChild(rowRenderer(app));
       }
 
-      if (tab === 'all') updateSortIndicators();
+      if (tab === 'all') updateSortIndicatorsFor(sortableHeaders, state.allSort);
+      if (tab === 'developers') updateSortIndicatorsFor(developersSortableHeaders, state.developersSort);
 
       const emptyEl = emptyEls[tab];
       const captionEl = captionEls[tab];
@@ -362,7 +400,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       } else {
         emptyEl.style.display = 'none';
         captionEl.style.display = 'block';
-        captionEl.textContent = 'Showing ' + shown.length + ' of ' + filtered.length + ' matching app(s).';
+        captionEl.textContent = 'Showing ' + shown.length + ' of ' + filtered.length + ' matching ' + (tab === 'developers' ? 'developer(s)' : 'app(s)') + '.';
       }
 
       loadMoreWrap.style.display = filtered.length > shown.length ? 'block' : 'none';
@@ -391,6 +429,19 @@ const INDEX_HTML = `<!DOCTYPE html>
           state.allSort.direction = 'desc';
         }
         renderTab('all');
+      });
+    });
+
+    developersSortableHeaders.forEach((th) => {
+      th.addEventListener('click', () => {
+        const col = th.dataset.sort;
+        if (state.developersSort.column === col) {
+          state.developersSort.direction = state.developersSort.direction === 'asc' ? 'desc' : 'asc';
+        } else {
+          state.developersSort.column = col;
+          state.developersSort.direction = col === 'apps' ? 'desc' : 'asc';
+        }
+        renderTab('developers');
       });
     });
 
