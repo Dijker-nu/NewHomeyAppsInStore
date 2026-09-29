@@ -54,11 +54,9 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-<<<<<<< HEAD
+
     "lastCheckedAt": "2026-09-29T19:36:16.541Z",
-=======
-    "lastCheckedAt": "2026-09-29T19:10:51.945Z",
->>>>>>> 27110a54260201e6e2f15f6edefa0a86fb10aeac
+
     "type": "test",
     "private": false
   },
