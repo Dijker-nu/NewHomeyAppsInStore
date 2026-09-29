@@ -4,9 +4,12 @@
  * developer, version, community topic ID) and moving its updatedAt
  * forward ONLY when something actually changed. Also handles:
  *   - Apps that dropped off the live /app/ids list -> moved to
- *     data/homey-removed-apps.json.
+ *     data/homey-removed-apps.json with a "type" of 'private', 'test',
+ *     or 'removed' (see scripts/import-app-ids.js for how Private and
+ *     Test entries can also be added manually for apps that were never
+ *     on the live list to begin with).
  *   - Apps already in the removed list -> re-checked (liveVersion,
- *     private) in case they changed while retired.
+ *     private/type) in case they changed while unlisted.
  *   - As a safety net, any app that's neither in the snapshot nor the
  *     removed list is treated as newly discovered here too (in case a
  *     scripts/discover-new-apps.js run was missed) -- and logged the
@@ -261,6 +264,10 @@ async function main() {
         const now = new Date().toISOString();
         if (result.ok) {
           const raw = result.data;
+          // No live version at all -> effectively test-only now. Otherwise,
+          // the API's own private flag decides Private vs a generic Removed
+          // (still gone from the public listing for some other reason).
+          const type = !raw.liveVersion ? 'test' : raw.private === true ? 'private' : 'removed';
           return {
             appId: entry.appId,
             name: entry.name,
@@ -272,7 +279,8 @@ async function main() {
             publishedAt: entry.publishedAt,
             removedAt: now,
             lastCheckedAt: now,
-            private: typeof raw.private === 'boolean' ? raw.private : null,
+            type,
+            private: typeof raw.private === 'boolean' ? raw.private : null, // kept for backward compatibility
           };
         }
         return {
@@ -286,6 +294,7 @@ async function main() {
           publishedAt: entry.publishedAt,
           removedAt: now,
           lastCheckedAt: now,
+          type: 'removed',
           private: null,
         };
       },
@@ -308,14 +317,16 @@ async function main() {
         const now = new Date().toISOString();
         if (result.ok) {
           const raw = result.data;
+          const type = !raw.liveVersion ? 'test' : raw.private === true ? 'private' : 'removed';
           return {
             appId: entry.appId,
             lastCheckedAt: now,
             version: raw.liveVersion || entry.version || '',
             private: typeof raw.private === 'boolean' ? raw.private : entry.private,
+            type,
           };
         }
-        return { appId: entry.appId, lastCheckedAt: now };
+        return { appId: entry.appId, lastCheckedAt: now }; // couldn't refresh -- keep existing type as-is
       },
       DETAIL_CONCURRENCY
     );
