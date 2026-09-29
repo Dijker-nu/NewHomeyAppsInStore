@@ -78,9 +78,10 @@ const INDEX_HTML = `<!DOCTYPE html>
   .load-more-wrap { display: none; text-align: center; margin-top: 1rem; }
   .load-more-btn { padding: 0.5rem 1.2rem; font-size: 0.9rem; border: 1px solid #ccc; border-radius: 6px; background: Canvas; color: CanvasText; cursor: pointer; }
   .load-more-btn:hover { background: rgba(127,127,127,0.12); }
-  .copy-btn { padding: 0.3rem 0.7rem; font-size: 0.82rem; border: 1px solid #ccc; border-radius: 5px; background: Canvas; color: CanvasText; cursor: pointer; }
+  .copy-btn { padding: 0.2rem 0.45rem; font-size: 0.74rem; border: 1px solid #ccc; border-radius: 5px; background: Canvas; color: CanvasText; cursor: pointer; }
   .copy-btn:hover { background: rgba(127,127,127,0.12); }
   .copy-btn:disabled { opacity: 0.7; cursor: default; }
+  .forum-col { width: 1%; white-space: nowrap; }
   .badge { font-size: 0.78em; padding: 0.1rem 0.45rem; border-radius: 4px; background: rgba(127,127,127,0.18); }
 </style>
 </head>
@@ -103,19 +104,19 @@ const INDEX_HTML = `<!DOCTYPE html>
       <tr>
         <th class="sortable" data-sort="publishedAt">Published <span class="arrow"></span></th>
         <th class="sortable" data-sort="updatedAt">Updated <span class="arrow"></span></th>
-        <th>Name</th><th>App ID</th><th>Developer</th><th>Version</th><th>Source</th><th>Forum post</th>
+        <th>Name</th><th>App ID</th><th>Developer</th><th>Version</th><th>Topic</th><th>Source</th><th class="forum-col">Forum post</th>
       </tr>
     </thead>
     <tbody></tbody>
   </table>
 
   <table id="tab-new" class="active" data-tab="new">
-    <thead><tr><th>Discovered</th><th>Name</th><th>App ID</th><th>Developer</th><th>Version</th><th>Source</th><th>Forum post</th></tr></thead>
+    <thead><tr><th>Discovered</th><th>Name</th><th>App ID</th><th>Developer</th><th>Version</th><th>Topic</th><th>Source</th><th class="forum-col">Forum post</th></tr></thead>
     <tbody></tbody>
   </table>
 
   <table id="tab-retired" data-tab="retired">
-    <thead><tr><th>Removed</th><th>Name</th><th>App ID</th><th>Developer</th><th>Last Version</th><th>Private</th><th>Source</th></tr></thead>
+    <thead><tr><th>Removed</th><th>Name</th><th>App ID</th><th>Developer</th><th>Last Version</th><th>Topic</th><th>Private</th><th>Source</th></tr></thead>
     <tbody></tbody>
   </table>
 
@@ -239,6 +240,12 @@ const INDEX_HTML = `<!DOCTYPE html>
         : '<span class="muted">—</span>';
     }
 
+    function topicCellHtml(communityTopicId) {
+      return communityTopicId
+        ? '<a href="https://community.homey.app/t/' + encodeURIComponent(communityTopicId) + '" target="_blank" rel="noopener">' + escapeHtml(communityTopicId) + '</a>'
+        : '<span class="muted">—</span>';
+    }
+
     function dateCellHtml(value) {
       return escapeHtml(value ? String(value).slice(0, 10) : '');
     }
@@ -264,6 +271,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
         '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
+        '<td>' + topicCellHtml(app.communityTopicId) + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
         copyButtonCellHtml();
       attachCopyHandler(tr, app);
@@ -279,6 +287,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
         '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
+        '<td>' + topicCellHtml(app.communityTopicId) + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>' +
         copyButtonCellHtml();
       attachCopyHandler(tr, app);
@@ -297,6 +306,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td class="muted">' + escapeHtml(app.appId) + '</td>' +
         '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
+        '<td>' + topicCellHtml(app.communityTopicId) + '</td>' +
         '<td>' + privateBadge + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>';
       return tr;
