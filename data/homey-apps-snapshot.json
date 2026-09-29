@@ -796,10 +796,10 @@
     "name": "Philips Hue, without the bridge",
     "developerName": "Bortbytt Software",
     "developerId": "6aabeabb2c418bed593c1551",
-    "version": "2.1.2",
+    "version": "2.2.1",
     "sourceRepository": "https://github.com/JohanBendz/com.philips.hue.zigbee",
     "publishedAt": "2019-11-12T13:55:53.453Z",
-    "updatedAt": "2026-09-28T15:01:17.868Z",
+    "updatedAt": "2026-09-29T17:35:13.597Z",
     "communityTopicId": 29734
   },
   {
@@ -17450,10 +17450,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-08-13T00:42:22.394Z",
-    "updatedAt": "2026-09-27T19:14:33.732Z",
+    "updatedAt": "2026-09-29T17:35:13.600Z",
     "communityTopicId": 158618
   },
   {

@@ -260,8 +260,8 @@
   {
     "developerId": "6a8aabbfc6a80eeabce82a73",
     "developerName": "Antoine Chaulieu",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 23535,
+    "forumUsername": "Antoine_Chaulieu"
   },
   {
     "developerId": "664c0c7149acda60193a9007",
@@ -362,8 +362,8 @@
   {
     "developerId": "6a8e12e83bdd81c33f8d4766",
     "developerName": "ATX Groupe",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 55213,
+    "forumUsername": "Acrotux"
   },
   {
     "developerId": "5dcaba0f1c90c866f9364769",
@@ -404,8 +404,8 @@
   {
     "developerId": "6a9d56c5336db3df05ad20be",
     "developerName": "Bas de Jong",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 1052,
+    "forumUsername": "Ziglar"
   },
   {
     "developerId": "67feb54bad3776de40f10636",
@@ -638,8 +638,8 @@
   {
     "developerId": "67434f6a065f03b3ce3a9aec",
     "developerName": "Chargee B.V.",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 45973,
+    "forumUsername": "Bartjezzz"
   },
   {
     "developerId": "689d1e6ab4208a20554a370a",
@@ -884,8 +884,8 @@
   {
     "developerId": "6a9bdf22336db3df05accd76",
     "developerName": "Dennis Klatt",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 15798,
+    "forumUsername": "Dennis_Klatt"
   },
   {
     "developerId": "695123682f0b99832c05bb2d",
@@ -926,8 +926,8 @@
   {
     "developerId": "6a988123336db3df05abe174",
     "developerName": "Didier Van Uffelen",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 6055,
+    "forumUsername": "DidierVU"
   },
   {
     "developerId": "5dcabab01c90c866f9364fbc",
@@ -944,7 +944,7 @@
   {
     "developerId": "67a920e4ffb4956daea9e7b8",
     "developerName": "Dijker Solutions",
-    "forumUserID": null,
+    "forumUserID": 5,
     "forumUsername": "Dijker"
   },
   {
@@ -3170,8 +3170,8 @@
   {
     "developerId": "6a9dc466336db3df05ad31c1",
     "developerName": "Morten Bech",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 54143,
+    "forumUsername": "Morten_Bech"
   },
   {
     "developerId": "6807e95b61abe0f3b0bd616e",
@@ -4016,8 +4016,8 @@
   {
     "developerId": "6a985a8f336db3df05abd814",
     "developerName": "Ron van de Graaf",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 60553,
+    "forumUsername": "Graaf"
   },
   {
     "developerId": "66a547751e5a71f54677b879",
@@ -4652,8 +4652,8 @@
   {
     "developerId": "6a7cc169c6a80eeabce1bb26",
     "developerName": "Thomas R. Sidor",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 33367,
+    "forumUsername": "ThomasRS"
   },
   {
     "developerId": "692deb6166abe425474d3f5a",
@@ -4838,14 +4838,20 @@
   {
     "developerId": "6a9f88284b2b66c1158ea7af",
     "developerName": "Trond Bildøy",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 19026,
+    "forumUsername": "TroBil"
   },
   {
     "developerId": "65b2c359e0e92b510cb923b0",
     "developerName": "Tudor Popescu",
     "forumUserID": 38672,
     "forumUsername": "donkfather"
+  },
+  {
+    "developerId": "669511e8b5e3bf4a12b775c0",
+    "developerName": "Tuya Inc.",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "6151d7102d485c6ff63bc118",
@@ -4904,8 +4910,8 @@
   {
     "developerId": "6a86d386c6a80eeabce73263",
     "developerName": "vincent fresnel",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 64096,
+    "forumUsername": "byackee1"
   },
   {
     "developerId": "652d045e3d167bf020bfbb4e",
@@ -5114,8 +5120,8 @@
   {
     "developerId": "6a9186cd30ac038fba7073fc",
     "developerName": "ZperX .",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 63561,
+    "forumUsername": "ZperX"
   },
   {
     "developerId": "6954c3c92f0b99832c06d9e0",
