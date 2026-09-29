@@ -94,7 +94,7 @@ const INDEX_HTML = `<!DOCTYPE html>
     <div class="tabs">
       <button class="tab-btn" type="button" data-tab="all">All Apps</button>
       <button class="tab-btn active" type="button" data-tab="new">New Apps</button>
-      <button class="tab-btn" type="button" data-tab="retired">Retired Apps</button>
+      <button class="tab-btn" type="button" data-tab="retired">Unlisted Apps</button>
       <button class="tab-btn" type="button" data-tab="developers">Developers</button>
     </div>
   </div>
@@ -116,7 +116,7 @@ const INDEX_HTML = `<!DOCTYPE html>
   </table>
 
   <table id="tab-retired" data-tab="retired">
-    <thead><tr><th>Removed</th><th>Name</th><th>App ID</th><th>Developer</th><th>Last Version</th><th>Topic</th><th>Private</th><th>Source</th></tr></thead>
+    <thead><tr><th>Removed</th><th>Name</th><th>App ID</th><th>Developer</th><th>Last Version</th><th>Topic</th><th>Type</th><th>Source</th></tr></thead>
     <tbody></tbody>
   </table>
 
@@ -146,7 +146,7 @@ const INDEX_HTML = `<!DOCTYPE html>
     <button class="load-more-btn" id="load-more-btn" type="button">Load more</button>
   </div>
 
-  <footer>Data sourced from Athom's app-store API (apps-api.athom.com). New-app discovery runs every 4 hours; the full rescan (name/developer/version/topic-ID changes, plus removals) runs once a day, so "Updated" only moves when something actually changed. The "New Apps" list only keeps the last 30 days. "Developers" shows each developer's forum account, resolved from the first post of one of their apps' community topics where available. The "Forum post" copy button builds the text suggested by <a href="https://community.homey.app/t/list-new-published-app-in-homey-app-store-get-em-while-theyre-hot/100276" target="_blank" rel="noopener">this Homey Community topic's guideline</a> -- review it before posting.</footer>
+  <footer>Data sourced from Athom's app-store API (apps-api.athom.com). New-app discovery runs every 4 hours; the full rescan (name/developer/version/topic-ID changes, plus removals) runs once a day, so "Updated" only moves when something actually changed. The "New Apps" list only keeps the last 30 days. "Unlisted Apps" covers apps no longer on the public store listing -- Private (still live, just not publicly listed), Test (no live version, only a test build), or Removed (no longer reachable at all). "Developers" shows each developer's forum account, resolved from the first post of one of their apps' community topics where available. The "Forum post" copy button builds the text suggested by <a href="https://community.homey.app/t/list-new-published-app-in-homey-app-store-get-em-while-theyre-hot/100276" target="_blank" rel="noopener">this Homey Community topic's guideline</a> -- review it before posting.</footer>
 
   <script>
     const PAGE_SIZE = 20;
@@ -294,11 +294,24 @@ const INDEX_HTML = `<!DOCTYPE html>
       return tr;
     }
 
+    // Older data files (from before the "type" field existed) only have a
+    // boolean "private" -- this derives a sensible type from either shape.
+    function unlistedType(app) {
+      if (app.type === 'private' || app.type === 'test' || app.type === 'removed') return app.type;
+      if (app.private === true) return 'private';
+      if (app.private === false) return 'removed';
+      return 'removed';
+    }
+
+    function typeBadgeHtml(type) {
+      const labels = { private: 'Private', test: 'Test', removed: 'Removed' };
+      return '<span class="badge">' + (labels[type] || 'Removed') + '</span>';
+    }
+
     function renderRetiredRow(app) {
-      const storeUrl = 'https://homey.app/a/' + encodeURIComponent(app.appId);
-      const privateBadge = app.private === true ? '<span class="badge">private</span>'
-        : app.private === false ? '<span class="badge">public</span>'
-        : '<span class="muted">—</span>';
+      const type = unlistedType(app);
+      // Test-only apps have no live page -- link to the /test build instead.
+      const storeUrl = 'https://homey.app/a/' + encodeURIComponent(app.appId) + (type === 'test' ? '/test' : '');
       const tr = document.createElement('tr');
       tr.innerHTML =
         '<td>' + dateCellHtml(app.removedAt) + '</td>' +
@@ -307,7 +320,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         '<td>' + developerLinkHtml(app.developerId, app.developerName) + '</td>' +
         '<td>' + escapeHtml(app.version) + '</td>' +
         '<td>' + topicCellHtml(app.communityTopicId) + '</td>' +
-        '<td>' + privateBadge + '</td>' +
+        '<td>' + typeBadgeHtml(type) + '</td>' +
         '<td>' + sourceCellHtml(app.sourceRepository) + '</td>';
       return tr;
     }
@@ -397,7 +410,7 @@ const INDEX_HTML = `<!DOCTYPE html>
         emptyEl.textContent = tab === 'new'
           ? 'No new apps detected in the last 30 days.'
           : tab === 'retired'
-            ? 'No retired apps detected yet.'
+            ? 'No unlisted apps detected yet.'
             : tab === 'developers'
               ? 'No developer data yet. Check back after the next daily update.'
               : 'No data yet. Check back after the next scheduled run.';
@@ -492,7 +505,7 @@ const INDEX_HTML = `<!DOCTYPE html>
       state.data.developers = developers;
 
       subtitle.textContent = state.data.new.length + ' new app(s) in the last 30 days, out of ' +
-        state.data.all.length + ' apps currently in the store (' + state.data.retired.length + ' retired, ' +
+        state.data.all.length + ' apps currently in the store (' + state.data.retired.length + ' unlisted, ' +
         state.data.developers.length + ' developers).';
 
       renderTab(state.activeTab);
