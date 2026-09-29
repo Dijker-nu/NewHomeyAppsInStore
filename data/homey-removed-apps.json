@@ -36,7 +36,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-29T19:06:09.256Z",
+    "lastCheckedAt": "2026-09-29T19:36:16.541Z",
     "type": "private",
     "private": true
   },
@@ -50,7 +50,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-29T19:06:09.256Z",
+    "lastCheckedAt": "2026-09-29T19:36:16.541Z",
     "type": "test",
     "private": false
   },
@@ -64,7 +64,21 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-29T19:06:09.256Z",
+    "lastCheckedAt": "2026-09-29T19:36:16.541Z",
+    "type": "test",
+    "private": false
+  },
+  {
+    "appId": "net.pelliniscreenline",
+    "name": "ScreenLine Remote",
+    "developerName": "Geurt Dijker",
+    "developerId": "5dcab9fb1c90c866f9364679",
+    "version": "0.0.6",
+    "sourceRepository": "",
+    "communityTopicId": null,
+    "publishedAt": "",
+    "removedAt": "2026-09-29T19:36:16.541Z",
+    "lastCheckedAt": "2026-09-29T19:36:16.541Z",
     "type": "test",
     "private": false
   }
