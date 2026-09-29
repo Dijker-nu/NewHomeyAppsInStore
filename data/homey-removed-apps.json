@@ -8,7 +8,7 @@
     "sourceRepository": "",
     "publishedAt": "2022-05-02T20:20:45.160Z",
     "communityTopicId": 63043,
-    "lastCheckedAt": "2026-09-29T17:35:13.683Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.497Z",
     "removedAt": "2026-09-22T21:00:34.629Z",
     "liveVersion": "0.1.1",
     "private": true,
@@ -21,9 +21,10 @@
     "developerId": "68be80a592a3a87a4b59b1ee",
     "version": "1.1.10",
     "removedAt": "2026-09-22T20:47:36.013Z",
-    "lastCheckedAt": "2026-09-29T17:35:14.060Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.990Z",
     "private": true,
-    "type": "private"
+    "type": "private",
+    "communityTopicId": 145469
   },
   {
     "appId": "com.tuya",
@@ -35,7 +36,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-29T17:35:13.694Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.554Z",
     "type": "private",
     "private": true
   },
@@ -44,12 +45,12 @@
     "name": "eu.elro.homeeasy",
     "developerName": "Geurt Dijker",
     "developerId": "5dcab9fb1c90c866f9364679",
-    "version": "",
+    "version": "1.5.5",
     "sourceRepository": "",
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-29T17:35:13.682Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.504Z",
     "type": "test",
     "private": false
   },
@@ -58,12 +59,12 @@
     "name": "com.djordie.grokconnect",
     "developerName": "Djordie Hendriks",
     "developerId": "6a541613ce38f245588e36a7",
-    "version": "",
+    "version": "1.0.0",
     "sourceRepository": "",
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-29T17:35:14.397Z",
+    "lastCheckedAt": "2026-09-29T17:57:30.498Z",
     "type": "test",
     "private": false
   }
