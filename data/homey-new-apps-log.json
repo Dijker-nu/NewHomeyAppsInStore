@@ -478,5 +478,17 @@
     "updatedAt": "2026-09-30T17:08:00.206Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-30T17:07:53.536Z"
+  },
+  {
+    "appId": "dk.hoffmeyer-net.sonosannouncements",
+    "name": "Sonos Announcements",
+    "developerName": "Tobias Vinzents",
+    "developerId": "6aa1b37b4b2b66c1158fc9a4",
+    "version": "1.1.9",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T23:17:34.955Z",
+    "updatedAt": "2026-09-30T23:17:34.955Z",
+    "communityTopicId": 159398,
+    "discoveredAt": "2026-09-30T23:17:34.954Z"
   }
 ]
