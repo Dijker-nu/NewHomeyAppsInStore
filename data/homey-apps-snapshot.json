@@ -2600,10 +2600,10 @@
     "name": "Picnic",
     "developerName": "Sander Maas",
     "developerId": "5dcaba361c90c866f9364965",
-    "version": "3.8.1",
+    "version": "3.8.2",
     "sourceRepository": "https://github.com/Retrospected/app.picnic",
     "publishedAt": "2019-11-12T14:03:42.026Z",
-    "updatedAt": "2026-09-21T21:16:48.488Z",
+    "updatedAt": "2026-09-30T09:49:35.524Z",
     "communityTopicId": 78811
   },
   {
@@ -6395,10 +6395,10 @@
     "name": "Daikin ONECTA",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "7.12.2",
+    "version": "7.12.3",
     "sourceRepository": "",
     "publishedAt": "2022-06-19T11:54:05.486Z",
-    "updatedAt": "2026-09-22T13:39:37.100Z",
+    "updatedAt": "2026-09-30T09:49:35.525Z",
     "communityTopicId": 54088
   },
   {
@@ -13765,10 +13765,10 @@
     "name": "Power Guard",
     "developerName": "Finn Cato Andersen",
     "developerId": "699d86c8cd19af4229e69b9a",
-    "version": "0.8.131",
+    "version": "0.8.137",
     "sourceRepository": "https://github.com/Finn-Cato/power-guard",
     "publishedAt": "2026-02-24T11:08:56.740Z",
-    "updatedAt": "2026-09-28T16:19:53.155Z",
+    "updatedAt": "2026-09-30T09:49:35.526Z",
     "communityTopicId": 156607
   },
   {
@@ -14414,10 +14414,10 @@
     "name": "Panasonic Comfort Cloud",
     "developerName": "Johnny Espesete",
     "developerId": "69be6930699c29709c9e5744",
-    "version": "2.1.30",
+    "version": "2.1.31",
     "sourceRepository": "",
     "publishedAt": "2026-03-21T09:54:35.939Z",
-    "updatedAt": "2026-09-28T20:14:10.145Z",
+    "updatedAt": "2026-09-30T09:49:35.526Z",
     "communityTopicId": null
   },
   {
@@ -15107,10 +15107,10 @@
     "name": "Tuya Local",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.237",
+    "version": "1.0.253",
     "sourceRepository": "https://github.com/andiwirz/com.tuyalocal",
     "publishedAt": "2026-04-20T09:03:38.496Z",
-    "updatedAt": "2026-09-28T19:11:28.378Z",
+    "updatedAt": "2026-09-30T09:49:35.527Z",
     "communityTopicId": 154077
   },
   {
@@ -15206,10 +15206,10 @@
     "name": "myAudi",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.97",
+    "version": "1.0.98",
     "sourceRepository": "https://github.com/andiwirz/com.audi.etron",
     "publishedAt": "2026-04-24T21:44:36.116Z",
-    "updatedAt": "2026-09-28T18:53:14.827Z",
+    "updatedAt": "2026-09-30T09:49:35.527Z",
     "communityTopicId": 155543
   },
   {
@@ -18698,5 +18698,38 @@
     "publishedAt": "2026-09-28T18:52:09.356Z",
     "updatedAt": "2026-09-29T17:57:30.406Z",
     "communityTopicId": 160134
+  },
+  {
+    "appId": "com.dklatt.outdoorclimate",
+    "name": "Outdoor Climate",
+    "developerName": "Dennis Klatt",
+    "developerId": "6a9bdf22336db3df05accd76",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T09:49:11.940Z",
+    "updatedAt": "2026-09-30T09:49:11.940Z",
+    "communityTopicId": 160067
+  },
+  {
+    "appId": "com.aok.blinds",
+    "name": "A-OK",
+    "developerName": "Thorstein Klingenberg",
+    "developerId": "6ab85d5f30dc90a8d6e5146e",
+    "version": "1.1.11",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T09:49:11.940Z",
+    "updatedAt": "2026-09-30T09:49:11.940Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.lolpold.espanel",
+    "name": "ESPanel",
+    "developerName": "Leopold Junkers",
+    "developerId": "6abaa70730dc90a8d6e5b566",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T09:49:12.856Z",
+    "updatedAt": "2026-09-30T09:49:12.856Z",
+    "communityTopicId": null
   }
 ]

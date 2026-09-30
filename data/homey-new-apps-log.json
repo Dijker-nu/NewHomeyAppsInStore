@@ -286,5 +286,41 @@
     "updatedAt": "2026-09-28T18:52:09.356Z",
     "communityTopicId": null,
     "discoveredAt": "2026-09-28T18:52:09.355Z"
+  },
+  {
+    "appId": "com.dklatt.outdoorclimate",
+    "name": "Outdoor Climate",
+    "developerName": "Dennis Klatt",
+    "developerId": "6a9bdf22336db3df05accd76",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T09:49:11.940Z",
+    "updatedAt": "2026-09-30T09:49:11.940Z",
+    "communityTopicId": 160067,
+    "discoveredAt": "2026-09-30T09:49:11.940Z"
+  },
+  {
+    "appId": "com.aok.blinds",
+    "name": "A-OK",
+    "developerName": "Thorstein Klingenberg",
+    "developerId": "6ab85d5f30dc90a8d6e5146e",
+    "version": "1.1.11",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T09:49:11.940Z",
+    "updatedAt": "2026-09-30T09:49:11.940Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-30T09:49:11.940Z"
+  },
+  {
+    "appId": "com.lolpold.espanel",
+    "name": "ESPanel",
+    "developerName": "Leopold Junkers",
+    "developerId": "6abaa70730dc90a8d6e5b566",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T09:49:12.856Z",
+    "updatedAt": "2026-09-30T09:49:12.856Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-09-30T09:49:11.940Z"
   }
 ]

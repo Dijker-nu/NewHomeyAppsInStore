@@ -2532,6 +2532,12 @@
     "forumUsername": "LvanderRee"
   },
   {
+    "developerId": "6abaa70730dc90a8d6e5b566",
+    "developerName": "Leopold Junkers",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6a8d453417d5efdcea632181",
     "developerName": "Leviton Manufacturing Co., Inc.",
     "forumUserID": null,
@@ -4682,6 +4688,12 @@
   {
     "developerId": "5ebc3994eb0701b821bd6207",
     "developerName": "Thorleif Jacobsen",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ab85d5f30dc90a8d6e5146e",
+    "developerName": "Thorstein Klingenberg",
     "forumUserID": null,
     "forumUsername": null
   },

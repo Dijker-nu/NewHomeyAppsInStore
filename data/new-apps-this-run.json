@@ -1,1 +1,2504 @@
-[]
+[
+  {
+    "id": "com.dklatt.outdoorclimate",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "Outdoor Climate",
+        "nl": "Buitenklimaat"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Outdoor Climate adds a sensor with the current outdoor temperature and humidity for any location you choose. Search by Dutch postcode or by place name, or simply use the location of your Homey.\n\nIn the Netherlands the values come from the nearest official KNMI weather station, measured every 10 minutes. When no station is close enough or the station data is unavailable, the app automatically switches to a calculated value from a weather model for your exact location. This also works outside the Netherlands. The sensor shows which source and station were used and when the values were measured, so you always know how reliable they are. The values work in Flows, Insights and on displays such as VarView.\n",
+        "nl": "Buitenklimaat voegt een sensor toe met de actuele buitentemperatuur en luchtvochtigheid voor een locatie naar keuze. Zoek op postcode of plaatsnaam, of gebruik gewoon de locatie van je Homey.\n\nIn Nederland komen de waarden van het dichtstbijzijnde officiële KNMI-weerstation, dat elke 10 minuten meet. Is er geen station dichtbij genoeg of zijn de stationsgegevens niet beschikbaar, dan schakelt de app automatisch over op een berekende waarde uit een weermodel voor jouw exacte locatie. Dat werkt ook buiten Nederland. De sensor laat zien welke bron en welk station zijn gebruikt en wanneer er is gemeten, zodat je altijd weet hoe betrouwbaar de waarden zijn. De waarden werken in Flows, Insights en op schermen zoals VarView.\n"
+      },
+      "description": {
+        "en": "Know how warm and humid it really is outside",
+        "nl": "Weet hoe warm en vochtig het buiten echt is"
+      },
+      "category": "climate",
+      "brandColor": "#0A6FA8",
+      "icon": "https://apps.homeycdn.net/app/com.dklatt.outdoorclimate/3/71f693d6-89c6-4c09-93ac-eebbdcbcf66a/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.dklatt.outdoorclimate/3/71f693d6-89c6-4c09-93ac-eebbdcbcf66a/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.dklatt.outdoorclimate/3/71f693d6-89c6-4c09-93ac-eebbdcbcf66a/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "outdoor",
+          "name": {
+            "en": "Outdoor climate",
+            "nl": "Buitenklimaat"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_temperature",
+            "measure_humidity",
+            "climate_source",
+            "climate_observed"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.dklatt.outdoorclimate/3/71f693d6-89c6-4c09-93ac-eebbdcbcf66a/drivers/outdoor/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.dklatt.outdoorclimate/3/71f693d6-89c6-4c09-93ac-eebbdcbcf66a/drivers/outdoor/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.dklatt.outdoorclimate/3/71f693d6-89c6-4c09-93ac-eebbdcbcf66a/drivers/outdoor/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "refresh_now",
+            "title": {
+              "en": "Update now",
+              "nl": "Nu bijwerken"
+            },
+            "hint": {
+              "en": "Fetches the latest temperature and humidity right away.",
+              "nl": "Haalt direct de laatste temperatuur en luchtvochtigheid op."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=outdoor"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 160067,
+      "state": "live",
+      "stateChangedAt": "2026-09-30T08:20:28.153Z",
+      "bugs": "https://community.homey.app/t/160067",
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": {
+        "developers": [
+          {
+            "name": "Dennis Klatt"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "DennisKlatt"
+          }
+        }
+      },
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "First official release: outdoor temperature and humidity from the nearest KNMI weather station, with automatic fallback to a weather model.",
+        "nl": "Eerste officiële versie: buitentemperatuur en luchtvochtigheid van het dichtstbijzijnde KNMI-weerstation, met automatische terugval op een weermodel."
+      },
+      "compatibility": ">=8.1.0",
+      "tags": {
+        "en": [
+          "temperature",
+          "humidity",
+          "weather",
+          "outdoor",
+          "KNMI",
+          "postcode"
+        ],
+        "nl": [
+          "temperatuur",
+          "luchtvochtigheid",
+          "weer",
+          "buiten",
+          "KNMI",
+          "postcode"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a9bdf22336db3df05accd76",
+      "type": "user",
+      "userId": "601540e8d6f4fb0bde6a4210",
+      "name": "Dennis Klatt",
+      "verified": false
+    },
+    "communityTopicId": 160067
+  },
+  {
+    "id": "com.aok.blinds",
+    "rating": null,
+    "liveBuild": {
+      "id": 11,
+      "name": {
+        "en": "A-OK"
+      },
+      "version": "1.1.11",
+      "readme": {
+        "en": "Raise, stop and lower A-OK roller blinds from Homey. The app works as an extra remote, so the handset you already use keeps working, and you can run the blinds from the Homey app, Flows and voice assistants.\n\nPair each blind as its own device, either with that remote or by switching the motor off and on. A Homey Pro with a 433 MHz radio is required. This is for classic A-OK radio motors, not Zigbee or Wi-Fi models.\n"
+      },
+      "description": {
+        "en": "Roller blinds that follow your day."
+      },
+      "category": "tools",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/com.aok.blinds/11/8ab90cc7-ee5f-4bc7-a90f-8a4ea7fa686f/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.aok.blinds/11/8ab90cc7-ee5f-4bc7-a90f-8a4ea7fa686f/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.aok.blinds/11/8ab90cc7-ee5f-4bc7-a90f-8a4ea7fa686f/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "aok_rf_blind",
+          "name": {
+            "en": "A-OK Blind Motor"
+          },
+          "class": "blinds",
+          "capabilities": [
+            "windowcoverings_state"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.aok.blinds/11/8ab90cc7-ee5f-4bc7-a90f-8a4ea7fa686f/drivers/aok_rf_blind/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.aok.blinds/11/8ab90cc7-ee5f-4bc7-a90f-8a4ea7fa686f/drivers/aok_rf_blind/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.aok.blinds/11/8ab90cc7-ee5f-4bc7-a90f-8a4ea7fa686f/drivers/aok_rf_blind/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-30T08:00:00.407Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:thklinge@gmail.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:433"
+      ],
+      "changelog": {
+        "en": "Store listing: description, readme and images."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.1.11",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ab85d5f30dc90a8d6e5146e",
+      "type": "user",
+      "userId": "5c2ec18b43dc1716ccd1bb82",
+      "name": "Thorstein Klingenberg",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.lolpold.espanel",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "ESPanel",
+        "sv": "ESPanel"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "ESPanel turns an ESP32 touch display into a wall panel for your home. Put your lights, sockets, curtains and sensors on it as tiles, tap to switch them, hold one to see all its values, and browse your home room by room. Your Flows can use the display too, to show messages, ask questions or count down.\n\nYou need an ESP32 display running the free openHASP firmware, for example the 4 inch Guition ESP32-S3-4848S040. ESPanel has its own MQTT server, so nothing else is needed: add the display under Devices and follow the steps on screen.\n",
+        "sv": "ESPanel gör en ESP32-pekskärm till en väggpanel för ditt hem. Lägg dina lampor, uttag, gardiner och sensorer på den som rutor, tryck för att styra dem, håll inne på en för att se alla dess värden och bläddra genom hemmet rum för rum. Dina flöden kan också använda skärmen, för att visa meddelanden, ställa frågor eller räkna ner.\n\nDu behöver en ESP32-skärm med den fria firmwaren openHASP, till exempel Guitions 4-tums ESP32-S3-4848S040. ESPanel har en egen MQTT-server, så inget annat behövs: lägg till skärmen under Enheter och följ stegen på skärmen.\n"
+      },
+      "description": {
+        "en": "Your Homey on an ESP32 wall display: tiles, rooms, dimmers and Flow messages",
+        "sv": "Din Homey på en ESP32-väggskärm: rutor, rum, dimrar och Flow-meddelanden"
+      },
+      "category": "tools",
+      "brandColor": "#F4A259",
+      "icon": "https://apps.homeycdn.net/app/com.lolpold.espanel/1/cd71cde9-adff-4582-ac3d-b0990de66cd5/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.lolpold.espanel/1/cd71cde9-adff-4582-ac3d-b0990de66cd5/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.lolpold.espanel/1/cd71cde9-adff-4582-ac3d-b0990de66cd5/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "plate",
+          "name": {
+            "en": "ESPanel Display",
+            "sv": "ESPanel-skärm"
+          },
+          "class": "other",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "panel_page"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Backlight",
+                "sv": "Skärmljus"
+              }
+            },
+            "dim": {
+              "title": {
+                "en": "Brightness",
+                "sv": "Ljusstyrka"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lolpold.espanel/1/cd71cde9-adff-4582-ac3d-b0990de66cd5/drivers/plate/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lolpold.espanel/1/cd71cde9-adff-4582-ac3d-b0990de66cd5/drivers/plate/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lolpold.espanel/1/cd71cde9-adff-4582-ac3d-b0990de66cd5/drivers/plate/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "page_changed",
+            "title": {
+              "en": "Page changed",
+              "sv": "Sidan ändrades"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "page",
+                "type": "number",
+                "title": {
+                  "en": "Page",
+                  "sv": "Sida"
+                },
+                "example": 2
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": {
+                  "en": "Page title",
+                  "sv": "Sidtitel"
+                },
+                "example": "Kök"
+              }
+            ]
+          },
+          {
+            "id": "button_pressed",
+            "title": {
+              "en": "A Flow button was pressed",
+              "sv": "En Flow-knapp trycktes"
+            },
+            "titleFormatted": {
+              "en": "[[button]] was pressed",
+              "sv": "[[button]] trycktes"
+            },
+            "hint": {
+              "en": "Add Flow buttons to the display in Apps → ESPanel → Configure (Add → Flow button).",
+              "sv": "Lägg till Flow-knappar på skärmen i Appar → ESPanel → Konfigurera (Lägg till → Flow-knapp)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "button",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Button",
+                  "sv": "Knapp"
+                },
+                "placeholder": {
+                  "en": "Movie night",
+                  "sv": "Filmkväll"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "name",
+                "type": "string",
+                "title": {
+                  "en": "Button",
+                  "sv": "Knapp"
+                },
+                "example": "Movie night"
+              }
+            ]
+          },
+          {
+            "id": "screen_touched",
+            "title": {
+              "en": "Someone touched the display",
+              "sv": "Någon rörde vid skärmen"
+            },
+            "hint": {
+              "en": "The first touch after the display has been idle or untouched for 30 seconds, so it works like a presence sensor without firing for every tap.",
+              "sv": "Första beröringen efter att skärmen varit i vila eller orörd i 30 sekunder. Fungerar som en närvarosensor utan att köras för varje tryck."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "screen_idle",
+            "title": {
+              "en": "The screen dimmed or turned off",
+              "sv": "Skärmen dimmades eller släcktes"
+            },
+            "titleFormatted": {
+              "en": "The screen [[state]]",
+              "sv": "Skärmen [[state]]"
+            },
+            "hint": {
+              "en": "Because nobody has used the display for the times set under Screen timeout in its settings.",
+              "sv": "För att ingen har använt skärmen under tiderna i Skärmsläckning i dess inställningar."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "title": {
+                  "en": "State",
+                  "sv": "Läge"
+                },
+                "values": [
+                  {
+                    "id": "dimmed",
+                    "title": {
+                      "en": "dimmed",
+                      "sv": "dimmades"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "turned off",
+                      "sv": "släcktes"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "display_offline",
+            "title": {
+              "en": "The display went offline",
+              "sv": "Skärmen tappade anslutningen"
+            },
+            "hint": {
+              "en": "After a minute without contact, so a restart doesn't count. Check its power and Wi-Fi.",
+              "sv": "Efter en minut utan kontakt, så en omstart räknas inte. Kontrollera ström och wifi."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "display_online",
+            "title": {
+              "en": "The display came back online",
+              "sv": "Skärmen är ansluten igen"
+            },
+            "hint": {
+              "en": "After \"The display went offline\".",
+              "sv": "Efter \"Skärmen tappade anslutningen\"."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "countdown_finished",
+            "title": {
+              "en": "A countdown finished",
+              "sv": "En nedräkning är klar"
+            },
+            "hint": {
+              "en": "From \"Show a countdown\". The display has no speaker, so play a sound on another device here.",
+              "sv": "Från \"Visa en nedräkning\". Skärmen har ingen högtalare, så spela ett ljud på en annan enhet här."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande"
+                },
+                "example": "Pizza"
+              }
+            ]
+          },
+          {
+            "id": "question_confirmed",
+            "title": {
+              "en": "Someone answered yes",
+              "sv": "Någon svarade ja"
+            },
+            "titleFormatted": {
+              "en": "Someone answered yes to [[question]]",
+              "sv": "Någon svarade ja på [[question]]"
+            },
+            "hint": {
+              "en": "Fires when ✓ is tapped on a question from \"Ask a yes/no question\" (under Then). The question must be the same text (case doesn't matter).",
+              "sv": "Körs när ✓ trycks på en fråga från \"Ställ en ja/nej-fråga\" (under Då). Frågan måste vara samma text (skiftläge spelar ingen roll)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "sv": "Fråga"
+                },
+                "placeholder": {
+                  "en": "Open the front door?",
+                  "sv": "Öppna ytterdörren?"
+                }
+              }
+            ]
+          },
+          {
+            "id": "question_declined",
+            "title": {
+              "en": "Someone answered no",
+              "sv": "Någon svarade nej"
+            },
+            "titleFormatted": {
+              "en": "Someone answered no to [[question]]",
+              "sv": "Någon svarade nej på [[question]]"
+            },
+            "hint": {
+              "en": "Fires when ✕ is tapped on a question from \"Ask a yes/no question\" (under Then). The question must be the same text (case doesn't matter).",
+              "sv": "Körs när ✕ trycks på en fråga från \"Ställ en ja/nej-fråga\" (under Då). Frågan måste vara samma text (skiftläge spelar ingen roll)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "sv": "Fråga"
+                },
+                "placeholder": {
+                  "en": "Open the front door?",
+                  "sv": "Öppna ytterdörren?"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "screen_is",
+            "title": {
+              "en": "The screen is awake, dimmed or off",
+              "sv": "Skärmen är vaken, dimmad eller släckt"
+            },
+            "titleFormatted": {
+              "en": "The screen !{{is|isn't}} [[state]]",
+              "sv": "Skärmen !{{är|är inte}} [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "title": {
+                  "en": "State",
+                  "sv": "Läge"
+                },
+                "values": [
+                  {
+                    "id": "awake",
+                    "title": {
+                      "en": "awake",
+                      "sv": "vaken"
+                    }
+                  },
+                  {
+                    "id": "dimmed",
+                    "title": {
+                      "en": "dimmed",
+                      "sv": "dimmad"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "off",
+                      "sv": "släckt"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "page_is",
+            "title": {
+              "en": "Is showing a page",
+              "sv": "Visar en sida"
+            },
+            "titleFormatted": {
+              "en": "!{{Is|Isn't}} showing page [[page]]",
+              "sv": "!{{Visar|Visar inte}} sida [[page]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "page",
+                "type": "number",
+                "title": {
+                  "en": "Page",
+                  "sv": "Sida"
+                },
+                "min": 1,
+                "max": 12,
+                "step": 1,
+                "placeholder": {
+                  "en": "1"
+                }
+              }
+            ]
+          },
+          {
+            "id": "message_showing",
+            "title": {
+              "en": "A message is showing",
+              "sv": "Ett meddelande visas"
+            },
+            "titleFormatted": {
+              "en": "A message !{{is|isn't}} showing",
+              "sv": "Ett meddelande !{{visas|visas inte}}"
+            },
+            "hint": {
+              "en": "Any message, question or countdown from a Flow.",
+              "sv": "Alla meddelanden, frågor och nedräkningar från flöden."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "is_online",
+            "title": {
+              "en": "The display is online",
+              "sv": "Skärmen är ansluten"
+            },
+            "titleFormatted": {
+              "en": "The display !{{is|isn't}} online",
+              "sv": "Skärmen !{{är|är inte}} ansluten"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_accent",
+            "title": {
+              "en": "Set the accent colour of the displays",
+              "sv": "Ställ in skärmarnas accentfärg"
+            },
+            "titleFormatted": {
+              "en": "Set the accent colour of all displays to [[color]]",
+              "sv": "Ställ in accentfärgen på alla skärmar till [[color]]"
+            },
+            "hint": {
+              "en": "For example red while the alarm is on. The displays redraw.",
+              "sv": "Till exempel rött när larmet är på. Skärmarna ritas om."
+            },
+            "args": [
+              {
+                "name": "color",
+                "type": "color",
+                "title": {
+                  "en": "Colour",
+                  "sv": "Färg"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_theme",
+            "title": {
+              "en": "Set the theme of the displays",
+              "sv": "Ställ in skärmarnas tema"
+            },
+            "titleFormatted": {
+              "en": "Set the theme of all displays to [[theme]]",
+              "sv": "Ställ in temat på alla skärmar till [[theme]]"
+            },
+            "hint": {
+              "en": "The same as Theme in Apps → ESPanel → Configure → Appearance; automatic is dark in the evening and night. The displays redraw.",
+              "sv": "Samma som Tema i Appar → ESPanel → Konfigurera → Utseende; automatiskt är mörkt på kvällen och natten. Skärmarna ritas om."
+            },
+            "args": [
+              {
+                "name": "theme",
+                "type": "dropdown",
+                "title": {
+                  "en": "Theme",
+                  "sv": "Tema"
+                },
+                "values": [
+                  {
+                    "id": "dark",
+                    "title": {
+                      "en": "dark",
+                      "sv": "mörkt"
+                    }
+                  },
+                  {
+                    "id": "light",
+                    "title": {
+                      "en": "light",
+                      "sv": "ljust"
+                    }
+                  },
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "automatic",
+                      "sv": "automatiskt"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "show_message",
+            "title": {
+              "en": "Show a message",
+              "sv": "Visa ett meddelande"
+            },
+            "titleFormatted": {
+              "en": "Show [[message]] for [[seconds]] seconds",
+              "sv": "Visa [[message]] i [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Shows a notification card on the display. Tap it to close.",
+              "sv": "Visar ett meddelandekort på skärmen. Tryck för att stänga."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande"
+                },
+                "placeholder": {
+                  "en": "Water the plants today",
+                  "sv": "Vattna blommorna idag"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 600,
+                "step": 1,
+                "placeholder": {
+                  "en": "15"
+                }
+              }
+            ]
+          },
+          {
+            "id": "show_message_icon",
+            "title": {
+              "en": "Show a message with an icon",
+              "sv": "Visa ett meddelande med ikon"
+            },
+            "titleFormatted": {
+              "en": "Show [[message]] with [[icon]] in [[color]] for [[seconds]] seconds",
+              "sv": "Visa [[message]] med [[icon]] i [[color]] i [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Like \"Show a message\", with your choice of icon and colour.",
+              "sv": "Som \"Visa ett meddelande\", med valfri ikon och färg."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande"
+                },
+                "placeholder": {
+                  "en": "The washing is done",
+                  "sv": "Tvätten är klar"
+                }
+              },
+              {
+                "name": "icon",
+                "type": "dropdown",
+                "title": {
+                  "en": "Icon",
+                  "sv": "Ikon"
+                },
+                "values": [
+                  {
+                    "id": "play",
+                    "title": {
+                      "en": "Play",
+                      "sv": "Spela"
+                    }
+                  },
+                  {
+                    "id": "power",
+                    "title": {
+                      "en": "Power",
+                      "sv": "Ström"
+                    }
+                  },
+                  {
+                    "id": "home",
+                    "title": {
+                      "en": "Home",
+                      "sv": "Hem"
+                    }
+                  },
+                  {
+                    "id": "bed",
+                    "title": {
+                      "en": "Bed",
+                      "sv": "Säng"
+                    }
+                  },
+                  {
+                    "id": "sofa",
+                    "title": {
+                      "en": "Sofa",
+                      "sv": "Soffa"
+                    }
+                  },
+                  {
+                    "id": "tv",
+                    "title": {
+                      "en": "TV",
+                      "sv": "TV"
+                    }
+                  },
+                  {
+                    "id": "light",
+                    "title": {
+                      "en": "Light",
+                      "sv": "Lampa"
+                    }
+                  },
+                  {
+                    "id": "bell",
+                    "title": {
+                      "en": "Bell",
+                      "sv": "Ringklocka"
+                    }
+                  },
+                  {
+                    "id": "alert",
+                    "title": {
+                      "en": "Warning",
+                      "sv": "Varning"
+                    }
+                  },
+                  {
+                    "id": "check",
+                    "title": {
+                      "en": "Check mark",
+                      "sv": "Bock"
+                    }
+                  },
+                  {
+                    "id": "door",
+                    "title": {
+                      "en": "Door",
+                      "sv": "Dörr"
+                    }
+                  },
+                  {
+                    "id": "doorOpen",
+                    "title": {
+                      "en": "Open door",
+                      "sv": "Öppen dörr"
+                    }
+                  },
+                  {
+                    "id": "lock",
+                    "title": {
+                      "en": "Lock",
+                      "sv": "Lås"
+                    }
+                  },
+                  {
+                    "id": "unlock",
+                    "title": {
+                      "en": "Unlocked",
+                      "sv": "Olåst"
+                    }
+                  },
+                  {
+                    "id": "shield",
+                    "title": {
+                      "en": "Alarm",
+                      "sv": "Larm"
+                    }
+                  },
+                  {
+                    "id": "camera",
+                    "title": {
+                      "en": "Camera",
+                      "sv": "Kamera"
+                    }
+                  },
+                  {
+                    "id": "washer",
+                    "title": {
+                      "en": "Washing machine",
+                      "sv": "Tvättmaskin"
+                    }
+                  },
+                  {
+                    "id": "dishwasher",
+                    "title": {
+                      "en": "Dishwasher",
+                      "sv": "Diskmaskin"
+                    }
+                  },
+                  {
+                    "id": "vacuum",
+                    "title": {
+                      "en": "Robot vacuum",
+                      "sv": "Robotdammsugare"
+                    }
+                  },
+                  {
+                    "id": "car",
+                    "title": {
+                      "en": "Car",
+                      "sv": "Bil"
+                    }
+                  },
+                  {
+                    "id": "bolt",
+                    "title": {
+                      "en": "Electricity",
+                      "sv": "El"
+                    }
+                  },
+                  {
+                    "id": "sun",
+                    "title": {
+                      "en": "Sun",
+                      "sv": "Sol"
+                    }
+                  },
+                  {
+                    "id": "thermometer",
+                    "title": {
+                      "en": "Temperature",
+                      "sv": "Temperatur"
+                    }
+                  },
+                  {
+                    "id": "water",
+                    "title": {
+                      "en": "Water",
+                      "sv": "Vatten"
+                    }
+                  },
+                  {
+                    "id": "fire",
+                    "title": {
+                      "en": "Fire",
+                      "sv": "Eld"
+                    }
+                  },
+                  {
+                    "id": "snow",
+                    "title": {
+                      "en": "Snow",
+                      "sv": "Snö"
+                    }
+                  },
+                  {
+                    "id": "trash",
+                    "title": {
+                      "en": "Bin",
+                      "sv": "Soptunna"
+                    }
+                  },
+                  {
+                    "id": "calendar",
+                    "title": {
+                      "en": "Calendar",
+                      "sv": "Kalender"
+                    }
+                  },
+                  {
+                    "id": "clock",
+                    "title": {
+                      "en": "Clock",
+                      "sv": "Klocka"
+                    }
+                  },
+                  {
+                    "id": "timer",
+                    "title": {
+                      "en": "Timer",
+                      "sv": "Timer"
+                    }
+                  },
+                  {
+                    "id": "coffee",
+                    "title": {
+                      "en": "Coffee",
+                      "sv": "Kaffe"
+                    }
+                  },
+                  {
+                    "id": "music",
+                    "title": {
+                      "en": "Music",
+                      "sv": "Musik"
+                    }
+                  },
+                  {
+                    "id": "person",
+                    "title": {
+                      "en": "Person",
+                      "sv": "Person"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "color",
+                "type": "dropdown",
+                "title": {
+                  "en": "Colour",
+                  "sv": "Färg"
+                },
+                "values": [
+                  {
+                    "id": "accent",
+                    "title": {
+                      "en": "the accent colour",
+                      "sv": "accentfärgen"
+                    }
+                  },
+                  {
+                    "id": "red",
+                    "title": {
+                      "en": "red",
+                      "sv": "rött"
+                    }
+                  },
+                  {
+                    "id": "orange",
+                    "title": {
+                      "en": "orange",
+                      "sv": "orange"
+                    }
+                  },
+                  {
+                    "id": "yellow",
+                    "title": {
+                      "en": "yellow",
+                      "sv": "gult"
+                    }
+                  },
+                  {
+                    "id": "green",
+                    "title": {
+                      "en": "green",
+                      "sv": "grönt"
+                    }
+                  },
+                  {
+                    "id": "blue",
+                    "title": {
+                      "en": "blue",
+                      "sv": "blått"
+                    }
+                  },
+                  {
+                    "id": "purple",
+                    "title": {
+                      "en": "purple",
+                      "sv": "lila"
+                    }
+                  },
+                  {
+                    "id": "white",
+                    "title": {
+                      "en": "white",
+                      "sv": "vitt"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 600,
+                "step": 1,
+                "placeholder": {
+                  "en": "15"
+                }
+              }
+            ]
+          },
+          {
+            "id": "show_sticky",
+            "title": {
+              "en": "Show a message until it is tapped",
+              "sv": "Visa ett meddelande tills någon trycker"
+            },
+            "titleFormatted": {
+              "en": "Show [[message]] with [[icon]] in [[color]] until tapped",
+              "sv": "Visa [[message]] med [[icon]] i [[color]] tills någon trycker"
+            },
+            "hint": {
+              "en": "Stays on the display until someone taps it, or a Flow uses \"Close the message\".",
+              "sv": "Ligger kvar tills någon trycker på den, eller ett flöde använder \"Stäng meddelandet\"."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande"
+                },
+                "placeholder": {
+                  "en": "Take the bins out",
+                  "sv": "Ställ ut soptunnan"
+                }
+              },
+              {
+                "name": "icon",
+                "type": "dropdown",
+                "title": {
+                  "en": "Icon",
+                  "sv": "Ikon"
+                },
+                "values": [
+                  {
+                    "id": "play",
+                    "title": {
+                      "en": "Play",
+                      "sv": "Spela"
+                    }
+                  },
+                  {
+                    "id": "power",
+                    "title": {
+                      "en": "Power",
+                      "sv": "Ström"
+                    }
+                  },
+                  {
+                    "id": "home",
+                    "title": {
+                      "en": "Home",
+                      "sv": "Hem"
+                    }
+                  },
+                  {
+                    "id": "bed",
+                    "title": {
+                      "en": "Bed",
+                      "sv": "Säng"
+                    }
+                  },
+                  {
+                    "id": "sofa",
+                    "title": {
+                      "en": "Sofa",
+                      "sv": "Soffa"
+                    }
+                  },
+                  {
+                    "id": "tv",
+                    "title": {
+                      "en": "TV",
+                      "sv": "TV"
+                    }
+                  },
+                  {
+                    "id": "light",
+                    "title": {
+                      "en": "Light",
+                      "sv": "Lampa"
+                    }
+                  },
+                  {
+                    "id": "bell",
+                    "title": {
+                      "en": "Bell",
+                      "sv": "Ringklocka"
+                    }
+                  },
+                  {
+                    "id": "alert",
+                    "title": {
+                      "en": "Warning",
+                      "sv": "Varning"
+                    }
+                  },
+                  {
+                    "id": "check",
+                    "title": {
+                      "en": "Check mark",
+                      "sv": "Bock"
+                    }
+                  },
+                  {
+                    "id": "door",
+                    "title": {
+                      "en": "Door",
+                      "sv": "Dörr"
+                    }
+                  },
+                  {
+                    "id": "doorOpen",
+                    "title": {
+                      "en": "Open door",
+                      "sv": "Öppen dörr"
+                    }
+                  },
+                  {
+                    "id": "lock",
+                    "title": {
+                      "en": "Lock",
+                      "sv": "Lås"
+                    }
+                  },
+                  {
+                    "id": "unlock",
+                    "title": {
+                      "en": "Unlocked",
+                      "sv": "Olåst"
+                    }
+                  },
+                  {
+                    "id": "shield",
+                    "title": {
+                      "en": "Alarm",
+                      "sv": "Larm"
+                    }
+                  },
+                  {
+                    "id": "camera",
+                    "title": {
+                      "en": "Camera",
+                      "sv": "Kamera"
+                    }
+                  },
+                  {
+                    "id": "washer",
+                    "title": {
+                      "en": "Washing machine",
+                      "sv": "Tvättmaskin"
+                    }
+                  },
+                  {
+                    "id": "dishwasher",
+                    "title": {
+                      "en": "Dishwasher",
+                      "sv": "Diskmaskin"
+                    }
+                  },
+                  {
+                    "id": "vacuum",
+                    "title": {
+                      "en": "Robot vacuum",
+                      "sv": "Robotdammsugare"
+                    }
+                  },
+                  {
+                    "id": "car",
+                    "title": {
+                      "en": "Car",
+                      "sv": "Bil"
+                    }
+                  },
+                  {
+                    "id": "bolt",
+                    "title": {
+                      "en": "Electricity",
+                      "sv": "El"
+                    }
+                  },
+                  {
+                    "id": "sun",
+                    "title": {
+                      "en": "Sun",
+                      "sv": "Sol"
+                    }
+                  },
+                  {
+                    "id": "thermometer",
+                    "title": {
+                      "en": "Temperature",
+                      "sv": "Temperatur"
+                    }
+                  },
+                  {
+                    "id": "water",
+                    "title": {
+                      "en": "Water",
+                      "sv": "Vatten"
+                    }
+                  },
+                  {
+                    "id": "fire",
+                    "title": {
+                      "en": "Fire",
+                      "sv": "Eld"
+                    }
+                  },
+                  {
+                    "id": "snow",
+                    "title": {
+                      "en": "Snow",
+                      "sv": "Snö"
+                    }
+                  },
+                  {
+                    "id": "trash",
+                    "title": {
+                      "en": "Bin",
+                      "sv": "Soptunna"
+                    }
+                  },
+                  {
+                    "id": "calendar",
+                    "title": {
+                      "en": "Calendar",
+                      "sv": "Kalender"
+                    }
+                  },
+                  {
+                    "id": "clock",
+                    "title": {
+                      "en": "Clock",
+                      "sv": "Klocka"
+                    }
+                  },
+                  {
+                    "id": "timer",
+                    "title": {
+                      "en": "Timer",
+                      "sv": "Timer"
+                    }
+                  },
+                  {
+                    "id": "coffee",
+                    "title": {
+                      "en": "Coffee",
+                      "sv": "Kaffe"
+                    }
+                  },
+                  {
+                    "id": "music",
+                    "title": {
+                      "en": "Music",
+                      "sv": "Musik"
+                    }
+                  },
+                  {
+                    "id": "person",
+                    "title": {
+                      "en": "Person",
+                      "sv": "Person"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "color",
+                "type": "dropdown",
+                "title": {
+                  "en": "Colour",
+                  "sv": "Färg"
+                },
+                "values": [
+                  {
+                    "id": "accent",
+                    "title": {
+                      "en": "the accent colour",
+                      "sv": "accentfärgen"
+                    }
+                  },
+                  {
+                    "id": "red",
+                    "title": {
+                      "en": "red",
+                      "sv": "rött"
+                    }
+                  },
+                  {
+                    "id": "orange",
+                    "title": {
+                      "en": "orange",
+                      "sv": "orange"
+                    }
+                  },
+                  {
+                    "id": "yellow",
+                    "title": {
+                      "en": "yellow",
+                      "sv": "gult"
+                    }
+                  },
+                  {
+                    "id": "green",
+                    "title": {
+                      "en": "green",
+                      "sv": "grönt"
+                    }
+                  },
+                  {
+                    "id": "blue",
+                    "title": {
+                      "en": "blue",
+                      "sv": "blått"
+                    }
+                  },
+                  {
+                    "id": "purple",
+                    "title": {
+                      "en": "purple",
+                      "sv": "lila"
+                    }
+                  },
+                  {
+                    "id": "white",
+                    "title": {
+                      "en": "white",
+                      "sv": "vitt"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "show_message_image",
+            "title": {
+              "en": "Show a message with an image",
+              "sv": "Visa ett meddelande med bild"
+            },
+            "titleFormatted": {
+              "en": "Show [[message]] over [[droptoken]] for [[seconds]] seconds",
+              "sv": "Visa [[message]] över [[droptoken]] i [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Drop an image tag (for example a camera snapshot) on this card. It is shown full screen.",
+              "sv": "Släpp en bildtagg (till exempel en kamerabild) på kortet. Den visas i helskärm."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande"
+                },
+                "placeholder": {
+                  "en": "Someone is at the door",
+                  "sv": "Någon är vid dörren"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 600,
+                "step": 1,
+                "placeholder": {
+                  "en": "20"
+                }
+              }
+            ]
+          },
+          {
+            "id": "show_countdown",
+            "title": {
+              "en": "Show a countdown",
+              "sv": "Visa en nedräkning"
+            },
+            "titleFormatted": {
+              "en": "Count down [[minutes]] minutes for [[message]]",
+              "sv": "Räkna ner [[minutes]] minuter för [[message]]"
+            },
+            "hint": {
+              "en": "Shows the time left, then \"Time's up\" until someone taps it. Tapping it earlier cancels it. \"A countdown finished\" fires at zero.",
+              "sv": "Visar tiden som är kvar och sedan \"Tiden är ute\" tills någon trycker. Ett tryck innan dess avbryter. \"En nedräkning är klar\" körs vid noll."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "minutes",
+                "type": "number",
+                "title": {
+                  "en": "Minutes",
+                  "sv": "Minuter"
+                },
+                "min": 0.5,
+                "max": 180,
+                "step": 0.5,
+                "placeholder": {
+                  "en": "12"
+                }
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "sv": "Meddelande"
+                },
+                "placeholder": {
+                  "en": "Pizza",
+                  "sv": "Pizza"
+                }
+              }
+            ]
+          },
+          {
+            "id": "close_message",
+            "title": {
+              "en": "Close the message",
+              "sv": "Stäng meddelandet"
+            },
+            "hint": {
+              "en": "Closes whatever message, question or countdown is showing. An open question counts as unanswered.",
+              "sv": "Stänger det meddelande, den fråga eller nedräkning som visas. En öppen fråga räknas som obesvarad."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "ask_standard",
+            "title": {
+              "en": "Ask a yes/no question",
+              "sv": "Ställ en ja/nej-fråga"
+            },
+            "titleFormatted": {
+              "en": "Ask [[question]] for [[seconds]] seconds",
+              "sv": "Fråga [[question]] i [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Shows ✕ and ✓ on the display. The answer starts Flows with \"Someone answered yes/no\" (under When) and the same question.",
+              "sv": "Visar ✕ och ✓ på skärmen. Svaret startar flöden med \"Någon svarade ja/nej\" (under När) och samma fråga."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "sv": "Fråga"
+                },
+                "placeholder": {
+                  "en": "Pull down the shades?",
+                  "sv": "Dra ner persiennerna?"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 120,
+                "step": 1,
+                "placeholder": {
+                  "en": "30"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ask_image_standard",
+            "title": {
+              "en": "Ask a yes/no question with an image",
+              "sv": "Ställ en ja/nej-fråga med bild"
+            },
+            "titleFormatted": {
+              "en": "Ask [[question]] over [[droptoken]] for [[seconds]] seconds",
+              "sv": "Fråga [[question]] över [[droptoken]] i [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Drop an image tag (for example a camera snapshot) on this card. Shows it full screen with ✕ and ✓; the answer starts Flows with \"Someone answered yes/no\".",
+              "sv": "Släpp en bildtagg (till exempel en kamerabild) på kortet. Visas i helskärm med ✕ och ✓; svaret startar flöden med \"Någon svarade ja/nej\"."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "sv": "Fråga"
+                },
+                "placeholder": {
+                  "en": "Snack time?",
+                  "sv": "Mellanmål?"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 120,
+                "step": 1,
+                "placeholder": {
+                  "en": "30"
+                }
+              }
+            ]
+          },
+          {
+            "id": "ask",
+            "title": {
+              "en": "Ask a yes/no question and wait for the answer",
+              "sv": "Ställ en ja/nej-fråga och vänta på svaret"
+            },
+            "titleFormatted": {
+              "en": "Ask [[question]] and wait up to [[seconds]] seconds",
+              "sv": "Fråga [[question]] och vänta upp till [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Advanced Flow: shows ✕ and ✓ and waits. Then the \"Confirmed\" tag is the answer, and \"Answered\" says whether anyone answered.",
+              "sv": "Avancerade flöden: visar ✕ och ✓ och väntar. Sedan är taggen \"Bekräftad\" svaret, och \"Besvarad\" om någon svarade."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "sv": "Fråga"
+                },
+                "placeholder": {
+                  "en": "Pull down the shades?",
+                  "sv": "Dra ner persiennerna?"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 120,
+                "step": 1,
+                "placeholder": {
+                  "en": "30"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "confirmed",
+                "type": "boolean",
+                "title": {
+                  "en": "Confirmed",
+                  "sv": "Bekräftad"
+                },
+                "example": true
+              },
+              {
+                "name": "answered",
+                "type": "boolean",
+                "title": {
+                  "en": "Answered",
+                  "sv": "Besvarad"
+                },
+                "example": true
+              }
+            ]
+          },
+          {
+            "id": "ask_image",
+            "title": {
+              "en": "Ask a yes/no question with an image and wait for the answer",
+              "sv": "Ställ en ja/nej-fråga med bild och vänta på svaret"
+            },
+            "titleFormatted": {
+              "en": "Ask [[question]] over [[droptoken]] and wait up to [[seconds]] seconds",
+              "sv": "Fråga [[question]] över [[droptoken]] och vänta upp till [[seconds]] sekunder"
+            },
+            "hint": {
+              "en": "Advanced Flow: drop an image tag (for example a camera snapshot) on this card. Shows it full screen with ✕ and ✓ and waits; the \"Confirmed\" tag is the answer.",
+              "sv": "Avancerade flöden: släpp en bildtagg (till exempel en kamerabild) på kortet. Visas i helskärm med ✕ och ✓ och väntar; taggen \"Bekräftad\" är svaret."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "question",
+                "type": "text",
+                "title": {
+                  "en": "Question",
+                  "sv": "Fråga"
+                },
+                "placeholder": {
+                  "en": "Snack time?",
+                  "sv": "Mellanmål?"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds",
+                  "sv": "Sekunder"
+                },
+                "min": 3,
+                "max": 120,
+                "step": 1,
+                "placeholder": {
+                  "en": "30"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "confirmed",
+                "type": "boolean",
+                "title": {
+                  "en": "Confirmed",
+                  "sv": "Bekräftad"
+                },
+                "example": true
+              },
+              {
+                "name": "answered",
+                "type": "boolean",
+                "title": {
+                  "en": "Answered",
+                  "sv": "Besvarad"
+                },
+                "example": true
+              }
+            ]
+          },
+          {
+            "id": "set_tile_text",
+            "title": {
+              "en": "Set the text of a Flow tile",
+              "sv": "Ändra texten på en Flow-ruta"
+            },
+            "titleFormatted": {
+              "en": "Set [[tile]] to [[value]] with the small text [[status]]",
+              "sv": "Sätt [[tile]] till [[value]] med den lilla texten [[status]]"
+            },
+            "hint": {
+              "en": "For text tiles (Apps → ESPanel → Configure → Add → Text tile). The small text is optional.",
+              "sv": "För textrutor (Appar → ESPanel → Konfigurera → Lägg till → Textruta). Den lilla texten är valfri."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "tile",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Tile",
+                  "sv": "Ruta"
+                },
+                "placeholder": {
+                  "en": "Electricity price",
+                  "sv": "Elpris"
+                }
+              },
+              {
+                "name": "value",
+                "type": "text",
+                "title": {
+                  "en": "Text",
+                  "sv": "Text"
+                },
+                "placeholder": {
+                  "en": "1.24 kr",
+                  "sv": "1,24 kr"
+                }
+              },
+              {
+                "name": "status",
+                "type": "text",
+                "required": false,
+                "title": {
+                  "en": "Small text",
+                  "sv": "Liten text"
+                },
+                "placeholder": {
+                  "en": "per kWh",
+                  "sv": "per kWh"
+                }
+              }
+            ]
+          },
+          {
+            "id": "highlight_tile",
+            "title": {
+              "en": "Highlight a tile",
+              "sv": "Markera en ruta"
+            },
+            "titleFormatted": {
+              "en": "Highlight [[tile]] in [[color]], [[effect]]",
+              "sv": "Markera [[tile]] i [[color]], [[effect]]"
+            },
+            "hint": {
+              "en": "A thick coloured border, until \"Stop highlighting a tile\".",
+              "sv": "En tjock färgad ram, tills \"Sluta markera en ruta\"."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "tile",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Tile",
+                  "sv": "Ruta"
+                },
+                "placeholder": {
+                  "en": "Washing machine",
+                  "sv": "Tvättmaskin"
+                }
+              },
+              {
+                "name": "color",
+                "type": "dropdown",
+                "title": {
+                  "en": "Colour",
+                  "sv": "Färg"
+                },
+                "values": [
+                  {
+                    "id": "accent",
+                    "title": {
+                      "en": "the accent colour",
+                      "sv": "accentfärgen"
+                    }
+                  },
+                  {
+                    "id": "red",
+                    "title": {
+                      "en": "red",
+                      "sv": "rött"
+                    }
+                  },
+                  {
+                    "id": "orange",
+                    "title": {
+                      "en": "orange",
+                      "sv": "orange"
+                    }
+                  },
+                  {
+                    "id": "yellow",
+                    "title": {
+                      "en": "yellow",
+                      "sv": "gult"
+                    }
+                  },
+                  {
+                    "id": "green",
+                    "title": {
+                      "en": "green",
+                      "sv": "grönt"
+                    }
+                  },
+                  {
+                    "id": "blue",
+                    "title": {
+                      "en": "blue",
+                      "sv": "blått"
+                    }
+                  },
+                  {
+                    "id": "purple",
+                    "title": {
+                      "en": "purple",
+                      "sv": "lila"
+                    }
+                  },
+                  {
+                    "id": "white",
+                    "title": {
+                      "en": "white",
+                      "sv": "vitt"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "effect",
+                "type": "dropdown",
+                "title": {
+                  "en": "Effect",
+                  "sv": "Effekt"
+                },
+                "values": [
+                  {
+                    "id": "steady",
+                    "title": {
+                      "en": "steady",
+                      "sv": "fast"
+                    }
+                  },
+                  {
+                    "id": "flashing",
+                    "title": {
+                      "en": "flashing",
+                      "sv": "blinkande"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "unhighlight_tile",
+            "title": {
+              "en": "Stop highlighting a tile",
+              "sv": "Sluta markera en ruta"
+            },
+            "titleFormatted": {
+              "en": "Stop highlighting [[tile]]",
+              "sv": "Sluta markera [[tile]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "tile",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Tile",
+                  "sv": "Ruta"
+                },
+                "placeholder": {
+                  "en": "All tiles",
+                  "sv": "Alla rutor"
+                }
+              }
+            ]
+          },
+          {
+            "id": "show_indicator",
+            "title": {
+              "en": "Show an indicator dot",
+              "sv": "Visa en indikatorprick"
+            },
+            "titleFormatted": {
+              "en": "Show a [[effect]] dot in [[color]] [[corner]]",
+              "sv": "Visa en [[effect]] prick i [[color]] [[corner]]"
+            },
+            "hint": {
+              "en": "A small dot in a corner of the screen, on every page, until \"Hide an indicator dot\". For example: post has arrived, the car is charging.",
+              "sv": "En liten prick i ett hörn av skärmen, på alla sidor, tills \"Dölj en indikatorprick\". Till exempel: posten har kommit, bilen laddar."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "effect",
+                "type": "dropdown",
+                "title": {
+                  "en": "Effect",
+                  "sv": "Effekt"
+                },
+                "values": [
+                  {
+                    "id": "steady",
+                    "title": {
+                      "en": "steady",
+                      "sv": "fast"
+                    }
+                  },
+                  {
+                    "id": "flashing",
+                    "title": {
+                      "en": "flashing",
+                      "sv": "blinkande"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "color",
+                "type": "dropdown",
+                "title": {
+                  "en": "Colour",
+                  "sv": "Färg"
+                },
+                "values": [
+                  {
+                    "id": "accent",
+                    "title": {
+                      "en": "the accent colour",
+                      "sv": "accentfärgen"
+                    }
+                  },
+                  {
+                    "id": "red",
+                    "title": {
+                      "en": "red",
+                      "sv": "rött"
+                    }
+                  },
+                  {
+                    "id": "orange",
+                    "title": {
+                      "en": "orange",
+                      "sv": "orange"
+                    }
+                  },
+                  {
+                    "id": "yellow",
+                    "title": {
+                      "en": "yellow",
+                      "sv": "gult"
+                    }
+                  },
+                  {
+                    "id": "green",
+                    "title": {
+                      "en": "green",
+                      "sv": "grönt"
+                    }
+                  },
+                  {
+                    "id": "blue",
+                    "title": {
+                      "en": "blue",
+                      "sv": "blått"
+                    }
+                  },
+                  {
+                    "id": "purple",
+                    "title": {
+                      "en": "purple",
+                      "sv": "lila"
+                    }
+                  },
+                  {
+                    "id": "white",
+                    "title": {
+                      "en": "white",
+                      "sv": "vitt"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "corner",
+                "type": "dropdown",
+                "title": {
+                  "en": "Corner",
+                  "sv": "Hörn"
+                },
+                "values": [
+                  {
+                    "id": "topLeft",
+                    "title": {
+                      "en": "top left",
+                      "sv": "uppe till vänster"
+                    }
+                  },
+                  {
+                    "id": "topRight",
+                    "title": {
+                      "en": "top right",
+                      "sv": "uppe till höger"
+                    }
+                  },
+                  {
+                    "id": "bottomLeft",
+                    "title": {
+                      "en": "bottom left",
+                      "sv": "nere till vänster"
+                    }
+                  },
+                  {
+                    "id": "bottomRight",
+                    "title": {
+                      "en": "bottom right",
+                      "sv": "nere till höger"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "hide_indicator",
+            "title": {
+              "en": "Hide an indicator dot",
+              "sv": "Dölj en indikatorprick"
+            },
+            "titleFormatted": {
+              "en": "Hide the dot [[corner]]",
+              "sv": "Dölj pricken [[corner]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "corner",
+                "type": "dropdown",
+                "title": {
+                  "en": "Corner",
+                  "sv": "Hörn"
+                },
+                "values": [
+                  {
+                    "id": "topLeft",
+                    "title": {
+                      "en": "top left",
+                      "sv": "uppe till vänster"
+                    }
+                  },
+                  {
+                    "id": "topRight",
+                    "title": {
+                      "en": "top right",
+                      "sv": "uppe till höger"
+                    }
+                  },
+                  {
+                    "id": "bottomLeft",
+                    "title": {
+                      "en": "bottom left",
+                      "sv": "nere till vänster"
+                    }
+                  },
+                  {
+                    "id": "bottomRight",
+                    "title": {
+                      "en": "bottom right",
+                      "sv": "nere till höger"
+                    }
+                  },
+                  {
+                    "id": "all",
+                    "title": {
+                      "en": "in every corner",
+                      "sv": "i alla hörn"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "show_page",
+            "title": {
+              "en": "Show page",
+              "sv": "Visa sida"
+            },
+            "titleFormatted": {
+              "en": "Show page [[page]]",
+              "sv": "Visa sida [[page]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "page",
+                "type": "number",
+                "title": {
+                  "en": "Page",
+                  "sv": "Sida"
+                },
+                "min": 1,
+                "max": 12,
+                "step": 1,
+                "placeholder": {
+                  "en": "1"
+                }
+              }
+            ]
+          },
+          {
+            "id": "open_room",
+            "title": {
+              "en": "Open a room",
+              "sv": "Öppna ett rum"
+            },
+            "titleFormatted": {
+              "en": "Open [[room]]",
+              "sv": "Öppna [[room]]"
+            },
+            "hint": {
+              "en": "Shows a room's devices, as if it was tapped on the Rooms page. Add \"Turn on\" to light the screen too.",
+              "sv": "Visar ett rums enheter, som om det trycktes på Rum-sidan. Lägg till \"Slå på\" för att tända skärmen också."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "room",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Room",
+                  "sv": "Rum"
+                },
+                "placeholder": {
+                  "en": "Kitchen",
+                  "sv": "Kök"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_screen_timeout",
+            "title": {
+              "en": "Turn the screen timeout on or off",
+              "sv": "Slå på eller av skärmsläckningen"
+            },
+            "titleFormatted": {
+              "en": "Turn the screen timeout [[state]]",
+              "sv": "Slå [[state]] skärmsläckningen"
+            },
+            "hint": {
+              "en": "The same as \"Dim and turn off when not in use\" in the display's settings. Off keeps the screen bright, for example during a party.",
+              "sv": "Samma som \"Dimma och släck när den inte används\" i skärmens inställningar. Av håller skärmen tänd, till exempel under en fest."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "title": {
+                  "en": "On or off",
+                  "sv": "På eller av"
+                },
+                "values": [
+                  {
+                    "id": "on",
+                    "title": {
+                      "en": "on",
+                      "sv": "på"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "off",
+                      "sv": "av"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "lock",
+            "title": {
+              "en": "Lock the display",
+              "sv": "Lås skärmen"
+            },
+            "hint": {
+              "en": "Touches do nothing until \"Unlock the display\" (child lock, cleaning). Messages and questions from Flows can still be tapped.",
+              "sv": "Beröringar gör ingenting tills \"Lås upp skärmen\" (barnlås, städning). Meddelanden och frågor från flöden går fortfarande att trycka på."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "unlock",
+            "title": {
+              "en": "Unlock the display",
+              "sv": "Lås upp skärmen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "restart",
+            "title": {
+              "en": "Restart the display",
+              "sv": "Starta om skärmen"
+            },
+            "hint": {
+              "en": "Restarts openHASP on the display. It is back with your tiles in about 15 seconds.",
+              "sv": "Startar om openHASP på skärmen. Den är tillbaka med dina rutor efter ungefär 15 sekunder."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          },
+          {
+            "id": "push_layout",
+            "title": {
+              "en": "Redraw the display",
+              "sv": "Rita om skärmen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=plate"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-09-30T08:22:22.724Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api"
+      ],
+      "changelog": {
+        "en": "First release.",
+        "sv": "Första versionen."
+      },
+      "compatibility": ">=12.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6abaa70730dc90a8d6e5b566",
+      "type": "user",
+      "userId": "5baf5624a3d9343752a63c36",
+      "name": "Leopold Junkers",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]
