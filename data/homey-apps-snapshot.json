@@ -18731,5 +18731,148 @@
     "publishedAt": "2026-09-30T09:49:12.856Z",
     "updatedAt": "2026-09-30T09:49:12.856Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "no.wattlet.smartvvb",
+    "name": "SmartVVB",
+    "developerName": "Luc Wathelet",
+    "developerId": "6ab3e35e30dc90a8d6e39cf6",
+    "version": "1.0.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:53.536Z",
+    "updatedAt": "2026-09-30T17:07:53.536Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.dypodex.mrstar",
+    "name": "MR Star",
+    "developerName": "Sven Serlier",
+    "developerId": "68e268c515677f0f51ffe6f4",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/smarthomesven/homey-mrstar",
+    "publishedAt": "2026-09-30T17:07:54.758Z",
+    "updatedAt": "2026-09-30T17:07:54.758Z",
+    "communityTopicId": 160089
+  },
+  {
+    "appId": "net.lindbom.grohe",
+    "name": "Grohe Sense",
+    "developerName": "Johan Lindbom",
+    "developerId": "6a8df7bd30ac038fba6faad4",
+    "version": "1.2.0",
+    "sourceRepository": "https://github.com/KalleSven/homey-grohe-sense",
+    "publishedAt": "2026-09-30T17:07:54.758Z",
+    "updatedAt": "2026-09-30T17:07:54.758Z",
+    "communityTopicId": 159363
+  },
+  {
+    "appId": "fr.remora.filpilote",
+    "name": "Remora Fil Pilote",
+    "developerName": "yann baillet",
+    "developerId": "6a908e1930ac038fba703a1d",
+    "version": "0.1.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:54.758Z",
+    "updatedAt": "2026-09-30T17:07:54.758Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.webbuilds.cozytouch",
+    "name": "Cozytouch",
+    "developerName": "WebBuilds B.V.",
+    "developerId": "6a8fe2d542c85dadfeb0ff2d",
+    "version": "1.1.1",
+    "sourceRepository": "https://github.com/WebBuildsNL/cozytouch-homey",
+    "publishedAt": "2026-09-30T17:07:55.508Z",
+    "updatedAt": "2026-09-30T17:07:55.508Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.jessedevries.huesync",
+    "name": "Hue Sync",
+    "developerName": "Jesse de Vries",
+    "developerId": "6aa1a45b4b2b66c1158fb585",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:56.218Z",
+    "updatedAt": "2026-09-30T17:07:56.218Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.jeroenstern.tennet-onbalans",
+    "name": "TenneT Onbalans",
+    "developerName": "Jeroen Stern",
+    "developerId": "6aa2d84f4b2b66c115905e5d",
+    "version": "2.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:57.058Z",
+    "updatedAt": "2026-09-30T17:07:57.058Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.narwal.global",
+    "name": "Narwal",
+    "developerName": "Idan Bush",
+    "developerId": "69a8814aaf832c1e4629fcce",
+    "version": "1.3.29",
+    "sourceRepository": "https://github.com/TheBlackBush/narwal-homey-app",
+    "publishedAt": "2026-09-30T17:07:57.799Z",
+    "updatedAt": "2026-09-30T17:07:57.799Z",
+    "communityTopicId": 160061
+  },
+  {
+    "appId": "com.oralb.io",
+    "name": "Oral-B",
+    "developerName": "Mark Moorlag",
+    "developerId": "6ab593e330dc90a8d6e447b6",
+    "version": "0.1.9",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:57.800Z",
+    "updatedAt": "2026-09-30T17:07:57.800Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.wisse.hikvision",
+    "name": "Hikvision NVR & DVR",
+    "developerName": "Wisse Koelman",
+    "developerId": "6a9e8ad4336db3df05ad62f1",
+    "version": "2.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:58.613Z",
+    "updatedAt": "2026-09-30T17:07:58.613Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "local.yi.camera",
+    "name": "YI Camera Local",
+    "developerName": "Antoine Chaulieu",
+    "developerId": "6a8aabbfc6a80eeabce82a73",
+    "version": "0.5.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:59.436Z",
+    "updatedAt": "2026-09-30T17:07:59.436Z",
+    "communityTopicId": 160090
+  },
+  {
+    "appId": "se.krister.gardensprinkler",
+    "name": "Garden sprinkler",
+    "developerName": "krister Olsson",
+    "developerId": "6a80287ac6a80eeabce30ab5",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-09-30T17:07:59.436Z",
+    "updatedAt": "2026-09-30T17:07:59.436Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.goossens.atmoce",
+    "name": "Atmoce",
+    "developerName": "Jo Goossens",
+    "developerId": "69e73665fb6dd7068a7cbff1",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/jogoossens/com.goossens.atmoce",
+    "publishedAt": "2026-09-30T17:08:00.206Z",
+    "updatedAt": "2026-09-30T17:08:00.206Z",
+    "communityTopicId": null
   }
 ]
