@@ -1790,8 +1790,8 @@
   {
     "developerId": "69a8814aaf832c1e4629fcce",
     "developerName": "Idan Bush",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 40093,
+    "forumUsername": "iBush"
   },
   {
     "developerId": "5dcab97e1c90c866f93641bf",
@@ -2016,6 +2016,12 @@
     "forumUsername": "Jeroen_S"
   },
   {
+    "developerId": "6aa2d84f4b2b66c115905e5d",
+    "developerName": "Jeroen Stern",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "5dcab9731c90c866f9364176",
     "developerName": "Jeroen Tebbens",
     "forumUserID": 60,
@@ -2122,6 +2128,12 @@
     "developerName": "Johan Kuster",
     "forumUserID": null,
     "forumUsername": null
+  },
+  {
+    "developerId": "6a8df7bd30ac038fba6faad4",
+    "developerName": "Johan Lindbom",
+    "forumUserID": 1373,
+    "forumUsername": "Johan_Lindbom"
   },
   {
     "developerId": "6a827895c6a80eeabce40e58",
@@ -2604,6 +2616,12 @@
     "forumUsername": "hyper"
   },
   {
+    "developerId": "6ab3e35e30dc90a8d6e39cf6",
+    "developerName": "Luc Wathelet",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "69daa5fffb6dd7068a780acb",
     "developerName": "Luca Amoroso",
     "forumUserID": null,
@@ -2812,6 +2830,12 @@
     "developerName": "Mark Keulen",
     "forumUserID": 51159,
     "forumUsername": "Mark_Keulen"
+  },
+  {
+    "developerId": "6ab593e330dc90a8d6e447b6",
+    "developerName": "Mark Moorlag",
+    "forumUserID": 5701,
+    "forumUsername": "Mark1541"
   },
   {
     "developerId": "65b44905e0e92b510c344b98",
@@ -3042,6 +3066,12 @@
     "forumUsername": "Doekse"
   },
   {
+    "developerId": "6abe19bc13cce2f830ec9188",
+    "developerName": "Meross Technology Limited",
+    "forumUserID": 33362,
+    "forumUsername": "Doekse"
+  },
+  {
     "developerId": "68dbc9aa65beff4021628c25",
     "developerName": "Meterportal ApS",
     "forumUserID": null,
@@ -3148,6 +3178,12 @@
     "developerName": "ML Development",
     "forumUserID": 534,
     "forumUsername": "Mickel_Luiten"
+  },
+  {
+    "developerId": "6a70a3b232b0f6166a4f2433",
+    "developerName": "Moduel AB",
+    "forumUserID": 33362,
+    "forumUsername": "Doekse"
   },
   {
     "developerId": "61d89d1da1e990d513cd7e81",
@@ -4780,6 +4816,12 @@
     "developerName": "Tjarco Boerkoel",
     "forumUserID": 25985,
     "forumUsername": "Tjar"
+  },
+  {
+    "developerId": "6aa1b37b4b2b66c1158fc9a4",
+    "developerName": "Tobias Vinzents",
+    "forumUserID": 20160,
+    "forumUsername": "tobi8868"
   },
   {
     "developerId": "6707aa8190607a6da3616576",

@@ -490,5 +490,53 @@
     "updatedAt": "2026-09-30T23:17:34.955Z",
     "communityTopicId": 159398,
     "discoveredAt": "2026-09-30T23:17:34.954Z"
+  },
+  {
+    "appId": "com.rapinology.frgreenenergy",
+    "name": "Grid Green Carbon",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:16:15.585Z",
+    "updatedAt": "2026-10-01T10:16:15.585Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-01T10:16:15.585Z"
+  },
+  {
+    "appId": "com.moduel",
+    "name": "Moduel",
+    "developerName": "Moduel AB",
+    "developerId": "6a70a3b232b0f6166a4f2433",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/Doekse/moduel-homey",
+    "publishedAt": "2026-10-01T10:16:16.471Z",
+    "updatedAt": "2026-10-01T10:16:16.471Z",
+    "communityTopicId": 158949,
+    "discoveredAt": "2026-10-01T10:16:15.585Z"
+  },
+  {
+    "appId": "com.duepigroup.dpremote",
+    "name": "Duepi Stove Controller",
+    "developerName": "Kay-Arne van Dalfsen",
+    "developerId": "6809474f61abe0f3b0bd9e7a",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:16:16.471Z",
+    "updatedAt": "2026-10-01T10:16:16.471Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-01T10:16:15.585Z"
+  },
+  {
+    "appId": "com.rapinology.starlink",
+    "name": "Starlink Monitor",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:16:17.049Z",
+    "updatedAt": "2026-10-01T10:16:17.049Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-01T10:16:15.585Z"
   }
 ]

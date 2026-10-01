@@ -1,216 +1,616 @@
 [
   {
-    "id": "dk.hoffmeyer-net.sonosannouncements",
+    "id": "com.rapinology.frgreenenergy",
     "rating": null,
     "liveBuild": {
-      "id": 12,
+      "id": 3,
       "name": {
-        "en": "Sonos Announcements"
+        "en": "Grid Green Carbon",
+        "fr": "Grid Green Carbon",
+        "de": "Grid Green Carbon",
+        "es": "Grid Green Carbon",
+        "it": "Grid Green Carbon",
+        "nl": "Grid Green Carbon"
       },
-      "version": "1.1.9",
+      "version": "1.0.1",
       "readme": {
-        "en": "Your iPhone talks straight to your Sonos speakers over your own Wi-Fi, and your own voice comes out of the ones you pick. What it cannot do on its own is reach them when you are not home. The problem is not the command but the sound: the speaker fetches the recording from the phone itself, and a phone in another town is not something a speaker can reach.\n\nYour Homey is in the house, so it can hold the recording ready while the speaker fetches it. Install this app, open the phone app once while you are home, and the two find each other on their own. There is nothing to type and nothing to sign in to. No Sonos account is needed, the recording never rests anywhere on the internet, and it is dropped from memory again as soon as it has played. Requires Homey Pro and the Sonos Announcements app for iPhone or Mac.\n",
-        "da": "Din iPhone taler direkte med Sonos-højtalerne over dit eget wifi, og din egen stemme kommer ud af dem, du vælger. Det, den ikke kan alene, er at nå dem, når du ikke er hjemme. Problemet er ikke kommandoen, men lyden: højtaleren henter optagelsen fra selve telefonen, og en telefon i en anden by kan en højtaler ikke nå.\n\nDin Homey står i huset, så den kan holde optagelsen frem, mens højtaleren henter den. Installer appen, åbn telefon-appen én gang, mens du er hjemme, så finder de to hinanden af sig selv. Der er ikke noget at taste og ikke noget at logge ind på. Der skal ingen Sonos-konto til, optagelsen ligger aldrig noget sted på internettet, og den forsvinder fra hukommelsen igen, så snart den er spillet. Kræver Homey Pro og appen Sonos Announcements til iPhone eller Mac.\n"
+        "en": "France's electricity is cleaner at some hours than at others, and the gap can be threefold within a single day. This app reads the carbon intensity published by RTE, the national grid operator, together with the flows exchanged with neighbouring countries, so that a dishwasher or a car charger can wait for the right moment.\n",
+        "de": "Französischer Strom ist zu manchen Stunden sauberer als zu anderen, und der Unterschied kann innerhalb eines Tages das Dreifache betragen. Diese App liest die von RTE, dem nationalen Übertragungsnetzbetreiber, veröffentlichte CO2-Intensität sowie die mit den Nachbarländern ausgetauschten Flüsse, damit eine Spülmaschine oder eine Autoladung auf den richtigen Moment warten kann.\n",
+        "es": "La electricidad francesa es más limpia a unas horas que a otras, y la diferencia puede triplicarse dentro de un mismo día. Esta aplicación lee la intensidad de carbono publicada por RTE, el gestor de la red de transporte, junto con los flujos intercambiados con los países vecinos, para que un lavavajillas o una recarga de coche puedan esperar al mejor momento.\n",
+        "fr": "L'électricité française est plus propre à certaines heures qu'à d'autres, et l'écart peut aller du simple au triple dans une même journée. Cette app lit l'intensité carbone publiée par RTE, le gestionnaire du réseau de transport, ainsi que les flux échangés avec les pays voisins, pour qu'un lave-vaisselle ou une recharge de voiture puisse attendre le bon moment.\n",
+        "it": "L'elettricità francese è più pulita in certe ore che in altre, e lo scarto può triplicare nell'arco di una stessa giornata. Questa app legge l'intensità di carbonio pubblicata da RTE, il gestore della rete di trasmissione, insieme ai flussi scambiati con i paesi vicini, perché una lavastoviglie o una ricarica dell'auto possano attendere il momento giusto.\n",
+        "nl": "Franse elektriciteit is op sommige uren schoner dan op andere, en het verschil kan binnen één dag verdrievoudigen. Deze app leest de koolstofintensiteit die RTE, de landelijke netbeheerder, publiceert, samen met de stromen die met de buurlanden worden uitgewisseld, zodat een vaatwasser of een autolader op het juiste moment kan wachten.\n"
       },
       "description": {
-        "en": "Say it at home, from wherever you happen to be.",
-        "da": "Sig det derhjemme — hvor du end befinder dig."
+        "en": "Run the house when the grid is clean",
+        "fr": "Faire tourner la maison quand le réseau est propre",
+        "de": "Das Haus laufen lassen, wenn das Netz sauber ist",
+        "es": "Hacer funcionar la casa cuando la red está limpia",
+        "it": "Far funzionare la casa quando la rete è pulita",
+        "nl": "Het huis laten draaien wanneer het net schoon is"
       },
-      "category": "music",
-      "brandColor": "#1D1D1F",
-      "icon": "https://apps.homeycdn.net/app/dk.hoffmeyer-net.sonosannouncements/12/f97e4321-0bb4-4673-a9f3-a704c93e65ff/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/dk.hoffmeyer-net.sonosannouncements/12/f97e4321-0bb4-4673-a9f3-a704c93e65ff/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/dk.hoffmeyer-net.sonosannouncements/12/f97e4321-0bb4-4673-a9f3-a704c93e65ff/assets/images/large.png",
-      "drivers": null,
+      "category": "energy",
+      "brandColor": "#1E8E5A",
+      "icon": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "reseau",
+          "name": {
+            "en": "French grid",
+            "fr": "Réseau français",
+            "de": "Französisches Netz",
+            "es": "Red francesa",
+            "it": "Rete francese",
+            "nl": "Frans net"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "taux_co2",
+            "part_renouvelable",
+            "solde_echanges"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/drivers/reseau/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/drivers/reseau/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/drivers/reseau/assets/icon.svg"
+        }
+      ],
       "flow": {
         "triggers": [
           {
-            "id": "announcement_played",
+            "id": "niveau_change",
             "title": {
-              "en": "An announcement was played",
-              "da": "En besked er blevet spillet"
+              "en": "The grid's carbon level changed",
+              "fr": "Le niveau carbone du réseau a changé",
+              "de": "Die CO₂-Stufe des Netzes hat sich geändert",
+              "es": "El nivel de carbono de la red ha cambiado",
+              "it": "Il livello di carbonio della rete è cambiato",
+              "nl": "Het koolstofniveau van het net is veranderd"
             },
             "hint": {
-              "en": "Runs after an announcement has gone out. The 'heard' tag says whether a speaker actually fetched the sound — a speaker can accept an announcement and still play nothing.",
-              "da": "Kører, når en besked er gået ud. Mærket 'hørt' siger, om en højtaler rent faktisk hentede lyden — en højtaler kan tage imod en besked og alligevel ikke spille noget."
+              "en": "Compares the current figure with the last twenty-four hours, so it follows the seasons on its own.",
+              "fr": "Compare le chiffre courant aux vingt-quatre dernières heures, et suit donc les saisons de lui-même.",
+              "de": "Vergleicht den aktuellen Wert mit den letzten vierundzwanzig Stunden und folgt so von selbst den Jahreszeiten.",
+              "es": "Compara la cifra actual con las últimas veinticuatro horas, siguiendo así las estaciones por sí mismo.",
+              "it": "Confronta il valore attuale con le ultime ventiquattro ore, seguendo così le stagioni da solo.",
+              "nl": "Vergelijkt de huidige waarde met de laatste vierentwintig uur en volgt zo vanzelf de seizoenen."
             },
             "tokens": [
               {
-                "name": "speakers",
+                "name": "niveau",
                 "type": "string",
                 "title": {
-                  "en": "Speakers",
-                  "da": "Højtalere"
-                },
-                "example": {
-                  "en": "Kitchen, Living room",
-                  "da": "Køkken, Stue"
+                  "en": "Level",
+                  "fr": "Niveau",
+                  "de": "Stufe",
+                  "es": "Nivel",
+                  "it": "Livello",
+                  "nl": "Niveau"
                 }
               },
               {
-                "name": "seconds",
+                "name": "precedent",
+                "type": "string",
+                "title": {
+                  "en": "Previous level",
+                  "fr": "Niveau précédent",
+                  "de": "Vorherige Stufe",
+                  "es": "Nivel anterior",
+                  "it": "Livello precedente",
+                  "nl": "Vorig niveau"
+                }
+              },
+              {
+                "name": "taux",
                 "type": "number",
                 "title": {
-                  "en": "Length in seconds",
-                  "da": "Længde i sekunder"
-                },
-                "example": 12
-              },
-              {
-                "name": "heard",
-                "type": "boolean",
-                "title": {
-                  "en": "Heard",
-                  "da": "Hørt"
+                  "en": "Carbon intensity",
+                  "fr": "Intensité carbone",
+                  "de": "CO₂-Intensität",
+                  "es": "Intensidad de carbono",
+                  "it": "Intensità di carbonio",
+                  "nl": "Koolstofintensiteit"
                 }
               }
             ]
           },
           {
-            "id": "announcement_failed",
+            "id": "plage_decarbonee",
             "title": {
-              "en": "An announcement could not be played",
-              "da": "En besked kunne ikke spilles"
+              "en": "A low-carbon window starts",
+              "fr": "Une plage décarbonée commence",
+              "de": "Ein CO₂-armes Zeitfenster beginnt",
+              "es": "Comienza una franja baja en carbono",
+              "it": "Inizia una fascia a basse emissioni",
+              "nl": "Een koolstofarm venster begint"
             },
             "hint": {
-              "en": "Runs when an announcement did not come out of any speaker.",
-              "da": "Kører, når en besked ikke kom ud af en eneste højtaler."
+              "en": "Uses the EcoWatt signal, which needs RTE identifiers in the app settings.",
+              "fr": "Emploie le signal EcoWatt, qui demande des identifiants RTE dans les réglages de l'app.",
+              "de": "Nutzt das EcoWatt-Signal, das RTE-Zugangsdaten in den App-Einstellungen benötigt.",
+              "es": "Usa la señal EcoWatt, que necesita identificadores RTE en los ajustes de la aplicación.",
+              "it": "Usa il segnale EcoWatt, che richiede identificativi RTE nelle impostazioni dell'app.",
+              "nl": "Gebruikt het EcoWatt-signaal, dat RTE-gegevens in de app-instellingen nodig heeft."
             },
             "tokens": [
               {
-                "name": "error",
-                "type": "string",
+                "name": "debut",
+                "type": "number",
                 "title": {
-                  "en": "Reason",
-                  "da": "Årsag"
-                },
-                "example": {
-                  "en": "no speakers were found",
-                  "da": "der blev ikke fundet nogen højtalere"
+                  "en": "Start hour",
+                  "fr": "Heure de début",
+                  "de": "Startstunde",
+                  "es": "Hora de inicio",
+                  "it": "Ora di inizio",
+                  "nl": "Beginuur"
+                }
+              },
+              {
+                "name": "fin",
+                "type": "number",
+                "title": {
+                  "en": "End hour",
+                  "fr": "Heure de fin",
+                  "de": "Endstunde",
+                  "es": "Hora de fin",
+                  "it": "Ora di fine",
+                  "nl": "Einduur"
+                }
+              },
+              {
+                "name": "duree",
+                "type": "number",
+                "title": {
+                  "en": "Hours",
+                  "fr": "Durée en heures",
+                  "de": "Stunden",
+                  "es": "Horas",
+                  "it": "Ore",
+                  "nl": "Uren"
                 }
               }
             ]
           },
           {
-            "id": "speakers_lost",
+            "id": "tempo_publie",
             "title": {
-              "en": "The speakers became unreachable",
-              "da": "Højtalerne kan ikke længere nås"
+              "en": "Tomorrow's Tempo colour is published",
+              "fr": "La couleur Tempo du lendemain est publiée",
+              "de": "Die Tempo-Farbe für morgen ist veröffentlicht",
+              "es": "Se publica el color Tempo de mañana",
+              "it": "Il colore Tempo di domani è pubblicato",
+              "nl": "De Tempo-kleur van morgen is gepubliceerd"
             },
             "hint": {
-              "en": "Runs once when the speakers stop answering. Worth knowing before you are away from home and need them.",
-              "da": "Kører én gang, når højtalerne holder op med at svare. Værd at vide, før man er ude og får brug for dem."
-            }
-          },
-          {
-            "id": "speakers_found",
-            "title": {
-              "en": "The speakers became reachable again",
-              "da": "Højtalerne kan nås igen"
+              "en": "RTE publishes it each day around 10:20, French time. Needs RTE identifiers.",
+              "fr": "RTE la publie chaque jour vers 10 h 20, heure française. Demande des identifiants RTE.",
+              "de": "RTE veröffentlicht sie täglich gegen 10:20 Uhr französischer Zeit. Benötigt RTE-Zugangsdaten.",
+              "es": "RTE lo publica cada día hacia las 10:20, hora francesa. Necesita identificadores RTE.",
+              "it": "RTE lo pubblica ogni giorno verso le 10:20, ora francese. Richiede identificativi RTE.",
+              "nl": "RTE publiceert die dagelijks rond 10:20 Franse tijd. Vereist RTE-gegevens."
             },
-            "hint": {
-              "en": "Runs once when the speakers answer again after having been away.",
-              "da": "Kører én gang, når højtalerne svarer igen efter at have været væk."
-            }
+            "tokens": [
+              {
+                "name": "couleur",
+                "type": "string",
+                "title": {
+                  "en": "Colour",
+                  "fr": "Couleur",
+                  "de": "Farbe",
+                  "es": "Color",
+                  "it": "Colore",
+                  "nl": "Kleur"
+                }
+              },
+              {
+                "name": "date",
+                "type": "string",
+                "title": {
+                  "en": "Date",
+                  "fr": "Date",
+                  "de": "Datum",
+                  "es": "Fecha",
+                  "it": "Data",
+                  "nl": "Datum"
+                }
+              }
+            ]
           }
         ],
         "conditions": [
           {
-            "id": "announced_recently",
+            "id": "couleur_tempo",
             "title": {
-              "en": "An announcement was played recently",
-              "da": "Der er for nylig spillet en besked"
+              "en": "Today's Tempo colour !{{is|is not}} [[couleur]]",
+              "fr": "La couleur Tempo du jour !{{est|n'est pas}} [[couleur]]",
+              "de": "Die heutige Tempo-Farbe !{{ist|ist nicht}} [[couleur]]",
+              "es": "El color Tempo de hoy !{{es|no es}} [[couleur]]",
+              "it": "Il colore Tempo di oggi !{{è|non è}} [[couleur]]",
+              "nl": "De Tempo-kleur van vandaag !{{is|is niet}} [[couleur]]"
             },
             "titleFormatted": {
-              "en": "An announcement was !{{played|not played}} in the last [[minutes]] minutes",
-              "da": "Der !{{er|er ikke}} spillet en besked inden for de sidste [[minutes]] minutter"
+              "en": "Today's Tempo colour !{{is|is not}} [[couleur]]",
+              "fr": "La couleur Tempo du jour !{{est|n'est pas}} [[couleur]]",
+              "de": "Die heutige Tempo-Farbe !{{ist|ist nicht}} [[couleur]]",
+              "es": "El color Tempo de hoy !{{es|no es}} [[couleur]]",
+              "it": "Il colore Tempo di oggi !{{è|non è}} [[couleur]]",
+              "nl": "De Tempo-kleur van vandaag !{{is|is niet}} [[couleur]]"
             },
             "hint": {
-              "en": "Keeps a Flow from talking on top of an announcement that was just made.",
-              "da": "Holder et flow fra at tale oven i en besked, der lige er sagt."
+              "en": "A tariff signal, not a carbon one: a red day is expensive, which says nothing about its emissions. Needs RTE identifiers.",
+              "fr": "Un signal tarifaire et non carbone : un jour rouge est cher, ce qui ne dit rien de ses émissions. Demande des identifiants RTE.",
+              "de": "Ein Tarifsignal, kein CO₂-Signal: ein roter Tag ist teuer, was nichts über seine Emissionen aussagt. Benötigt RTE-Zugangsdaten.",
+              "es": "Una señal tarifaria, no de carbono: un día rojo es caro, lo que no dice nada de sus emisiones. Necesita identificadores RTE.",
+              "it": "Un segnale tariffario, non di carbonio: un giorno rosso è caro, il che non dice nulla sulle sue emissioni. Richiede identificativi RTE.",
+              "nl": "Een tariefsignaal, geen koolstofsignaal: een rode dag is duur, wat niets zegt over de uitstoot. Vereist RTE-gegevens."
             },
             "args": [
               {
-                "name": "minutes",
-                "type": "number",
-                "min": 1,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "minutes",
-                  "da": "minutter"
-                }
+                "name": "couleur",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "bleu",
+                    "title": {
+                      "en": "blue",
+                      "fr": "bleu",
+                      "de": "blau",
+                      "es": "azul",
+                      "it": "blu",
+                      "nl": "blauw"
+                    }
+                  },
+                  {
+                    "id": "blanc",
+                    "title": {
+                      "en": "white",
+                      "fr": "blanc",
+                      "de": "weiß",
+                      "es": "blanco",
+                      "it": "bianco",
+                      "nl": "wit"
+                    }
+                  },
+                  {
+                    "id": "rouge",
+                    "title": {
+                      "en": "red",
+                      "fr": "rouge",
+                      "de": "rot",
+                      "es": "rojo",
+                      "it": "rosso",
+                      "nl": "rood"
+                    }
+                  }
+                ]
               }
             ]
           },
           {
-            "id": "speakers_reachable",
+            "id": "heure_decarbonee",
             "title": {
-              "en": "The speakers are reachable",
-              "da": "Højtalerne kan nås"
-            },
-            "titleFormatted": {
-              "en": "The speakers are !{{reachable|not reachable}}",
-              "da": "Højtalerne !{{kan|kan ikke}} nås"
+              "en": "The current hour !{{is|is not}} flagged low-carbon",
+              "fr": "L'heure en cours !{{est|n'est pas}} signalée décarbonée",
+              "de": "Die laufende Stunde !{{ist|ist nicht}} als CO₂-arm gekennzeichnet",
+              "es": "La hora en curso !{{está|no está}} señalada como baja en carbono",
+              "it": "L'ora in corso !{{è|non è}} segnalata a basse emissioni",
+              "nl": "Het huidige uur !{{is|is niet}} als koolstofarm aangemerkt"
             },
             "hint": {
-              "en": "True when the speakers answered the last time they were checked. They are checked every five minutes.",
-              "da": "Sand, når højtalerne svarede sidste gang, der blev kigget. Der kigges hvert femte minut."
+              "en": "RTE's own EcoWatt flag, not a calculation of ours. Needs RTE identifiers, and is false when they are missing.",
+              "fr": "Le drapeau EcoWatt de RTE lui-même, et non un calcul de notre part. Demande des identifiants RTE, et vaut faux s'ils manquent.",
+              "de": "RTEs eigenes EcoWatt-Kennzeichen, keine eigene Berechnung. Benötigt RTE-Zugangsdaten und ist ohne sie falsch.",
+              "es": "La marca EcoWatt de RTE, no un cálculo nuestro. Necesita identificadores RTE, y es falso si faltan.",
+              "it": "Il contrassegno EcoWatt di RTE, non un nostro calcolo. Richiede identificativi RTE, ed è falso se mancano.",
+              "nl": "RTE's eigen EcoWatt-markering, geen eigen berekening. Vereist RTE-gegevens en is onwaar als die ontbreken."
             }
-          }
-        ],
-        "actions": null
-      },
-      "widgets": null,
-      "screensavers": [],
-      "homeyCommunityTopicId": 159398,
-      "state": "live",
-      "stateChangedAt": "2026-09-30T20:22:59.015Z",
-      "bugs": null,
-      "homepage": null,
-      "support": "mailto:tobias@hoffmeyer-net.dk",
-      "source": null,
-      "contributors": {
-        "developers": [
+          },
           {
-            "name": "Tobias Vinzents"
+            "id": "niveau_est",
+            "title": {
+              "en": "The grid !{{is|is not}} [[niveau]] right now",
+              "fr": "Le réseau !{{est|n'est pas}} [[niveau]] en ce moment",
+              "de": "Das Netz !{{ist|ist nicht}} gerade [[niveau]]",
+              "es": "La red !{{está|no está}} [[niveau]] ahora mismo",
+              "it": "La rete !{{è|non è}} [[niveau]] in questo momento",
+              "nl": "Het net !{{is|is niet}} nu [[niveau]]"
+            },
+            "titleFormatted": {
+              "en": "The grid !{{is|is not}} [[niveau]] right now",
+              "fr": "Le réseau !{{est|n'est pas}} [[niveau]] en ce moment",
+              "de": "Das Netz !{{ist|ist nicht}} gerade [[niveau]]",
+              "es": "La red !{{está|no está}} [[niveau]] ahora mismo",
+              "it": "La rete !{{è|non è}} [[niveau]] in questo momento",
+              "nl": "Het net !{{is|is niet}} nu [[niveau]]"
+            },
+            "hint": {
+              "en": "Relative to the last twenty-four hours, not to a fixed threshold: a winter day and a summer day are each judged against themselves.",
+              "fr": "Relatif aux vingt-quatre dernières heures, non à un seuil fixe : une journée d'hiver et une journée d'été sont chacune jugées sur elle-même.",
+              "de": "Bezogen auf die letzten vierundzwanzig Stunden, nicht auf einen festen Schwellenwert: ein Wintertag und ein Sommertag werden jeweils an sich selbst gemessen.",
+              "es": "Relativo a las últimas veinticuatro horas, no a un umbral fijo: un día de invierno y uno de verano se juzgan cada uno consigo mismo.",
+              "it": "Relativo alle ultime ventiquattro ore, non a una soglia fissa: una giornata invernale e una estiva sono giudicate ciascuna su sé stessa.",
+              "nl": "Ten opzichte van de laatste vierentwintig uur, niet van een vaste drempel: een winterdag en een zomerdag worden elk aan zichzelf gemeten."
+            },
+            "args": [
+              {
+                "name": "niveau",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "propre",
+                    "title": {
+                      "en": "clean",
+                      "fr": "propre",
+                      "de": "sauber",
+                      "es": "limpia",
+                      "it": "pulita",
+                      "nl": "schoon"
+                    }
+                  },
+                  {
+                    "id": "moyen",
+                    "title": {
+                      "en": "average",
+                      "fr": "moyen",
+                      "de": "mittel",
+                      "es": "medio",
+                      "it": "medio",
+                      "nl": "gemiddeld"
+                    }
+                  },
+                  {
+                    "id": "charge",
+                    "title": {
+                      "en": "loaded",
+                      "fr": "chargé",
+                      "de": "belastet",
+                      "es": "cargada",
+                      "it": "carica",
+                      "nl": "belast"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "taux_inferieur",
+            "title": {
+              "en": "Carbon intensity !{{is|is not}} below [[seuil]] g/kWh",
+              "fr": "L'intensité carbone !{{est|n'est pas}} inférieure à [[seuil]] g/kWh",
+              "de": "Die CO₂-Intensität !{{liegt|liegt nicht}} unter [[seuil]] g/kWh",
+              "es": "La intensidad de carbono !{{está|no está}} por debajo de [[seuil]] g/kWh",
+              "it": "L'intensità di carbonio !{{è|non è}} inferiore a [[seuil]] g/kWh",
+              "nl": "De koolstofintensiteit !{{ligt|ligt niet}} onder [[seuil]] g/kWh"
+            },
+            "titleFormatted": {
+              "en": "Carbon intensity !{{is|is not}} below [[seuil]] g/kWh",
+              "fr": "L'intensité carbone !{{est|n'est pas}} inférieure à [[seuil]] g/kWh",
+              "de": "Die CO₂-Intensität !{{liegt|liegt nicht}} unter [[seuil]] g/kWh",
+              "es": "La intensidad de carbono !{{está|no está}} por debajo de [[seuil]] g/kWh",
+              "it": "L'intensità di carbonio !{{è|non è}} inferiore a [[seuil]] g/kWh",
+              "nl": "De koolstofintensiteit !{{ligt|ligt niet}} onder [[seuil]] g/kWh"
+            },
+            "hint": {
+              "en": "An absolute threshold, which you choose. In France the figure ranges from about ten grams on a sunny day to over a hundred at a winter peak.",
+              "fr": "Un seuil absolu, que vous choisissez. En France le chiffre va d'une dizaine de grammes un jour ensoleillé à plus de cent lors d'une pointe hivernale.",
+              "de": "Ein absoluter Schwellenwert nach Ihrer Wahl. In Frankreich reicht der Wert von etwa zehn Gramm an einem sonnigen Tag bis über hundert bei einer Winterspitze.",
+              "es": "Un umbral absoluto que usted elige. En Francia la cifra va de unos diez gramos en un día soleado a más de cien en un pico invernal.",
+              "it": "Una soglia assoluta, scelta da voi. In Francia il valore va da una decina di grammi in una giornata di sole a oltre cento in un picco invernale.",
+              "nl": "Een absolute drempel die u kiest. In Frankrijk loopt de waarde van ongeveer tien gram op een zonnige dag tot boven de honderd bij een winterpiek."
+            },
+            "args": [
+              {
+                "name": "seuil",
+                "type": "number",
+                "min": 0,
+                "max": 500,
+                "step": 5,
+                "placeholder": {
+                  "en": "40",
+                  "fr": "40",
+                  "de": "40",
+                  "es": "40",
+                  "it": "40",
+                  "nl": "40"
+                }
+              }
+            ]
           }
         ],
-        "translators": []
-      },
-      "contributing": {
-        "donate": {
-          "paypal": {
-            "username": "tobberjas"
+        "actions": [
+          {
+            "id": "relever",
+            "title": {
+              "en": "Get the grid figures",
+              "fr": "Relever les chiffres du réseau",
+              "de": "Die Netzwerte abrufen",
+              "es": "Obtener las cifras de la red",
+              "it": "Rilevare i dati della rete",
+              "nl": "De netcijfers ophalen"
+            },
+            "hint": {
+              "en": "Returns the figures already held, without calling RTE: the readings refresh by themselves every fifteen minutes.",
+              "fr": "Rend les chiffres déjà détenus, sans appeler RTE : les relevés se rafraîchissent d'eux-mêmes toutes les quinze minutes.",
+              "de": "Gibt die bereits vorliegenden Werte zurück, ohne RTE aufzurufen: die Messwerte aktualisieren sich alle fünfzehn Minuten von selbst.",
+              "es": "Devuelve las cifras ya disponibles, sin llamar a RTE: las lecturas se actualizan solas cada quince minutos.",
+              "it": "Restituisce i dati già disponibili, senza chiamare RTE: le letture si aggiornano da sole ogni quindici minuti.",
+              "nl": "Geeft de reeds beschikbare cijfers terug zonder RTE aan te roepen: de metingen verversen vanzelf elke vijftien minuten."
+            },
+            "tokens": [
+              {
+                "name": "taux",
+                "type": "number",
+                "title": {
+                  "en": "Carbon intensity",
+                  "fr": "Intensité carbone",
+                  "de": "CO₂-Intensität",
+                  "es": "Intensidad de carbono",
+                  "it": "Intensità di carbonio",
+                  "nl": "Koolstofintensiteit"
+                }
+              },
+              {
+                "name": "niveau",
+                "type": "string",
+                "title": {
+                  "en": "Level",
+                  "fr": "Niveau",
+                  "de": "Stufe",
+                  "es": "Nivel",
+                  "it": "Livello",
+                  "nl": "Niveau"
+                }
+              },
+              {
+                "name": "part",
+                "type": "number",
+                "title": {
+                  "en": "Renewable share",
+                  "fr": "Part renouvelable",
+                  "de": "Anteil erneuerbar",
+                  "es": "Cuota renovable",
+                  "it": "Quota rinnovabile",
+                  "nl": "Aandeel hernieuwbaar"
+                }
+              },
+              {
+                "name": "solde",
+                "type": "number",
+                "title": {
+                  "en": "Cross-border balance",
+                  "fr": "Solde des échanges",
+                  "de": "Grenzsaldo",
+                  "es": "Saldo transfronterizo",
+                  "it": "Saldo transfrontaliero",
+                  "nl": "Grenssaldo"
+                }
+              }
+            ]
           }
-        }
-      },
-      "permissions": [],
-      "changelog": {
-        "en": "More reliable. The app no longer stops when the network drops for a moment, and it finds the speakers even if the one it remembered has moved to a new address.",
-        "da": "Mere stabil. Appen stopper ikke længere, når netværket forsvinder et øjeblik, og den finder højtalerne, selv om den højtaler den huskede har fået en ny adresse."
-      },
-      "compatibility": ">=5.0.0",
-      "tags": {
-        "en": [
-          "sonos",
-          "announcement",
-          "intercom",
-          "voice",
-          "speech",
-          "speaker",
-          "away from home"
-        ],
-        "da": [
-          "sonos",
-          "besked",
-          "meddelelse",
-          "stemme",
-          "tale",
-          "højtaler",
-          "hjemmefra"
         ]
       },
+      "widgets": {
+        "flux": {
+          "name": {
+            "en": "Grid and flows",
+            "fr": "Réseau et flux",
+            "de": "Netz und Flüsse",
+            "es": "Red y flujos",
+            "it": "Rete e flussi",
+            "nl": "Net en stromen"
+          },
+          "settings": [
+            {
+              "id": "contenu",
+              "type": "dropdown",
+              "title": {
+                "en": "Show",
+                "fr": "Afficher",
+                "de": "Anzeigen",
+                "es": "Mostrar",
+                "it": "Mostra",
+                "nl": "Tonen"
+              },
+              "value": "tout",
+              "values": [
+                {
+                  "id": "tout",
+                  "title": {
+                    "en": "Carbon and flows",
+                    "fr": "Carbone et flux",
+                    "de": "CO₂ und Flüsse",
+                    "es": "Carbono y flujos",
+                    "it": "Carbonio e flussi",
+                    "nl": "Koolstof en stromen"
+                  }
+                },
+                {
+                  "id": "carbone",
+                  "title": {
+                    "en": "Carbon only",
+                    "fr": "Carbone seul",
+                    "de": "Nur CO₂",
+                    "es": "Solo carbono",
+                    "it": "Solo carbonio",
+                    "nl": "Alleen koolstof"
+                  }
+                },
+                {
+                  "id": "flux",
+                  "title": {
+                    "en": "Flows only",
+                    "fr": "Flux seuls",
+                    "de": "Nur Flüsse",
+                    "es": "Solo flujos",
+                    "it": "Solo flussi",
+                    "nl": "Alleen stromen"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tempo",
+              "type": "checkbox",
+              "title": {
+                "en": "Show the Tempo colour",
+                "fr": "Afficher la couleur Tempo",
+                "de": "Tempo-Farbe anzeigen",
+                "es": "Mostrar el color Tempo",
+                "it": "Mostrare il colore Tempo",
+                "nl": "Tempo-kleur tonen"
+              },
+              "hint": {
+                "en": "Needs RTE identifiers in the app settings. Ignored without them.",
+                "fr": "Demande des identifiants RTE dans les réglages de l'app. Ignoré sans eux.",
+                "de": "Benötigt RTE-Zugangsdaten in den App-Einstellungen. Ohne sie ignoriert.",
+                "es": "Necesita identificadores RTE en los ajustes. Ignorado sin ellos.",
+                "it": "Richiede identificativi RTE nelle impostazioni. Ignorato senza di essi.",
+                "nl": "Vereist RTE-gegevens in de app-instellingen. Zonder deze genegeerd."
+              },
+              "value": true
+            }
+          ],
+          "height": 260,
+          "api": {
+            "etat": {
+              "method": "GET",
+              "path": "/etat"
+            }
+          },
+          "id": "flux",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/widgets/flux/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.frgreenenergy/3/8556fc7f-6340-467b-9e98-9aa7cf0d3a52/widgets/flux/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-01T07:31:00.275Z",
+      "bugs": null,
+      "homepage": "https://www.rapinology.com",
+      "support": "mailto:info@rapinology.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "The app is now called Grid Green Carbon, its store and device images are photographs, and the polling timer is stopped when the device is deleted.",
+        "fr": "L'app s'appelle désormais Grid Green Carbon, ses visuels de boutique et d'appareil sont des photographies, et la minuterie de relevé s'arrête à la suppression de l'appareil.",
+        "de": "Die App heißt jetzt Grid Green Carbon, ihre Store- und Gerätebilder sind Fotografien, und der Abfragetakt wird beim Löschen des Geräts gestoppt.",
+        "es": "La app se llama ahora Grid Green Carbon, sus imágenes de tienda y de dispositivo son fotografías, y el temporizador de lectura se detiene al eliminar el dispositivo.",
+        "it": "L'app si chiama ora Grid Green Carbon, le sue immagini di store e di dispositivo sono fotografie, e il timer di rilevamento si ferma alla rimozione del dispositivo.",
+        "nl": "De app heet voortaan Grid Green Carbon, de store- en apparaatafbeeldingen zijn foto’s, en de peiltimer stopt wanneer het apparaat wordt verwijderd."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": null,
       "platforms": [
         "local"
       ],
@@ -219,18 +619,2076 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.1.9",
+    "liveVersion": "1.0.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6aa1b37b4b2b66c1158fc9a4",
+      "id": "6a96972b30ac038fba71a2f2",
       "type": "user",
-      "userId": "617593ed5d20f00bc8f06b17",
-      "name": "Tobias Vinzents",
+      "userId": "66e2d2b3f0e7b530640ef902",
+      "name": "Henri Dominique Rapin",
       "verified": false
     },
-    "communityTopicId": 159398
+    "communityTopicId": null
+  },
+  {
+    "id": "com.moduel",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Moduel"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Moduel is smart, modular power that clicks together. Build exactly the outlets you need, exactly where you need them: no cluttered strips, hidden cables, or empty sockets. Cables and modules snap together without tools, so you can start small and expand anytime, up to ten outlets from one wall socket and as far as ten meters. Add the Smart Matter Control Module F1 to make your system smart: control everything downstream from your phone, by voice, or with the built-in button.\n\nConnect the F1 to Homey via Matter over Wi-Fi to switch your power on or off from anywhere and gain insight into live power and energy use.\n",
+        "da": "Moduel er smart, modulær strøm, der klikker sammen. Byg præcis de stikkontakter, du har brug for, præcis der, hvor du har brug for dem: ingen rodede grenudtag, skjulte kabler eller tomme huller. Kabler og moduler klikker sammen uden værktøj, så du kan starte småt og udvide når som helst, op til ti stikkontakter fra én vægkontakt og op til ti meter. Tilføj Smart Matter Control Module F1 for at gøre systemet smart: styr alt længere ude fra telefonen, med stemmen eller med den indbyggede knap.\n\nForbind F1 til Homey via Matter over Wi-Fi for at tænde eller slukke for strømmen hvor som helst og få indsigt i live strøm- og energiforbrug.\n",
+        "de": "Moduel ist smarte, modulare Stromversorgung, die zusammenklickt. Bauen Sie genau die Steckdosen, die Sie brauchen, genau dort, wo Sie sie brauchen: keine überladenen Steckerleisten, versteckte Kabel oder leere Buchsen. Kabel und Module lassen sich ohne Werkzeug zusammenstecken, damit Sie klein starten und jederzeit erweitern können, bis zu zehn Steckdosen an einer Wanddose und bis zu zehn Meter weit. Mit dem Smart Matter Control Module F1 wird Ihr System smart: Steuern Sie alles Weiterführende per Telefon, per Sprache oder mit der eingebauten Taste.\n\nVerbinden Sie das F1 mit Homey via Matter over Wi-Fi, um Ihren Strom von überall ein- oder auszuschalten und Einblick in den aktuellen Strom- und Energieverbrauch zu erhalten.\n",
+        "es": "Moduel es energía inteligente y modular que encaja con un clic. Monta exactamente las tomas que necesitas, exactamente donde las necesitas: adiós a las regletas abarrotadas, los cables escondidos y los enchufes vacíos. Cables y módulos se unen sin herramientas, para que empieces poco a poco y amplíes cuando quieras, hasta diez tomas desde un solo enchufe de pared y hasta diez metros. Añade el Smart Matter Control Module F1 para hacer tu sistema inteligente: controla todo lo que hay a continuación desde el teléfono, con la voz o con el botón integrado.\n\nConecta el F1 a Homey via Matter over Wi-Fi para encender o apagar tu corriente desde cualquier lugar y obtener información sobre el consumo de potencia y energía en vivo.\n",
+        "fr": "Moduel, c'est l'électricité intelligente et modulaire qui s'assemble d'un clic. Créez exactement les prises dont vous avez besoin, exactement là où vous en avez besoin: plus de multiprises encombrées, de câbles cachés ni de prises inutilisées. Câbles et modules s'emboîtent sans outils, pour commencer petit et agrandir à tout moment, jusqu'à dix prises sur une seule prise murale et jusqu'à dix mètres. Ajoutez le Smart Matter Control Module F1 pour rendre votre système intelligent: contrôlez tout ce qui se trouve en aval depuis votre téléphone, à la voix ou avec le bouton intégré.\n\nReliez le F1 à Homey via Matter over Wi-Fi pour allumer ou éteindre votre alimentation où que vous soyez et suivre en direct la consommation électrique et énergétique.\n",
+        "it": "Moduel è alimentazione smart e modulare che si collega a scatto. Monta esattamente le prese che ti servono, esattamente dove ti servono: niente ciabatte ingombranti, cavi nascosti o prese vuote. Cavi e moduli si uniscono senza attrezzi, così puoi iniziare in piccolo e ampliare quando vuoi, fino a dieci prese da una sola presa a muro e fino a dieci metri. Aggiungi lo Smart Matter Control Module F1 per rendere il sistema intelligente: controlla tutto ciò che viene dopo dal telefono, con la voce o con il pulsante integrato.\n\nCollega l'F1 a Homey via Matter over Wi-Fi per accendere o spegnere l'alimentazione da qualsiasi luogo e tenere sotto controllo potenza e consumi in tempo reale.\n",
+        "ko": "Moduel은 클릭해서 이어 붙이는 스마트 모듈형 전력 시스템입니다. 필요한 콘센트만, 필요한 곳에 두세요. 어수선한 멀티탭, 숨겨진 케이블, 비어 있는 소켓은 그만. 케이블과 모듈은 공구 없이 결합되며, 작게 시작해 언제든 확장할 수 있습니다. 벽 콘센트 하나에서 최대 10개 콘센트, 최대 10미터까지. Smart Matter Control Module F1을 더하면 시스템이 스마트해집니다. 전화, 음성, 또는 내장 버튼으로 아래쪽을 제어하세요.\n\nF1을 Homey에 via Matter over Wi-Fi로 연결해 어디서든 전원을 켜고 끄고, 실시간 전력·에너지 사용량을 파악하세요.\n",
+        "nl": "Moduel is slimme, modulaire stroom die in elkaar klikt. Bouw precies de stopcontacten die je nodig hebt, precies waar je ze nodig hebt: geen rommelige stekkerdozen, verborgen kabels of lege gaten. Kabels en modules klikken zonder gereedschap in elkaar, zodat je klein kunt beginnen en altijd kunt uitbreiden, tot tien stopcontacten vanaf één wandcontactdoos en tot tien meter ver. Voeg de Smart Matter Control Module F1 toe om je systeem slim te maken: bedien alles verderop via je telefoon, met je stem, of met de ingebouwde knop.\n\nKoppel de F1 aan Homey via Matter over Wi-Fi om je stroom overal aan of uit te zetten en inzicht te krijgen in live stroom- en energieverbruik.\n",
+        "no": "Moduel er smart, modulær strøm som klikker sammen. Bygg akkurat de stikkontaktene du trenger, akkurat der du trenger dem: ingen rotete skjøtebrett, skjulte kabler eller tomme hull. Kabler og moduler klikkes sammen uten verktøy, så du kan starte i det små og utvide når som helst, opptil ti stikkontakter fra ett vegguttak og opptil ti meter. Legg til Smart Matter Control Module F1 for å gjøre systemet smart: styr alt lenger ute fra telefonen, med stemmen eller med den innebygde knappen.\n\nKoble F1 til Homey via Matter over Wi-Fi for å slå strømmen av eller på hvor som helst og få innsikt i live strøm- og energiforbruk.\n",
+        "pl": "Moduel to inteligentna, modularna energia, która łączy się kliknięciem. Zbuduj dokładnie tyle gniazdek, ile potrzebujesz, dokładnie tam, gdzie ich potrzebujesz: bez przeładowanych listw, ukrytych kabli i pustych gniazd. Kable i moduły łączysz bez narzędzi, więc możesz zacząć od małego i rozbudowywać w dowolnym momencie, do dziesięciu gniazdek z jednego gniazdka ściennego i do dziesięciu metrów. Dodaj Smart Matter Control Module F1, by uczynić system inteligentnym: steruj wszystkim dalej w instalacji z telefonu, głosem lub wbudowanym przyciskiem.\n\nPołącz F1 z Homey via Matter over Wi-Fi, by włączać lub wyłączać zasilanie z dowolnego miejsca i mieć wgląd w bieżące zużycie mocy i energii.\n",
+        "ru": "Moduel предлагает умное модульное питание, которое собирается щелчком. Соберите ровно те розетки, которые вам нужны, ровно там, где они нужны: без громоздких удлинителей, спрятанных кабелей и пустых гнёзд. Кабели и модули стыкуются без инструментов, чтобы начать с малого и расширять систему в любой момент: до десяти розеток от одной настенной и до десяти метров. Добавьте Smart Matter Control Module F1, чтобы сделать систему умной: управляйте всем дальше по линии с телефона, голосом или встроенной кнопкой.\n\nПодключите F1 к Homey via Matter over Wi-Fi, чтобы включать или выключать питание откуда угодно и видеть текущее потребление мощности и энергии.\n",
+        "sv": "Moduel är smart, modulär el som klickar ihop. Bygg precis de uttag du behöver, precis där du behöver dem: inga röriga grenuttag, gömda kablar eller tomma hål. Kablar och moduler klickas ihop utan verktyg, så du kan börja smått och bygga ut när som helst, upp till tio uttag från ett vägguttag och upp till tio meter. Lägg till Smart Matter Control Module F1 för att göra systemet smart: styr allt längre ut från telefonen, med rösten eller med den inbyggda knappen.\n\nAnslut F1 till Homey via Matter över Wi-Fi för att slå på eller av elen var du än är och få insikt i live effekt- och energiförbrukning.\n"
+      },
+      "description": {
+        "en": "Smart, modular power that clicks together"
+      },
+      "category": "appliances",
+      "brandColor": "#FF33CC",
+      "icon": "https://apps.homeycdn.net/app/com.moduel/4/6106a82e-5a1d-4505-a56d-1e1eeaf2b165/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.moduel/4/6106a82e-5a1d-4505-a56d-1e1eeaf2b165/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.moduel/4/6106a82e-5a1d-4505-a56d-1e1eeaf2b165/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "f1-smart-module",
+          "name": {
+            "en": "F1 Smart Matter Control Module"
+          },
+          "class": "socket",
+          "capabilities": [
+            "onoff",
+            "measure_power",
+            "measure_voltage",
+            "measure_current",
+            "meter_power"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.moduel/4/6106a82e-5a1d-4505-a56d-1e1eeaf2b165/drivers/f1-smart-module/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.moduel/4/6106a82e-5a1d-4505-a56d-1e1eeaf2b165/drivers/f1-smart-module/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "matter"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.moduel/4/6106a82e-5a1d-4505-a56d-1e1eeaf2b165/drivers/f1-smart-module/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 158949,
+      "state": "live",
+      "stateChangedAt": "2026-10-01T07:31:42.321Z",
+      "bugs": "https://github.com/Doekse/moduel-homey/issues",
+      "homepage": null,
+      "support": "mailto:abe.haverkamp+moduel@homey.app",
+      "source": "https://github.com/Doekse/moduel-homey",
+      "contributors": {
+        "developers": [
+          {
+            "name": "Abe Haverkamp (developer)"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Initial stable release"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [
+        "matter"
+      ],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {
+      "da": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "de": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "en": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "es": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "fr": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "it": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "nl": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "no": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "pl": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "ru": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6",
+      "sv": "https://www.moduel.com?sca_ref=11226143.32JNw3DUX6"
+    },
+    "author": {
+      "id": "6a70a3b232b0f6166a4f2433",
+      "type": "user",
+      "userId": "6a708ae13a1c0825748ecae8",
+      "name": "Moduel AB",
+      "verified": true
+    },
+    "communityTopicId": 158949
+  },
+  {
+    "id": "com.duepigroup.dpremote",
+    "rating": null,
+    "liveBuild": {
+      "id": 6,
+      "name": {
+        "en": "Duepi Stove Controller",
+        "nl": "Duepi Stove Controller"
+      },
+      "version": "1.0.5",
+      "readme": {
+        "en": "Bring your pellet stove into your Homey routines: switch it on before you get home, keep the room at the right temperature and get a notification when the pellets run out. Duepi doesn't make stoves itself, but its controllers are used in pellet stoves from several brands. The app works with those stoves when they have a Duepi EVO Remote (M1) WiFi module, and only needs the device code from the back of the module's box.\n\nThis is an unofficial app, made independently and not by, or with the approval of, Duepi Group. Duepi offers no public interface, so the app was built by reverse engineering the official DP Remote app and talks to the stove through the same Duepi server. A change on Duepi's side can stop it from working, and it comes without any guarantee. Close the DP Remote app while you use Homey, because two apps at the same time cause missed updates.\n",
+        "nl": "Neem je pelletkachel op in je Homey-routines: zet hem aan voordat je thuiskomt, houd de kamer op de juiste temperatuur en krijg een melding als de pellets op zijn. Duepi maakt zelf geen kachels, maar de besturing van Duepi zit in pelletkachels van verschillende merken. De app werkt met die kachels als ze een Duepi EVO Remote (M1) wifi-module hebben, en je hebt alleen de apparaatcode van de achterkant van de doos van de module nodig.\n\nDit is een onofficiële app, zelfstandig gemaakt en niet door, of met goedkeuring van, Duepi Group. Duepi biedt geen openbare koppeling, daarom is de app gemaakt door de officiële DP Remote-app te reverse-engineeren en praat hij met de kachel via dezelfde server van Duepi. Een wijziging aan de kant van Duepi kan de app laten stoppen met werken, en er wordt geen garantie gegeven. Sluit de DP Remote-app zolang je Homey gebruikt, want twee apps tegelijk zorgen voor gemiste updates.\n"
+      },
+      "description": {
+        "en": "Unofficial app to warm up your home with a pellet stove that runs on a Duepi controller.",
+        "nl": "Onofficiële app om je huis op te warmen met een pelletkachel met Duepi-besturing."
+      },
+      "category": "climate",
+      "brandColor": "#005B9A",
+      "icon": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/6/2ae3de3e-77f4-4032-a119-250c3ce7e2d3/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/6/2ae3de3e-77f4-4032-a119-250c3ce7e2d3/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/6/2ae3de3e-77f4-4032-a119-250c3ce7e2d3/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "stove",
+          "name": {
+            "en": "Pellet stove",
+            "nl": "Pelletkachel"
+          },
+          "class": "heater",
+          "capabilities": [
+            "onoff",
+            "thermostat_mode",
+            "target_temperature",
+            "measure_temperature",
+            "stove_status",
+            "stove_power_level",
+            "alarm_generic",
+            "stove_error",
+            "measure_temperature.flue_gas",
+            "measure_temperature.board",
+            "stove_fan_speed",
+            "stove_auger_speed",
+            "stove_extractor_speed"
+          ],
+          "capabilitiesOptions": {
+            "target_temperature": {
+              "min": 10,
+              "max": 40,
+              "step": 1
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Room temperature",
+                "nl": "Kamertemperatuur"
+              }
+            },
+            "measure_temperature.flue_gas": {
+              "title": {
+                "en": "Flue gas temperature",
+                "nl": "Rookgastemperatuur"
+              }
+            },
+            "measure_temperature.board": {
+              "title": {
+                "en": "Board temperature",
+                "nl": "Temperatuur printplaat"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Alarm",
+                "nl": "Alarm"
+              }
+            },
+            "thermostat_mode": {
+              "values": [
+                {
+                  "id": "heat",
+                  "title": {
+                    "en": "Heat",
+                    "nl": "Verwarmen"
+                  }
+                },
+                {
+                  "id": "off",
+                  "title": {
+                    "en": "Off",
+                    "nl": "Uit"
+                  }
+                }
+              ]
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/6/2ae3de3e-77f4-4032-a119-250c3ce7e2d3/drivers/stove/assets/images/small.jpg",
+          "imageLarge": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/6/2ae3de3e-77f4-4032-a119-250c3ce7e2d3/drivers/stove/assets/images/large.jpg",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/6/2ae3de3e-77f4-4032-a119-250c3ce7e2d3/drivers/stove/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "stove_error_cleared",
+            "title": {
+              "en": "The stove alarm went off",
+              "nl": "Het kachelalarm is opgeheven"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "stove_error_raised",
+            "title": {
+              "en": "The stove alarm went on",
+              "nl": "Het kachelalarm ging af"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "error",
+                "type": "string",
+                "title": {
+                  "en": "Error message",
+                  "nl": "Foutmelding"
+                },
+                "example": {
+                  "en": "Out of pellets",
+                  "nl": "Pellets op"
+                }
+              },
+              {
+                "name": "code",
+                "type": "number",
+                "title": {
+                  "en": "Error code",
+                  "nl": "Foutcode"
+                },
+                "example": 5
+              }
+            ]
+          },
+          {
+            "id": "stove_status_changed",
+            "title": {
+              "en": "The stove status changed",
+              "nl": "De kachelstatus is veranderd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "example": {
+                  "en": "Heating",
+                  "nl": "Verwarmen"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "stove_has_error",
+            "title": {
+              "en": "The stove alarm !{{is|is not}} on",
+              "nl": "Het kachelalarm !{{staat|staat niet}} aan"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "stove_status_is",
+            "title": {
+              "en": "The stove status !{{is|is not}}",
+              "nl": "De kachelstatus !{{is|is niet}}"
+            },
+            "titleFormatted": {
+              "en": "The stove status !{{is|is not}} [[status]]",
+              "nl": "De kachelstatus !{{is|is niet}} [[status]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              },
+              {
+                "name": "status",
+                "type": "dropdown",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "values": [
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "Off",
+                      "nl": "Uit"
+                    }
+                  },
+                  {
+                    "id": "ignition",
+                    "title": {
+                      "en": "Igniting",
+                      "nl": "Ontsteken"
+                    }
+                  },
+                  {
+                    "id": "fire_on",
+                    "title": {
+                      "en": "Fire on (stabilising)",
+                      "nl": "Vuur aan (stabiliseren)"
+                    }
+                  },
+                  {
+                    "id": "heating",
+                    "title": {
+                      "en": "Heating",
+                      "nl": "Verwarmen"
+                    }
+                  },
+                  {
+                    "id": "cleaning",
+                    "title": {
+                      "en": "Cleaning",
+                      "nl": "Reinigen"
+                    }
+                  },
+                  {
+                    "id": "cooling_down",
+                    "title": {
+                      "en": "Cooling down",
+                      "nl": "Afkoelen"
+                    }
+                  },
+                  {
+                    "id": "eco",
+                    "title": {
+                      "en": "Eco standby",
+                      "nl": "Eco-stand-by"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "refresh_data",
+            "title": {
+              "en": "Refresh the stove data",
+              "nl": "Ververs de kachelgegevens"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "reset_alarm",
+            "title": {
+              "en": "Reset the stove alarm",
+              "nl": "Reset het kachelalarm"
+            },
+            "hint": {
+              "en": "Clears the error on the stove, like the reset button in the DP Remote app. Solve the cause first, e.g. refill the pellets.",
+              "nl": "Wist de fout op de kachel, net als de resetknop in de DP Remote-app. Los eerst de oorzaak op, bijvoorbeeld door pellets bij te vullen."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "set_power_level",
+            "title": {
+              "en": "Set the power level",
+              "nl": "Stel het vermogen in"
+            },
+            "titleFormatted": {
+              "en": "Set the power level to [[level]]",
+              "nl": "Stel het vermogen in op [[level]]"
+            },
+            "hint": {
+              "en": "While the stove is off, the level is saved and used the next time it is switched on.",
+              "nl": "Staat de kachel uit, dan wordt het vermogen bewaard en bij de volgende keer aanzetten gebruikt."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              },
+              {
+                "name": "level",
+                "type": "number",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "placeholder": {
+                  "en": "1–5",
+                  "nl": "1–5"
+                },
+                "title": {
+                  "en": "Power level",
+                  "nl": "Vermogen"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-01T07:36:07.991Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "The app now uses the blue from the DP Remote logo as its colour.",
+        "nl": "De app gebruikt nu het blauw uit het DP Remote-logo als kleur."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.5",
+    "testBuild": {
+      "id": 7,
+      "name": {
+        "en": "Duepi Stove Controller",
+        "nl": "Duepi Stove Controller"
+      },
+      "version": "1.0.6",
+      "readme": {
+        "en": "Bring your pellet stove into your Homey routines: switch it on before you get home, keep the room at the right temperature and get a notification when the pellets run out. Duepi doesn't make stoves itself, but its controllers are used in pellet stoves from several brands. The app works with those stoves when they have a Duepi EVO Remote (M1) WiFi module, and only needs the device code from the back of the module's box.\n\nThis is an unofficial app, made independently and not by, or with the approval of, Duepi Group. Duepi offers no public interface, so the app was built by reverse engineering the official DP Remote app and talks to the stove through the same Duepi server. A change on Duepi's side can stop it from working, and it comes without any guarantee. Close the DP Remote app while you use Homey, because two apps at the same time cause missed updates.\n",
+        "nl": "Neem je pelletkachel op in je Homey-routines: zet hem aan voordat je thuiskomt, houd de kamer op de juiste temperatuur en krijg een melding als de pellets op zijn. Duepi maakt zelf geen kachels, maar de besturing van Duepi zit in pelletkachels van verschillende merken. De app werkt met die kachels als ze een Duepi EVO Remote (M1) wifi-module hebben, en je hebt alleen de apparaatcode van de achterkant van de doos van de module nodig.\n\nDit is een onofficiële app, zelfstandig gemaakt en niet door, of met goedkeuring van, Duepi Group. Duepi biedt geen openbare koppeling, daarom is de app gemaakt door de officiële DP Remote-app te reverse-engineeren en praat hij met de kachel via dezelfde server van Duepi. Een wijziging aan de kant van Duepi kan de app laten stoppen met werken, en er wordt geen garantie gegeven. Sluit de DP Remote-app zolang je Homey gebruikt, want twee apps tegelijk zorgen voor gemiste updates.\n"
+      },
+      "description": {
+        "en": "A warm home before you even walk in.",
+        "nl": "Een warm huis nog voordat je binnenkomt."
+      },
+      "category": "climate",
+      "brandColor": "#005B9A",
+      "icon": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/7/057b1099-9cb4-4932-8cd3-d691f0c32c89/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/7/057b1099-9cb4-4932-8cd3-d691f0c32c89/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/7/057b1099-9cb4-4932-8cd3-d691f0c32c89/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "stove",
+          "name": {
+            "en": "Pellet stove",
+            "nl": "Pelletkachel"
+          },
+          "class": "heater",
+          "capabilities": [
+            "onoff",
+            "thermostat_mode",
+            "target_temperature",
+            "measure_temperature",
+            "stove_status",
+            "stove_power_level",
+            "alarm_generic",
+            "stove_error",
+            "measure_temperature.flue_gas",
+            "measure_temperature.board",
+            "stove_fan_speed",
+            "stove_auger_speed",
+            "stove_extractor_speed"
+          ],
+          "capabilitiesOptions": {
+            "target_temperature": {
+              "min": 10,
+              "max": 40,
+              "step": 1
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Room temperature",
+                "nl": "Kamertemperatuur"
+              }
+            },
+            "measure_temperature.flue_gas": {
+              "title": {
+                "en": "Flue gas temperature",
+                "nl": "Rookgastemperatuur"
+              }
+            },
+            "measure_temperature.board": {
+              "title": {
+                "en": "Board temperature",
+                "nl": "Temperatuur printplaat"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Alarm",
+                "nl": "Alarm"
+              }
+            },
+            "thermostat_mode": {
+              "values": [
+                {
+                  "id": "heat",
+                  "title": {
+                    "en": "Heat",
+                    "nl": "Verwarmen"
+                  }
+                },
+                {
+                  "id": "off",
+                  "title": {
+                    "en": "Off",
+                    "nl": "Uit"
+                  }
+                }
+              ]
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/7/057b1099-9cb4-4932-8cd3-d691f0c32c89/drivers/stove/assets/images/small.jpg",
+          "imageLarge": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/7/057b1099-9cb4-4932-8cd3-d691f0c32c89/drivers/stove/assets/images/large.jpg",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.duepigroup.dpremote/7/057b1099-9cb4-4932-8cd3-d691f0c32c89/drivers/stove/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "stove_error_cleared",
+            "title": {
+              "en": "The stove alarm went off",
+              "nl": "Het kachelalarm is opgeheven"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "stove_error_raised",
+            "title": {
+              "en": "The stove alarm went on",
+              "nl": "Het kachelalarm ging af"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "error",
+                "type": "string",
+                "title": {
+                  "en": "Error message",
+                  "nl": "Foutmelding"
+                },
+                "example": {
+                  "en": "Out of pellets",
+                  "nl": "Pellets op"
+                }
+              },
+              {
+                "name": "code",
+                "type": "number",
+                "title": {
+                  "en": "Error code",
+                  "nl": "Foutcode"
+                },
+                "example": 5
+              }
+            ]
+          },
+          {
+            "id": "stove_status_changed",
+            "title": {
+              "en": "The stove status changed",
+              "nl": "De kachelstatus is veranderd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "example": {
+                  "en": "Heating",
+                  "nl": "Verwarmen"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "stove_has_error",
+            "title": {
+              "en": "The stove alarm !{{is|is not}} on",
+              "nl": "Het kachelalarm !{{staat|staat niet}} aan"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "stove_status_is",
+            "title": {
+              "en": "The stove status !{{is|is not}}",
+              "nl": "De kachelstatus !{{is|is niet}}"
+            },
+            "titleFormatted": {
+              "en": "The stove status !{{is|is not}} [[status]]",
+              "nl": "De kachelstatus !{{is|is niet}} [[status]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              },
+              {
+                "name": "status",
+                "type": "dropdown",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "values": [
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "Off",
+                      "nl": "Uit"
+                    }
+                  },
+                  {
+                    "id": "ignition",
+                    "title": {
+                      "en": "Igniting",
+                      "nl": "Ontsteken"
+                    }
+                  },
+                  {
+                    "id": "fire_on",
+                    "title": {
+                      "en": "Fire on (stabilising)",
+                      "nl": "Vuur aan (stabiliseren)"
+                    }
+                  },
+                  {
+                    "id": "heating",
+                    "title": {
+                      "en": "Heating",
+                      "nl": "Verwarmen"
+                    }
+                  },
+                  {
+                    "id": "cleaning",
+                    "title": {
+                      "en": "Cleaning",
+                      "nl": "Reinigen"
+                    }
+                  },
+                  {
+                    "id": "cooling_down",
+                    "title": {
+                      "en": "Cooling down",
+                      "nl": "Afkoelen"
+                    }
+                  },
+                  {
+                    "id": "eco",
+                    "title": {
+                      "en": "Eco standby",
+                      "nl": "Eco-stand-by"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "refresh_data",
+            "title": {
+              "en": "Refresh the stove data",
+              "nl": "Ververs de kachelgegevens"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "reset_alarm",
+            "title": {
+              "en": "Reset the stove alarm",
+              "nl": "Reset het kachelalarm"
+            },
+            "hint": {
+              "en": "Clears the error on the stove, like the reset button in the DP Remote app. Solve the cause first, e.g. refill the pellets.",
+              "nl": "Wist de fout op de kachel, net als de resetknop in de DP Remote-app. Los eerst de oorzaak op, bijvoorbeeld door pellets bij te vullen."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              }
+            ]
+          },
+          {
+            "id": "set_power_level",
+            "title": {
+              "en": "Set the power level",
+              "nl": "Stel het vermogen in"
+            },
+            "titleFormatted": {
+              "en": "Set the power level to [[level]]",
+              "nl": "Stel het vermogen in op [[level]]"
+            },
+            "hint": {
+              "en": "While the stove is off, the level is saved and used the next time it is switched on.",
+              "nl": "Staat de kachel uit, dan wordt het vermogen bewaard en bij de volgende keer aanzetten gebruikt."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=stove"
+              },
+              {
+                "name": "level",
+                "type": "number",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "placeholder": {
+                  "en": "1–5",
+                  "nl": "1–5"
+                },
+                "title": {
+                  "en": "Power level",
+                  "nl": "Vermogen"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "in_review",
+      "stateChangedAt": "2026-10-01T08:46:14.837Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Shorter App Store description.",
+        "nl": "Kortere beschrijving in de App Store."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "testVersion": "1.0.6",
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6809474f61abe0f3b0bd9e7a",
+      "type": "user",
+      "userId": "57a995b3f779f6a51d200736",
+      "name": "Kay-Arne van Dalfsen",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.rapinology.starlink",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "Starlink Monitor",
+        "fr": "Starlink Monitor",
+        "de": "Starlink Monitor",
+        "es": "Starlink Monitor",
+        "it": "Starlink Monitor",
+        "nl": "Starlink Monitor"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "This app reads your Starlink dish directly on your local network and brings what it knows into Homey: download and upload throughput, latency, packet loss, how much of its sky is obstructed, how many satellites it sees, and how much power it draws. No account, no key, no cloud call: nothing leaves your home, and it keeps working when the internet does not.\n\nIt also shows two things the dish otherwise keeps to itself. Where it points, against where it would like to point, so you know whether moving it would help. And the log of its recent outages, each with its cause and its duration, so that a connection which merely feels unreliable becomes something you can actually look at.\n",
+        "de": "Diese App liest Ihre Starlink-Antenne direkt im lokalen Netz aus und bringt in Homey, was sie weiß: Download- und Uploadgeschwindigkeit, Latenz, Paketverlust, den verdeckten Anteil des Himmels, die Zahl der sichtbaren Satelliten und die Leistungsaufnahme. Kein Konto, kein Schlüssel, kein Aufruf nach außen: Nichts verlässt Ihr Haus, und alles läuft weiter, wenn das Internet ausfällt.\n\nSie zeigt außerdem zwei Dinge, die die Antenne sonst für sich behält. Wohin sie zeigt, verglichen mit der Richtung, in die sie zeigen möchte, damit Sie wissen, ob ein Versetzen lohnt. Und das Protokoll ihrer jüngsten Ausfälle, jeder mit Ursache und Dauer, sodass eine Verbindung, die sich nur launisch anfühlt, endlich betrachtet werden kann.\n",
+        "es": "Esta app consulta su antena Starlink directamente en la red local y lleva a Homey lo que ella sabe: velocidad de bajada y de subida, latencia, pérdida de paquetes, parte del cielo obstruida, número de satélites visibles y consumo eléctrico. Sin cuenta, sin clave, sin llamada externa: nada sale de su casa, y todo sigue funcionando cuando Internet se detiene.\n\nTambién muestra dos cosas que la antena guarda para sí. Hacia dónde apunta, frente a hacia dónde querría apuntar, para que sepa si merece la pena moverla. Y el registro de sus cortes recientes, cada uno con su causa y su duración, de modo que una conexión que solo parece caprichosa se vuelva algo que se puede examinar.\n",
+        "fr": "Cette app interroge votre antenne Starlink directement sur le réseau local et porte dans Homey ce qu'elle sait : débits descendant et montant, latence, perte de paquets, part du ciel obstruée, nombre de satellites visibles et puissance consommée. Aucun compte, aucune clé, aucun appel distant : rien ne sort de la maison, et tout continue de fonctionner quand Internet s'arrête.\n\nElle montre aussi deux choses que l'antenne garde pour elle. Où elle pointe, face à où elle voudrait pointer, de sorte que vous sachiez s'il vaut la peine de la déplacer. Et le journal de ses coupures récentes, chacune avec sa cause et sa durée, pour qu'une liaison qu'on sent capricieuse devienne quelque chose qui se regarde.\n",
+        "it": "Questa app interroga la vostra antenna Starlink direttamente sulla rete locale e porta in Homey ciò che essa sa: velocità di download e di upload, latenza, perdita di pacchetti, quota di cielo ostruita, numero di satelliti visibili e potenza assorbita. Nessun account, nessuna chiave, nessuna chiamata esterna: niente esce di casa, e tutto continua a funzionare quando Internet si ferma.\n\nMostra anche due cose che l'antenna tiene per sé. Dove punta, rispetto a dove vorrebbe puntare, così da sapere se valga la pena spostarla. E il registro delle sue interruzioni recenti, ciascuna con la sua causa e la sua durata, perché una connessione che sembra soltanto capricciosa diventi qualcosa che si può osservare.\n",
+        "nl": "Deze app leest uw Starlink-schotel rechtstreeks op het lokale netwerk uit en brengt naar Homey wat zij weet: download- en uploadsnelheid, latentie, pakketverlies, het afgedekte deel van de hemel, het aantal zichtbare satellieten en het verbruik. Geen account, geen sleutel, geen aanroep naar buiten: niets verlaat uw huis, en alles blijft werken wanneer het internet uitvalt.\n\nZij toont ook twee dingen die de schotel anders voor zich houdt. Waar hij wijst, tegenover waar hij zou willen wijzen, zodat u weet of verplaatsen zin heeft. En het logboek van zijn recente onderbrekingen, elk met oorzaak en duur, zodat een verbinding die alleen maar grillig aanvoelt iets wordt dat u kunt bekijken.\n"
+      },
+      "description": {
+        "en": "Keep an eye on the sky above your dish.",
+        "fr": "Gardez un oeil sur le ciel au-dessus de votre antenne.",
+        "de": "Behalten Sie den Himmel über Ihrer Antenne im Blick.",
+        "es": "Vigile el cielo sobre su antena.",
+        "it": "Tenete d'occhio il cielo sopra la vostra antenna.",
+        "nl": "Houd de hemel boven uw schotel in het oog."
+      },
+      "category": "internet",
+      "brandColor": "#12203A",
+      "icon": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "antenne",
+          "name": {
+            "en": "Dish",
+            "fr": "Antenne",
+            "de": "Antenne",
+            "es": "Antena",
+            "it": "Antenna",
+            "nl": "Schotel"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "etat_antenne",
+            "measure_debit_descendant",
+            "measure_debit_montant",
+            "measure_latence_reseau",
+            "measure_perte_paquets",
+            "measure_obstruction",
+            "measure_ecart_visee",
+            "measure_azimut",
+            "measure_elevation",
+            "measure_satellites",
+            "measure_power",
+            "measure_fonctionnement",
+            "alarm_desaligne",
+            "alarm_obstruction"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/drivers/antenne/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/drivers/antenne/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/drivers/antenne/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "ecart_depasse",
+            "title": {
+              "en": "The alignment error rises above",
+              "fr": "L'écart de visée dépasse",
+              "de": "Der Ausrichtungsfehler übersteigt",
+              "es": "El error de alineación supera",
+              "it": "L'errore di allineamento supera",
+              "nl": "De uitlijningsfout overschrijdt"
+            },
+            "titleFormatted": {
+              "en": "The alignment error rises above [[seuil]]°",
+              "fr": "L'écart de visée dépasse [[seuil]]°",
+              "de": "Der Ausrichtungsfehler übersteigt [[seuil]]°",
+              "es": "El error de alineación supera [[seuil]]°",
+              "it": "L'errore di allineamento supera [[seuil]]°",
+              "nl": "De uitlijningsfout overschrijdt [[seuil]]°"
+            },
+            "hint": {
+              "en": "The angle between where the dish points and where it would like to point. A large gap means the dish should be moved.",
+              "fr": "L'angle entre là où l'antenne pointe et là où elle voudrait pointer. Un écart important signifie qu'il faut la déplacer.",
+              "de": "Der Winkel zwischen der tatsächlichen und der gewünschten Ausrichtung. Ein großer Abstand bedeutet, dass die Antenne versetzt werden sollte.",
+              "es": "El ángulo entre donde apunta la antena y donde querría apuntar. Una diferencia grande significa que hay que moverla.",
+              "it": "L'angolo tra dove punta l'antenna e dove vorrebbe puntare. Uno scarto ampio significa che va spostata.",
+              "nl": "De hoek tussen waar de schotel wijst en waar hij zou willen wijzen. Een groot verschil betekent dat hij verplaatst moet worden."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              },
+              {
+                "name": "seuil",
+                "type": "number",
+                "min": 1,
+                "max": 180,
+                "step": 1,
+                "value": 10,
+                "placeholder": {
+                  "en": "°",
+                  "fr": "°",
+                  "de": "°",
+                  "es": "°",
+                  "it": "°",
+                  "nl": "°"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ecart",
+                "type": "number",
+                "title": {
+                  "en": "Alignment error",
+                  "fr": "Écart de visée",
+                  "de": "Ausrichtungsfehler",
+                  "es": "Error de alineación",
+                  "it": "Errore di allineamento",
+                  "nl": "Uitlijningsfout"
+                }
+              },
+              {
+                "name": "azimut",
+                "type": "number",
+                "title": {
+                  "en": "Azimuth",
+                  "fr": "Azimut",
+                  "de": "Azimut",
+                  "es": "Azimut",
+                  "it": "Azimut",
+                  "nl": "Azimut"
+                }
+              },
+              {
+                "name": "azimut_souhaite",
+                "type": "number",
+                "title": {
+                  "en": "Desired azimuth",
+                  "fr": "Azimut souhaité",
+                  "de": "Gewünschter Azimut",
+                  "es": "Azimut deseado",
+                  "it": "Azimut desiderato",
+                  "nl": "Gewenste azimut"
+                }
+              }
+            ]
+          },
+          {
+            "id": "latence_depasse",
+            "title": {
+              "en": "The latency rises above",
+              "fr": "La latence dépasse",
+              "de": "Die Latenz übersteigt",
+              "es": "La latencia supera",
+              "it": "La latenza supera",
+              "nl": "De latentie overschrijdt"
+            },
+            "titleFormatted": {
+              "en": "The latency rises above [[seuil]] ms",
+              "fr": "La latence dépasse [[seuil]] ms",
+              "de": "Die Latenz übersteigt [[seuil]] ms",
+              "es": "La latencia supera [[seuil]] ms",
+              "it": "La latenza supera [[seuil]] ms",
+              "nl": "De latentie overschrijdt [[seuil]] ms"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              },
+              {
+                "name": "seuil",
+                "type": "number",
+                "min": 5,
+                "max": 2000,
+                "step": 5,
+                "value": 80,
+                "placeholder": {
+                  "en": "ms",
+                  "fr": "ms",
+                  "de": "ms",
+                  "es": "ms",
+                  "it": "ms",
+                  "nl": "ms"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "latence",
+                "type": "number",
+                "title": {
+                  "en": "Latency",
+                  "fr": "Latence",
+                  "de": "Latenz",
+                  "es": "Latencia",
+                  "it": "Latenza",
+                  "nl": "Latentie"
+                }
+              }
+            ]
+          },
+          {
+            "id": "obstruction_depasse",
+            "title": {
+              "en": "Sky obstruction rises above",
+              "fr": "L'obstruction du ciel dépasse",
+              "de": "Die Himmelsverdeckung übersteigt",
+              "es": "La obstrucción del cielo supera",
+              "it": "L'ostruzione del cielo supera",
+              "nl": "De hemelobstructie overschrijdt"
+            },
+            "titleFormatted": {
+              "en": "Sky obstruction rises above [[seuil]] %",
+              "fr": "L'obstruction du ciel dépasse [[seuil]] %",
+              "de": "Die Himmelsverdeckung übersteigt [[seuil]] %",
+              "es": "La obstrucción del cielo supera [[seuil]] %",
+              "it": "L'ostruzione del cielo supera [[seuil]] %",
+              "nl": "De hemelobstructie overschrijdt [[seuil]] %"
+            },
+            "hint": {
+              "en": "The share of the sky hidden by trees, roofs or masts, as the dish measured it over time.",
+              "fr": "La part du ciel masquée par les arbres, les toits ou les mâts, telle que l'antenne l'a mesurée dans la durée.",
+              "de": "Der Anteil des Himmels, der durch Bäume, Dächer oder Masten verdeckt ist, wie die Antenne ihn über die Zeit gemessen hat.",
+              "es": "La parte del cielo tapada por árboles, tejados o mástiles, según la ha medido la antena con el tiempo.",
+              "it": "La parte di cielo nascosta da alberi, tetti o pali, come misurata dall'antenna nel tempo.",
+              "nl": "Het deel van de hemel dat door bomen, daken of masten wordt afgedekt, zoals de schotel het in de tijd heeft gemeten."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              },
+              {
+                "name": "seuil",
+                "type": "number",
+                "min": 1,
+                "max": 100,
+                "step": 1,
+                "value": 10,
+                "placeholder": {
+                  "en": "%",
+                  "fr": "%",
+                  "de": "%",
+                  "es": "%",
+                  "it": "%",
+                  "nl": "%"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "obstruction",
+                "type": "number",
+                "title": {
+                  "en": "Obstruction",
+                  "fr": "Obstruction",
+                  "de": "Verdeckung",
+                  "es": "Obstrucción",
+                  "it": "Ostruzione",
+                  "nl": "Obstructie"
+                }
+              }
+            ]
+          },
+          {
+            "id": "debit_sous",
+            "title": {
+              "en": "The download speed drops below",
+              "fr": "Le débit descendant passe sous",
+              "de": "Die Downloadgeschwindigkeit fällt unter",
+              "es": "La velocidad de bajada cae por debajo de",
+              "it": "La velocità di download scende sotto",
+              "nl": "De downloadsnelheid zakt onder"
+            },
+            "titleFormatted": {
+              "en": "The download speed drops below [[seuil]] Mb/s",
+              "fr": "Le débit descendant passe sous [[seuil]] Mb/s",
+              "de": "Die Downloadgeschwindigkeit fällt unter [[seuil]] Mb/s",
+              "es": "La velocidad de bajada cae por debajo de [[seuil]] Mb/s",
+              "it": "La velocità di download scende sotto [[seuil]] Mb/s",
+              "nl": "De downloadsnelheid zakt onder [[seuil]] Mb/s"
+            },
+            "hint": {
+              "en": "Measured traffic, not a speed test: it falls to nearly zero when nobody is using the line.",
+              "fr": "Le trafic mesuré, et non un test de débit : il tombe presque à zéro quand personne n'utilise la ligne.",
+              "de": "Der gemessene Verkehr, kein Geschwindigkeitstest: Er fällt fast auf null, wenn niemand die Leitung nutzt.",
+              "es": "El tráfico medido, no una prueba de velocidad: cae casi a cero cuando nadie usa la línea.",
+              "it": "Il traffico misurato, non un test di velocità: scende quasi a zero quando nessuno usa la linea.",
+              "nl": "Het gemeten verkeer, geen snelheidstest: het valt bijna tot nul als niemand de lijn gebruikt."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              },
+              {
+                "name": "seuil",
+                "type": "number",
+                "min": 1,
+                "max": 1000,
+                "step": 1,
+                "value": 20,
+                "placeholder": {
+                  "en": "Mb/s",
+                  "fr": "Mb/s",
+                  "de": "Mb/s",
+                  "es": "Mb/s",
+                  "it": "Mb/s",
+                  "nl": "Mb/s"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "debit",
+                "type": "number",
+                "title": {
+                  "en": "Download speed",
+                  "fr": "Débit descendant",
+                  "de": "Downloadgeschwindigkeit",
+                  "es": "Velocidad de bajada",
+                  "it": "Velocità di download",
+                  "nl": "Downloadsnelheid"
+                }
+              }
+            ]
+          },
+          {
+            "id": "etat_change",
+            "title": {
+              "en": "The dish state changes",
+              "fr": "L'état de l'antenne change",
+              "de": "Der Antennenstatus ändert sich",
+              "es": "El estado de la antena cambia",
+              "it": "Lo stato dell'antenna cambia",
+              "nl": "De status van de schotel verandert"
+            },
+            "hint": {
+              "en": "Booting, stowed, obstructed, searching the sky, thermal shutdown, and so on.",
+              "fr": "Démarrage, rangée, obstruée, recherche du ciel, arrêt thermique, et ainsi de suite.",
+              "de": "Startet, eingeklappt, verdeckt, Himmelssuche, Abschaltung wegen Überhitzung und so weiter.",
+              "es": "Arrancando, recogida, obstruida, buscando el cielo, apagado térmico, etcétera.",
+              "it": "Avvio, ripiegata, ostruita, ricerca del cielo, spegnimento termico e così via.",
+              "nl": "Opstarten, ingeklapt, geblokkeerd, hemel zoeken, thermische uitschakeling, enzovoort."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "etat",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État",
+                  "de": "Status",
+                  "es": "Estado",
+                  "it": "Stato",
+                  "nl": "Status"
+                },
+                "example": {
+                  "en": "Obstructed",
+                  "fr": "Obstruée",
+                  "de": "Verdeckt",
+                  "es": "Obstruida",
+                  "it": "Ostruita",
+                  "nl": "Geblokkeerd"
+                }
+              },
+              {
+                "name": "precedent",
+                "type": "string",
+                "title": {
+                  "en": "Previous state",
+                  "fr": "État précédent",
+                  "de": "Vorheriger Status",
+                  "es": "Estado anterior",
+                  "it": "Stato precedente",
+                  "nl": "Vorige status"
+                },
+                "example": {
+                  "en": "Online",
+                  "fr": "En ligne",
+                  "de": "Online",
+                  "es": "En línea",
+                  "it": "In linea",
+                  "nl": "Online"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "est_prete",
+            "title": {
+              "en": "The dish !{{is|is not}} ready",
+              "fr": "L'antenne !{{est|n'est pas}} prête",
+              "de": "Die Antenne !{{ist|ist nicht}} bereit",
+              "es": "La antena !{{está|no está}} lista",
+              "it": "L'antenna !{{è|non è}} pronta",
+              "nl": "De schotel !{{is|is niet}} gereed"
+            },
+            "hint": {
+              "en": "All of the dish's start-up steps have completed.",
+              "fr": "Toutes les étapes de démarrage de l'antenne sont franchies.",
+              "de": "Alle Startschritte der Antenne sind abgeschlossen.",
+              "es": "Todas las etapas de arranque de la antena están completadas.",
+              "it": "Tutte le fasi di avvio dell'antenna sono completate.",
+              "nl": "Alle opstartstappen van de schotel zijn voltooid."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              }
+            ]
+          },
+          {
+            "id": "est_desalignee",
+            "title": {
+              "en": "The dish !{{is|is not}} misaligned",
+              "fr": "L'antenne !{{est|n'est pas}} désalignée",
+              "de": "Die Antenne !{{ist|ist nicht}} falsch ausgerichtet",
+              "es": "La antena !{{está|no está}} desalineada",
+              "it": "L'antenna !{{è|non è}} disallineata",
+              "nl": "De schotel !{{is|is niet}} verkeerd uitgelijnd"
+            },
+            "hint": {
+              "en": "Compared with the threshold set in the device settings.",
+              "fr": "Par rapport au seuil fixé dans les réglages de l'appareil.",
+              "de": "Im Vergleich zur in den Geräteeinstellungen festgelegten Schwelle.",
+              "es": "En comparación con el umbral fijado en los ajustes del dispositivo.",
+              "it": "Rispetto alla soglia impostata nelle impostazioni del dispositivo.",
+              "nl": "Vergeleken met de drempel in de apparaatinstellingen."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              }
+            ]
+          },
+          {
+            "id": "ecart_superieur",
+            "title": {
+              "en": "The alignment error !{{is|is not}} above",
+              "fr": "L'écart de visée !{{est|n'est pas}} supérieur à",
+              "de": "Der Ausrichtungsfehler !{{liegt|liegt nicht}} über",
+              "es": "El error de alineación !{{es|no es}} superior a",
+              "it": "L'errore di allineamento !{{è|non è}} superiore a",
+              "nl": "De uitlijningsfout !{{is|is niet}} groter dan"
+            },
+            "titleFormatted": {
+              "en": "The alignment error !{{is|is not}} above [[seuil]]°",
+              "fr": "L'écart de visée !{{est|n'est pas}} supérieur à [[seuil]]°",
+              "de": "Der Ausrichtungsfehler !{{liegt|liegt nicht}} über [[seuil]]°",
+              "es": "El error de alineación !{{es|no es}} superior a [[seuil]]°",
+              "it": "L'errore di allineamento !{{è|non è}} superiore a [[seuil]]°",
+              "nl": "De uitlijningsfout !{{is|is niet}} groter dan [[seuil]]°"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=antenne"
+              },
+              {
+                "name": "seuil",
+                "type": "number",
+                "min": 1,
+                "max": 180,
+                "step": 1,
+                "value": 10,
+                "placeholder": {
+                  "en": "°",
+                  "fr": "°",
+                  "de": "°",
+                  "es": "°",
+                  "it": "°",
+                  "nl": "°"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": null
+      },
+      "widgets": {
+        "coupures": {
+          "name": {
+            "en": "Outage log",
+            "fr": "Journal des coupures",
+            "de": "Ausfallprotokoll",
+            "es": "Registro de cortes",
+            "it": "Registro interruzioni",
+            "nl": "Onderbrekingslogboek"
+          },
+          "height": 236,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "combien",
+              "type": "dropdown",
+              "value": "5",
+              "title": {
+                "en": "Outages listed",
+                "fr": "Coupures listées",
+                "de": "Aufgeführte Ausfälle",
+                "es": "Cortes listados",
+                "it": "Interruzioni elencate",
+                "nl": "Getoonde onderbrekingen"
+              },
+              "hint": {
+                "en": "The total above always counts them all.",
+                "fr": "Le total, au-dessus, les compte toutes de toute façon.",
+                "de": "Die Gesamtzahl darüber zählt ohnehin alle.",
+                "es": "El total de arriba los cuenta todos de todas formas.",
+                "it": "Il totale in alto le conta comunque tutte.",
+                "nl": "Het totaal hierboven telt ze sowieso allemaal."
+              },
+              "values": [
+                {
+                  "id": "5",
+                  "title": {
+                    "en": "5",
+                    "fr": "5",
+                    "de": "5",
+                    "es": "5",
+                    "it": "5",
+                    "nl": "5"
+                  }
+                },
+                {
+                  "id": "10",
+                  "title": {
+                    "en": "10",
+                    "fr": "10",
+                    "de": "10",
+                    "es": "10",
+                    "it": "10",
+                    "nl": "10"
+                  }
+                },
+                {
+                  "id": "30",
+                  "title": {
+                    "en": "30",
+                    "fr": "30",
+                    "de": "30",
+                    "es": "30",
+                    "it": "30",
+                    "nl": "30"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "coupures",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/coupures/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/coupures/preview-light.png"
+        },
+        "courbe_latence": {
+          "name": {
+            "en": "Latency, fifteen minutes",
+            "fr": "Latence, quinze minutes",
+            "de": "Latenz, fünfzehn Minuten",
+            "es": "Latencia, quince minutos",
+            "it": "Latenza, quindici minuti",
+            "nl": "Latentie, vijftien minuten"
+          },
+          "height": 146,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "courbe_latence",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/courbe_latence/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/courbe_latence/preview-light.png"
+        },
+        "debits": {
+          "name": {
+            "en": "Throughput",
+            "fr": "Débits",
+            "de": "Durchsatz",
+            "es": "Caudales",
+            "it": "Portata",
+            "nl": "Doorvoer"
+          },
+          "height": 120,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "debits",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/debits/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/debits/preview-light.png"
+        },
+        "historique": {
+          "name": {
+            "en": "Throughput, fifteen minutes",
+            "fr": "Débits, quinze minutes",
+            "de": "Durchsatz, fünfzehn Minuten",
+            "es": "Caudales, quince minutos",
+            "it": "Portata, quindici minuti",
+            "nl": "Doorvoer, vijftien minuten"
+          },
+          "height": 231,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "historique",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/historique/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/historique/preview-light.png"
+        },
+        "latence": {
+          "name": {
+            "en": "Latency",
+            "fr": "Latence",
+            "de": "Latenz",
+            "es": "Latencia",
+            "it": "Latenza",
+            "nl": "Latentie"
+          },
+          "height": 120,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "latence",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/latence/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/latence/preview-light.png"
+        },
+        "orientation": {
+          "name": {
+            "en": "Dish alignment",
+            "fr": "Alignement de l'antenne",
+            "de": "Antennenausrichtung",
+            "es": "Alineación de la antena",
+            "it": "Allineamento antenna",
+            "nl": "Uitlijning schotel"
+          },
+          "height": 224,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "orientation",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/orientation/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/orientation/preview-light.png"
+        },
+        "satellites": {
+          "name": {
+            "en": "Satellites",
+            "fr": "Satellites",
+            "de": "Satelliten",
+            "es": "Satélites",
+            "it": "Satelliti",
+            "nl": "Satellieten"
+          },
+          "height": 120,
+          "api": {
+            "getEtat": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "settings": [
+            {
+              "id": "fond",
+              "type": "dropdown",
+              "value": "nuit",
+              "title": {
+                "en": "Background",
+                "fr": "Fond",
+                "de": "Hintergrund",
+                "es": "Fondo",
+                "it": "Sfondo",
+                "nl": "Achtergrond"
+              },
+              "hint": {
+                "en": "The colour of the card.",
+                "fr": "La couleur de la carte.",
+                "de": "Die Farbe der Karte.",
+                "es": "El color de la tarjeta.",
+                "it": "Il colore della scheda.",
+                "nl": "De kleur van de kaart."
+              },
+              "values": [
+                {
+                  "id": "nuit",
+                  "title": {
+                    "en": "Night",
+                    "fr": "Nuit",
+                    "de": "Nacht",
+                    "es": "Noche",
+                    "it": "Notte",
+                    "nl": "Nacht"
+                  }
+                },
+                {
+                  "id": "ardoise",
+                  "title": {
+                    "en": "Slate",
+                    "fr": "Ardoise",
+                    "de": "Schiefer",
+                    "es": "Pizarra",
+                    "it": "Ardesia",
+                    "nl": "Leisteen"
+                  }
+                },
+                {
+                  "id": "prune",
+                  "title": {
+                    "en": "Plum",
+                    "fr": "Prune",
+                    "de": "Pflaume",
+                    "es": "Ciruela",
+                    "it": "Prugna",
+                    "nl": "Pruim"
+                  }
+                }
+              ]
+            }
+          ],
+          "transparent": true,
+          "id": "satellites",
+          "previewDark": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/satellites/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.rapinology.starlink/1/89e41e63-e257-461d-bf49-d448f7a65295/widgets/satellites/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-01T09:35:28.656Z",
+      "bugs": null,
+      "homepage": "https://www.rapinology.com",
+      "support": "https://www.rapinology.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "First release. Reads the dish on the local network: throughput, latency, packet loss, sky obstruction, satellites, power draw, and the alignment it would like against the one it has.",
+        "fr": "Première version. Lit l'antenne sur le réseau local : débits, latence, perte de paquets, obstruction du ciel, satellites, puissance consommée, et l'orientation qu'elle voudrait face à celle qu'elle a.",
+        "de": "Erste Version. Liest die Antenne im lokalen Netz: Durchsatz, Latenz, Paketverlust, Himmelsverdeckung, Satelliten, Leistungsaufnahme und die gewünschte Ausrichtung gegenüber der tatsächlichen.",
+        "es": "Primera versión. Lee la antena en la red local: caudales, latencia, pérdida de paquetes, obstrucción del cielo, satélites, consumo y la orientación que querría frente a la que tiene.",
+        "it": "Prima versione. Legge l'antenna sulla rete locale: portata, latenza, perdita di pacchetti, ostruzione del cielo, satelliti, potenza assorbita e l'orientamento desiderato rispetto a quello attuale.",
+        "nl": "Eerste versie. Leest de schotel op het lokale netwerk: doorvoer, latentie, pakketverlies, hemelobstructie, satellieten, verbruik en de gewenste uitlijning tegenover de huidige."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a96972b30ac038fba71a2f2",
+      "type": "user",
+      "userId": "66e2d2b3f0e7b530640ef902",
+      "name": "Henri Dominique Rapin",
+      "verified": false
+    },
+    "communityTopicId": null
   }
 ]

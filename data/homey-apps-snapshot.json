@@ -1291,10 +1291,10 @@
     "name": "Xiaomi Mi Home",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "3.5.34",
+    "version": "3.5.37",
     "sourceRepository": "https://github.com/shaarkys/com.xiaomi-miio",
     "publishedAt": "2019-11-12T13:58:32.200Z",
-    "updatedAt": "2026-09-26T16:57:05.279Z",
+    "updatedAt": "2026-10-01T10:16:38.719Z",
     "communityTopicId": 118
   },
   {
@@ -1984,10 +1984,10 @@
     "name": "Philips Hue",
     "developerName": "Athom B.V.",
     "developerId": "6a84336d4430c25338c20073",
-    "version": "7.3.14",
+    "version": "7.3.16",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:01:17.620Z",
-    "updatedAt": "2026-08-19T12:30:09.667Z",
+    "updatedAt": "2026-10-01T10:16:38.720Z",
     "communityTopicId": null
   },
   {
@@ -3326,10 +3326,10 @@
     "name": "Weather Forecast from SMHI",
     "developerName": "Johan Bendz",
     "developerId": "5dcabbf91c90c866f936612d",
-    "version": "0.7.0",
+    "version": "0.11.2",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:06:30.727Z",
-    "updatedAt": "2026-09-28T18:29:10.685Z",
+    "updatedAt": "2026-10-01T10:16:38.720Z",
     "communityTopicId": null
   },
   {
@@ -4745,10 +4745,10 @@
     "name": "Satel Integra Alarm",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "5.2.1",
+    "version": "5.2.2",
     "sourceRepository": "https://github.com/mickelluiten/com.satelintegra",
     "publishedAt": "2020-10-29T06:07:54.542Z",
-    "updatedAt": "2026-09-22T14:08:11.596Z",
+    "updatedAt": "2026-10-01T10:16:38.720Z",
     "communityTopicId": 36654
   },
   {
@@ -4998,10 +4998,10 @@
     "name": "Octoprint",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "1.2.4",
+    "version": "1.2.7",
     "sourceRepository": "https://github.com/shaarkys/no.jonkristian.octoprint",
     "publishedAt": "2021-02-11T10:24:30.281Z",
-    "updatedAt": "2026-09-26T08:48:06.049Z",
+    "updatedAt": "2026-10-01T10:16:38.721Z",
     "communityTopicId": 42836
   },
   {
@@ -6186,10 +6186,10 @@
     "name": "Xiaomi Miija",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "1.2.49",
+    "version": "1.2.50",
     "sourceRepository": "https://github.com/shaarkys/MiTempHum-Homey",
     "publishedAt": "2022-03-31T20:07:27.208Z",
-    "updatedAt": "2026-09-22T18:18:25.088Z",
+    "updatedAt": "2026-10-01T10:16:38.721Z",
     "communityTopicId": 78560
   },
   {
@@ -7462,10 +7462,10 @@
     "name": "FireServiceRota",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "2.16.0",
+    "version": "2.16.1",
     "sourceRepository": "",
     "publishedAt": "2023-04-24T12:57:27.039Z",
-    "updatedAt": "2026-09-07T12:26:29.809Z",
+    "updatedAt": "2026-10-01T10:16:38.721Z",
     "communityTopicId": 79611
   },
   {
@@ -9585,10 +9585,10 @@
     "name": "EcoFlow",
     "developerName": "EcoFlow Technology",
     "developerId": "6aa7ec7f99b9541712bb1416",
-    "version": "1.0.2",
+    "version": "2.1.1",
     "sourceRepository": "",
     "publishedAt": "2024-08-13T09:47:36.233Z",
-    "updatedAt": "2026-09-25T07:12:05.691Z",
+    "updatedAt": "2026-10-01T10:16:38.721Z",
     "communityTopicId": 143564
   },
   {
@@ -11367,10 +11367,10 @@
     "name": "Weheat",
     "developerName": "Edwin van de Pol",
     "developerId": "5dcabc2c1c90c866f936638b",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "sourceRepository": "",
     "publishedAt": "2025-07-20T12:23:57.323Z",
-    "updatedAt": "2026-09-11T12:52:09.846Z",
+    "updatedAt": "2026-10-01T10:16:38.721Z",
     "communityTopicId": 139878
   },
   {
@@ -11751,11 +11751,11 @@
     "appId": "com.meross.official",
     "name": "Meross",
     "developerName": "Meross Technology Limited",
-    "developerId": "68c9913ecbb72125ed0e6ee3",
+    "developerId": "6abe19bc13cce2f830ec9188",
     "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2025-09-16T16:33:02.958Z",
-    "updatedAt": "2026-04-12T07:41:59.310Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": 143075
   },
   {
@@ -12412,10 +12412,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.8.3",
+    "version": "3.9.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-09-29T07:44:32.675Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": 147496
   },
   {
@@ -14359,10 +14359,10 @@
     "name": "Shelly Control",
     "developerName": "Allterco Robotics",
     "developerId": "6a8c4b90222a4450aa38d020",
-    "version": "0.17.0",
+    "version": "1.0.1",
     "sourceRepository": "https://github.com/drenso/cloud.shelly.control",
     "publishedAt": "2026-03-19T14:22:46.032Z",
-    "updatedAt": "2026-09-24T15:10:38.386Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": 152695
   },
   {
@@ -14513,10 +14513,10 @@
     "name": "Adax with Power Estimation",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "0.3.44",
+    "version": "0.3.45",
     "sourceRepository": "",
     "publishedAt": "2026-03-23T10:07:34.613Z",
-    "updatedAt": "2026-03-25T09:38:17.725Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": null
   },
   {
@@ -15048,17 +15048,6 @@
     "communityTopicId": null
   },
   {
-    "appId": "com.starlink.dish",
-    "name": "Starlink",
-    "developerName": "Gerrit Scherpenzeel",
-    "developerId": "694a59a22f0b99832c0374f1",
-    "version": "1.0.2",
-    "sourceRepository": "",
-    "publishedAt": "2026-04-16T21:01:06.030Z",
-    "updatedAt": "2026-08-18T14:49:55.750Z",
-    "communityTopicId": null
-  },
-  {
     "appId": "com.sortedbits.smartevse",
     "name": "Smart EVSE via MQTT",
     "developerName": "Wim Haanstra",
@@ -15404,10 +15393,10 @@
     "name": "Toshiba Estia",
     "developerName": "Jo Goossens",
     "developerId": "69e73665fb6dd7068a7cbff1",
-    "version": "1.0.23",
+    "version": "1.0.27",
     "sourceRepository": "https://github.com/jogoossens/com.goossens.toshibaestia",
     "publishedAt": "2026-05-03T20:00:59.747Z",
-    "updatedAt": "2026-06-08T19:52:45.541Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": null
   },
   {
@@ -16064,10 +16053,10 @@
     "name": "Greenheiss Solar",
     "developerName": "Fernando Lopez",
     "developerId": "6a19e2814d288cb6b9871e1f",
-    "version": "1.1.10",
+    "version": "1.1.11",
     "sourceRepository": "https://github.com/TU_USUARIO/com.greenheiss.solar",
     "publishedAt": "2026-05-29T19:01:21.475Z",
-    "updatedAt": "2026-06-05T09:32:41.961Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": null
   },
   {
@@ -16548,10 +16537,10 @@
     "name": "MOES",
     "developerName": "NovaCore Labs",
     "developerId": "6a8bdd7a94f0069d62618521",
-    "version": "1.5.1",
+    "version": "1.10.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-07T05:52:24.808Z",
-    "updatedAt": "2026-09-26T08:27:08.706Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": 156967
   },
   {
@@ -16614,10 +16603,10 @@
     "name": "evcc",
     "developerName": "Ridvan Ermis",
     "developerId": "6a4e4cc706caaec2005e17ba",
-    "version": "1.1.0",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/rdvnit/com.evcc.io",
     "publishedAt": "2026-07-08T13:16:13.928Z",
-    "updatedAt": "2026-09-02T13:18:32.100Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": null
   },
   {
@@ -16834,10 +16823,10 @@
     "name": "Nibe Live",
     "developerName": "Love Thyresson",
     "developerId": "67718e3ee5ac96c52a6ba4e0",
-    "version": "1.3.3",
+    "version": "1.4.1",
     "sourceRepository": "https://github.com/lovethyresson/com.nibe.local",
     "publishedAt": "2026-07-18T17:56:52.713Z",
-    "updatedAt": "2026-09-28T19:15:07.314Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": 157330
   },
   {
@@ -16878,10 +16867,10 @@
     "name": "DeWarmte",
     "developerName": "Dave Nelissen",
     "developerId": "6a5c92802ddac2379c77ac22",
-    "version": "1.2.4",
+    "version": "1.2.6",
     "sourceRepository": "https://github.com/daven68/nl.davenelissen.dewarmte",
     "publishedAt": "2026-07-19T09:01:52.539Z",
-    "updatedAt": "2026-08-04T18:13:26.073Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": null
   },
   {
@@ -16988,10 +16977,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.45",
+    "version": "1.9.47",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-07-24T11:45:21.817Z",
-    "updatedAt": "2026-09-27T18:11:52.927Z",
+    "updatedAt": "2026-10-01T10:16:38.722Z",
     "communityTopicId": 157537
   },
   {
@@ -18011,10 +18000,10 @@
     "name": "Ephemerides",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.3.0",
+    "version": "1.4.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:39:05.277Z",
-    "updatedAt": "2026-09-22T13:33:51.567Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": null
   },
   {
@@ -18022,10 +18011,10 @@
     "name": "ISS",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:43:08.822Z",
-    "updatedAt": "2026-09-03T16:43:08.822Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": null
   },
   {
@@ -18150,17 +18139,6 @@
     "communityTopicId": 159401
   },
   {
-    "appId": "nl.jessedevries.huedevicelocationsync",
-    "name": "Hue Device Location Sync",
-    "developerName": "Jesse de Vries",
-    "developerId": "6aa1a45b4b2b66c1158fb585",
-    "version": "0.3.1",
-    "sourceRepository": "",
-    "publishedAt": "2026-09-14T09:03:49.293Z",
-    "updatedAt": "2026-09-25T08:56:13.174Z",
-    "communityTopicId": null
-  },
-  {
     "appId": "com.ericj.senseenergymonitor",
     "name": "Sense Energy Monitor",
     "developerName": "Eric Jilot",
@@ -18253,10 +18231,10 @@
     "name": "Météo France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.1.2",
+    "version": "0.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T08:53:59.631Z",
-    "updatedAt": "2026-09-21T09:05:42.257Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": null
   },
   {
@@ -18363,10 +18341,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.9.4",
+    "version": "1.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-09-27T09:22:27.376Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": null
   },
   {
@@ -18495,10 +18473,10 @@
     "name": "PostNL",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.1.5",
+    "version": "1.1.11",
     "sourceRepository": "",
     "publishedAt": "2026-09-21T17:18:36.046Z",
-    "updatedAt": "2026-09-26T08:42:40.810Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": 159674
   },
   {
@@ -18646,13 +18624,13 @@
   },
   {
     "appId": "com.rapinology.littlemonkey",
-    "name": "Little Monkey",
+    "name": "Ecojoko",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T09:56:20.116Z",
-    "updatedAt": "2026-09-28T09:56:20.116Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": null
   },
   {
@@ -18690,13 +18668,13 @@
   },
   {
     "appId": "dk.kvols.ankerprime",
-    "name": "Anker Prime Power Bank",
+    "name": "Anker Prime",
     "developerName": "Mads Kvols Hansen",
     "developerId": "6ab8d2b930dc90a8d6e535c0",
-    "version": "2.0.6",
+    "version": "2.0.7",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T18:52:09.356Z",
-    "updatedAt": "2026-09-29T17:57:30.406Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": 160134
   },
   {
@@ -18715,10 +18693,10 @@
     "name": "A-OK",
     "developerName": "Thorstein Klingenberg",
     "developerId": "6ab85d5f30dc90a8d6e5146e",
-    "version": "1.1.11",
+    "version": "1.1.12",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T09:49:11.940Z",
-    "updatedAt": "2026-09-30T09:49:11.940Z",
+    "updatedAt": "2026-10-01T10:16:38.723Z",
     "communityTopicId": null
   },
   {
@@ -18828,8 +18806,8 @@
     "version": "0.1.9",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T17:07:57.800Z",
-    "updatedAt": "2026-09-30T17:07:57.800Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-01T10:16:38.723Z",
+    "communityTopicId": 160215
   },
   {
     "appId": "com.wisse.hikvision",
@@ -18885,5 +18863,49 @@
     "publishedAt": "2026-09-30T23:17:34.955Z",
     "updatedAt": "2026-09-30T23:17:34.955Z",
     "communityTopicId": 159398
+  },
+  {
+    "appId": "com.rapinology.frgreenenergy",
+    "name": "Grid Green Carbon",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:16:15.585Z",
+    "updatedAt": "2026-10-01T10:16:15.585Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.moduel",
+    "name": "Moduel",
+    "developerName": "Moduel AB",
+    "developerId": "6a70a3b232b0f6166a4f2433",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/Doekse/moduel-homey",
+    "publishedAt": "2026-10-01T10:16:16.471Z",
+    "updatedAt": "2026-10-01T10:16:16.471Z",
+    "communityTopicId": 158949
+  },
+  {
+    "appId": "com.duepigroup.dpremote",
+    "name": "Duepi Stove Controller",
+    "developerName": "Kay-Arne van Dalfsen",
+    "developerId": "6809474f61abe0f3b0bd9e7a",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:16:16.471Z",
+    "updatedAt": "2026-10-01T10:16:16.471Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rapinology.starlink",
+    "name": "Starlink Monitor",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:16:17.049Z",
+    "updatedAt": "2026-10-01T10:16:17.049Z",
+    "communityTopicId": null
   }
 ]
