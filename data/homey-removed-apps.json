@@ -55,20 +55,6 @@
     "private": false
   },
   {
-    "appId": "com.djordie.grokconnect",
-    "name": "Grok Connect",
-    "developerName": "Djordie Hendriks",
-    "developerId": "6a541613ce38f245588e36a7",
-    "version": "1.0.0",
-    "sourceRepository": "",
-    "communityTopicId": null,
-    "publishedAt": "",
-    "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-09-30T09:49:35.620Z",
-    "type": "test",
-    "private": false
-  },
-  {
     "appId": "net.pelliniscreenline",
     "name": "ScreenLine Remote",
     "developerName": "Geurt Dijker",

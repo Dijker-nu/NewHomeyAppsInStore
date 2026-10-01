@@ -18907,5 +18907,16 @@
     "publishedAt": "2026-10-01T10:16:17.049Z",
     "updatedAt": "2026-10-01T10:16:17.049Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.djordie.grokconnect",
+    "name": "Grok Connect",
+    "developerName": "Djordie Hendriks",
+    "developerId": "6a541613ce38f245588e36a7",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T10:31:46.117Z",
+    "updatedAt": "2026-10-01T10:31:46.117Z",
+    "communityTopicId": null
   }
 ]
