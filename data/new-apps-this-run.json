@@ -1,1570 +1,351 @@
 [
   {
-    "id": "com.djordie.grokconnect",
+    "id": "nl.rvginkel.knoppen",
     "rating": null,
     "liveBuild": {
       "id": 1,
       "name": {
-        "en": "Grok Connect",
-        "nl": "Grok Connect"
+        "en": "Dashboard Buttons",
+        "nl": "Dashboard Knoppen"
       },
       "version": "1.0.0",
       "readme": {
-        "en": "Grok Connect brings the reasoning of xAI's Grok models into your Flows, so your home can weigh up the situation before it acts. Ask whether now is a good moment to start the washing machine and get a real yes or no back, together with how certain Grok is and why. Let it pick the best scene from your own list, suggest a thermostat temperature within the range you allow, describe who is standing at the door from a camera snapshot, or turn long texts into a short sentence for your speaker. When fresh information matters, Grok can look things up on the web or on X first.\n\nEvery answer is also available in standard Flows, so you do not need Advanced Flows to use it, and you stay in control of what it costs: a daily limit, usage statistics and a spending condition keep your xAI bill predictable. You need your own xAI API key, which you enter in the app settings.\n\nThis is an unofficial community app. It is not affiliated with, endorsed by or sponsored by xAI. Grok and xAI are trademarks of xAI; they are used here only to describe which service the app connects to.\n",
-        "nl": "Grok Connect brengt het denkvermogen van de Grok-modellen van xAI naar je Flows, zodat je huis de situatie kan afwegen voordat het iets doet. Vraag of dit een goed moment is om de wasmachine aan te zetten en krijg een echt ja of nee terug, samen met hoe zeker Grok is en waarom. Laat het de beste scène kiezen uit je eigen lijst, een thermostaattemperatuur voorstellen binnen het bereik dat jij toestaat, beschrijven wie er voor de deur staat op basis van een camerabeeld, of lange teksten omzetten in een korte zin voor je speaker. Als actuele informatie belangrijk is, kan Grok eerst zoeken op het web of op X.\n\nElk antwoord is ook beschikbaar in standaard Flows, dus je hebt geen Advanced Flows nodig, en je houdt de kosten in de hand: een daglimiet, gebruiksstatistieken en een uitgavenvoorwaarde houden je xAI-rekening voorspelbaar. Je hebt een eigen xAI API-sleutel nodig, die je invoert in de app-instellingen.\n\nDit is een onofficiële community-app. De app is niet gelieerd aan, goedgekeurd door of gesponsord door xAI. Grok en xAI zijn handelsmerken van xAI; ze worden hier alleen gebruikt om aan te geven met welke dienst de app verbinding maakt.\n"
+        "en": "Dashboard Buttons\r\n\r\nWith Dashboard Buttons, you can easily create your own buttons for a Homey Dashboard. Use the buttons to start a Flow or to display or change the status of a Yes/No variable.\r\n\r\nYou decide which buttons you need, what text is displayed on them, and how wide they are displayed. You can combine multiple buttons in a single widget and arrange them in any order you like. A button can be displayed in multiple widgets.\r\n\r\nAn Action button starts a Flow and can pass a custom Action value. This value is available in the Flow as a text tag. For example, you can use multiple buttons with a single Flow and use the Action value to determine which action should be performed.\r\n\r\nA Yes/No button is linked to a Homey Yes/No variable. The button displays the current status of the Yes/No variable with a green or red indicator. When you press the button, the Yes/No variable can be changed using a Flow.\r\n\r\nWith Flow cards, you can also enable or disable a button and temporarily display a colored light loop around the button. This allows you to show on the dashboard that an action has been performed or to draw attention to something.\r\n\r\nDashboard Buttons gives you the freedom to create a compact control panel that fits your own Homey setup.\r\n\r\n\r\nAfter installing the app, go to the app settings. Here you create your buttons and choose a button type: Action or Yes/No. For a Yes/No button, select the corresponding Homey Yes/No variable. Then add the widget to your Homey Dashboard. In the widget settings, choose which buttons are displayed and in which order.",
+        "nl": "Dashboard Knoppen\r\n\r\nMet Dashboard Knoppen maak je eenvoudig je eigen knoppen voor een Homey Dashboard. Gebruik de knoppen om een Flow te starten of om de status van een Ja/Nee-variabele weer te geven of aan te passen.\r\n\r\nJe bepaalt zelf welke knop je nodig hebt, welke tekst erop staat en hoe breed deze wordt weergegeven. In één widget kun je meerdere knoppen combineren en naar wens ordenen. Een knop kan in verschillende widgets worden getoond.\r\n\r\nEen Actieknop start een Flow en kan daarbij een zelfgekozen Actiewaarde meegeven. Deze waarde is in de Flow beschikbaar als teksttag. Zo kun je bijvoorbeeld meerdere knoppen met één Flow gebruiken en met de Actiewaarde bepalen welke actie moet worden uitgevoerd.\r\n\r\nEen Ja/Nee-knop wordt gekoppeld aan een Homey Ja/Nee-variabele. De knop toont de actuele status van de Ja/Nee-variabele met een groene of rode indicator. Wanneer je op de knop drukt, kan via een Flow de Ja/Nee-variabele gewijzigd worden.\r\n\r\nMet Flow-kaarten kun je een knop bovendien in- of uitschakelen en tijdelijk een gekleurde lichtloop rond een knop laten lopen. Daarmee kun je op het dashboard zichtbaar maken dat een actie is uitgevoerd of ergens aandacht voor vragen.\r\n\r\nDashboard Knoppen geeft je zo de vrijheid om een compact bedieningspaneel te maken dat past bij jouw eigen Homey-installatie.\r\n\r\n\r\nNa installatie van de app ga je naar de app-instellingen. Hier voer je de knoppen op en kies je voor een knoptype: een Actie- of Ja/Nee-knop. Bij een Ja/Nee-knop selecteer je de bijbehorende Homey Ja/Nee-variabele. Vervolgens voeg je de widget toe aan het Homey Dashboard. In de widgetinstellingen kies je welke knoppen worden getoond en in welke volgorde."
       },
       "description": {
-        "en": "Let your home think before it acts",
-        "nl": "Laat je huis nadenken voordat het handelt"
+        "en": "Create dashboard buttons and use them in a Flow.",
+        "nl": "Maak dashboard knoppen en gebruik deze in een Flow."
       },
       "category": "tools",
-      "brandColor": "#0A0A0A",
-      "icon": "https://apps.homeycdn.net/app/com.djordie.grokconnect/1/3c200c48-dae9-4d44-a001-3882a4ec53dc/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.djordie.grokconnect/1/3c200c48-dae9-4d44-a001-3882a4ec53dc/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.djordie.grokconnect/1/3c200c48-dae9-4d44-a001-3882a4ec53dc/assets/images/large.png",
+      "brandColor": "#00AEEF",
+      "icon": "https://apps.homeycdn.net/app/nl.rvginkel.knoppen/1/5ce3a17b-ccd5-4e03-94f8-8208fb199035/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.rvginkel.knoppen/1/5ce3a17b-ccd5-4e03-94f8-8208fb199035/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.rvginkel.knoppen/1/5ce3a17b-ccd5-4e03-94f8-8208fb199035/assets/images/large.png",
       "drivers": null,
       "flow": {
         "triggers": [
           {
-            "id": "answered",
+            "id": "action_button-pressed",
             "title": {
-              "en": "Grok answered",
-              "nl": "Grok heeft geantwoord"
+              "en": "Action button [[button]] is pressed",
+              "nl": "Actieknop [[button]] is ingedrukt"
             },
             "titleFormatted": {
-              "en": "Grok answered a question with label [[label]]",
-              "nl": "Grok heeft een vraag met label [[label]] beantwoord"
+              "en": "Action button [[button]] is pressed",
+              "nl": "Actieknop [[button]] is ingedrukt"
             },
             "hint": {
-              "en": "Starts when any Grok card has an answer. Enter a label to only react to cards with the same label, or leave it empty to react to every answer.",
-              "nl": "Start zodra een Grok-kaart een antwoord heeft. Voer een label in om alleen te reageren op kaarten met hetzelfde label, of laat het leeg om op elk antwoord te reageren."
+              "en": "The Action value configured for the button is available in this Flow as a text tag.",
+              "nl": "De ingestelde Actiewaarde bij de knop is in deze Flow beschikbaar als teksttag."
             },
             "args": [
               {
-                "type": "text",
-                "name": "label",
-                "required": false,
+                "name": "button",
+                "type": "autocomplete",
                 "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "empty for all answers",
-                  "nl": "leeg voor alle antwoorden"
+                  "en": "Button",
+                  "nl": "Knop"
                 }
               }
             ],
             "tokens": [
               {
-                "name": "answer",
+                "name": "actionValue",
                 "type": "string",
                 "title": {
-                  "en": "Answer",
-                  "nl": "Antwoord"
-                },
-                "example": {
-                  "en": "It will be sunny and 21 degrees.",
-                  "nl": "Het wordt zonnig en 21 graden."
+                  "en": "Action value",
+                  "nl": "Actiewaarde"
                 }
-              },
+              }
+            ]
+          },
+          {
+            "id": "boolean_button_pressed",
+            "title": {
+              "en": "Yes/No button [[button]] is pressed",
+              "nl": "Ja/Nee-knop [[button]] is ingedrukt"
+            },
+            "titleFormatted": {
+              "en": "Yes/No button [[button]] is pressed",
+              "nl": "Ja/Nee-knop [[button]] is ingedrukt"
+            },
+            "hint": {
+              "en": "The 'Button Yes/No' tag contains the new status of the button. Use this tag in the Flow to change the linked Yes/No variable using a Logic Flow card.",
+              "nl": "De tag 'Knop Ja/Nee' bevat de nieuwe status van de knop. Gebruik deze tag in de Flow om via een Logic Flow-kaart de gekoppelde Ja/Nee-variabele te wijzigen."
+            },
+            "args": [
               {
-                "name": "question",
-                "type": "string",
+                "name": "button",
+                "type": "autocomplete",
                 "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "example": {
-                  "en": "Is it a good moment to run the washing machine?",
-                  "nl": "Is dit een goed moment om de wasmachine aan te zetten?"
+                  "en": "Button",
+                  "nl": "Knop"
                 }
-              },
+              }
+            ],
+            "tokens": [
               {
-                "name": "label",
-                "type": "string",
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "example": {
-                  "en": "washer",
-                  "nl": "wasmachine"
-                }
-              },
-              {
-                "name": "type",
-                "type": "string",
-                "title": {
-                  "en": "Answer type",
-                  "nl": "Antwoordtype"
-                },
-                "example": {
-                  "en": "yesno",
-                  "nl": "yesno"
-                }
-              },
-              {
-                "name": "yes",
+                "name": "buttonValue",
                 "type": "boolean",
                 "title": {
-                  "en": "Yes",
-                  "nl": "Ja"
-                },
-                "example": true
-              },
-              {
-                "name": "number",
-                "type": "number",
-                "title": {
-                  "en": "Number",
-                  "nl": "Getal"
-                },
-                "example": 0
-              },
-              {
-                "name": "choice",
-                "type": "string",
-                "title": {
-                  "en": "Choice",
-                  "nl": "Keuze"
-                },
-                "example": {
-                  "en": "",
-                  "nl": ""
-                }
-              },
-              {
-                "name": "confidence",
-                "type": "number",
-                "title": {
-                  "en": "Confidence",
-                  "nl": "Zekerheid"
-                },
-                "example": 0.9
-              },
-              {
-                "name": "reason",
-                "type": "string",
-                "title": {
-                  "en": "Reason",
-                  "nl": "Reden"
-                },
-                "example": {
-                  "en": "Solar output peaks at noon.",
-                  "nl": "De zonnepanelen leveren rond het middaguur het meest."
-                }
-              },
-              {
-                "name": "model",
-                "type": "string",
-                "title": {
-                  "en": "Model",
-                  "nl": "Model"
-                },
-                "example": {
-                  "en": "grok-4.3",
-                  "nl": "grok-4.3"
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              },
-              {
-                "name": "sources",
-                "type": "string",
-                "title": {
-                  "en": "Sources",
-                  "nl": "Bronnen"
-                },
-                "example": {
-                  "en": "",
-                  "nl": ""
-                }
-              }
-            ]
-          },
-          {
-            "id": "failed",
-            "title": {
-              "en": "Grok request failed",
-              "nl": "Grok-verzoek mislukt"
-            },
-            "titleFormatted": {
-              "en": "Grok request with label [[label]] failed",
-              "nl": "Grok-verzoek met label [[label]] is mislukt"
-            },
-            "hint": {
-              "en": "Starts when a question to Grok fails, for example because of a network problem, an invalid API key or a reached daily limit. Leave the label empty to react to every failure.",
-              "nl": "Start wanneer een vraag aan Grok mislukt, bijvoorbeeld door een netwerkprobleem, een ongeldige API-sleutel of een bereikte daglimiet. Laat het label leeg om op elke fout te reageren."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "empty for all failures",
-                  "nl": "leeg voor alle fouten"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "error",
-                "type": "string",
-                "title": {
-                  "en": "Error",
-                  "nl": "Fout"
-                },
-                "example": {
-                  "en": "The daily limit has been reached.",
-                  "nl": "De daglimiet is bereikt."
-                }
-              },
-              {
-                "name": "question",
-                "type": "string",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "example": {
-                  "en": "Is it a good moment to run the washing machine?",
-                  "nl": "Is dit een goed moment om de wasmachine aan te zetten?"
-                }
-              },
-              {
-                "name": "label",
-                "type": "string",
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "example": {
-                  "en": "washer",
-                  "nl": "wasmachine"
-                }
-              }
-            ]
-          },
-          {
-            "id": "limit_reached",
-            "title": {
-              "en": "Daily limit reached",
-              "nl": "Daglimiet bereikt"
-            },
-            "hint": {
-              "en": "Starts once per day when the daily request or spending limit from the app settings is reached. Further questions are refused until midnight.",
-              "nl": "Start eenmaal per dag wanneer de daglimiet voor verzoeken of uitgaven uit de app-instellingen is bereikt. Verdere vragen worden tot middernacht geweigerd."
-            },
-            "tokens": [
-              {
-                "name": "requests",
-                "type": "number",
-                "title": {
-                  "en": "Requests today",
-                  "nl": "Verzoeken vandaag"
-                },
-                "example": 100
-              },
-              {
-                "name": "spent",
-                "type": "number",
-                "title": {
-                  "en": "Spent today in USD",
-                  "nl": "Vandaag besteed in USD"
-                },
-                "example": 1.02
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "grok_says_yes",
-            "title": {
-              "en": "Grok answers yes",
-              "nl": "Grok antwoordt ja"
-            },
-            "titleFormatted": {
-              "en": "Grok !{{answers|does not answer}} yes to [[question]] with confidence [[confidence]] using [[search]], if unsure [[unsure]]",
-              "nl": "Grok !{{antwoordt|antwoordt niet}} ja op [[question]] met zekerheid [[confidence]] met [[search]], bij twijfel [[unsure]]"
-            },
-            "hint": {
-              "en": "Grok judges the question. The card is only true when Grok says yes with at least the chosen confidence. Choose what happens when Grok is unsure or less confident: treat it as no, as yes, or stop the Flow with an error.",
-              "nl": "Grok beoordeelt de vraag. De kaart is alleen waar als Grok ja zegt met minstens de gekozen zekerheid. Kies wat er gebeurt als Grok twijfelt of minder zeker is: behandel het als nee, als ja, of stop de Flow met een foutmelding."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "question",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "Is anyone likely to be home in the next hour?",
-                  "nl": "Is er het komende uur waarschijnlijk iemand thuis?"
-                }
-              },
-              {
-                "type": "range",
-                "name": "confidence",
-                "title": {
-                  "en": "Minimum confidence",
-                  "nl": "Minimale zekerheid"
-                },
-                "min": 0,
-                "max": 1,
-                "step": 0.05,
-                "label": "%",
-                "labelMultiplier": 100,
-                "labelDecimals": 0
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "dropdown",
-                "name": "unsure",
-                "title": {
-                  "en": "When unsure",
-                  "nl": "Bij twijfel"
-                },
-                "values": [
-                  {
-                    "id": "no",
-                    "title": {
-                      "en": "treat as no",
-                      "nl": "behandel als nee"
-                    }
-                  },
-                  {
-                    "id": "yes",
-                    "title": {
-                      "en": "treat as yes",
-                      "nl": "behandel als ja"
-                    }
-                  },
-                  {
-                    "id": "error",
-                    "title": {
-                      "en": "stop with error",
-                      "nl": "stop met foutmelding"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "spend_below",
-            "title": {
-              "en": "Spending today is below",
-              "nl": "Uitgaven vandaag zijn lager dan"
-            },
-            "titleFormatted": {
-              "en": "Spending today !{{is|is not}} below [[amount]] USD",
-              "nl": "Uitgaven vandaag !{{zijn|zijn niet}} lager dan [[amount]] USD"
-            },
-            "hint": {
-              "en": "Compares the estimated xAI costs of today with an amount in US dollars. Handy to skip optional AI Flows when you have used enough for today.",
-              "nl": "Vergelijkt de geschatte xAI-kosten van vandaag met een bedrag in Amerikaanse dollars. Handig om optionele AI-Flows over te slaan als je vandaag al genoeg hebt gebruikt."
-            },
-            "args": [
-              {
-                "type": "number",
-                "name": "amount",
-                "title": {
-                  "en": "Amount in USD",
-                  "nl": "Bedrag in USD"
-                },
-                "min": 0,
-                "step": 0.01,
-                "placeholder": {
-                  "en": "0.50",
-                  "nl": "0,50"
+                  "en": "Button Yes/No",
+                  "nl": "Knop Ja/Nee"
                 }
               }
             ]
           }
         ],
+        "conditions": null,
         "actions": [
           {
-            "id": "ask_background",
+            "id": "set_button_enabled",
             "title": {
-              "en": "Ask Grok in the background",
-              "nl": "Vraag Grok op de achtergrond"
+              "en": "Enable or disable button",
+              "nl": "Knop in- of uitschakelen"
             },
             "titleFormatted": {
-              "en": "Ask [[question]] as [[type]] in the background, options [[options]], using [[search]], label [[label]]",
-              "nl": "Vraag [[question]] als [[type]] op de achtergrond, opties [[options]], met [[search]], label [[label]]"
-            },
-            "hint": {
-              "en": "The Flow continues immediately. When Grok is done, the 'Grok answered' trigger fires with the same label. For a choice enter comma separated options, for a number you can enter the unit.",
-              "nl": "De Flow gaat direct verder. Zodra Grok klaar is, start de trigger 'Grok heeft geantwoord' met hetzelfde label. Voer bij een keuze de opties in met komma's, bij een getal kun je de eenheid invullen."
+              "en": "Set [[button]] to [[enabled]]",
+              "nl": "Zet [[button]] op [[enabled]]"
             },
             "args": [
               {
-                "type": "text",
-                "name": "question",
+                "name": "button",
+                "type": "autocomplete",
                 "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "Summarize the energy usage of today",
-                  "nl": "Vat het energieverbruik van vandaag samen"
+                  "en": "Button",
+                  "nl": "Knop"
                 }
               },
               {
+                "name": "enabled",
                 "type": "dropdown",
-                "name": "type",
                 "title": {
-                  "en": "Answer type",
-                  "nl": "Antwoordtype"
+                  "en": "Status",
+                  "nl": "Status"
                 },
                 "values": [
                   {
-                    "id": "text",
+                    "id": "true",
                     "title": {
-                      "en": "text",
-                      "nl": "tekst"
+                      "en": "Enabled",
+                      "nl": "Ingeschakeld"
                     }
                   },
                   {
-                    "id": "yesno",
+                    "id": "false",
                     "title": {
-                      "en": "yes or no",
-                      "nl": "ja of nee"
-                    }
-                  },
-                  {
-                    "id": "number",
-                    "title": {
-                      "en": "number",
-                      "nl": "getal"
-                    }
-                  },
-                  {
-                    "id": "choice",
-                    "title": {
-                      "en": "choice",
-                      "nl": "keuze"
+                      "en": "Disabled",
+                      "nl": "Uitgeschakeld"
                     }
                   }
                 ]
-              },
-              {
-                "type": "text",
-                "name": "options",
-                "required": false,
-                "title": {
-                  "en": "Options or unit",
-                  "nl": "Opties of eenheid"
-                },
-                "placeholder": {
-                  "en": "Relax, Cinema, Dinner",
-                  "nl": "Ontspannen, Bioscoop, Diner"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
               }
             ]
           },
           {
-            "id": "ask_choice",
+            "id": "start_button_lightloop",
             "title": {
-              "en": "Let Grok choose",
-              "nl": "Laat Grok kiezen"
+              "en": "Start light loop around button",
+              "nl": "Start lichtloop rond knop"
             },
             "titleFormatted": {
-              "en": "Let Grok choose from [[options]] for [[question]] using [[search]], label [[label]]",
-              "nl": "Laat Grok kiezen uit [[options]] voor [[question]] met [[search]], label [[label]]"
-            },
-            "hint": {
-              "en": "Enter the options separated by commas. Grok always picks exactly one of them. The chosen option and its position in the list are returned.",
-              "nl": "Voer de opties in, gescheiden door komma's. Grok kiest altijd precies één daarvan. De gekozen optie en de positie in de lijst worden teruggegeven."
+              "en": "Start light loop around [[button]] for [[duration]] seconds in [[color]]",
+              "nl": "Start lichtloop rond [[button]] gedurende [[duration]] seconden in [[color]]"
             },
             "args": [
               {
-                "type": "text",
-                "name": "options",
+                "name": "button",
+                "type": "autocomplete",
                 "title": {
-                  "en": "Options",
-                  "nl": "Opties"
-                },
-                "placeholder": {
-                  "en": "Relax, Cinema, Dinner, Bright",
-                  "nl": "Ontspannen, Bioscoop, Diner, Helder"
+                  "en": "Button",
+                  "nl": "Knop"
                 }
               },
               {
-                "type": "text",
-                "name": "question",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "Which scene fits the current mood?",
-                  "nl": "Welke scène past bij de huidige sfeer?"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "choice",
-                "type": "string",
-                "title": {
-                  "en": "Choice",
-                  "nl": "Keuze"
-                },
-                "example": {
-                  "en": "Relax",
-                  "nl": "Ontspannen"
-                }
-              },
-              {
-                "name": "choice_index",
+                "name": "duration",
                 "type": "number",
                 "title": {
-                  "en": "Position",
-                  "nl": "Positie"
+                  "en": "Duration (seconds)",
+                  "nl": "Duur (seconden)"
                 },
-                "example": 1
+                "min": 1,
+                "max": 15
               },
               {
-                "name": "confidence",
-                "type": "number",
+                "name": "color",
+                "type": "color",
                 "title": {
-                  "en": "Confidence",
-                  "nl": "Zekerheid"
-                },
-                "example": 0.9
-              },
-              {
-                "name": "reason",
-                "type": "string",
-                "title": {
-                  "en": "Reason",
-                  "nl": "Reden"
-                },
-                "example": {
-                  "en": "Solar output peaks at noon.",
-                  "nl": "De zonnepanelen leveren rond het middaguur het meest."
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "ask_image",
-            "title": {
-              "en": "Ask about an image",
-              "nl": "Vraag over een afbeelding"
-            },
-            "titleFormatted": {
-              "en": "Ask [[question]] about [[droptoken]], label [[label]]",
-              "nl": "Vraag [[question]] over [[droptoken]], label [[label]]"
-            },
-            "hint": {
-              "en": "Drop an image token, for example a snapshot from a doorbell or camera, and Grok describes it or answers your question about it. JPEG and PNG up to 20 MB are supported.",
-              "nl": "Sleep een afbeeldingstoken hierheen, bijvoorbeeld een momentopname van een deurbel of camera, en Grok beschrijft deze of beantwoordt je vraag erover. JPEG en PNG tot 20 MB worden ondersteund."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "question",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "Who or what is at the door?",
-                  "nl": "Wie of wat staat er voor de deur?"
-                }
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "answer",
-                "type": "string",
-                "title": {
-                  "en": "Answer",
-                  "nl": "Antwoord"
-                },
-                "example": {
-                  "en": "It will be sunny and 21 degrees.",
-                  "nl": "Het wordt zonnig en 21 graden."
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "ask_number",
-            "title": {
-              "en": "Ask for a number",
-              "nl": "Vraag om een getal"
-            },
-            "titleFormatted": {
-              "en": "Ask for a number: [[question]] in [[unit]] between [[min]] and [[max]] using [[search]], label [[label]]",
-              "nl": "Vraag om een getal: [[question]] in [[unit]] tussen [[min]] en [[max]] met [[search]], label [[label]]"
-            },
-            "hint": {
-              "en": "Grok answers with a single number. Unit, minimum and maximum are optional; the answer is always kept within the range you set.",
-              "nl": "Grok antwoordt met één getal. Eenheid, minimum en maximum zijn optioneel; het antwoord blijft altijd binnen het ingestelde bereik."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "question",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "What should the thermostat be set to?",
-                  "nl": "Op welke temperatuur moet de thermostaat?"
-                }
-              },
-              {
-                "type": "text",
-                "name": "unit",
-                "required": false,
-                "title": {
-                  "en": "Unit",
-                  "nl": "Eenheid"
-                },
-                "placeholder": {
-                  "en": "°C",
-                  "nl": "°C"
-                }
-              },
-              {
-                "type": "number",
-                "name": "min",
-                "required": false,
-                "title": {
-                  "en": "Minimum",
-                  "nl": "Minimum"
-                },
-                "placeholder": {
-                  "en": "15",
-                  "nl": "15"
-                }
-              },
-              {
-                "type": "number",
-                "name": "max",
-                "required": false,
-                "title": {
-                  "en": "Maximum",
-                  "nl": "Maximum"
-                },
-                "placeholder": {
-                  "en": "22",
-                  "nl": "22"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "number",
-                "type": "number",
-                "title": {
-                  "en": "Number",
-                  "nl": "Getal"
-                },
-                "example": 19.5
-              },
-              {
-                "name": "unit",
-                "type": "string",
-                "title": {
-                  "en": "Unit",
-                  "nl": "Eenheid"
-                },
-                "example": {
-                  "en": "°C",
-                  "nl": "°C"
-                }
-              },
-              {
-                "name": "confidence",
-                "type": "number",
-                "title": {
-                  "en": "Confidence",
-                  "nl": "Zekerheid"
-                },
-                "example": 0.9
-              },
-              {
-                "name": "reason",
-                "type": "string",
-                "title": {
-                  "en": "Reason",
-                  "nl": "Reden"
-                },
-                "example": {
-                  "en": "Solar output peaks at noon.",
-                  "nl": "De zonnepanelen leveren rond het middaguur het meest."
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "ask_text",
-            "title": {
-              "en": "Ask Grok",
-              "nl": "Vraag Grok"
-            },
-            "titleFormatted": {
-              "en": "Ask Grok [[question]] using [[search]], label [[label]]",
-              "nl": "Vraag Grok [[question]] met [[search]], label [[label]]"
-            },
-            "hint": {
-              "en": "Asks Grok a question and returns a short plain text answer. The answer is also sent to the 'Grok answered' trigger, so it works in standard Flows. Use the label to pick up this answer in a specific Flow.",
-              "nl": "Stelt Grok een vraag en geeft een kort antwoord in platte tekst. Het antwoord gaat ook naar de trigger 'Grok heeft geantwoord', zodat het in standaard Flows werkt. Gebruik het label om dit antwoord in een specifieke Flow op te pakken."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "question",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "What should I wear today?",
-                  "nl": "Wat moet ik vandaag aantrekken?"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "answer",
-                "type": "string",
-                "title": {
-                  "en": "Answer",
-                  "nl": "Antwoord"
-                },
-                "example": {
-                  "en": "It will be sunny and 21 degrees.",
-                  "nl": "Het wordt zonnig en 21 graden."
-                }
-              },
-              {
-                "name": "sources",
-                "type": "string",
-                "title": {
-                  "en": "Sources",
-                  "nl": "Bronnen"
-                },
-                "example": {
-                  "en": "",
-                  "nl": ""
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "ask_yesno",
-            "title": {
-              "en": "Ask a yes or no question",
-              "nl": "Stel een ja-of-neevraag"
-            },
-            "titleFormatted": {
-              "en": "Ask yes or no: [[question]] using [[search]], label [[label]]",
-              "nl": "Vraag ja of nee: [[question]] met [[search]], label [[label]]"
-            },
-            "hint": {
-              "en": "Grok answers with yes, no or unsure, including a confidence between 0 and 1 and a short reason. The result is also sent to the 'Grok answered' trigger.",
-              "nl": "Grok antwoordt met ja, nee of twijfel, inclusief een zekerheid tussen 0 en 1 en een korte reden. Het resultaat gaat ook naar de trigger 'Grok heeft geantwoord'."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "question",
-                "title": {
-                  "en": "Question",
-                  "nl": "Vraag"
-                },
-                "placeholder": {
-                  "en": "Is it a good moment to run the washing machine?",
-                  "nl": "Is dit een goed moment om de wasmachine aan te zetten?"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "yes",
-                "type": "boolean",
-                "title": {
-                  "en": "Yes",
-                  "nl": "Ja"
-                },
-                "example": true
-              },
-              {
-                "name": "answer",
-                "type": "string",
-                "title": {
-                  "en": "Answer",
-                  "nl": "Antwoord"
-                },
-                "example": {
-                  "en": "yes",
-                  "nl": "ja"
-                }
-              },
-              {
-                "name": "confidence",
-                "type": "number",
-                "title": {
-                  "en": "Confidence",
-                  "nl": "Zekerheid"
-                },
-                "example": 0.9
-              },
-              {
-                "name": "reason",
-                "type": "string",
-                "title": {
-                  "en": "Reason",
-                  "nl": "Reden"
-                },
-                "example": {
-                  "en": "Solar output peaks at noon.",
-                  "nl": "De zonnepanelen leveren rond het middaguur het meest."
-                }
-              },
-              {
-                "name": "unsure",
-                "type": "boolean",
-                "title": {
-                  "en": "Unsure",
-                  "nl": "Twijfel"
-                },
-                "example": false
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "chat",
-            "title": {
-              "en": "Chat in a conversation",
-              "nl": "Chat in een gesprek"
-            },
-            "titleFormatted": {
-              "en": "Say [[message]] in conversation [[conversation]] using [[search]]",
-              "nl": "Zeg [[message]] in gesprek [[conversation]] met [[search]]"
-            },
-            "hint": {
-              "en": "Grok remembers earlier messages with the same conversation ID, so you can ask follow-up questions. History is kept on your Homey and forgotten automatically after the time set in the app settings. The answer is also sent to the 'Grok answered' trigger with the conversation ID as label.",
-              "nl": "Grok onthoudt eerdere berichten met dezelfde gespreks-ID, zodat je vervolgvragen kunt stellen. De geschiedenis blijft op je Homey en wordt automatisch vergeten na de tijd uit de app-instellingen. Het antwoord gaat ook naar de trigger 'Grok heeft geantwoord' met de gespreks-ID als label."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "message",
-                "title": {
-                  "en": "Message",
-                  "nl": "Bericht"
-                },
-                "placeholder": {
-                  "en": "And what about tomorrow?",
-                  "nl": "En hoe zit het morgen?"
-                }
-              },
-              {
-                "type": "text",
-                "name": "conversation",
-                "title": {
-                  "en": "Conversation ID",
-                  "nl": "Gespreks-ID"
-                },
-                "placeholder": {
-                  "en": "kitchen",
-                  "nl": "keuken"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "search",
-                "title": {
-                  "en": "Live search",
-                  "nl": "Live zoeken"
-                },
-                "values": [
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "no search",
-                      "nl": "geen zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "web",
-                    "title": {
-                      "en": "web search",
-                      "nl": "webzoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "x",
-                    "title": {
-                      "en": "X search",
-                      "nl": "X-zoekopdracht"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "title": {
-                      "en": "web and X search",
-                      "nl": "web- en X-zoekopdracht"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "answer",
-                "type": "string",
-                "title": {
-                  "en": "Answer",
-                  "nl": "Antwoord"
-                },
-                "example": {
-                  "en": "It will be sunny and 21 degrees.",
-                  "nl": "Het wordt zonnig en 21 graden."
-                }
-              },
-              {
-                "name": "sources",
-                "type": "string",
-                "title": {
-                  "en": "Sources",
-                  "nl": "Bronnen"
-                },
-                "example": {
-                  "en": "",
-                  "nl": ""
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "process_text",
-            "title": {
-              "en": "Summarize or translate",
-              "nl": "Samenvatten of vertalen"
-            },
-            "titleFormatted": {
-              "en": "[[task]] [[text]] in [[language]], label [[label]]",
-              "nl": "[[task]] [[text]] in [[language]], label [[label]]"
-            },
-            "hint": {
-              "en": "Turns any text into a short summary, a sentence for a speaker, a notification line or a translation. Uses the fastest reasoning setting to keep it quick and cheap.",
-              "nl": "Maakt van elke tekst een korte samenvatting, een zin voor een speaker, een meldingsregel of een vertaling. Gebruikt de snelste denkstand, zodat het snel en goedkoop blijft."
-            },
-            "args": [
-              {
-                "type": "dropdown",
-                "name": "task",
-                "title": {
-                  "en": "Task",
-                  "nl": "Taak"
-                },
-                "values": [
-                  {
-                    "id": "summarize",
-                    "title": {
-                      "en": "Summarize",
-                      "nl": "Vat samen"
-                    }
-                  },
-                  {
-                    "id": "speech",
-                    "title": {
-                      "en": "Make speakable",
-                      "nl": "Maak uitspreekbaar"
-                    }
-                  },
-                  {
-                    "id": "notification",
-                    "title": {
-                      "en": "Shorten to notification",
-                      "nl": "Verkort tot melding"
-                    }
-                  },
-                  {
-                    "id": "translate",
-                    "title": {
-                      "en": "Translate",
-                      "nl": "Vertaal"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "text",
-                "title": {
-                  "en": "Text",
-                  "nl": "Tekst"
-                },
-                "placeholder": {
-                  "en": "Text or token",
-                  "nl": "Tekst of token"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "language",
-                "title": {
-                  "en": "Language",
-                  "nl": "Taal"
-                },
-                "values": [
-                  {
-                    "id": "auto",
-                    "title": {
-                      "en": "default language",
-                      "nl": "standaardtaal"
-                    }
-                  },
-                  {
-                    "id": "en",
-                    "title": {
-                      "en": "English",
-                      "nl": "Engels"
-                    }
-                  },
-                  {
-                    "id": "nl",
-                    "title": {
-                      "en": "Dutch",
-                      "nl": "Nederlands"
-                    }
-                  },
-                  {
-                    "id": "de",
-                    "title": {
-                      "en": "German",
-                      "nl": "Duits"
-                    }
-                  },
-                  {
-                    "id": "fr",
-                    "title": {
-                      "en": "French",
-                      "nl": "Frans"
-                    }
-                  },
-                  {
-                    "id": "es",
-                    "title": {
-                      "en": "Spanish",
-                      "nl": "Spaans"
-                    }
-                  },
-                  {
-                    "id": "it",
-                    "title": {
-                      "en": "Italian",
-                      "nl": "Italiaans"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "text",
-                "name": "label",
-                "required": false,
-                "title": {
-                  "en": "Label",
-                  "nl": "Label"
-                },
-                "placeholder": {
-                  "en": "e.g. washer",
-                  "nl": "bijv. wasmachine"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "answer",
-                "type": "string",
-                "title": {
-                  "en": "Result",
-                  "nl": "Resultaat"
-                },
-                "example": {
-                  "en": "Rain expected after 3 PM.",
-                  "nl": "Na 15:00 uur wordt regen verwacht."
-                }
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost in USD",
-                  "nl": "Kosten in USD"
-                },
-                "example": 0.0004
-              }
-            ]
-          },
-          {
-            "id": "reset_conversation",
-            "title": {
-              "en": "Forget a conversation",
-              "nl": "Vergeet een gesprek"
-            },
-            "titleFormatted": {
-              "en": "Forget conversation [[conversation]]",
-              "nl": "Vergeet gesprek [[conversation]]"
-            },
-            "hint": {
-              "en": "Clears the memory of a conversation so the next message starts fresh. Enter * to forget all conversations.",
-              "nl": "Wist het geheugen van een gesprek, zodat het volgende bericht opnieuw begint. Voer * in om alle gesprekken te vergeten."
-            },
-            "args": [
-              {
-                "type": "text",
-                "name": "conversation",
-                "title": {
-                  "en": "Conversation ID",
-                  "nl": "Gespreks-ID"
-                },
-                "placeholder": {
-                  "en": "kitchen",
-                  "nl": "keuken"
+                  "en": "Color",
+                  "nl": "Kleur"
                 }
               }
             ]
           }
         ]
       },
-      "widgets": null,
+      "widgets": {
+        "buttons": {
+          "id": "buttons",
+          "name": {
+            "en": "Button",
+            "nl": "Knop"
+          },
+          "description": {
+            "en": "Create dashboard buttons and use them in a Flow.",
+            "nl": "Maak dashboard knoppen en gebruik deze in een Flow."
+          },
+          "transparent": true,
+          "api": {
+            "getBooleanValue": {
+              "method": "GET",
+              "path": "/boolean"
+            },
+            "getButtons": {
+              "method": "GET",
+              "path": "/buttons"
+            },
+            "triggerActionButton": {
+              "method": "POST",
+              "path": "/trigger-action-button"
+            },
+            "triggerBooleanButton": {
+              "method": "POST",
+              "path": "/trigger-boolean-button"
+            }
+          },
+          "settings": [
+            {
+              "id": "button1",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 1",
+                "nl": "Positie 1"
+              }
+            },
+            {
+              "id": "button2",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 2",
+                "nl": "Positie 2"
+              }
+            },
+            {
+              "id": "button3",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 3",
+                "nl": "Positie 3"
+              }
+            },
+            {
+              "id": "button4",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 4",
+                "nl": "Positie 4"
+              }
+            },
+            {
+              "id": "button5",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 5",
+                "nl": "Positie 5"
+              }
+            },
+            {
+              "id": "button6",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 6",
+                "nl": "Positie 6"
+              }
+            },
+            {
+              "id": "button7",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 7",
+                "nl": "Positie 7"
+              }
+            },
+            {
+              "id": "button8",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 8",
+                "nl": "Positie 8"
+              }
+            },
+            {
+              "id": "button9",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 9",
+                "nl": "Positie 9"
+              }
+            },
+            {
+              "id": "button10",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 10",
+                "nl": "Positie 10"
+              }
+            },
+            {
+              "id": "button11",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 11",
+                "nl": "Positie 11"
+              }
+            },
+            {
+              "id": "button12",
+              "type": "autocomplete",
+              "title": {
+                "en": "Position 12",
+                "nl": "Positie 12"
+              }
+            }
+          ],
+          "height": 70,
+          "previewDark": "https://apps.homeycdn.net/app/nl.rvginkel.knoppen/1/5ce3a17b-ccd5-4e03-94f8-8208fb199035/widgets/buttons/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.rvginkel.knoppen/1/5ce3a17b-ccd5-4e03-94f8-8208fb199035/widgets/buttons/preview-light.png"
+        }
+      },
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-10-01T07:37:32.263Z",
+      "stateChangedAt": "2026-10-01T14:21:45.705Z",
       "bugs": null,
       "homepage": null,
-      "support": null,
+      "support": "mailto:temp200@xs4all.nl",
       "source": null,
       "contributors": null,
       "contributing": null,
-      "permissions": [],
+      "permissions": [
+        "homey:manager:api"
+      ],
       "changelog": {
-        "en": "First release. Ask Grok from your Flows and get typed answers: yes or no with confidence, a number within your range, a choice from your own list, or text. New condition 'Grok answers yes', optional web and X search, questions about camera images, conversations with memory, summarize and translate, and a daily spending limit with usage statistics. Works in standard and Advanced Flows.",
-        "nl": "Eerste versie. Stel Grok vragen vanuit je Flows en krijg getypeerde antwoorden: ja of nee met zekerheid, een getal binnen jouw bereik, een keuze uit je eigen lijst, of tekst. Nieuwe voorwaarde 'Grok antwoordt ja', optioneel zoeken op het web en X, vragen over camerabeelden, gesprekken met geheugen, samenvatten en vertalen, en een daglimiet voor uitgaven met gebruiksstatistieken. Werkt in standaard én Advanced Flows."
+        "en": "Initial version"
       },
-      "compatibility": ">=12.0.0",
+      "compatibility": ">=12.3.0",
       "tags": {
         "en": [
-          "grok",
-          "xai",
-          "ai",
-          "artificial intelligence",
-          "llm",
-          "chatbot",
-          "assistant",
-          "chat",
-          "gpt",
-          "vision",
-          "camera",
-          "web search",
-          "decision",
-          "automation",
-          "summarize",
-          "translate"
+          "dashboard",
+          "buttons",
+          "flow",
+          "control"
         ],
         "nl": [
-          "grok",
-          "xai",
-          "ai",
-          "kunstmatige intelligentie",
-          "llm",
-          "chatbot",
-          "assistent",
-          "chat",
-          "gpt",
-          "vision",
-          "camera",
-          "zoeken",
-          "beslissing",
-          "automatisering",
-          "samenvatten",
-          "vertalen"
+          "dashboard",
+          "knoppen",
+          "flow",
+          "bediening"
         ]
       },
       "platforms": [
@@ -1581,10 +362,10 @@
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6a541613ce38f245588e36a7",
+      "id": "6aa2d6504b2b66c115905e09",
       "type": "user",
-      "userId": "6149b0102cbd410bb98ee999",
-      "name": "Djordie Hendriks",
+      "userId": "586fdd6c739a80670e60454d",
+      "name": "Rene van Ginkel",
       "verified": false
     },
     "communityTopicId": null

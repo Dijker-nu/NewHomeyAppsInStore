@@ -550,5 +550,17 @@
     "updatedAt": "2026-10-01T10:31:46.117Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-01T10:31:46.117Z"
+  },
+  {
+    "appId": "nl.rvginkel.knoppen",
+    "name": "Dashboard Buttons",
+    "developerName": "Rene van Ginkel",
+    "developerId": "6aa2d6504b2b66c115905e09",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-01T17:37:50.286Z",
+    "updatedAt": "2026-10-01T17:37:50.286Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-01T17:37:50.286Z"
   }
 ]
