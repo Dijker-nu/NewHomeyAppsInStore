@@ -8,7 +8,7 @@
     "sourceRepository": "",
     "publishedAt": "2022-05-02T20:20:45.160Z",
     "communityTopicId": 63043,
-    "lastCheckedAt": "2026-10-01T10:16:38.883Z",
+    "lastCheckedAt": "2026-10-02T09:54:22.886Z",
     "removedAt": "2026-09-22T21:00:34.629Z",
     "liveVersion": "0.1.1",
     "private": true,
@@ -21,7 +21,7 @@
     "developerId": "68be80a592a3a87a4b59b1ee",
     "version": "1.1.10",
     "removedAt": "2026-09-22T20:47:36.013Z",
-    "lastCheckedAt": "2026-10-01T10:16:39.335Z",
+    "lastCheckedAt": "2026-10-02T09:54:23.384Z",
     "private": true,
     "type": "private",
     "communityTopicId": 145469
@@ -36,7 +36,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-10-01T10:16:38.890Z",
+    "lastCheckedAt": "2026-10-02T09:54:22.985Z",
     "type": "private",
     "private": true
   },
@@ -50,7 +50,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-10-01T10:16:38.887Z",
+    "lastCheckedAt": "2026-10-02T09:54:22.888Z",
     "type": "test",
     "private": false
   },
@@ -64,7 +64,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T19:36:16.541Z",
-    "lastCheckedAt": "2026-10-01T10:16:38.893Z",
+    "lastCheckedAt": "2026-10-02T09:54:22.879Z",
     "type": "test",
     "private": false
   },
@@ -78,7 +78,7 @@
     "communityTopicId": null,
     "publishedAt": "2026-04-16T21:01:06.030Z",
     "removedAt": "2026-10-01T10:16:38.796Z",
-    "lastCheckedAt": "2026-10-01T10:16:38.796Z",
+    "lastCheckedAt": "2026-10-02T09:54:22.876Z",
     "type": "removed",
     "private": null
   },
@@ -87,12 +87,12 @@
     "name": "Hue Device Location Sync",
     "developerName": "Jesse de Vries",
     "developerId": "6aa1a45b4b2b66c1158fb585",
-    "version": "0.3.1",
+    "version": "0.4.0",
     "sourceRepository": "",
     "communityTopicId": null,
     "publishedAt": "2026-09-14T09:03:49.293Z",
     "removedAt": "2026-10-01T10:16:38.802Z",
-    "lastCheckedAt": "2026-10-01T10:16:38.802Z",
+    "lastCheckedAt": "2026-10-02T09:54:22.891Z",
     "type": "private",
     "private": true
   }
