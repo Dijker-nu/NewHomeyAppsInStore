@@ -4932,10 +4932,10 @@
     "name": "SwitchBot",
     "developerName": "SwitchBot",
     "developerId": "6a87f49394f0069d62c7f0c6",
-    "version": "2.0.95",
+    "version": "2.0.96",
     "sourceRepository": "https://github.com/AdyRock/com.switchbot",
     "publishedAt": "2021-01-28T18:35:20.566Z",
-    "updatedAt": "2026-09-28T06:12:12.045Z",
+    "updatedAt": "2026-10-04T09:55:25.657Z",
     "communityTopicId": 42296
   },
   {
@@ -11246,10 +11246,10 @@
     "name": "Kia",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.3",
+    "version": "2.6.4",
     "sourceRepository": "",
     "publishedAt": "2025-07-02T13:15:20.020Z",
-    "updatedAt": "2026-09-26T15:02:13.379Z",
+    "updatedAt": "2026-10-04T09:55:25.658Z",
     "communityTopicId": 32487
   },
   {
@@ -11257,10 +11257,10 @@
     "name": "Hyundai",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.3",
+    "version": "2.6.4",
     "sourceRepository": "",
     "publishedAt": "2025-07-02T13:57:34.039Z",
-    "updatedAt": "2026-09-26T15:04:08.466Z",
+    "updatedAt": "2026-10-04T09:55:25.658Z",
     "communityTopicId": 32487
   },
   {
@@ -13281,10 +13281,10 @@
     "name": "ESPHome Controller",
     "developerName": "Uğur BENEK",
     "developerId": "697f46341aed127334df8978",
-    "version": "1.3.48",
+    "version": "1.3.49",
     "sourceRepository": "",
     "publishedAt": "2026-02-02T19:04:22.779Z",
-    "updatedAt": "2026-09-14T16:37:23.495Z",
+    "updatedAt": "2026-10-04T09:55:25.658Z",
     "communityTopicId": 150421
   },
   {
@@ -18121,10 +18121,10 @@
     "name": "MeRGBW",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "sourceRepository": "https://github.com/smarthomesven/homey-mergbw",
     "publishedAt": "2026-09-09T13:33:13.064Z",
-    "updatedAt": "2026-09-09T13:38:11.581Z",
+    "updatedAt": "2026-10-04T09:55:25.659Z",
     "communityTopicId": 159389
   },
   {
@@ -18146,8 +18146,8 @@
     "version": "1.0.4",
     "sourceRepository": "https://github.com/EricJilot/homey-sense-energy-monitor",
     "publishedAt": "2026-09-14T09:03:50.225Z",
-    "updatedAt": "2026-09-14T09:03:50.225Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-04T09:55:25.659Z",
+    "communityTopicId": 159640
   },
   {
     "appId": "io.cigol",
