@@ -6,4 +6,4 @@ com.tuya
 eu.elro.homeeasy
 com.djordie.grokconnect
 net.pelliniscreenline
-
+com.lge.news
