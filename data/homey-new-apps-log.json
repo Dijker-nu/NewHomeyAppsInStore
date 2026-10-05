@@ -562,5 +562,65 @@
     "updatedAt": "2026-10-01T17:37:50.286Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-01T17:37:50.286Z"
+  },
+  {
+    "appId": "com.rickd.huum",
+    "name": "HUUM UKU Sauna",
+    "developerName": "Richard Dubs",
+    "developerId": "6a63505128cddd02f8f07066",
+    "version": "0.9.2",
+    "sourceRepository": "https://github.com/RickD-CH/com.rickd.huum",
+    "publishedAt": "2026-10-05T10:37:08.582Z",
+    "updatedAt": "2026-10-05T10:37:08.582Z",
+    "communityTopicId": 159173,
+    "discoveredAt": "2026-10-05T10:37:08.581Z"
+  },
+  {
+    "appId": "com.kevinvanoosterhout.yeelightcandela",
+    "name": "Yeelight Candela",
+    "developerName": "Kevin van Oosterhout",
+    "developerId": "6abee711bdc7ced970ff038a",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/KevinvOosterhout/com.kevinvanoosterhout.yeelightcandela",
+    "publishedAt": "2026-10-05T10:37:08.582Z",
+    "updatedAt": "2026-10-05T10:37:08.582Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-05T10:37:08.581Z"
+  },
+  {
+    "appId": "community.ledfx",
+    "name": "LedFx",
+    "developerName": "Dennis Klatt",
+    "developerId": "6a9bdf22336db3df05accd76",
+    "version": "2.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-05T10:37:10.098Z",
+    "updatedAt": "2026-10-05T10:37:10.098Z",
+    "communityTopicId": 160070,
+    "discoveredAt": "2026-10-05T10:37:08.581Z"
+  },
+  {
+    "appId": "nl.lrvdlinden.hyves",
+    "name": "Hyves",
+    "developerName": "Léon van der Linden",
+    "developerId": "649eefe59a54fe7531821578",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-05T10:37:10.098Z",
+    "updatedAt": "2026-10-05T10:37:10.098Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-05T10:37:08.581Z"
+  },
+  {
+    "appId": "com.additionaluserstatuses.community",
+    "name": "Additional User Statuses",
+    "developerName": "Lionel Der Boven",
+    "developerId": "6ac154fcbdc7ced970ff943b",
+    "version": "2.3.2",
+    "sourceRepository": "https://github.com/LionelDerBoven/com.additionaluserstatuses.community",
+    "publishedAt": "2026-10-05T10:37:11.303Z",
+    "updatedAt": "2026-10-05T10:37:11.303Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-05T10:37:08.581Z"
   }
 ]

@@ -3542,17 +3542,6 @@
     "communityTopicId": 16642
   },
   {
-    "appId": "nl.nielsdeklerk.XiaomiYeelightCandela",
-    "name": "Xiaomi Yeelight Candela BLE Lights",
-    "developerName": "Niels de Klerk",
-    "developerId": "5dcabb261c90c866f936560b",
-    "version": "0.0.5",
-    "sourceRepository": "",
-    "publishedAt": "2019-11-12T14:07:39.113Z",
-    "updatedAt": "2019-11-12T14:07:39.113Z",
-    "communityTopicId": 16518
-  },
-  {
     "appId": "com.mecloud",
     "name": "M",
     "developerName": "Olivier Zalmanski",
@@ -7616,10 +7605,10 @@
     "name": "WhatsApp",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.39.2",
+    "version": "3.0.10",
     "sourceRepository": "https://github.com/martijnpoppen/com.whatsapp",
     "publishedAt": "2023-06-26T07:44:55.880Z",
-    "updatedAt": "2026-08-13T14:20:48.524Z",
+    "updatedAt": "2026-10-05T10:37:47.104Z",
     "communityTopicId": 90749
   },
   {
@@ -7990,10 +7979,10 @@
     "name": "Airsend",
     "developerName": "Pierre Verron",
     "developerId": "65044d4d6d8019ba165e62a1",
-    "version": "1.3.0",
+    "version": "2.0.0",
     "sourceRepository": "",
     "publishedAt": "2023-09-15T12:25:49.931Z",
-    "updatedAt": "2026-09-26T12:01:02.724Z",
+    "updatedAt": "2026-10-05T10:37:47.105Z",
     "communityTopicId": null
   },
   {
@@ -10993,10 +10982,10 @@
     "name": "MELCloud Optimizer",
     "developerName": "Kjetil Vetlejord",
     "developerId": "67375672065f03b3ce383521",
-    "version": "14.0.66",
+    "version": "14.0.68",
     "sourceRepository": "",
     "publishedAt": "2025-04-24T21:04:45.703Z",
-    "updatedAt": "2026-08-18T13:30:50.739Z",
+    "updatedAt": "2026-10-05T10:37:47.105Z",
     "communityTopicId": 136325
   },
   {
@@ -11367,10 +11356,10 @@
     "name": "Weheat",
     "developerName": "Edwin van de Pol",
     "developerId": "5dcabc2c1c90c866f936638b",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "sourceRepository": "",
     "publishedAt": "2025-07-20T12:23:57.323Z",
-    "updatedAt": "2026-10-01T10:16:38.721Z",
+    "updatedAt": "2026-10-05T10:37:47.106Z",
     "communityTopicId": 139878
   },
   {
@@ -12635,8 +12624,8 @@
     "version": "0.0.13",
     "sourceRepository": "",
     "publishedAt": "2025-12-17T22:55:38.416Z",
-    "updatedAt": "2026-09-02T22:24:09.092Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-05T10:37:47.106Z",
+    "communityTopicId": 147954
   },
   {
     "appId": "com.bituotechnik.iot",
@@ -14414,10 +14403,10 @@
     "name": "Panasonic Comfort Cloud",
     "developerName": "Johnny Espesete",
     "developerId": "69be6930699c29709c9e5744",
-    "version": "2.1.31",
+    "version": "2.1.32",
     "sourceRepository": "",
     "publishedAt": "2026-03-21T09:54:35.939Z",
-    "updatedAt": "2026-09-30T09:49:35.526Z",
+    "updatedAt": "2026-10-05T10:37:47.106Z",
     "communityTopicId": null
   },
   {
@@ -14785,13 +14774,13 @@
   },
   {
     "appId": "net.franceweb.izypower",
-    "name": "Izypower",
+    "name": "Isypower",
     "developerName": "NovaCore Labs",
     "developerId": "6a8bdd7a94f0069d62618521",
-    "version": "1.7.6",
+    "version": "1.8.1",
     "sourceRepository": "",
     "publishedAt": "2026-04-04T10:17:44.258Z",
-    "updatedAt": "2026-08-20T05:34:49.585Z",
+    "updatedAt": "2026-10-05T10:37:47.106Z",
     "communityTopicId": 153370
   },
   {
@@ -17065,10 +17054,10 @@
     "name": "Pet Feeder Connector",
     "developerName": "Djordie Hendriks",
     "developerId": "6a541613ce38f245588e36a7",
-    "version": "0.1.29",
+    "version": "0.1.31",
     "sourceRepository": "",
     "publishedAt": "2026-07-27T11:33:06.624Z",
-    "updatedAt": "2026-09-24T20:27:59.700Z",
+    "updatedAt": "2026-10-05T10:37:47.107Z",
     "communityTopicId": 157697
   },
   {
@@ -18121,10 +18110,10 @@
     "name": "MeRGBW",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "sourceRepository": "https://github.com/smarthomesven/homey-mergbw",
     "publishedAt": "2026-09-09T13:33:13.064Z",
-    "updatedAt": "2026-10-04T09:55:25.659Z",
+    "updatedAt": "2026-10-05T10:37:47.107Z",
     "communityTopicId": 159389
   },
   {
@@ -18242,10 +18231,10 @@
     "name": "Energy Price Forecast",
     "developerName": "Hendrik Soppa",
     "developerId": "6a94ac0730ac038fba711ce4",
-    "version": "1.0.3",
+    "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T15:41:11.360Z",
-    "updatedAt": "2026-09-16T15:41:11.360Z",
+    "updatedAt": "2026-10-05T10:37:47.107Z",
     "communityTopicId": null
   },
   {
@@ -18553,8 +18542,8 @@
     "version": "1.0.2",
     "sourceRepository": "https://github.com/lovethyresson/com.onlycat.cloud",
     "publishedAt": "2026-09-24T08:33:51.661Z",
-    "updatedAt": "2026-09-25T08:56:13.174Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-05T10:37:47.107Z",
+    "communityTopicId": 159946
   },
   {
     "appId": "nl.smarthomeassistent.bookswipe",
@@ -18803,10 +18792,10 @@
     "name": "Oral-B",
     "developerName": "Mark Moorlag",
     "developerId": "6ab593e330dc90a8d6e447b6",
-    "version": "0.1.9",
+    "version": "0.2.7",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T17:07:57.800Z",
-    "updatedAt": "2026-10-01T10:16:38.723Z",
+    "updatedAt": "2026-10-05T10:37:47.107Z",
     "communityTopicId": 160215
   },
   {
@@ -18928,6 +18917,61 @@
     "sourceRepository": "",
     "publishedAt": "2026-10-01T17:37:50.286Z",
     "updatedAt": "2026-10-01T17:37:50.286Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.rickd.huum",
+    "name": "HUUM UKU Sauna",
+    "developerName": "Richard Dubs",
+    "developerId": "6a63505128cddd02f8f07066",
+    "version": "0.9.2",
+    "sourceRepository": "https://github.com/RickD-CH/com.rickd.huum",
+    "publishedAt": "2026-10-05T10:37:08.582Z",
+    "updatedAt": "2026-10-05T10:37:08.582Z",
+    "communityTopicId": 159173
+  },
+  {
+    "appId": "com.kevinvanoosterhout.yeelightcandela",
+    "name": "Yeelight Candela",
+    "developerName": "Kevin van Oosterhout",
+    "developerId": "6abee711bdc7ced970ff038a",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/KevinvOosterhout/com.kevinvanoosterhout.yeelightcandela",
+    "publishedAt": "2026-10-05T10:37:08.582Z",
+    "updatedAt": "2026-10-05T10:37:08.582Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "community.ledfx",
+    "name": "LedFx",
+    "developerName": "Dennis Klatt",
+    "developerId": "6a9bdf22336db3df05accd76",
+    "version": "2.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-05T10:37:10.098Z",
+    "updatedAt": "2026-10-05T10:37:10.098Z",
+    "communityTopicId": 160070
+  },
+  {
+    "appId": "nl.lrvdlinden.hyves",
+    "name": "Hyves",
+    "developerName": "Léon van der Linden",
+    "developerId": "649eefe59a54fe7531821578",
+    "version": "1.0.5",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-05T10:37:10.098Z",
+    "updatedAt": "2026-10-05T10:37:10.098Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.additionaluserstatuses.community",
+    "name": "Additional User Statuses",
+    "developerName": "Lionel Der Boven",
+    "developerId": "6ac154fcbdc7ced970ff943b",
+    "version": "2.3.2",
+    "sourceRepository": "https://github.com/LionelDerBoven/com.additionaluserstatuses.community",
+    "publishedAt": "2026-10-05T10:37:11.303Z",
+    "updatedAt": "2026-10-05T10:37:11.303Z",
     "communityTopicId": null
   }
 ]

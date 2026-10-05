@@ -2382,6 +2382,12 @@
     "forumUsername": "ketra90"
   },
   {
+    "developerId": "6abee711bdc7ced970ff038a",
+    "developerName": "Kevin van Oosterhout",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "65500c3600b0a0bcb17b9287",
     "developerName": "Kim Kokholm",
     "forumUserID": 35595,
@@ -2588,6 +2594,12 @@
   {
     "developerId": "69ea7909fb6dd7068a7e8b5d",
     "developerName": "Lingine Development",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ac154fcbdc7ced970ff943b",
+    "developerName": "Lionel Der Boven",
     "forumUserID": null,
     "forumUsername": null
   },
