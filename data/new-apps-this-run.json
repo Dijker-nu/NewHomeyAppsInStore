@@ -1,3771 +1,116 @@
 [
   {
-    "id": "com.rickd.huum",
+    "id": "com.advancedwaiting.community",
     "rating": null,
     "liveBuild": {
-      "id": 17,
+      "id": 1,
       "name": {
-        "en": "HUUM UKU Sauna",
-        "de": "HUUM UKU Sauna"
+        "en": "Advanced Waiting",
+        "nl": "Geavanceerd wachten",
+        "fr": "Attente avancée"
       },
-      "version": "0.9.2",
+      "version": "1.1.1",
       "readme": {
-        "en": "An unofficial companion app for HUUM saunas with a UKU controller, for owners who want more than the official HUUM app currently offers. The headline addition is a settable target humidity; on top of that it adds a no-water alarm, a finishing-soon timer, profiles, a scheduled start, per-session energy tracking, Flow cards and a dashboard widget. Other HUUM controllers aren't supported.\r\n\r\nIt talks to the HUUM cloud the same way the official app does, and pairing uses the same email and password. Whether your sauna has a steamer and a light is detected automatically, so only the controls that actually apply to your setup show up.\r\n\r\nThis is an unofficial, third-party app made by a HUUM owner. It is not affiliated with, endorsed by, or supported by HUUM OÜ. HUUM and UKU are trademarks of their respective owner and are used here only to describe compatibility.\r\n\r\nFor private home use only. It has not been tested or certified for commercial or public sauna installations. You use it at your own risk; always follow your sauna and heater safety instructions.\r\n",
-        "de": "Eine inoffizielle Ergänzungs-App für HUUM-Saunen mit UKU-Steuerung, für Besitzer, die mehr wollen als die offizielle HUUM-App derzeit bietet. Die wichtigste Ergänzung ist eine einstellbare Ziel-Luftfeuchtigkeit; dazu kommen ein Wassermangel-Alarm, ein \"Bald fertig\"-Timer, Profile, ein geplanter Start, Verbrauchserfassung pro Sitzung, Flow-Karten und ein Dashboard-Widget. Andere HUUM-Steuerungen werden nicht unterstützt.\r\n\r\nSie spricht mit der HUUM-Cloud genau wie die offizielle App, und die Anmeldung erfolgt mit denselben Zugangsdaten. Ob deine Sauna einen Verdampfer und ein Licht hat, wird automatisch erkannt, sodass nur die Bedienelemente erscheinen, die zu deinem Aufbau passen.\r\n\r\nDies ist eine inoffizielle App eines Drittanbieters, erstellt von einem HUUM-Besitzer. Sie steht in keiner Verbindung zu HUUM OÜ und wird von HUUM weder unterstützt noch freigegeben. HUUM und UKU sind Marken ihres jeweiligen Inhabers und werden hier nur zur Beschreibung der Kompatibilität verwendet.\r\n\r\nNur für den privaten Heimgebrauch. Die App wurde nicht für gewerbliche oder öffentliche Sauna-Installationen getestet oder zertifiziert. Die Nutzung erfolgt auf eigene Gefahr; beachte stets die Sicherheitshinweise deiner Sauna und deines Ofens.\r\n"
+        "en": "Homey's own Delay starts at one whole second. Advanced Waiting adds the missing piece: a Wait card that pauses a Flow for a number of milliseconds or seconds and then lets it continue in place, so the next card simply runs after it. Use it in the And column of a standard Flow, or anywhere in an Advanced Flow.\n\nHomey stops a Flow that has been waiting for about ninety seconds, so this card accepts at most 85 seconds and explains why when you ask for more, instead of letting the Flow break silently. For longer pauses, use Homey's built-in Delay.\n",
+        "fr": "Le Délai intégré de Homey commence à une seconde entière. Attente avancée ajoute ce qui manque : une carte Attendre qui met un Flow en pause pendant un nombre de millisecondes ou de secondes, puis le laisse continuer à l'endroit même, de sorte que la carte suivante s'exécute simplement après elle. Utilisez-la dans la colonne Et d'un Flow standard, ou n'importe où dans un Advanced Flow.\n\nHomey arrête un Flow qui attend depuis environ quatre-vingt-dix secondes. Cette carte accepte donc au maximum 85 secondes et explique pourquoi si vous demandez davantage, plutôt que de laisser le Flow s'interrompre en silence. Pour des pauses plus longues, utilisez le Délai intégré de Homey.\n",
+        "nl": "De ingebouwde Vertraging van Homey begint bij één hele seconde. Geavanceerd wachten voegt toe wat ontbreekt: een Wacht-kaart die een Flow een aantal milliseconden of seconden pauzeert en hem daarna op dezelfde plek laat verdergaan, zodat de volgende kaart gewoon daarna draait. Gebruik de kaart in de En-kolom van een gewone Flow of overal in een Advanced Flow.\n\nHomey stopt een Flow die ongeveer negentig seconden staat te wachten. Daarom accepteert deze kaart maximaal 85 seconden en legt hij uit waarom als je meer vraagt, in plaats van de Flow stil te laten vastlopen. Gebruik voor langere pauzes de ingebouwde Vertraging van Homey.\n"
       },
       "description": {
-        "en": "Unofficial companion app that adds the controls missing from HUUM's official UKU app.",
-        "de": "Inoffizielle Ergänzungs-App, die die fehlenden Funktionen der offiziellen HUUM-UKU-App ergänzt."
+        "en": "Pause your Flow down to the millisecond",
+        "nl": "Pauzeer je Flow tot op de milliseconde",
+        "fr": "Mettez votre Flow en pause à la milliseconde près"
       },
-      "category": "climate",
-      "brandColor": "#E85D2B",
-      "icon": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "uku",
-          "name": {
-            "en": "Sauna heater",
-            "de": "Saunaofen"
-          },
-          "class": "thermostat",
-          "capabilities": [
-            "thermostat_mode",
-            "huum_power",
-            "target_temperature",
-            "measure_temperature",
-            "target_humidity",
-            "huum_target_humidity",
-            "measure_humidity",
-            "huum_start_profile",
-            "huum_refresh",
-            "measure_power",
-            "huum_time_remaining",
-            "huum_session_count",
-            "alarm_contact",
-            "alarm_water",
-            "alarm_generic",
-            "huum_remote_blocked",
-            "huum_booking_status"
-          ],
-          "capabilitiesOptions": {
-            "target_temperature": {
-              "min": 40,
-              "max": 110,
-              "step": 1,
-              "decimals": 0,
-              "uiComponent": "thermostat",
-              "title": {
-                "en": "Target temperature",
-                "de": "Zieltemperatur"
-              }
-            },
-            "measure_temperature": {
-              "title": {
-                "en": "Current temperature",
-                "de": "Aktuelle Temperatur"
-              }
-            },
-            "thermostat_mode": {
-              "uiQuickAction": true,
-              "values": [
-                {
-                  "id": "heat",
-                  "title": {
-                    "en": "Heat",
-                    "de": "Heizen"
-                  }
-                },
-                {
-                  "id": "off",
-                  "title": {
-                    "en": "Off",
-                    "de": "Aus"
-                  }
-                }
-              ]
-            },
-            "measure_power": {
-              "title": {
-                "en": "Power (from linked meter)",
-                "de": "Leistung (vom verknüpften Messgerät)"
-              }
-            },
-            "target_humidity": {
-              "min": 0,
-              "max": 0.9,
-              "step": 0.05,
-              "decimals": 0,
-              "uiComponent": "slider",
-              "title": {
-                "en": "Target humidity",
-                "de": "Zielfeuchte"
-              }
-            },
-            "measure_humidity": {
-              "decimals": 0,
-              "title": {
-                "en": "Humidity",
-                "de": "Feuchtigkeit"
-              }
-            },
-            "alarm_contact": {
-              "title": {
-                "en": "Door open",
-                "de": "Tür offen"
-              }
-            },
-            "alarm_water": {
-              "title": {
-                "en": "No water in steamer",
-                "de": "Kein Wasser im Verdampfer"
-              }
-            },
-            "alarm_generic": {
-              "title": {
-                "en": "Safety cut-out / fault",
-                "de": "Sicherheitsabschaltung / Störung"
-              }
-            },
-            "onoff.light": {
-              "title": {
-                "en": "Light",
-                "de": "Licht"
-              }
-            }
-          },
-          "energy": {
-            "approximation": {
-              "usageOn": 6000,
-              "usageOff": 0
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/drivers/uku/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/drivers/uku/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "cloud"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/drivers/uku/assets/icon.svg"
-        }
-      ],
+      "category": "tools",
+      "brandColor": "#D9771A",
+      "icon": "https://apps.homeycdn.net/app/com.advancedwaiting.community/1/fbef7d03-e108-4c6b-9e06-82d3d170fad4/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.advancedwaiting.community/1/fbef7d03-e108-4c6b-9e06-82d3d170fad4/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.advancedwaiting.community/1/fbef7d03-e108-4c6b-9e06-82d3d170fad4/assets/images/large.jpg",
+      "drivers": null,
       "flow": {
-        "triggers": [
+        "triggers": null,
+        "conditions": [
           {
-            "id": "remote_control_blocked",
+            "id": "wait",
             "title": {
-              "en": "Remote start became blocked",
-              "de": "Fernstart wurde blockiert"
-            },
-            "hint": {
-              "en": "The UKU now requires someone to confirm safety on the physical panel before it will accept a remote start.",
-              "de": "Die UKU verlangt jetzt, dass jemand die Sicherheit am Bedienfeld bestätigt, bevor ein Fernstart akzeptiert wird."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ]
-          },
-          {
-            "id": "remote_control_available",
-            "title": {
-              "en": "Remote start became available",
-              "de": "Fernstart wurde wieder möglich"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ]
-          },
-          {
-            "id": "current_temperature_changed",
-            "title": {
-              "en": "The current temperature changed",
-              "de": "Die aktuelle Temperatur hat sich geändert"
-            },
-            "hint": {
-              "en": "Homey doesn't offer this for measure_temperature by default, only threshold cards — this fires on every change.",
-              "de": "Homey bietet dies für measure_temperature standardmäßig nicht an, nur Schwellenwert-Karten — dieser Trigger feuert bei jeder Änderung."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature (°C)",
-                  "de": "Temperatur (°C)"
-                },
-                "example": 78
-              }
-            ]
-          },
-          {
-            "id": "sauna_up_to_temperature",
-            "title": {
-              "en": "The sauna reached its target temperature",
-              "de": "Die Sauna hat die Zieltemperatur erreicht"
-            },
-            "hint": {
-              "en": "Fires once each heat-up when the measured temperature first reaches the target — good for a \"sauna is ready\" light or message.",
-              "de": "Feuert einmal pro Aufheizvorgang, sobald die gemessene Temperatur die Zieltemperatur erreicht — gut für ein \"Sauna bereit\"-Licht oder eine Meldung."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature (°C)",
-                  "de": "Temperatur (°C)"
-                },
-                "example": 85
-              }
-            ]
-          },
-          {
-            "id": "time_remaining_reaches",
-            "title": {
-              "en": "Remaining time drops below",
-              "de": "Restzeit fällt unter"
+              "en": "Wait",
+              "nl": "Wacht",
+              "fr": "Attendre"
             },
             "titleFormatted": {
-              "en": "Remaining time drops below [[minutes]] minutes",
-              "de": "Restzeit fällt unter [[minutes]] Minuten"
+              "en": "Wait [[duration]] [[unit]]",
+              "nl": "Wacht [[duration]] [[unit]]",
+              "fr": "Attendre [[duration]] [[unit]]"
             },
             "hint": {
-              "en": "Fires once each heat-up when the minutes left first fall below the value you set here.",
-              "de": "Feuert einmal pro Aufheizvorgang, sobald die verbleibenden Minuten erstmals unter den hier gesetzten Wert fallen."
+              "en": "Pauses the Flow, then carries on. Use it in the And column of a standard Flow or anywhere in an Advanced Flow (connect only the yes output). Maximum 85 seconds.",
+              "nl": "Pauzeert de Flow en gaat daarna verder. Gebruik de kaart in de En-kolom van een gewone Flow of overal in een Advanced Flow (verbind enkel de ja-uitgang). Maximaal 85 seconden.",
+              "fr": "Met le Flow en pause, puis continue. À utiliser dans la colonne Et d'un Flow standard ou n'importe où dans un Advanced Flow (ne connectez que la sortie oui). Maximum 85 secondes."
             },
             "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "number",
-                "name": "minutes",
-                "title": {
-                  "en": "Minutes",
-                  "de": "Minuten"
-                },
-                "min": 1,
-                "max": 180,
-                "value": 10
-              }
-            ],
-            "tokens": [
-              {
-                "name": "remaining",
-                "type": "number",
-                "title": {
-                  "en": "Minutes remaining",
-                  "de": "Verbleibende Minuten"
-                },
-                "example": 9
-              }
-            ]
-          },
-          {
-            "id": "huum_finishing_soon",
-            "title": {
-              "en": "Maximum heating duration almost reached",
-              "de": "Maximale Heizdauer bald erreicht"
-            },
-            "hint": {
-              "en": "About the UKU's own maximum session length (automatic shut-off), not about reaching the target temperature.",
-              "de": "Bezieht sich auf die maximale Sitzungsdauer der UKU (automatische Abschaltung), nicht auf das Erreichen der Zieltemperatur."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "minutes",
-                "type": "number",
-                "title": {
-                  "en": "Minutes remaining",
-                  "de": "Verbleibende Minuten"
-                },
-                "example": 8
-              }
-            ]
-          },
-          {
-            "id": "sauna_session_ended",
-            "title": {
-              "en": "A sauna session ended",
-              "de": "Eine Sauna-Sitzung ist beendet"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ],
-            "tokens": [
               {
                 "name": "duration",
                 "type": "number",
-                "title": {
-                  "en": "Duration (minutes)",
-                  "de": "Dauer (Minuten)"
-                },
-                "example": 103
-              },
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature (°C)",
-                  "de": "Temperatur (°C)"
-                },
-                "example": 85
-              },
-              {
-                "name": "humidity",
-                "type": "number",
-                "title": {
-                  "en": "Humidity (%, 0 if no steamer)",
-                  "de": "Luftfeuchtigkeit (%, 0 ohne Verdampfer)"
-                },
-                "example": 25
-              },
-              {
-                "name": "kwh",
-                "type": "number",
-                "title": {
-                  "en": "Energy used (kWh)",
-                  "de": "Verbrauch (kWh)"
-                },
-                "example": 8.4
-              },
-              {
-                "name": "cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost (0 if no price set)",
-                  "de": "Kosten (0 ohne Preisangabe)"
-                },
-                "example": 2.9
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "time_remaining_below",
-            "title": {
-              "en": "Remaining time !{{is|is not}} below",
-              "de": "Restzeit !{{ist|ist nicht}} unter"
-            },
-            "titleFormatted": {
-              "en": "Remaining time !{{is|is not}} below [[minutes]] minutes",
-              "de": "Restzeit !{{ist|ist nicht}} unter [[minutes]] Minuten"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "number",
-                "name": "minutes",
-                "title": {
-                  "en": "Minutes",
-                  "de": "Minuten"
-                },
                 "min": 1,
-                "max": 180,
-                "value": 10
-              }
-            ]
-          },
-          {
-            "id": "remote_control_is_blocked",
-            "title": {
-              "en": "Remote start !{{is|is not}} blocked",
-              "de": "Fernstart !{{ist|ist nicht}} blockiert"
-            },
-            "args": [
+                "step": 1,
+                "title": {
+                  "en": "Duration",
+                  "nl": "Duur",
+                  "fr": "Durée"
+                },
+                "placeholder": {
+                  "en": "e.g. 500",
+                  "nl": "Bijv. 500",
+                  "fr": "Par ex. 500"
+                }
+              },
               {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ]
-          },
-          {
-            "id": "scheduled_start_is_set",
-            "title": {
-              "en": "A start !{{is|is not}} scheduled",
-              "de": "Ein Start !{{ist|ist nicht}} geplant"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
+                "name": "unit",
+                "type": "dropdown",
+                "title": {
+                  "en": "Unit",
+                  "nl": "Eenheid",
+                  "fr": "Unité"
+                },
+                "values": [
+                  {
+                    "id": "milliseconds",
+                    "title": {
+                      "en": "milliseconds",
+                      "nl": "milliseconden",
+                      "fr": "millisecondes"
+                    }
+                  },
+                  {
+                    "id": "seconds",
+                    "title": {
+                      "en": "seconds",
+                      "nl": "seconden",
+                      "fr": "secondes"
+                    }
+                  }
+                ]
               }
             ]
           }
         ],
-        "actions": [
-          {
-            "id": "set_measured_power",
-            "title": {
-              "en": "Set the sauna's measured power",
-              "de": "Gemessene Sauna-Leistung setzen"
-            },
-            "titleFormatted": {
-              "en": "Set the sauna's measured power to [[watts]] W",
-              "de": "Gemessene Sauna-Leistung auf [[watts]] W setzen"
-            },
-            "hint": {
-              "en": "Feeds a power reading (e.g. from your own energy meter) into this device for the Energy tab and the per-session cost. Set the heater power source to \"From a Flow\" in the app settings first.",
-              "de": "Speist einen Leistungswert (z. B. von deinem eigenen Stromzähler) in dieses Gerät ein — für den Energie-Tab und die Kosten pro Sitzung. Stelle in den App-Einstellungen zuerst die Leistungsquelle auf \"Aus einem Flow\"."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "number",
-                "name": "watts",
-                "title": {
-                  "en": "Watts",
-                  "de": "Watt"
-                },
-                "min": 0,
-                "max": 30000,
-                "step": 1
-              }
-            ]
-          },
-          {
-            "id": "start_with_temperature_and_humidity",
-            "title": {
-              "en": "Start the sauna at a temperature and humidity",
-              "de": "Sauna mit Temperatur und Luftfeuchtigkeit starten"
-            },
-            "titleFormatted": {
-              "en": "Start the sauna at [[temperature]] °C and [[humidity]] % humidity",
-              "de": "Sauna mit [[temperature]] °C und [[humidity]] % Luftfeuchtigkeit starten"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "range",
-                "name": "temperature",
-                "title": {
-                  "en": "Temperature (°C)",
-                  "de": "Temperatur (°C)"
-                },
-                "min": 40,
-                "max": 110,
-                "step": 1,
-                "value": 80,
-                "label": "°C"
-              },
-              {
-                "type": "range",
-                "name": "humidity",
-                "title": {
-                  "en": "Humidity (%)",
-                  "de": "Luftfeuchtigkeit (%)"
-                },
-                "min": 0,
-                "max": 90,
-                "step": 5,
-                "value": 30,
-                "label": "%"
-              }
-            ]
-          },
-          {
-            "id": "start_with_profile",
-            "title": {
-              "en": "Start the sauna with a profile",
-              "de": "Sauna mit einem Profil starten"
-            },
-            "titleFormatted": {
-              "en": "Start the sauna with profile [[profile]]",
-              "de": "Sauna mit Profil [[profile]] starten"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "dropdown",
-                "name": "profile",
-                "title": {
-                  "en": "Profile",
-                  "de": "Profil"
-                },
-                "values": [
-                  {
-                    "id": "profile1",
-                    "title": {
-                      "en": "Profile 1",
-                      "de": "Profil 1"
-                    }
-                  },
-                  {
-                    "id": "profile2",
-                    "title": {
-                      "en": "Profile 2",
-                      "de": "Profil 2"
-                    }
-                  },
-                  {
-                    "id": "profile3",
-                    "title": {
-                      "en": "Profile 3",
-                      "de": "Profil 3"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "save_profile",
-            "title": {
-              "en": "Save the current settings as a profile",
-              "de": "Aktuelle Einstellungen als Profil speichern"
-            },
-            "titleFormatted": {
-              "en": "Save the current settings as profile [[profile]]",
-              "de": "Aktuelle Einstellungen als Profil [[profile]] speichern"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "dropdown",
-                "name": "profile",
-                "title": {
-                  "en": "Profile",
-                  "de": "Profil"
-                },
-                "values": [
-                  {
-                    "id": "profile1",
-                    "title": {
-                      "en": "Profile 1",
-                      "de": "Profil 1"
-                    }
-                  },
-                  {
-                    "id": "profile2",
-                    "title": {
-                      "en": "Profile 2",
-                      "de": "Profil 2"
-                    }
-                  },
-                  {
-                    "id": "profile3",
-                    "title": {
-                      "en": "Profile 3",
-                      "de": "Profil 3"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "schedule_start",
-            "title": {
-              "en": "Schedule a sauna start",
-              "de": "Sauna-Start einplanen"
-            },
-            "titleFormatted": {
-              "en": "Schedule a sauna start [[day]] at [[time]] with profile [[profile]]",
-              "de": "Sauna-Start [[day]] um [[time]] mit Profil [[profile]] einplanen"
-            },
-            "hint": {
-              "en": "Sets the same one-per-device scheduled start as the app settings page. The time is in your Homey's timezone; a start missed by more than 30 minutes is dropped. Replaces any existing scheduled start. For a specific calendar date use the app settings page.",
-              "de": "Setzt denselben geplanten Start (einer pro Gerät) wie die App-Einstellungsseite. Die Zeit gilt in der Zeitzone deiner Homey; ein um mehr als 30 Minuten verpasster Start wird verworfen. Ersetzt einen bereits geplanten Start. Für ein konkretes Datum nutze die App-Einstellungsseite."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              },
-              {
-                "type": "dropdown",
-                "name": "day",
-                "title": {
-                  "en": "Day",
-                  "de": "Tag"
-                },
-                "values": [
-                  {
-                    "id": "today",
-                    "title": {
-                      "en": "Today",
-                      "de": "Heute"
-                    }
-                  },
-                  {
-                    "id": "tomorrow",
-                    "title": {
-                      "en": "Tomorrow",
-                      "de": "Morgen"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "time",
-                "name": "time",
-                "title": {
-                  "en": "Time",
-                  "de": "Zeit"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "profile",
-                "title": {
-                  "en": "Profile",
-                  "de": "Profil"
-                },
-                "values": [
-                  {
-                    "id": "profile1",
-                    "title": {
-                      "en": "Profile 1",
-                      "de": "Profil 1"
-                    }
-                  },
-                  {
-                    "id": "profile2",
-                    "title": {
-                      "en": "Profile 2",
-                      "de": "Profil 2"
-                    }
-                  },
-                  {
-                    "id": "profile3",
-                    "title": {
-                      "en": "Profile 3",
-                      "de": "Profil 3"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "cancel_scheduled_start",
-            "title": {
-              "en": "Cancel the scheduled start",
-              "de": "Geplanten Start abbrechen"
-            },
-            "hint": {
-              "en": "Clears this sauna's pending scheduled start, if any. Does nothing to a session that's already running.",
-              "de": "Löscht den anstehenden geplanten Start dieser Sauna, falls einer gesetzt ist. Eine bereits laufende Sitzung bleibt unberührt."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=uku"
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": {
-        "sauna": {
-          "id": "sauna",
-          "name": {
-            "en": "Sauna",
-            "de": "Sauna"
-          },
-          "settings": [],
-          "height": 132,
-          "api": {
-            "getState": {
-              "method": "GET",
-              "path": "/state"
-            },
-            "setPower": {
-              "method": "POST",
-              "path": "/power"
-            },
-            "startProfile": {
-              "method": "POST",
-              "path": "/profile"
-            },
-            "logError": {
-              "method": "POST",
-              "path": "/log"
-            }
-          },
-          "previewDark": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/widgets/sauna/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/com.rickd.huum/17/6f8f16aa-2ab4-497d-be45-9390d9938b73/widgets/sauna/preview-light.png"
-        }
-      },
-      "screensavers": [],
-      "homeyCommunityTopicId": 159173,
-      "state": "live",
-      "stateChangedAt": "2026-10-05T07:07:56.427Z",
-      "bugs": "https://github.com/RickD-CH/com.rickd.huum/issues",
-      "homepage": null,
-      "support": null,
-      "source": "https://github.com/RickD-CH/com.rickd.huum",
-      "contributors": null,
-      "contributing": {
-        "donate": {
-          "paypal": {
-            "username": "RickDch"
-          }
-        }
-      },
-      "permissions": [],
-      "changelog": {
-        "en": "Redrawn driver icon (person + steam, no outer frame) so it's actually recognisable at small sizes instead of a dark blob.",
-        "de": "Geraete-Icon neu gezeichnet (Person + Dampf, ohne Rahmen), damit es in kleiner Groesse wirklich erkennbar ist statt ein dunkler Fleck."
-      },
-      "compatibility": ">=12.2.0",
-      "tags": null,
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "0.9.2",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6a63505128cddd02f8f07066",
-      "type": "user",
-      "userId": "64c0a65a2aae21e789dee314",
-      "name": "Richard Dubs",
-      "verified": false
-    },
-    "communityTopicId": 159173
-  },
-  {
-    "id": "com.kevinvanoosterhout.yeelightcandela",
-    "rating": null,
-    "liveBuild": {
-      "id": 1,
-      "name": {
-        "en": "Yeelight Candela"
-      },
-      "version": "1.0.0",
-      "readme": {
-        "en": "Bring warm candlelight into your Homey routines. Adjust the brightness of your original Bluetooth Yeelight Candela, switch it on or off, and choose a steady glow, gentle breathing or candle flicker to suit the moment. Use Flows to set the mood automatically.\n\nRequires the original Bluetooth Candela (YLFW01YL, micro USB), with its switch in the Bluetooth position and within range of Homey. Candle flicker and breathing are generated by Homey and require the app to keep running. Homey shows the last state commanded by the app; physical twist controls and changes made by other Bluetooth controllers are not synchronized. Models without Bluetooth are not supported.\n"
-      },
-      "description": {
-        "en": "Set the mood with warm candlelight"
-      },
-      "category": "lights",
-      "brandColor": "#835727",
-      "icon": "https://apps.homeycdn.net/app/com.kevinvanoosterhout.yeelightcandela/1/530e78f5-a3dc-43a7-9f4b-0e73675b3f3e/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.kevinvanoosterhout.yeelightcandela/1/530e78f5-a3dc-43a7-9f4b-0e73675b3f3e/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.kevinvanoosterhout.yeelightcandela/1/530e78f5-a3dc-43a7-9f4b-0e73675b3f3e/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "candela",
-          "name": {
-            "en": "Candela"
-          },
-          "class": "light",
-          "capabilities": [
-            "onoff",
-            "dim",
-            "candela_pattern"
-          ],
-          "imageSmall": "https://apps.homeycdn.net/app/com.kevinvanoosterhout.yeelightcandela/1/530e78f5-a3dc-43a7-9f4b-0e73675b3f3e/drivers/candela/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.kevinvanoosterhout.yeelightcandela/1/530e78f5-a3dc-43a7-9f4b-0e73675b3f3e/drivers/candela/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "ble"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.kevinvanoosterhout.yeelightcandela/1/530e78f5-a3dc-43a7-9f4b-0e73675b3f3e/drivers/candela/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": [
-          {
-            "id": "set_candela_pattern",
-            "title": {
-              "en": "Set pattern"
-            },
-            "titleFormatted": {
-              "en": "Set pattern to [[pattern]]"
-            },
-            "hint": {
-              "en": "Turns the light on. Candle flicker and breathing are generated by Homey and require the app to keep running."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=candela"
-              },
-              {
-                "name": "pattern",
-                "type": "dropdown",
-                "title": {
-                  "en": "Pattern"
-                },
-                "values": [
-                  {
-                    "id": "steady",
-                    "label": {
-                      "en": "Steady"
-                    }
-                  },
-                  {
-                    "id": "candle",
-                    "label": {
-                      "en": "Candle flicker (Homey)"
-                    }
-                  },
-                  {
-                    "id": "breathe",
-                    "label": {
-                      "en": "Breathing (Homey)"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+        "actions": null
       },
       "widgets": null,
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-10-05T08:03:45.601Z",
-      "bugs": null,
-      "homepage": null,
-      "support": "mailto:homey@kevinvanoosterhout.com",
-      "source": "https://github.com/KevinvOosterhout/com.kevinvanoosterhout.yeelightcandela",
-      "contributors": null,
-      "contributing": null,
-      "permissions": [
-        "homey:wireless:ble"
-      ],
-      "changelog": {
-        "en": "Initial release: Bluetooth pairing, on/off and brightness controls for the original Candela, with Homey-generated candle flicker and breathing patterns and Flow support."
-      },
-      "compatibility": ">=12.4.0",
-      "tags": null,
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "1.0.0",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6abee711bdc7ced970ff038a",
-      "type": "user",
-      "userId": "6776b84d9dac128f0f4ac5a4",
-      "name": "Kevin van Oosterhout",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "community.ledfx",
-    "rating": null,
-    "liveBuild": {
-      "id": 9,
-      "name": {
-        "en": "LedFx",
-        "nl": "LedFx"
-      },
-      "version": "2.0.1",
-      "readme": {
-        "en": "Bring LedFx into your smart home. Switch your LedFx virtuals on and off, adjust brightness, set effects and presets, and start your favourite LedFx scenes automatically from Homey flows, for example when the music starts or the movie begins.\n\nRequires LedFx 2.x running on a computer or Raspberry Pi in your local network, and a Homey Pro. This is an unofficial community app. The LedFx name and logo belong to the LedFx project and are used to identify the software this app works with.\n",
-        "nl": "Breng LedFx in je slimme huis. Schakel je LedFx-virtuals aan en uit, pas de helderheid aan, stel effecten en presets in en start je favoriete LedFx-scènes automatisch vanuit Homey-flows, bijvoorbeeld als de muziek begint of de film start.\n\nVereist LedFx 2.x op een computer of Raspberry Pi in je lokale netwerk, en een Homey Pro. Dit is een onofficiële community-app. De naam en het logo van LedFx zijn van het LedFx-project en worden gebruikt om aan te geven met welke software deze app werkt.\n"
-      },
-      "description": {
-        "en": "Let your lights dance to the music",
-        "nl": "Laat je licht dansen op de muziek"
-      },
-      "category": "lights",
-      "brandColor": "#7B1FA2",
-      "icon": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "server",
-          "name": {
-            "en": "LedFx server",
-            "nl": "LedFx-server"
-          },
-          "class": "light",
-          "capabilities": [
-            "onoff",
-            "dim"
-          ],
-          "capabilitiesOptions": {
-            "onoff": {
-              "title": {
-                "en": "All virtuals",
-                "nl": "Alle virtuals"
-              }
-            },
-            "dim": {
-              "title": {
-                "en": "Global brightness",
-                "nl": "Globale helderheid"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/drivers/server/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/drivers/server/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/drivers/server/assets/icon.svg"
-        },
-        {
-          "id": "virtual",
-          "name": {
-            "en": "LedFx virtual",
-            "nl": "LedFx virtual"
-          },
-          "class": "light",
-          "capabilities": [
-            "onoff",
-            "dim",
-            "ledfx_effect"
-          ],
-          "imageSmall": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/drivers/virtual/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/drivers/virtual/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/community.ledfx/9/a6bed632-1c02-4721-af53-1dedbf2bde95/drivers/virtual/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": [
-          {
-            "id": "activate_scene",
-            "title": {
-              "en": "Activate scene",
-              "nl": "Activeer scène"
-            },
-            "titleFormatted": {
-              "en": "Activate scene [[scene]]",
-              "nl": "Activeer scène [[scene]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=server"
-              },
-              {
-                "type": "autocomplete",
-                "name": "scene",
-                "placeholder": {
-                  "en": "Scene",
-                  "nl": "Scène"
-                }
-              }
-            ]
-          },
-          {
-            "id": "set_effect",
-            "title": {
-              "en": "Set effect",
-              "nl": "Stel effect in"
-            },
-            "titleFormatted": {
-              "en": "Set effect [[effect]]",
-              "nl": "Stel effect [[effect]] in"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=virtual"
-              },
-              {
-                "type": "autocomplete",
-                "name": "effect",
-                "placeholder": {
-                  "en": "Effect",
-                  "nl": "Effect"
-                }
-              }
-            ]
-          },
-          {
-            "id": "apply_preset",
-            "title": {
-              "en": "Apply preset",
-              "nl": "Pas preset toe"
-            },
-            "titleFormatted": {
-              "en": "Apply preset [[preset]]",
-              "nl": "Pas preset [[preset]] toe"
-            },
-            "hint": {
-              "en": "Presets belong to the currently active effect.",
-              "nl": "Presets horen bij het actieve effect."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=virtual"
-              },
-              {
-                "type": "autocomplete",
-                "name": "preset",
-                "placeholder": {
-                  "en": "Preset",
-                  "nl": "Preset"
-                }
-              }
-            ]
-          },
-          {
-            "id": "clear_effect",
-            "title": {
-              "en": "Clear effect",
-              "nl": "Wis effect"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=virtual"
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": null,
-      "screensavers": [],
-      "homeyCommunityTopicId": 160070,
-      "state": "live",
-      "stateChangedAt": "2026-10-05T09:20:33.557Z",
-      "bugs": null,
-      "homepage": null,
-      "support": "https://community.homey.app/t/app-pro-ledfx-control-your-ledfx-virtuals-effects-and-scenes-test/160070",
-      "source": null,
-      "contributors": null,
-      "contributing": {
-        "donate": {
-          "paypal": {
-            "username": "DennisKlatt"
-          }
-        }
-      },
-      "permissions": [],
-      "changelog": {
-        "en": "• First public release\n• Updated app and device images with the official LedFx artwork, added unique device icons, and improved the app description.",
-        "nl": "• First public release\n• App- en apparaatafbeeldingen vernieuwd met het officiële LedFx-beeldmateriaal, eigen iconen per apparaat en een verbeterde app-beschrijving."
-      },
-      "compatibility": ">=12.0.0",
-      "tags": null,
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "2.0.1",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6a9bdf22336db3df05accd76",
-      "type": "user",
-      "userId": "601540e8d6f4fb0bde6a4210",
-      "name": "Dennis Klatt",
-      "verified": false
-    },
-    "communityTopicId": 160070
-  },
-  {
-    "id": "nl.lrvdlinden.hyves",
-    "rating": null,
-    "liveBuild": {
-      "id": 24,
-      "name": {
-        "en": "Hyves",
-        "nl": "Hyves"
-      },
-      "version": "1.0.5",
-      "readme": {
-        "en": "Connect your Hyves account to Homey and use Hyves data directly in devices, Advanced Flow and widgets. View profile information, notifications, friend requests and timeline activity, and use device-based Flow cards to automate supported Hyves actions.\n\nThe integration uses Hyves’ personal, non-public interface and may therefore require changes if Hyves updates its app, API or sign-in procedure.\n\nUse **Hyves Homey Login Helper 0.2.0 or newer** when pairing or repairing. When the helper supplies a refresh token, Homey automatically renews the Hyves access token and keeps the session connected without repeated manual repairs. Existing plain access tokens remain supported, but cannot be refreshed automatically.\n\nWidgets: notifications, Hyves Groups with recent group posts and images, and Profile Stats with profile photo, memberships, friends, friend requests, unread notifications, timeline count and total Hyves users.\n",
-        "nl": "Koppel je Hyves-account aan Homey en gebruik Hyves-data direct in devices, Advanced Flow en widgets. Bekijk profielinformatie, meldingen, vriendschapsverzoeken en tijdlijnactiviteit en gebruik device-gebaseerde Flow-kaarten om ondersteunde Hyves-acties te automatiseren.\n\nDe integratie gebruikt de persoonlijke, niet-publieke interface van Hyves en kan daarom aanpassingen nodig hebben wanneer Hyves de app, API of inlogprocedure wijzigt.\n\nAls de Hyves-sessie verloopt, gebruik je **Repareren** bij het bestaande Homey-device om een verse token te koppelen zonder het device te verwijderen of Flows te breken.\n\nWidgets: meldingen, Hyves-groepen met recente groepsberichten en afbeeldingen, en Profielstatistieken met profielfoto, lidmaatschappen, vrienden, vriendschapsverzoeken, ongelezen meldingen, tijdlijnaantal en totaal aantal Hyves-gebruikers.\n\nGebruik **Hyves Homey Login Helper 0.2.0 of nieuwer** bij koppelen of repareren. Wanneer de helper een refresh token levert, vernieuwt Homey de Hyves access token automatisch zodat de verbinding actief kan blijven zonder steeds handmatig te repareren. Bestaande losse access tokens blijven werken, maar kunnen niet automatisch worden vernieuwd.\n"
-      },
-      "description": {
-        "en": "Your Hyves world, now part of your smart home.",
-        "nl": "Jouw Hyves-wereld, nu onderdeel van je slimme huis."
-      },
-      "category": "internet",
-      "brandColor": "#FFA322",
-      "icon": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "hyves",
-          "name": {
-            "en": "Hyves",
-            "nl": "Hyves"
-          },
-          "class": "other",
-          "capabilities": [
-            "hyves_online",
-            "hyves_unread_notifications",
-            "hyves_friend_requests",
-            "hyves_friends_count",
-            "hyves_groups_count",
-            "hyves_timeline_count",
-            "hyves_total_users",
-            "hyves_profile_name",
-            "hyves_profile_image",
-            "hyves_last_notification",
-            "hyves_last_notification_sender",
-            "hyves_last_notification_image",
-            "hyves_last_friend_request",
-            "hyves_last_friend_request_image",
-            "hyves_last_timeline_text",
-            "hyves_last_timeline_author",
-            "hyves_last_timeline_image",
-            "hyves_last_timeline_post_id",
-            "hyves_last_activity"
-          ],
-          "imageSmall": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/drivers/hyves/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/drivers/hyves/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "icon": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/drivers/hyves/assets/icon.svg",
-          "connectivity": null
-        }
-      ],
-      "flow": {
-        "triggers": [
-          {
-            "id": "new_notification",
-            "title": {
-              "en": "A new Hyves notification was received",
-              "nl": "Er is een nieuwe Hyves-melding ontvangen"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "id",
-                "type": "string",
-                "title": {
-                  "en": "ID",
-                  "nl": "ID"
-                }
-              },
-              {
-                "name": "text",
-                "type": "string",
-                "title": {
-                  "en": "Text",
-                  "nl": "Tekst"
-                }
-              },
-              {
-                "name": "name",
-                "type": "string",
-                "title": {
-                  "en": "Name",
-                  "nl": "Naam"
-                }
-              },
-              {
-                "name": "image_url",
-                "type": "string",
-                "title": {
-                  "en": "Image URL",
-                  "nl": "Afbeelding-URL"
-                }
-              },
-              {
-                "name": "image",
-                "type": "image",
-                "title": {
-                  "en": "Image",
-                  "nl": "Afbeelding"
-                }
-              }
-            ]
-          },
-          {
-            "id": "new_friend_request",
-            "title": {
-              "en": "A new friend request was received",
-              "nl": "Er is een nieuw vriendschapsverzoek ontvangen"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "id",
-                "type": "string",
-                "title": {
-                  "en": "ID",
-                  "nl": "ID"
-                }
-              },
-              {
-                "name": "text",
-                "type": "string",
-                "title": {
-                  "en": "Text",
-                  "nl": "Tekst"
-                }
-              },
-              {
-                "name": "name",
-                "type": "string",
-                "title": {
-                  "en": "Name",
-                  "nl": "Naam"
-                }
-              },
-              {
-                "name": "image_url",
-                "type": "string",
-                "title": {
-                  "en": "Image URL",
-                  "nl": "Afbeelding-URL"
-                }
-              },
-              {
-                "name": "image",
-                "type": "image",
-                "title": {
-                  "en": "Image",
-                  "nl": "Afbeelding"
-                }
-              }
-            ]
-          },
-          {
-            "id": "new_timeline_item",
-            "title": {
-              "en": "A new timeline item was found",
-              "nl": "Er is een nieuw tijdlijnbericht gevonden"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "id",
-                "type": "string",
-                "title": {
-                  "en": "ID",
-                  "nl": "ID"
-                }
-              },
-              {
-                "name": "text",
-                "type": "string",
-                "title": {
-                  "en": "Text",
-                  "nl": "Tekst"
-                }
-              },
-              {
-                "name": "name",
-                "type": "string",
-                "title": {
-                  "en": "Name",
-                  "nl": "Naam"
-                }
-              },
-              {
-                "name": "image_url",
-                "type": "string",
-                "title": {
-                  "en": "Image URL",
-                  "nl": "Afbeelding-URL"
-                }
-              },
-              {
-                "name": "image",
-                "type": "image",
-                "title": {
-                  "en": "Image",
-                  "nl": "Afbeelding"
-                }
-              }
-            ]
-          },
-          {
-            "id": "unread_notifications_changed",
-            "title": {
-              "en": "The unread notification count changed",
-              "nl": "Het aantal ongelezen meldingen is gewijzigd"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "count",
-                "type": "number",
-                "title": {
-                  "en": "Count",
-                  "nl": "Aantal"
-                }
-              }
-            ]
-          },
-          {
-            "id": "friends_count_changed",
-            "title": {
-              "en": "The number of friends changed",
-              "nl": "Het aantal vrienden is gewijzigd"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "count",
-                "type": "number",
-                "title": {
-                  "en": "Friends",
-                  "nl": "Vrienden"
-                }
-              }
-            ]
-          },
-          {
-            "id": "hyves_count_changed",
-            "title": {
-              "en": "The number of Hyves changed",
-              "nl": "Het aantal Hyves is gewijzigd"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "count",
-                "type": "number",
-                "title": {
-                  "en": "Hyves",
-                  "nl": "Hyves"
-                }
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "is_connected",
-            "title": {
-              "en": "Hyves !{{is|isn't}} connected",
-              "nl": "Hyves !{{is|is niet}} verbonden"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ]
-          },
-          {
-            "id": "has_unread_notifications",
-            "title": {
-              "en": "Hyves !{{has|doesn't have}} unread notifications",
-              "nl": "Hyves !{{heeft|heeft geen}} ongelezen meldingen"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ]
-          },
-          {
-            "id": "has_friend_requests",
-            "title": {
-              "en": "Hyves !{{has|doesn't have}} friend requests",
-              "nl": "Hyves !{{heeft|heeft geen}} vriendschapsverzoeken"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ]
-          },
-          {
-            "id": "unread_above",
-            "title": {
-              "en": "Unread notifications !{{are|aren't}} above...",
-              "nl": "Ongelezen meldingen !{{zijn|zijn niet}} meer dan..."
-            },
-            "titleFormatted": {
-              "en": "Unread notifications !{{are|aren't}} above [[count]]",
-              "nl": "Ongelezen meldingen !{{zijn|zijn niet}} meer dan [[count]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "count",
-                "type": "number",
-                "title": {
-                  "en": "Count",
-                  "nl": "Aantal"
-                },
-                "min": 0
-              }
-            ]
-          },
-          {
-            "id": "friends_above",
-            "title": {
-              "en": "Friend count !{{is|isn't}} above...",
-              "nl": "Aantal vrienden !{{is|is niet}} meer dan..."
-            },
-            "titleFormatted": {
-              "en": "Friend count !{{is|isn't}} above [[count]]",
-              "nl": "Aantal vrienden !{{is|is niet}} meer dan [[count]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "count",
-                "type": "number",
-                "title": {
-                  "en": "Count",
-                  "nl": "Aantal"
-                },
-                "min": 0
-              }
-            ]
-          },
-          {
-            "id": "hyves_above",
-            "title": {
-              "en": "Number of Hyves !{{is|isn't}} above...",
-              "nl": "Aantal Hyves !{{is|is niet}} meer dan..."
-            },
-            "titleFormatted": {
-              "en": "Number of Hyves !{{is|isn't}} above [[count]]",
-              "nl": "Aantal Hyves !{{is|is niet}} meer dan [[count]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "count",
-                "type": "number",
-                "title": {
-                  "en": "Count",
-                  "nl": "Aantal"
-                },
-                "min": 0
-              }
-            ]
-          }
-        ],
-        "actions": [
-          {
-            "id": "refresh",
-            "title": {
-              "en": "Refresh Hyves now",
-              "nl": "Hyves nu vernieuwen"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ]
-          },
-          {
-            "id": "create_post",
-            "title": {
-              "en": "Post on Hyves",
-              "nl": "Plaats op Hyves"
-            },
-            "titleFormatted": {
-              "en": "Post [[text]] on Hyves",
-              "nl": "Plaats [[text]] op Hyves"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "text",
-                "type": "text",
-                "title": {
-                  "en": "Text",
-                  "nl": "Tekst"
-                }
-              }
-            ]
-          },
-          {
-            "id": "mark_all_notifications_read",
-            "title": {
-              "en": "Mark all notifications as read",
-              "nl": "Markeer alle meldingen als gelezen"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              }
-            ]
-          },
-          {
-            "id": "mark_notification_read",
-            "title": {
-              "en": "Mark a notification as read",
-              "nl": "Markeer een melding als gelezen"
-            },
-            "titleFormatted": {
-              "en": "Mark notification [[id]] as read",
-              "nl": "Markeer melding [[id]] als gelezen"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "Notification ID",
-                  "nl": "Melding-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "send_friend_request",
-            "title": {
-              "en": "Send a friend request",
-              "nl": "Stuur een vriendschapsverzoek"
-            },
-            "titleFormatted": {
-              "en": "Send friend request to [[id]]",
-              "nl": "Stuur vriendschapsverzoek naar [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "User ID",
-                  "nl": "Gebruiker-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "accept_friend_request",
-            "title": {
-              "en": "Accept a friend request",
-              "nl": "Accepteer een vriendschapsverzoek"
-            },
-            "titleFormatted": {
-              "en": "Accept friend request [[id]]",
-              "nl": "Accepteer vriendschapsverzoek [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "User/request ID",
-                  "nl": "Gebruiker/verzoek-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "decline_friend_request",
-            "title": {
-              "en": "Decline a friend request",
-              "nl": "Weiger een vriendschapsverzoek"
-            },
-            "titleFormatted": {
-              "en": "Decline friend request [[id]]",
-              "nl": "Weiger vriendschapsverzoek [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "User/request ID",
-                  "nl": "Gebruiker/verzoek-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "remove_friend",
-            "title": {
-              "en": "Remove a friend",
-              "nl": "Verwijder een vriend"
-            },
-            "titleFormatted": {
-              "en": "Remove friend [[id]]",
-              "nl": "Verwijder vriend [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "User ID",
-                  "nl": "Gebruiker-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "respect_post",
-            "title": {
-              "en": "Give respect to a post",
-              "nl": "Geef respect aan een bericht"
-            },
-            "titleFormatted": {
-              "en": "Give respect to post [[id]]",
-              "nl": "Geef respect aan bericht [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "Post ID",
-                  "nl": "Bericht-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "unrespect_post",
-            "title": {
-              "en": "Remove respect from a post",
-              "nl": "Verwijder respect van een bericht"
-            },
-            "titleFormatted": {
-              "en": "Remove respect from post [[id]]",
-              "nl": "Verwijder respect van bericht [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "Post ID",
-                  "nl": "Bericht-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "delete_post",
-            "title": {
-              "en": "Delete a post",
-              "nl": "Verwijder een bericht"
-            },
-            "titleFormatted": {
-              "en": "Delete post [[id]]",
-              "nl": "Verwijder bericht [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "Post ID",
-                  "nl": "Bericht-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "join_group",
-            "title": {
-              "en": "Join a Hyve",
-              "nl": "Word lid van een Hyve"
-            },
-            "titleFormatted": {
-              "en": "Join Hyve [[id]]",
-              "nl": "Word lid van Hyve [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "Hyve ID",
-                  "nl": "Hyve-ID"
-                }
-              }
-            ]
-          },
-          {
-            "id": "leave_group",
-            "title": {
-              "en": "Leave a Hyve",
-              "nl": "Verlaat een Hyve"
-            },
-            "titleFormatted": {
-              "en": "Leave Hyve [[id]]",
-              "nl": "Verlaat Hyve [[id]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=hyves"
-              },
-              {
-                "name": "id",
-                "type": "text",
-                "title": {
-                  "en": "Hyve ID",
-                  "nl": "Hyve-ID"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": {
-        "hyves_notifications": {
-          "title": {
-            "en": "Hyves notifications",
-            "nl": "Hyves-meldingen"
-          },
-          "height": 320,
-          "devices": {
-            "type": "app",
-            "singular": true
-          },
-          "api": {
-            "getData": {
-              "method": "GET",
-              "path": "/notifications"
-            }
-          },
-          "id": "hyves_notifications",
-          "name": {
-            "en": "Hyves Notifications",
-            "nl": "Hyves-meldingen"
-          },
-          "settings": [],
-          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/widgets/hyves_notifications/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/widgets/hyves_notifications/preview-light.png"
-        },
-        "hyves_groups": {
-          "title": {
-            "en": "Hyves group posts",
-            "nl": "Hyves-groepsberichten"
-          },
-          "height": 500,
-          "devices": {
-            "type": "app",
-            "singular": true
-          },
-          "api": {
-            "getData": {
-              "method": "GET",
-              "path": "/group-posts"
-            }
-          },
-          "id": "hyves_groups",
-          "name": {
-            "en": "Hyves Groups",
-            "nl": "Hyves-groepen"
-          },
-          "settings": [],
-          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/widgets/hyves_groups/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/widgets/hyves_groups/preview-light.png"
-        },
-        "hyves_profile_stats": {
-          "id": "hyves_profile_stats",
-          "name": {
-            "en": "Hyves Profile Stats",
-            "nl": "Hyves-profielstatistieken"
-          },
-          "title": {
-            "en": "Hyves profile stats",
-            "nl": "Hyves-profielstatistieken"
-          },
-          "height": 420,
-          "devices": {
-            "type": "app",
-            "singular": true
-          },
-          "api": {
-            "getData": {
-              "method": "GET",
-              "path": "/profile-stats"
-            }
-          },
-          "settings": [],
-          "previewDark": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/widgets/hyves_profile_stats/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/nl.lrvdlinden.hyves/24/df4b29ca-4b68-421c-85fd-87338e800433/widgets/hyves_profile_stats/preview-light.png"
-        }
-      },
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-10-05T09:20:56.440Z",
-      "bugs": null,
-      "homepage": null,
-      "support": null,
-      "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [],
-      "changelog": {
-        "en": "Updated the Hyves Notifications widget preview with text-free Homey-compliant artwork.",
-        "nl": "De preview van de Hyves-meldingenwidget is vervangen door tekstvrije artwork volgens de Homey-richtlijnen."
-      },
-      "compatibility": ">=12.3.0",
-      "tags": {
-        "en": [
-          "Hyves",
-          "social",
-          "social media",
-          "social network",
-          "social networking",
-          "Dutch",
-          "Netherlands",
-          "friends",
-          "friendship",
-          "timeline",
-          "notifications",
-          "messages",
-          "posts",
-          "community",
-          "contacts",
-          "profile",
-          "groups",
-          "network",
-          "Facebook",
-          "Instagram",
-          "WhatsApp",
-          "Telegram",
-          "Messenger",
-          "X",
-          "Twitter",
-          "Threads",
-          "TikTok",
-          "Snapchat",
-          "LinkedIn",
-          "Mastodon",
-          "Bluesky"
-        ],
-        "nl": [
-          "Hyves",
-          "sociaal",
-          "social media",
-          "sociaal netwerk",
-          "Nederland",
-          "Nederlands",
-          "vrienden",
-          "vriendschap",
-          "tijdlijn",
-          "meldingen",
-          "berichten",
-          "posts",
-          "community",
-          "contacten",
-          "profiel",
-          "groepen",
-          "netwerk",
-          "Facebook",
-          "Instagram",
-          "WhatsApp",
-          "Telegram",
-          "Messenger",
-          "X",
-          "Twitter",
-          "Threads",
-          "TikTok",
-          "Snapchat",
-          "LinkedIn",
-          "Mastodon",
-          "Bluesky"
-        ]
-      },
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "1.0.5",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "649eefe59a54fe7531821578",
-      "type": "user",
-      "userId": "5d4da77a2c836a50f6936070",
-      "name": "Léon van der Linden",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "com.additionaluserstatuses.community",
-    "rating": null,
-    "liveBuild": {
-      "id": 1,
-      "name": {
-        "en": "Additional User Statuses",
-        "nl": "Extra gebruikersstatussen",
-        "fr": "Statuts d'utilisateur supplémentaires"
-      },
-      "version": "2.3.2",
-      "readme": {
-        "en": "Homey knows whether each person in your home is present or asleep, but its own Flows only ask about one person at a time. This app looks at the whole household: start a Flow when everyone has left, when the first person comes home, when the last one goes to bed or the first one wakes up, or only when everyone is home and asleep. Statuses of your own, such as vacation or do not disturb, work the same way, and you choose whether someone who holds one still counts towards everyone.\n\nThe settings page lists every Homey user, lets you leave out guests or accounts that never report presence, and shows what each card would answer right now. The app reads presence and sleep through the Homey API, so it runs on Homey Pro only.\n",
-        "fr": "Homey sait si chaque membre du foyer est à la maison ou dort, mais ses propres Flows ne posent la question que pour une personne à la fois. Cette app regarde le foyer entier : lancez un Flow quand tout le monde est parti, quand la première personne rentre, quand la dernière va se coucher ou que la première se réveille, ou seulement quand tout le monde est à la maison et dort. Vos propres statuts, comme vacances ou ne pas déranger, fonctionnent de la même manière, et vous choisissez si la personne qui en porte un compte encore pour tout le monde.\n\nLa page de réglages affiche tous les utilisateurs Homey, vous permet d'écarter les invités ou les comptes qui ne signalent jamais leur présence, et montre ce que chaque carte répondrait à l'instant. L'app lit la présence et le sommeil via l'API Homey et ne fonctionne donc que sur Homey Pro.\n",
-        "nl": "Homey weet of elke huisgenoot thuis is of slaapt, maar de eigen Flows vragen dat alleen per persoon. Deze app kijkt naar het hele huishouden: start een Flow wanneer iedereen vertrokken is, wanneer de eerste thuiskomt, wanneer de laatste gaat slapen of de eerste wakker wordt, of alleen wanneer iedereen thuis is en slaapt. Eigen statussen, zoals vakantie of niet storen, werken op dezelfde manier, en je kiest zelf of wie zo'n status heeft nog meetelt voor iedereen.\n\nDe instellingenpagina toont alle Homey-gebruikers, laat je gasten of accounts die nooit hun aanwezigheid doorgeven buiten beschouwing laten, en laat zien wat elke kaart op dit moment zou antwoorden. De app leest aanwezigheid en slaap via de Homey API en werkt daarom alleen op Homey Pro.\n"
-      },
-      "description": {
-        "en": "Presence and sleep cards for the whole household, plus statuses of your own",
-        "nl": "Aanwezigheids- en slaapkaarten voor het hele huishouden, plus eigen statussen",
-        "fr": "Cartes de présence et de sommeil pour tout le foyer, et vos propres statuts"
-      },
-      "category": "tools",
-      "brandColor": "#3D5A96",
-      "icon": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/assets/images/small.jpg",
-      "imageLarge": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/assets/images/large.jpg",
-      "drivers": [
-        {
-          "id": "status",
-          "name": {
-            "en": "User status",
-            "nl": "Gebruikersstatus",
-            "fr": "Statut d'utilisateur"
-          },
-          "class": "other",
-          "capabilities": [
-            "onoff"
-          ],
-          "capabilitiesOptions": {
-            "onoff": {
-              "title": {
-                "en": "Has this status",
-                "nl": "Heeft deze status",
-                "fr": "A ce statut"
-              },
-              "insightsTitleTrue": {
-                "en": "Took on the status",
-                "nl": "Kreeg de status",
-                "fr": "A pris le statut"
-              },
-              "insightsTitleFalse": {
-                "en": "Lost the status",
-                "nl": "Verloor de status",
-                "fr": "A perdu le statut"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/drivers/status/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/drivers/status/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [],
-          "icon": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/drivers/status/assets/icon.svg"
-        },
-        {
-          "id": "vacation",
-          "name": {
-            "en": "Vacation status",
-            "nl": "Vakantiestatus",
-            "fr": "Statut de vacances"
-          },
-          "class": "other",
-          "capabilities": [
-            "onoff"
-          ],
-          "capabilitiesOptions": {
-            "onoff": {
-              "title": {
-                "en": "On vacation",
-                "nl": "Op vakantie",
-                "fr": "En vacances"
-              },
-              "insightsTitleTrue": {
-                "en": "Went on vacation",
-                "nl": "Ging op vakantie",
-                "fr": "Parti en vacances"
-              },
-              "insightsTitleFalse": {
-                "en": "Returned from vacation",
-                "nl": "Kwam terug van vakantie",
-                "fr": "Revenu de vacances"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/drivers/vacation/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/drivers/vacation/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [],
-          "icon": "https://apps.homeycdn.net/app/com.additionaluserstatuses.community/1/2f7093bf-4fdc-4054-b47e-570f72bef803/drivers/vacation/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": [
-          {
-            "id": "everyone_awake",
-            "title": {
-              "en": "The last person wakes up",
-              "nl": "De laatste persoon wordt wakker",
-              "fr": "La dernière personne se réveille"
-            },
-            "hint": {
-              "en": "Fires when the last sleeper wakes up, wherever they are. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste slaper wakker wordt, waar diegene ook is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque le dernier dormeur se réveille, où qu'il soit. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "everyone_became_asleep",
-            "title": {
-              "en": "The last person goes to the status asleep",
-              "nl": "De laatste persoon gaat slapen",
-              "fr": "La dernière personne s'endort"
-            },
-            "hint": {
-              "en": "Fires when the last person goes to sleep, wherever they are; someone out who never reports asleep blocks it. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste persoon gaat slapen, waar diegene ook is; wie weg is en nooit slapend meldt, houdt hem tegen. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque la dernière personne s'endort, où qu'elle soit ; quelqu'un de sorti qui ne se déclare jamais endormi la bloque. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "everyone_home_arrived",
-            "title": {
-              "en": "Everyone is at home",
-              "nl": "Iedereen is thuis",
-              "fr": "Tout le monde est à la maison"
-            },
-            "hint": {
-              "en": "Fires when the last person who counts comes home, so the whole household is in. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste persoon die meetelt thuiskomt, zodat het hele huishouden binnen is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque la dernière personne qui compte rentre, si bien que tout le foyer est présent. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            }
-          },
-          {
-            "id": "everyone_home_awake",
-            "title": {
-              "en": "The last person at home wakes up",
-              "nl": "De laatste persoon thuis wordt wakker",
-              "fr": "La dernière personne à la maison se réveille"
-            },
-            "hint": {
-              "en": "Fires when the last sleeper at home wakes up; not when they just leave. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste slaper thuis wakker wordt; niet wanneer die gewoon vertrekt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque le dernier dormeur à la maison se réveille ; pas s'il part simplement. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "everyone_home_became_asleep",
-            "title": {
-              "en": "The last person at home goes to the status asleep",
-              "nl": "De laatste persoon thuis gaat slapen",
-              "fr": "La dernière personne à la maison s'endort"
-            },
-            "hint": {
-              "en": "Fires when the last awake person at home goes to sleep; not when they just leave. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste wakkere persoon thuis gaat slapen; niet wanneer die gewoon vertrekt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque la dernière personne éveillée à la maison s'endort ; pas si elle part simplement. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "everyone_left",
-            "title": {
-              "en": "Everyone is out",
-              "nl": "Iedereen is weg",
-              "fr": "Tout le monde est parti"
-            },
-            "hint": {
-              "en": "Fires when the last person who counts leaves, so the house is empty. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste persoon die meetelt vertrekt, zodat het huis leeg is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque la dernière personne qui compte s'en va, si bien que la maison est vide. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            }
-          },
-          {
-            "id": "everyone_status_ended",
-            "title": {
-              "en": "Nobody has the status … any more",
-              "nl": "Niemand heeft nog de status …",
-              "fr": "Plus personne n'a le statut …"
-            },
-            "titleFormatted": {
-              "en": "Nobody has the status [[status]] any more",
-              "nl": "Niemand heeft nog de status [[status]]",
-              "fr": "Plus personne n'a le statut [[status]]"
-            },
-            "hint": {
-              "en": "Fires once, when the last person with the status loses it, and not again while nobody has it. Ignores users unticked in the settings or disabled in Homey.",
-              "nl": "Gaat één keer af wanneer de laatste persoon met de status hem verliest, en niet opnieuw zolang niemand hem heeft. Negeert wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche une fois, lorsque la dernière personne ayant le statut le perd, et pas à nouveau tant que personne ne l'a. Ignore les utilisateurs décochés dans les réglages ou désactivés dans Homey."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "status",
-                "type": "string",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "example": "On vacation"
-              }
-            ]
-          },
-          {
-            "id": "everyone_status_started",
-            "title": {
-              "en": "Everyone has the status …",
-              "nl": "Iedereen heeft de status …",
-              "fr": "Tout le monde a le statut …"
-            },
-            "titleFormatted": {
-              "en": "Everyone has the status [[status]]",
-              "nl": "Iedereen heeft de status [[status]]",
-              "fr": "Tout le monde a le statut [[status]]"
-            },
-            "hint": {
-              "en": "Fires once, when the last person still without the status takes it on, and not again while everyone has it. Ignores users unticked in the settings or disabled in Homey.",
-              "nl": "Gaat één keer af wanneer de laatste persoon zonder de status hem krijgt, en niet opnieuw zolang iedereen hem heeft. Negeert wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche une fois, lorsque la dernière personne sans le statut le prend, et pas à nouveau tant que tout le monde l'a. Ignore les utilisateurs décochés dans les réglages ou désactivés dans Homey."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "status",
-                "type": "string",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "example": "On vacation"
-              }
-            ]
-          },
-          {
-            "id": "everyone_vacation_ended",
-            "title": {
-              "en": "Nobody is on vacation any more",
-              "nl": "Niemand is nog op vakantie",
-              "fr": "Plus personne n'est en vacances"
-            },
-            "hint": {
-              "en": "Fires when the last person on vacation returns, so nobody in the household is away any more.",
-              "nl": "Gaat af wanneer de laatste persoon op vakantie terugkomt, zodat niemand van het huishouden nog weg is.",
-              "fr": "Se déclenche lorsque la dernière personne en vacances revient, si bien que plus personne du foyer n'est absent."
-            }
-          },
-          {
-            "id": "everyone_vacation_started",
-            "title": {
-              "en": "Everyone is on vacation",
-              "nl": "Iedereen is op vakantie",
-              "fr": "Tout le monde est en vacances"
-            },
-            "hint": {
-              "en": "Fires when the last counted user is marked as on vacation, so the whole household is away. Ignores users unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de laatste meegetelde gebruiker als op vakantie wordt gemarkeerd, zodat het hele huishouden weg is. Negeert wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque le dernier utilisateur pris en compte part en vacances, si bien que tout le foyer est absent. Ignore les utilisateurs décochés dans les réglages ou désactivés dans Homey."
-            }
-          },
-          {
-            "id": "first_arrived",
-            "title": {
-              "en": "The first person comes home",
-              "nl": "De eerste persoon komt thuis",
-              "fr": "La première personne rentre à la maison"
-            },
-            "hint": {
-              "en": "Fires when the first person comes home to an empty house, not for those who follow. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de eerste persoon thuiskomt in een leeg huis, niet voor wie volgt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque la première personne rentre dans une maison vide, pas pour les suivantes. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "first_asleep",
-            "title": {
-              "en": "The first person goes to the status asleep",
-              "nl": "De eerste persoon gaat slapen",
-              "fr": "La première personne s'endort"
-            },
-            "hint": {
-              "en": "Fires once per night, when the first person goes to sleep, wherever they are. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat één keer per nacht af wanneer de eerste persoon gaat slapen, waar diegene ook is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche une fois par nuit, lorsque la première personne s'endort, où qu'elle soit. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "first_awake",
-            "title": {
-              "en": "The first person wakes up",
-              "nl": "De eerste persoon wordt wakker",
-              "fr": "La première personne se réveille"
-            },
-            "hint": {
-              "en": "Fires once per night, when the first person wakes up, wherever they are. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat één keer per nacht af wanneer de eerste persoon wakker wordt, waar diegene ook is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche une fois par nuit, lorsque la première personne se réveille, où qu'elle soit. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "first_home_asleep",
-            "title": {
-              "en": "The first person at home goes to the status asleep",
-              "nl": "De eerste persoon thuis gaat slapen",
-              "fr": "La première personne à la maison s'endort"
-            },
-            "hint": {
-              "en": "Fires when the first person at home goes to sleep; not for the second, nor for someone who arrives asleep. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer de eerste persoon thuis gaat slapen; niet voor de tweede, en niet voor wie slapend thuiskomt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque la première personne à la maison s'endort ; pas la deuxième, ni quelqu'un qui rentre endormi. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "first_home_awake",
-            "title": {
-              "en": "The first person at home wakes up",
-              "nl": "De eerste persoon thuis wordt wakker",
-              "fr": "La première personne à la maison se réveille"
-            },
-            "hint": {
-              "en": "Fires when someone at home wakes up while the rest at home still sleep; not for the second to wake. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af wanneer iemand thuis wakker wordt terwijl de rest thuis nog slaapt; niet voor de tweede die wakker wordt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche lorsque quelqu'un se réveille à la maison alors que les autres dorment encore ; pas la deuxième personne. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "someone_home_awake",
-            "title": {
-              "en": "Someone at home wakes up",
-              "nl": "Iemand thuis wordt wakker",
-              "fr": "Quelqu'un à la maison se réveille"
-            },
-            "hint": {
-              "en": "Fires every time someone who was asleep at home wakes up, the second and third person too. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Gaat af telkens wanneer iemand thuis wakker wordt, ook de tweede en de derde. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Se déclenche chaque fois que quelqu'un à la maison se réveille, aussi la deuxième et la troisième personne. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "status_ended",
-            "title": {
-              "en": "A user loses the status …",
-              "nl": "Een gebruiker verliest de status …",
-              "fr": "Un utilisateur perd le statut …"
-            },
-            "titleFormatted": {
-              "en": "[[user]] loses the status [[status]]",
-              "nl": "[[user]] verliest de status [[status]]",
-              "fr": "[[user]] perd le statut [[status]]"
-            },
-            "hint": {
-              "en": "Fires when the chosen user loses the status. 'Any user' fires for everyone; the User tag says who.",
-              "nl": "Gaat af wanneer de gekozen gebruiker de status verliest. 'Elke gebruiker' gaat af voor iedereen; de tag Gebruiker zegt wie.",
-              "fr": "Se déclenche lorsque l'utilisateur choisi perd le statut. « Tout utilisateur » se déclenche pour tout le monde ; le tag Utilisateur indique qui."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              },
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              },
-              {
-                "name": "status",
-                "type": "string",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "example": "On vacation"
-              }
-            ]
-          },
-          {
-            "id": "status_started",
-            "title": {
-              "en": "A user takes on the status …",
-              "nl": "Een gebruiker krijgt de status …",
-              "fr": "Un utilisateur prend le statut …"
-            },
-            "titleFormatted": {
-              "en": "[[user]] takes on the status [[status]]",
-              "nl": "[[user]] krijgt de status [[status]]",
-              "fr": "[[user]] prend le statut [[status]]"
-            },
-            "hint": {
-              "en": "Fires when the chosen user gets the status, from any source. 'Any user' fires for everyone; the User tag says who.",
-              "nl": "Gaat af wanneer de gekozen gebruiker de status krijgt, via welke weg ook. 'Elke gebruiker' gaat af voor iedereen; de tag Gebruiker zegt wie.",
-              "fr": "Se déclenche lorsque l'utilisateur choisi reçoit le statut, quelle qu'en soit l'origine. « Tout utilisateur » se déclenche pour tout le monde ; le tag Utilisateur indique qui."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              },
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              },
-              {
-                "name": "status",
-                "type": "string",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "example": "On vacation"
-              }
-            ]
-          },
-          {
-            "id": "user_arrived",
-            "title": {
-              "en": "A user comes home",
-              "nl": "Een gebruiker komt thuis",
-              "fr": "Un utilisateur rentre à la maison"
-            },
-            "titleFormatted": {
-              "en": "[[user]] comes home",
-              "nl": "[[user]] komt thuis",
-              "fr": "[[user]] rentre à la maison"
-            },
-            "hint": {
-              "en": "Fires when a user is marked as at home, also when back from vacation. Unlike Homey's own card, it only fires for users who count. 'Any user' fires for everyone.",
-              "nl": "Gaat af wanneer een gebruiker als thuis wordt gemarkeerd, ook na vakantie. Anders dan Homey's eigen kaart gaat deze alleen af voor gebruikers die meetellen. 'Elke gebruiker' gaat af voor iedereen.",
-              "fr": "Se déclenche dès qu'un utilisateur est marqué comme présent, aussi au retour de vacances. Contrairement à celle de Homey, elle ne concerne que les utilisateurs pris en compte. « Tout utilisateur » couvre tout le monde."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "user_became_asleep",
-            "title": {
-              "en": "A user falls asleep",
-              "nl": "Een gebruiker gaat slapen",
-              "fr": "Un utilisateur s'endort"
-            },
-            "titleFormatted": {
-              "en": "[[user]] falls asleep",
-              "nl": "[[user]] gaat slapen",
-              "fr": "[[user]] s'endort"
-            },
-            "hint": {
-              "en": "Fires when a user is marked as asleep, wherever they are. Unlike Homey's own card, it only fires for users who count. 'Any user' fires for everyone.",
-              "nl": "Gaat af wanneer een gebruiker als slapend wordt gemarkeerd, waar diegene ook is. Anders dan Homey's eigen kaart gaat deze alleen af voor gebruikers die meetellen. 'Elke gebruiker' gaat af voor iedereen.",
-              "fr": "Se déclenche dès qu'un utilisateur est marqué comme endormi, où qu'il soit. Contrairement à celle de Homey, elle ne concerne que les utilisateurs pris en compte. « Tout utilisateur » couvre tout le monde."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "user_left",
-            "title": {
-              "en": "A user goes out",
-              "nl": "Een gebruiker vertrekt",
-              "fr": "Un utilisateur s'en va"
-            },
-            "titleFormatted": {
-              "en": "[[user]] goes out",
-              "nl": "[[user]] vertrekt",
-              "fr": "[[user]] s'en va"
-            },
-            "hint": {
-              "en": "Fires when a user is no longer marked as at home. Unlike Homey's own card, it only fires for users who count. 'Any user' fires for everyone.",
-              "nl": "Gaat af wanneer een gebruiker niet langer als thuis gemarkeerd staat. Anders dan Homey's eigen kaart gaat deze alleen af voor gebruikers die meetellen. 'Elke gebruiker' gaat af voor iedereen.",
-              "fr": "Se déclenche dès qu'un utilisateur n'est plus marqué comme présent. Contrairement à celle de Homey, elle ne concerne que les utilisateurs pris en compte. « Tout utilisateur » couvre tout le monde."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "user_woke_up",
-            "title": {
-              "en": "A user wakes up",
-              "nl": "Een gebruiker wordt wakker",
-              "fr": "Un utilisateur se réveille"
-            },
-            "titleFormatted": {
-              "en": "[[user]] wakes up",
-              "nl": "[[user]] wordt wakker",
-              "fr": "[[user]] se réveille"
-            },
-            "hint": {
-              "en": "Fires when a user is no longer marked as asleep, wherever they are. Unlike Homey's own card, it only fires for users who count. 'Any user' fires for everyone.",
-              "nl": "Gaat af wanneer een gebruiker niet langer als slapend gemarkeerd staat, waar diegene ook is. Anders dan Homey's eigen kaart gaat deze alleen af voor gebruikers die meetellen. 'Elke gebruiker' gaat af voor iedereen.",
-              "fr": "Se déclenche dès qu'un utilisateur n'est plus marqué comme endormi, où qu'il soit. Contrairement à celle de Homey, elle ne concerne que les utilisateurs pris en compte. « Tout utilisateur » couvre tout le monde."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "vacation_ended",
-            "title": {
-              "en": "A user returns from vacation",
-              "nl": "Een gebruiker komt terug van vakantie",
-              "fr": "Un utilisateur revient de vacances"
-            },
-            "titleFormatted": {
-              "en": "[[user]] returns from vacation",
-              "nl": "[[user]] komt terug van vakantie",
-              "fr": "[[user]] revient de vacances"
-            },
-            "hint": {
-              "en": "Fires when a user's vacation is cleared, also automatically when Homey sees them come home. 'Any user' fires for everyone; the User tag says who.",
-              "nl": "Gaat af wanneer de vakantie van een gebruiker wordt gewist, ook automatisch als Homey diegene thuis ziet komen. 'Elke gebruiker' gaat af voor iedereen; de tag Gebruiker zegt wie.",
-              "fr": "Se déclenche lorsque les vacances d'un utilisateur sont effacées, aussi automatiquement quand Homey le voit rentrer. « Tout utilisateur » se déclenche pour tout le monde ; le tag Utilisateur indique qui."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          },
-          {
-            "id": "vacation_started",
-            "title": {
-              "en": "A user goes on vacation",
-              "nl": "Een gebruiker gaat op vakantie",
-              "fr": "Un utilisateur part en vacances"
-            },
-            "titleFormatted": {
-              "en": "[[user]] goes on vacation",
-              "nl": "[[user]] gaat op vakantie",
-              "fr": "[[user]] part en vacances"
-            },
-            "hint": {
-              "en": "Fires when a user is marked as on vacation, however it was set. 'Any user' fires for everyone; the User tag says who.",
-              "nl": "Gaat af wanneer een gebruiker als op vakantie wordt gemarkeerd, hoe dat ook is ingesteld. 'Elke gebruiker' gaat af voor iedereen; de tag Gebruiker zegt wie.",
-              "fr": "Se déclenche lorsqu'un utilisateur est marqué comme en vacances, quelle que soit la façon. « Tout utilisateur » se déclenche pour tout le monde ; le tag Utilisateur indique qui."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Any user",
-                  "nl": "Elke gebruiker",
-                  "fr": "Tout utilisateur"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "example": "Alex"
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "count_status",
-            "title": {
-              "en": "The number of users with the status … !{{is|is not}} … …",
-              "nl": "Het aantal gebruikers met de status … !{{is|is niet}} … …",
-              "fr": "Le nombre d'utilisateurs avec le statut … !{{est|n'est pas}} … …"
-            },
-            "titleFormatted": {
-              "en": "The number of users with the status [[status]] !{{is|is not}} [[operator]] [[count]]",
-              "nl": "Het aantal gebruikers met de status [[status]] !{{is|is niet}} [[operator]] [[count]]",
-              "fr": "Le nombre d'utilisateurs avec le statut [[status]] !{{est|n'est pas}} [[operator]] [[count]]"
-            },
-            "hint": {
-              "en": "Counts the users with the status, ignoring those unticked in the settings or disabled in Homey. Choose 'exactly' and 0 to ask whether nobody has it.",
-              "nl": "Telt de gebruikers met de status, zonder wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld. Kies 'precies' en 0 om te vragen of niemand hem heeft.",
-              "fr": "Compte les utilisateurs ayant le statut, sans ceux décochés dans les réglages ou désactivés dans Homey. Choisissez « égal à » et 0 pour savoir si personne ne l'a."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              },
-              {
-                "name": "operator",
-                "type": "dropdown",
-                "title": {
-                  "en": "Comparison",
-                  "nl": "Vergelijking",
-                  "fr": "Comparaison"
-                },
-                "values": [
-                  {
-                    "id": "min",
-                    "title": {
-                      "en": "at least",
-                      "nl": "minstens",
-                      "fr": "supérieur ou égal à"
-                    }
-                  },
-                  {
-                    "id": "exact",
-                    "title": {
-                      "en": "exactly",
-                      "nl": "precies",
-                      "fr": "égal à"
-                    }
-                  },
-                  {
-                    "id": "max",
-                    "title": {
-                      "en": "at most",
-                      "nl": "hoogstens",
-                      "fr": "inférieur ou égal à"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "count",
-                "type": "number",
-                "min": 0,
-                "step": 1,
-                "title": {
-                  "en": "Number",
-                  "nl": "Aantal",
-                  "fr": "Nombre"
-                },
-                "placeholder": {
-                  "en": "1",
-                  "nl": "1",
-                  "fr": "1"
-                }
-              }
-            ]
-          },
-          {
-            "id": "count_users",
-            "title": {
-              "en": "The number of users … !{{is|is not}} … …",
-              "nl": "Het aantal gebruikers … !{{is|is niet}} … …",
-              "fr": "Le nombre d'utilisateurs … !{{est|n'est pas}} … …"
-            },
-            "titleFormatted": {
-              "en": "The number of users [[state]] !{{is|is not}} [[operator]] [[count]]",
-              "nl": "Het aantal gebruikers [[state]] !{{is|is niet}} [[operator]] [[count]]",
-              "fr": "Le nombre d'utilisateurs [[state]] !{{est|n'est pas}} [[operator]] [[count]]"
-            },
-            "hint": {
-              "en": "Counts the chosen group of users, ignoring users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Telt de gekozen groep gebruikers, zonder wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Compte le groupe d'utilisateurs choisi, sans ceux en vacances, décochés dans les réglages ou désactivés dans Homey."
-            },
-            "args": [
-              {
-                "name": "operator",
-                "type": "dropdown",
-                "title": {
-                  "en": "Comparison",
-                  "nl": "Vergelijking",
-                  "fr": "Comparaison"
-                },
-                "values": [
-                  {
-                    "id": "min",
-                    "title": {
-                      "en": "at least",
-                      "nl": "minstens",
-                      "fr": "supérieur ou égal à"
-                    }
-                  },
-                  {
-                    "id": "exact",
-                    "title": {
-                      "en": "exactly",
-                      "nl": "precies",
-                      "fr": "égal à"
-                    }
-                  },
-                  {
-                    "id": "max",
-                    "title": {
-                      "en": "at most",
-                      "nl": "hoogstens",
-                      "fr": "inférieur ou égal à"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "count",
-                "type": "number",
-                "min": 0,
-                "step": 1,
-                "title": {
-                  "en": "Number",
-                  "nl": "Aantal",
-                  "fr": "Nombre"
-                },
-                "placeholder": {
-                  "en": "2",
-                  "nl": "2",
-                  "fr": "2"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "Who",
-                  "nl": "Wie",
-                  "fr": "Qui"
-                },
-                "values": [
-                  {
-                    "id": "home",
-                    "title": {
-                      "en": "at home",
-                      "nl": "thuis",
-                      "fr": "à la maison"
-                    }
-                  },
-                  {
-                    "id": "away",
-                    "title": {
-                      "en": "away",
-                      "nl": "weg",
-                      "fr": "absents"
-                    }
-                  },
-                  {
-                    "id": "awake",
-                    "title": {
-                      "en": "awake",
-                      "nl": "wakker",
-                      "fr": "éveillés"
-                    }
-                  },
-                  {
-                    "id": "asleep",
-                    "title": {
-                      "en": "asleep",
-                      "nl": "slapend",
-                      "fr": "endormis"
-                    }
-                  },
-                  {
-                    "id": "home_awake",
-                    "title": {
-                      "en": "at home and awake",
-                      "nl": "thuis en wakker",
-                      "fr": "à la maison et éveillés"
-                    }
-                  },
-                  {
-                    "id": "home_asleep",
-                    "title": {
-                      "en": "at home and asleep",
-                      "nl": "thuis en slapend",
-                      "fr": "à la maison et endormis"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "everyone_asleep",
-            "title": {
-              "en": "!{{Everyone is asleep|Not everyone is asleep}}",
-              "nl": "!{{Iedereen slaapt|Er is nog iemand wakker}}",
-              "fr": "!{{Tout le monde dort|Quelqu'un est encore éveillé}}"
-            },
-            "hint": {
-              "en": "True when every counted user is asleep; false if nobody counts. Ignores users on vacation, unticked in the settings or disabled in Homey; a sleep status never set counts as awake.",
-              "nl": "Waar wanneer elke meegetelde gebruiker slaapt; onwaar als niemand meetelt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld; een nooit ingestelde slaapstatus telt als wakker.",
-              "fr": "Vrai si chaque utilisateur pris en compte dort ; faux si personne ne compte. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey ; un statut de sommeil jamais défini compte comme éveillé."
-            }
-          },
-          {
-            "id": "everyone_has_status",
-            "title": {
-              "en": "Everyone !{{has|does not have}} the status …",
-              "nl": "Iedereen !{{heeft|heeft niet}} de status …",
-              "fr": "Tout le monde !{{a|n'a pas}} le statut …"
-            },
-            "titleFormatted": {
-              "en": "Everyone !{{has|does not have}} the status [[status]]",
-              "nl": "Iedereen !{{heeft|heeft niet}} de status [[status]]",
-              "fr": "Tout le monde !{{a|n'a pas}} le statut [[status]]"
-            },
-            "hint": {
-              "en": "True when every counted user has the status, false when nobody counts. Ignores users unticked in the settings or disabled in Homey.",
-              "nl": "Waar wanneer elke meegetelde gebruiker de status heeft, onwaar als niemand meetelt. Negeert wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Vrai si chaque utilisateur pris en compte a le statut, faux si personne ne compte. Ignore les utilisateurs décochés dans les réglages ou désactivés dans Homey."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              }
-            ]
-          },
-          {
-            "id": "everyone_home",
-            "title": {
-              "en": "!{{Everyone is at home|Not everyone is at home}}",
-              "nl": "!{{Iedereen is thuis|Niet iedereen is thuis}}",
-              "fr": "!{{Tout le monde est à la maison|Quelqu'un n'est pas à la maison}}"
-            },
-            "hint": {
-              "en": "True when every counted user is at home; false if nobody counts. Ignores users on vacation, unticked in the settings or disabled in Homey; a presence never set counts as not at home.",
-              "nl": "Waar wanneer elke meegetelde gebruiker thuis is; onwaar als niemand meetelt. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld; een nooit ingestelde aanwezigheid telt als niet thuis.",
-              "fr": "Vrai si chaque utilisateur pris en compte est à la maison ; faux si personne ne compte. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey ; une présence jamais définie compte comme absent."
-            }
-          },
-          {
-            "id": "everyone_home_asleep",
-            "title": {
-              "en": "!{{Everyone at home is asleep|Not everyone at home is asleep}}",
-              "nl": "!{{Iedereen die thuis is, slaapt|Er is thuis nog iemand wakker}}",
-              "fr": "!{{Tout le monde à la maison dort|Quelqu'un est encore éveillé à la maison}}"
-            },
-            "hint": {
-              "en": "True when everyone at home is asleep, even while others are out; false if nobody is home. Ignores users on vacation, unticked in the settings or disabled in Homey.",
-              "nl": "Waar wanneer iedereen thuis slaapt, ook als anderen weg zijn; onwaar als er niemand thuis is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Vrai si tous ceux à la maison dorment, même si d'autres sont sortis ; faux si personne n'est là. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey."
-            }
-          },
-          {
-            "id": "everyone_on_vacation",
-            "title": {
-              "en": "!{{Everyone is on vacation|Not everyone is on vacation}}",
-              "nl": "!{{Iedereen is op vakantie|Niet iedereen is op vakantie}}",
-              "fr": "!{{Tout le monde est en vacances|Quelqu'un n'est pas en vacances}}"
-            },
-            "hint": {
-              "en": "True when every counted user is on vacation, false when nobody counts. Ignores users unticked in the settings or disabled in Homey.",
-              "nl": "Waar wanneer elke meegetelde gebruiker op vakantie is, onwaar als niemand meetelt. Negeert wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld.",
-              "fr": "Vrai si chaque utilisateur pris en compte est en vacances, faux si personne ne compte. Ignore les utilisateurs décochés dans les réglages ou désactivés dans Homey."
-            }
-          },
-          {
-            "id": "nobody_on_vacation",
-            "title": {
-              "en": "!{{Nobody is on vacation|Someone is on vacation}}",
-              "nl": "!{{Niemand is op vakantie|Iemand is op vakantie}}",
-              "fr": "!{{Personne n'est en vacances|Quelqu'un est en vacances}}"
-            },
-            "hint": {
-              "en": "True when no counted user is on vacation. Ignores users unticked in the settings or disabled in Homey; invert the card to ask whether anyone is away.",
-              "nl": "Waar wanneer geen enkele meegetelde gebruiker op vakantie is. Negeert wie in de instellingen is uitgevinkt of in Homey is uitgeschakeld; draai de kaart om om te vragen of iemand weg is.",
-              "fr": "Vrai si aucun utilisateur pris en compte n'est en vacances. Ignore les utilisateurs décochés dans les réglages ou désactivés dans Homey ; inversez la carte pour savoir si quelqu'un est parti."
-            }
-          },
-          {
-            "id": "one_home_awake",
-            "title": {
-              "en": "!{{Exactly one person at home is awake|Not exactly one person at home is awake}}",
-              "nl": "!{{Er is thuis precies één persoon wakker|Er is thuis niet precies één persoon wakker}}",
-              "fr": "!{{Il y a exactement une personne éveillée à la maison|Il n'y a pas exactement une personne éveillée à la maison}}"
-            },
-            "hint": {
-              "en": "True when exactly one user at home is awake. Ignores users on vacation, unticked in the settings or disabled in Homey; a sleep status never set counts as awake.",
-              "nl": "Waar wanneer precies één gebruiker thuis wakker is. Negeert wie op vakantie is, in de instellingen is uitgevinkt of in Homey is uitgeschakeld; een nooit ingestelde slaapstatus telt als wakker.",
-              "fr": "Vrai si exactement une personne à la maison est éveillée. Ignore les utilisateurs en vacances, décochés dans les réglages ou désactivés dans Homey ; un statut de sommeil jamais défini compte comme éveillé."
-            }
-          },
-          {
-            "id": "user_asleep",
-            "title": {
-              "en": "A user is !{{asleep|awake}}",
-              "nl": "Een gebruiker !{{slaapt|slaapt niet}}",
-              "fr": "Un utilisateur !{{dort|ne dort pas}}"
-            },
-            "titleFormatted": {
-              "en": "[[user]] is !{{asleep|awake}}",
-              "nl": "[[user]] !{{slaapt|slaapt niet}}",
-              "fr": "[[user]] !{{dort|ne dort pas}}"
-            },
-            "hint": {
-              "en": "True when the chosen user is asleep, wherever they are. A sleep status never set counts as awake.",
-              "nl": "Waar wanneer de gekozen gebruiker slaapt, waar diegene ook is. Een nooit ingestelde slaapstatus telt als wakker.",
-              "fr": "Vrai si l'utilisateur choisi dort, où qu'il soit. Un statut de sommeil jamais défini compte comme éveillé."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Choose a user…",
-                  "nl": "Kies een gebruiker…",
-                  "fr": "Choisissez un utilisateur…"
-                }
-              }
-            ]
-          },
-          {
-            "id": "user_at_home",
-            "title": {
-              "en": "A user is !{{at home|not at home}}",
-              "nl": "Een gebruiker is !{{thuis|niet thuis}}",
-              "fr": "Un utilisateur !{{est à la maison|n'est pas à la maison}}"
-            },
-            "titleFormatted": {
-              "en": "[[user]] is !{{at home|not at home}}",
-              "nl": "[[user]] is !{{thuis|niet thuis}}",
-              "fr": "[[user]] !{{est à la maison|n'est pas à la maison}}"
-            },
-            "hint": {
-              "en": "True when the chosen user is at home, even if on vacation. A presence never set counts as not at home.",
-              "nl": "Waar wanneer de gekozen gebruiker thuis is, ook op vakantie. Een nooit ingestelde aanwezigheid telt als niet thuis.",
-              "fr": "Vrai si l'utilisateur choisi est à la maison, même en vacances. Une présence jamais définie compte comme absent."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Choose a user…",
-                  "nl": "Kies een gebruiker…",
-                  "fr": "Choisissez un utilisateur…"
-                }
-              }
-            ]
-          },
-          {
-            "id": "user_has_status",
-            "title": {
-              "en": "A user !{{has|does not have}} the status …",
-              "nl": "Een gebruiker !{{heeft|heeft niet}} de status …",
-              "fr": "Un utilisateur !{{a|n'a pas}} le statut …"
-            },
-            "titleFormatted": {
-              "en": "[[user]] !{{has|does not have}} the status [[status]]",
-              "nl": "[[user]] !{{heeft|heeft niet}} de status [[status]]",
-              "fr": "[[user]] !{{a|n'a pas}} le statut [[status]]"
-            },
-            "hint": {
-              "en": "True when the chosen user has the status, even if on vacation or unticked in the settings. A status never given counts as not held.",
-              "nl": "Waar wanneer de gekozen gebruiker de status heeft, ook op vakantie of uitgevinkt in de instellingen. Een nooit gegeven status telt als niet aanwezig.",
-              "fr": "Vrai si l'utilisateur choisi a le statut, même en vacances ou décoché dans les réglages. Un statut jamais attribué compte comme absent."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              },
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Choose a user…",
-                  "nl": "Kies een gebruiker…",
-                  "fr": "Choisissez un utilisateur…"
-                }
-              }
-            ]
-          },
-          {
-            "id": "user_on_vacation",
-            "title": {
-              "en": "A user is !{{on vacation|not on vacation}}",
-              "nl": "Een gebruiker is !{{op vakantie|niet op vakantie}}",
-              "fr": "Un utilisateur !{{est en vacances|n'est pas en vacances}}"
-            },
-            "titleFormatted": {
-              "en": "[[user]] is !{{on vacation|not on vacation}}",
-              "nl": "[[user]] is !{{op vakantie|niet op vakantie}}",
-              "fr": "[[user]] !{{est en vacances|n'est pas en vacances}}"
-            },
-            "hint": {
-              "en": "True when this app has the chosen user marked as on vacation.",
-              "nl": "Waar wanneer deze app de gekozen gebruiker als op vakantie heeft gemarkeerd.",
-              "fr": "Vrai si cette app a marqué l'utilisateur choisi comme en vacances."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Choose a user…",
-                  "nl": "Kies een gebruiker…",
-                  "fr": "Choisissez un utilisateur…"
-                }
-              }
-            ]
-          }
-        ],
-        "actions": [
-          {
-            "id": "set_status",
-            "title": {
-              "en": "Set … for … to …",
-              "nl": "Zet … voor … op …",
-              "fr": "Définir … pour … sur …"
-            },
-            "titleFormatted": {
-              "en": "Set [[status]] for [[user]] to [[state]]",
-              "nl": "Zet [[status]] voor [[user]] op [[state]]",
-              "fr": "Définir [[status]] pour [[user]] sur [[state]]"
-            },
-            "hint": {
-              "en": "Gives the chosen user the status, takes it away or flips it. It is the same status as on the settings page and device tiles.",
-              "nl": "Geeft de gekozen gebruiker de status, neemt hem weg of keert hem om. Dit is dezelfde status als op de instellingenpagina en in apparaattegels.",
-              "fr": "Donne le statut à l'utilisateur choisi, le retire ou l'inverse. C'est le même statut que sur la page de réglages et dans les tuiles d'appareil."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              },
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Choose a user…",
-                  "nl": "Kies een gebruiker…",
-                  "fr": "Choisissez un utilisateur…"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "Set to",
-                  "nl": "Zetten op",
-                  "fr": "Définir sur"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "on",
-                      "nl": "aan",
-                      "fr": "activé"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "off",
-                      "nl": "uit",
-                      "fr": "désactivé"
-                    }
-                  },
-                  {
-                    "id": "toggle",
-                    "title": {
-                      "en": "the other way round",
-                      "nl": "omgekeerd",
-                      "fr": "inversé"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_status_all",
-            "title": {
-              "en": "Set … for everyone to …",
-              "nl": "Zet … voor iedereen op …",
-              "fr": "Définir … pour tout le monde sur …"
-            },
-            "titleFormatted": {
-              "en": "Set [[status]] for everyone to [[state]]",
-              "nl": "Zet [[status]] voor iedereen op [[state]]",
-              "fr": "Définir [[status]] pour tout le monde sur [[state]]"
-            },
-            "hint": {
-              "en": "Gives every user the status or takes it from all of them in one change, so cards like 'Everyone has the status …' fire once. Skips accounts disabled in Homey.",
-              "nl": "Geeft iedereen de status of neemt hem van iedereen af in één wijziging, zodat kaarten als 'Iedereen heeft de status …' één keer afgaan. Slaat in Homey uitgeschakelde accounts over.",
-              "fr": "Donne le statut à tout le monde ou le retire à tous en une seule modification : des cartes comme « Tout le monde a le statut … » se déclenchent une fois. Ignore les comptes désactivés dans Homey."
-            },
-            "args": [
-              {
-                "name": "status",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "placeholder": {
-                  "en": "Choose a status…",
-                  "nl": "Kies een status…",
-                  "fr": "Choisissez un statut…"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "Set to",
-                  "nl": "Zetten op",
-                  "fr": "Définir sur"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "on",
-                      "nl": "aan",
-                      "fr": "activé"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "off",
-                      "nl": "uit",
-                      "fr": "désactivé"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_vacation",
-            "title": {
-              "en": "Set the status of … to …",
-              "nl": "Zet de status van … op …",
-              "fr": "Définir le statut de … sur …"
-            },
-            "titleFormatted": {
-              "en": "Set the status of [[user]] to [[state]]",
-              "nl": "Zet de status van [[user]] op [[state]]",
-              "fr": "Définir le statut de [[user]] sur [[state]]"
-            },
-            "hint": {
-              "en": "Puts the chosen user on vacation, brings them back or flips it. Users on vacation are left out of the 'everyone' cards.",
-              "nl": "Zet de gekozen gebruiker op vakantie, haalt hem terug of keert de stand om. Wie op vakantie is, telt niet mee in de 'iedereen'-kaarten.",
-              "fr": "Met l'utilisateur choisi en vacances, le fait revenir ou inverse l'état. Une personne en vacances n'est pas prise en compte dans les cartes « tout le monde »."
-            },
-            "args": [
-              {
-                "name": "user",
-                "type": "autocomplete",
-                "title": {
-                  "en": "User",
-                  "nl": "Gebruiker",
-                  "fr": "Utilisateur"
-                },
-                "placeholder": {
-                  "en": "Choose a user…",
-                  "nl": "Kies een gebruiker…",
-                  "fr": "Choisissez un utilisateur…"
-                }
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "on vacation",
-                      "nl": "op vakantie",
-                      "fr": "en vacances"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "returned",
-                      "nl": "terug",
-                      "fr": "de retour"
-                    }
-                  },
-                  {
-                    "id": "toggle",
-                    "title": {
-                      "en": "the other way round",
-                      "nl": "omgekeerd",
-                      "fr": "inversé"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_vacation_all",
-            "title": {
-              "en": "Mark everyone as …",
-              "nl": "Markeer iedereen als …",
-              "fr": "Marquer tout le monde comme …"
-            },
-            "titleFormatted": {
-              "en": "Mark everyone as [[state]]",
-              "nl": "Markeer iedereen als [[state]]",
-              "fr": "Marquer tout le monde comme [[state]]"
-            },
-            "hint": {
-              "en": "Puts every user on vacation or brings them all back in one change, so 'Everyone is on vacation' and 'Nobody is on vacation any more' fire once. Skips accounts disabled in Homey.",
-              "nl": "Zet iedereen op vakantie of haalt iedereen terug in één wijziging, zodat 'Iedereen is op vakantie' en 'Niemand is nog op vakantie' één keer afgaan. Slaat in Homey uitgeschakelde accounts over.",
-              "fr": "Met tout le monde en vacances ou le fait revenir en une fois : « Tout le monde est en vacances » et « Plus personne n'est en vacances » se déclenchent une seule fois. Ignore les comptes désactivés dans Homey."
-            },
-            "args": [
-              {
-                "name": "state",
-                "type": "dropdown",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status",
-                  "fr": "Statut"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "on vacation",
-                      "nl": "op vakantie",
-                      "fr": "en vacances"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "returned",
-                      "nl": "terug",
-                      "fr": "de retour"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": null,
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-10-05T09:58:56.306Z",
-      "bugs": "https://github.com/LionelDerBoven/com.additionaluserstatuses.community/issues",
+      "stateChangedAt": "2026-10-05T11:50:35.804Z",
+      "bugs": "https://github.com/LionelDerBoven/com.advancedwaiting.community/issues",
       "homepage": null,
       "support": "mailto:support@ldbtechnology.be",
-      "source": "https://github.com/LionelDerBoven/com.additionaluserstatuses.community",
+      "source": "https://github.com/LionelDerBoven/com.advancedwaiting.community",
       "contributors": null,
       "contributing": null,
-      "permissions": [
-        "homey:manager:api"
-      ],
+      "permissions": [],
       "changelog": {
-        "en": "Every error message is now shown in your own language, and the settings page and its API refuse a user that does not exist instead of storing it. When you delete a status, the devices that belong to it are marked unavailable straight away. Log times follow your Homey's timezone, household names no longer end up in Homey's diagnostic log, and the settings page now shows the limits on the number of statuses and the length of a status name. Also comes with a new app icon and new images for the App Store. Every card now has a short, clear hint, and the counting cards read right for a count of one.",
-        "nl": "Elke foutmelding verschijnt nu in je eigen taal, en de instellingenpagina en de bijbehorende API weigeren een gebruiker die niet bestaat in plaats van die op te slaan. Als je een status verwijdert, worden de apparaten die erbij horen meteen als niet beschikbaar gemarkeerd. De tijden in het logboek volgen de tijdzone van je Homey, namen van huisgenoten komen niet meer in het diagnostische logboek van Homey terecht, en de instellingenpagina toont nu de grenzen voor het aantal statussen en de lengte van een statusnaam. Er is ook een nieuw app-icoon en er zijn nieuwe afbeeldingen voor de App Store. Elke kaart heeft nu een korte, duidelijke uitleg, en de telkaarten lezen ook goed bij een aantal van één.",
-        "fr": "Chaque message d'erreur s'affiche désormais dans votre langue, et la page des réglages ainsi que son API refusent un utilisateur qui n'existe pas au lieu de l'enregistrer. Quand vous supprimez un statut, les appareils qui lui sont liés sont aussitôt marqués comme indisponibles. Les heures du journal suivent le fuseau horaire de votre Homey, les noms des membres du foyer n'arrivent plus dans le journal de diagnostic de Homey, et la page des réglages affiche maintenant les limites du nombre de statuts et de la longueur d'un nom de statut. L'app reçoit aussi une nouvelle icône et de nouvelles images pour l'App Store. Chaque carte a désormais une explication courte et claire, et les cartes de comptage se lisent bien aussi pour un seul utilisateur."
+        "en": "First App Store release: one Wait card for standard and Advanced Flows, from 1 millisecond up to 85 seconds.",
+        "nl": "Eerste release in de App Store: één Wacht-kaart voor gewone Flows en Advanced Flows, van 1 milliseconde tot 85 seconden.",
+        "fr": "Première version sur l'App Store : une carte Attendre pour les Flows standard et les Advanced Flows, de 1 milliseconde à 85 secondes."
       },
       "compatibility": ">=12.4.0",
       "tags": null,
@@ -3777,7 +122,7 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "2.3.2",
+    "liveVersion": "1.1.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
@@ -3787,6 +132,949 @@
       "type": "user",
       "userId": "6749503c85bc7e016b077b1f",
       "name": "Lionel Der Boven",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.lxillumi.illumihome",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "illumi Home"
+      },
+      "version": "1.0.2",
+      "readme": {
+        "en": "Connect your illumi Home ledstrips to Homey and use them in your Flows. Note that the LED strip connection is stateless, this means that any state changes from the physical remote or illumi Home mobile app won't get reflected in Homey."
+      },
+      "description": {
+        "en": "LED strips for everyone"
+      },
+      "category": "lights",
+      "brandColor": "#4F6DF3",
+      "icon": "https://apps.homeycdn.net/app/com.lxillumi.illumihome/3/7e5129ca-af5a-4368-9a8b-3999c2447682/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.lxillumi.illumihome/3/7e5129ca-af5a-4368-9a8b-3999c2447682/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.lxillumi.illumihome/3/7e5129ca-af5a-4368-9a8b-3999c2447682/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "led-strip",
+          "name": {
+            "en": "LED Strip"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lxillumi.illumihome/3/7e5129ca-af5a-4368-9a8b-3999c2447682/drivers/led-strip/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lxillumi.illumihome/3/7e5129ca-af5a-4368-9a8b-3999c2447682/drivers/led-strip/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "ble"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lxillumi.illumihome/3/7e5129ca-af5a-4368-9a8b-3999c2447682/drivers/led-strip/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 160263,
+      "state": "live",
+      "stateChangedAt": "2026-10-05T11:40:52.120Z",
+      "bugs": "https://github.com/smarthomesven/homey-illumi-home/issues",
+      "homepage": null,
+      "support": null,
+      "source": "https://github.com/smarthomesven/homey-illumi-home",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:ble"
+      ],
+      "changelog": {
+        "en": "Added automatic time sync"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.2",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "68e268c515677f0f51ffe6f4",
+      "type": "user",
+      "userId": "61a14172451f950bc20cc18a",
+      "name": "Sven Serlier",
+      "verified": false
+    },
+    "communityTopicId": 160263
+  },
+  {
+    "id": "com.wisse.ocppbridge",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "OCPP Bridge"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "OCPP Bridge makes Homey the place where your electric car charges smartly. Your home charger connects straight to Homey over your own network, so you can see what it is doing at a glance and let your Flows decide when and how fast to charge, for example on cheap hours or on your own solar power.\n\nMost home chargers are also linked to a charging provider for invoices, charge cards or an app. With OCPP Bridge that link stays intact: Homey sits in the middle and passes everything on, so your provider keeps working exactly as before, and the app quietly repairs the connection when it drops. Setup takes a few minutes and needs no technical knowledge: Homey shows the address to enter in your charger and finds the charger by itself. You need a Homey Pro and a charger that supports OCPP 1.6 (JSON), which most modern wallboxes do.\n"
+      },
+      "description": {
+        "en": "Smart charging from Homey, with your charging provider still on board."
+      },
+      "category": "energy",
+      "brandColor": "#0F766E",
+      "icon": "https://apps.homeycdn.net/app/com.wisse.ocppbridge/1/c9ef16cd-854f-4e14-be6b-f4410a8a3c3c/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.wisse.ocppbridge/1/c9ef16cd-854f-4e14-be6b-f4410a8a3c3c/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.wisse.ocppbridge/1/c9ef16cd-854f-4e14-be6b-f4410a8a3c3c/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "charger",
+          "name": {
+            "en": "EV charger"
+          },
+          "class": "evcharger",
+          "capabilities": [
+            "onoff",
+            "measure_power",
+            "meter_power",
+            "measure_current",
+            "measure_voltage",
+            "charging_status",
+            "alarm_generic"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Charging"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Connection problem"
+              }
+            }
+          },
+          "energy": {
+            "evCharger": true,
+            "meterPowerImportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.wisse.ocppbridge/1/c9ef16cd-854f-4e14-be6b-f4410a8a3c3c/drivers/charger/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.wisse.ocppbridge/1/c9ef16cd-854f-4e14-be6b-f4410a8a3c3c/drivers/charger/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.wisse.ocppbridge/1/c9ef16cd-854f-4e14-be6b-f4410a8a3c3c/drivers/charger/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "connection_alert",
+            "title": {
+              "en": "Connection alert"
+            },
+            "hint": {
+              "en": "Fires when the charging provider or charger connection has been down for a while, was restored automatically, or could not be restored. Use the message tag in a Flow that sends a push notification."
+            },
+            "tokens": [
+              {
+                "name": "kind",
+                "type": "string",
+                "title": {
+                  "en": "Type"
+                },
+                "example": "problem"
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Message"
+                },
+                "example": {
+                  "en": "The connection to your charging provider is back after 3 min."
+                }
+              }
+            ]
+          },
+          {
+            "id": "charging_started",
+            "title": {
+              "en": "Charging started"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "charging_stopped",
+            "title": {
+              "en": "Charging stopped"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "vehicle_connected",
+            "title": {
+              "en": "A car was plugged in"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "vehicle_disconnected",
+            "title": {
+              "en": "The car was unplugged"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "connection_lost",
+            "title": {
+              "en": "Charger connection lost"
+            },
+            "hint": {
+              "en": "The charger lost its connection to Homey, for example because of a power cut or wifi problem."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason"
+                },
+                "example": {
+                  "en": "The charger is not connected to Homey."
+                }
+              }
+            ]
+          },
+          {
+            "id": "connection_restored",
+            "title": {
+              "en": "Charger connection restored"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "is_charging",
+            "title": {
+              "en": "Charger !{{is|isn't}} charging"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "backoffice_connected",
+            "title": {
+              "en": "Charging provider !{{is|isn't}} connected"
+            },
+            "hint": {
+              "en": "Whether Homey currently has a working connection to the charging provider set for this charger."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "start_charging",
+            "title": {
+              "en": "Start charging"
+            },
+            "hint": {
+              "en": "A car must be plugged in."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "stop_charging",
+            "title": {
+              "en": "Stop charging"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              }
+            ]
+          },
+          {
+            "id": "set_charging_current_limit",
+            "title": {
+              "en": "Set maximum charging current"
+            },
+            "titleFormatted": {
+              "en": "Set maximum charging current to [[amps]] A"
+            },
+            "hint": {
+              "en": "Limits how fast the car charges, for example to match solar surplus. The value is kept between the lowest and highest current set in the device settings; a charger cannot charge slower than its lowest step."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=charger"
+              },
+              {
+                "type": "number",
+                "name": "amps",
+                "title": {
+                  "en": "Amps"
+                },
+                "min": 1,
+                "max": 80,
+                "step": 1,
+                "placeholder": {
+                  "en": "16"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-05T11:40:15.981Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:wissekoelman@gmail.com",
+      "source": null,
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "TheWiZZ69"
+          }
+        }
+      },
+      "permissions": [],
+      "changelog": {
+        "en": "First release: smart charging for your OCPP 1.6 charger from Homey, with your charging provider kept connected, a guided setup, automatic recovery and a built-in event log."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "ocpp",
+          "ocpp 1.6",
+          "ev",
+          "ev charger",
+          "electric vehicle",
+          "wallbox",
+          "charging station",
+          "charge point",
+          "smart charging",
+          "solar charging",
+          "backoffice",
+          "proxy"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a9e8ad4336db3df05ad62f1",
+      "type": "user",
+      "userId": "6a038683bf064391312c0c3c",
+      "name": "Wisse Koelman",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.thermia",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Thermia Heat Pump",
+        "nl": "Thermia Warmtepomp"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "Keep an eye on your Thermia heat pump and control it from Homey, entirely locally and without the cloud. Switch heating and hot water on or off, adjust the temperature, follow what the heat pump is doing right now and see how much energy it uses for heating, hot water and cooling.\n\nEnable Modbus TCP/IP on the heat pump (Settings / BMS on the display), connect it to your network and add it in Homey with its IP address. Is your heat pump missing a room sensor or power meter? Feed those values in from other devices with Flow. This app is not affiliated with or endorsed by Thermia AB.\n",
+        "nl": "Houd je Thermia warmtepomp in de gaten en bedien hem vanuit Homey, volledig lokaal en zonder cloud. Zet verwarming en warm water aan of uit, pas de temperatuur aan, zie wat de warmtepomp op dit moment doet en bekijk hoeveel energie hij verbruikt voor verwarmen, warm water en koelen.\n\nSchakel Modbus TCP/IP in op de warmtepomp (Settings / BMS op het display), verbind hem met je netwerk en voeg hem toe in Homey met zijn IP-adres. Mist je warmtepomp een kamersensor of vermogensmeter? Voer die waarden dan in vanuit andere apparaten met Flow. Deze app is niet gelieerd aan of goedgekeurd door Thermia AB.\n"
+      },
+      "description": {
+        "en": "Sustainable comfort, smartly controlled",
+        "nl": "Duurzaam comfort, slim geregeld"
+      },
+      "category": "climate",
+      "brandColor": "#E8622C",
+      "icon": "https://apps.homeycdn.net/app/com.thermia/2/62fab0b0-778a-43b0-9f05-2b2db962b81c/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.thermia/2/62fab0b0-778a-43b0-9f05-2b2db962b81c/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.thermia/2/62fab0b0-778a-43b0-9f05-2b2db962b81c/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "heatpump",
+          "name": {
+            "en": "Thermia Heat Pump",
+            "nl": "Thermia Warmtepomp"
+          },
+          "class": "heatpump",
+          "capabilities": [
+            "onoff",
+            "onoff.warmwater",
+            "thermia_status",
+            "target_temperature",
+            "measure_temperature",
+            "measure_temperature.outdoor",
+            "measure_temperature.flow",
+            "measure_temperature.return",
+            "measure_temperature.target_flow",
+            "measure_temperature.tapwater_top",
+            "measure_temperature.tapwater_bottom",
+            "measure_temperature.brine_out",
+            "measure_temperature.brine_in",
+            "target_temperature.tapwater_start",
+            "target_temperature.tapwater_stop",
+            "thermia_pump_speed.circulation",
+            "thermia_pump_speed.brine",
+            "measure_power",
+            "meter_power",
+            "meter_power.heating",
+            "meter_power.tapwater",
+            "meter_power.cooling"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Power",
+                "nl": "Aan/uit"
+              }
+            },
+            "onoff.warmwater": {
+              "title": {
+                "en": "Hot water",
+                "nl": "Warm Water"
+              },
+              "insightsTitleTrue": {
+                "en": "Hot water turned on",
+                "nl": "Warm water aangezet"
+              },
+              "insightsTitleFalse": {
+                "en": "Hot water turned off",
+                "nl": "Warm water uitgezet"
+              }
+            },
+            "target_temperature": {
+              "title": {
+                "en": "Heating to",
+                "nl": "Verwarmen naar"
+              },
+              "min": 5,
+              "max": 30,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Indoor",
+                "nl": "Binnentemperatuur"
+              }
+            },
+            "measure_temperature.outdoor": {
+              "title": {
+                "en": "Outdoor",
+                "nl": "Buitentemperatuur"
+              }
+            },
+            "measure_temperature.flow": {
+              "title": {
+                "en": "Flow",
+                "nl": "Aanvoer"
+              }
+            },
+            "measure_temperature.return": {
+              "title": {
+                "en": "Return",
+                "nl": "Retour"
+              }
+            },
+            "measure_temperature.target_flow": {
+              "title": {
+                "en": "Desired flow",
+                "nl": "Gewenst aanvoer"
+              }
+            },
+            "measure_temperature.tapwater_top": {
+              "title": {
+                "en": "Hot water top",
+                "nl": "Tapwater boven"
+              }
+            },
+            "measure_temperature.tapwater_bottom": {
+              "title": {
+                "en": "Hot water bottom",
+                "nl": "Tapwater beneden"
+              }
+            },
+            "measure_temperature.brine_out": {
+              "title": {
+                "en": "Brine out",
+                "nl": "Brine naar"
+              }
+            },
+            "measure_temperature.brine_in": {
+              "title": {
+                "en": "Brine in",
+                "nl": "Brine van"
+              }
+            },
+            "target_temperature.tapwater_start": {
+              "title": {
+                "en": "Hot water start temperature",
+                "nl": "Starttemperatuur tapwater"
+              },
+              "min": 0,
+              "max": 70,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "target_temperature.tapwater_stop": {
+              "title": {
+                "en": "Hot water stop temperature",
+                "nl": "Stoptemperatuur tapwater"
+              },
+              "min": 0,
+              "max": 70,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "thermia_pump_speed.circulation": {
+              "title": {
+                "en": "Circulation pump",
+                "nl": "Circulatiepomp"
+              }
+            },
+            "thermia_pump_speed.brine": {
+              "title": {
+                "en": "Brine pump",
+                "nl": "Brinepomp"
+              }
+            },
+            "meter_power": {
+              "title": {
+                "en": "Total energy",
+                "nl": "Totale energie"
+              }
+            },
+            "meter_power.heating": {
+              "title": {
+                "en": "Heating energy",
+                "nl": "Warmte energie"
+              },
+              "decimals": 2
+            },
+            "meter_power.tapwater": {
+              "title": {
+                "en": "Hot water energy",
+                "nl": "Warmwater energie"
+              },
+              "decimals": 2
+            },
+            "meter_power.cooling": {
+              "title": {
+                "en": "Cooling energy",
+                "nl": "Koeling energie"
+              },
+              "decimals": 2
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.thermia/2/62fab0b0-778a-43b0-9f05-2b2db962b81c/drivers/heatpump/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.thermia/2/62fab0b0-778a-43b0-9f05-2b2db962b81c/drivers/heatpump/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.thermia/2/62fab0b0-778a-43b0-9f05-2b2db962b81c/drivers/heatpump/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "warmwater_turned_on",
+            "title": {
+              "en": "Hot water turned on",
+              "nl": "Warm water is aangezet"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              }
+            ]
+          },
+          {
+            "id": "warmwater_turned_off",
+            "title": {
+              "en": "Hot water turned off",
+              "nl": "Warm water is uitgezet"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              }
+            ]
+          },
+          {
+            "id": "status_changed",
+            "title": {
+              "en": "Status changed",
+              "nl": "Status is gewijzigd"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                }
+              },
+              {
+                "name": "status_code",
+                "type": "number",
+                "title": {
+                  "en": "Status code",
+                  "nl": "Statuscode"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": null,
+        "actions": [
+          {
+            "id": "set_tapwater_start_temperature",
+            "title": {
+              "en": "Set hot water start temperature",
+              "nl": "Zet starttemperatuur tapwater"
+            },
+            "titleFormatted": {
+              "en": "Set hot water start temperature to [[temperature]]",
+              "nl": "Zet starttemperatuur tapwater naar [[temperature]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "min": 0,
+                "max": 70,
+                "step": 0.5
+              }
+            ]
+          },
+          {
+            "id": "set_tapwater_stop_temperature",
+            "title": {
+              "en": "Set hot water stop temperature",
+              "nl": "Zet stoptemperatuur tapwater"
+            },
+            "titleFormatted": {
+              "en": "Set hot water stop temperature to [[temperature]]",
+              "nl": "Zet stoptemperatuur tapwater naar [[temperature]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "min": 0,
+                "max": 70,
+                "step": 0.5
+              }
+            ]
+          },
+          {
+            "id": "turn_warmwater_on",
+            "title": {
+              "en": "Turn hot water on",
+              "nl": "Zet warm water aan"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              }
+            ]
+          },
+          {
+            "id": "turn_warmwater_off",
+            "title": {
+              "en": "Turn hot water off",
+              "nl": "Zet warm water uit"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              }
+            ]
+          },
+          {
+            "id": "update_outdoor_temperature",
+            "title": {
+              "en": "Update outdoor temperature",
+              "nl": "Update buitentemperatuur"
+            },
+            "titleFormatted": {
+              "en": "Update outdoor temperature to [[temperature]]",
+              "nl": "Update buitentemperatuur naar [[temperature]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "en": "Temperature",
+                  "nl": "Temperatuur"
+                },
+                "min": -50,
+                "max": 60,
+                "step": 0.1
+              }
+            ]
+          },
+          {
+            "id": "update_indoor_temperature",
+            "title": {
+              "en": "Update indoor temperature",
+              "nl": "Update binnentemperatuur"
+            },
+            "titleFormatted": {
+              "en": "Update indoor temperature to [[temperature]]",
+              "nl": "Update binnentemperatuur naar [[temperature]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "en": "Temperature",
+                  "nl": "Temperatuur"
+                },
+                "min": -30,
+                "max": 60,
+                "step": 0.1
+              }
+            ]
+          },
+          {
+            "id": "update_power",
+            "title": {
+              "en": "Update power",
+              "nl": "Update vermogen"
+            },
+            "titleFormatted": {
+              "en": "Update power to [[power]]",
+              "nl": "Update vermogen naar [[power]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (W)",
+                  "nl": "Vermogen (W)"
+                },
+                "min": 0,
+                "max": 100000,
+                "step": 1
+              }
+            ]
+          },
+          {
+            "id": "update_total_energy",
+            "title": {
+              "en": "Update total energy",
+              "nl": "Update totale energie"
+            },
+            "titleFormatted": {
+              "en": "Update total energy to [[energy]]",
+              "nl": "Update totale energie naar [[energy]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=heatpump"
+              },
+              {
+                "name": "energy",
+                "type": "number",
+                "title": {
+                  "en": "Energy (kWh)",
+                  "nl": "Energie (kWh)"
+                },
+                "min": 0,
+                "max": 100000000,
+                "step": 0.01
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-05T11:58:47.882Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:ruud@schellekens.info",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Improved store listing and removed the Homey API permission. Outdoor/indoor temperature and power/energy can now be fed in via Flow cards.",
+        "nl": "Verbeterde store-pagina en de Homey API-permissie verwijderd. Buiten-/binnentemperatuur en vermogen/energie kunnen nu via Flowkaarten worden doorgegeven."
+      },
+      "compatibility": ">=12.13.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ab63a4230dc90a8d6e48c88",
+      "type": "user",
+      "userId": "6671cb109b1e11af19da168e",
+      "name": "Ruud Schellekens",
       "verified": false
     },
     "communityTopicId": null

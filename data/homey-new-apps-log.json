@@ -622,5 +622,53 @@
     "updatedAt": "2026-10-05T10:37:11.303Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-05T10:37:08.581Z"
+  },
+  {
+    "appId": "com.advancedwaiting.community",
+    "name": "Advanced Waiting",
+    "developerName": "Lionel Der Boven",
+    "developerId": "6ac154fcbdc7ced970ff943b",
+    "version": "1.1.1",
+    "sourceRepository": "https://github.com/LionelDerBoven/com.advancedwaiting.community",
+    "publishedAt": "2026-10-06T01:00:54.628Z",
+    "updatedAt": "2026-10-06T01:00:54.628Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-06T01:00:54.628Z"
+  },
+  {
+    "appId": "com.lxillumi.illumihome",
+    "name": "illumi Home",
+    "developerName": "Sven Serlier",
+    "developerId": "68e268c515677f0f51ffe6f4",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/smarthomesven/homey-illumi-home",
+    "publishedAt": "2026-10-06T01:00:55.654Z",
+    "updatedAt": "2026-10-06T01:00:55.654Z",
+    "communityTopicId": 160263,
+    "discoveredAt": "2026-10-06T01:00:54.628Z"
+  },
+  {
+    "appId": "com.wisse.ocppbridge",
+    "name": "OCPP Bridge",
+    "developerName": "Wisse Koelman",
+    "developerId": "6a9e8ad4336db3df05ad62f1",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-06T01:00:55.654Z",
+    "updatedAt": "2026-10-06T01:00:55.654Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-06T01:00:54.628Z"
+  },
+  {
+    "appId": "com.thermia",
+    "name": "Thermia Heat Pump",
+    "developerName": "Ruud Schellekens",
+    "developerId": "6ab63a4230dc90a8d6e48c88",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-06T01:00:56.357Z",
+    "updatedAt": "2026-10-06T01:00:56.357Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-06T01:00:54.628Z"
   }
 ]
