@@ -750,6 +750,12 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6ac4b7104c7de6266bbce51f",
+    "developerName": "Copiis",
+    "forumUserID": 24490,
+    "forumUsername": "Jochen_Zink"
+  },
+  {
     "developerId": "679b555b046d79a42f297777",
     "developerName": "Corporacion Empresarial Altra SL",
     "forumUserID": null,
@@ -4190,6 +4196,12 @@
   {
     "developerId": "5dcaba901c90c866f9364e8d",
     "developerName": "Ruud Burger",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ab63a4230dc90a8d6e48c88",
+    "developerName": "Ruud Schellekens",
     "forumUserID": null,
     "forumUsername": null
   },
