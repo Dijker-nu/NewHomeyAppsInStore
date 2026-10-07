@@ -270,6 +270,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6ac4d9be46da7c0208354d41",
+    "developerName": "AppCreator",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "5dcabcce1c90c866f9366a9d",
     "developerName": "Arandis AB",
     "forumUserID": null,
@@ -2694,6 +2700,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6aadacb230dc90a8d6e21fc2",
+    "developerName": "Maarten Rusbach",
+    "forumUserID": 32446,
+    "forumUsername": "Arrow87"
+  },
+  {
     "developerId": "68a4c78f9fb70e45b86dfc1e",
     "developerName": "Mac Joker (dev)",
     "forumUserID": null,
@@ -3714,6 +3726,12 @@
     "forumUsername": "Piotr_Grochowski"
   },
   {
+    "developerId": "6ac4bc064c7de6266bbdb73e",
+    "developerName": "PixelForges",
+    "forumUserID": 26761,
+    "forumUsername": "LRvdLinden"
+  },
+  {
     "developerId": "65ae251ae366acd9f09f6a16",
     "developerName": "PixelForges .",
     "forumUserID": 26761,
@@ -4082,6 +4100,12 @@
   {
     "developerId": "5dcab9921c90c866f9364262",
     "developerName": "Rogier Hofboer",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ac3fab5bdc7ced970003fbb",
+    "developerName": "RogierM ThissenM",
     "forumUserID": null,
     "forumUsername": null
   },

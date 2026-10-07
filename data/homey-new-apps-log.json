@@ -670,5 +670,89 @@
     "updatedAt": "2026-10-06T01:00:56.357Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-06T01:00:54.628Z"
+  },
+  {
+    "appId": "io.github.arrow87-home.datawatchdog",
+    "name": "Data Pulse",
+    "developerName": "Maarten Rusbach",
+    "developerId": "6aadacb230dc90a8d6e21fc2",
+    "version": "0.1.4",
+    "sourceRepository": "https://github.com/Arrow87-home/homey-data-pulse",
+    "publishedAt": "2026-10-07T10:23:20.879Z",
+    "updatedAt": "2026-10-07T10:23:20.879Z",
+    "communityTopicId": 159768,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "no.arvebjoe.network-visualizer",
+    "name": "Network Visualizer",
+    "developerName": "Arve Bjørnerud",
+    "developerId": "68b76dd42fee65054eb014e1",
+    "version": "1.4.3",
+    "sourceRepository": "https://github.com/arvebjoe/no.arvebjoe.network-visualizer",
+    "publishedAt": "2026-10-07T10:23:20.879Z",
+    "updatedAt": "2026-10-07T10:23:20.879Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "dk.kvols.etilbudsavis",
+    "name": "eTilbudsavis",
+    "developerName": "Mads Kvols Hansen",
+    "developerId": "6ab8d2b930dc90a8d6e535c0",
+    "version": "1.0.7",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-07T10:23:21.682Z",
+    "updatedAt": "2026-10-07T10:23:21.682Z",
+    "communityTopicId": 160371,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "dk.kvols.sportslive",
+    "name": "SportConnect",
+    "developerName": "Mads Kvols Hansen",
+    "developerId": "6ab8d2b930dc90a8d6e535c0",
+    "version": "1.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-07T10:23:21.682Z",
+    "updatedAt": "2026-10-07T10:23:21.682Z",
+    "communityTopicId": 160395,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "energy.mygrid",
+    "name": "MyGrid",
+    "developerName": "RogierM ThissenM",
+    "developerId": "6ac3fab5bdc7ced970003fbb",
+    "version": "0.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-07T10:23:21.682Z",
+    "updatedAt": "2026-10-07T10:23:21.682Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "com.rickd.dynamictariffch",
+    "name": "Swiss Dynamic Electricity Tariff",
+    "developerName": "Richard Dubs",
+    "developerId": "6a63505128cddd02f8f07066",
+    "version": "0.1.6",
+    "sourceRepository": "https://github.com/RickD-CH/com.rickd.dynamictariffch",
+    "publishedAt": "2026-10-07T10:23:22.363Z",
+    "updatedAt": "2026-10-07T10:23:22.363Z",
+    "communityTopicId": 160031,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "com.rapinology.unas",
+    "name": "UNAS Monitor",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-07T10:23:22.363Z",
+    "updatedAt": "2026-10-07T10:23:22.363Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-07T10:23:20.879Z"
   }
 ]
