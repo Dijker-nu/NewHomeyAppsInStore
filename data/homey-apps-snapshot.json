@@ -19105,5 +19105,82 @@
     "publishedAt": "2026-10-08T10:44:03.837Z",
     "updatedAt": "2026-10-08T10:44:03.837Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.glumpf.zendurecloud",
+    "name": "Zendure Classic",
+    "developerName": "Lars Andresen",
+    "developerId": "6ac0acc5bdc7ced970ff7032",
+    "version": "1.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-08T18:05:24.603Z",
+    "updatedAt": "2026-10-08T18:05:24.603Z",
+    "communityTopicId": 160523
+  },
+  {
+    "appId": "se.sikth.srv",
+    "name": "SRV Waste Collection",
+    "developerName": "Fredrik Sundlöf",
+    "developerId": "6ac18b6ebdc7ced970ffae6b",
+    "version": "1.0.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-08T18:05:24.603Z",
+    "updatedAt": "2026-10-08T18:05:24.603Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.sofabaton.direct",
+    "name": "SofaBaton Direct",
+    "developerName": "Robert Coletti",
+    "developerId": "6ab7f87330dc90a8d6e4ff5d",
+    "version": "0.2.121",
+    "sourceRepository": "https://github.com/rcoletti116/homey-sofabaton",
+    "publishedAt": "2026-10-08T18:05:26.042Z",
+    "updatedAt": "2026-10-08T18:05:26.042Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "app.tooney.toniebox",
+    "name": "Toney",
+    "developerName": "Sascha Mierke",
+    "developerId": "6ac28648bdc7ced970ffed6a",
+    "version": "0.1.8",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-08T18:05:26.914Z",
+    "updatedAt": "2026-10-08T18:05:26.914Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.logitech.mxkeypad",
+    "name": "Logitech MX Keypad",
+    "developerName": "Kim Kokholm",
+    "developerId": "65500c3600b0a0bcb17b9287",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/HarpunDK/HomeyToMx/tree/main/Solution/LogitechMxApp/logi-homey-actions",
+    "publishedAt": "2026-10-08T18:05:27.778Z",
+    "updatedAt": "2026-10-08T18:05:27.778Z",
+    "communityTopicId": 160286
+  },
+  {
+    "appId": "com.dezware.marstek",
+    "name": "Marstek B2500",
+    "developerName": "dez ware",
+    "developerId": "6a5240abce38f245588dd30d",
+    "version": "0.4.12",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-08T18:05:27.778Z",
+    "updatedAt": "2026-10-08T18:05:27.778Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.biostar2.community",
+    "name": "BioStar 2",
+    "developerName": "Lionel Der Boven",
+    "developerId": "6ac154fcbdc7ced970ff943b",
+    "version": "1.6.1",
+    "sourceRepository": "https://github.com/LionelDerBoven/com.biostar2.community",
+    "publishedAt": "2026-10-08T18:05:28.663Z",
+    "updatedAt": "2026-10-08T18:05:28.663Z",
+    "communityTopicId": null
   }
 ]
