@@ -4294,10 +4294,10 @@
     "name": "Tuya Zigbee",
     "developerName": "Bortbytt Software",
     "developerId": "6aabeabb2c418bed593c1551",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "sourceRepository": "https://github.com/JohanBendz/com.tuya.zigbee",
     "publishedAt": "2020-05-07T14:25:09.996Z",
-    "updatedAt": "2026-10-06T10:29:51.570Z",
+    "updatedAt": "2026-10-08T10:44:48.521Z",
     "communityTopicId": 26439
   },
   {
@@ -4976,10 +4976,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.1",
+    "version": "3.0.2",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.devicecapabilities/",
     "publishedAt": "2021-02-10T22:06:08.432Z",
-    "updatedAt": "2026-10-07T10:23:44.579Z",
+    "updatedAt": "2026-10-08T10:44:48.521Z",
     "communityTopicId": 43287
   },
   {
@@ -6384,10 +6384,10 @@
     "name": "Daikin ONECTA",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "7.12.3",
+    "version": "7.13.0",
     "sourceRepository": "",
     "publishedAt": "2022-06-19T11:54:05.486Z",
-    "updatedAt": "2026-09-30T09:49:35.525Z",
+    "updatedAt": "2026-10-08T10:44:48.522Z",
     "communityTopicId": 54088
   },
   {
@@ -8307,12 +8307,12 @@
   {
     "appId": "com.sonnen.battery",
     "name": "Sonnen Batterie",
-    "developerName": "Kim Kokholm",
-    "developerId": "65500c3600b0a0bcb17b9287",
+    "developerName": "Sonnen",
+    "developerId": "6ac696709f2544391f2930fd",
     "version": "2.5.0",
     "sourceRepository": "https://github.com/HarpunDK/Homey.Sonnen",
     "publishedAt": "2023-11-14T21:14:46.746Z",
-    "updatedAt": "2026-02-27T15:08:43.560Z",
+    "updatedAt": "2026-10-08T10:44:48.522Z",
     "communityTopicId": 96052
   },
   {
@@ -8725,12 +8725,12 @@
   {
     "appId": "dk.nilan",
     "name": "Nilan Air",
-    "developerName": "Kim Kokholm",
-    "developerId": "65500c3600b0a0bcb17b9287",
+    "developerName": "Nilan",
+    "developerId": "6ac6968b46da7c020888e002",
     "version": "1.4.1",
     "sourceRepository": "https://github.com/oskarirauta/homey-nilan-app",
     "publishedAt": "2024-01-06T22:09:23.790Z",
-    "updatedAt": "2026-09-28T18:39:25.687Z",
+    "updatedAt": "2026-10-08T10:44:48.522Z",
     "communityTopicId": 100504
   },
   {
@@ -12445,10 +12445,10 @@
     "name": "WarmteWizard",
     "developerName": "Warmte Wizard",
     "developerId": "68ed4f8b78936837cbe81bee",
-    "version": "1.2.7",
+    "version": "1.2.8",
     "sourceRepository": "",
     "publishedAt": "2025-12-11T00:56:34.461Z",
-    "updatedAt": "2026-10-03T09:16:26.430Z",
+    "updatedAt": "2026-10-08T10:44:48.522Z",
     "communityTopicId": null
   },
   {
@@ -12621,10 +12621,10 @@
     "name": "MyNissan",
     "developerName": "Simon Andersson",
     "developerId": "67a91ca562b00d00c4d1af7a",
-    "version": "0.0.14",
+    "version": "0.0.15",
     "sourceRepository": "",
     "publishedAt": "2025-12-17T22:55:38.416Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-08T10:44:48.522Z",
     "communityTopicId": 147954
   },
   {
@@ -13752,12 +13752,12 @@
   {
     "appId": "no.powerguard",
     "name": "Power Guard",
-    "developerName": "Finn Cato Andersen",
-    "developerId": "699d86c8cd19af4229e69b9a",
+    "developerName": "by NorthGuard Labs",
+    "developerId": "6ac6a04c46da7c02088b1e66",
     "version": "0.8.137",
     "sourceRepository": "https://github.com/Finn-Cato/power-guard",
     "publishedAt": "2026-02-24T11:08:56.740Z",
-    "updatedAt": "2026-09-30T09:49:35.526Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": 156607
   },
   {
@@ -16119,10 +16119,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.696",
+    "version": "1.0.698",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-07T10:23:44.582Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": 156098
   },
   {
@@ -16284,10 +16284,10 @@
     "name": "Vestaboard",
     "developerName": "Justin Zarb",
     "developerId": "6a35d775cafd650bab526624",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "sourceRepository": "https://github.com/zarbjustin/com.vestaboard",
     "publishedAt": "2026-06-19T23:57:41.493Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": null
   },
   {
@@ -17505,10 +17505,10 @@
     "name": "LINAK Bed",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.0.37",
+    "version": "1.0.38",
     "sourceRepository": "https://github.com/torp93/homey-linak-bed-control",
     "publishedAt": "2026-08-15T13:37:31.175Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": null
   },
   {
@@ -18231,10 +18231,10 @@
     "name": "Energy Price Forecast",
     "developerName": "Hendrik Soppa",
     "developerId": "6a94ac0730ac038fba711ce4",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T15:41:11.360Z",
-    "updatedAt": "2026-10-05T10:37:47.107Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": null
   },
   {
@@ -18385,10 +18385,10 @@
     "name": "Sesam Pay",
     "developerName": "Jon Harald Øymyr",
     "developerId": "689fa6c8b4208a20554af944",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "sourceRepository": "https://github.com/joymyr/sesam_pay",
     "publishedAt": "2026-09-18T15:20:11.997Z",
-    "updatedAt": "2026-09-22T08:39:37.426Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": 159405
   },
   {
@@ -18429,10 +18429,10 @@
     "name": "Nubes",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-21T09:05:12.546Z",
-    "updatedAt": "2026-09-22T08:39:37.426Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": null
   },
   {
@@ -18561,10 +18561,10 @@
     "name": "Presence Fusion",
     "developerName": "Cédric Andrietti",
     "developerId": "6a6e465f32b0f6166a4e6270",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "sourceRepository": "https://github.com/cedric07/homey-presence-fusion",
     "publishedAt": "2026-09-24T08:33:53.418Z",
-    "updatedAt": "2026-09-28T21:11:56.197Z",
+    "updatedAt": "2026-10-08T10:44:48.523Z",
     "communityTopicId": 160019
   },
   {
@@ -18583,10 +18583,10 @@
     "name": "SG LEDDim",
     "developerName": "Trond Bildøy",
     "developerId": "6a9f88284b2b66c1158ea7af",
-    "version": "2.0.9",
+    "version": "2.0.10",
     "sourceRepository": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
     "publishedAt": "2026-09-24T16:02:23.949Z",
-    "updatedAt": "2026-09-24T16:02:23.949Z",
+    "updatedAt": "2026-10-08T10:44:48.524Z",
     "communityTopicId": 159464
   },
   {
@@ -19056,10 +19056,10 @@
     "name": "SportConnect",
     "developerName": "Mads Kvols Hansen",
     "developerId": "6ab8d2b930dc90a8d6e535c0",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-07T10:23:21.682Z",
-    "updatedAt": "2026-10-07T10:23:21.682Z",
+    "updatedAt": "2026-10-08T10:44:48.524Z",
     "communityTopicId": 160395
   },
   {
@@ -19093,6 +19093,17 @@
     "sourceRepository": "",
     "publishedAt": "2026-10-07T10:23:22.363Z",
     "updatedAt": "2026-10-07T10:23:22.363Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.linkgensystems.securegen",
+    "name": "SecureGen",
+    "developerName": "LinkGen Systems",
+    "developerId": "6a8c963ac6a80eeabce88e6e",
+    "version": "3.2.25",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-08T10:44:03.837Z",
+    "updatedAt": "2026-10-08T10:44:03.837Z",
     "communityTopicId": null
   }
 ]

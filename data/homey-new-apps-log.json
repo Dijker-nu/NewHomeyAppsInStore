@@ -754,5 +754,17 @@
     "updatedAt": "2026-10-07T10:23:22.363Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-07T10:23:20.879Z"
+  },
+  {
+    "appId": "com.linkgensystems.securegen",
+    "name": "SecureGen",
+    "developerName": "LinkGen Systems",
+    "developerId": "6a8c963ac6a80eeabce88e6e",
+    "version": "3.2.25",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-08T10:44:03.837Z",
+    "updatedAt": "2026-10-08T10:44:03.837Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-08T10:44:03.837Z"
   }
 ]
