@@ -850,5 +850,17 @@
     "updatedAt": "2026-10-08T18:05:28.663Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-08T18:05:24.603Z"
+  },
+  {
+    "appId": "com.thomassidor.widgetkeeper",
+    "name": "Widgetkeeper",
+    "developerName": "Thomas R. Sidor",
+    "developerId": "6a7cc169c6a80eeabce1bb26",
+    "version": "0.7.0",
+    "sourceRepository": "https://github.com/thomassidor/widgetkeeper",
+    "publishedAt": "2026-10-09T00:01:11.828Z",
+    "updatedAt": "2026-10-09T00:01:11.828Z",
+    "communityTopicId": 160453,
+    "discoveredAt": "2026-10-09T00:01:11.828Z"
   }
 ]
