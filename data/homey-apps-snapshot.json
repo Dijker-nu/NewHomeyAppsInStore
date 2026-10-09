@@ -1610,10 +1610,10 @@
     "name": "Better Logic Library",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "4.0.0",
+    "version": "4.1.3",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.BetterLogic/",
     "publishedAt": "2019-11-12T13:59:37.463Z",
-    "updatedAt": "2026-10-07T10:23:44.578Z",
+    "updatedAt": "2026-10-09T10:42:52.302Z",
     "communityTopicId": 71876
   },
   {
@@ -3645,10 +3645,10 @@
     "name": "Chronograph",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "2.2.2",
+    "version": "2.2.3",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.chronograph/",
     "publishedAt": "2019-11-12T14:07:54.145Z",
-    "updatedAt": "2026-09-18T09:40:48.991Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 18214
   },
   {
@@ -3720,12 +3720,12 @@
   {
     "appId": "com.newmotion.my",
     "name": "50five",
-    "developerName": "Vincent Boer",
-    "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "4.1.23",
-    "sourceRepository": "https://github.com/kaohlive/com.newmotion.my",
+    "developerName": "Giovani Kerst",
+    "developerId": "666b5519c783db54aec36474",
+    "version": "5.0.0",
+    "sourceRepository": "https://github.com/giokerst/com.newmotion.my",
     "publishedAt": "2019-11-12T14:08:07.318Z",
-    "updatedAt": "2026-08-06T14:59:43.956Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 19001
   },
   {
@@ -3766,10 +3766,10 @@
     "name": "Power by the Hour",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "8.20.1",
+    "version": "8.21.1",
     "sourceRepository": "https://github.com/gruijter/com.gruijter.powerhour",
     "publishedAt": "2019-11-14T18:07:39.248Z",
-    "updatedAt": "2026-10-02T09:54:22.795Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 20535
   },
   {
@@ -4976,10 +4976,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.2",
+    "version": "3.0.3",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.devicecapabilities/",
     "publishedAt": "2021-02-10T22:06:08.432Z",
-    "updatedAt": "2026-10-08T10:44:48.521Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 43287
   },
   {
@@ -5801,10 +5801,10 @@
     "name": "Connecte",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.10.1",
+    "version": "1.11.0",
     "sourceRepository": "",
     "publishedAt": "2021-11-15T19:25:13.241Z",
-    "updatedAt": "2026-06-02T12:41:32.000Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 143585
   },
   {
@@ -7231,10 +7231,10 @@
     "name": "sysInternals",
     "developerName": "Dijker Solutions",
     "developerId": "6a87673ea891707a1c91e05f",
-    "version": "1.3.4",
+    "version": "1.3.7",
     "sourceRepository": "",
     "publishedAt": "2023-03-27T05:32:41.670Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 78650
   },
   {
@@ -7836,10 +7836,10 @@
     "name": "KNMI",
     "developerName": "PixelForges",
     "developerId": "6ac4bc064c7de6266bbdb73e",
-    "version": "4.1.8",
+    "version": "4.2.0",
     "sourceRepository": "",
     "publishedAt": "2023-08-06T06:09:36.331Z",
-    "updatedAt": "2026-10-07T10:23:44.580Z",
+    "updatedAt": "2026-10-09T10:42:52.303Z",
     "communityTopicId": 86268
   },
   {
@@ -8199,10 +8199,10 @@
     "name": "Birthdays",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "2.0.1",
+    "version": "2.1.4",
     "sourceRepository": "",
     "publishedAt": "2023-10-29T21:29:34.719Z",
-    "updatedAt": "2026-09-15T08:13:30.038Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 93178
   },
   {
@@ -9056,11 +9056,11 @@
     "appId": "com.kwikset",
     "name": "Kwikset",
     "developerName": "Kwikset USA",
-    "developerId": "65e5918b896842f4ab8213df",
+    "developerId": "6ac79ef70e6efde6c1bde532",
     "version": "1.3.3",
     "sourceRepository": "",
     "publishedAt": "2024-03-04T09:16:59.222Z",
-    "updatedAt": "2026-03-09T08:29:58.007Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 106077
   },
   {
@@ -10531,10 +10531,10 @@
     "name": "Ngenic Tune",
     "developerName": "Simon Andersson",
     "developerId": "67a91ca562b00d00c4d1af7a",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "sourceRepository": "https://github.com/enodis74/se.ngenic.tune",
     "publishedAt": "2025-02-09T21:22:46.007Z",
-    "updatedAt": "2025-12-18T23:05:47.508Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 132064
   },
   {
@@ -11091,11 +11091,11 @@
     "appId": "cc.ewelink",
     "name": "eWeLink",
     "developerName": "CoolKit Technology Co., Ltd",
-    "developerId": "68386ea305693ceb74ae3365",
+    "developerId": "6ac7ae2538f886a1b448cbd7",
     "version": "0.4.1",
     "sourceRepository": "",
     "publishedAt": "2025-05-29T14:26:43.070Z",
-    "updatedAt": "2026-07-23T10:53:38.520Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 143569
   },
   {
@@ -11147,10 +11147,10 @@
     "name": "Namron Simplify",
     "developerName": "Namron AS",
     "developerId": "6aaaadaf99b954171239f0bf",
-    "version": "1.2.1",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2025-06-11T11:46:47.763Z",
-    "updatedAt": "2026-09-18T14:41:18.950Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 142621
   },
   {
@@ -12401,10 +12401,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.11.0",
+    "version": "3.11.2",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-07T10:23:44.582Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 147496
   },
   {
@@ -12456,10 +12456,10 @@
     "name": "Tuya",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.5.9",
+    "version": "1.5.10",
     "sourceRepository": "https://github.com/Drenso/com.tuya2",
     "publishedAt": "2025-12-11T13:35:10.690Z",
-    "updatedAt": "2026-09-23T13:10:23.882Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 146735
   },
   {
@@ -13666,10 +13666,10 @@
     "name": "Adaptive Lighting",
     "developerName": "Wouter Janson-Korhorn",
     "developerId": "666f3b42c783db54ae2276df",
-    "version": "1.4.7",
+    "version": "2.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-02-21T14:34:11.972Z",
-    "updatedAt": "2026-09-11T10:54:44.350Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 151462
   },
   {
@@ -15998,10 +15998,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "4.20.3",
+    "version": "4.21.1",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-10-07T10:23:44.582Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": null
   },
   {
@@ -16119,10 +16119,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.698",
+    "version": "1.0.700",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-08T10:44:48.523Z",
+    "updatedAt": "2026-10-09T10:42:52.304Z",
     "communityTopicId": 156098
   },
   {
@@ -16911,10 +16911,10 @@
     "name": "Verisure Alarm",
     "developerName": "Evgeny Bugakov",
     "developerId": "6a606ef728cddd02f8ef95e1",
-    "version": "1.0.2",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-22T07:19:19.795Z",
-    "updatedAt": "2026-07-27T13:36:58.474Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17197,10 +17197,10 @@
     "name": "Arlo Connect",
     "developerName": "Mikael Creson",
     "developerId": "6a6f91f632b0f6166a4ed359",
-    "version": "1.0.48",
+    "version": "1.0.49",
     "sourceRepository": "",
     "publishedAt": "2026-08-02T18:52:38.869Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17450,10 +17450,10 @@
     "name": "OpenQuatt",
     "developerName": "OpenQuatt",
     "developerId": "6a88174ac8d34196bd67ba17",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "sourceRepository": "https://github.com/OpenQuatt/homey-openquatt",
     "publishedAt": "2026-08-14T09:19:18.960Z",
-    "updatedAt": "2026-09-19T12:32:29.762Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17714,10 +17714,10 @@
     "name": "Network Printer",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.7.0",
+    "version": "1.7.2",
     "sourceRepository": "https://github.com/byackee/homey-netprinter",
     "publishedAt": "2026-08-23T06:14:28.513Z",
-    "updatedAt": "2026-09-09T11:54:40.380Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": 158655
   },
   {
@@ -17824,10 +17824,10 @@
     "name": "Power Estimator",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "sourceRepository": "https://github.com/byackee/homey-powerest",
     "publishedAt": "2026-08-28T14:48:31.724Z",
-    "updatedAt": "2026-09-03T21:52:26.005Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": 158852
   },
   {
@@ -17865,35 +17865,35 @@
   },
   {
     "appId": "com.rapinology.hcarburants",
-    "name": "FR Carburants",
+    "name": "Fuel Prices France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "sourceRepository": "",
     "publishedAt": "2026-09-01T09:13:15.772Z",
-    "updatedAt": "2026-09-02T18:01:17.649Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
     "appId": "com.rapinology.hatmo",
-    "name": "FR Qualité de l'air",
+    "name": "ATMO Air Quality",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-01T10:30:33.102Z",
-    "updatedAt": "2026-09-02T18:01:48.742Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
     "appId": "com.rapinology.hirve",
-    "name": "FR Bornes VE",
+    "name": "EV Charging France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-01T11:58:15.218Z",
-    "updatedAt": "2026-09-03T09:32:05.538Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17945,10 +17945,10 @@
     "name": "Dew Point & Mould Guard",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T09:13:10.762Z",
-    "updatedAt": "2026-09-03T09:13:10.762Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17967,10 +17967,10 @@
     "name": "Saint du jour",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:33:17.636Z",
-    "updatedAt": "2026-09-07T16:07:45.460Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17978,10 +17978,10 @@
     "name": "FR Vigilance",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:33:30.412Z",
-    "updatedAt": "2026-09-03T16:33:30.412Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -17989,10 +17989,10 @@
     "name": "Ephemerides",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:39:05.277Z",
-    "updatedAt": "2026-10-01T10:16:38.723Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -18220,10 +18220,10 @@
     "name": "Météo France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T08:53:59.631Z",
-    "updatedAt": "2026-10-01T10:16:38.723Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -18374,10 +18374,10 @@
     "name": "Wemo",
     "developerName": "Antoine Chaulieu",
     "developerId": "6a8aabbfc6a80eeabce82a73",
-    "version": "0.4.13",
+    "version": "0.4.14",
     "sourceRepository": "",
     "publishedAt": "2026-09-18T15:20:11.997Z",
-    "updatedAt": "2026-09-18T15:20:11.997Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": 159683
   },
   {
@@ -18426,13 +18426,13 @@
   },
   {
     "appId": "com.rapinology.nubes",
-    "name": "Nubes",
+    "name": "Cloud Cover Europe",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-21T09:05:12.546Z",
-    "updatedAt": "2026-10-08T10:44:48.523Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -18484,10 +18484,10 @@
     "name": "Nubes America",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-23T08:41:10.244Z",
-    "updatedAt": "2026-09-23T08:41:10.244Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -18561,10 +18561,10 @@
     "name": "Presence Fusion",
     "developerName": "Cédric Andrietti",
     "developerId": "6a6e465f32b0f6166a4e6270",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "sourceRepository": "https://github.com/cedric07/homey-presence-fusion",
     "publishedAt": "2026-09-24T08:33:53.418Z",
-    "updatedAt": "2026-10-08T10:44:48.523Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": 160019
   },
   {
@@ -18616,10 +18616,10 @@
     "name": "Ecojoko",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T09:56:20.116Z",
-    "updatedAt": "2026-10-01T10:16:38.723Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -18858,10 +18858,10 @@
     "name": "Grid Green Carbon",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:15.585Z",
-    "updatedAt": "2026-10-01T10:16:15.585Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -18891,10 +18891,10 @@
     "name": "Starlink Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:17.049Z",
-    "updatedAt": "2026-10-01T10:16:17.049Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -19067,10 +19067,10 @@
     "name": "MyGrid",
     "developerName": "RogierM ThissenM",
     "developerId": "6ac3fab5bdc7ced970003fbb",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-07T10:23:21.682Z",
-    "updatedAt": "2026-10-07T10:23:21.682Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -19078,10 +19078,10 @@
     "name": "Swiss Dynamic Electricity Tariff",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.1.6",
+    "version": "0.1.8",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.dynamictariffch",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-07T10:23:22.363Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": 160031
   },
   {
@@ -19089,10 +19089,10 @@
     "name": "UNAS Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-07T10:23:22.363Z",
+    "updatedAt": "2026-10-09T10:42:52.305Z",
     "communityTopicId": null
   },
   {
@@ -19169,8 +19169,8 @@
     "version": "0.4.12",
     "sourceRepository": "",
     "publishedAt": "2026-10-08T18:05:27.778Z",
-    "updatedAt": "2026-10-08T18:05:27.778Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "communityTopicId": 160375
   },
   {
     "appId": "com.biostar2.community",

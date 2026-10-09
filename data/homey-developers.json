@@ -762,6 +762,12 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6ac7ae2538f886a1b448cbd7",
+    "developerName": "CoolKit Technology Co., Ltd",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
     "developerId": "6ac4b7104c7de6266bbce51f",
     "developerName": "Copiis",
     "forumUserID": 24490,
@@ -934,6 +940,12 @@
     "developerName": "Develco Products A/S",
     "forumUserID": 24,
     "forumUsername": "TedTolboom"
+  },
+  {
+    "developerId": "6a5240abce38f245588dd30d",
+    "developerName": "dez ware",
+    "forumUserID": 49794,
+    "forumUsername": "developer_Homey"
   },
   {
     "developerId": "6833063f05693ceb74a95346",
@@ -1452,6 +1464,12 @@
     "forumUsername": "Fredrik_Palsson"
   },
   {
+    "developerId": "6ac18b6ebdc7ced970ffae6b",
+    "developerName": "Fredrik Sundlöf",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6a54f88cce38f245588e6969",
     "developerName": "Fredrik Wallström",
     "forumUserID": null,
@@ -1576,6 +1594,12 @@
     "developerName": "Gijs Zwegers",
     "forumUserID": 24845,
     "forumUsername": "Mystic_Wizard"
+  },
+  {
+    "developerId": "666b5519c783db54aec36474",
+    "developerName": "Giovani Kerst",
+    "forumUserID": 3187,
+    "forumUsername": "Kaoh"
   },
   {
     "developerId": "68b5ccf82fee65054eafc64f",
@@ -2520,10 +2544,22 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6ac79ef70e6efde6c1bde532",
+    "developerName": "Kwikset USA",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
     "developerId": "686eca2d9a8375f11d4b6dab",
     "developerName": "Kyle Michiels",
     "forumUserID": 46496,
     "forumUsername": "Kyle_Michiels"
+  },
+  {
+    "developerId": "6ac0acc5bdc7ced970ff7032",
+    "developerName": "Lars Andresen",
+    "forumUserID": 58209,
+    "forumUsername": "A_Lars"
   },
   {
     "developerId": "68e79f7378936837cbe73285",
@@ -4056,6 +4092,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6ab7f87330dc90a8d6e4ff5d",
+    "developerName": "Robert Coletti",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "66e9a8bb645b24bd5be193da",
     "developerName": "Robert Hertzer",
     "forumUserID": null,
@@ -4310,6 +4352,12 @@
   {
     "developerId": "6685a33ee74780a9145c9fe1",
     "developerName": "Sascha Krull",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ac28648bdc7ced970ffed6a",
+    "developerName": "Sascha Mierke",
     "forumUserID": null,
     "forumUsername": null
   },
