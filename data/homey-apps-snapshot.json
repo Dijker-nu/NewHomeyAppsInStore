@@ -1610,10 +1610,10 @@
     "name": "Better Logic Library",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "4.1.3",
+    "version": "4.2.1",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.BetterLogic/",
     "publishedAt": "2019-11-12T13:59:37.463Z",
-    "updatedAt": "2026-10-09T10:42:52.302Z",
+    "updatedAt": "2026-10-10T09:58:43.979Z",
     "communityTopicId": 71876
   },
   {
@@ -3810,10 +3810,10 @@
     "name": "Easee Home",
     "developerName": "Easee ASA",
     "developerId": "6a97ce55a524daf89cd42946",
-    "version": "3.0.0",
+    "version": "3.0.1",
     "sourceRepository": "",
     "publishedAt": "2019-11-16T18:39:32.839Z",
-    "updatedAt": "2026-09-25T15:06:58.539Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 31647
   },
   {
@@ -4107,10 +4107,10 @@
     "name": "Ring",
     "developerName": "Danee de Kruyff",
     "developerId": "5dcaba6f1c90c866f9364c85",
-    "version": "2.14.26",
+    "version": "2.14.27",
     "sourceRepository": "https://github.com/daneedk/com.amazon.ring",
     "publishedAt": "2020-03-04T20:24:16.525Z",
-    "updatedAt": "2026-09-20T18:19:58.352Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 76364
   },
   {
@@ -4976,10 +4976,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.3",
+    "version": "3.0.7",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.devicecapabilities/",
     "publishedAt": "2021-02-10T22:06:08.432Z",
-    "updatedAt": "2026-10-09T10:42:52.303Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 43287
   },
   {
@@ -6175,10 +6175,10 @@
     "name": "Xiaomi Miija",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "1.2.50",
+    "version": "1.2.51",
     "sourceRepository": "https://github.com/shaarkys/MiTempHum-Homey",
     "publishedAt": "2022-03-31T20:07:27.208Z",
-    "updatedAt": "2026-10-01T10:16:38.721Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 78560
   },
   {
@@ -7979,10 +7979,10 @@
     "name": "Airsend",
     "developerName": "Pierre Verron",
     "developerId": "65044d4d6d8019ba165e62a1",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "sourceRepository": "",
     "publishedAt": "2023-09-15T12:25:49.931Z",
-    "updatedAt": "2026-10-05T10:37:47.105Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": null
   },
   {
@@ -8199,10 +8199,10 @@
     "name": "Birthdays",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "2.1.4",
+    "version": "2.1.5",
     "sourceRepository": "",
     "publishedAt": "2023-10-29T21:29:34.719Z",
-    "updatedAt": "2026-10-09T10:42:52.304Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 93178
   },
   {
@@ -11092,10 +11092,10 @@
     "name": "eWeLink",
     "developerName": "CoolKit Technology Co., Ltd",
     "developerId": "6ac7ae2538f886a1b448cbd7",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "sourceRepository": "",
     "publishedAt": "2025-05-29T14:26:43.070Z",
-    "updatedAt": "2026-10-09T10:42:52.304Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 143569
   },
   {
@@ -11873,10 +11873,10 @@
     "name": "Ollama",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.8",
+    "version": "1.2.9",
     "sourceRepository": "https://github.com/smarthomesven/homey-ollama",
     "publishedAt": "2025-10-05T12:47:01.295Z",
-    "updatedAt": "2026-09-19T00:07:07.733Z",
+    "updatedAt": "2026-10-10T09:58:43.980Z",
     "communityTopicId": 143768
   },
   {
@@ -12269,10 +12269,10 @@
     "name": "Duux Gen2",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "2.10.1",
+    "version": "2.10.2",
     "sourceRepository": "https://github.com/smarthomesven/homey-duux-gen2",
     "publishedAt": "2025-11-18T16:27:43.875Z",
-    "updatedAt": "2026-09-19T00:15:26.742Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 145511
   },
   {
@@ -12401,10 +12401,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.11.2",
+    "version": "3.11.4",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-09T10:42:52.304Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 147496
   },
   {
@@ -12456,10 +12456,10 @@
     "name": "Tuya",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.5.10",
+    "version": "1.5.11",
     "sourceRepository": "https://github.com/Drenso/com.tuya2",
     "publishedAt": "2025-12-11T13:35:10.690Z",
-    "updatedAt": "2026-10-09T10:42:52.304Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 146735
   },
   {
@@ -12698,10 +12698,10 @@
     "name": "Web Proxy",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.17",
+    "version": "1.1.18",
     "sourceRepository": "https://github.com/smarthomesven/homey-web-proxy",
     "publishedAt": "2025-12-20T18:58:25.598Z",
-    "updatedAt": "2026-09-28T08:01:55.377Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 147450
   },
   {
@@ -14414,10 +14414,10 @@
     "name": "Flow Version History",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.23",
+    "version": "1.0.25",
     "sourceRepository": "https://github.com/smarthomesven/homey-flow-version-history",
     "publishedAt": "2026-03-21T16:18:24.210Z",
-    "updatedAt": "2026-09-15T19:41:56.080Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 152775
   },
   {
@@ -14777,10 +14777,10 @@
     "name": "Isypower",
     "developerName": "NovaCore Labs",
     "developerId": "6a8bdd7a94f0069d62618521",
-    "version": "1.9.0",
+    "version": "1.9.1",
     "sourceRepository": "",
     "publishedAt": "2026-04-04T10:17:44.258Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 153370
   },
   {
@@ -15008,10 +15008,10 @@
     "name": "TP-Link Omada",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "https://github.com/smarthomesven/homey-tplink-omada",
     "publishedAt": "2026-04-15T19:01:37.879Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 153824
   },
   {
@@ -16713,10 +16713,10 @@
     "name": "Link2Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "sourceRepository": "https://github.com/smarthomesven/homey-link2home",
     "publishedAt": "2026-07-14T00:12:43.396Z",
-    "updatedAt": "2026-09-25T09:16:12.573Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": 157174
   },
   {
@@ -18330,10 +18330,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": null
   },
   {
@@ -19001,10 +19001,10 @@
     "name": "OCPP Bridge",
     "developerName": "Wisse Koelman",
     "developerId": "6a9e8ad4336db3df05ad62f1",
-    "version": "1.0.2",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-06T01:00:55.654Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-10-10T09:58:43.981Z",
     "communityTopicId": null
   },
   {
