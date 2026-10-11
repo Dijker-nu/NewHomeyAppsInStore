@@ -7044,10 +7044,10 @@
     "name": "Tesla Power Connect",
     "developerName": "Rune Værnes",
     "developerId": "63cd848192d9f5336cef8b85",
-    "version": "5.2.0",
+    "version": "5.3.0",
     "sourceRepository": "https://github.com/vaernes/homey_tesla_power_connect",
     "publishedAt": "2023-01-22T18:46:25.934Z",
-    "updatedAt": "2026-09-02T21:59:26.292Z",
+    "updatedAt": "2026-10-11T10:08:31.966Z",
     "communityTopicId": 75554
   },
   {
@@ -8199,10 +8199,10 @@
     "name": "Birthdays",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "2.1.5",
+    "version": "2.1.6",
     "sourceRepository": "",
     "publishedAt": "2023-10-29T21:29:34.719Z",
-    "updatedAt": "2026-10-10T09:58:43.980Z",
+    "updatedAt": "2026-10-11T10:08:31.967Z",
     "communityTopicId": 93178
   },
   {
@@ -15349,10 +15349,10 @@
     "name": "ECOVACS GOAT",
     "developerName": "Sverre L. Petersen",
     "developerId": "676411a5ba38533f5bf3520d",
-    "version": "1.7.7",
+    "version": "1.7.9",
     "sourceRepository": "",
     "publishedAt": "2026-05-02T20:28:41.151Z",
-    "updatedAt": "2026-09-06T16:50:56.779Z",
+    "updatedAt": "2026-10-11T10:08:31.967Z",
     "communityTopicId": 154469
   },
   {
@@ -16119,10 +16119,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.700",
+    "version": "1.0.701",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-09T10:42:52.304Z",
+    "updatedAt": "2026-10-11T10:08:31.967Z",
     "communityTopicId": 156098
   },
   {
