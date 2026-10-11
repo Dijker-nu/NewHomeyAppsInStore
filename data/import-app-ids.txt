@@ -10,3 +10,4 @@ com.lge.news
 ai.zigbee.aqara
 com.roco.ancilla
 nl.joey.hmipgarage
+com.community.heatpumpoptimizer
