@@ -19226,5 +19226,27 @@
     "publishedAt": "2026-10-12T11:02:42.842Z",
     "updatedAt": "2026-10-12T11:02:42.842Z",
     "communityTopicId": 160717
+  },
+  {
+    "appId": "dk.sundgaard.universalrfremote",
+    "name": "Universal RF Remote",
+    "developerName": "Bo Sundgaard",
+    "developerId": "6ac80645bdc8421d78c4d6e1",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/bosund/universal-rf-remote",
+    "publishedAt": "2026-10-12T20:31:30.596Z",
+    "updatedAt": "2026-10-12T20:31:30.596Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.evcharging.predictor",
+    "name": "EV Charging Predictor",
+    "developerName": "Wesley Neelen",
+    "developerId": "6ab55f4830dc90a8d6e437f5",
+    "version": "1.4.6",
+    "sourceRepository": "https://github.com/wez3/homey-ev-charging-predictor",
+    "publishedAt": "2026-10-12T20:31:31.950Z",
+    "updatedAt": "2026-10-12T20:31:31.950Z",
+    "communityTopicId": null
   }
 ]
