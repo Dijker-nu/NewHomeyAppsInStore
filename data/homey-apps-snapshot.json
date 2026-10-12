@@ -796,10 +796,10 @@
     "name": "Philips Hue, without the bridge",
     "developerName": "Bortbytt Software",
     "developerId": "6aabeabb2c418bed593c1551",
-    "version": "2.2.1",
+    "version": "2.3.1",
     "sourceRepository": "https://github.com/JohanBendz/com.philips.hue.zigbee",
     "publishedAt": "2019-11-12T13:55:53.453Z",
-    "updatedAt": "2026-09-29T17:35:13.597Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": 29734
   },
   {
@@ -2193,10 +2193,10 @@
     "name": "Heatit Controls",
     "developerName": "Heatit Controls AS",
     "developerId": "6a917dfda524daf89cb5fe38",
-    "version": "4.5.3",
+    "version": "4.5.4",
     "sourceRepository": "https://github.com/Heatit-Controls/no.ThermoFloor",
     "publishedAt": "2019-11-12T14:02:16.991Z",
-    "updatedAt": "2026-09-18T14:05:15.469Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": 49914
   },
   {
@@ -2490,10 +2490,10 @@
     "name": "Nexa",
     "developerName": "NEXA AB",
     "developerId": "67e445b76cb23bab6c635ade",
-    "version": "2.4.12",
+    "version": "2.4.13",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:03:23.051Z",
-    "updatedAt": "2025-12-10T08:57:03.085Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": null
   },
   {
@@ -5856,10 +5856,10 @@
     "name": "myIO",
     "developerName": "Peter Szabo",
     "developerId": "61a5101604c76f49f59d7496",
-    "version": "2.2.21",
+    "version": "2.2.23",
     "sourceRepository": "",
     "publishedAt": "2021-12-01T09:17:48.107Z",
-    "updatedAt": "2026-08-26T09:22:19.989Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": null
   },
   {
@@ -6384,10 +6384,10 @@
     "name": "Daikin ONECTA",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "7.13.0",
+    "version": "7.13.1",
     "sourceRepository": "",
     "publishedAt": "2022-06-19T11:54:05.486Z",
-    "updatedAt": "2026-10-08T10:44:48.522Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": 54088
   },
   {
@@ -6624,12 +6624,12 @@
   {
     "appId": "com.softblockrefinery.garo-charger-meter",
     "name": "Garo - GLB",
-    "developerName": "Fredric Georgsson",
-    "developerId": "6322145c42462586558b3306",
+    "developerName": "Innomenta",
+    "developerId": "6ab0409e2c418bed59fba3ec",
     "version": "1.4.0",
     "sourceRepository": "https://github.com/fgeorgsson/homey-garo-charger-glb",
     "publishedAt": "2022-09-14T17:50:20.803Z",
-    "updatedAt": "2026-02-15T19:00:41.659Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": null
   },
   {
@@ -7462,10 +7462,10 @@
     "name": "Futurehome",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.10.1",
+    "version": "1.11.0",
     "sourceRepository": "",
     "publishedAt": "2023-04-28T12:20:58.134Z",
-    "updatedAt": "2026-06-02T12:41:32.746Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": 143584
   },
   {
@@ -7605,10 +7605,10 @@
     "name": "WhatsApp",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "3.0.13",
+    "version": "3.0.18",
     "sourceRepository": "https://github.com/martijnpoppen/com.whatsapp",
     "publishedAt": "2023-06-26T07:44:55.880Z",
-    "updatedAt": "2026-10-07T10:23:44.580Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": 90749
   },
   {
@@ -7671,10 +7671,10 @@
     "name": "myUplink",
     "developerName": "myUpTech AB",
     "developerId": "64a774569a54fe7531f1233b",
-    "version": "1.2.23",
+    "version": "1.2.24",
     "sourceRepository": "https://github.com/myUplink/homey-myuplink",
     "publishedAt": "2023-07-07T02:11:34.547Z",
-    "updatedAt": "2026-09-02T21:48:05.458Z",
+    "updatedAt": "2026-10-12T11:03:24.485Z",
     "communityTopicId": 114266
   },
   {
@@ -7869,10 +7869,10 @@
     "name": "PiHole Control",
     "developerName": "Ronny Troxler",
     "developerId": "649032f69a54fe7531cde50c",
-    "version": "2.1.2",
+    "version": "2.5.0",
     "sourceRepository": "https://github.com/TroRon/ch.place4fun.pihole",
     "publishedAt": "2023-08-09T11:45:32.519Z",
-    "updatedAt": "2025-04-09T08:55:14.526Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": 104113
   },
   {
@@ -9046,10 +9046,10 @@
     "name": "Logitech Z906",
     "developerName": "Jordy Thien",
     "developerId": "65e26f67896842f4ab2ed5d2",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/JordyThien/nu.thien.logitech",
     "publishedAt": "2024-03-02T00:14:31.549Z",
-    "updatedAt": "2024-04-08T09:50:13.334Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -9057,10 +9057,10 @@
     "name": "Kwikset",
     "developerName": "Kwikset USA",
     "developerId": "6ac79ef70e6efde6c1bde532",
-    "version": "1.3.3",
+    "version": "1.4.0",
     "sourceRepository": "",
     "publishedAt": "2024-03-04T09:16:59.222Z",
-    "updatedAt": "2026-10-09T10:42:52.304Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": 106077
   },
   {
@@ -9068,10 +9068,10 @@
     "name": "TeslaLogger",
     "developerName": "Ronny Troxler",
     "developerId": "649032f69a54fe7531cde50c",
-    "version": "1.0.0",
+    "version": "1.5.0",
     "sourceRepository": "https://github.com/TroRon/ch.place4fun.teslalogger",
     "publishedAt": "2024-03-05T19:16:02.527Z",
-    "updatedAt": "2024-03-18T09:20:20.498Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": 105617
   },
   {
@@ -11642,10 +11642,10 @@
     "name": "Remidt (Waste management)",
     "developerName": "Sverre L. Petersen",
     "developerId": "676411a5ba38533f5bf3520d",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "sourceRepository": "",
     "publishedAt": "2025-09-03T18:44:34.342Z",
-    "updatedAt": "2026-08-08T12:34:16.093Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -11706,12 +11706,12 @@
   {
     "appId": "se.innomenta.reflexion",
     "name": "Reflexion",
-    "developerName": "Fredric Georgsson",
-    "developerId": "6322145c42462586558b3306",
+    "developerName": "Innomenta",
+    "developerId": "6ab0409e2c418bed59fba3ec",
     "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2025-09-09T21:47:15.399Z",
-    "updatedAt": "2026-09-20T19:32:32.836Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": 143601
   },
   {
@@ -12401,10 +12401,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.11.4",
+    "version": "3.11.5",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": 147496
   },
   {
@@ -13157,13 +13157,13 @@
   },
   {
     "appId": "no.enertek.app",
-    "name": "Enertek",
+    "name": "Cadabi",
     "developerName": "Mateusz Sybilla",
     "developerId": "697934096b884a38a96cd8b0",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-01-27T21:54:17.198Z",
-    "updatedAt": "2026-08-25T13:34:25.361Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -14247,12 +14247,12 @@
   {
     "appId": "com.todoit.zonelightpro",
     "name": "ZoneLight Pro",
-    "developerName": "Kasper Christensen",
-    "developerId": "69b88d4c699c29709c9d10d5",
+    "developerName": "Todo-IT ApS",
+    "developerId": "6acc00800e6efde6c19a97b0",
     "version": "1.6.5",
     "sourceRepository": "",
     "publishedAt": "2026-03-16T23:07:56.614Z",
-    "updatedAt": "2026-09-07T19:04:19.180Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -14843,10 +14843,10 @@
     "name": "Shelly Wall Display Dashboard",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.85",
+    "version": "1.3.87",
     "sourceRepository": "https://github.com/andiwirz/com.walldisplay.dashboard",
     "publishedAt": "2026-04-09T22:34:21.458Z",
-    "updatedAt": "2026-09-23T21:04:17.172Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -15371,10 +15371,10 @@
     "name": "Mode Switch",
     "developerName": "Erik van Oosten",
     "developerId": "69f795bc2e89d815c5e502ad",
-    "version": "3.5.7",
+    "version": "3.5.8",
     "sourceRepository": "https://github.com/evoosten/com.modeswitch",
     "publishedAt": "2026-05-03T18:49:08.354Z",
-    "updatedAt": "2026-10-07T10:23:44.582Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": 154885
   },
   {
@@ -16317,10 +16317,10 @@
     "name": "Salus Controls",
     "developerName": "Justin Zarb",
     "developerId": "6a35d775cafd650bab526624",
-    "version": "1.2.13",
+    "version": "1.2.17",
     "sourceRepository": "",
     "publishedAt": "2026-06-20T20:51:39.627Z",
-    "updatedAt": "2026-10-06T10:29:51.572Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -16911,10 +16911,10 @@
     "name": "Verisure Alarm",
     "developerName": "Evgeny Bugakov",
     "developerId": "6a606ef728cddd02f8ef95e1",
-    "version": "1.3.0",
+    "version": "2.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-22T07:19:19.795Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -17692,10 +17692,10 @@
     "name": "Husdata H66",
     "developerName": "krister Olsson",
     "developerId": "6a80287ac6a80eeabce30ab5",
-    "version": "21.0.0",
+    "version": "21.9.17",
     "sourceRepository": "",
     "publishedAt": "2026-08-22T18:02:10.036Z",
-    "updatedAt": "2026-08-22T18:19:26.452Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -18231,10 +18231,10 @@
     "name": "Energy Price Forecast",
     "developerName": "Hendrik Soppa",
     "developerId": "6a94ac0730ac038fba711ce4",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T15:41:11.360Z",
-    "updatedAt": "2026-10-08T10:44:48.523Z",
+    "updatedAt": "2026-10-12T11:03:24.486Z",
     "communityTopicId": null
   },
   {
@@ -18649,10 +18649,10 @@
     "name": "Aikion",
     "developerName": "Innomenta",
     "developerId": "6ab0409e2c418bed59fba3ec",
-    "version": "2.12.0",
+    "version": "3.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T09:56:22.527Z",
-    "updatedAt": "2026-09-28T09:56:22.527Z",
+    "updatedAt": "2026-10-12T11:03:24.487Z",
     "communityTopicId": null
   },
   {
@@ -19111,10 +19111,10 @@
     "name": "Zendure Classic",
     "developerName": "Lars Andresen",
     "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-08T18:05:24.603Z",
-    "updatedAt": "2026-10-08T18:05:24.603Z",
+    "updatedAt": "2026-10-12T11:03:24.487Z",
     "communityTopicId": 160523
   },
   {
@@ -19188,10 +19188,43 @@
     "name": "Widgetkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "sourceRepository": "https://github.com/thomassidor/widgetkeeper",
     "publishedAt": "2026-10-09T00:01:11.828Z",
-    "updatedAt": "2026-10-09T00:01:11.828Z",
+    "updatedAt": "2026-10-12T11:03:24.487Z",
     "communityTopicId": 160453
+  },
+  {
+    "appId": "com.rapinology.htrends",
+    "name": "Sensor Trends",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-12T11:02:41.465Z",
+    "updatedAt": "2026-10-12T11:02:41.465Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "info.schellekens.amperae",
+    "name": "Opel Ampera-e (WiCAN)",
+    "developerName": "Ruud Schellekens",
+    "developerId": "6ab63a4230dc90a8d6e48c88",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-12T11:02:42.842Z",
+    "updatedAt": "2026-10-12T11:02:42.842Z",
+    "communityTopicId": 160353
+  },
+  {
+    "appId": "com.glumpf.warp",
+    "name": "WARP Charger",
+    "developerName": "Lars Andresen",
+    "developerId": "6ac0acc5bdc7ced970ff7032",
+    "version": "1.0.20",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-12T11:02:42.842Z",
+    "updatedAt": "2026-10-12T11:02:42.842Z",
+    "communityTopicId": 160717
   }
 ]

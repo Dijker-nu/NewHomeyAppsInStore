@@ -1856,8 +1856,8 @@
   {
     "developerId": "6ab0409e2c418bed59fba3ec",
     "developerName": "Innomenta",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 25862,
+    "forumUsername": "Fredric_Georgsson"
   },
   {
     "developerId": "5e7a002c244cb068defd9ae8",
@@ -4286,8 +4286,8 @@
   {
     "developerId": "6ab63a4230dc90a8d6e48c88",
     "developerName": "Ruud Schellekens",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 42154,
+    "forumUsername": "Ruud_Schellekens"
   },
   {
     "developerId": "669547fae74780a914de505a",
@@ -4958,6 +4958,12 @@
   {
     "developerId": "6707aa8190607a6da3616576",
     "developerName": "Toby Bonhof",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6acc00800e6efde6c19a97b0",
+    "developerName": "Todo-IT ApS",
     "forumUserID": null,
     "forumUsername": null
   },

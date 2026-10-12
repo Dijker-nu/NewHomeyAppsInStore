@@ -862,5 +862,41 @@
     "updatedAt": "2026-10-09T00:01:11.828Z",
     "communityTopicId": 160453,
     "discoveredAt": "2026-10-09T00:01:11.828Z"
+  },
+  {
+    "appId": "com.rapinology.htrends",
+    "name": "Sensor Trends",
+    "developerName": "Henri Dominique Rapin",
+    "developerId": "6a96972b30ac038fba71a2f2",
+    "version": "1.0.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-12T11:02:41.465Z",
+    "updatedAt": "2026-10-12T11:02:41.465Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-12T11:02:41.465Z"
+  },
+  {
+    "appId": "info.schellekens.amperae",
+    "name": "Opel Ampera-e (WiCAN)",
+    "developerName": "Ruud Schellekens",
+    "developerId": "6ab63a4230dc90a8d6e48c88",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-12T11:02:42.842Z",
+    "updatedAt": "2026-10-12T11:02:42.842Z",
+    "communityTopicId": 160353,
+    "discoveredAt": "2026-10-12T11:02:41.465Z"
+  },
+  {
+    "appId": "com.glumpf.warp",
+    "name": "WARP Charger",
+    "developerName": "Lars Andresen",
+    "developerId": "6ac0acc5bdc7ced970ff7032",
+    "version": "1.0.20",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-12T11:02:42.842Z",
+    "updatedAt": "2026-10-12T11:02:42.842Z",
+    "communityTopicId": 160717,
+    "discoveredAt": "2026-10-12T11:02:41.465Z"
   }
 ]
