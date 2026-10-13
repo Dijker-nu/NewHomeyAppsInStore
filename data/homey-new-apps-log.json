@@ -922,5 +922,41 @@
     "updatedAt": "2026-10-12T20:31:31.950Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-12T20:31:30.596Z"
+  },
+  {
+    "appId": "nl.joey.hmipgarage",
+    "name": "Homematic IP Garage Door",
+    "developerName": "Joey Gosenson",
+    "developerId": "6acb666bbdc8421d78c5b8d7",
+    "version": "1.6.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-13T10:45:38.595Z",
+    "updatedAt": "2026-10-13T10:45:38.595Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-13T10:45:38.595Z"
+  },
+  {
+    "appId": "com.foxess",
+    "name": "Fox ESS",
+    "developerName": "RM de Gruijter",
+    "developerId": "67f4effe00dfe95f8d67b335",
+    "version": "1.1.1",
+    "sourceRepository": "https://github.com/gruijter/com.foxess",
+    "publishedAt": "2026-10-13T10:45:39.282Z",
+    "updatedAt": "2026-10-13T10:45:39.282Z",
+    "communityTopicId": 159666,
+    "discoveredAt": "2026-10-13T10:45:38.595Z"
+  },
+  {
+    "appId": "com.solarwatt",
+    "name": "Solarwatt",
+    "developerName": "RM de Gruijter",
+    "developerId": "67f4effe00dfe95f8d67b335",
+    "version": "1.2.1",
+    "sourceRepository": "https://github.com/gruijter/com.solarwatt",
+    "publishedAt": "2026-10-13T10:45:39.282Z",
+    "updatedAt": "2026-10-13T10:45:39.282Z",
+    "communityTopicId": 157511,
+    "discoveredAt": "2026-10-13T10:45:38.595Z"
   }
 ]

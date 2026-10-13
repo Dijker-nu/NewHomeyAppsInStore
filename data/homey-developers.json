@@ -510,6 +510,12 @@
     "forumUsername": "balmli"
   },
   {
+    "developerId": "6ac80645bdc8421d78c4d6e1",
+    "developerName": "Bo Sundgaard",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "628368aceee6bc562d76a31c",
     "developerName": "Bold Security Technology",
     "forumUserID": null,
@@ -2156,6 +2162,12 @@
   {
     "developerId": "67ee5e926340bdde8a2ca1a9",
     "developerName": "Joeri van Bodegom",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6acb666bbdc8421d78c5b8d7",
+    "developerName": "Joey Gosenson",
     "forumUserID": null,
     "forumUsername": null
   },
@@ -5176,6 +5188,12 @@
     "developerName": "Webed Solutions",
     "forumUserID": 2141,
     "forumUsername": "evdpol"
+  },
+  {
+    "developerId": "6ab55f4830dc90a8d6e437f5",
+    "developerName": "Wesley Neelen",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "68af15a72fee65054eae7da3",
