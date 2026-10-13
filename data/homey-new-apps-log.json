@@ -958,5 +958,17 @@
     "updatedAt": "2026-10-13T10:45:39.282Z",
     "communityTopicId": 157511,
     "discoveredAt": "2026-10-13T10:45:38.595Z"
+  },
+  {
+    "appId": "ro.ciprian.midea.ccm15",
+    "name": "Midea",
+    "developerName": "Ciprian Moldoveanu",
+    "developerId": "6aca988bbdc8421d78c58300",
+    "version": "0.1.13",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-13T15:21:35.007Z",
+    "updatedAt": "2026-10-13T15:21:35.007Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-13T15:21:35.007Z"
   }
 ]
