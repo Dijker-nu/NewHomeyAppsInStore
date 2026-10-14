@@ -3832,10 +3832,10 @@
     "name": "Plejd",
     "developerName": "Emil Öhman",
     "developerId": "5dd998a831f29db624c0563a",
-    "version": "3.5.4",
+    "version": "3.6.0",
     "sourceRepository": "https://github.com/emilohman/homey-plejd",
     "publishedAt": "2019-11-23T20:38:00.560Z",
-    "updatedAt": "2026-02-26T18:51:25.350Z",
+    "updatedAt": "2026-10-14T08:50:55.596Z",
     "communityTopicId": 43266
   },
   {
@@ -5009,10 +5009,10 @@
     "name": "Google Services",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "1.11.0",
+    "version": "2.0.2",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.googleservices/",
     "publishedAt": "2021-02-16T10:36:49.509Z",
-    "updatedAt": "2026-09-15T04:13:23.562Z",
+    "updatedAt": "2026-10-14T08:50:55.596Z",
     "communityTopicId": 43257
   },
   {
@@ -5465,17 +5465,6 @@
     "publishedAt": "2021-06-12T18:44:37.868Z",
     "updatedAt": "2026-10-13T10:46:12.220Z",
     "communityTopicId": 48374
-  },
-  {
-    "appId": "org.volumio.remote",
-    "name": "Volumio",
-    "developerName": "Paul Heetebrij",
-    "developerId": "60cd1e66f68beffcbb16ca82",
-    "version": "1.2.0",
-    "sourceRepository": "https://github.com/paulheetebrij/org.volumio.remote",
-    "publishedAt": "2021-06-18T22:31:48.814Z",
-    "updatedAt": "2021-06-24T16:38:08.967Z",
-    "communityTopicId": null
   },
   {
     "appId": "com.gitlab.assistant",
@@ -6449,11 +6438,11 @@
     "appId": "com.plejd",
     "name": "Plejd",
     "developerName": "Plejd AB",
-    "developerId": "63a1c2902c8e04f69dd58230",
+    "developerId": "6ace2ff79f22c4b3e2e6d291",
     "version": "1.2.3",
     "sourceRepository": "",
     "publishedAt": "2022-07-11T14:58:25.523Z",
-    "updatedAt": "2025-09-16T08:40:01.539Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 116532
   },
   {
@@ -8078,10 +8067,10 @@
     "name": "AWTRIX",
     "developerName": "Radovan Kepák",
     "developerId": "5fd92566aac5e426e0601fc8",
-    "version": "2.3.5",
+    "version": "2.3.8",
     "sourceRepository": "https://github.com/bckp/de.blueforcer.awtrixlight",
     "publishedAt": "2023-10-15T18:31:02.837Z",
-    "updatedAt": "2026-10-07T10:23:44.580Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 91888
   },
   {
@@ -9024,10 +9013,10 @@
     "name": "SolPlanet",
     "developerName": "Maikel Reijnders",
     "developerId": "65e0836a896842f4abaf27a9",
-    "version": "1.3.6",
+    "version": "1.3.12",
     "sourceRepository": "",
     "publishedAt": "2024-02-29T13:15:22.269Z",
-    "updatedAt": "2026-09-27T07:21:11.517Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 105742
   },
   {
@@ -9596,10 +9585,10 @@
     "name": "Find My",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.9.5",
+    "version": "1.9.7",
     "sourceRepository": "https://github.com/martijnpoppen/com.apple.findmy",
     "publishedAt": "2024-08-16T14:07:36.540Z",
-    "updatedAt": "2026-10-13T10:46:12.221Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 114491
   },
   {
@@ -10113,10 +10102,10 @@
     "name": "tado° Home Manager",
     "developerName": "Arun Neelicattu",
     "developerId": "65cb5dd9e0e2f40476d6bff7",
-    "version": "3.0.1",
+    "version": "3.1.0",
     "sourceRepository": "https://github.com/abn/com.tado.community.home",
     "publishedAt": "2024-10-30T00:23:59.617Z",
-    "updatedAt": "2025-04-01T23:48:14.115Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": null
   },
   {
@@ -10795,10 +10784,10 @@
     "name": "Spacey Plan",
     "developerName": "Ludvig Aldrin",
     "developerId": "5dcabbfa1c90c866f936613a",
-    "version": "0.2.12",
+    "version": "0.3.0",
     "sourceRepository": "https://github.com/ludvigaldrin/com.svipler.app.spaceyplan ",
     "publishedAt": "2025-03-24T13:25:43.026Z",
-    "updatedAt": "2026-09-15T07:34:11.102Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 132628
   },
   {
@@ -11312,10 +11301,10 @@
     "name": "SlimLaden Home & Car",
     "developerName": "Roedi de Lion",
     "developerId": "67dda0b46cb23bab6c6261e5",
-    "version": "9.9.51",
+    "version": "9.9.62",
     "sourceRepository": "",
     "publishedAt": "2025-07-09T05:19:08.733Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 140156
   },
   {
@@ -12049,10 +12038,10 @@
     "name": "Repenic Ltd",
     "developerName": "Electric HZC",
     "developerId": "5eeb896a5f2aefd511cfe18d",
-    "version": "1.0.19",
+    "version": "1.0.23",
     "sourceRepository": "",
     "publishedAt": "2025-10-28T09:44:41.718Z",
-    "updatedAt": "2026-09-10T06:55:24.779Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": null
   },
   {
@@ -12104,10 +12093,10 @@
     "name": "Olisto",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.19",
+    "version": "1.1.20",
     "sourceRepository": "https://github.com/smarthomesven/homey-olisto",
     "publishedAt": "2025-11-02T01:47:34.277Z",
-    "updatedAt": "2026-09-19T00:04:07.947Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 144831
   },
   {
@@ -12269,10 +12258,10 @@
     "name": "Duux Gen2",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "2.10.2",
+    "version": "2.10.3",
     "sourceRepository": "https://github.com/smarthomesven/homey-duux-gen2",
     "publishedAt": "2025-11-18T16:27:43.875Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 145511
   },
   {
@@ -13193,10 +13182,10 @@
     "name": "Stream Deck",
     "developerName": "Stefan Renne",
     "developerId": "680b8f7861abe0f3b0bf262a",
-    "version": "1.1.9",
+    "version": "1.2.0",
     "sourceRepository": "https://github.com/stefanrenne/nl.stefanrenne.streamdeck",
     "publishedAt": "2026-01-30T15:51:55.679Z",
-    "updatedAt": "2026-08-04T19:23:54.960Z",
+    "updatedAt": "2026-10-14T08:50:55.597Z",
     "communityTopicId": 151256
   },
   {
@@ -13732,10 +13721,10 @@
     "name": "Insteon",
     "developerName": "Douglas Krug",
     "developerId": "6998befbcd19af4229e5965e",
-    "version": "1.8.3",
+    "version": "1.8.4",
     "sourceRepository": "https://github.com/logname/com.insteon",
     "publishedAt": "2026-02-23T19:06:56.287Z",
-    "updatedAt": "2026-05-28T02:03:38.850Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 151182
   },
   {
@@ -15085,10 +15074,10 @@
     "name": "Tuya Local",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.253",
+    "version": "1.0.276",
     "sourceRepository": "https://github.com/andiwirz/com.tuyalocal",
     "publishedAt": "2026-04-20T09:03:38.496Z",
-    "updatedAt": "2026-09-30T09:49:35.527Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 154077
   },
   {
@@ -15184,10 +15173,10 @@
     "name": "myAudi",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "https://github.com/andiwirz/com.audi.etron",
     "publishedAt": "2026-04-24T21:44:36.116Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 155543
   },
   {
@@ -15998,10 +15987,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "4.21.2",
+    "version": "5.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": null
   },
   {
@@ -16427,10 +16416,10 @@
     "name": "Solis Local Hybrid Inverter",
     "developerName": "Remco Bosshard",
     "developerId": "6994c1f8cd19af4229e3533e",
-    "version": "0.1.81",
+    "version": "1.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-06-30T11:14:56.666Z",
-    "updatedAt": "2026-09-28T20:12:53.594Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 156730
   },
   {
@@ -16812,10 +16801,10 @@
     "name": "Nibe Live",
     "developerName": "Love Thyresson",
     "developerId": "67718e3ee5ac96c52a6ba4e0",
-    "version": "1.4.2",
+    "version": "1.4.7",
     "sourceRepository": "https://github.com/lovethyresson/com.nibe.local",
     "publishedAt": "2026-07-18T17:56:52.713Z",
-    "updatedAt": "2026-10-06T10:29:51.572Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 157330
   },
   {
@@ -17329,10 +17318,10 @@
     "name": "Nordlux Smart Light",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "sourceRepository": "https://github.com/smarthomesven/homey-nordlux",
     "publishedAt": "2026-08-09T21:24:19.617Z",
-    "updatedAt": "2026-09-25T05:16:27.271Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 158091
   },
   {
@@ -17483,10 +17472,10 @@
     "name": "Geberit AquaClean",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.13.1",
+    "version": "1.13.2",
     "sourceRepository": "https://github.com/torp93/homey-geberit-aquaclean",
     "publishedAt": "2026-08-15T11:18:56.068Z",
-    "updatedAt": "2026-09-12T11:57:07.869Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": null
   },
   {
@@ -18781,10 +18770,10 @@
     "name": "Narwal",
     "developerName": "Idan Bush",
     "developerId": "69a8814aaf832c1e4629fcce",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "sourceRepository": "https://github.com/TheBlackBush/narwal-homey-app",
     "publishedAt": "2026-09-30T17:07:57.799Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 160061
   },
   {
@@ -19188,10 +19177,10 @@
     "name": "Widgetkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "sourceRepository": "https://github.com/thomassidor/widgetkeeper",
     "publishedAt": "2026-10-09T00:01:11.828Z",
-    "updatedAt": "2026-10-12T11:03:24.487Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": 160453
   },
   {
@@ -19232,10 +19221,10 @@
     "name": "Universal RF Remote",
     "developerName": "Bo Sundgaard",
     "developerId": "6ac80645bdc8421d78c4d6e1",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "sourceRepository": "https://github.com/bosund/universal-rf-remote",
     "publishedAt": "2026-10-12T20:31:30.596Z",
-    "updatedAt": "2026-10-12T20:31:30.596Z",
+    "updatedAt": "2026-10-14T08:50:55.598Z",
     "communityTopicId": null
   },
   {
@@ -19257,8 +19246,8 @@
     "version": "1.6.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-13T10:45:38.595Z",
-    "updatedAt": "2026-10-13T10:45:38.595Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-14T08:50:55.598Z",
+    "communityTopicId": 160681
   },
   {
     "appId": "com.foxess",
@@ -19291,6 +19280,17 @@
     "sourceRepository": "",
     "publishedAt": "2026-10-13T15:21:35.007Z",
     "updatedAt": "2026-10-13T15:21:35.007Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "io.github.robinnoort.volumio",
+    "name": "Volumio",
+    "developerName": "Robin Noort",
+    "developerId": "692a1a3166abe425474c8866",
+    "version": "2.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-14T08:50:12.978Z",
+    "updatedAt": "2026-10-14T08:50:12.978Z",
     "communityTopicId": null
   }
 ]

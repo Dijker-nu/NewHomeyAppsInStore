@@ -8,7 +8,7 @@
     "sourceRepository": "",
     "publishedAt": "2022-05-02T20:20:45.160Z",
     "communityTopicId": 63043,
-    "lastCheckedAt": "2026-10-13T10:46:12.323Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.882Z",
     "removedAt": "2026-09-22T21:00:34.629Z",
     "liveVersion": "0.1.1",
     "private": true,
@@ -21,7 +21,7 @@
     "developerId": "68be80a592a3a87a4b59b1ee",
     "version": "1.1.10",
     "removedAt": "2026-09-22T20:47:36.013Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.703Z",
+    "lastCheckedAt": "2026-10-14T08:50:56.472Z",
     "private": true,
     "type": "private",
     "communityTopicId": 145469
@@ -36,7 +36,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.321Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.900Z",
     "type": "private",
     "private": true
   },
@@ -50,7 +50,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.309Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.886Z",
     "type": "test",
     "private": false
   },
@@ -64,7 +64,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T19:36:16.541Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.334Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.885Z",
     "type": "test",
     "private": false
   },
@@ -78,7 +78,7 @@
     "communityTopicId": null,
     "publishedAt": "2026-04-16T21:01:06.030Z",
     "removedAt": "2026-10-01T10:16:38.796Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.304Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.876Z",
     "type": "removed",
     "private": null
   },
@@ -92,7 +92,7 @@
     "communityTopicId": null,
     "publishedAt": "2026-09-14T09:03:49.293Z",
     "removedAt": "2026-10-01T10:16:38.802Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.330Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.879Z",
     "type": "private",
     "private": true
   },
@@ -106,8 +106,22 @@
     "communityTopicId": 16518,
     "publishedAt": "2019-11-12T14:07:39.113Z",
     "removedAt": "2026-10-05T10:37:47.248Z",
-    "lastCheckedAt": "2026-10-13T10:46:12.319Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.888Z",
     "type": "private",
     "private": true
+  },
+  {
+    "appId": "org.volumio.remote",
+    "name": "Volumio",
+    "developerName": "Paul Heetebrij",
+    "developerId": "60cd1e66f68beffcbb16ca82",
+    "version": "1.2.0",
+    "sourceRepository": "https://github.com/paulheetebrij/org.volumio.remote",
+    "communityTopicId": null,
+    "publishedAt": "2021-06-18T22:31:48.814Z",
+    "removedAt": "2026-10-14T08:50:55.739Z",
+    "lastCheckedAt": "2026-10-14T08:50:55.739Z",
+    "type": "removed",
+    "private": null
   }
 ]

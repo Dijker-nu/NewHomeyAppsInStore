@@ -1,1144 +1,343 @@
 [
   {
-    "id": "ro.ciprian.midea.ccm15",
+    "id": "io.github.robinnoort.volumio",
     "rating": null,
     "liveBuild": {
-      "id": 5,
+      "id": 2,
       "name": {
-        "en": "Midea"
+        "en": "Volumio",
+        "nl": "Volumio"
       },
-      "version": "0.1.13",
+      "version": "2.1.0",
       "readme": {
-        "en": "Make every room comfortable with your existing Midea VRF installation. Connect Homey Pro directly to a CCM15 gateway on your local network, see the temperature and current settings for each indoor unit, and build daily routines with Flow. Find local gateways and import indoor names already configured in CCM15. No Midea cloud account or Home Assistant is required.\n\nThis community integration supports CCM15 gateways that expose the local web interface. New devices begin with monitoring enabled; configure the indoor type, gateway compatibility and any shared outdoor circuit before enabling control in device settings. Room temperature comes from the indoor unit. Swing and auxiliary electric heat are available only when the relevant hardware is configured. A gateway address can also be entered manually.\n"
+        "en": "Bring listening into your everyday routines. Add your Volumio player to Homey for playback controls, track details and album artwork in one place.\n\nLet the music set things in motion with TIDAL Connect, source-change and connectivity automations. The connection works locally on your network. This is an independent community integration, not an official Volumio app. Volumio is a registered trademark of Volumio SRL.\n",
+        "nl": "Maak muziek onderdeel van je dagelijkse routines. Voeg je Volumio-speler toe aan Homey voor afspeelbediening, trackinformatie en albumhoezen op één plek.\n\nLaat je muziek automatiseringen starten bij TIDAL Connect, bronwisselingen en verbindingswijzigingen. De communicatie verloopt lokaal. Dit is een onafhankelijke community-integratie, geen officiële Volumio-app. Volumio is a registered trademark of Volumio SRL.\n"
       },
       "description": {
-        "en": "Comfort in every room, with local VRF control"
+        "en": "Let your music set the whole home in motion.",
+        "nl": "Laat je muziek het hele huis in beweging brengen."
       },
-      "category": "climate",
-      "brandColor": "#126E82",
-      "icon": "https://apps.homeycdn.net/app/ro.ciprian.midea.ccm15/5/4e47625e-a0b4-449d-a849-82a72f8e76c4/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/ro.ciprian.midea.ccm15/5/4e47625e-a0b4-449d-a849-82a72f8e76c4/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/ro.ciprian.midea.ccm15/5/4e47625e-a0b4-449d-a849-82a72f8e76c4/assets/images/large.png",
+      "category": "music",
+      "brandColor": "#51B289",
+      "icon": "https://apps.homeycdn.net/app/io.github.robinnoort.volumio/2/aa538a5b-eaa4-4025-960b-10475d1f2211/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/io.github.robinnoort.volumio/2/aa538a5b-eaa4-4025-960b-10475d1f2211/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/io.github.robinnoort.volumio/2/aa538a5b-eaa4-4025-960b-10475d1f2211/assets/images/large.png",
       "drivers": [
         {
-          "id": "indoor",
+          "id": "volumio",
           "name": {
-            "en": "Midea CCM15 indoor unit"
+            "en": "Volumio Player",
+            "nl": "Volumio-speler"
           },
-          "class": "thermostat",
+          "class": "speaker",
           "capabilities": [
-            "onoff",
-            "measure_temperature",
-            "target_temperature",
-            "ccm15_mode",
-            "ccm15_fan",
-            "ccm15_connected",
-            "ccm15_error",
-            "ccm15_mode_locked",
-            "ccm15_fan_locked",
-            "ccm15_remote_locked",
-            "ccm15_cool_limit",
-            "ccm15_heat_limit",
-            "ccm15_locked_mode",
-            "ccm15_locked_fan",
-            "ccm15_unit",
-            "ccm15_last_seen",
-            "alarm_generic",
-            "ccm15_swing_state",
-            "ccm15_heater_state",
-            "ccm15_mode_restriction",
-            "ccm15_fan_restriction",
-            "ccm15_cooling_limit_control",
-            "ccm15_heating_limit_control",
-            "ccm15_remote_lock_control",
-            "ccm15_command_status",
-            "ccm15_command_detail",
-            "ccm15_fault_label",
-            "ccm15_reported_mode",
-            "ccm15_reported_fan",
-            "ccm15_reported_target",
-            "ccm15_reported_power",
-            "ccm15_cooling_limit_status",
-            "ccm15_heating_limit_status",
-            "ccm15_mode_restriction_status",
-            "ccm15_fan_restriction_status",
-            "thermostat_mode"
+            "speaker_playing",
+            "speaker_track",
+            "speaker_artist",
+            "speaker_album",
+            "speaker_duration",
+            "speaker_position",
+            "speaker_prev",
+            "speaker_next",
+            "volume_set",
+            "volume_mute",
+            "volumio_status",
+            "volumio_service",
+            "volumio_codec",
+            "volumio_samplerate",
+            "volumio_bitdepth",
+            "volumio_connected"
           ],
-          "capabilitiesOptions": {
-            "target_temperature": {
-              "min": 17,
-              "max": 30,
-              "step": 1
-            },
-            "measure_temperature": {
-              "decimals": 1
-            },
-            "thermostat_mode": {
-              "title": {
-                "en": "Operating mode"
-              },
-              "values": [
-                {
-                  "id": "cool",
-                  "title": {
-                    "en": "Cool"
-                  }
-                },
-                {
-                  "id": "heat",
-                  "title": {
-                    "en": "Heat"
-                  }
-                },
-                {
-                  "id": "dry",
-                  "title": {
-                    "en": "Dry"
-                  }
-                },
-                {
-                  "id": "fan",
-                  "title": {
-                    "en": "Fan only"
-                  }
-                },
-                {
-                  "id": "off",
-                  "title": {
-                    "en": "Off"
-                  }
-                },
-                {
-                  "id": "auto",
-                  "title": {
-                    "en": "Auto"
-                  }
-                },
-                {
-                  "id": "unknown",
-                  "title": {
-                    "en": "Unknown"
-                  }
-                }
-              ]
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/ro.ciprian.midea.ccm15/5/4e47625e-a0b4-449d-a849-82a72f8e76c4/drivers/indoor/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/ro.ciprian.midea.ccm15/5/4e47625e-a0b4-449d-a849-82a72f8e76c4/drivers/indoor/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/io.github.robinnoort.volumio/2/aa538a5b-eaa4-4025-960b-10475d1f2211/drivers/volumio/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/io.github.robinnoort.volumio/2/aa538a5b-eaa4-4025-960b-10475d1f2211/drivers/volumio/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
             "lan"
           ],
-          "icon": "https://apps.homeycdn.net/app/ro.ciprian.midea.ccm15/5/4e47625e-a0b4-449d-a849-82a72f8e76c4/drivers/indoor/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/io.github.robinnoort.volumio/2/aa538a5b-eaa4-4025-960b-10475d1f2211/drivers/volumio/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "connection_changed",
+            "id": "player_playback_started_or_resumed",
             "title": {
-              "en": "Connection changed"
+              "en": "Playback started or resumed",
+              "nl": "Afspelen gestart of hervat"
+            },
+            "hint": {
+              "en": "Triggered on playback start/resume or an active source change, with source and track information.",
+              "nl": "Bij start/hervatten of een actieve bronwissel, met bron- en trackinformatie."
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ],
             "tokens": [
               {
-                "name": "connected",
-                "type": "boolean",
+                "name": "service",
+                "type": "string",
                 "title": {
-                  "en": "Connected"
+                  "en": "Source",
+                  "nl": "Bron"
+                }
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": {
+                  "en": "Title",
+                  "nl": "Titel"
+                }
+              },
+              {
+                "name": "artist",
+                "type": "string",
+                "title": {
+                  "en": "Artist",
+                  "nl": "Artiest"
                 }
               }
             ]
           },
           {
-            "id": "state_changed",
+            "id": "player_tidal_connect_started_or_resumed",
             "title": {
-              "en": "Indoor state changed"
+              "en": "TIDAL Connect started or resumed",
+              "nl": "TIDAL Connect gestart of hervat"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ],
             "tokens": [
               {
-                "name": "mode",
+                "name": "title",
                 "type": "string",
                 "title": {
-                  "en": "Mode"
+                  "en": "Title",
+                  "nl": "Titel"
                 }
               },
               {
-                "name": "fan",
+                "name": "artist",
                 "type": "string",
                 "title": {
-                  "en": "Fan"
+                  "en": "Artist",
+                  "nl": "Artiest"
                 }
               },
               {
-                "name": "temperature",
-                "type": "number",
+                "name": "samplerate",
+                "type": "string",
                 "title": {
-                  "en": "Room temperature °C"
+                  "en": "Sample rate",
+                  "nl": "Samplefrequentie"
                 }
               },
               {
-                "name": "target",
-                "type": "number",
+                "name": "bitdepth",
+                "type": "string",
                 "title": {
-                  "en": "Target temperature °C"
-                }
-              },
-              {
-                "name": "fault",
-                "type": "number",
-                "title": {
-                  "en": "Fault code"
-                }
-              },
-              {
-                "name": "swing",
-                "type": "boolean",
-                "title": {
-                  "en": "Swing"
-                }
-              },
-              {
-                "name": "heater",
-                "type": "boolean",
-                "title": {
-                  "en": "Auxiliary heater"
+                  "en": "Bit depth",
+                  "nl": "Bitdiepte"
                 }
               }
             ]
           },
           {
-            "id": "ccm15_mode_changed",
+            "id": "player_paused",
             "title": {
-              "en": "Mode changed"
+              "en": "Playback paused",
+              "nl": "Afspelen gepauzeerd"
+            },
+            "hint": {
+              "en": "Only on Pause, unlike the generic stopped-playing trigger (Pause or Stop).",
+              "nl": "Alleen bij pauzeren, niet bij volledig stoppen."
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
+                "name": "device",
+                "filter": "driver_id=volumio"
+              }
+            ]
+          },
+          {
+            "id": "player_stopped",
+            "title": {
+              "en": "Playback stopped",
+              "nl": "Afspelen gestopt"
+            },
+            "hint": {
+              "en": "Only on full Stop, not on Pause.",
+              "nl": "Alleen bij volledig stoppen, niet bij pauzeren."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=volumio"
+              }
+            ]
+          },
+          {
+            "id": "player_source_changed",
+            "title": {
+              "en": "Source changed",
+              "nl": "Bron gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ],
             "tokens": [
               {
-                "name": "ccm15_mode",
+                "name": "service",
                 "type": "string",
                 "title": {
-                  "en": "Mode"
+                  "en": "Source",
+                  "nl": "Bron"
                 }
               }
             ]
           },
           {
-            "id": "ccm15_fan_changed",
+            "id": "player_connection_lost",
             "title": {
-              "en": "Fan changed"
+              "en": "Connection lost",
+              "nl": "Verbinding verbroken"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "ccm15_fan",
-                "type": "string",
-                "title": {
-                  "en": "Fan"
-                }
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ]
           },
           {
-            "id": "ccm15_error_changed",
+            "id": "player_connection_restored",
             "title": {
-              "en": "Fault code changed"
+              "en": "Connection restored",
+              "nl": "Verbinding hersteld"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "ccm15_error",
-                "type": "number",
-                "title": {
-                  "en": "Fault code"
-                }
-              }
-            ]
-          },
-          {
-            "id": "command_result",
-            "title": {
-              "en": "Command verification finished"
-            },
-            "args": [
-              {
                 "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "status",
-                "type": "string",
-                "title": {
-                  "en": "Result"
-                }
-              },
-              {
-                "name": "detail",
-                "type": "string",
-                "title": {
-                  "en": "Detail"
-                }
-              },
-              {
-                "name": "seconds",
-                "type": "number",
-                "title": {
-                  "en": "Seconds"
-                }
-              },
-              {
-                "name": "command_id",
-                "type": "string",
-                "title": {
-                  "en": "Command ID"
-                }
-              },
-              {
-                "name": "kind",
-                "type": "string",
-                "title": {
-                  "en": "Command type"
-                }
-              },
-              {
-                "name": "slot",
-                "type": "number",
-                "title": {
-                  "en": "Indoor slot"
-                }
+                "filter": "driver_id=volumio"
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "is_connected",
+            "id": "player_is_tidal_connect",
             "title": {
-              "en": "Is connected"
+              "en": "TIDAL Connect is active",
+              "nl": "TIDAL Connect is actief"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ]
           },
           {
-            "id": "is_mode",
+            "id": "player_is_connected",
             "title": {
-              "en": "Operating mode is"
+              "en": "Player is connected",
+              "nl": "Speler is verbonden"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=volumio"
+              }
+            ]
+          },
+          {
+            "id": "player_source_is",
+            "title": {
+              "en": "Source is [[service]]",
+              "nl": "Bron is [[service]]"
             },
             "titleFormatted": {
-              "en": "Operating mode is [[value]]"
+              "en": "Source is [[service]]",
+              "nl": "Bron is [[service]]"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
+                "name": "device",
+                "filter": "driver_id=volumio"
               },
               {
-                "name": "value",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "cool",
-                    "label": {
-                      "en": "Cool"
-                    }
-                  },
-                  {
-                    "id": "heat",
-                    "label": {
-                      "en": "Heat"
-                    }
-                  },
-                  {
-                    "id": "dry",
-                    "label": {
-                      "en": "Dry"
-                    }
-                  },
-                  {
-                    "id": "fan",
-                    "label": {
-                      "en": "Fan only"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  },
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "is_fan",
-            "title": {
-              "en": "Fan speed is"
-            },
-            "titleFormatted": {
-              "en": "Fan speed is [[value]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "value",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto"
-                    }
-                  },
-                  {
-                    "id": "low",
-                    "label": {
-                      "en": "Low"
-                    }
-                  },
-                  {
-                    "id": "medium",
-                    "label": {
-                      "en": "Medium"
-                    }
-                  },
-                  {
-                    "id": "high",
-                    "label": {
-                      "en": "High"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "has_fault",
-            "title": {
-              "en": "Has a fault"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              }
-            ]
-          },
-          {
-            "id": "temperature_above",
-            "title": {
-              "en": "Room temperature is above"
-            },
-            "titleFormatted": {
-              "en": "Room temperature is above [[temperature]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "temperature",
-                "type": "number",
+                "name": "service",
+                "type": "text",
                 "title": {
-                  "en": "Temperature"
+                  "en": "Source",
+                  "nl": "Bron"
                 }
-              }
-            ]
-          },
-          {
-            "id": "is_locked",
-            "title": {
-              "en": "Has an active restriction"
-            },
-            "titleFormatted": {
-              "en": "Has an active [[kind]] restriction"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "kind",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "mode",
-                    "label": {
-                      "en": "Mode"
-                    }
-                  },
-                  {
-                    "id": "fan",
-                    "label": {
-                      "en": "Fan"
-                    }
-                  },
-                  {
-                    "id": "remote",
-                    "label": {
-                      "en": "Wireless remote control"
-                    }
-                  },
-                  {
-                    "id": "coolLimit",
-                    "label": {
-                      "en": "Cooling minimum"
-                    }
-                  },
-                  {
-                    "id": "heatLimit",
-                    "label": {
-                      "en": "Heating maximum"
-                    }
-                  }
-                ]
               }
             ]
           }
         ],
         "actions": [
           {
-            "id": "set_temperature",
+            "id": "player_stop",
             "title": {
-              "en": "Set target temperature"
-            },
-            "titleFormatted": {
-              "en": "Set target temperature [[temperature]]"
+              "en": "Stop",
+              "nl": "Stoppen"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature"
-                },
-                "min": 17,
-                "max": 30,
-                "step": 1
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ]
           },
           {
-            "id": "set_mode",
+            "id": "player_refresh",
             "title": {
-              "en": "Set operating mode"
-            },
-            "titleFormatted": {
-              "en": "Set operating mode [[mode]]"
+              "en": "Refresh state",
+              "nl": "Status vernieuwen"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "mode",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "cool",
-                    "label": {
-                      "en": "Cool"
-                    }
-                  },
-                  {
-                    "id": "heat",
-                    "label": {
-                      "en": "Heat"
-                    }
-                  },
-                  {
-                    "id": "dry",
-                    "label": {
-                      "en": "Dry"
-                    }
-                  },
-                  {
-                    "id": "fan",
-                    "label": {
-                      "en": "Fan only"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  },
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto"
-                    }
-                  }
-                ]
+                "name": "device",
+                "filter": "driver_id=volumio"
               }
             ]
           },
           {
-            "id": "set_fan",
+            "id": "player_reconnect",
             "title": {
-              "en": "Set fan speed"
-            },
-            "titleFormatted": {
-              "en": "Set fan speed [[fan]]"
-            },
-            "hint": {
-              "en": "Fan Off can only be selected while the indoor is Off. Use power Off to stop a running indoor."
+              "en": "Reconnect player",
+              "nl": "Speler opnieuw verbinden"
             },
             "args": [
               {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "fan",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto"
-                    }
-                  },
-                  {
-                    "id": "low",
-                    "label": {
-                      "en": "Low"
-                    }
-                  },
-                  {
-                    "id": "medium",
-                    "label": {
-                      "en": "Medium"
-                    }
-                  },
-                  {
-                    "id": "high",
-                    "label": {
-                      "en": "High"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_climate",
-            "title": {
-              "en": "Set mode, fan and temperature together"
-            },
-            "titleFormatted": {
-              "en": "Set mode, fan and temperature together [[mode]], [[fan]], [[temperature]]"
-            },
-            "args": [
-              {
                 "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "mode",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "cool",
-                    "label": {
-                      "en": "Cool"
-                    }
-                  },
-                  {
-                    "id": "heat",
-                    "label": {
-                      "en": "Heat"
-                    }
-                  },
-                  {
-                    "id": "dry",
-                    "label": {
-                      "en": "Dry"
-                    }
-                  },
-                  {
-                    "id": "fan",
-                    "label": {
-                      "en": "Fan only"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  },
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "fan",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto"
-                    }
-                  },
-                  {
-                    "id": "low",
-                    "label": {
-                      "en": "Low"
-                    }
-                  },
-                  {
-                    "id": "medium",
-                    "label": {
-                      "en": "Medium"
-                    }
-                  },
-                  {
-                    "id": "high",
-                    "label": {
-                      "en": "High"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature"
-                },
-                "min": 17,
-                "max": 30,
-                "step": 1
-              }
-            ]
-          },
-          {
-            "id": "set_power",
-            "title": {
-              "en": "Switch power"
-            },
-            "titleFormatted": {
-              "en": "Switch power [[power]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "power",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "On"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_swing",
-            "title": {
-              "en": "Set swing"
-            },
-            "titleFormatted": {
-              "en": "Set swing [[state]]"
-            },
-            "hint": {
-              "en": "Enable swing on a running wall split. Configure the indoor hardware type in its device settings."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "On"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_heater",
-            "title": {
-              "en": "Set auxiliary heater"
-            },
-            "titleFormatted": {
-              "en": "Set auxiliary heater [[state]]"
-            },
-            "hint": {
-              "en": "Available only for devices with the matching hardware enabled in their device settings."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "On"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "refresh_status",
-            "title": {
-              "en": "Refresh status"
-            },
-            "hint": {
-              "en": "Reads the gateway without changing any indoor settings."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              }
-            ]
-          },
-          {
-            "id": "set_mode_lock",
-            "title": {
-              "en": "Restrict operating mode"
-            },
-            "titleFormatted": {
-              "en": "Restrict mode to [[value]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "value",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "unlocked",
-                    "label": {
-                      "en": "Unlocked"
-                    }
-                  },
-                  {
-                    "id": "cool",
-                    "label": {
-                      "en": "Cool only"
-                    }
-                  },
-                  {
-                    "id": "heat",
-                    "label": {
-                      "en": "Heat only"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_fan_lock",
-            "title": {
-              "en": "Restrict fan speed"
-            },
-            "titleFormatted": {
-              "en": "Restrict fan to [[value]]"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "value",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "unlocked",
-                    "label": {
-                      "en": "Unlocked"
-                    }
-                  },
-                  {
-                    "id": "low",
-                    "label": {
-                      "en": "Low only"
-                    }
-                  },
-                  {
-                    "id": "medium",
-                    "label": {
-                      "en": "Medium only"
-                    }
-                  },
-                  {
-                    "id": "high",
-                    "label": {
-                      "en": "High only"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_cooling_limit",
-            "title": {
-              "en": "Set minimum cooling temperature"
-            },
-            "titleFormatted": {
-              "en": "Set minimum cooling temperature [[temperature]]"
-            },
-            "hint": {
-              "en": "A restriction on future setpoints; this does not set the current target temperature."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature"
-                },
-                "min": 17,
-                "max": 30,
-                "step": 1
-              }
-            ]
-          },
-          {
-            "id": "set_heating_limit",
-            "title": {
-              "en": "Set maximum heating temperature"
-            },
-            "titleFormatted": {
-              "en": "Set maximum heating temperature [[temperature]]"
-            },
-            "hint": {
-              "en": "A restriction on future setpoints; this does not set the current target temperature."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "temperature",
-                "type": "number",
-                "title": {
-                  "en": "Temperature"
-                },
-                "min": 17,
-                "max": 30,
-                "step": 1
-              }
-            ]
-          },
-          {
-            "id": "clear_temperature_limit",
-            "title": {
-              "en": "Remove temperature limit"
-            },
-            "titleFormatted": {
-              "en": "Remove [[kind]] temperature limit"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "kind",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "coolLimit",
-                    "label": {
-                      "en": "Cooling minimum"
-                    }
-                  },
-                  {
-                    "id": "heatLimit",
-                    "label": {
-                      "en": "Heating maximum"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_remote_lock",
-            "title": {
-              "en": "Set wireless remote control lock"
-            },
-            "titleFormatted": {
-              "en": "Set wireless remote control [[state]]"
-            },
-            "hint": {
-              "en": "Locks the wireless remote control (CCM15 Remote Ctrl.). The WDC-86E/KD padlock can indicate any active restriction; this command does not mean its wired keyboard is disabled."
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=indoor"
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "Locked"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Unlocked"
-                    }
-                  }
-                ]
+                "filter": "driver_id=volumio"
               }
             ]
           }
@@ -1148,25 +347,19 @@
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-10-13T14:36:08.357Z",
+      "stateChangedAt": "2026-10-14T07:22:00.908Z",
       "bugs": null,
       "homepage": null,
-      "support": "mailto:legaturi.ace7b@icloud.com",
+      "support": null,
       "source": null,
-      "contributors": {
-        "developers": [
-          {
-            "name": "HomeOps / calvo-software"
-          }
-        ],
-        "translators": []
-      },
+      "contributors": null,
       "contributing": null,
       "permissions": [],
       "changelog": {
-        "en": "Update the App Store name to Midea, add a public support contact and replace the app cover with official Midea lifestyle photography. CCM15 support and device controls are unchanged."
+        "en": "Improved Volumio branding and Homey Store presentation; redundant speaker Flow cards removed in favor of native Homey capabilities, while TIDAL Connect and source-specific automation remain available.",
+        "nl": "Vernieuwde Volumio-vormgeving en Homey Store-presentatie; dubbele speaker-Flowkaarten verwijderd ten gunste van standaard Homey-functies, met behoud van TIDAL Connect en bronspecifieke automatiseringen."
       },
-      "compatibility": ">=12.0.1",
+      "compatibility": ">=12.4.0",
       "tags": null,
       "platforms": [
         "local"
@@ -1176,16 +369,16 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.1.13",
+    "liveVersion": "2.1.0",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6aca988bbdc8421d78c58300",
+      "id": "692a1a3166abe425474c8866",
       "type": "user",
-      "userId": "5f85df4738565a0c5ab634aa",
-      "name": "Ciprian Moldoveanu",
+      "userId": "631a334c25cbfc0bb9bd5d90",
+      "name": "Robin Noort",
       "verified": false
     },
     "communityTopicId": null

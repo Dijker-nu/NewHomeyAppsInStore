@@ -738,6 +738,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6aca988bbdc8421d78c58300",
+    "developerName": "Ciprian Moldoveanu",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6a14b6834d288cb6b9844faa",
     "developerName": "Clemens Bott",
     "forumUserID": null,
@@ -2168,8 +2174,8 @@
   {
     "developerId": "6acb666bbdc8421d78c5b8d7",
     "developerName": "Joey Gosenson",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 65355,
+    "forumUsername": "Joey_Gosenson"
   },
   {
     "developerId": "5dcabbf91c90c866f936612d",
@@ -3822,6 +3828,12 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6ace2ff79f22c4b3e2e6d291",
+    "developerName": "Plejd AB",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
     "developerId": "5dcabc1f1c90c866f936631b",
     "developerName": "Plugwise B.V.",
     "forumUserID": null,
@@ -4144,6 +4156,12 @@
     "developerName": "Robin Flikkema",
     "forumUserID": 30104,
     "forumUsername": "RobinF"
+  },
+  {
+    "developerId": "692a1a3166abe425474c8866",
+    "developerName": "Robin Noort",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "6a8839af94f0069d62d2bb7f",

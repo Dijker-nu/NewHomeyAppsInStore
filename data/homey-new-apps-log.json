@@ -970,5 +970,17 @@
     "updatedAt": "2026-10-13T15:21:35.007Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-13T15:21:35.007Z"
+  },
+  {
+    "appId": "io.github.robinnoort.volumio",
+    "name": "Volumio",
+    "developerName": "Robin Noort",
+    "developerId": "692a1a3166abe425474c8866",
+    "version": "2.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-14T08:50:12.978Z",
+    "updatedAt": "2026-10-14T08:50:12.978Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-14T08:50:12.977Z"
   }
 ]
