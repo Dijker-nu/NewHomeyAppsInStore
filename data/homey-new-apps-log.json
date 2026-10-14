@@ -982,5 +982,77 @@
     "updatedAt": "2026-10-14T08:50:12.978Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-14T08:50:12.977Z"
+  },
+  {
+    "appId": "be.pvforecast",
+    "name": "PV Forecast",
+    "developerName": "Danny van Soerland",
+    "developerId": "69cc140b699c29709ca3a1dc",
+    "version": "2.4.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-14T16:05:13.081Z",
+    "updatedAt": "2026-10-14T16:05:13.081Z",
+    "communityTopicId": 160366,
+    "discoveredAt": "2026-10-14T16:05:13.081Z"
+  },
+  {
+    "appId": "ua.te.its.vaillantebus",
+    "name": "Vaillant eBUS",
+    "developerName": "Volodymyr Piaskovskyi",
+    "developerId": "6ac7f481bdc8421d78c4d31b",
+    "version": "0.4.1",
+    "sourceRepository": "https://github.com/vova275/homey-vaillant-ebus",
+    "publishedAt": "2026-10-14T16:05:13.082Z",
+    "updatedAt": "2026-10-14T16:05:13.082Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-14T16:05:13.081Z"
+  },
+  {
+    "appId": "nl.lrvdlinden.applehealth",
+    "name": "Apple Health",
+    "developerName": "Léon van der Linden",
+    "developerId": "649eefe59a54fe7531821578",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/LRvdLinden/Apple-HealthSync-Homey",
+    "publishedAt": "2026-10-14T16:05:14.088Z",
+    "updatedAt": "2026-10-14T16:05:14.088Z",
+    "communityTopicId": 160608,
+    "discoveredAt": "2026-10-14T16:05:13.081Z"
+  },
+  {
+    "appId": "com.togrill",
+    "name": "ToGrill BBQ Thermometer",
+    "developerName": "Peter Persson",
+    "developerId": "699a3d82cd19af4229e5e3dd",
+    "version": "1.6.2",
+    "sourceRepository": "https://github.com/Mr-V34/homey-togrill",
+    "publishedAt": "2026-10-14T16:05:14.088Z",
+    "updatedAt": "2026-10-14T16:05:14.088Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-14T16:05:13.081Z"
+  },
+  {
+    "appId": "dk.kvols.mealplan",
+    "name": "MealPlan",
+    "developerName": "Mads Kvols Hansen",
+    "developerId": "6ab8d2b930dc90a8d6e535c0",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-14T16:05:14.891Z",
+    "updatedAt": "2026-10-14T16:05:14.891Z",
+    "communityTopicId": 160747,
+    "discoveredAt": "2026-10-14T16:05:13.081Z"
+  },
+  {
+    "appId": "com.nicolai.wastecalendar",
+    "name": "Waste Collection Denmark",
+    "developerName": "Nicolai Clausen",
+    "developerId": "6acac69cbdc8421d78c58d9e",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-14T16:05:14.891Z",
+    "updatedAt": "2026-10-14T16:05:14.891Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-14T16:05:13.081Z"
   }
 ]
