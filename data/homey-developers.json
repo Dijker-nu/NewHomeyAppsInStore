@@ -512,8 +512,8 @@
   {
     "developerId": "6ac80645bdc8421d78c4d6e1",
     "developerName": "Bo Sundgaard",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 2943,
+    "forumUsername": "Bosund"
   },
   {
     "developerId": "628368aceee6bc562d76a31c",
@@ -3390,6 +3390,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6acac69cbdc8421d78c58d9e",
+    "developerName": "Nicolai Clausen",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "65928140e707314c73656a6d",
     "developerName": "Nicolas Herment",
     "forumUserID": null,
@@ -3940,6 +3946,12 @@
     "developerName": "Reinier Hasper",
     "forumUserID": 11957,
     "forumUsername": "FabianB"
+  },
+  {
+    "developerId": "69a74690af832c1e4629b6c0",
+    "developerName": "Reinier SecEnablers",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "6994c1f8cd19af4229e3533e",
@@ -5158,6 +5170,12 @@
     "developerName": "Vladyslav Zahorodnii",
     "forumUserID": 43389,
     "forumUsername": "Vladyslav_Zahorodnii"
+  },
+  {
+    "developerId": "6ac7f481bdc8421d78c4d31b",
+    "developerName": "Volodymyr Piaskovskyi",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "69f3d7762e89d815c5e406ce",

@@ -2193,10 +2193,10 @@
     "name": "Heatit Controls",
     "developerName": "Heatit Controls AS",
     "developerId": "6a917dfda524daf89cb5fe38",
-    "version": "4.5.4",
+    "version": "4.5.5",
     "sourceRepository": "https://github.com/Heatit-Controls/no.ThermoFloor",
     "publishedAt": "2019-11-12T14:02:16.991Z",
-    "updatedAt": "2026-10-12T11:03:24.485Z",
+    "updatedAt": "2026-10-15T08:25:54.831Z",
     "communityTopicId": 49914
   },
   {
@@ -3546,10 +3546,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.7.5",
+    "version": "46.11.0",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-09-24T18:58:46.699Z",
+    "updatedAt": "2026-10-15T08:25:54.831Z",
     "communityTopicId": 73094
   },
   {
@@ -4976,10 +4976,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.7",
+    "version": "3.0.8",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.devicecapabilities/",
     "publishedAt": "2021-02-10T22:06:08.432Z",
-    "updatedAt": "2026-10-10T09:58:43.980Z",
+    "updatedAt": "2026-10-15T08:25:54.831Z",
     "communityTopicId": 43287
   },
   {
@@ -5625,10 +5625,10 @@
     "name": "Govee",
     "developerName": "Govee Moments",
     "developerId": "6670a1cec783db54ae23617e",
-    "version": "2.19.4",
+    "version": "2.19.5",
     "sourceRepository": "https://github.com/kaohlive/com.govee.developer",
     "publishedAt": "2021-08-19T23:13:29.394Z",
-    "updatedAt": "2026-10-13T10:46:12.220Z",
+    "updatedAt": "2026-10-15T08:25:54.831Z",
     "communityTopicId": 50660
   },
   {
@@ -6373,10 +6373,10 @@
     "name": "Daikin ONECTA",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "7.13.1",
+    "version": "7.13.2",
     "sourceRepository": "",
     "publishedAt": "2022-06-19T11:54:05.486Z",
-    "updatedAt": "2026-10-12T11:03:24.485Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 54088
   },
   {
@@ -7088,10 +7088,10 @@
     "name": "H",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "23.3.9",
+    "version": "23.4.0",
     "sourceRepository": "https://github.com/OlivierZal/com.heatzy",
     "publishedAt": "2023-02-10T23:08:25.337Z",
-    "updatedAt": "2026-09-24T19:02:55.653Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 76406
   },
   {
@@ -7913,10 +7913,10 @@
     "name": "BilligKWH",
     "developerName": "Filip Bech-Larsen",
     "developerId": "6572c3ce7d4fdebc9762f837",
-    "version": "2.3.1",
+    "version": "2.4.0",
     "sourceRepository": "",
     "publishedAt": "2023-08-24T10:12:50.726Z",
-    "updatedAt": "2026-02-27T16:00:50.311Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": null
   },
   {
@@ -8738,10 +8738,10 @@
     "name": "E3DC - HPS",
     "developerName": "Copiis",
     "developerId": "6ac4b7104c7de6266bbce51f",
-    "version": "1.8.78",
+    "version": "1.8.85",
     "sourceRepository": "https://github.com/Copiis/e3dc-4-homey",
     "publishedAt": "2024-01-07T22:05:21.210Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 105181
   },
   {
@@ -9387,10 +9387,10 @@
     "name": "Blauberg Vento",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.4.8",
+    "version": "1.4.10",
     "sourceRepository": "https://github.com/kaohlive/com.blauberg.vento",
     "publishedAt": "2024-06-10T22:25:25.545Z",
-    "updatedAt": "2026-07-20T21:57:20.311Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 111339
   },
   {
@@ -10397,12 +10397,12 @@
   {
     "appId": "com.solaredge",
     "name": "SolarEdge",
-    "developerName": "Emile Nijssen",
-    "developerId": "5dcaba391c90c866f9364985",
+    "developerName": "RM de Gruijter",
+    "developerId": "67f4effe00dfe95f8d67b335",
     "version": "1.8.1",
     "sourceRepository": "https://github.com/WeeJeWel/com.solaredge",
     "publishedAt": "2025-01-11T18:27:36.623Z",
-    "updatedAt": "2026-01-05T10:09:15.628Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": null
   },
   {
@@ -11125,10 +11125,10 @@
     "name": "Schedule Message",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.3.0",
+    "version": "1.4.1",
     "sourceRepository": "https://github.com/martijnpoppen/com.schedule.message",
     "publishedAt": "2025-06-09T22:08:08.451Z",
-    "updatedAt": "2026-05-19T09:15:44.400Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 138134
   },
   {
@@ -11290,10 +11290,10 @@
     "name": "EcoFlow - Portable power stations",
     "developerName": "Marcus Valk",
     "developerId": "686c1bf03c51ca0ca1838b39",
-    "version": "2.2.0",
+    "version": "2.2.2",
     "sourceRepository": "",
     "publishedAt": "2025-07-08T17:36:02.608Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": null
   },
   {
@@ -12390,10 +12390,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.12.2",
+    "version": "3.14.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 147496
   },
   {
@@ -12445,10 +12445,10 @@
     "name": "Tuya",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.5.11",
+    "version": "1.5.12",
     "sourceRepository": "https://github.com/Drenso/com.tuya2",
     "publishedAt": "2025-12-11T13:35:10.690Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 146735
   },
   {
@@ -13171,10 +13171,10 @@
     "name": "Indevolt Home Battery",
     "developerName": "Rob Ceelen",
     "developerId": "697be00a1aed127334de870e",
-    "version": "1.7.1",
+    "version": "1.8.2",
     "sourceRepository": "",
     "publishedAt": "2026-01-29T22:32:42.206Z",
-    "updatedAt": "2026-09-02T20:57:32.217Z",
+    "updatedAt": "2026-10-15T08:25:54.832Z",
     "communityTopicId": 148405
   },
   {
@@ -14623,10 +14623,10 @@
     "name": "Power Profiler",
     "developerName": "Andy van Dongen",
     "developerId": "693fd43f66abe4254753dd39",
-    "version": "1.9.1",
+    "version": "1.9.2",
     "sourceRepository": "",
     "publishedAt": "2026-03-28T10:51:30.738Z",
-    "updatedAt": "2026-09-23T23:05:42.164Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": 153056
   },
   {
@@ -15987,10 +15987,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "5.0.4",
+    "version": "5.1.2",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-10-14T08:50:55.598Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": null
   },
   {
@@ -16097,10 +16097,10 @@
     "name": "Immich",
     "developerName": "Jurjen Ladenius",
     "developerId": "69de17d9fb6dd7068a78f4bd",
-    "version": "1.0.11",
+    "version": "1.0.13",
     "sourceRepository": "https://github.com/jurjen74/homey-immich",
     "publishedAt": "2026-06-04T16:07:19.905Z",
-    "updatedAt": "2026-07-14T08:57:45.285Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": 156351
   },
   {
@@ -16108,10 +16108,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.702",
+    "version": "1.0.704",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": 156098
   },
   {
@@ -16207,10 +16207,10 @@
     "name": "TerraMow",
     "developerName": "David Schoefberger",
     "developerId": "6a302523771c1d03c09f189a",
-    "version": "1.10.1",
+    "version": "2.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-06-15T16:15:31.907Z",
-    "updatedAt": "2026-08-10T18:39:58.296Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": null
   },
   {
@@ -16229,10 +16229,10 @@
     "name": "Ultimate EMS",
     "developerName": "Menno De Braak",
     "developerId": "6a2d9d28771c1d03c09e8701",
-    "version": "2.5.94",
+    "version": "2.5.109",
     "sourceRepository": "https://github.com/b2hvty299s-ux/com.ems.homey",
     "publishedAt": "2026-06-17T11:50:12.150Z",
-    "updatedAt": "2026-09-24T18:04:47.766Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": null
   },
   {
@@ -16427,10 +16427,10 @@
     "name": "McCallister Guard",
     "developerName": "Thomas Ekdahl",
     "developerId": "6a22e9d956adb8c38bb8327a",
-    "version": "0.11.0",
+    "version": "0.12.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-01T10:54:24.889Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": null
   },
   {
@@ -18319,10 +18319,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.0.7",
+    "version": "1.0.10",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": null
   },
   {
@@ -18341,10 +18341,10 @@
     "name": "Ford Vehicle Data",
     "developerName": "Bas de Jong",
     "developerId": "6a9d56c5336db3df05ad20be",
-    "version": "1.1.1",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T15:47:24.097Z",
-    "updatedAt": "2026-09-19T08:09:35.376Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": 159236
   },
   {
@@ -18682,10 +18682,10 @@
     "name": "ESPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.0.0",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T09:49:12.856Z",
-    "updatedAt": "2026-09-30T09:49:12.856Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": null
   },
   {
@@ -19100,10 +19100,10 @@
     "name": "Zendure Classic",
     "developerName": "Lars Andresen",
     "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-08T18:05:24.603Z",
-    "updatedAt": "2026-10-12T11:03:24.487Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": 160523
   },
   {
@@ -19224,8 +19224,8 @@
     "version": "1.1.0",
     "sourceRepository": "https://github.com/bosund/universal-rf-remote",
     "publishedAt": "2026-10-12T20:31:30.596Z",
-    "updatedAt": "2026-10-14T08:50:55.598Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "communityTopicId": 160781
   },
   {
     "appId": "com.evcharging.predictor",
@@ -19243,10 +19243,10 @@
     "name": "Homematic IP Garage Door",
     "developerName": "Joey Gosenson",
     "developerId": "6acb666bbdc8421d78c5b8d7",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-13T10:45:38.595Z",
-    "updatedAt": "2026-10-14T08:50:55.598Z",
+    "updatedAt": "2026-10-15T08:25:54.833Z",
     "communityTopicId": 160681
   },
   {
@@ -19357,6 +19357,17 @@
     "sourceRepository": "",
     "publishedAt": "2026-10-14T16:05:14.891Z",
     "updatedAt": "2026-10-14T16:05:14.891Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.haefele.connectmesh",
+    "name": "Häfele Connect Mesh",
+    "developerName": "Reinier SecEnablers",
+    "developerId": "69a74690af832c1e4629b6c0",
+    "version": "0.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-15T08:25:20.269Z",
+    "updatedAt": "2026-10-15T08:25:20.269Z",
     "communityTopicId": null
   }
 ]

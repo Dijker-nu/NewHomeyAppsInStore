@@ -1054,5 +1054,17 @@
     "updatedAt": "2026-10-14T16:05:14.891Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-14T16:05:13.081Z"
+  },
+  {
+    "appId": "com.haefele.connectmesh",
+    "name": "Häfele Connect Mesh",
+    "developerName": "Reinier SecEnablers",
+    "developerId": "69a74690af832c1e4629b6c0",
+    "version": "0.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-15T08:25:20.269Z",
+    "updatedAt": "2026-10-15T08:25:20.269Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-15T08:25:20.269Z"
   }
 ]
