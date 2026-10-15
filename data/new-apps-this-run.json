@@ -1,282 +1,120 @@
 [
   {
-    "id": "com.haefele.connectmesh",
+    "id": "com.tomshinsky.silent-gliss",
     "rating": null,
     "liveBuild": {
-      "id": 3,
+      "id": 2,
       "name": {
-        "en": "Häfele Connect Mesh",
-        "nl": "Häfele Connect Mesh"
+        "en": "Silent Gliss"
       },
-      "version": "0.0.3",
+      "version": "0.3.1",
       "readme": {
-        "en": "Bring the lights in your kitchen, wardrobe and cabinets to Homey, without a Häfele gateway. Switch and dim every light, room or group, adjust the colour temperature of multiwhite lights and let them fade in softly. Use them in Flows together with the rest of your home, while the Häfele Connect Mesh app on your phone keeps working alongside Homey.\n\nThe .connect file you export from the Häfele app contains the keys of your lighting network, so keep it private. This is an unofficial app, not made or supported by Häfele.\n",
-        "nl": "Haal de verlichting in je keuken, kledingkast en kasten naar Homey, zonder Häfele-gateway. Schakel en dim elke lamp, ruimte of groep, stel de kleurtemperatuur van multiwhite-lampen in en laat ze zacht aan- en uitfaden. Gebruik ze in flows samen met de rest van je huis, terwijl de Häfele Connect Mesh-app op je telefoon gewoon blijft werken naast Homey.\n\nHet .connect-bestand dat je uit de Häfele-app exporteert bevat de sleutels van je verlichtingsnetwerk, dus houd het privé. Dit is een niet-officiële app, niet gemaakt of ondersteund door Häfele.\n"
+        "en": "Bring your Silent Gliss SG Control A curtains into your daily routines. Learn Open, Stop and Close from your already paired remote, then use Homey controls and Flows without an additional gateway. Requires Homey Pro with 433 MHz radio. Each channel or group is learned separately. No physical position feedback. Independent community app, not affiliated with or endorsed by Silent Gliss. Developed by GPT-6 Astra.\n\nField-tested by one user with SG10949 and an SG5100 curtain system on Homey Pro (2026), firmware 13.5.1, using app 0.2.0: learning, Open, Stop during movement and Close. Version 0.3.1 has software checks only; no new hardware test. Other models, groups, radio range, long-term reliability and real Flow execution have not been verified. Control L, Control R and Move gateways are unsupported. Provided as is, without warranty of compatibility or reliable operation. To the fullest extent permitted by applicable law, the developer and contributors accept no liability for loss or damage arising from use. Verify operation in your own installation before relying on automation.\n"
       },
       "description": {
-        "en": "Your kitchen and cabinet lighting, part of your smart home",
-        "nl": "Je keuken- en kastverlichting, onderdeel van je slimme huis"
+        "en": "Let daylight follow your daily routine"
       },
-      "category": "lights",
-      "brandColor": "#D7000F",
-      "icon": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/assets/images/large.png",
+      "category": "appliances",
+      "brandColor": "#17685B",
+      "icon": "https://apps.homeycdn.net/app/com.tomshinsky.silent-gliss/2/2304964e-ba38-4823-8901-ef9cfbc8d6ae/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.tomshinsky.silent-gliss/2/2304964e-ba38-4823-8901-ef9cfbc8d6ae/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.tomshinsky.silent-gliss/2/2304964e-ba38-4823-8901-ef9cfbc8d6ae/assets/images/large.png",
       "drivers": [
         {
-          "id": "mesh_group",
+          "id": "curtain",
           "name": {
-            "en": "Connect Mesh group (Bluetooth)",
-            "nl": "Connect Mesh-groep (Bluetooth)"
+            "en": "SG Control A covering"
           },
-          "class": "light",
+          "class": "windowcoverings",
           "capabilities": [
-            "onoff",
-            "dim"
-          ],
-          "imageSmall": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/drivers/mesh_group/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/drivers/mesh_group/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "ble"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/drivers/mesh_group/assets/icon.svg"
-        },
-        {
-          "id": "mesh_light",
-          "name": {
-            "en": "Connect Mesh light (Bluetooth, no gateway)",
-            "nl": "Connect Mesh-lamp (Bluetooth, zonder gateway)"
-          },
-          "class": "light",
-          "capabilities": [
-            "onoff",
-            "dim"
+            "button.open",
+            "button.stop",
+            "button.close",
+            "last_command"
           ],
           "capabilitiesOptions": {
-            "light_temperature": {
+            "button.open": {
               "title": {
-                "en": "Colour temperature",
-                "nl": "Kleurtemperatuur"
-              }
+                "en": "Open"
+              },
+              "preventInsights": true,
+              "preventTag": true
+            },
+            "button.stop": {
+              "title": {
+                "en": "Stop"
+              },
+              "preventInsights": true,
+              "preventTag": true
+            },
+            "button.close": {
+              "title": {
+                "en": "Close"
+              },
+              "preventInsights": true,
+              "preventTag": true
             }
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/drivers/mesh_light/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/drivers/mesh_light/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/com.tomshinsky.silent-gliss/2/2304964e-ba38-4823-8901-ef9cfbc8d6ae/drivers/curtain/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.tomshinsky.silent-gliss/2/2304964e-ba38-4823-8901-ef9cfbc8d6ae/drivers/curtain/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "ble"
+            "rf433"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.haefele.connectmesh/3/a9110754-29bb-48ca-b4a0-5d35ef9d6bef/drivers/mesh_light/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/com.tomshinsky.silent-gliss/2/2304964e-ba38-4823-8901-ef9cfbc8d6ae/drivers/curtain/assets/icon.svg"
         }
       ],
       "flow": {
-        "triggers": [
-          {
-            "id": "changed_externally",
-            "title": {
-              "en": "Was switched outside Homey",
-              "nl": "Is buiten Homey om bediend"
-            },
-            "hint": {
-              "en": "With the Häfele app, a remote or a wall switch. Only seen while Homey is connected to the mesh.",
-              "nl": "Met de Häfele-app, een afstandsbediening of een wandschakelaar. Alleen zichtbaar terwijl Homey met het mesh verbonden is."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mesh_light"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "onoff",
-                "type": "boolean",
-                "title": {
-                  "en": "On",
-                  "nl": "Aan"
-                },
-                "example": true
-              },
-              {
-                "name": "dim",
-                "type": "number",
-                "title": {
-                  "en": "Brightness",
-                  "nl": "Helderheid"
-                },
-                "example": 0.5
-              }
-            ]
-          }
-        ],
+        "triggers": null,
         "conditions": null,
         "actions": [
           {
-            "id": "group_dim",
+            "id": "close",
             "title": {
-              "en": "Dim a Connect Mesh group",
-              "nl": "Dim een Connect Mesh-groep"
+              "en": "Close"
             },
-            "titleFormatted": {
-              "en": "Dim group [[group]] to [[dim]]",
-              "nl": "Dim groep [[group]] naar [[dim]]"
+            "hint": {
+              "en": "Sends a learned radio command. Physical movement is not confirmed."
             },
             "args": [
               {
-                "type": "autocomplete",
-                "name": "group",
-                "title": {
-                  "en": "Group",
-                  "nl": "Groep"
-                },
-                "placeholder": {
-                  "en": "Kitchen",
-                  "nl": "Keuken"
-                }
-              },
-              {
-                "type": "range",
-                "name": "dim",
-                "title": {
-                  "en": "Brightness",
-                  "nl": "Helderheid"
-                },
-                "min": 0,
-                "max": 1,
-                "step": 0.01,
-                "label": "%",
-                "labelMultiplier": 100,
-                "labelDecimals": 0
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=curtain"
               }
             ]
           },
           {
-            "id": "group_power",
+            "id": "open",
             "title": {
-              "en": "Turn a Connect Mesh group on or off",
-              "nl": "Zet een Connect Mesh-groep aan of uit"
+              "en": "Open"
             },
-            "titleFormatted": {
-              "en": "Turn group [[group]] [[state]]",
-              "nl": "Zet groep [[group]] [[state]]"
+            "hint": {
+              "en": "Sends a learned radio command. Physical movement is not confirmed."
             },
             "args": [
               {
-                "type": "autocomplete",
-                "name": "group",
-                "title": {
-                  "en": "Group",
-                  "nl": "Groep"
-                },
-                "placeholder": {
-                  "en": "Kitchen",
-                  "nl": "Keuken"
-                }
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "title": {
-                  "en": "State",
-                  "nl": "Stand"
-                },
-                "values": [
-                  {
-                    "id": "on",
-                    "title": {
-                      "en": "on",
-                      "nl": "aan"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "title": {
-                      "en": "off",
-                      "nl": "uit"
-                    }
-                  }
-                ]
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=curtain"
               }
             ]
           },
           {
-            "id": "mesh_connect",
+            "id": "stop",
             "title": {
-              "en": "Connect to the Bluetooth mesh now",
-              "nl": "Nu verbinden met het Bluetooth-mesh"
+              "en": "Stop"
             },
             "hint": {
-              "en": "Run this a moment before you switch lights (e.g. on motion), so the command does not have to wait for the Bluetooth connection.",
-              "nl": "Gebruik dit vlak voordat je lampen schakelt (bijvoorbeeld bij beweging), zodat het commando niet op de Bluetooth-verbinding hoeft te wachten."
-            }
-          },
-          {
-            "id": "mesh_keepalive",
-            "title": {
-              "en": "Set the Bluetooth keep-alive",
-              "nl": "Bluetooth keep-alive instellen"
-            },
-            "titleFormatted": {
-              "en": "Release the lamp after [[seconds]] seconds idle",
-              "nl": "Lamp vrijgeven na [[seconds]] seconden zonder activiteit"
-            },
-            "hint": {
-              "en": "0 keeps Homey connected (instant commands). For example: 0 in the evening, 60 during the day.",
-              "nl": "0 houdt Homey verbonden (directe commando's). Bijvoorbeeld: 's avonds 0, overdag 60."
+              "en": "Sends a learned radio command. Physical movement is not confirmed."
             },
             "args": [
               {
-                "type": "number",
-                "name": "seconds",
-                "title": {
-                  "en": "Seconds",
-                  "nl": "Seconden"
-                },
-                "placeholder": {
-                  "en": "60",
-                  "nl": "60"
-                },
-                "min": 0,
-                "max": 3600,
-                "step": 5
-              }
-            ]
-          },
-          {
-            "id": "mesh_release",
-            "title": {
-              "en": "Release the Bluetooth mesh",
-              "nl": "Bluetooth-mesh vrijgeven"
-            },
-            "titleFormatted": {
-              "en": "Release the Bluetooth mesh for [[minutes]] minutes",
-              "nl": "Bluetooth-mesh vrijgeven voor [[minutes]] minuten"
-            },
-            "hint": {
-              "en": "Lets go of the lamp Homey is connected to, so the Häfele app can use it. Commands from Homey still work meanwhile; Homey then lets go again after a few seconds.",
-              "nl": "Laat de lamp los waarmee Homey verbonden is, zodat de Häfele-app hem kan gebruiken. Commando's vanuit Homey werken in de tussentijd gewoon; daarna laat Homey na een paar seconden weer los."
-            },
-            "args": [
-              {
-                "type": "number",
-                "name": "minutes",
-                "title": {
-                  "en": "Minutes",
-                  "nl": "Minuten"
-                },
-                "placeholder": {
-                  "en": "5",
-                  "nl": "5"
-                },
-                "min": 1,
-                "max": 240,
-                "step": 1
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=curtain"
               }
             ]
           }
@@ -286,43 +124,21 @@
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-10-15T08:01:10.338Z",
-      "bugs": "https://github.com/ItsRaYnor/homey-app-hafele-connect-mesh-issues/issues",
-      "homepage": "https://github.com/ItsRaYnor/homey-app-hafele-connect-mesh-issues",
-      "support": "https://github.com/ItsRaYnor/homey-app-hafele-connect-mesh-issues/issues",
+      "stateChangedAt": "2026-10-15T08:44:14.824Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
       "source": null,
       "contributors": null,
       "contributing": null,
       "permissions": [
-        "homey:wireless:ble"
+        "homey:wireless:433"
       ],
       "changelog": {
-        "en": "New App Store images and a shorter description.",
-        "nl": "Nieuwe afbeeldingen en een kortere beschrijving in de App Store."
+        "en": "New curtain imagery, English-only interface and documentation, explicit testing scope and warranty disclaimer. Developed by GPT-6 Astra."
       },
-      "compatibility": ">=12.4.5",
-      "tags": {
-        "en": [
-          "haefele",
-          "hafele",
-          "häfele",
-          "connect mesh",
-          "loox",
-          "led",
-          "lighting",
-          "bluetooth mesh"
-        ],
-        "nl": [
-          "haefele",
-          "hafele",
-          "häfele",
-          "connect mesh",
-          "loox",
-          "led",
-          "verlichting",
-          "bluetooth mesh"
-        ]
-      },
+      "compatibility": ">=13.5.0",
+      "tags": null,
       "platforms": [
         "local"
       ],
@@ -331,16 +147,16 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.0.3",
+    "liveVersion": "0.3.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "69a74690af832c1e4629b6c0",
+      "id": "6acebc6fbdc8421d78c6888f",
       "type": "user",
-      "userId": "686d0019452f9fc8475e937c",
-      "name": "Reinier SecEnablers",
+      "userId": "5ec30acf628189195caada24",
+      "name": "Mike Tomshinsky",
       "verified": false
     },
     "communityTopicId": null

@@ -1066,5 +1066,17 @@
     "updatedAt": "2026-10-15T08:25:20.269Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-15T08:25:20.269Z"
+  },
+  {
+    "appId": "com.tomshinsky.silent-gliss",
+    "name": "Silent Gliss",
+    "developerName": "Mike Tomshinsky",
+    "developerId": "6acebc6fbdc8421d78c6888f",
+    "version": "0.3.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-15T15:53:19.994Z",
+    "updatedAt": "2026-10-15T15:53:19.994Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-15T15:53:19.994Z"
   }
 ]
