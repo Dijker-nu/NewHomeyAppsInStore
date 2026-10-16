@@ -3898,10 +3898,10 @@
     "name": "Verisure",
     "developerName": "Adam Norén",
     "developerId": "5dcabc7b1c90c866f93666a3",
-    "version": "3.4.14",
+    "version": "4.0.1",
     "sourceRepository": "https://github.com/norenz92/se.adamnoren.verisure",
     "publishedAt": "2019-12-09T15:52:20.478Z",
-    "updatedAt": "2024-05-20T15:12:08.112Z",
+    "updatedAt": "2026-10-16T08:18:42.774Z",
     "communityTopicId": 33517
   },
   {
@@ -5581,10 +5581,10 @@
     "name": "Worx and Openmower Mowers",
     "developerName": "Martin Verbeek",
     "developerId": "602ad593ea27a57b44539bd7",
-    "version": "6.0.13",
+    "version": "6.1.0",
     "sourceRepository": "",
     "publishedAt": "2021-07-28T12:59:47.351Z",
-    "updatedAt": "2026-08-03T19:11:56.847Z",
+    "updatedAt": "2026-10-16T08:18:42.774Z",
     "communityTopicId": 64441
   },
   {
@@ -7187,10 +7187,10 @@
     "name": "OpenTherm Gateway MQTT",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "sourceRepository": "",
     "publishedAt": "2023-03-05T21:19:29.626Z",
-    "updatedAt": "2026-10-13T10:46:12.221Z",
+    "updatedAt": "2026-10-16T08:18:42.774Z",
     "communityTopicId": 77190
   },
   {
@@ -7330,10 +7330,10 @@
     "name": "Cron",
     "developerName": "Ola Eriksson",
     "developerId": "604eaa07ea27a57b449d78c2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2023-04-05T22:33:53.067Z",
-    "updatedAt": "2023-04-17T21:54:24.248Z",
+    "updatedAt": "2026-10-16T08:18:42.774Z",
     "communityTopicId": null
   },
   {
@@ -10872,10 +10872,10 @@
     "name": "Enphase",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "0.9.1",
+    "version": "0.9.2",
     "sourceRepository": "https://github.com/Drenso/com.enphase",
     "publishedAt": "2025-04-07T14:00:52.019Z",
-    "updatedAt": "2026-06-23T08:32:57.755Z",
+    "updatedAt": "2026-10-16T08:18:42.775Z",
     "communityTopicId": 134602
   },
   {
@@ -14744,10 +14744,10 @@
     "name": "Huawei FusionSolar Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.0",
+    "version": "1.3.1",
     "sourceRepository": "https://github.com/andiwirz/com.huawei.fusionsolar",
     "publishedAt": "2026-04-02T22:16:46.194Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-16T08:18:42.775Z",
     "communityTopicId": 153353
   },
   {
@@ -15184,10 +15184,10 @@
     "name": "ThirdReality Hub",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.4",
+    "version": "1.2.5",
     "sourceRepository": "https://github.com/smarthomesven/homey-thirdreality-hub",
     "publishedAt": "2026-04-24T23:26:24.834Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-16T08:18:42.775Z",
     "communityTopicId": 154176
   },
   {
@@ -15668,10 +15668,10 @@
     "name": "One2Track",
     "developerName": "MR Luto",
     "developerId": "69b564d3816882ede9249e65",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "sourceRepository": "",
     "publishedAt": "2026-05-15T13:03:47.181Z",
-    "updatedAt": "2026-07-16T07:10:14.002Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": null
   },
   {
@@ -16262,10 +16262,10 @@
     "name": "VW Group Vehicles",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "0.0.86",
+    "version": "0.0.88",
     "sourceRepository": "https://github.com/andiwirz/com.vwgroup.vehiclevata",
     "publishedAt": "2026-06-19T18:12:51.015Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": 156345
   },
   {
@@ -16903,8 +16903,8 @@
     "version": "2.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-22T07:19:19.795Z",
-    "updatedAt": "2026-10-12T11:03:24.486Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-16T08:18:42.776Z",
+    "communityTopicId": 157648
   },
   {
     "appId": "nl.blankestijnict.imagecrop",
@@ -18319,10 +18319,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.0.10",
+    "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": null
   },
   {
@@ -18682,10 +18682,10 @@
     "name": "ESPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.2.0",
+    "version": "1.2.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T09:49:12.856Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": null
   },
   {
@@ -18759,10 +18759,10 @@
     "name": "TenneT Onbalans",
     "developerName": "Jeroen Stern",
     "developerId": "6aa2d84f4b2b66c115905e5d",
-    "version": "2.1.2",
+    "version": "3.0.9",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T17:07:57.058Z",
-    "updatedAt": "2026-09-30T17:07:57.058Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": null
   },
   {
@@ -18836,10 +18836,10 @@
     "name": "Sonos Announcements",
     "developerName": "Tobias Vinzents",
     "developerId": "6aa1b37b4b2b66c1158fc9a4",
-    "version": "1.2.1",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T23:17:34.955Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": 159398
   },
   {
@@ -19122,10 +19122,10 @@
     "name": "SofaBaton Direct",
     "developerName": "Robert Coletti",
     "developerId": "6ab7f87330dc90a8d6e4ff5d",
-    "version": "0.2.121",
+    "version": "0.2.123",
     "sourceRepository": "https://github.com/rcoletti116/homey-sofabaton",
     "publishedAt": "2026-10-08T18:05:26.042Z",
-    "updatedAt": "2026-10-08T18:05:26.042Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": null
   },
   {
@@ -19210,10 +19210,10 @@
     "name": "WARP Charger",
     "developerName": "Lars Andresen",
     "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.0.21",
+    "version": "1.0.24",
     "sourceRepository": "",
     "publishedAt": "2026-10-12T11:02:42.842Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": 160717
   },
   {
@@ -19320,10 +19320,10 @@
     "name": "Apple Health",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "https://github.com/LRvdLinden/Apple-HealthSync-Homey",
     "publishedAt": "2026-10-14T16:05:14.088Z",
-    "updatedAt": "2026-10-14T16:05:14.088Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": 160608
   },
   {
@@ -19331,10 +19331,10 @@
     "name": "ToGrill BBQ Thermometer",
     "developerName": "Peter Persson",
     "developerId": "699a3d82cd19af4229e5e3dd",
-    "version": "1.6.2",
+    "version": "1.6.3",
     "sourceRepository": "https://github.com/Mr-V34/homey-togrill",
     "publishedAt": "2026-10-14T16:05:14.088Z",
-    "updatedAt": "2026-10-14T16:05:14.088Z",
+    "updatedAt": "2026-10-16T08:18:42.776Z",
     "communityTopicId": null
   },
   {
@@ -19379,6 +19379,50 @@
     "sourceRepository": "",
     "publishedAt": "2026-10-15T15:53:19.994Z",
     "updatedAt": "2026-10-15T15:53:19.994Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "app.thuisbord",
+    "name": "Thuisbord",
+    "developerName": "Menno van Hout",
+    "developerId": "6488ccb177d2cf3688d807fb",
+    "version": "2.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:11.273Z",
+    "updatedAt": "2026-10-16T08:18:11.273Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "ai.zigbee.aqara",
+    "name": "Aqara Community App",
+    "developerName": "Maxim Kolesnik",
+    "developerId": "6aac527530dc90a8d6e1b172",
+    "version": "1.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:12.502Z",
+    "updatedAt": "2026-10-16T08:18:12.502Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "be.mgismart",
+    "name": "MG iSMART",
+    "developerName": "Danny van Soerland",
+    "developerId": "69cc140b699c29709ca3a1dc",
+    "version": "1.5.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:14.025Z",
+    "updatedAt": "2026-10-16T08:18:14.025Z",
+    "communityTopicId": 160703
+  },
+  {
+    "appId": "no.ekdahl.heatsmart",
+    "name": "HeatSmart",
+    "developerName": "Thomas Ekdahl",
+    "developerId": "6a22e9d956adb8c38bb8327a",
+    "version": "0.8.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:14.025Z",
+    "updatedAt": "2026-10-16T08:18:14.025Z",
     "communityTopicId": null
   }
 ]

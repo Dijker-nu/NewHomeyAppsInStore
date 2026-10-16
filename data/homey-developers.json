@@ -1334,8 +1334,8 @@
   {
     "developerId": "6a606ef728cddd02f8ef95e1",
     "developerName": "Evgeny Bugakov",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 40655,
+    "forumUsername": "evb"
   },
   {
     "developerId": "66d56265645b24bd5b421bb1",
@@ -3120,6 +3120,12 @@
     "forumUsername": "Monique_Jilesen"
   },
   {
+    "developerId": "6aac527530dc90a8d6e1b172",
+    "developerName": "Maxim Kolesnik",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "611ce5c027f9ca4da0d1fadb",
     "developerName": "Maxime Salecroix",
     "forumUserID": 9972,
@@ -3262,6 +3268,12 @@
     "developerName": "Mike Taselaar",
     "forumUserID": 446,
     "forumUsername": "Lbink"
+  },
+  {
+    "developerId": "6acebc6fbdc8421d78c6888f",
+    "developerName": "Mike Tomshinsky",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "683d657d05693ceb74af2d02",

@@ -1078,5 +1078,53 @@
     "updatedAt": "2026-10-15T15:53:19.994Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-15T15:53:19.994Z"
+  },
+  {
+    "appId": "app.thuisbord",
+    "name": "Thuisbord",
+    "developerName": "Menno van Hout",
+    "developerId": "6488ccb177d2cf3688d807fb",
+    "version": "2.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:11.273Z",
+    "updatedAt": "2026-10-16T08:18:11.273Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-16T08:18:11.273Z"
+  },
+  {
+    "appId": "ai.zigbee.aqara",
+    "name": "Aqara Community App",
+    "developerName": "Maxim Kolesnik",
+    "developerId": "6aac527530dc90a8d6e1b172",
+    "version": "1.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:12.502Z",
+    "updatedAt": "2026-10-16T08:18:12.502Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-16T08:18:11.273Z"
+  },
+  {
+    "appId": "be.mgismart",
+    "name": "MG iSMART",
+    "developerName": "Danny van Soerland",
+    "developerId": "69cc140b699c29709ca3a1dc",
+    "version": "1.5.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:14.025Z",
+    "updatedAt": "2026-10-16T08:18:14.025Z",
+    "communityTopicId": 160703,
+    "discoveredAt": "2026-10-16T08:18:11.273Z"
+  },
+  {
+    "appId": "no.ekdahl.heatsmart",
+    "name": "HeatSmart",
+    "developerName": "Thomas Ekdahl",
+    "developerId": "6a22e9d956adb8c38bb8327a",
+    "version": "0.8.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T08:18:14.025Z",
+    "updatedAt": "2026-10-16T08:18:14.025Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-16T08:18:11.273Z"
   }
 ]
