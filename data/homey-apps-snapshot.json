@@ -19424,5 +19424,49 @@
     "publishedAt": "2026-10-16T08:18:14.025Z",
     "updatedAt": "2026-10-16T08:18:14.025Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "nl.gykm.powerworld",
+    "name": "PowerWorld",
+    "developerName": "Remco Gykm",
+    "developerId": "6a208efc095776559e79a6e6",
+    "version": "0.5.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T15:41:37.430Z",
+    "updatedAt": "2026-10-16T15:41:37.430Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "ch.secanis.solarlog",
+    "name": "Solar-Log",
+    "developerName": "secanis",
+    "developerId": "6ac6cf1f46da7c020893c0b6",
+    "version": "2.1.0",
+    "sourceRepository": "https://github.com/secanis/homey-solarlog",
+    "publishedAt": "2026-10-16T15:41:38.181Z",
+    "updatedAt": "2026-10-16T15:41:38.181Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.simon.laundrytracker",
+    "name": "Laundry Tracker",
+    "developerName": "Simon Salvin",
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "version": "1.0.9",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-16T15:41:38.691Z",
+    "updatedAt": "2026-10-16T15:41:38.691Z",
+    "communityTopicId": 160830
+  },
+  {
+    "appId": "com.roue.geozones",
+    "name": "GeoZones",
+    "developerName": "Vincent Roué",
+    "developerId": "69c6883d699c29709ca09066",
+    "version": "2.0.5",
+    "sourceRepository": "https://github.com/vincent-roue/com.roue.geozones",
+    "publishedAt": "2026-10-16T15:41:38.691Z",
+    "updatedAt": "2026-10-16T15:41:38.691Z",
+    "communityTopicId": 153017
   }
 ]
