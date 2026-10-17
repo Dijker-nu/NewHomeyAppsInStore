@@ -3056,8 +3056,8 @@
   {
     "developerId": "697934096b884a38a96cd8b0",
     "developerName": "Mateusz Sybilla",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 65272,
+    "forumUsername": "mt.sybil"
   },
   {
     "developerId": "64e36f1530ca04c6167c9045",
@@ -4446,6 +4446,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6ac6cf1f46da7c020893c0b6",
+    "developerName": "secanis",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "61ae150a04c76f49f57e6d3a",
     "developerName": "Secuyou ApS",
     "forumUserID": null,
@@ -4540,6 +4546,12 @@
     "developerName": "Simon Fieber",
     "forumUserID": null,
     "forumUsername": null
+  },
+  {
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "developerName": "Simon Salvin",
+    "forumUserID": 55767,
+    "forumUsername": "Simon_Salvin"
   },
   {
     "developerId": "68ceb8fccbb72125ed109820",
@@ -4874,8 +4886,8 @@
   {
     "developerId": "69c10924699c29709c9eecab",
     "developerName": "Thomas Jahnsen",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 9304,
+    "forumUsername": "kammiz"
   },
   {
     "developerId": "6a7cc169c6a80eeabce1bb26",
@@ -5158,6 +5170,12 @@
     "developerName": "vincent fresnel",
     "forumUserID": 64096,
     "forumUsername": "byackee1"
+  },
+  {
+    "developerId": "69c6883d699c29709ca09066",
+    "developerName": "Vincent Roué",
+    "forumUserID": 52362,
+    "forumUsername": "Vincent_Roue"
   },
   {
     "developerId": "652d045e3d167bf020bfbb4e",

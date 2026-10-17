@@ -1280,10 +1280,10 @@
     "name": "Aqara",
     "developerName": "Lumi Technology Co., Ltd.",
     "developerId": "63ada7ec2c8e04f69dfd1c67",
-    "version": "1.18.1",
+    "version": "1.19.1",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:58:26.294Z",
-    "updatedAt": "2026-10-06T10:29:51.570Z",
+    "updatedAt": "2026-10-17T07:54:57.461Z",
     "communityTopicId": 156
   },
   {
@@ -1610,10 +1610,10 @@
     "name": "Better Logic Library",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "4.2.1",
+    "version": "4.2.2",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.BetterLogic/",
     "publishedAt": "2019-11-12T13:59:37.463Z",
-    "updatedAt": "2026-10-10T09:58:43.979Z",
+    "updatedAt": "2026-10-17T07:54:57.461Z",
     "communityTopicId": 71876
   },
   {
@@ -1940,10 +1940,10 @@
     "name": "Simple (Sys) Log",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.1.1",
+    "version": "3.1.4",
     "sourceRepository": "https://bitbucket.org/QlusterIT/nl.qluster-it.simplelog/",
     "publishedAt": "2019-11-12T14:01:12.633Z",
-    "updatedAt": "2026-09-18T10:11:18.489Z",
+    "updatedAt": "2026-10-17T07:54:57.461Z",
     "communityTopicId": 77533
   },
   {
@@ -3227,10 +3227,10 @@
     "name": "Fritzbox Bridge",
     "developerName": "Christoph Potas",
     "developerId": "5dcabc571c90c866f936655b",
-    "version": "0.11.2",
+    "version": "0.12.0",
     "sourceRepository": "https://github.com/puschie286/fritzbox-bridge",
     "publishedAt": "2019-11-12T14:06:15.898Z",
-    "updatedAt": "2026-07-12T12:33:06.274Z",
+    "updatedAt": "2026-10-17T07:54:57.461Z",
     "communityTopicId": 11334
   },
   {
@@ -5581,10 +5581,10 @@
     "name": "Worx and Openmower Mowers",
     "developerName": "Martin Verbeek",
     "developerId": "602ad593ea27a57b44539bd7",
-    "version": "6.1.0",
+    "version": "6.1.1",
     "sourceRepository": "",
     "publishedAt": "2021-07-28T12:59:47.351Z",
-    "updatedAt": "2026-10-16T08:18:42.774Z",
+    "updatedAt": "2026-10-17T07:54:57.462Z",
     "communityTopicId": 64441
   },
   {
@@ -6461,10 +6461,10 @@
     "name": "Solax",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "4.4.0",
+    "version": "4.4.6",
     "sourceRepository": "",
     "publishedAt": "2022-07-14T12:53:37.014Z",
-    "updatedAt": "2026-09-21T21:41:00.588Z",
+    "updatedAt": "2026-10-17T07:54:57.462Z",
     "communityTopicId": 66471
   },
   {
@@ -6538,10 +6538,10 @@
     "name": "GoodWe Inverter",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "1.16.6",
+    "version": "1.16.8",
     "sourceRepository": "",
     "publishedAt": "2022-08-04T10:30:46.262Z",
-    "updatedAt": "2026-10-07T10:23:44.580Z",
+    "updatedAt": "2026-10-17T07:54:57.462Z",
     "communityTopicId": 66903
   },
   {
@@ -7209,10 +7209,10 @@
     "name": "Sessy",
     "developerName": "CHARGED B.V.",
     "developerId": "641b387ea03de60aa9662688",
-    "version": "3.5.0",
+    "version": "3.6.0",
     "sourceRepository": "",
     "publishedAt": "2023-03-22T17:18:54.984Z",
-    "updatedAt": "2026-08-10T14:49:46.047Z",
+    "updatedAt": "2026-10-17T07:54:57.462Z",
     "communityTopicId": 78156
   },
   {
@@ -10201,10 +10201,10 @@
     "name": "XPENG Car Manager",
     "developerName": "Kjetil Vetlejord",
     "developerId": "67375672065f03b3ce383521",
-    "version": "1.3.1",
+    "version": "1.3.4",
     "sourceRepository": "https://github.com/decline27/Xpeng",
     "publishedAt": "2024-11-15T14:10:58.054Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-17T07:54:57.462Z",
     "communityTopicId": 123375
   },
   {
@@ -10402,8 +10402,8 @@
     "version": "1.8.1",
     "sourceRepository": "https://github.com/WeeJeWel/com.solaredge",
     "publishedAt": "2025-01-11T18:27:36.623Z",
-    "updatedAt": "2026-10-15T08:25:54.832Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-17T07:54:57.462Z",
+    "communityTopicId": 134605
   },
   {
     "appId": "net.weejewel.rss",
@@ -10971,10 +10971,10 @@
     "name": "MELCloud Optimizer",
     "developerName": "Kjetil Vetlejord",
     "developerId": "67375672065f03b3ce383521",
-    "version": "14.0.68",
+    "version": "14.0.79",
     "sourceRepository": "",
     "publishedAt": "2025-04-24T21:04:45.703Z",
-    "updatedAt": "2026-10-05T10:37:47.105Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 136325
   },
   {
@@ -11202,10 +11202,10 @@
     "name": "CGM Reader",
     "developerName": "Mattias Jagefeldt",
     "developerId": "6854172d20832e6198b4bb92",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "sourceRepository": "",
     "publishedAt": "2025-07-01T14:09:07.791Z",
-    "updatedAt": "2026-03-24T11:40:22.749Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": null
   },
   {
@@ -11224,10 +11224,10 @@
     "name": "Kia",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.4",
+    "version": "2.6.6",
     "sourceRepository": "",
     "publishedAt": "2025-07-02T13:15:20.020Z",
-    "updatedAt": "2026-10-04T09:55:25.658Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 32487
   },
   {
@@ -11235,10 +11235,10 @@
     "name": "Hyundai",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.4",
+    "version": "2.6.6",
     "sourceRepository": "",
     "publishedAt": "2025-07-02T13:57:34.039Z",
-    "updatedAt": "2026-10-04T09:55:25.658Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 32487
   },
   {
@@ -11290,10 +11290,10 @@
     "name": "EcoFlow - Portable power stations",
     "developerName": "Marcus Valk",
     "developerId": "686c1bf03c51ca0ca1838b39",
-    "version": "2.2.2",
+    "version": "2.3.0",
     "sourceRepository": "",
     "publishedAt": "2025-07-08T17:36:02.608Z",
-    "updatedAt": "2026-10-15T08:25:54.832Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": null
   },
   {
@@ -12390,10 +12390,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.14.0",
+    "version": "3.16.2",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-15T08:25:54.832Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 147496
   },
   {
@@ -12599,10 +12599,10 @@
     "name": "Eastron",
     "developerName": "Rob Hagemann",
     "developerId": "693f10ce66abe4254753a08e",
-    "version": "1.2.3",
+    "version": "1.3.2",
     "sourceRepository": "https://github.com/Rob2011/Homey.Eastron.modbus",
     "publishedAt": "2025-12-17T21:39:49.322Z",
-    "updatedAt": "2025-12-29T18:42:06.221Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 147339
   },
   {
@@ -13152,8 +13152,8 @@
     "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-01-27T21:54:17.198Z",
-    "updatedAt": "2026-10-12T11:03:24.486Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-17T07:54:57.463Z",
+    "communityTopicId": 160757
   },
   {
     "appId": "com.dimapp.hon",
@@ -13545,10 +13545,10 @@
     "name": "Dashboard Studio",
     "developerName": "Michel Satoer",
     "developerId": "6991c948cd19af4229e27966",
-    "version": "1.11.7",
+    "version": "2.0.16",
     "sourceRepository": "",
     "publishedAt": "2026-02-15T13:25:28.308Z",
-    "updatedAt": "2026-09-26T14:35:48.908Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 151169
   },
   {
@@ -13611,10 +13611,10 @@
     "name": "Music Assistant",
     "developerName": "Cyril Hendriks",
     "developerId": "6996ebeccd19af4229e539d5",
-    "version": "2.6.1",
+    "version": "2.6.3",
     "sourceRepository": "",
     "publishedAt": "2026-02-19T10:54:36.826Z",
-    "updatedAt": "2026-10-03T09:16:26.430Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": 151738
   },
   {
@@ -13677,10 +13677,10 @@
     "name": "YAWSEE",
     "developerName": "Peter Persson",
     "developerId": "699a3d82cd19af4229e5e3dd",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "sourceRepository": "https://github.com/Mr-V34/homey-wled-yawsee",
     "publishedAt": "2026-02-21T23:19:30.517Z",
-    "updatedAt": "2026-02-28T10:41:40.390Z",
+    "updatedAt": "2026-10-17T07:54:57.463Z",
     "communityTopicId": null
   },
   {
@@ -14494,8 +14494,8 @@
     "version": "0.3.53",
     "sourceRepository": "",
     "publishedAt": "2026-03-23T10:07:34.613Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-17T07:54:57.463Z",
+    "communityTopicId": 160949
   },
   {
     "appId": "ch.hagelschutz.homey",
@@ -15096,10 +15096,10 @@
     "name": "Delta Dore Tydom",
     "developerName": "Jo Goossens",
     "developerId": "69e73665fb6dd7068a7cbff1",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "sourceRepository": "https://github.com/jogoossens/net.evenh.tydom",
     "publishedAt": "2026-04-21T08:47:07.295Z",
-    "updatedAt": "2026-09-28T18:42:33.422Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -15217,10 +15217,10 @@
     "name": "Android Automotive",
     "developerName": "Simone Di Maio",
     "developerId": "68ceb8fccbb72125ed109820",
-    "version": "1.5.1",
+    "version": "1.5.3",
     "sourceRepository": "https://github.com/s-dimaio/com.dimapp.aaos",
     "publishedAt": "2026-04-26T19:33:17.267Z",
-    "updatedAt": "2026-10-03T09:16:26.431Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": 155279
   },
   {
@@ -16108,10 +16108,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.704",
+    "version": "1.0.705",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": 156098
   },
   {
@@ -16900,10 +16900,10 @@
     "name": "Verisure Alarm",
     "developerName": "Evgeny Bugakov",
     "developerId": "6a606ef728cddd02f8ef95e1",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-22T07:19:19.795Z",
-    "updatedAt": "2026-10-16T08:18:42.776Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": 157648
   },
   {
@@ -17670,10 +17670,10 @@
     "name": "Adaptive Thermostat",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "sourceRepository": "https://github.com/byackee/homey-vtherm",
     "publishedAt": "2026-08-22T11:24:49.247Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": 158634
   },
   {
@@ -17865,13 +17865,13 @@
   },
   {
     "appId": "com.rapinology.hatmo",
-    "name": "ATMO Air Quality",
+    "name": "Air Quality France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-01T10:30:33.102Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -17879,10 +17879,10 @@
     "name": "EV Charging France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-01T11:58:15.218Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -17934,10 +17934,10 @@
     "name": "Dew Point & Mould Guard",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.3",
+    "version": "1.1.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T09:13:10.762Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -17964,13 +17964,13 @@
   },
   {
     "appId": "com.rapinology.hvigilance",
-    "name": "FR Vigilance",
+    "name": "Flood & Fire Alerts France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:33:30.412Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -17978,10 +17978,10 @@
     "name": "Ephemerides",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:39:05.277Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -17989,10 +17989,10 @@
     "name": "ISS",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-03T16:43:08.822Z",
-    "updatedAt": "2026-10-01T10:16:38.723Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18209,10 +18209,10 @@
     "name": "Météo France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T08:53:59.631Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18418,10 +18418,10 @@
     "name": "Cloud Cover Europe",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "sourceRepository": "",
     "publishedAt": "2026-09-21T09:05:12.546Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18605,10 +18605,10 @@
     "name": "Ecojoko",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T09:56:20.116Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18616,10 +18616,10 @@
     "name": "GoodWe SEMS",
     "developerName": "Wisse Koelman",
     "developerId": "6a9e8ad4336db3df05ad62f1",
-    "version": "5.0.5",
+    "version": "7.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T09:56:21.066Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18792,10 +18792,10 @@
     "name": "Hikvision NVR & DVR",
     "developerName": "Wisse Koelman",
     "developerId": "6a9e8ad4336db3df05ad62f1",
-    "version": "3.0.1",
+    "version": "5.0.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T17:07:58.613Z",
-    "updatedAt": "2026-10-06T10:29:51.572Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18847,10 +18847,10 @@
     "name": "Grid Green Carbon",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:15.585Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18880,10 +18880,10 @@
     "name": "Starlink Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:17.049Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.464Z",
     "communityTopicId": null
   },
   {
@@ -18990,10 +18990,10 @@
     "name": "OCPP Bridge",
     "developerName": "Wisse Koelman",
     "developerId": "6a9e8ad4336db3df05ad62f1",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-06T01:00:55.654Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": null
   },
   {
@@ -19001,10 +19001,10 @@
     "name": "Thermia Heat Pump",
     "developerName": "Ruud Schellekens",
     "developerId": "6ab63a4230dc90a8d6e48c88",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-06T01:00:56.357Z",
-    "updatedAt": "2026-10-06T01:00:56.357Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": null
   },
   {
@@ -19078,10 +19078,10 @@
     "name": "UNAS Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": null
   },
   {
@@ -19199,10 +19199,10 @@
     "name": "Opel Ampera-e (WiCAN)",
     "developerName": "Ruud Schellekens",
     "developerId": "6ab63a4230dc90a8d6e48c88",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-12T11:02:42.842Z",
-    "updatedAt": "2026-10-12T11:02:42.842Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": 160353
   },
   {
@@ -19221,10 +19221,10 @@
     "name": "Universal RF Remote",
     "developerName": "Bo Sundgaard",
     "developerId": "6ac80645bdc8421d78c4d6e1",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "sourceRepository": "https://github.com/bosund/universal-rf-remote",
     "publishedAt": "2026-10-12T20:31:30.596Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": 160781
   },
   {
@@ -19408,10 +19408,10 @@
     "name": "MG iSMART",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.5.2",
+    "version": "1.6.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-16T08:18:14.025Z",
-    "updatedAt": "2026-10-16T08:18:14.025Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": 160703
   },
   {
@@ -19463,10 +19463,10 @@
     "name": "GeoZones",
     "developerName": "Vincent Roué",
     "developerId": "69c6883d699c29709ca09066",
-    "version": "2.0.5",
+    "version": "2.0.7",
     "sourceRepository": "https://github.com/vincent-roue/com.roue.geozones",
     "publishedAt": "2026-10-16T15:41:38.691Z",
-    "updatedAt": "2026-10-16T15:41:38.691Z",
+    "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": 153017
   }
 ]
