@@ -2215,10 +2215,10 @@
     "name": "OpenWeather",
     "developerName": "Ronny Winkler",
     "developerId": "6092ec6afa7856df21c21c8f",
-    "version": "1.8.4",
+    "version": "1.8.5",
     "sourceRepository": "https://github.com/RonnyWinkler/homey.openweathermap",
     "publishedAt": "2019-11-12T14:02:21.925Z",
-    "updatedAt": "2026-09-02T18:25:15.725Z",
+    "updatedAt": "2026-10-18T08:09:16.566Z",
     "communityTopicId": 61482
   },
   {
@@ -6626,10 +6626,10 @@
     "name": "PreCom",
     "developerName": "Jack Krielen",
     "developerId": "6322173842462586558ff312",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2022-09-14T18:02:33.154Z",
-    "updatedAt": "2026-04-08T20:39:50.434Z",
+    "updatedAt": "2026-10-18T08:09:16.567Z",
     "communityTopicId": null
   },
   {
@@ -12390,10 +12390,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.16.2",
+    "version": "3.16.3",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-17T07:54:57.463Z",
+    "updatedAt": "2026-10-18T08:09:16.568Z",
     "communityTopicId": 147496
   },
   {
@@ -12434,10 +12434,10 @@
     "name": "WarmteWizard",
     "developerName": "Warmte Wizard",
     "developerId": "68ed4f8b78936837cbe81bee",
-    "version": "1.2.8",
+    "version": "1.2.9",
     "sourceRepository": "",
     "publishedAt": "2025-12-11T00:56:34.461Z",
-    "updatedAt": "2026-10-08T10:44:48.522Z",
+    "updatedAt": "2026-10-18T08:09:16.568Z",
     "communityTopicId": null
   },
   {
@@ -12533,10 +12533,10 @@
     "name": "Danfoss Ally",
     "developerName": "Joshua de Gier",
     "developerId": "6717e6c07cb24ac67541b220",
-    "version": "1.3.2",
+    "version": "1.3.3",
     "sourceRepository": "https://github.com/PendoNL/nl.pendo.danfoss-ally",
     "publishedAt": "2025-12-14T21:51:04.033Z",
-    "updatedAt": "2026-05-23T15:46:10.557Z",
+    "updatedAt": "2026-10-18T08:09:16.568Z",
     "communityTopicId": 146923
   },
   {
@@ -15987,10 +15987,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "5.1.2",
+    "version": "5.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-10-18T08:09:16.568Z",
     "communityTopicId": null
   },
   {
@@ -18319,10 +18319,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.1.2",
+    "version": "1.1.4",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-10-16T08:18:42.776Z",
+    "updatedAt": "2026-10-18T08:09:16.569Z",
     "communityTopicId": null
   },
   {
@@ -18550,10 +18550,10 @@
     "name": "Presence Fusion",
     "developerName": "Cédric Andrietti",
     "developerId": "6a6e465f32b0f6166a4e6270",
-    "version": "1.1.7",
+    "version": "1.1.8",
     "sourceRepository": "https://github.com/cedric07/homey-presence-fusion",
     "publishedAt": "2026-09-24T08:33:53.418Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-18T08:09:16.569Z",
     "communityTopicId": 160019
   },
   {
@@ -18572,10 +18572,10 @@
     "name": "SG LEDDim",
     "developerName": "Trond Bildøy",
     "developerId": "6a9f88284b2b66c1158ea7af",
-    "version": "2.0.10",
+    "version": "2.1.0",
     "sourceRepository": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
     "publishedAt": "2026-09-24T16:02:23.949Z",
-    "updatedAt": "2026-10-08T10:44:48.524Z",
+    "updatedAt": "2026-10-18T08:09:16.569Z",
     "communityTopicId": 159464
   },
   {
@@ -18880,10 +18880,10 @@
     "name": "Starlink Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:17.049Z",
-    "updatedAt": "2026-10-17T07:54:57.464Z",
+    "updatedAt": "2026-10-18T08:09:16.569Z",
     "communityTopicId": null
   },
   {
@@ -18894,8 +18894,8 @@
     "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:31:46.117Z",
-    "updatedAt": "2026-10-03T09:16:26.431Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-18T08:09:16.569Z",
+    "communityTopicId": 160166
   },
   {
     "appId": "nl.rvginkel.knoppen",
