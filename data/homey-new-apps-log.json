@@ -1210,5 +1210,41 @@
     "updatedAt": "2026-10-19T09:03:15.920Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-19T09:03:13.841Z"
+  },
+  {
+    "appId": "eu.paulkok.digitaltwin",
+    "name": "Digital Twin",
+    "developerName": "Paul Kok",
+    "developerId": "6ac28168bdc7ced970ffec1a",
+    "version": "1.0.32",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T17:52:48.146Z",
+    "updatedAt": "2026-10-19T17:52:48.146Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-19T17:52:48.145Z"
+  },
+  {
+    "appId": "com.goossens.cortexai",
+    "name": "Cortex AI",
+    "developerName": "Jo Goossens",
+    "developerId": "69e73665fb6dd7068a7cbff1",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T17:52:49.188Z",
+    "updatedAt": "2026-10-19T17:52:49.188Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-19T17:52:48.145Z"
+  },
+  {
+    "appId": "community.djordie.inchargeconnector",
+    "name": "InCharge Connector",
+    "developerName": "Djordie Hendriks",
+    "developerId": "6a541613ce38f245588e36a7",
+    "version": "0.1.8",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T17:52:50.394Z",
+    "updatedAt": "2026-10-19T17:52:50.394Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-19T17:52:48.145Z"
   }
 ]
