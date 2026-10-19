@@ -3504,6 +3504,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6ad10ef5bdc8421d78c7103f",
+    "developerName": "Øivind Solheim",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "604eaa07ea27a57b449d78c2",
     "developerName": "Ola Eriksson",
     "forumUserID": null,
@@ -5000,6 +5006,12 @@
   {
     "developerId": "5dcab8fe1c90c866f9363d35",
     "developerName": "Tim van de Vathorst",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ac9ea8ebdc8421d78c563dd",
+    "developerName": "Tim Vandendriessche",
     "forumUserID": null,
     "forumUsername": null
   },

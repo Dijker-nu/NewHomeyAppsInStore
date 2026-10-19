@@ -3095,10 +3095,10 @@
     "name": "Volvo On Call",
     "developerName": "Richard Barkestam",
     "developerId": "5dcabbb31c90c866f9365da2",
-    "version": "1.6.6",
+    "version": "1.6.7",
     "sourceRepository": "https://github.com/ricott/homey-com.volvocars",
     "publishedAt": "2019-11-12T14:05:48.227Z",
-    "updatedAt": "2026-07-13T09:25:58.852Z",
+    "updatedAt": "2026-10-19T09:03:51.103Z",
     "communityTopicId": 20828
   },
   {
@@ -4943,10 +4943,10 @@
     "name": "Todoist",
     "developerName": "Erik van Leeuwen",
     "developerId": "66d710c3645b24bd5bd1ab86",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "sourceRepository": "https://github.com/erikvl87/nl.erikvl87.todoist",
     "publishedAt": "2021-01-30T21:47:29.320Z",
-    "updatedAt": "2026-06-05T18:26:45.543Z",
+    "updatedAt": "2026-10-19T09:03:51.104Z",
     "communityTopicId": 42818
   },
   {
@@ -5647,10 +5647,10 @@
     "name": "Flow Checker",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.37.2",
+    "version": "1.38.0",
     "sourceRepository": "https://github.com/martijnpoppen/com.athom.flowchecker",
     "publishedAt": "2021-08-30T21:59:24.615Z",
-    "updatedAt": "2025-11-18T09:06:40.790Z",
+    "updatedAt": "2026-10-19T09:03:51.104Z",
     "communityTopicId": 50986
   },
   {
@@ -5669,10 +5669,10 @@
     "name": "Remootio",
     "developerName": "Rune Moskvil Lyngås",
     "developerId": "5ed7b0396d2bd86d07c27b5f",
-    "version": "2.0.5",
+    "version": "2.0.6",
     "sourceRepository": "https://github.com/runely/remootio-homey",
     "publishedAt": "2021-09-02T17:32:26.639Z",
-    "updatedAt": "2026-07-21T18:10:46.612Z",
+    "updatedAt": "2026-10-19T09:03:51.104Z",
     "communityTopicId": null
   },
   {
@@ -9475,10 +9475,10 @@
     "name": "MQTT Server",
     "developerName": "Emile Nijssen",
     "developerId": "5dcaba391c90c866f9364985",
-    "version": "1.1.0",
+    "version": "1.3.0",
     "sourceRepository": "https://github.com/WeeJeWel/net.weejewel.mqttserver/",
     "publishedAt": "2024-07-26T14:04:22.927Z",
-    "updatedAt": "2024-08-01T10:23:03.211Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": null
   },
   {
@@ -10025,10 +10025,10 @@
     "name": "Elgato Lights",
     "developerName": "Wouter Janson-Korhorn",
     "developerId": "666f3b42c783db54ae2276df",
-    "version": "1.5.1",
+    "version": "1.5.2",
     "sourceRepository": "",
     "publishedAt": "2024-10-21T20:20:46.907Z",
-    "updatedAt": "2026-02-19T15:32:04.037Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": 119532
   },
   {
@@ -11070,10 +11070,10 @@
     "name": "APsystems Solar Panels",
     "developerName": "Dick Juffermans",
     "developerId": "6833063f05693ceb74a95346",
-    "version": "1.4.6",
+    "version": "1.4.7",
     "sourceRepository": "https://github.com/Dickje/APS",
     "publishedAt": "2025-05-25T12:05:13.517Z",
-    "updatedAt": "2026-08-25T18:43:33.549Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": 74759
   },
   {
@@ -11224,10 +11224,10 @@
     "name": "Kia",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.6",
+    "version": "2.6.8",
     "sourceRepository": "",
     "publishedAt": "2025-07-02T13:15:20.020Z",
-    "updatedAt": "2026-10-17T07:54:57.463Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": 32487
   },
   {
@@ -11235,10 +11235,10 @@
     "name": "Hyundai",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.6",
+    "version": "2.6.8",
     "sourceRepository": "",
     "publishedAt": "2025-07-02T13:57:34.039Z",
-    "updatedAt": "2026-10-17T07:54:57.463Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": 32487
   },
   {
@@ -12390,10 +12390,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.16.3",
+    "version": "3.17.2",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-18T08:09:16.568Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": 147496
   },
   {
@@ -14337,10 +14337,10 @@
     "name": "Shelly Control",
     "developerName": "Allterco Robotics",
     "developerId": "6a8c4b90222a4450aa38d020",
-    "version": "1.2.3",
+    "version": "1.3.1",
     "sourceRepository": "https://github.com/drenso/cloud.shelly.control",
     "publishedAt": "2026-03-19T14:22:46.032Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-19T09:03:51.105Z",
     "communityTopicId": 152695
   },
   {
@@ -15074,10 +15074,10 @@
     "name": "Tuya Local",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.0.276",
+    "version": "1.0.277",
     "sourceRepository": "https://github.com/andiwirz/com.tuyalocal",
     "publishedAt": "2026-04-20T09:03:38.496Z",
-    "updatedAt": "2026-10-14T08:50:55.598Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": 154077
   },
   {
@@ -16086,10 +16086,10 @@
     "name": "Recycle België",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "2.5.3",
+    "version": "2.5.4",
     "sourceRepository": "",
     "publishedAt": "2026-06-03T20:12:38.983Z",
-    "updatedAt": "2026-10-06T10:29:51.572Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": 155726
   },
   {
@@ -16262,10 +16262,10 @@
     "name": "VW Group Vehicles",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "0.0.88",
+    "version": "0.0.91",
     "sourceRepository": "https://github.com/andiwirz/com.vwgroup.vehiclevata",
     "publishedAt": "2026-06-19T18:12:51.015Z",
-    "updatedAt": "2026-10-16T08:18:42.776Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": 156345
   },
   {
@@ -16812,10 +16812,10 @@
     "name": "Hikvision AX PRO Alarm",
     "developerName": "Ulf Holmström",
     "developerId": "6a5bc6852ddac2379c777757",
-    "version": "1.8.0",
+    "version": "1.8.1",
     "sourceRepository": "",
     "publishedAt": "2026-07-18T18:31:33.100Z",
-    "updatedAt": "2026-09-12T14:07:58.636Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": null
   },
   {
@@ -17439,10 +17439,10 @@
     "name": "OpenQuatt",
     "developerName": "OpenQuatt",
     "developerId": "6a88174ac8d34196bd67ba17",
-    "version": "1.7.0",
+    "version": "1.9.0",
     "sourceRepository": "https://github.com/OpenQuatt/homey-openquatt",
     "publishedAt": "2026-08-14T09:19:18.960Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": null
   },
   {
@@ -17560,10 +17560,10 @@
     "name": "Nest Protect",
     "developerName": "Thomas Torp",
     "developerId": "6a6a390a32b0f6166a4d3fdc",
-    "version": "1.3.8",
+    "version": "1.3.9",
     "sourceRepository": "https://github.com/torp93/homey-nest-protect",
     "publishedAt": "2026-08-16T20:01:35.431Z",
-    "updatedAt": "2026-09-25T16:18:29.615Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": null
   },
   {
@@ -17747,10 +17747,10 @@
     "name": "iDiamant by Netatmo",
     "developerName": "ATX Groupe",
     "developerId": "6a8e12e83bdd81c33f8d4766",
-    "version": "1.3.14",
+    "version": "1.3.15",
     "sourceRepository": "",
     "publishedAt": "2026-08-25T22:04:48.036Z",
-    "updatedAt": "2026-09-14T09:57:39.217Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": 159166
   },
   {
@@ -18319,10 +18319,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-10-18T08:09:16.569Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": null
   },
   {
@@ -19067,10 +19067,10 @@
     "name": "Swiss Dynamic Electricity Tariff",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.1.8",
+    "version": "0.2.2",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.dynamictariffch",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-19T09:03:51.106Z",
     "communityTopicId": 160031
   },
   {
@@ -19468,5 +19468,38 @@
     "publishedAt": "2026-10-16T15:41:38.691Z",
     "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": 153017
+  },
+  {
+    "appId": "no.local.woodupp.zigbee",
+    "name": "WoodUpp Lumi",
+    "developerName": "Øivind Solheim",
+    "developerId": "6ad10ef5bdc8421d78c7103f",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T09:03:13.841Z",
+    "updatedAt": "2026-10-19T09:03:13.841Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "zyxel.router",
+    "name": "Zyxel Router",
+    "developerName": "Rob Hagemann",
+    "developerId": "693f10ce66abe4254753a08e",
+    "version": "1.2.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T09:03:15.145Z",
+    "updatedAt": "2026-10-19T09:03:15.145Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "community.birdbuddy",
+    "name": "Bird Buddy",
+    "developerName": "Tim Vandendriessche",
+    "developerId": "6ac9ea8ebdc8421d78c563dd",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T09:03:15.920Z",
+    "updatedAt": "2026-10-19T09:03:15.920Z",
+    "communityTopicId": null
   }
 ]

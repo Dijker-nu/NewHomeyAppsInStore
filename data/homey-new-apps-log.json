@@ -1174,5 +1174,41 @@
     "updatedAt": "2026-10-16T15:41:38.691Z",
     "communityTopicId": 153017,
     "discoveredAt": "2026-10-16T15:41:37.430Z"
+  },
+  {
+    "appId": "no.local.woodupp.zigbee",
+    "name": "WoodUpp Lumi",
+    "developerName": "Øivind Solheim",
+    "developerId": "6ad10ef5bdc8421d78c7103f",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T09:03:13.841Z",
+    "updatedAt": "2026-10-19T09:03:13.841Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-19T09:03:13.841Z"
+  },
+  {
+    "appId": "zyxel.router",
+    "name": "Zyxel Router",
+    "developerName": "Rob Hagemann",
+    "developerId": "693f10ce66abe4254753a08e",
+    "version": "1.2.4",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T09:03:15.145Z",
+    "updatedAt": "2026-10-19T09:03:15.145Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-19T09:03:13.841Z"
+  },
+  {
+    "appId": "community.birdbuddy",
+    "name": "Bird Buddy",
+    "developerName": "Tim Vandendriessche",
+    "developerId": "6ac9ea8ebdc8421d78c563dd",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-19T09:03:15.920Z",
+    "updatedAt": "2026-10-19T09:03:15.920Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-19T09:03:13.841Z"
   }
 ]

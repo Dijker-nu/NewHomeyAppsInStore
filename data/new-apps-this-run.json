@@ -1,1 +1,749 @@
-[]
+[
+  {
+    "id": "no.local.woodupp.zigbee",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "WoodUpp Lumi",
+        "no": "WoodUpp Lumi"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "Bring your WoodUpp Lumi lighting into your smart home with simple, convenient control through Homey. Turn your lighting on or off and adjust the brightness to create the perfect atmosphere.\n\nThis is an independent, unofficial integration and is not affiliated with or endorsed by WoodUpp.\n",
+        "no": "Gjør WoodUpp Lumi-belysningen til en del av smarthjemmet ditt med enkel styring gjennom Homey. Slå lyset av og på, og juster lysstyrken for å skape den rette stemningen.\n\nDette er en uoffisiell, uavhengig integrasjon som ikke er utviklet eller godkjent av WoodUpp.\n"
+      },
+      "description": {
+        "en": "Bring your WoodUpp Lumi lighting to life with effortless control in Homey.",
+        "no": "Skap den rette stemningen med enkel styring av WoodUpp Lumi-belysningen i Homey."
+      },
+      "category": "lights",
+      "brandColor": "#232323",
+      "icon": "https://apps.homeycdn.net/app/no.local.woodupp.zigbee/2/f5d8cbc6-17f8-4005-a0ac-2e609072ae4c/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/no.local.woodupp.zigbee/2/f5d8cbc6-17f8-4005-a0ac-2e609072ae4c/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/no.local.woodupp.zigbee/2/f5d8cbc6-17f8-4005-a0ac-2e609072ae4c/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "woodupp-led",
+          "name": {
+            "en": "WoodUpp dimmable LED",
+            "no": "WoodUpp dimbar LED"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/no.local.woodupp.zigbee/2/f5d8cbc6-17f8-4005-a0ac-2e609072ae4c/drivers/woodupp-led/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/no.local.woodupp.zigbee/2/f5d8cbc6-17f8-4005-a0ac-2e609072ae4c/drivers/woodupp-led/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/no.local.woodupp.zigbee/2/f5d8cbc6-17f8-4005-a0ac-2e609072ae4c/drivers/woodupp-led/assets/icon.svg",
+          "connectivity": [
+            "zigbee"
+          ]
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-19T08:13:55.840Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Updated app description, documentation, app icon and device images based on App Store review feedback."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ad10ef5bdc8421d78c7103f",
+      "type": "user",
+      "userId": "61e5bd2a7c252d0bc7a3eba4",
+      "name": "Øivind Solheim",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "zyxel.router",
+    "rating": null,
+    "liveBuild": {
+      "id": 12,
+      "name": {
+        "en": "Zyxel Router",
+        "nl": "Zyxel Router"
+      },
+      "version": "1.2.4",
+      "readme": {
+        "en": "Connect your Homey Pro to your Zyxel NR5307 5G router and keep track of your network at a glance. Monitor cellular signal strength, view connected devices, and access key router metrics—all from your Homey dashboard. Perfect for automating actions based on connection quality or device activity.\nIt may work with other Zyxel router models using similar firmware (e.g., NR7101, NR5103, NR5307, NR5101, NR5309, NR5111, NR2301 and NR7302), but compatibility is not tested.",
+        "nl": "Verbind je Homey Pro met je Zyxel NR5307 5G-router en houd je netwerk in de gaten. Monitor de mobiele signaalsterkte, bekijk verbonden apparaten en toegang tot belangrijke router-gegevens—allemaal vanaf je Homey-dashboard. Ideaal voor het automatiseren van acties op basis van verbindingskwaliteit of apparaatactiviteit.\nMogelijk werkt deze app ook met andere Zyxel router modellen met dezelfde firmware (bijvoorbeeld; NR7101, NR5103, NR5307, NR5101, NR5309, NR5111, NR2301 en NR7302), dit is niet getest."
+      },
+      "description": {
+        "en": "Your 5G connection at a glance",
+        "nl": "Je 5G-verbinding in één oogopslag"
+      },
+      "category": "internet",
+      "brandColor": "#66CC33",
+      "icon": "https://apps.homeycdn.net/app/zyxel.router/12/b562bfe4-991b-41ea-b6ae-3211bddbbd24/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/zyxel.router/12/b562bfe4-991b-41ea-b6ae-3211bddbbd24/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/zyxel.router/12/b562bfe4-991b-41ea-b6ae-3211bddbbd24/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "nr5307",
+          "name": {
+            "en": "Zyxel NR5307",
+            "nl": "Zyxel NR5307"
+          },
+          "class": "other",
+          "capabilities": [
+            "measure_signal_strength",
+            "firewall_status",
+            "sw_version",
+            "wifi_2_4_1_name",
+            "wifi_2_4_1_channel",
+            "wifi_2_4_2_name",
+            "wifi_2_4_2_channel",
+            "wifi_5_1_name",
+            "wifi_5_1_channel",
+            "wifi_5_2_name",
+            "wifi_5_2_channel",
+            "measure_signal_rsrp",
+            "measure_signal_rsrq",
+            "measure_signal_rssi",
+            "measure_signal_sinr",
+            "measure_signal_nr_sinr",
+            "measure_signal_nr_rsrp",
+            "connected_devices_count",
+            "measure_data_sent",
+            "measure_data_received",
+            "measure_data_month",
+            "measure_bandwidth_down",
+            "measure_bandwidth_up",
+            "measure_latency",
+            "ip_address_wan",
+            "ip_address_lan",
+            "router_uptime",
+            "status_wan",
+            "network_technology",
+            "cell_bands"
+          ],
+          "capabilitiesOptions": {
+            "connected_devices_count": {
+              "title": {
+                "en": "Connected Devices",
+                "nl": "Verbonden Apparaten"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/zyxel.router/12/b562bfe4-991b-41ea-b6ae-3211bddbbd24/drivers/nr5307/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/zyxel.router/12/b562bfe4-991b-41ea-b6ae-3211bddbbd24/drivers/nr5307/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/zyxel.router/12/b562bfe4-991b-41ea-b6ae-3211bddbbd24/drivers/nr5307/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "connected_devices_list_updated",
+            "title": {
+              "en": "Connected devices list updated",
+              "nl": "Lijst met verbonden apparaten bijgewerkt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_count",
+                "type": "number",
+                "title": {
+                  "en": "Device Count",
+                  "nl": "Aantal apparaten"
+                },
+                "example": "18"
+              },
+              {
+                "name": "device_list",
+                "type": "string",
+                "title": {
+                  "en": "Device List",
+                  "nl": "Lijst met apparaten"
+                },
+                "example": "iPhone, Laptop, Tablet"
+              },
+              {
+                "name": "device_details",
+                "type": "string",
+                "title": {
+                  "en": "Device detailed List",
+                  "nl": "Gedetailleerde lijst met apparaten"
+                },
+                "example": "[{\"name\":\"iPhone\",\"mac\":\"AA:BB:CC:DD:EE:FF\",\"ip\":\"192.168.8.10\",\"connection\":\"WiFi\"}]"
+              }
+            ]
+          },
+          {
+            "id": "data_limit_exceeded",
+            "title": {
+              "en": "Monthly data limit exceeded",
+              "nl": "Maandelijkse datalimiet overschreden"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "used_gb",
+                "type": "number",
+                "title": {
+                  "en": "Data used (GB)",
+                  "nl": "Dataverbruik (GB)"
+                },
+                "example": 105.3
+              },
+              {
+                "name": "limit_gb",
+                "type": "number",
+                "title": {
+                  "en": "Data limit (GB)",
+                  "nl": "Datalimiet (GB)"
+                },
+                "example": 100
+              }
+            ]
+          },
+          {
+            "id": "device_connected",
+            "title": {
+              "en": "Device connected",
+              "nl": "Apparaat verbonden"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device Name",
+                  "nl": "Apparaatnaam"
+                },
+                "example": "iPhone"
+              },
+              {
+                "name": "device_mac",
+                "type": "string",
+                "title": {
+                  "en": "MAC Address",
+                  "nl": "MAC-adres"
+                },
+                "example": "AA:BB:CC:DD:EE:FF"
+              }
+            ]
+          },
+          {
+            "id": "device_disconnected",
+            "title": {
+              "en": "Device disconnected",
+              "nl": "Apparaat verbroken"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "device_name",
+                "type": "string",
+                "title": {
+                  "en": "Device Name",
+                  "nl": "Apparaatnaam"
+                },
+                "example": "iPhone"
+              },
+              {
+                "name": "device_mac",
+                "type": "string",
+                "title": {
+                  "en": "MAC Address",
+                  "nl": "MAC-adres"
+                },
+                "example": "AA:BB:CC:DD:EE:FF"
+              }
+            ]
+          },
+          {
+            "id": "network_technology_changed",
+            "title": {
+              "en": "Network technology changed",
+              "nl": "Netwerktechniek gewijzigd"
+            },
+            "hint": {
+              "en": "Fires when switching between e.g. LTE and 5G",
+              "nl": "Gaat af bij een wissel tussen bijv. LTE en 5G"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "technology",
+                "type": "string",
+                "title": {
+                  "en": "Technology",
+                  "nl": "Techniek"
+                },
+                "example": "NR5G+"
+              },
+              {
+                "name": "previous",
+                "type": "string",
+                "title": {
+                  "en": "Previous technology",
+                  "nl": "Vorige techniek"
+                },
+                "example": "LTE"
+              },
+              {
+                "name": "bands",
+                "type": "string",
+                "title": {
+                  "en": "Active bands",
+                  "nl": "Actieve banden"
+                },
+                "example": "B3+B7 / N78"
+              }
+            ]
+          },
+          {
+            "id": "signal_strength_changed",
+            "title": {
+              "en": "Signal strength changed",
+              "nl": "Signaalsterkte gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "signalValue",
+                "type": "number",
+                "title": {
+                  "en": "Signal Strength (%)",
+                  "nl": "Signaalsterkte (%)"
+                },
+                "example": 60
+              }
+            ]
+          },
+          {
+            "id": "wan_connected_status",
+            "title": {
+              "en": "Connection status changed",
+              "nl": "Verbindingsstatus gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "wanSt",
+                "type": "string",
+                "title": {
+                  "en": "WAN status",
+                  "nl": "WAN status"
+                },
+                "example": "Up & Up"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "latency_below",
+            "title": {
+              "en": "Latency !{{is|is not}} below",
+              "nl": "Latentie !{{is|is niet}} onder"
+            },
+            "titleFormatted": {
+              "en": "Latency !{{is|is not}} below [[threshold]]",
+              "nl": "Latentie !{{is|is niet}} onder [[threshold]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Latency (ms)",
+                  "nl": "Latentie (ms)"
+                },
+                "placeholder": {
+                  "en": "100"
+                }
+              }
+            ]
+          },
+          {
+            "id": "on_5g",
+            "title": {
+              "en": "!{{Is|Is not}} connected via 5G",
+              "nl": "!{{Is|Is niet}} verbonden via 5G"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ]
+          },
+          {
+            "id": "signal_quality_above",
+            "title": {
+              "en": "Signal quality !{{is|is not}} above threshold",
+              "nl": "Signaalkwaliteit !{{is|is niet}} boven drempelwaarde"
+            },
+            "titleFormatted": {
+              "en": "Signal quality !{{is|is not}} above [[threshold]] dBm",
+              "nl": "Signaalkwaliteit !{{is|is niet}} boven [[threshold]] dBm"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              },
+              {
+                "name": "threshold",
+                "type": "number",
+                "placeholder": {
+                  "en": "-90"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "reboot_router",
+            "title": {
+              "en": "Reboot",
+              "nl": "Herstarten"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=nr5307"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-19T08:15:11.608Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "Clearer app description and Flow card titles.",
+        "nl": "Duidelijkere app-beschrijving en titels van Flow-kaarten."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "Zyxel",
+          "NR5307",
+          "Router",
+          "Modem",
+          "5G",
+          "Odido",
+          "network",
+          "Klik & Klaar",
+          "monitoring"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.2.4",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "693f10ce66abe4254753a08e",
+      "type": "user",
+      "userId": "68fea0c8cb71011c277d676e",
+      "name": "Rob Hagemann",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "community.birdbuddy",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Bird Buddy",
+        "nl": "Bird Buddy"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "Know who visits your garden. Bird Buddy shows the latest visitor photo and video of your smart bird feeder on your Homey dashboard and lets your flows react as soon as a new bird stops by.\n\nLog in with the email address and password of your Bird Buddy account. Google or Facebook sign-in is not supported, so create an account with a password and invite it to your feeder in the Bird Buddy app. This app is not made or supported by Bird Buddy and can stop working if Bird Buddy changes its service.\n",
+        "nl": "Weet wie er in je tuin op bezoek komt. Bird Buddy toont de laatste bezoekersfoto en video van je slimme voederhuisje op je Homey-dashboard en laat je flows reageren zodra er een nieuwe vogel langskomt.\n\nLog in met het e-mailadres en wachtwoord van je Bird Buddy-account. Inloggen met Google of Facebook wordt niet ondersteund: maak een account met wachtwoord aan en nodig dat uit voor je feeder in de Bird Buddy-app. Deze app is niet gemaakt of ondersteund door Bird Buddy en kan stoppen met werken als Bird Buddy zijn dienst aanpast.\n"
+      },
+      "description": {
+        "en": "See every bird that visits your feeder",
+        "nl": "Zie elke vogel die je voederhuisje bezoekt"
+      },
+      "category": "appliances",
+      "brandColor": "#2E7D32",
+      "icon": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "feeder",
+          "name": {
+            "en": "Feeder",
+            "nl": "Voederhuisje"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_battery"
+          ],
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/drivers/feeder/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/drivers/feeder/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/drivers/feeder/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "visitor_arrived",
+            "title": {
+              "en": "A new visitor arrived",
+              "nl": "Er is een nieuwe bezoeker"
+            },
+            "hint": {
+              "en": "Triggers when the feeder has a new visitor photo. Checked every 15 minutes.",
+              "nl": "Gaat af als de feeder een nieuwe bezoekersfoto heeft. Wordt elke 15 minuten gecontroleerd."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=feeder"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "image",
+                "type": "image",
+                "title": {
+                  "en": "Photo",
+                  "nl": "Foto"
+                }
+              },
+              {
+                "name": "time",
+                "type": "string",
+                "title": {
+                  "en": "Time of visit",
+                  "nl": "Tijdstip bezoek"
+                },
+                "example": "2026-10-04T08:15:00.000Z"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "visitor_within",
+            "title": {
+              "en": "A visitor came in the last few minutes",
+              "nl": "Er was een bezoeker in de laatste minuten"
+            },
+            "titleFormatted": {
+              "en": "A visitor came in the last [[minutes]] minutes",
+              "nl": "Er was een bezoeker in de laatste [[minutes]] minuten"
+            },
+            "hint": {
+              "en": "True if the feeder saw a visitor within the given number of minutes. Visitors are detected at the check interval.",
+              "nl": "Waar als de feeder een bezoeker zag binnen het opgegeven aantal minuten. Bezoekers worden gezien op het controle-interval."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=feeder"
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "title": {
+                  "en": "Minutes",
+                  "nl": "Minuten"
+                },
+                "placeholder": {
+                  "en": "60",
+                  "nl": "60"
+                },
+                "min": 1,
+                "max": 10080,
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "actions": null
+      },
+      "widgets": {
+        "last_visitor": {
+          "name": {
+            "en": "Last visitor",
+            "nl": "Laatste bezoeker"
+          },
+          "height": "133%",
+          "transparent": false,
+          "api": {
+            "getPhoto": {
+              "method": "GET",
+              "path": "/"
+            },
+            "getVideo": {
+              "method": "GET",
+              "path": "/video"
+            }
+          },
+          "id": "last_visitor",
+          "settings": [],
+          "previewDark": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/widgets/last_visitor/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/community.birdbuddy/2/2779aa47-7041-46b1-a1cd-07b280a38107/widgets/last_visitor/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-19T08:22:09.185Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:Tim.Homeyapps@outlook.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "solve issues to the homey regulations"
+      },
+      "compatibility": ">=12.3.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ac9ea8ebdc8421d78c563dd",
+      "type": "user",
+      "userId": "68319290884a074d76a69f2e",
+      "name": "Tim Vandendriessche",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]
