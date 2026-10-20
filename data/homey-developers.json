@@ -2144,8 +2144,8 @@
   {
     "developerId": "69e73665fb6dd7068a7cbff1",
     "developerName": "Jo Goossens",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 65125,
+    "forumUsername": "Goossens"
   },
   {
     "developerId": "5fb2490fc4ed7a7027373cb9",
@@ -2630,8 +2630,8 @@
   {
     "developerId": "6abaa70730dc90a8d6e5b566",
     "developerName": "Leopold Junkers",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 4281,
+    "forumUsername": "Leopold"
   },
   {
     "developerId": "6a8d453417d5efdcea632181",
@@ -2749,6 +2749,12 @@
   },
   {
     "developerId": "63ada7ec2c8e04f69dfd1c67",
+    "developerName": "Lumi Technology Co., Ltd.",
+    "forumUserID": 24,
+    "forumUsername": "TedTolboom"
+  },
+  {
+    "developerId": "6aba92d8c81c8a2ff99cc4d0",
     "developerName": "Lumi Technology Co., Ltd.",
     "forumUserID": 24,
     "forumUsername": "TedTolboom"
@@ -3704,6 +3710,12 @@
   {
     "developerId": "60cd1e66f68beffcbb16ca82",
     "developerName": "Paul Heetebrij",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ac28168bdc7ced970ffec1a",
+    "developerName": "Paul Kok",
     "forumUserID": null,
     "forumUsername": null
   },
