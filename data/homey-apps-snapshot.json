@@ -19556,5 +19556,49 @@
     "publishedAt": "2026-10-21T08:41:56.852Z",
     "updatedAt": "2026-10-21T08:41:56.852Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "se.liamlofgren.joulia",
+    "name": "Joulia",
+    "developerName": "Liam Löfgren",
+    "developerId": "69402f7266abe4254753f396",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-21T16:13:45.803Z",
+    "updatedAt": "2026-10-21T16:13:45.803Z",
+    "communityTopicId": 159134
+  },
+  {
+    "appId": "com.lolpold.webpanel",
+    "name": "WebPanel",
+    "developerName": "Leopold Junkers",
+    "developerId": "6abaa70730dc90a8d6e5b566",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-21T16:13:45.803Z",
+    "updatedAt": "2026-10-21T16:13:45.803Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.robinnoort.hegel",
+    "name": "Hegel",
+    "developerName": "Robin Noort",
+    "developerId": "692a1a3166abe425474c8866",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-21T16:13:47.232Z",
+    "updatedAt": "2026-10-21T16:13:47.232Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nu.thien.rikafirenet",
+    "name": "RIKA Firenet",
+    "developerName": "Jordy Thien",
+    "developerId": "65e26f67896842f4ab2ed5d2",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-21T16:13:48.030Z",
+    "updatedAt": "2026-10-21T16:13:48.030Z",
+    "communityTopicId": null
   }
 ]
