@@ -1554,6 +1554,12 @@
     "forumUsername": "Gal_Carmeli"
   },
   {
+    "developerId": "6ad483c2bdc8421d78c98304",
+    "developerName": "Gary Madeo",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "680279ccad3776de40f1e18d",
     "developerName": "Geir Nøstdahl",
     "forumUserID": null,
@@ -4032,6 +4038,12 @@
     "forumUsername": "Koktail"
   },
   {
+    "developerId": "6ad7641b4538e408fe1a54d9",
+    "developerName": "Resideo Technologies Inc.",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
     "developerId": "6363947008e3ec50c7531230",
     "developerName": "Resideo Technologies, Inc.",
     "forumUserID": 17660,
@@ -4886,6 +4898,12 @@
   {
     "developerId": "6a22e9d956adb8c38bb8327a",
     "developerName": "Thomas Ekdahl",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ad22828bdc8421d78c8e6c2",
+    "developerName": "Thomas Happich",
     "forumUserID": null,
     "forumUsername": null
   },

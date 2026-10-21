@@ -1,1 +1,1810 @@
-[]
+[
+  {
+    "id": "com.techboys.anthbot",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Anthbot",
+        "de": "Anthbot"
+      },
+      "version": "0.4.3",
+      "readme": {
+        "en": "Bring your Anthbot robotic lawn mower into Homey. Start, pause and dock it from Flows, keep it in its station when it rains or when the garden is in use, and get a message when it is stuck. Sign in with the account of the Anthbot app; the mower keeps working with the Anthbot app as before.\n\nThis is a community app and not made by Anthbot. It has been tested with the Anthbot N8. The drivers for M5, M9 and Genie use the same cloud protocol but have not been tested on real devices yet.\n",
+        "de": "Hol deinen Anthbot Mähroboter in Homey. Starte, pausiere und parke ihn per Flow, lass ihn bei Regen oder wenn der Garten genutzt wird in der Station und lass dich benachrichtigen, wenn er feststeckt. Angemeldet wird mit dem Konto der Anthbot-App; der Mäher funktioniert mit der Anthbot-App weiter wie bisher.\n\nDies ist eine Community-App und stammt nicht von Anthbot. Getestet ist sie mit dem Anthbot N8. Die Treiber für M5, M9 und Genie nutzen dasselbe Cloud-Protokoll, sind aber noch nicht an echten Geräten getestet.\n"
+      },
+      "description": {
+        "en": "Mow, pause and dock from your Flows",
+        "de": "Mähen, pausieren und parken per Flow"
+      },
+      "category": "appliances",
+      "brandColor": "#3D3F8F",
+      "icon": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "genie",
+          "name": {
+            "en": "Anthbot Genie",
+            "de": "Anthbot Genie"
+          },
+          "class": "lawnmower",
+          "capabilities": [
+            "onoff",
+            "anthbot_start",
+            "anthbot_pause",
+            "anthbot_resume",
+            "anthbot_dock",
+            "mower_state",
+            "anthbot_state",
+            "anthbot_error_text",
+            "anthbot_connected",
+            "anthbot_cutter_height",
+            "anthbot_mow_area",
+            "anthbot_mow_time",
+            "anthbot_rain_sensor",
+            "anthbot_rtk",
+            "battery_charging_state",
+            "alarm_generic",
+            "measure_battery"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Mowing",
+                "de": "Mähen"
+              },
+              "insightsTitleTrue": {
+                "en": "Mowing started",
+                "de": "Mähen gestartet"
+              },
+              "insightsTitleFalse": {
+                "en": "Mowing stopped",
+                "de": "Mähen beendet"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Error alarm",
+                "de": "Fehler-Alarm"
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/genie/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/genie/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/genie/assets/icon.svg"
+        },
+        {
+          "id": "m5",
+          "name": {
+            "en": "Anthbot M5",
+            "de": "Anthbot M5"
+          },
+          "class": "lawnmower",
+          "capabilities": [
+            "onoff",
+            "anthbot_start",
+            "anthbot_pause",
+            "anthbot_resume",
+            "anthbot_dock",
+            "mower_state",
+            "anthbot_state",
+            "anthbot_error_text",
+            "anthbot_connected",
+            "anthbot_cutter_height",
+            "anthbot_mow_area",
+            "anthbot_mow_time",
+            "anthbot_rain_sensor",
+            "anthbot_rtk",
+            "battery_charging_state",
+            "alarm_generic",
+            "measure_battery"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Mowing",
+                "de": "Mähen"
+              },
+              "insightsTitleTrue": {
+                "en": "Mowing started",
+                "de": "Mähen gestartet"
+              },
+              "insightsTitleFalse": {
+                "en": "Mowing stopped",
+                "de": "Mähen beendet"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Error alarm",
+                "de": "Fehler-Alarm"
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/m5/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/m5/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/m5/assets/icon.svg"
+        },
+        {
+          "id": "m9",
+          "name": {
+            "en": "Anthbot M9",
+            "de": "Anthbot M9"
+          },
+          "class": "lawnmower",
+          "capabilities": [
+            "onoff",
+            "anthbot_start",
+            "anthbot_pause",
+            "anthbot_resume",
+            "anthbot_dock",
+            "mower_state",
+            "anthbot_state",
+            "anthbot_error_text",
+            "anthbot_connected",
+            "anthbot_cutter_height",
+            "anthbot_mow_area",
+            "anthbot_mow_time",
+            "anthbot_rain_sensor",
+            "anthbot_rtk",
+            "battery_charging_state",
+            "alarm_generic",
+            "measure_battery"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Mowing",
+                "de": "Mähen"
+              },
+              "insightsTitleTrue": {
+                "en": "Mowing started",
+                "de": "Mähen gestartet"
+              },
+              "insightsTitleFalse": {
+                "en": "Mowing stopped",
+                "de": "Mähen beendet"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Error alarm",
+                "de": "Fehler-Alarm"
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/m9/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/m9/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/m9/assets/icon.svg"
+        },
+        {
+          "id": "mower",
+          "name": {
+            "en": "Anthbot N8",
+            "de": "Anthbot N8"
+          },
+          "class": "lawnmower",
+          "capabilities": [
+            "onoff",
+            "anthbot_start",
+            "anthbot_pause",
+            "anthbot_resume",
+            "anthbot_dock",
+            "mower_state",
+            "anthbot_state",
+            "anthbot_error_text",
+            "anthbot_connected",
+            "anthbot_grass_bag",
+            "anthbot_deflector",
+            "anthbot_work_mode",
+            "anthbot_cutter_height",
+            "anthbot_mow_area",
+            "anthbot_mow_time",
+            "anthbot_rain_sensor",
+            "anthbot_rtk",
+            "battery_charging_state",
+            "alarm_generic",
+            "measure_battery"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Mowing",
+                "de": "Mähen"
+              },
+              "insightsTitleTrue": {
+                "en": "Mowing started",
+                "de": "Mähen gestartet"
+              },
+              "insightsTitleFalse": {
+                "en": "Mowing stopped",
+                "de": "Mähen beendet"
+              }
+            },
+            "alarm_generic": {
+              "title": {
+                "en": "Error alarm",
+                "de": "Fehler-Alarm"
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/mower/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/mower/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.techboys.anthbot/2/8c8182a2-18cc-44ce-9574-6f950d3e9e07/drivers/mower/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "anthbot_connection_changed",
+            "title": {
+              "en": "Live connection changed",
+              "de": "Live-Verbindung hat sich geändert"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "connected",
+                "type": "boolean",
+                "title": {
+                  "en": "Connected",
+                  "de": "Verbunden"
+                }
+              }
+            ]
+          },
+          {
+            "id": "anthbot_error",
+            "title": {
+              "en": "An error occurred",
+              "de": "Ein Fehler ist aufgetreten"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "code",
+                "type": "number",
+                "title": {
+                  "en": "Error code",
+                  "de": "Fehlercode"
+                }
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "title": {
+                  "en": "Error",
+                  "de": "Fehler"
+                }
+              }
+            ]
+          },
+          {
+            "id": "anthbot_mowing_finished",
+            "title": {
+              "en": "Mowing finished",
+              "de": "Mähen ist beendet"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "area",
+                "type": "number",
+                "title": {
+                  "en": "Mowed area (m²)",
+                  "de": "Mähfläche (m²)"
+                }
+              },
+              {
+                "name": "minutes",
+                "type": "number",
+                "title": {
+                  "en": "Mowing time (min)",
+                  "de": "Mähzeit (min)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "anthbot_mowing_started",
+            "title": {
+              "en": "Mowing started",
+              "de": "Mähen wurde gestartet"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_state_changed",
+            "title": {
+              "en": "The status changed",
+              "de": "Der Status hat sich geändert"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "de": "Status"
+                }
+              },
+              {
+                "name": "raw_mode",
+                "type": "string",
+                "title": {
+                  "en": "Raw mode",
+                  "de": "Rohmodus"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "anthbot_attachment_mounted",
+            "title": {
+              "en": "Grass bag or deflector !{{is|isn't}} mounted",
+              "de": "Fangkorb oder Deflektor !{{ist|ist nicht}} montiert"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_is_connected",
+            "title": {
+              "en": "Live connection !{{is|isn't}} up",
+              "de": "Live-Verbindung !{{steht|steht nicht}}"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_state_is",
+            "title": {
+              "en": "Status !{{is|isn't}}",
+              "de": "Status !{{ist|ist nicht}}"
+            },
+            "titleFormatted": {
+              "en": "Status !{{is|isn't}} [[state]]",
+              "de": "Status !{{ist|ist nicht}} [[state]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              },
+              {
+                "name": "state",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "mowing",
+                    "title": {
+                      "en": "Mowing",
+                      "de": "Mäht"
+                    }
+                  },
+                  {
+                    "id": "paused",
+                    "title": {
+                      "en": "Paused",
+                      "de": "Pausiert"
+                    }
+                  },
+                  {
+                    "id": "returning",
+                    "title": {
+                      "en": "Returning to dock",
+                      "de": "Fährt zur Station"
+                    }
+                  },
+                  {
+                    "id": "charging",
+                    "title": {
+                      "en": "Charging",
+                      "de": "Lädt"
+                    }
+                  },
+                  {
+                    "id": "docked",
+                    "title": {
+                      "en": "Docked",
+                      "de": "In der Station"
+                    }
+                  },
+                  {
+                    "id": "standby",
+                    "title": {
+                      "en": "Standby",
+                      "de": "Standby"
+                    }
+                  },
+                  {
+                    "id": "mapping",
+                    "title": {
+                      "en": "Mapping",
+                      "de": "Kartierung"
+                    }
+                  },
+                  {
+                    "id": "manual",
+                    "title": {
+                      "en": "Manual control",
+                      "de": "Manuelle Steuerung"
+                    }
+                  },
+                  {
+                    "id": "error",
+                    "title": {
+                      "en": "Error",
+                      "de": "Fehler"
+                    }
+                  },
+                  {
+                    "id": "offline",
+                    "title": {
+                      "en": "Offline",
+                      "de": "Offline"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "anthbot_dock",
+            "title": {
+              "en": "Return to dock",
+              "de": "Zur Ladestation"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_dump",
+            "title": {
+              "en": "Empty the grass bag",
+              "de": "Fangkorb entleeren"
+            },
+            "hint": {
+              "en": "Sends the mower to the dump area set in the Anthbot app.",
+              "de": "Schickt den Mäher zum Entleerbereich, der in der Anthbot-App festgelegt ist."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_edge",
+            "title": {
+              "en": "Mow the edges",
+              "de": "Rand mähen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_nest",
+            "title": {
+              "en": "Mow around the dock",
+              "de": "Um die Ladestation mähen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_pause",
+            "title": {
+              "en": "Pause mowing",
+              "de": "Mähen pausieren"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_rain_sensor",
+            "title": {
+              "en": "Turn rain sensor on or off",
+              "de": "Regensensor ein- oder ausschalten"
+            },
+            "titleFormatted": {
+              "en": "Turn rain sensor [[mode]]",
+              "de": "Regensensor [[mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "title": {
+                      "en": "on",
+                      "de": "einschalten"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "off",
+                      "de": "ausschalten"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "anthbot_resume",
+            "title": {
+              "en": "Resume mowing",
+              "de": "Mähen fortsetzen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_set_cutter_height",
+            "title": {
+              "en": "Set cutting height",
+              "de": "Schnitthöhe setzen"
+            },
+            "titleFormatted": {
+              "en": "Set cutting height to [[height]] mm",
+              "de": "Schnitthöhe auf [[height]] mm setzen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              },
+              {
+                "name": "height",
+                "type": "number",
+                "min": 20,
+                "max": 100,
+                "step": 5,
+                "placeholder": {
+                  "en": "mm",
+                  "de": "mm"
+                }
+              }
+            ]
+          },
+          {
+            "id": "anthbot_set_volume",
+            "title": {
+              "en": "Set voice volume",
+              "de": "Lautstärke setzen"
+            },
+            "titleFormatted": {
+              "en": "Set voice volume to [[volume]] %",
+              "de": "Lautstärke auf [[volume]] % setzen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              },
+              {
+                "name": "volume",
+                "type": "range",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "label": "%",
+                "labelMultiplier": 1,
+                "labelDecimals": 0
+              }
+            ]
+          },
+          {
+            "id": "anthbot_set_work_mode",
+            "title": {
+              "en": "Set work mode",
+              "de": "Arbeitsmodus setzen"
+            },
+            "titleFormatted": {
+              "en": "Set work mode to [[mode]]",
+              "de": "Arbeitsmodus auf [[mode]] setzen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "collect",
+                    "title": {
+                      "en": "Collect",
+                      "de": "Sammeln"
+                    }
+                  },
+                  {
+                    "id": "sweep",
+                    "title": {
+                      "en": "Sweep",
+                      "de": "Kehren"
+                    }
+                  },
+                  {
+                    "id": "shred",
+                    "title": {
+                      "en": "Mulch",
+                      "de": "Mulchen"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "anthbot_start",
+            "title": {
+              "en": "Mow the whole lawn",
+              "de": "Ganze Fläche mähen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_stop_all",
+            "title": {
+              "en": "Stop all tasks",
+              "de": "Alle Aufgaben stoppen"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              }
+            ]
+          },
+          {
+            "id": "anthbot_zone",
+            "title": {
+              "en": "Mow a zone",
+              "de": "Zone mähen"
+            },
+            "titleFormatted": {
+              "en": "Mow zone [[zone]]",
+              "de": "Zone [[zone]] mähen"
+            },
+            "hint": {
+              "en": "Zones are the mowing zones you drew on the map in the Anthbot app.",
+              "de": "Zonen sind die Mähzonen, die du in der Anthbot-App auf der Karte angelegt hast."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mower|m5|m9|genie"
+              },
+              {
+                "name": "zone",
+                "type": "autocomplete",
+                "placeholder": {
+                  "en": "Zone",
+                  "de": "Zone"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-21T07:34:11.020Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:info@techboys.de",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "First test version. Start, pause, resume and dock your mower from Flows, see live status, battery and errors, and react when mowing starts, finishes or something goes wrong. Zone mowing, work mode and emptying the grass bag are included for the N8. Tested on the N8 only, the drivers for M5, M9 and Genie still need testers."
+      },
+      "compatibility": ">=12.2.0",
+      "tags": {
+        "en": [
+          "anthbot",
+          "lawn mower",
+          "robot mower",
+          "n8",
+          "m5",
+          "m9",
+          "genie"
+        ],
+        "de": [
+          "anthbot",
+          "mähroboter",
+          "rasenmäher",
+          "rasenroboter",
+          "n8",
+          "m5",
+          "m9",
+          "genie"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.4.3",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ad483c2bdc8421d78c98304",
+      "type": "user",
+      "userId": "697e2b03fa7cc025618685aa",
+      "name": "Gary Madeo",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.habbo656.divoom-timebox",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Divoom TimeBox Evo",
+        "de": "Divoom TimeBox Evo"
+      },
+      "version": "1.1.0",
+      "readme": {
+        "en": "TimeBox Evo turns your Divoom TimeBox Evo into the friendly pixel screen of your home. Homey talks to it directly over Bluetooth and keeps its clock right all the time. Show the time and the weather in the morning, let a scrolling note tell you that the washing machine is done or that someone is at the door, start a pizza countdown in the kitchen, or put a snapshot of your doorbell camera on the 16x16 display.\n\nEverything is available from the device tile and from Flows: the clock in several styles, mood lighting in any colour, your own pixel pages, dimming in the evening and switching off at bedtime. A finished countdown can even start the next Flow.\n",
+        "de": "TimeBox Evo macht aus deiner Divoom TimeBox Evo den freundlichen Pixel-Bildschirm deines Zuhauses. Homey spricht direkt per Bluetooth mit ihr und hält ihre Uhr immer richtig. Zeige morgens Uhrzeit und Wetter an, lass dir per Lauftext sagen, dass die Waschmaschine fertig ist oder jemand an der Tür steht, starte in der Küche einen Pizza-Countdown oder bring einen Schnappschuss deiner Türklingel-Kamera auf das 16x16-Display.\n\nAlles steht dir auf der Gerätekachel und in Flows zur Verfügung: die Uhr in mehreren Stilen, Stimmungslicht in jeder Farbe, eigene Pixel-Seiten, Dimmen am Abend und Ausschalten zur Schlafenszeit. Ein abgelaufener Countdown kann sogar den nächsten Flow starten.\n"
+      },
+      "description": {
+        "en": "The pixel heart of your smart home.",
+        "de": "Das Pixel-Herz deines Smart Homes."
+      },
+      "category": "tools",
+      "brandColor": "#FF6A00",
+      "icon": "https://apps.homeycdn.net/app/com.habbo656.divoom-timebox/2/164833d8-2da0-4b57-84d9-5b4c8e16ada9/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.habbo656.divoom-timebox/2/164833d8-2da0-4b57-84d9-5b4c8e16ada9/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.habbo656.divoom-timebox/2/164833d8-2da0-4b57-84d9-5b4c8e16ada9/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "timebox",
+          "name": {
+            "en": "TimeBox Evo",
+            "de": "TimeBox Evo"
+          },
+          "class": "other",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "timebox_channel"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "setOnDim": false
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.habbo656.divoom-timebox/2/164833d8-2da0-4b57-84d9-5b4c8e16ada9/drivers/timebox/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.habbo656.divoom-timebox/2/164833d8-2da0-4b57-84d9-5b4c8e16ada9/drivers/timebox/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "ble"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.habbo656.divoom-timebox/2/164833d8-2da0-4b57-84d9-5b4c8e16ada9/drivers/timebox/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "timebox_connected",
+            "title": {
+              "en": "TimeBox connected",
+              "de": "TimeBox verbunden"
+            },
+            "hint": {
+              "en": "Triggers when the TimeBox answers again after it was unavailable.",
+              "de": "Wird ausgelöst, wenn die TimeBox wieder antwortet, nachdem sie nicht verfügbar war."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ]
+          },
+          {
+            "id": "timebox_disconnected",
+            "title": {
+              "en": "TimeBox disconnected",
+              "de": "TimeBox getrennt"
+            },
+            "hint": {
+              "en": "Triggers when the TimeBox has been unreachable for 30 seconds.",
+              "de": "Wird ausgelöst, wenn die TimeBox 30 Sekunden lang nicht erreichbar war."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ]
+          },
+          {
+            "id": "timebox_channel_changed",
+            "title": {
+              "en": "Mode changed",
+              "de": "Modus gewechselt"
+            },
+            "hint": {
+              "en": "Triggers when the TimeBox switches to another mode, from Homey, the Divoom app or the device itself.",
+              "de": "Wird ausgelöst, wenn die TimeBox auf einen anderen Modus wechselt, über Homey, die Divoom-App oder das Gerät selbst."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "channel",
+                "type": "string",
+                "title": {
+                  "en": "Mode",
+                  "de": "Modus"
+                },
+                "example": {
+                  "en": "lighting",
+                  "de": "lighting"
+                }
+              }
+            ]
+          },
+          {
+            "id": "timebox_countdown_ended",
+            "title": {
+              "en": "Countdown ended",
+              "de": "Countdown abgelaufen"
+            },
+            "hint": {
+              "en": "Triggers when the TimeBox reports that a countdown has ended, also one that a mode change, a text or turning the TimeBox off had hidden, and one that was started on the TimeBox itself or in the Divoom app. It does not trigger when you use \"Stop countdown\".",
+              "de": "Wird ausgelöst, wenn die TimeBox meldet, dass ein Countdown abgelaufen ist, auch einer, den ein Moduswechsel, ein Text oder das Ausschalten der TimeBox verdeckt hatte, und einer, der an der TimeBox selbst oder in der Divoom-App gestartet wurde. Wird nicht ausgelöst, wenn du \"Countdown beenden\" benutzt."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "timebox_is_connected",
+            "title": {
+              "en": "TimeBox !{{is|is not}} connected",
+              "de": "TimeBox !{{ist|ist nicht}} verbunden"
+            },
+            "hint": {
+              "en": "Checks whether the TimeBox is connected to Homey right now.",
+              "de": "Prüft, ob die TimeBox gerade mit Homey verbunden ist."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ]
+          },
+          {
+            "id": "timebox_channel_is",
+            "title": {
+              "en": "Mode !{{is|is not}} ...",
+              "de": "Modus !{{ist|ist nicht}} ..."
+            },
+            "titleFormatted": {
+              "en": "Mode !{{is|is not}} [[channel]]",
+              "de": "Modus !{{ist|ist nicht}} [[channel]]"
+            },
+            "hint": {
+              "en": "Checks which mode the TimeBox shows: clock, lighting or custom.",
+              "de": "Prüft, welchen Modus die TimeBox zeigt: Uhr, Beleuchtung oder Benutzerdefiniert."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "dropdown",
+                "name": "channel",
+                "title": {
+                  "en": "Mode",
+                  "de": "Modus"
+                },
+                "values": [
+                  {
+                    "id": "clock",
+                    "label": {
+                      "en": "Clock",
+                      "de": "Uhr"
+                    }
+                  },
+                  {
+                    "id": "lighting",
+                    "label": {
+                      "en": "Lighting",
+                      "de": "Beleuchtung"
+                    }
+                  },
+                  {
+                    "id": "custom",
+                    "label": {
+                      "en": "Custom",
+                      "de": "Benutzerdefiniert"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "timebox_set_channel",
+            "title": {
+              "en": "Switch mode",
+              "de": "Modus wechseln"
+            },
+            "titleFormatted": {
+              "en": "Switch to mode [[channel]]",
+              "de": "Zu Modus [[channel]] wechseln"
+            },
+            "hint": {
+              "en": "Switches the TimeBox display to the chosen mode. Lighting uses the stored colour.",
+              "de": "Schaltet die Anzeige der TimeBox auf den gewählten Modus. Beleuchtung nutzt die gespeicherte Farbe."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "dropdown",
+                "name": "channel",
+                "title": {
+                  "en": "Mode",
+                  "de": "Modus"
+                },
+                "values": [
+                  {
+                    "id": "clock",
+                    "label": {
+                      "en": "Clock",
+                      "de": "Uhr"
+                    }
+                  },
+                  {
+                    "id": "lighting",
+                    "label": {
+                      "en": "Lighting",
+                      "de": "Beleuchtung"
+                    }
+                  },
+                  {
+                    "id": "custom",
+                    "label": {
+                      "en": "Custom",
+                      "de": "Benutzerdefiniert"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "timebox_show_clock",
+            "title": {
+              "en": "Show clock",
+              "de": "Uhr anzeigen"
+            },
+            "titleFormatted": {
+              "en": "Show clock [[style]] in [[color]]",
+              "de": "Uhr [[style]] in [[color]] anzeigen"
+            },
+            "hint": {
+              "en": "Switches the TimeBox to the clock with this style and colour. The colour is kept as the clock colour (the colour picker of the device shows it); the style stays until the clock is selected again or the clock settings are changed, and turning the TimeBox off and on shows the same clock. The weather, temperature and calendar pages come from the device settings; the settings themselves are not changed.",
+              "de": "Schaltet die TimeBox auf die Uhr mit diesem Stil und dieser Farbe. Die Farbe bleibt als Farbe der Uhr gespeichert (die Farbauswahl des Geräts zeigt sie); der Stil bleibt, bis die Uhr erneut gewählt oder die Uhr-Einstellungen geändert werden; Aus- und Einschalten zeigt dieselbe Uhr. Wetter-, Temperatur- und Kalenderseite stammen aus den Geräteeinstellungen; die Einstellungen selbst bleiben unverändert."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "dropdown",
+                "name": "style",
+                "title": {
+                  "en": "Style",
+                  "de": "Stil"
+                },
+                "values": [
+                  {
+                    "id": "full_screen",
+                    "label": {
+                      "en": "Full screen",
+                      "de": "Vollbild"
+                    }
+                  },
+                  {
+                    "id": "rainbow",
+                    "label": {
+                      "en": "Rainbow",
+                      "de": "Regenbogen"
+                    }
+                  },
+                  {
+                    "id": "boxed",
+                    "label": {
+                      "en": "Boxed",
+                      "de": "Gerahmt"
+                    }
+                  },
+                  {
+                    "id": "analog_square",
+                    "label": {
+                      "en": "Analog, square",
+                      "de": "Analog, eckig"
+                    }
+                  },
+                  {
+                    "id": "negative",
+                    "label": {
+                      "en": "Full screen, negative",
+                      "de": "Vollbild, negativ"
+                    }
+                  },
+                  {
+                    "id": "analog_round",
+                    "label": {
+                      "en": "Analog, round",
+                      "de": "Analog, rund"
+                    }
+                  },
+                  {
+                    "id": "small",
+                    "label": {
+                      "en": "Small",
+                      "de": "Klein"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "color",
+                "name": "color",
+                "title": {
+                  "en": "Colour",
+                  "de": "Farbe"
+                }
+              }
+            ]
+          },
+          {
+            "id": "timebox_set_lighting",
+            "title": {
+              "en": "Set lighting",
+              "de": "Beleuchtung einstellen"
+            },
+            "titleFormatted": {
+              "en": "Set lighting to [[color]]",
+              "de": "Beleuchtung auf [[color]] setzen"
+            },
+            "hint": {
+              "en": "Switches the TimeBox to the lighting mode with this colour and turns the panel on. Brightness stays as it is (dim).",
+              "de": "Schaltet die TimeBox auf den Beleuchtungsmodus mit dieser Farbe und schaltet das Display ein. Die Helligkeit bleibt unverändert (dim)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "color",
+                "name": "color",
+                "title": {
+                  "en": "Colour",
+                  "de": "Farbe"
+                }
+              }
+            ]
+          },
+          {
+            "id": "timebox_show_custom_page",
+            "title": {
+              "en": "Show custom page",
+              "de": "Eigene Seite anzeigen"
+            },
+            "titleFormatted": {
+              "en": "Show custom page [[page]]",
+              "de": "Eigene Seite [[page]] anzeigen"
+            },
+            "hint": {
+              "en": "Switches the TimeBox to the custom mode with this page and turns the panel on. Custom pages are the ones set up in the Divoom app.",
+              "de": "Schaltet die TimeBox auf den benutzerdefinierten Modus mit dieser Seite und schaltet das Display ein. Eigene Seiten sind die, die in der Divoom-App eingerichtet wurden."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "dropdown",
+                "name": "page",
+                "title": {
+                  "en": "Page",
+                  "de": "Seite"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Page 1",
+                      "de": "Seite 1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Page 2",
+                      "de": "Seite 2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Page 3",
+                      "de": "Seite 3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "timebox_show_text",
+            "title": {
+              "en": "Show text",
+              "de": "Text anzeigen"
+            },
+            "titleFormatted": {
+              "en": "Show text [[text]] in [[color]] on [[background]], [[speed]], for [[duration]] s",
+              "de": "Text [[text]] in [[color]] auf [[background]] anzeigen, [[speed]], für [[duration]] s"
+            },
+            "hint": {
+              "en": "Scrolls the text across the TimeBox display in its own large font and repeats it until the duration is over. Duration 0 keeps it until the Stop text action, a mode change or turning the TimeBox off. A new text replaces the running one; a turned-off TimeBox is turned on first. Texts longer than 64 characters (after removing emoji) make the action fail; emoji are removed because the TimeBox cannot show them.",
+              "de": "Lässt den Text in der eigenen großen Schrift der TimeBox über das Display laufen und wiederholt ihn, bis die Dauer vorbei ist. Dauer 0 behält ihn bis zur Aktion Text beenden, einem Moduswechsel oder dem Ausschalten der TimeBox. Ein neuer Text ersetzt den laufenden; eine ausgeschaltete TimeBox wird zuerst eingeschaltet. Texte mit mehr als 64 Zeichen (nach dem Entfernen von Emojis) lassen die Aktion fehlschlagen; Emojis werden entfernt, weil die TimeBox sie nicht darstellen kann."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "text",
+                "name": "text",
+                "title": {
+                  "en": "Text",
+                  "de": "Text"
+                },
+                "placeholder": {
+                  "en": "Hello Homey",
+                  "de": "Hallo Homey"
+                }
+              },
+              {
+                "type": "color",
+                "name": "color",
+                "title": {
+                  "en": "Text colour",
+                  "de": "Textfarbe"
+                }
+              },
+              {
+                "type": "color",
+                "name": "background",
+                "title": {
+                  "en": "Background colour",
+                  "de": "Hintergrundfarbe"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "speed",
+                "title": {
+                  "en": "Speed",
+                  "de": "Geschwindigkeit"
+                },
+                "values": [
+                  {
+                    "id": "slow",
+                    "label": {
+                      "en": "Slow",
+                      "de": "Langsam"
+                    }
+                  },
+                  {
+                    "id": "normal",
+                    "label": {
+                      "en": "Normal",
+                      "de": "Normal"
+                    }
+                  },
+                  {
+                    "id": "fast",
+                    "label": {
+                      "en": "Fast",
+                      "de": "Schnell"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration (s)",
+                  "de": "Dauer (s)"
+                },
+                "min": 0,
+                "max": 3600,
+                "step": 1,
+                "placeholder": {
+                  "en": "0 = until stopped",
+                  "de": "0 = bis zum Stoppen"
+                },
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": "timebox_stop_text",
+            "title": {
+              "en": "Stop text",
+              "de": "Text beenden"
+            },
+            "hint": {
+              "en": "Ends the scrolling text; the TimeBox shows its previous mode again.",
+              "de": "Beendet den laufenden Text; die TimeBox zeigt wieder ihren vorherigen Modus."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ]
+          },
+          {
+            "id": "timebox_show_image",
+            "title": {
+              "en": "Show image",
+              "de": "Bild anzeigen"
+            },
+            "titleFormatted": {
+              "en": "Show image [[droptoken]], [[fit]], for [[duration]] s",
+              "de": "Bild [[droptoken]] anzeigen, [[fit]], für [[duration]] s"
+            },
+            "hint": {
+              "en": "Shows the image of an image tag (for example a camera snapshot or an album cover) on the TimeBox display. The picture is scaled to 16x16 pixels: Fill the display crops the sides of a non-square image, Whole image keeps all of it with black bars. Transparent areas are shown black. PNG, JPEG and GIF (first frame) are supported, up to 5 MB and 8.3 megapixels (for example 3840 x 2160) with at most 16384 pixels per side. Duration 0 keeps the image until a mode change, a text, a countdown or turning the TimeBox off; with a duration the TimeBox returns to its previous mode afterwards. A turned-off TimeBox is turned on first. Large images can take a few seconds to prepare.",
+              "de": "Zeigt das Bild eines Bild-Tags (zum Beispiel ein Kamera-Schnappschuss oder ein Albumcover) auf dem Display der TimeBox. Das Bild wird auf 16x16 Pixel verkleinert: Display füllen schneidet bei nicht quadratischen Bildern die Seiten ab, Ganzes Bild zeigt alles mit schwarzen Rändern. Transparente Bereiche werden schwarz dargestellt. Unterstützt werden PNG, JPEG und GIF (erstes Bild) bis 5 MB und 8,3 Megapixel (zum Beispiel 3840 x 2160) mit höchstens 16384 Pixeln pro Seite. Dauer 0 behält das Bild bis zu einem Moduswechsel, einem Text, einem Countdown oder dem Ausschalten der TimeBox; mit einer Dauer kehrt die TimeBox danach in ihren vorherigen Modus zurück. Eine ausgeschaltete TimeBox wird zuerst eingeschaltet. Große Bilder brauchen einige Sekunden zur Aufbereitung."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "dropdown",
+                "name": "fit",
+                "title": {
+                  "en": "Fit",
+                  "de": "Einpassen"
+                },
+                "values": [
+                  {
+                    "id": "cover",
+                    "label": {
+                      "en": "Fill the display (crop)",
+                      "de": "Display füllen (zuschneiden)"
+                    }
+                  },
+                  {
+                    "id": "contain",
+                    "label": {
+                      "en": "Whole image (black bars)",
+                      "de": "Ganzes Bild (schwarze Ränder)"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration (s)",
+                  "de": "Dauer (s)"
+                },
+                "min": 0,
+                "max": 3600,
+                "step": 1,
+                "placeholder": {
+                  "en": "0 = until a mode change",
+                  "de": "0 = bis zum Moduswechsel"
+                },
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": "timebox_show_image_url",
+            "title": {
+              "en": "Show image from URL",
+              "de": "Bild von URL anzeigen"
+            },
+            "titleFormatted": {
+              "en": "Show image from [[url]], [[fit]], for [[duration]] s",
+              "de": "Bild von [[url]] anzeigen, [[fit]], für [[duration]] s"
+            },
+            "hint": {
+              "en": "Downloads the picture at an http or https address when the action runs (Homey must be able to reach it; addresses in your own network work too) and shows it on the TimeBox display. The picture is scaled to 16x16 pixels: Fill the display crops the sides of a non-square image, Whole image keeps all of it with black bars. Transparent areas are shown black. PNG, JPEG and GIF (first frame) are supported, up to 5 MB and 8.3 megapixels (for example 3840 x 2160) with at most 16384 pixels per side. Duration 0 keeps the image until a mode change, a text, a countdown or turning the TimeBox off; with a duration the TimeBox returns to its previous mode afterwards. A turned-off TimeBox is turned on first. Large images can take a few seconds to prepare.",
+              "de": "Lädt das Bild von einer http- oder https-Adresse, wenn die Aktion läuft (Homey muss sie erreichen können; Adressen im eigenen Netzwerk funktionieren auch), und zeigt es auf dem Display der TimeBox. Das Bild wird auf 16x16 Pixel verkleinert: Display füllen schneidet bei nicht quadratischen Bildern die Seiten ab, Ganzes Bild zeigt alles mit schwarzen Rändern. Transparente Bereiche werden schwarz dargestellt. Unterstützt werden PNG, JPEG und GIF (erstes Bild) bis 5 MB und 8,3 Megapixel (zum Beispiel 3840 x 2160) mit höchstens 16384 Pixeln pro Seite. Dauer 0 behält das Bild bis zu einem Moduswechsel, einem Text, einem Countdown oder dem Ausschalten der TimeBox; mit einer Dauer kehrt die TimeBox danach in ihren vorherigen Modus zurück. Eine ausgeschaltete TimeBox wird zuerst eingeschaltet. Große Bilder brauchen einige Sekunden zur Aufbereitung."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "text",
+                "name": "url",
+                "title": {
+                  "en": "URL",
+                  "de": "URL"
+                },
+                "placeholder": {
+                  "en": "https://example.com/picture.png",
+                  "de": "https://example.com/bild.png"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "fit",
+                "title": {
+                  "en": "Fit",
+                  "de": "Einpassen"
+                },
+                "values": [
+                  {
+                    "id": "cover",
+                    "label": {
+                      "en": "Fill the display (crop)",
+                      "de": "Display füllen (zuschneiden)"
+                    }
+                  },
+                  {
+                    "id": "contain",
+                    "label": {
+                      "en": "Whole image (black bars)",
+                      "de": "Ganzes Bild (schwarze Ränder)"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration (s)",
+                  "de": "Dauer (s)"
+                },
+                "min": 0,
+                "max": 3600,
+                "step": 1,
+                "placeholder": {
+                  "en": "0 = until a mode change",
+                  "de": "0 = bis zum Moduswechsel"
+                },
+                "required": false
+              }
+            ]
+          },
+          {
+            "id": "timebox_start_countdown",
+            "title": {
+              "en": "Start countdown",
+              "de": "Countdown starten"
+            },
+            "titleFormatted": {
+              "en": "Start a countdown of [[minutes]] min [[seconds]] s",
+              "de": "Countdown über [[minutes]] Min. [[seconds]] s starten"
+            },
+            "hint": {
+              "en": "Shows a countdown (hourglass, minutes and seconds) on the TimeBox display. At zero it shows 00:00 for a few seconds and the TimeBox returns to its previous mode. It replaces a running text; starting again restarts it; a turned-off TimeBox is turned on first. A mode change, a text or turning the TimeBox off only hides the countdown: it keeps running and shows 00:00 when it ends. Up to 99 minutes 59 seconds.",
+              "de": "Zeigt einen Countdown (Sanduhr, Minuten und Sekunden) auf dem Display der TimeBox. Bei null zeigt sie einige Sekunden 00:00 und kehrt dann in ihren vorherigen Modus zurück. Er ersetzt einen laufenden Text; ein erneuter Start beginnt von vorn; eine ausgeschaltete TimeBox wird zuerst eingeschaltet. Ein Moduswechsel, ein Text oder das Ausschalten der TimeBox verdeckt den Countdown nur: Er läuft weiter und zeigt am Ende 00:00. Bis zu 99 Minuten 59 Sekunden."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "title": {
+                  "en": "Minutes",
+                  "de": "Minuten"
+                },
+                "min": 0,
+                "max": 99,
+                "step": 1,
+                "placeholder": {
+                  "en": "5",
+                  "de": "5"
+                }
+              },
+              {
+                "type": "number",
+                "name": "seconds",
+                "title": {
+                  "en": "Seconds",
+                  "de": "Sekunden"
+                },
+                "min": 0,
+                "max": 59,
+                "step": 1,
+                "placeholder": {
+                  "en": "0",
+                  "de": "0"
+                }
+              }
+            ]
+          },
+          {
+            "id": "timebox_stop_countdown",
+            "title": {
+              "en": "Stop countdown",
+              "de": "Countdown beenden"
+            },
+            "hint": {
+              "en": "Ends the countdown while it is on screen; the TimeBox shows its previous mode again. A countdown that a mode change, a text or turning the TimeBox off has hidden cannot be stopped and still shows its end. Does nothing while the TimeBox is turned off or a text is shown.",
+              "de": "Beendet den Countdown, solange er auf dem Display zu sehen ist; die TimeBox zeigt wieder ihren vorherigen Modus. Ein Countdown, den ein Moduswechsel, ein Text oder das Ausschalten der TimeBox verdeckt hat, lässt sich nicht beenden und zeigt trotzdem sein Ende. Tut nichts, solange die TimeBox ausgeschaltet ist oder ein Text läuft."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              }
+            ]
+          },
+          {
+            "id": "timebox_set_temperature",
+            "title": {
+              "en": "Set temperature",
+              "de": "Temperatur setzen"
+            },
+            "titleFormatted": {
+              "en": "Set temperature to [[temperature]] °C",
+              "de": "Temperatur auf [[temperature]] °C setzen"
+            },
+            "hint": {
+              "en": "Sets the temperature the TimeBox shows on the clock's temperature page. It is shown when \"Show temperature\" is on in the device settings. The temperature is rounded to whole degrees. It is sent once the TimeBox is on and connected, together with the last weather (clear if it was never set). Turn off \"Show weather\" if you do not set the weather. Automatic weather from Open-Meteo overwrites temperature and weather at each update.",
+              "de": "Legt die Temperatur fest, die die TimeBox auf der Temperaturseite der Uhr zeigt. Sie erscheint, wenn in den Geräteeinstellungen „Temperatur anzeigen“ aktiv ist. Die Temperatur wird auf ganze Grad gerundet. Sie wird gesendet, sobald die TimeBox eingeschaltet und verbunden ist, zusammen mit dem zuletzt gesetzten Wetter (klar, falls nie eines gesetzt wurde). Schalte „Wetter anzeigen“ aus, wenn du das Wetter nicht setzt. Das automatische Wetter von Open-Meteo überschreibt Temperatur und Wetter bei jeder Aktualisierung."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "number",
+                "name": "temperature",
+                "title": {
+                  "en": "Temperature (°C)",
+                  "de": "Temperatur (°C)"
+                },
+                "min": -99,
+                "max": 99,
+                "step": 1,
+                "placeholder": {
+                  "en": "21",
+                  "de": "21"
+                }
+              }
+            ]
+          },
+          {
+            "id": "timebox_set_weather",
+            "title": {
+              "en": "Set weather",
+              "de": "Wetter setzen"
+            },
+            "titleFormatted": {
+              "en": "Set weather to [[condition]]",
+              "de": "Wetter auf [[condition]] setzen"
+            },
+            "hint": {
+              "en": "Sets the weather condition the TimeBox shows on the clock's weather page. It is shown when \"Show weather\" is on in the device settings. It is sent once the TimeBox is on and connected, together with the last temperature (0 °C if it was never set). Turn off \"Show temperature\" if you do not set the temperature. Automatic weather from Open-Meteo overwrites temperature and weather at each update.",
+              "de": "Legt das Wetter fest, das die TimeBox auf der Wetterseite der Uhr zeigt. Es erscheint, wenn in den Geräteeinstellungen „Wetter anzeigen“ aktiv ist. Es wird gesendet, sobald die TimeBox eingeschaltet und verbunden ist, zusammen mit der zuletzt gesetzten Temperatur (0 °C, falls nie eine gesetzt wurde). Schalte „Temperatur anzeigen“ aus, wenn du die Temperatur nicht setzt. Das automatische Wetter von Open-Meteo überschreibt Temperatur und Wetter bei jeder Aktualisierung."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=timebox"
+              },
+              {
+                "type": "dropdown",
+                "name": "condition",
+                "title": {
+                  "en": "Weather",
+                  "de": "Wetter"
+                },
+                "values": [
+                  {
+                    "id": "clear",
+                    "label": {
+                      "en": "Clear",
+                      "de": "Klar"
+                    }
+                  },
+                  {
+                    "id": "cloudy",
+                    "label": {
+                      "en": "Cloudy",
+                      "de": "Bewölkt"
+                    }
+                  },
+                  {
+                    "id": "thunder",
+                    "label": {
+                      "en": "Thunderstorm",
+                      "de": "Gewitter"
+                    }
+                  },
+                  {
+                    "id": "rain",
+                    "label": {
+                      "en": "Rain",
+                      "de": "Regen"
+                    }
+                  },
+                  {
+                    "id": "snow",
+                    "label": {
+                      "en": "Snow",
+                      "de": "Schnee"
+                    }
+                  },
+                  {
+                    "id": "fog",
+                    "label": {
+                      "en": "Fog",
+                      "de": "Nebel"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-21T07:52:09.742Z",
+      "bugs": "https://github.com/habbo656/divoom-timebox-app/issues",
+      "homepage": null,
+      "support": "https://github.com/habbo656/divoom-timebox-app/issues",
+      "source": "https://github.com/habbo656/divoom-timebox-app",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:ble",
+        "homey:manager:geolocation"
+      ],
+      "changelog": {
+        "en": "Bugfix release. The app is now called \"Divoom TimeBox Evo\" and its icon is shown when you add a device. Changes the TimeBox does not confirm (mode, brightness, power off, custom page) now fail with a clear message instead of reporting success. A brightness change while the display is off is kept and applied at the next switch on. When a countdown end lights a display that was off, the tile switches on. Saving the clock settings while switching to the clock now takes effect, and the Bluetooth connection recovers more cleanly. Existing devices and Flows keep working; no re-pairing is needed.",
+        "de": "Fehlerbehebungen. Die App heißt jetzt „Divoom TimeBox Evo“, und ihr Symbol erscheint beim Hinzufügen eines Geräts. Änderungen, die die TimeBox nicht bestätigt (Modus, Helligkeit, Ausschalten, eigene Seite), schlagen jetzt mit einer verständlichen Meldung fehl, statt Erfolg zu melden. Eine Helligkeitsänderung bei ausgeschaltetem Display wird gemerkt und beim nächsten Einschalten übernommen. Wenn das Ende eines Countdowns ein ausgeschaltetes Display einschaltet, schaltet auch die Kachel ein. Uhr-Einstellungen, die während des Wechsels zur Uhr gespeichert werden, wirken jetzt, und die Bluetooth-Verbindung erholt sich sauberer. Bestehende Geräte und Flows funktionieren weiter; erneutes Koppeln ist nicht nötig."
+      },
+      "compatibility": ">=12.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.1.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ad22828bdc8421d78c8e6c2",
+      "type": "user",
+      "userId": "654aefe726f8b47175547adb",
+      "name": "Thomas Happich",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]

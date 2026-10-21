@@ -1,29 +1,5 @@
 [
   {
-    "appId": "net.weejewel.sshclient",
-    "name": "SSH Client",
-    "developerName": "Emile Nijssen",
-    "developerId": "5dcaba391c90c866f9364985",
-    "version": "1.0.0",
-    "sourceRepository": "",
-    "publishedAt": "2026-09-20T15:00:59.327Z",
-    "updatedAt": "2026-09-20T15:00:59.327Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-09-20T15:00:59.327Z"
-  },
-  {
-    "appId": "de.ozerov.fully",
-    "name": "Fully Kiosk Browser",
-    "developerName": "Emile Nijssen",
-    "developerId": "5dcaba391c90c866f9364985",
-    "version": "1.0.1",
-    "sourceRepository": "",
-    "publishedAt": "2026-09-20T15:01:00.031Z",
-    "updatedAt": "2026-09-20T15:01:00.031Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-09-20T15:00:59.327Z"
-  },
-  {
     "appId": "com.rapinology.nubes",
     "name": "Nubes",
     "developerName": "Henri Dominique Rapin",
@@ -1246,5 +1222,29 @@
     "updatedAt": "2026-10-19T17:52:50.394Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-19T17:52:48.145Z"
+  },
+  {
+    "appId": "com.techboys.anthbot",
+    "name": "Anthbot",
+    "developerName": "Gary Madeo",
+    "developerId": "6ad483c2bdc8421d78c98304",
+    "version": "0.4.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-21T08:41:55.669Z",
+    "updatedAt": "2026-10-21T08:41:55.669Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-21T08:41:55.668Z"
+  },
+  {
+    "appId": "com.habbo656.divoom-timebox",
+    "name": "Divoom TimeBox Evo",
+    "developerName": "Thomas Happich",
+    "developerId": "6ad22828bdc8421d78c8e6c2",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/habbo656/divoom-timebox-app",
+    "publishedAt": "2026-10-21T08:41:56.852Z",
+    "updatedAt": "2026-10-21T08:41:56.852Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-21T08:41:55.668Z"
   }
 ]
