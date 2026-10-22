@@ -19600,5 +19600,16 @@
     "publishedAt": "2026-10-21T16:13:48.030Z",
     "updatedAt": "2026-10-21T16:13:48.030Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.jumeirapps.athan",
+    "name": "UAE Athan",
+    "developerName": "Jumeirapps Portal",
+    "developerId": "6aba51db30dc90a8d6e5a04f",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-22T08:59:26.285Z",
+    "updatedAt": "2026-10-22T08:59:26.285Z",
+    "communityTopicId": null
   }
 ]
