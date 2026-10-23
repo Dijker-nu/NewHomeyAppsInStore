@@ -536,8 +536,8 @@
   {
     "developerId": "602b8774ea27a57b44ec0ddc",
     "developerName": "Bouke Regnerus",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 16112,
+    "forumUsername": "bouke"
   },
   {
     "developerId": "68a1fc579fb70e45b86d9053",
@@ -758,6 +758,18 @@
   {
     "developerId": "698af67c608b9fa107ccc198",
     "developerName": "co.kr cuchen",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ad9c54f5160e2083c86e192",
+    "developerName": "com.duepigroup.dpremote",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6ad9c5b39409e0225d75e3c4",
+    "developerName": "com.proxmox.proxmoxve",
     "forumUserID": null,
     "forumUsername": null
   },
@@ -2360,6 +2372,12 @@
   {
     "developerId": "69823f6795e1c45eb83b19c2",
     "developerName": "Julien Moysens",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6aba51db30dc90a8d6e5a04f",
+    "developerName": "Jumeirapps Portal",
     "forumUserID": null,
     "forumUsername": null
   },
@@ -4656,6 +4674,12 @@
     "forumUsername": "Kim_Kokholm"
   },
   {
+    "developerId": "6ad9cd995160e2083c88730c",
+    "developerName": "Springs Window Fashions LLC",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
     "developerId": "5dcaba401c90c866f9364a14",
     "developerName": "Sprut 1",
     "forumUserID": null,
@@ -5086,6 +5110,12 @@
     "developerName": "Tom Coonen",
     "forumUserID": null,
     "forumUsername": null
+  },
+  {
+    "developerId": "6ad781a0bdc8421d78ca9018",
+    "developerName": "Tom Severa",
+    "forumUserID": 16686,
+    "forumUsername": "Tomas_Severa"
   },
   {
     "developerId": "69dfa5e4fb6dd7068a794b9c",

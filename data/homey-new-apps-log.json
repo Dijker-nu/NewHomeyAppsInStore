@@ -1282,5 +1282,17 @@
     "updatedAt": "2026-10-22T16:12:11.825Z",
     "communityTopicId": 160962,
     "discoveredAt": "2026-10-22T16:12:11.825Z"
+  },
+  {
+    "appId": "be.cyrilhendriks.drivie",
+    "name": "Drivie - Companion",
+    "developerName": "Cyril Hendriks",
+    "developerId": "6996ebeccd19af4229e539d5",
+    "version": "1.6.26",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-23T08:39:47.523Z",
+    "updatedAt": "2026-10-23T08:39:47.523Z",
+    "communityTopicId": 161211,
+    "discoveredAt": "2026-10-23T08:39:47.522Z"
   }
 ]
