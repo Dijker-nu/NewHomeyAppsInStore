@@ -19677,5 +19677,71 @@
     "publishedAt": "2026-10-26T09:06:16.931Z",
     "updatedAt": "2026-10-26T09:06:16.931Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.yuji.commute",
+    "name": "Commute Time Kr",
+    "developerName": "Declan Rice",
+    "developerId": "69eb4cdc384eb48fac0e5b28",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-26T17:47:11.902Z",
+    "updatedAt": "2026-10-26T17:47:11.902Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.xelectrix.power",
+    "name": "Xelectrix Power",
+    "developerName": "Pontus Kristiansson",
+    "developerId": "6aaaab8d30dc90a8d6e131f4",
+    "version": "1.14.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-26T17:47:12.892Z",
+    "updatedAt": "2026-10-26T17:47:12.892Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "dev.masonlab.canadianweather",
+    "name": "Canadian Weather & Alerts",
+    "developerName": "Timothy Mason",
+    "developerId": "6ad7abbdbdc8421d78caa22f",
+    "version": "1.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-26T17:47:13.466Z",
+    "updatedAt": "2026-10-26T17:47:13.466Z",
+    "communityTopicId": 161118
+  },
+  {
+    "appId": "com.erikrichardson.trafik",
+    "name": "Live Traffic & Transit Sweden",
+    "developerName": "Erik Richardson",
+    "developerId": "6acd6a5ebdc8421d78c62825",
+    "version": "1.2.3",
+    "sourceRepository": "https://github.com/er1kr1984/homey-trafikkollen",
+    "publishedAt": "2026-10-26T17:47:13.466Z",
+    "updatedAt": "2026-10-26T17:47:13.466Z",
+    "communityTopicId": 160770
+  },
+  {
+    "appId": "nl.lrvdlinden.appstoreconnect",
+    "name": "App Store Connect",
+    "developerName": "Léon van der Linden",
+    "developerId": "649eefe59a54fe7531821578",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/LRvdLinden/nl.lrvdlinden.appstoreconnect",
+    "publishedAt": "2026-10-26T17:47:13.466Z",
+    "updatedAt": "2026-10-26T17:47:13.466Z",
+    "communityTopicId": 161248
+  },
+  {
+    "appId": "site.zeno.remko",
+    "name": "REMKO Smart-Control Touch",
+    "developerName": "Pieter Groot",
+    "developerId": "6adddc0e47d7399db6cd1852",
+    "version": "0.1.2",
+    "sourceRepository": "https://github.com/ZenoWebdev/homey-remko",
+    "publishedAt": "2026-10-26T17:47:13.466Z",
+    "updatedAt": "2026-10-26T17:47:13.466Z",
+    "communityTopicId": null
   }
 ]
