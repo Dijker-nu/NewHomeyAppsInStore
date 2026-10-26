@@ -2424,10 +2424,10 @@
     "name": "Yale Doorman",
     "developerName": "Espen Ljosland",
     "developerId": "5dcabb981c90c866f9365bf9",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:03:04.849Z",
-    "updatedAt": "2026-02-04T16:40:37.866Z",
+    "updatedAt": "2026-10-26T09:06:38.849Z",
     "communityTopicId": null
   },
   {
@@ -9585,10 +9585,10 @@
     "name": "Find My",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.9.8",
+    "version": "1.9.9",
     "sourceRepository": "https://github.com/martijnpoppen/com.apple.findmy",
     "publishedAt": "2024-08-16T14:07:36.540Z",
-    "updatedAt": "2026-10-23T08:40:17.686Z",
+    "updatedAt": "2026-10-26T09:06:38.850Z",
     "communityTopicId": 114491
   },
   {
@@ -11543,10 +11543,10 @@
     "name": "Renovasjon",
     "developerName": "Kjetil Volden",
     "developerId": "68b3e9902fee65054eaf86a5",
-    "version": "1.3.5",
+    "version": "1.4.0",
     "sourceRepository": "https://github.com/kvolden/no.renovasjon",
     "publishedAt": "2025-08-31T06:20:00.735Z",
-    "updatedAt": "2026-09-22T17:33:09.676Z",
+    "updatedAt": "2026-10-26T09:06:38.850Z",
     "communityTopicId": 142446
   },
   {
@@ -12533,10 +12533,10 @@
     "name": "Danfoss Ally",
     "developerName": "Joshua de Gier",
     "developerId": "6717e6c07cb24ac67541b220",
-    "version": "1.3.5",
+    "version": "1.3.6",
     "sourceRepository": "https://github.com/PendoNL/nl.pendo.danfoss-ally",
     "publishedAt": "2025-12-14T21:51:04.033Z",
-    "updatedAt": "2026-10-25T08:33:10.505Z",
+    "updatedAt": "2026-10-26T09:06:38.850Z",
     "communityTopicId": 146923
   },
   {
@@ -12544,10 +12544,10 @@
     "name": "Wasp in a Box",
     "developerName": "Andy van Dongen",
     "developerId": "693fd43f66abe4254753dd39",
-    "version": "2.1.0",
+    "version": "2.2.1",
     "sourceRepository": "https://community.homey.app/t/app-pro-wasp-in-a-box-virtual-presence-detection-based-on-sensor-triggers/147021",
     "publishedAt": "2025-12-15T10:36:15.185Z",
-    "updatedAt": "2026-04-04T08:19:19.223Z",
+    "updatedAt": "2026-10-26T09:06:38.850Z",
     "communityTopicId": 147021
   },
   {
@@ -13218,8 +13218,8 @@
     "version": "1.0.10",
     "sourceRepository": "https://github.com/shaarkys/com.haassohn.pellets",
     "publishedAt": "2026-02-01T01:05:54.629Z",
-    "updatedAt": "2026-02-18T18:50:36.319Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-26T09:06:38.850Z",
+    "communityTopicId": 150444
   },
   {
     "appId": "com.creality",
@@ -14392,10 +14392,10 @@
     "name": "Panasonic Comfort Cloud",
     "developerName": "Johnny Espesete",
     "developerId": "69be6930699c29709c9e5744",
-    "version": "2.1.32",
+    "version": "2.1.34",
     "sourceRepository": "",
     "publishedAt": "2026-03-21T09:54:35.939Z",
-    "updatedAt": "2026-10-05T10:37:47.106Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": null
   },
   {
@@ -14744,10 +14744,10 @@
     "name": "Huawei FusionSolar Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.4",
+    "version": "1.3.6",
     "sourceRepository": "https://github.com/andiwirz/com.huawei.fusionsolar",
     "publishedAt": "2026-04-02T22:16:46.194Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": 153353
   },
   {
@@ -15217,10 +15217,10 @@
     "name": "Android Automotive",
     "developerName": "Simone Di Maio",
     "developerId": "68ceb8fccbb72125ed109820",
-    "version": "1.5.3",
+    "version": "1.5.4",
     "sourceRepository": "https://github.com/s-dimaio/com.dimapp.aaos",
     "publishedAt": "2026-04-26T19:33:17.267Z",
-    "updatedAt": "2026-10-17T07:54:57.464Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": 155279
   },
   {
@@ -16845,10 +16845,10 @@
     "name": "DeWarmte",
     "developerName": "Dave Nelissen",
     "developerId": "6a5c92802ddac2379c77ac22",
-    "version": "1.2.6",
+    "version": "1.2.7",
     "sourceRepository": "https://github.com/daven68/nl.davenelissen.dewarmte",
     "publishedAt": "2026-07-19T09:01:52.539Z",
-    "updatedAt": "2026-10-01T10:16:38.722Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": null
   },
   {
@@ -16955,10 +16955,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.50",
+    "version": "1.9.51",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-07-24T11:45:21.817Z",
-    "updatedAt": "2026-10-25T08:33:10.506Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": 157537
   },
   {
@@ -17310,8 +17310,8 @@
     "version": "0.12.2",
     "sourceRepository": "https://github.com/WoutvanderAa/homey-jura-connect",
     "publishedAt": "2026-08-09T09:17:07.689Z",
-    "updatedAt": "2026-09-28T10:31:08.338Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-26T09:06:38.851Z",
+    "communityTopicId": 158080
   },
   {
     "appId": "com.nordlux",
@@ -17670,10 +17670,10 @@
     "name": "Adaptive Thermostat",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "sourceRepository": "https://github.com/byackee/homey-vtherm",
     "publishedAt": "2026-08-22T11:24:49.247Z",
-    "updatedAt": "2026-10-17T07:54:57.464Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": 158634
   },
   {
@@ -17813,10 +17813,10 @@
     "name": "Power Estimator",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/byackee/homey-powerest",
     "publishedAt": "2026-08-28T14:48:31.724Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": 158852
   },
   {
@@ -18091,8 +18091,8 @@
     "version": "0.9.12",
     "sourceRepository": "",
     "publishedAt": "2026-09-07T18:37:20.455Z",
-    "updatedAt": "2026-09-09T20:05:24.814Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-26T09:06:38.851Z",
+    "communityTopicId": 160783
   },
   {
     "appId": "com.szwest",
@@ -18737,10 +18737,10 @@
     "name": "Cozytouch",
     "developerName": "WebBuilds B.V.",
     "developerId": "6a8fe2d542c85dadfeb0ff2d",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "sourceRepository": "https://github.com/WebBuildsNL/cozytouch-homey",
     "publishedAt": "2026-09-30T17:07:55.508Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": null
   },
   {
@@ -19004,8 +19004,8 @@
     "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-06T01:00:56.357Z",
-    "updatedAt": "2026-10-17T07:54:57.465Z",
-    "communityTopicId": null
+    "updatedAt": "2026-10-26T09:06:38.851Z",
+    "communityTopicId": 161324
   },
   {
     "appId": "io.github.arrow87-home.datawatchdog",
@@ -19067,10 +19067,10 @@
     "name": "Swiss Dynamic Electricity Tariff",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.dynamictariffch",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-19T09:03:51.106Z",
+    "updatedAt": "2026-10-26T09:06:38.851Z",
     "communityTopicId": 160031
   },
   {
@@ -19408,10 +19408,10 @@
     "name": "MG iSMART",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-16T08:18:14.025Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-10-26T09:06:38.852Z",
     "communityTopicId": 160703
   },
   {
@@ -19655,5 +19655,27 @@
     "publishedAt": "2026-10-23T08:39:47.523Z",
     "updatedAt": "2026-10-23T08:39:47.523Z",
     "communityTopicId": 161211
+  },
+  {
+    "appId": "com.lucci.fan",
+    "name": "Lucci Air",
+    "developerName": "John Bothe",
+    "developerId": "5dcabc951c90c866f936675a",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/jbothe/homey-app-lucci-air",
+    "publishedAt": "2026-10-26T09:06:16.031Z",
+    "updatedAt": "2026-10-26T09:06:16.031Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "it.giuliomaffei.networkprint",
+    "name": "Network Print",
+    "developerName": "Giulio Maffei",
+    "developerId": "6ad82c5e47d7399db6c7e64a",
+    "version": "1.3.3",
+    "sourceRepository": "https://github.com/giuliomaffei90/homey-network-print",
+    "publishedAt": "2026-10-26T09:06:16.931Z",
+    "updatedAt": "2026-10-26T09:06:16.931Z",
+    "communityTopicId": null
   }
 ]

@@ -1632,6 +1632,12 @@
     "forumUsername": "Kaoh"
   },
   {
+    "developerId": "6ad82c5e47d7399db6c7e64a",
+    "developerName": "Giulio Maffei",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "68b5ccf82fee65054eafc64f",
     "developerName": "GL Technologies (Hong Kong) Limited",
     "forumUserID": null,
@@ -1742,8 +1748,8 @@
   {
     "developerId": "6a9f0460336db3df05ad7ccc",
     "developerName": "Harm Jonkers",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 5081,
+    "forumUsername": "HarmJ"
   },
   {
     "developerId": "5dcabbb81c90c866f9365de2",
@@ -5384,8 +5390,8 @@
   {
     "developerId": "6a784365ac45e8acfcb8708a",
     "developerName": "Wout Van der Aa",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 58625,
+    "forumUsername": "Wout_Van_der_Aa"
   },
   {
     "developerId": "666f3b42c783db54ae2276df",

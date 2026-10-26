@@ -1,1 +1,1747 @@
-[]
+[
+  {
+    "id": "com.lucci.fan",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "Lucci Air"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Controls Lucci Air ceiling fans and their lights from Homey by sending the same 433 MHz codes as the handset.\n\nWhen you add a fan, you press a button on your handset and Homey learns its address, so it only talks to your fan. Homey keeps listening afterwards, so changes made with the handset show up in Homey.\n\nTwo handsets are supported:\n- USB-C rechargeable: fan on/off, six speeds, direction and timer; light on/off and brightness.\n- CR2032: off, six speeds, reverse and a light toggle.\n\nAdd the fan, the light, or both on one tile.\n\nLimitations:\n- The fan and light send nothing back. Homey shows what it last sent or heard.\n- The light's on/off is a toggle. Homey asks whether the light is on when you add it, and a button corrects it if it gets out of step.\n- This app emulates the handset over 433 MHz. It does not work with Lucci Connect, the separate Wi-Fi add-on.\n\nNot made, endorsed or supported by Beacon Lighting or Lucci.\n",
+        "de": "Steuert Lucci Air-Deckenventilatoren und ihre Lampen von Homey aus, mit denselben 433-MHz-Codes wie der Handsender.\n\nBeim Hinzufügen eines Ventilators drücken Sie eine Taste am Handsender, und Homey lernt dessen Adresse, sodass es nur mit Ihrem Ventilator spricht. Homey hört danach weiter zu, daher erscheinen Änderungen per Handsender in Homey.\n\nZwei Handsender werden unterstützt:\n- USB-C, wiederaufladbar: Ventilator ein/aus, sechs Stufen, Drehrichtung und Timer; Lampe ein/aus und Helligkeit.\n- CR2032: Aus, sechs Stufen, Umkehren und ein Lichtschalter.\n\nFügen Sie den Ventilator, die Lampe oder beides auf einer Kachel hinzu.\n\nEinschränkungen:\n- Ventilator und Lampe senden nichts zurück. Homey zeigt, was es zuletzt gesendet oder gehört hat.\n- Ein/Aus der Lampe ist eine Umschalttaste. Homey fragt beim Hinzufügen, ob die Lampe an ist, und eine Taste korrigiert den Stand, wenn er nicht mehr stimmt.\n- Diese App ahmt den Handsender per 433 MHz nach. Sie funktioniert nicht mit Lucci Connect, dem separaten WLAN-Zusatz.\n\nNicht von Beacon Lighting oder Lucci hergestellt, empfohlen oder unterstützt.\n",
+        "fr": "Commande les ventilateurs de plafond Lucci Air et leurs lampes depuis Homey, avec les mêmes codes 433 MHz que la télécommande.\n\nQuand vous ajoutez un ventilateur, vous appuyez sur une touche de votre télécommande et Homey apprend son adresse, de sorte qu'il ne parle qu'à votre ventilateur. Homey continue d'écouter ensuite, donc les changements faits avec la télécommande apparaissent dans Homey.\n\nDeux télécommandes sont prises en charge :\n- USB-C, rechargeable : ventilateur marche/arrêt, six vitesses, sens de rotation et minuterie ; lampe marche/arrêt et luminosité.\n- CR2032 : arrêt, six vitesses, inversion et un interrupteur de lampe.\n\nAjoutez le ventilateur, la lampe, ou les deux sur une seule tuile.\n\nLimites :\n- Le ventilateur et la lampe ne renvoient rien. Homey affiche ce qu'il a envoyé ou entendu en dernier.\n- Le marche/arrêt de la lampe est une touche à bascule. Homey demande à l'ajout si la lampe est allumée, et un bouton corrige l'état s'il dérive.\n- Cette app imite la télécommande en 433 MHz. Elle ne fonctionne pas avec Lucci Connect, le module Wi-Fi vendu séparément.\n\nNon fabriquée, approuvée ni prise en charge par Beacon Lighting ou Lucci.\n",
+        "nl": "Bedient Lucci Air-plafondventilatoren en hun lampen vanuit Homey, met dezelfde 433 MHz-codes als de handzender.\n\nBij het toevoegen van een ventilator druk je op een knop van je handzender en leert Homey het adres, zodat Homey alleen met jouw ventilator praat. Homey blijft daarna luisteren, dus wijzigingen via de handzender verschijnen in Homey.\n\nTwee handzenders worden ondersteund:\n- USB-C, oplaadbaar: ventilator aan/uit, zes standen, draairichting en timer; lamp aan/uit en helderheid.\n- CR2032: uit, zes standen, omkeren en een lampschakelaar.\n\nVoeg de ventilator, de lamp of allebei op één tegel toe.\n\nBeperkingen:\n- De ventilator en de lamp sturen niets terug. Homey toont wat het het laatst heeft verstuurd of gehoord.\n- Aan/uit van de lamp is een wisselschakelaar. Homey vraagt bij het toevoegen of de lamp aan is, en een knop zet het recht als het niet meer klopt.\n- Deze app bootst de handzender na via 433 MHz. Hij werkt niet met Lucci Connect, de losse wifi-uitbreiding.\n\nNiet gemaakt, goedgekeurd of ondersteund door Beacon Lighting of Lucci.\n"
+      },
+      "description": {
+        "en": "Ceiling fans that answer to Homey as well as the handset.",
+        "nl": "Plafondventilatoren die naar Homey luisteren, net als naar de handzender.",
+        "de": "Deckenventilatoren, die auf Homey ebenso hören wie auf die Handsteuerung.",
+        "fr": "Ventilateurs de plafond qui obéissent à Homey comme à la télécommande."
+      },
+      "category": "climate",
+      "brandColor": "#231F20",
+      "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "fan",
+          "name": {
+            "en": "Ceiling fan",
+            "nl": "Plafondventilator",
+            "de": "Deckenventilator",
+            "fr": "Ventilateur de plafond"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "lucci_speed",
+            "lucci_direction",
+            "lucci_timer"
+          ],
+          "capabilitiesOptions": {
+            "lucci_speed": {
+              "preventInsights": true
+            },
+            "lucci_direction": {
+              "preventInsights": true
+            },
+            "lucci_timer": {
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan/assets/icon.svg"
+        },
+        {
+          "id": "fan-cr2032",
+          "name": {
+            "en": "Ceiling fan (legacy)",
+            "nl": "Plafondventilator (legacy)",
+            "de": "Deckenventilator (legacy)",
+            "fr": "Ventilateur de plafond (legacy)"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "lucci_speed",
+            "lucci_reverse"
+          ],
+          "capabilitiesOptions": {
+            "lucci_speed": {
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-cr2032/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-cr2032/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-cr2032/assets/icon.svg"
+        },
+        {
+          "id": "fan-light",
+          "name": {
+            "en": "Ceiling fan + light",
+            "nl": "Plafondventilator + lamp",
+            "de": "Deckenventilator + Lampe",
+            "fr": "Ventilateur de plafond + lampe"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "lucci_speed",
+            "lucci_direction",
+            "lucci_timer",
+            "lucci_toggle",
+            "lucci_brighter",
+            "lucci_dimmer"
+          ],
+          "capabilitiesOptions": {
+            "lucci_speed": {
+              "preventInsights": true
+            },
+            "lucci_direction": {
+              "preventInsights": true
+            },
+            "lucci_timer": {
+              "preventInsights": true
+            },
+            "lucci_toggle": {
+              "title": {
+                "en": "Toggle light",
+                "nl": "Lamp omschakelen",
+                "de": "Licht umschalten",
+                "fr": "Basculer la lumière"
+              }
+            },
+            "lucci_brighter": {
+              "title": {
+                "en": "Light brighter",
+                "nl": "Lamp helderder",
+                "de": "Licht heller",
+                "fr": "Lumière plus claire"
+              }
+            },
+            "lucci_dimmer": {
+              "title": {
+                "en": "Light dimmer",
+                "nl": "Lamp zachter",
+                "de": "Licht dunkler",
+                "fr": "Lumière plus sombre"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-light/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-light/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-light/assets/icon.svg"
+        },
+        {
+          "id": "fan-light-cr2032",
+          "name": {
+            "en": "Ceiling fan + light (legacy)",
+            "nl": "Plafondventilator + lamp (legacy)",
+            "de": "Deckenventilator + Lampe (legacy)",
+            "fr": "Ventilateur de plafond + lampe (legacy)"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "lucci_speed",
+            "lucci_reverse",
+            "lucci_toggle"
+          ],
+          "capabilitiesOptions": {
+            "lucci_speed": {
+              "preventInsights": true
+            },
+            "lucci_toggle": {
+              "title": {
+                "en": "Toggle light",
+                "nl": "Lamp omschakelen",
+                "de": "Licht umschalten",
+                "fr": "Basculer la lumière"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-light-cr2032/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-light-cr2032/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/fan-light-cr2032/assets/icon.svg"
+        },
+        {
+          "id": "light",
+          "name": {
+            "en": "Fan light",
+            "nl": "Ventilatorlamp",
+            "de": "Ventilatorlampe",
+            "fr": "Lampe de ventilateur"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "lucci_brighter",
+            "lucci_dimmer",
+            "lucci_toggle",
+            "lucci_resync"
+          ],
+          "capabilitiesOptions": {
+            "dim": {
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/light/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/light/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/light/assets/icon.svg"
+        },
+        {
+          "id": "light-cr2032",
+          "name": {
+            "en": "Fan light (legacy)",
+            "nl": "Ventilatorlamp (legacy)",
+            "de": "Ventilatorlampe (legacy)",
+            "fr": "Lampe de ventilateur (legacy)"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "lucci_toggle",
+            "lucci_resync"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/light-cr2032/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/light-cr2032/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "rf433"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.lucci.fan/1/57d5dbd3-d187-49e6-89fe-bf9ed046e719/drivers/light-cr2032/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "fan_direction_changed",
+            "title": {
+              "en": "The fan direction changed to",
+              "nl": "De draairichting is veranderd naar",
+              "de": "Die Drehrichtung hat sich geändert auf",
+              "fr": "Le sens de rotation est passé à"
+            },
+            "titleFormatted": {
+              "en": "The fan direction changed to [[direction]]",
+              "nl": "De draairichting is veranderd naar [[direction]]",
+              "de": "Die Drehrichtung hat sich auf [[direction]] geändert",
+              "fr": "Le sens de rotation est passé à [[direction]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light"
+              },
+              {
+                "type": "dropdown",
+                "name": "direction",
+                "title": {
+                  "en": "Direction",
+                  "nl": "Draairichting",
+                  "de": "Drehrichtung",
+                  "fr": "Sens"
+                },
+                "values": [
+                  {
+                    "id": "forward",
+                    "label": {
+                      "en": "Forward",
+                      "nl": "Vooruit",
+                      "de": "Vorwärts",
+                      "fr": "Avant"
+                    }
+                  },
+                  {
+                    "id": "reverse",
+                    "label": {
+                      "en": "Reverse",
+                      "nl": "Achteruit",
+                      "de": "Rückwärts",
+                      "fr": "Arrière"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_speed_changed",
+            "title": {
+              "en": "The fan speed changed to",
+              "nl": "De ventilatorsnelheid is veranderd naar",
+              "de": "Die Lüftergeschwindigkeit hat sich geändert auf",
+              "fr": "La vitesse du ventilateur est passée à"
+            },
+            "titleFormatted": {
+              "en": "The fan speed changed to [[speed]]",
+              "nl": "De ventilatorsnelheid is veranderd naar [[speed]]",
+              "de": "Die Lüftergeschwindigkeit hat sich auf [[speed]] geändert",
+              "fr": "La vitesse du ventilateur est passée à [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light|fan-cr2032|fan-light-cr2032"
+              },
+              {
+                "type": "dropdown",
+                "name": "speed",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid",
+                  "de": "Geschwindigkeit",
+                  "fr": "Vitesse"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Lowest",
+                      "nl": "Laagst",
+                      "de": "Niedrigste",
+                      "fr": "Minimale"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium-low",
+                      "nl": "Middellaag",
+                      "de": "Mittelniedrig",
+                      "fr": "Moyen-faible"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Medium-high",
+                      "nl": "Middelhoog",
+                      "de": "Mittelhoch",
+                      "fr": "Moyen-élevé"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Highest",
+                      "nl": "Hoogst",
+                      "de": "Höchste",
+                      "fr": "Maximale"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_timer_changed",
+            "title": {
+              "en": "The fan timer changed to",
+              "nl": "De timer is veranderd naar",
+              "de": "Der Timer hat sich geändert auf",
+              "fr": "La minuterie est passée à"
+            },
+            "titleFormatted": {
+              "en": "The fan timer changed to [[timer]]",
+              "nl": "De timer is veranderd naar [[timer]]",
+              "de": "Der Timer hat sich auf [[timer]] geändert",
+              "fr": "La minuterie est passée à [[timer]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light"
+              },
+              {
+                "type": "dropdown",
+                "name": "timer",
+                "title": {
+                  "en": "Timer",
+                  "nl": "Timer",
+                  "de": "Timer",
+                  "fr": "Minuterie"
+                },
+                "values": [
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "nl": "Uit",
+                      "de": "Aus",
+                      "fr": "Désactivé"
+                    }
+                  },
+                  {
+                    "id": "2h",
+                    "label": {
+                      "en": "2 hours",
+                      "nl": "2 uur",
+                      "de": "2 Stunden",
+                      "fr": "2 heures"
+                    }
+                  },
+                  {
+                    "id": "4h",
+                    "label": {
+                      "en": "4 hours",
+                      "nl": "4 uur",
+                      "de": "4 Stunden",
+                      "fr": "4 heures"
+                    }
+                  },
+                  {
+                    "id": "8h",
+                    "label": {
+                      "en": "8 hours",
+                      "nl": "8 uur",
+                      "de": "8 Stunden",
+                      "fr": "8 heures"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "fan_direction_is",
+            "title": {
+              "en": "The fan direction is",
+              "nl": "De draairichting is",
+              "de": "Die Drehrichtung ist",
+              "fr": "Le sens de rotation est"
+            },
+            "titleFormatted": {
+              "en": "The fan direction !{{is|is not}} [[direction]]",
+              "nl": "De draairichting !{{is|is niet}} [[direction]]",
+              "de": "Die Drehrichtung !{{ist|ist nicht}} [[direction]]",
+              "fr": "Le sens de rotation !{{est|n'est pas}} [[direction]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light"
+              },
+              {
+                "type": "dropdown",
+                "name": "direction",
+                "title": {
+                  "en": "Direction",
+                  "nl": "Draairichting",
+                  "de": "Drehrichtung",
+                  "fr": "Sens"
+                },
+                "values": [
+                  {
+                    "id": "forward",
+                    "label": {
+                      "en": "Forward",
+                      "nl": "Vooruit",
+                      "de": "Vorwärts",
+                      "fr": "Avant"
+                    }
+                  },
+                  {
+                    "id": "reverse",
+                    "label": {
+                      "en": "Reverse",
+                      "nl": "Achteruit",
+                      "de": "Rückwärts",
+                      "fr": "Arrière"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_speed_is",
+            "title": {
+              "en": "The fan speed is",
+              "nl": "De ventilatorsnelheid is",
+              "de": "Die Lüftergeschwindigkeit ist",
+              "fr": "La vitesse du ventilateur est"
+            },
+            "titleFormatted": {
+              "en": "The fan speed !{{is|is not}} [[speed]]",
+              "nl": "De ventilatorsnelheid !{{is|is niet}} [[speed]]",
+              "de": "Die Lüftergeschwindigkeit !{{ist|ist nicht}} [[speed]]",
+              "fr": "La vitesse du ventilateur !{{est|n'est pas}} [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light|fan-cr2032|fan-light-cr2032"
+              },
+              {
+                "type": "dropdown",
+                "name": "speed",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid",
+                  "de": "Geschwindigkeit",
+                  "fr": "Vitesse"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Lowest",
+                      "nl": "Laagst",
+                      "de": "Niedrigste",
+                      "fr": "Minimale"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium-low",
+                      "nl": "Middellaag",
+                      "de": "Mittelniedrig",
+                      "fr": "Moyen-faible"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Medium-high",
+                      "nl": "Middelhoog",
+                      "de": "Mittelhoch",
+                      "fr": "Moyen-élevé"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Highest",
+                      "nl": "Hoogst",
+                      "de": "Höchste",
+                      "fr": "Maximale"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_timer_is",
+            "title": {
+              "en": "The fan timer is",
+              "nl": "De timer is",
+              "de": "Der Timer ist",
+              "fr": "La minuterie est"
+            },
+            "titleFormatted": {
+              "en": "The fan timer !{{is|is not}} [[timer]]",
+              "nl": "De timer !{{is|is niet}} [[timer]]",
+              "de": "Der Timer !{{ist|ist nicht}} [[timer]]",
+              "fr": "La minuterie !{{est|n'est pas}} [[timer]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light"
+              },
+              {
+                "type": "dropdown",
+                "name": "timer",
+                "title": {
+                  "en": "Timer",
+                  "nl": "Timer",
+                  "de": "Timer",
+                  "fr": "Minuterie"
+                },
+                "values": [
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "nl": "Uit",
+                      "de": "Aus",
+                      "fr": "Désactivé"
+                    }
+                  },
+                  {
+                    "id": "2h",
+                    "label": {
+                      "en": "2 hours",
+                      "nl": "2 uur",
+                      "de": "2 Stunden",
+                      "fr": "2 heures"
+                    }
+                  },
+                  {
+                    "id": "4h",
+                    "label": {
+                      "en": "4 hours",
+                      "nl": "4 uur",
+                      "de": "4 Stunden",
+                      "fr": "4 heures"
+                    }
+                  },
+                  {
+                    "id": "8h",
+                    "label": {
+                      "en": "8 hours",
+                      "nl": "8 uur",
+                      "de": "8 Stunden",
+                      "fr": "8 heures"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "change_fan_direction",
+            "title": {
+              "en": "Change the fan direction",
+              "nl": "Wijzig de draairichting",
+              "de": "Drehrichtung ändern",
+              "fr": "Changer le sens de rotation"
+            },
+            "hint": {
+              "en": "Sends the remote's reverse button, which flips the direction once. The remote does not say which way the fan turns, so Homey cannot show it.",
+              "nl": "Stuurt de omkeerknop van de afstandsbediening, die de draairichting één keer omdraait. De afstandsbediening meldt niet welke kant de ventilator draait, dus Homey kan dat niet tonen.",
+              "de": "Sendet die Umkehrtaste der Fernbedienung, die die Drehrichtung einmal umkehrt. Die Fernbedienung meldet nicht, in welche Richtung sich der Ventilator dreht, daher kann Homey sie nicht anzeigen.",
+              "fr": "Envoie la touche d'inversion de la télécommande, qui inverse le sens une fois. La télécommande n'indique pas le sens de rotation, Homey ne peut donc pas l'afficher."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan-cr2032|fan-light-cr2032"
+              }
+            ]
+          },
+          {
+            "id": "light_brighter",
+            "title": {
+              "en": "Make the light brighter",
+              "nl": "Maak de lamp helderder",
+              "de": "Licht heller machen",
+              "fr": "Augmenter la luminosité"
+            },
+            "hint": {
+              "en": "One step brighter. Ignored while the light is off.",
+              "nl": "Eén stap helderder. Genegeerd als de lamp uit is.",
+              "de": "Eine Stufe heller. Wird ignoriert, solange die Lampe aus ist.",
+              "fr": "Un cran plus lumineux. Ignoré tant que la lampe est éteinte."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=light|fan-light"
+              }
+            ]
+          },
+          {
+            "id": "light_dimmer",
+            "title": {
+              "en": "Make the light dimmer",
+              "nl": "Maak de lamp zwakker",
+              "de": "Licht dunkler machen",
+              "fr": "Diminuer la luminosité"
+            },
+            "hint": {
+              "en": "One step dimmer. Ignored while the light is off.",
+              "nl": "Eén stap zwakker. Genegeerd als de lamp uit is.",
+              "de": "Eine Stufe dunkler. Wird ignoriert, solange die Lampe aus ist.",
+              "fr": "Un cran moins lumineux. Ignoré tant que la lampe est éteinte."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=light|fan-light"
+              }
+            ]
+          },
+          {
+            "id": "set_fan_direction",
+            "title": {
+              "en": "Set the fan direction",
+              "nl": "Stel de draairichting in",
+              "de": "Drehrichtung einstellen",
+              "fr": "Régler le sens de rotation"
+            },
+            "titleFormatted": {
+              "en": "Set the fan direction to [[direction]]",
+              "nl": "Stel de draairichting in op [[direction]]",
+              "de": "Drehrichtung auf [[direction]] einstellen",
+              "fr": "Régler le sens de rotation sur [[direction]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light"
+              },
+              {
+                "type": "dropdown",
+                "name": "direction",
+                "title": {
+                  "en": "Direction",
+                  "nl": "Draairichting",
+                  "de": "Drehrichtung",
+                  "fr": "Sens"
+                },
+                "values": [
+                  {
+                    "id": "forward",
+                    "label": {
+                      "en": "Forward",
+                      "nl": "Vooruit",
+                      "de": "Vorwärts",
+                      "fr": "Avant"
+                    }
+                  },
+                  {
+                    "id": "reverse",
+                    "label": {
+                      "en": "Reverse",
+                      "nl": "Achteruit",
+                      "de": "Rückwärts",
+                      "fr": "Arrière"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_fan_speed",
+            "title": {
+              "en": "Set the fan speed",
+              "nl": "Stel de ventilatorsnelheid in",
+              "de": "Lüftergeschwindigkeit einstellen",
+              "fr": "Régler la vitesse du ventilateur"
+            },
+            "titleFormatted": {
+              "en": "Set the fan speed to [[speed]]",
+              "nl": "Stel de ventilatorsnelheid in op [[speed]]",
+              "de": "Lüftergeschwindigkeit auf [[speed]] einstellen",
+              "fr": "Régler la vitesse du ventilateur sur [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light|fan-cr2032|fan-light-cr2032"
+              },
+              {
+                "type": "dropdown",
+                "name": "speed",
+                "title": {
+                  "en": "Speed",
+                  "nl": "Snelheid",
+                  "de": "Geschwindigkeit",
+                  "fr": "Vitesse"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Lowest",
+                      "nl": "Laagst",
+                      "de": "Niedrigste",
+                      "fr": "Minimale"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Low",
+                      "nl": "Laag",
+                      "de": "Niedrig",
+                      "fr": "Faible"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "Medium-low",
+                      "nl": "Middellaag",
+                      "de": "Mittelniedrig",
+                      "fr": "Moyen-faible"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "Medium-high",
+                      "nl": "Middelhoog",
+                      "de": "Mittelhoch",
+                      "fr": "Moyen-élevé"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "High",
+                      "nl": "Hoog",
+                      "de": "Hoch",
+                      "fr": "Élevé"
+                    }
+                  },
+                  {
+                    "id": "5",
+                    "label": {
+                      "en": "Highest",
+                      "nl": "Hoogst",
+                      "de": "Höchste",
+                      "fr": "Maximale"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_fan_timer",
+            "title": {
+              "en": "Set the fan timer",
+              "nl": "Stel de timer in",
+              "de": "Timer einstellen",
+              "fr": "Régler la minuterie"
+            },
+            "titleFormatted": {
+              "en": "Set the fan timer to [[timer]]",
+              "nl": "Stel de timer in op [[timer]]",
+              "de": "Timer auf [[timer]] einstellen",
+              "fr": "Régler la minuterie sur [[timer]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=fan|fan-light"
+              },
+              {
+                "type": "dropdown",
+                "name": "timer",
+                "title": {
+                  "en": "Timer",
+                  "nl": "Timer",
+                  "de": "Timer",
+                  "fr": "Minuterie"
+                },
+                "values": [
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "nl": "Uit",
+                      "de": "Aus",
+                      "fr": "Désactivé"
+                    }
+                  },
+                  {
+                    "id": "2h",
+                    "label": {
+                      "en": "2 hours",
+                      "nl": "2 uur",
+                      "de": "2 Stunden",
+                      "fr": "2 heures"
+                    }
+                  },
+                  {
+                    "id": "4h",
+                    "label": {
+                      "en": "4 hours",
+                      "nl": "4 uur",
+                      "de": "4 Stunden",
+                      "fr": "4 heures"
+                    }
+                  },
+                  {
+                    "id": "8h",
+                    "label": {
+                      "en": "8 hours",
+                      "nl": "8 uur",
+                      "de": "8 Stunden",
+                      "fr": "8 heures"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "toggle_light",
+            "title": {
+              "en": "Toggle the light",
+              "nl": "Schakel de lamp om",
+              "de": "Licht umschalten",
+              "fr": "Basculer la lampe"
+            },
+            "hint": {
+              "en": "Sends the handset's light button, once. It turns the light on or off depending on what it was doing, which the light does not report.",
+              "nl": "Stuurt de lampknop van de handzender, één keer. Dit zet de lamp aan of uit, afhankelijk van wat hij deed; de lamp meldt dat niet terug.",
+              "de": "Sendet die Lichttaste des Handsenders, einmal. Das schaltet die Lampe ein oder aus, je nachdem, was sie gerade tat; die Lampe meldet das nicht zurück.",
+              "fr": "Envoie la touche lampe de la télécommande, une fois. Elle allume ou éteint la lampe selon son état, que la lampe ne signale pas."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=light|light-cr2032|fan-light|fan-light-cr2032"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-26T08:45:42.644Z",
+      "bugs": "https://github.com/jbothe/homey-app-lucci-air/issues",
+      "homepage": null,
+      "support": "https://github.com/jbothe/homey-app-lucci-air/issues",
+      "source": "https://github.com/jbothe/homey-app-lucci-air",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:433"
+      ],
+      "changelog": {
+        "en": "First release. Fan on/off, six speeds, direction and timer for the USB-C handset, and off, six speeds and reverse for the CR2032 handset. Add the fan, the light, or both on one tile. Pairing learns your own handset, so the app only drives your fan, and Homey follows the handset when you use it by hand. Flow cards for speed, direction, timer and the light's buttons.",
+        "nl": "Eerste versie. Ventilator aan/uit, zes standen, draairichting en timer voor de USB-C-handzender, en uit, zes standen en omkeren voor de CR2032-handzender. Voeg de ventilator, de lamp of allebei op één tegel toe. Bij het koppelen leert Homey je eigen handzender, zodat de app alleen jouw ventilator aanstuurt, en Homey volgt de handzender als je die met de hand gebruikt. Flowkaarten voor snelheid, draairichting, timer en de lampknoppen.",
+        "de": "Erste Version. Ventilator ein/aus, sechs Stufen, Drehrichtung und Timer für den USB-C-Handsender sowie Aus, sechs Stufen und Umkehren für den CR2032-Handsender. Füge den Ventilator, die Lampe oder beides auf einer Kachel hinzu. Beim Koppeln lernt Homey deinen eigenen Handsender, sodass die App nur deinen Ventilator steuert, und Homey folgt dem Handsender bei manueller Bedienung. Flow-Karten für Geschwindigkeit, Drehrichtung, Timer und die Lichttasten.",
+        "fr": "Première version. Ventilateur marche/arrêt, six vitesses, sens de rotation et minuterie pour la télécommande USB-C, et arrêt, six vitesses et inversion pour la télécommande CR2032. Ajoutez le ventilateur, la lampe, ou les deux sur une seule tuile. L'appairage apprend votre propre télécommande, afin que l'application ne pilote que votre ventilateur, et Homey suit la télécommande lorsque vous l'utilisez à la main. Cartes de flux pour la vitesse, le sens de rotation, la minuterie et les touches de la lampe."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "lucci",
+          "lucci air",
+          "fan",
+          "ceiling fan",
+          "fan light",
+          "remote",
+          "handset",
+          "433"
+        ],
+        "nl": [
+          "lucci",
+          "lucci air",
+          "ventilator",
+          "plafondventilator",
+          "ventilatorlamp",
+          "afstandsbediening",
+          "handzender",
+          "433"
+        ],
+        "de": [
+          "lucci",
+          "lucci air",
+          "ventilator",
+          "deckenventilator",
+          "ventilatorlampe",
+          "fernbedienung",
+          "handsender",
+          "433"
+        ],
+        "fr": [
+          "lucci",
+          "lucci air",
+          "ventilateur",
+          "ventilateur de plafond",
+          "lampe de ventilateur",
+          "télécommande",
+          "433"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcabc951c90c866f936675a",
+      "type": "user",
+      "userId": "5b8dde7109506f0d451367a8",
+      "name": "John Bothe",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "it.giuliomaffei.networkprint",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Network Print",
+        "nl": "Network Print",
+        "de": "Network Print",
+        "fr": "Network Print",
+        "it": "Network Print",
+        "sv": "Network Print",
+        "no": "Network Print",
+        "es": "Network Print",
+        "da": "Network Print",
+        "ru": "Network Print",
+        "pl": "Network Print",
+        "ko": "Network Print",
+        "ar": "Network Print"
+      },
+      "version": "1.3.3",
+      "readme": {
+        "en": "Print text and JPEG/PNG images directly from Homey Pro to IPP network printers that accept JPEG.\nDiscover printers or enter an address manually. Print from the app settings or from Flows, including image tags.\n",
+        "it": "Stampa testo e immagini JPEG/PNG direttamente da Homey Pro sulle stampanti di rete IPP compatibili con JPEG.\nRileva la stampante oppure inserisci manualmente l’indirizzo. Stampa dalle impostazioni dell’app o tramite Flow, anche usando tag immagine.\n"
+      },
+      "description": {
+        "en": "Print text and images directly to your network printer",
+        "nl": "Print tekst en afbeeldingen rechtstreeks naar je netwerkprinter",
+        "de": "Drucke Text und Bilder direkt auf deinem Netzwerkdrucker",
+        "fr": "Imprimez du texte et des images directement sur votre imprimante réseau",
+        "it": "Stampa testo e immagini direttamente sulla stampante di rete",
+        "sv": "Skriv ut text och bilder direkt på din nätverksskrivare",
+        "no": "Skriv ut tekst og bilder direkte til nettverksskriveren din",
+        "es": "Imprime texto e imágenes directamente en tu impresora de red",
+        "da": "Udskriv tekst og billeder direkte på din netværksprinter",
+        "ru": "Печать текста и изображений прямо на сетевой принтер",
+        "pl": "Drukuj tekst i obrazy bezpośrednio na drukarce sieciowej",
+        "ko": "내 네트워크 프린터로 텍스트와 이미지를 바로 인쇄하세요",
+        "ar": "اطبع النصوص والصور مباشرة على طابعة الشبكة الخاصة بك"
+      },
+      "category": "appliances",
+      "brandColor": "#2563EB",
+      "icon": "https://apps.homeycdn.net/app/it.giuliomaffei.networkprint/4/509fd7a0-bb71-4fec-a93e-0541971f3fd5/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/it.giuliomaffei.networkprint/4/509fd7a0-bb71-4fec-a93e-0541971f3fd5/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/it.giuliomaffei.networkprint/4/509fd7a0-bb71-4fec-a93e-0541971f3fd5/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "printer",
+          "name": {
+            "en": "Network printer",
+            "nl": "Netwerkprinter",
+            "de": "Netzwerkdrucker",
+            "fr": "Imprimante réseau",
+            "it": "Stampante di rete",
+            "sv": "Nätverksskrivare",
+            "no": "Nettverksskriver",
+            "es": "Impresora de red",
+            "da": "Netværksprinter",
+            "ru": "Сетевой принтер",
+            "pl": "Drukarka sieciowa",
+            "ko": "네트워크 프린터",
+            "ar": "طابعة شبكة"
+          },
+          "class": "other",
+          "capabilities": [
+            "printer_status"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/it.giuliomaffei.networkprint/4/509fd7a0-bb71-4fec-a93e-0541971f3fd5/drivers/printer/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/it.giuliomaffei.networkprint/4/509fd7a0-bb71-4fec-a93e-0541971f3fd5/drivers/printer/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/it.giuliomaffei.networkprint/4/509fd7a0-bb71-4fec-a93e-0541971f3fd5/drivers/printer/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "ink_low",
+            "title": {
+              "en": "An ink is running low",
+              "it": "Un inchiostro sta per finire",
+              "nl": "Een inkt raakt op",
+              "de": "Eine Tinte geht zur Neige",
+              "fr": "Une encre est presque vide",
+              "sv": "Ett bläck håller på att ta slut",
+              "no": "Et blekk er i ferd med å gå tom",
+              "es": "Una tinta se está agotando",
+              "da": "Et blæk er ved at løbe tør",
+              "ru": "Чернила заканчиваются",
+              "pl": "Kończy się atrament",
+              "ko": "잉크가 부족해요",
+              "ar": "الحبر على وشك النفاد"
+            },
+            "hint": {
+              "en": "Runs once per ink when it drops to the low level reported by the printer (usually 15%).",
+              "it": "Si attiva una volta per inchiostro quando scende alla soglia segnalata dalla stampante (di solito 15%).",
+              "nl": "Wordt één keer per inkt uitgevoerd wanneer die het lage niveau van de printer bereikt (meestal 15%).",
+              "de": "Wird pro Tinte einmal ausgelöst, wenn sie den vom Drucker gemeldeten niedrigen Füllstand erreicht (meist 15%).",
+              "fr": "Se déclenche une fois par encre lorsqu’elle atteint le niveau bas signalé par l’imprimante (généralement 15%).",
+              "sv": "Körs en gång per bläck när det når den låga nivå som skrivaren rapporterar (oftast 15%).",
+              "no": "Kjøres én gang per blekk når det når det lave nivået skriveren rapporterer (vanligvis 15%).",
+              "es": "Se ejecuta una vez por tinta cuando baja al nivel bajo que indica la impresora (normalmente 15%).",
+              "da": "Kører én gang pr. blæk, når det når det lave niveau, som printeren rapporterer (normalt 15%).",
+              "ru": "Срабатывает один раз для каждого цвета, когда уровень падает до низкого порога принтера (обычно 15%).",
+              "pl": "Uruchamia się raz dla każdego atramentu, gdy spadnie do niskiego poziomu zgłaszanego przez drukarkę (zwykle 15%).",
+              "ko": "잉크마다 프린터가 알려주는 부족 수준(보통 15%)에 도달하면 한 번 실행돼요.",
+              "ar": "يعمل مرة واحدة لكل حبر عندما يصل إلى المستوى المنخفض الذي تُبلغ عنه الطابعة (عادةً 15%)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ink",
+                "type": "string",
+                "title": {
+                  "en": "Ink",
+                  "it": "Inchiostro",
+                  "nl": "Inkt",
+                  "de": "Tinte",
+                  "fr": "Encre",
+                  "sv": "Bläck",
+                  "no": "Blekk",
+                  "es": "Tinta",
+                  "da": "Blæk",
+                  "ru": "Чернила",
+                  "pl": "Atrament",
+                  "ko": "잉크",
+                  "ar": "الحبر"
+                },
+                "example": {
+                  "en": "Cyan",
+                  "it": "Ciano",
+                  "nl": "Cyaan",
+                  "de": "Cyan",
+                  "fr": "Cyan",
+                  "sv": "Cyan",
+                  "no": "Cyan",
+                  "es": "Cian",
+                  "da": "Cyan",
+                  "ru": "Голубой",
+                  "pl": "Cyjan",
+                  "ko": "시안",
+                  "ar": "سماوي"
+                }
+              },
+              {
+                "name": "level",
+                "type": "number",
+                "title": {
+                  "en": "Level (%)",
+                  "it": "Livello (%)",
+                  "nl": "Niveau (%)",
+                  "de": "Füllstand (%)",
+                  "fr": "Niveau (%)",
+                  "sv": "Nivå (%)",
+                  "no": "Nivå (%)",
+                  "es": "Nivel (%)",
+                  "da": "Niveau (%)",
+                  "ru": "Уровень (%)",
+                  "pl": "Poziom (%)",
+                  "ko": "잔량 (%)",
+                  "ar": "المستوى (%)"
+                },
+                "example": 14
+              }
+            ]
+          },
+          {
+            "id": "ink_changed",
+            "title": {
+              "en": "An ink level changed",
+              "it": "Il livello di un inchiostro è cambiato",
+              "nl": "Een inktniveau is gewijzigd",
+              "de": "Ein Tintenfüllstand hat sich geändert",
+              "fr": "Un niveau d’encre a changé",
+              "sv": "En bläcknivå har ändrats",
+              "no": "Et blekknivå er endret",
+              "es": "Ha cambiado el nivel de una tinta",
+              "da": "Et blækniveau er ændret",
+              "ru": "Уровень чернил изменился",
+              "pl": "Zmienił się poziom atramentu",
+              "ko": "잉크 잔량이 바뀌었어요",
+              "ar": "تغيّر مستوى أحد الأحبار"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "ink",
+                "type": "string",
+                "title": {
+                  "en": "Ink",
+                  "it": "Inchiostro",
+                  "nl": "Inkt",
+                  "de": "Tinte",
+                  "fr": "Encre",
+                  "sv": "Bläck",
+                  "no": "Blekk",
+                  "es": "Tinta",
+                  "da": "Blæk",
+                  "ru": "Чернила",
+                  "pl": "Atrament",
+                  "ko": "잉크",
+                  "ar": "الحبر"
+                },
+                "example": {
+                  "en": "Cyan",
+                  "it": "Ciano",
+                  "nl": "Cyaan",
+                  "de": "Cyan",
+                  "fr": "Cyan",
+                  "sv": "Cyan",
+                  "no": "Cyan",
+                  "es": "Cian",
+                  "da": "Cyan",
+                  "ru": "Голубой",
+                  "pl": "Cyjan",
+                  "ko": "시안",
+                  "ar": "سماوي"
+                }
+              },
+              {
+                "name": "level",
+                "type": "number",
+                "title": {
+                  "en": "Level (%)",
+                  "it": "Livello (%)",
+                  "nl": "Niveau (%)",
+                  "de": "Füllstand (%)",
+                  "fr": "Niveau (%)",
+                  "sv": "Nivå (%)",
+                  "no": "Nivå (%)",
+                  "es": "Nivel (%)",
+                  "da": "Niveau (%)",
+                  "ru": "Уровень (%)",
+                  "pl": "Poziom (%)",
+                  "ko": "잔량 (%)",
+                  "ar": "المستوى (%)"
+                },
+                "example": 14
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "printer_ready",
+            "title": {
+              "en": "The printer is ready",
+              "nl": "De printer is gereed",
+              "de": "Der Drucker ist bereit",
+              "fr": "L’imprimante est prête",
+              "it": "La stampante è pronta",
+              "sv": "Skrivaren är redo",
+              "no": "Skriveren er klar",
+              "es": "La impresora está lista",
+              "da": "Printeren er klar",
+              "ru": "Принтер готов",
+              "pl": "Drukarka jest gotowa",
+              "ko": "프린터가 준비되어 있음",
+              "ar": "الطابعة جاهزة"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              }
+            ]
+          },
+          {
+            "id": "ink_below",
+            "title": {
+              "en": "Ink level is below…",
+              "it": "Il livello dell’inchiostro è sotto…",
+              "nl": "Inktniveau is lager dan…",
+              "de": "Tintenfüllstand liegt unter…",
+              "fr": "Le niveau d’encre est inférieur à…",
+              "sv": "Bläcknivån är under…",
+              "no": "Blekknivået er under…",
+              "es": "El nivel de tinta está por debajo de…",
+              "da": "Blækniveauet er under…",
+              "ru": "Уровень чернил ниже…",
+              "pl": "Poziom atramentu jest poniżej…",
+              "ko": "잉크 잔량이 … 미만",
+              "ar": "مستوى الحبر أقل من…"
+            },
+            "titleFormatted": {
+              "en": "[[ink]] is !{{below|not below}} [[level]]%",
+              "it": "[[ink]] !{{è|non è}} sotto il [[level]]%",
+              "nl": "[[ink]] is !{{lager|niet lager}} dan [[level]]%",
+              "de": "[[ink]] liegt !{{unter|nicht unter}} [[level]]%",
+              "fr": "[[ink]] !{{est|n’est pas}} inférieure à [[level]]%",
+              "sv": "[[ink]] är !{{under|inte under}} [[level]]%",
+              "no": "[[ink]] er !{{under|ikke under}} [[level]]%",
+              "es": "[[ink]] !{{está|no está}} por debajo del [[level]]%",
+              "da": "[[ink]] er !{{under|ikke under}} [[level]]%",
+              "ru": "[[ink]] !{{ниже|не ниже}} [[level]]%",
+              "pl": "[[ink]] !{{jest|nie jest}} poniżej [[level]]%",
+              "ko": "[[ink]] 잔량이 [[level]]% !{{미만이에요|미만이 아니에요}}",
+              "ar": "[[ink]] !{{أقل|ليس أقل}} من [[level]]%"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              },
+              {
+                "type": "autocomplete",
+                "name": "ink",
+                "title": {
+                  "en": "Ink",
+                  "it": "Inchiostro",
+                  "nl": "Inkt",
+                  "de": "Tinte",
+                  "fr": "Encre",
+                  "sv": "Bläck",
+                  "no": "Blekk",
+                  "es": "Tinta",
+                  "da": "Blæk",
+                  "ru": "Чернила",
+                  "pl": "Atrament",
+                  "ko": "잉크",
+                  "ar": "الحبر"
+                },
+                "placeholder": {
+                  "en": "Choose an ink",
+                  "it": "Scegli un inchiostro",
+                  "nl": "Kies een inkt",
+                  "de": "Tinte auswählen",
+                  "fr": "Choisissez une encre",
+                  "sv": "Välj ett bläck",
+                  "no": "Velg et blekk",
+                  "es": "Elige una tinta",
+                  "da": "Vælg et blæk",
+                  "ru": "Выберите чернила",
+                  "pl": "Wybierz atrament",
+                  "ko": "잉크 선택",
+                  "ar": "اختر حبرًا"
+                }
+              },
+              {
+                "type": "number",
+                "name": "level",
+                "title": {
+                  "en": "Level (%)",
+                  "it": "Livello (%)",
+                  "nl": "Niveau (%)",
+                  "de": "Füllstand (%)",
+                  "fr": "Niveau (%)",
+                  "sv": "Nivå (%)",
+                  "no": "Nivå (%)",
+                  "es": "Nivel (%)",
+                  "da": "Niveau (%)",
+                  "ru": "Уровень (%)",
+                  "pl": "Poziom (%)",
+                  "ko": "잔량 (%)",
+                  "ar": "المستوى (%)"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "15",
+                  "it": "15",
+                  "nl": "15",
+                  "de": "15",
+                  "fr": "15",
+                  "sv": "15",
+                  "no": "15",
+                  "es": "15",
+                  "da": "15",
+                  "ru": "15",
+                  "pl": "15",
+                  "ko": "15",
+                  "ar": "15"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "print_text",
+            "title": {
+              "en": "Print text",
+              "nl": "Print tekst",
+              "de": "Text drucken",
+              "fr": "Imprimer du texte",
+              "it": "Stampa testo",
+              "sv": "Skriv ut text",
+              "no": "Skriv ut tekst",
+              "es": "Imprimir texto",
+              "da": "Udskriv tekst",
+              "ru": "Напечатать текст",
+              "pl": "Drukuj tekst",
+              "ko": "텍스트 인쇄",
+              "ar": "طباعة نص"
+            },
+            "titleFormatted": {
+              "en": "Print [[text]]",
+              "nl": "Print [[text]]",
+              "de": "[[text]] drucken",
+              "fr": "Imprimer [[text]]",
+              "it": "Stampa [[text]]",
+              "sv": "Skriv ut [[text]]",
+              "no": "Skriv ut [[text]]",
+              "es": "Imprimir [[text]]",
+              "da": "Udskriv [[text]]",
+              "ru": "Напечатать [[text]]",
+              "pl": "Drukuj [[text]]",
+              "ko": "[[text]] 인쇄",
+              "ar": "طباعة [[text]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              },
+              {
+                "name": "text",
+                "type": "text",
+                "title": {
+                  "en": "Text",
+                  "nl": "Tekst",
+                  "de": "Text",
+                  "fr": "Texte",
+                  "it": "Testo",
+                  "sv": "Text",
+                  "no": "Tekst",
+                  "es": "Texto",
+                  "da": "Tekst",
+                  "ru": "Текст",
+                  "pl": "Tekst",
+                  "ko": "텍스트",
+                  "ar": "النص"
+                }
+              }
+            ]
+          },
+          {
+            "id": "print_image_url",
+            "title": {
+              "en": "Print an image from a URL",
+              "nl": "Print een afbeelding vanaf een URL",
+              "de": "Bild von einer URL drucken",
+              "fr": "Imprimer une image depuis une URL",
+              "it": "Stampa un’immagine da URL",
+              "sv": "Skriv ut en bild från en URL",
+              "no": "Skriv ut et bilde fra en URL",
+              "es": "Imprimir una imagen desde una URL",
+              "da": "Udskriv et billede fra en URL",
+              "ru": "Напечатать изображение по URL",
+              "pl": "Drukuj obraz z adresu URL",
+              "ko": "URL에서 이미지 인쇄",
+              "ar": "طباعة صورة من رابط"
+            },
+            "titleFormatted": {
+              "en": "Print image from [[url]]",
+              "nl": "Print afbeelding van [[url]]",
+              "de": "Bild von [[url]] drucken",
+              "fr": "Imprimer l’image depuis [[url]]",
+              "it": "Stampa immagine da [[url]]",
+              "sv": "Skriv ut bild från [[url]]",
+              "no": "Skriv ut bilde fra [[url]]",
+              "es": "Imprimir imagen desde [[url]]",
+              "da": "Udskriv billede fra [[url]]",
+              "ru": "Напечатать изображение из [[url]]",
+              "pl": "Drukuj obraz z [[url]]",
+              "ko": "[[url]]에서 이미지 인쇄",
+              "ar": "طباعة صورة من [[url]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              },
+              {
+                "name": "url",
+                "type": "text",
+                "title": {
+                  "en": "JPEG or PNG URL",
+                  "nl": "JPEG- of PNG-URL",
+                  "de": "JPEG- oder PNG-URL",
+                  "fr": "URL JPEG ou PNG",
+                  "it": "URL JPEG o PNG",
+                  "sv": "URL till JPEG eller PNG",
+                  "no": "URL til JPEG eller PNG",
+                  "es": "URL de JPEG o PNG",
+                  "da": "URL til JPEG eller PNG",
+                  "ru": "URL JPEG или PNG",
+                  "pl": "Adres URL pliku JPEG lub PNG",
+                  "ko": "JPEG 또는 PNG URL",
+                  "ar": "رابط JPEG أو PNG"
+                }
+              }
+            ]
+          },
+          {
+            "id": "print_image_token",
+            "title": {
+              "en": "Print an image tag",
+              "nl": "Print een afbeeldingstag",
+              "de": "Bild-Tag drucken",
+              "fr": "Imprimer un tag d’image",
+              "it": "Stampa un tag immagine",
+              "sv": "Skriv ut en bildtagg",
+              "no": "Skriv ut en bildetagg",
+              "es": "Imprimir un tag de imagen",
+              "da": "Udskriv et billedtag",
+              "ru": "Напечатать тег изображения",
+              "pl": "Drukuj tag obrazu",
+              "ko": "이미지 태그 인쇄",
+              "ar": "طباعة وسم صورة"
+            },
+            "titleFormatted": {
+              "en": "Print [[droptoken]]",
+              "nl": "Print [[droptoken]]",
+              "de": "[[droptoken]] drucken",
+              "fr": "Imprimer [[droptoken]]",
+              "it": "Stampa [[droptoken]]",
+              "sv": "Skriv ut [[droptoken]]",
+              "no": "Skriv ut [[droptoken]]",
+              "es": "Imprimir [[droptoken]]",
+              "da": "Udskriv [[droptoken]]",
+              "ru": "Напечатать [[droptoken]]",
+              "pl": "Drukuj [[droptoken]]",
+              "ko": "[[droptoken]] 인쇄",
+              "ar": "طباعة [[droptoken]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              }
+            ]
+          },
+          {
+            "id": "print_library_image",
+            "title": {
+              "en": "Print an image from the library",
+              "nl": "Print een afbeelding uit de bibliotheek",
+              "de": "Bild aus der Bibliothek drucken",
+              "fr": "Imprimer une image de la bibliothèque",
+              "it": "Stampa un’immagine dalla libreria",
+              "sv": "Skriv ut en bild från biblioteket",
+              "no": "Skriv ut et bilde fra biblioteket",
+              "es": "Imprimir una imagen de la biblioteca",
+              "da": "Udskriv et billede fra biblioteket",
+              "ru": "Напечатать изображение из библиотеки",
+              "pl": "Drukuj obraz z biblioteki",
+              "ko": "라이브러리의 이미지 인쇄",
+              "ar": "طباعة صورة من المكتبة"
+            },
+            "titleFormatted": {
+              "en": "Print [[image]] from the library",
+              "nl": "Print [[image]] uit de bibliotheek",
+              "de": "[[image]] aus der Bibliothek drucken",
+              "fr": "Imprimer [[image]] depuis la bibliothèque",
+              "it": "Stampa [[image]] dalla libreria",
+              "sv": "Skriv ut [[image]] från biblioteket",
+              "no": "Skriv ut [[image]] fra biblioteket",
+              "es": "Imprimir [[image]] de la biblioteca",
+              "da": "Udskriv [[image]] fra biblioteket",
+              "ru": "Напечатать [[image]] из библиотеки",
+              "pl": "Drukuj [[image]] z biblioteki",
+              "ko": "라이브러리의 [[image]] 인쇄",
+              "ar": "طباعة [[image]] من المكتبة"
+            },
+            "hint": {
+              "en": "Upload images in Network Print app settings first.",
+              "nl": "Upload eerst afbeeldingen in de instellingen van de Network Print-app.",
+              "de": "Lade zuerst Bilder in den Einstellungen der Network Print-App hoch.",
+              "fr": "Importez d’abord les images dans les paramètres de l’app Network Print.",
+              "it": "Carica prima le immagini nelle impostazioni di Network Print.",
+              "sv": "Ladda först upp bilder i appinställningarna för Network Print.",
+              "no": "Last først opp bilder i appinnstillingene for Network Print.",
+              "es": "Primero sube las imágenes en los ajustes de la app Network Print.",
+              "da": "Upload først billeder i appindstillingerne for Network Print.",
+              "ru": "Сначала загрузите изображения в настройках приложения Network Print.",
+              "pl": "Najpierw prześlij obrazy w ustawieniach aplikacji Network Print.",
+              "ko": "먼저 Network Print 앱 설정에서 이미지를 업로드하세요.",
+              "ar": "ارفع الصور أولًا من إعدادات تطبيق Network Print."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=printer"
+              },
+              {
+                "type": "autocomplete",
+                "name": "image",
+                "title": {
+                  "en": "Library image",
+                  "nl": "Bibliotheekafbeelding",
+                  "de": "Bibliotheksbild",
+                  "fr": "Image de la bibliothèque",
+                  "it": "Immagine della libreria",
+                  "sv": "Bild från biblioteket",
+                  "no": "Bilde fra biblioteket",
+                  "es": "Imagen de la biblioteca",
+                  "da": "Billede fra biblioteket",
+                  "ru": "Изображение из библиотеки",
+                  "pl": "Obraz z biblioteki",
+                  "ko": "라이브러리 이미지",
+                  "ar": "صورة من المكتبة"
+                },
+                "placeholder": {
+                  "en": "Find an image…",
+                  "nl": "Zoek een afbeelding…",
+                  "de": "Bild suchen…",
+                  "fr": "Rechercher une image…",
+                  "it": "Cerca un’immagine…",
+                  "sv": "Hitta en bild…",
+                  "no": "Finn et bilde…",
+                  "es": "Buscar una imagen…",
+                  "da": "Find et billede…",
+                  "ru": "Найти изображение…",
+                  "pl": "Znajdź obraz…",
+                  "ko": "이미지 찾기…",
+                  "ar": "ابحث عن صورة…"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-26T08:57:32.144Z",
+      "bugs": "https://github.com/giuliomaffei90/homey-network-print/issues",
+      "homepage": null,
+      "support": "https://github.com/giuliomaffei90/homey-network-print/issues",
+      "source": "https://github.com/giuliomaffei90/homey-network-print",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "New app and device images."
+      },
+      "compatibility": ">=12.1.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.3.3",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ad82c5e47d7399db6c7e64a",
+      "type": "user",
+      "userId": "5cdc58b400133c0ed2d55551",
+      "name": "Giulio Maffei",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]
