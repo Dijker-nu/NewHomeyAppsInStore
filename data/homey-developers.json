@@ -1254,6 +1254,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6acd6a5ebdc8421d78c62825",
+    "developerName": "Erik Richardson",
+    "forumUserID": 64903,
+    "forumUsername": "Erik_Richardson"
+  },
+  {
     "developerId": "5dcab9ae1c90c866f9364389",
     "developerName": "Erik Scheffers",
     "forumUserID": null,
@@ -2314,6 +2320,12 @@
     "developerName": "Jonathan van Bochove",
     "forumUserID": 1371,
     "forumUsername": "Some1"
+  },
+  {
+    "developerId": "6a9f88284b2b66c1158ea7af",
+    "developerName": "Jonny Hanssen",
+    "forumUserID": 19026,
+    "forumUsername": "TroBil"
   },
   {
     "developerId": "5ecbd145d1efefa94b5824d6",
@@ -3852,6 +3864,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6adddc0e47d7399db6cd1852",
+    "developerName": "Pieter Groot",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "5e25b143ab8a459e6456c582",
     "developerName": "Pieter Verougstraete",
     "forumUserID": 953,
@@ -3902,6 +3920,12 @@
   {
     "developerId": "5dcabc1f1c90c866f936631b",
     "developerName": "Plugwise B.V.",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6aaaab8d30dc90a8d6e131f4",
+    "developerName": "Pontus Kristiansson",
     "forumUserID": null,
     "forumUsername": null
   },
@@ -5082,6 +5106,12 @@
     "forumUsername": "Tim_Wilkinson"
   },
   {
+    "developerId": "6ad7abbdbdc8421d78caa22f",
+    "developerName": "Timothy Mason",
+    "forumUserID": 48858,
+    "forumUsername": "CanadaTechguy"
+  },
+  {
     "developerId": "65818228559f0bfcc19e7586",
     "developerName": "Tjarco Boerkoel",
     "forumUserID": 25985,
@@ -5170,12 +5200,6 @@
     "developerName": "TRMNL",
     "forumUserID": null,
     "forumUsername": null
-  },
-  {
-    "developerId": "6a9f88284b2b66c1158ea7af",
-    "developerName": "Trond Bildøy",
-    "forumUserID": 19026,
-    "forumUsername": "TroBil"
   },
   {
     "developerId": "65b2c359e0e92b510cb923b0",
