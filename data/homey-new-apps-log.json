@@ -1246,5 +1246,17 @@
     "updatedAt": "2026-10-26T17:47:13.466Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-26T17:47:11.902Z"
+  },
+  {
+    "appId": "energy.planetpod",
+    "name": "Planetpod",
+    "developerName": "Planetpod",
+    "developerId": "6a9e78d766ae2e8253cdea4f",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-28T09:49:24.482Z",
+    "updatedAt": "2026-10-28T09:49:24.482Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-28T09:49:24.482Z"
   }
 ]

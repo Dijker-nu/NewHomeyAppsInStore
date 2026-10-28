@@ -1,1 +1,248 @@
-[]
+[
+  {
+    "id": "energy.planetpod",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Planetpod"
+      },
+      "version": "1.0.3",
+      "readme": {
+        "en": "See your Planetpod home battery right alongside the rest of your smart home. Add a Battery, P1, and/or Solar device — charge level, power flow, and energy totals update every minute in Homey, so you can build Flows around your battery and household energy, check Insights without opening a separate app, or just keep an eye on how much your household is charging and discharging. Once you've switched your battery to Homey control in the Planetpod app, Homey can also steer it — for example charging when electricity is cheapest.\r\n\r\nRequires a Planetpod account and an API key, generated from your Planetpod account settings. Have more than one Planetpod at home? Each battery can be monitored and given its own power setpoint. Balance mode is not supported yet for homes with multiple Planetpods; it will be added soon.\r\n",
+        "nl": "Bekijk je Planetpod thuisbatterij gewoon naast de rest van je smart home. Voeg een Batterij-, P1- en/of Zon-apparaat toe — laadstatus, energiestroom en totalen worden elke minuut bijgewerkt in Homey, zodat je Flows kunt bouwen rond je batterij en huishoudelijk verbruik, Insights kunt bekijken zonder een aparte app te openen, of gewoon in de gaten kunt houden hoeveel je huishouden laadt en ontlaadt. Zodra je je batterij in de Planetpod-app op Homey-besturing hebt gezet, kan Homey 'm ook aansturen — bijvoorbeeld laden op het moment dat stroom het goedkoopst is.\r\n\r\nVereist een Planetpod-account en een API-key, aan te maken via je Planetpod accountinstellingen. Meer dan één Planetpod in huis? Elke batterij kun je volgen en een eigen vermogen geven. Balansmodus wordt nog niet ondersteund voor woningen met meerdere Planetpods; dit wordt binnenkort toegevoegd.\r\n"
+      },
+      "description": {
+        "en": "The smart Dutch home battery that actually fits in your home.",
+        "nl": "De slimme Nederlandse thuisbatterij die wél in je huis past."
+      },
+      "category": "energy",
+      "brandColor": "#5551FE",
+      "icon": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "battery-cloud",
+          "name": {
+            "en": "Planetpod Battery",
+            "nl": "Planetpod Batterij"
+          },
+          "class": "battery",
+          "capabilities": [
+            "measure_battery",
+            "measure_power",
+            "meter_power.charged",
+            "meter_power.discharged",
+            "target_power",
+            "target_power_mode"
+          ],
+          "capabilitiesOptions": {
+            "meter_power.charged": {
+              "title": {
+                "en": "Charged Energy",
+                "nl": "Geladen energie"
+              }
+            },
+            "meter_power.discharged": {
+              "title": {
+                "en": "Discharged Energy",
+                "nl": "Ontladen energie"
+              }
+            },
+            "target_power": {
+              "min": -3000,
+              "max": 3000,
+              "step": 100
+            },
+            "target_power_mode": {
+              "values": [
+                {
+                  "id": "homey",
+                  "title": {
+                    "en": "Homey",
+                    "nl": "Homey"
+                  }
+                },
+                {
+                  "id": "balance",
+                  "title": {
+                    "en": "Balance (zero-export)",
+                    "nl": "Balans (netto nul)"
+                  }
+                }
+              ]
+            }
+          },
+          "energy": {
+            "homeBattery": true,
+            "meterPowerImportedCapability": "meter_power.charged",
+            "meterPowerExportedCapability": "meter_power.discharged"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/battery-cloud/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/battery-cloud/assets/images/large.png",
+          "platforms": [
+            "local",
+            "cloud"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/battery-cloud/assets/icon.svg"
+        },
+        {
+          "id": "p1-cloud",
+          "name": {
+            "en": "Energy Pulse P1 meter",
+            "nl": "Energy Pulse P1 meter"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_power",
+            "meter_power.imported",
+            "meter_power.exported"
+          ],
+          "capabilitiesOptions": {
+            "meter_power.imported": {
+              "title": {
+                "en": "Grid Import",
+                "nl": "Netstroom import"
+              }
+            },
+            "meter_power.exported": {
+              "title": {
+                "en": "Grid Export",
+                "nl": "Netstroom export"
+              }
+            }
+          },
+          "energy": {
+            "cumulative": true,
+            "cumulativeImportedCapability": "meter_power.imported",
+            "cumulativeExportedCapability": "meter_power.exported"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/p1-cloud/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/p1-cloud/assets/images/large.png",
+          "platforms": [
+            "local",
+            "cloud"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/p1-cloud/assets/icon.svg"
+        },
+        {
+          "id": "solar-cloud",
+          "name": {
+            "en": "Energy Pulse Solar",
+            "nl": "Energy Pulse Solar"
+          },
+          "class": "solarpanel",
+          "capabilities": [
+            "measure_power",
+            "meter_power"
+          ],
+          "energy": {
+            "meterPowerExportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/solar-cloud/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/solar-cloud/assets/images/large.png",
+          "platforms": [
+            "local",
+            "cloud"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/energy.planetpod/4/f9336cc2-3c24-4c50-9869-b7f5d2410e1e/drivers/solar-cloud/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "set_power_for_duration",
+            "title": {
+              "en": "Set power for a duration",
+              "nl": "Vermogen instellen voor een periode"
+            },
+            "titleFormatted": {
+              "en": "Set power to [[power_kw]] kW for [[duration_minutes]] minutes",
+              "nl": "Stel vermogen in op [[power_kw]] kW voor [[duration_minutes]] minuten"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=battery-cloud"
+              },
+              {
+                "type": "number",
+                "name": "power_kw",
+                "title": {
+                  "en": "Power in kW",
+                  "nl": "Vermogen in kW"
+                },
+                "min": -3,
+                "max": 3,
+                "step": 0.1
+              },
+              {
+                "type": "number",
+                "name": "duration_minutes",
+                "title": {
+                  "en": "Duration in minutes",
+                  "nl": "Duur in minuten"
+                },
+                "min": 1,
+                "max": 60,
+                "step": 1
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-28T09:40:46.064Z",
+      "bugs": null,
+      "homepage": "https://planetpod.energy",
+      "support": "mailto:support@planetpod.energy",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "changelog": {
+        "en": "New device icons. Connects to the Planetpod production service.",
+        "nl": "Nieuwe apparaaticonen. Verbindt met de Planetpod-productieomgeving."
+      },
+      "compatibility": ">=12.13.0",
+      "tags": null,
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.3",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a9e78d766ae2e8253cdea4f",
+      "type": "org",
+      "userId": null,
+      "name": "Planetpod",
+      "verified": true
+    },
+    "communityTopicId": null
+  }
+]
