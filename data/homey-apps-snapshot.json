@@ -19743,5 +19743,71 @@
     "publishedAt": "2026-10-28T09:49:24.482Z",
     "updatedAt": "2026-10-28T09:49:24.482Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.desi.smart",
+    "name": "Desi Smart",
+    "developerName": "DESI Smart Lock & Security Systems",
+    "developerId": "6a9feaf466ae2e8253114b3d",
+    "version": "1.0.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-28T17:32:10.079Z",
+    "updatedAt": "2026-10-28T17:32:10.079Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.gpm.bluetti",
+    "name": "BLUETTI",
+    "developerName": "Gabriel Pedrosa Machado",
+    "developerId": "69782a0e6b884a38a96c58e6",
+    "version": "0.4.1",
+    "sourceRepository": "https://github.com/gpmachado/com.gpm.bluetti",
+    "publishedAt": "2026-10-28T17:32:11.153Z",
+    "updatedAt": "2026-10-28T17:32:11.153Z",
+    "communityTopicId": 160644
+  },
+  {
+    "appId": "dk.elpriser",
+    "name": "Elpriser.dk",
+    "developerName": "Elpriser.dk ApS",
+    "developerId": "6adb64f547d7399db6cc2b7b",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-28T17:32:11.153Z",
+    "updatedAt": "2026-10-28T17:32:11.153Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.meteoveo",
+    "name": "MeteoVeo",
+    "developerName": "Zsolt Reinhardt",
+    "developerId": "624609ffcd04c7cc9ac94de6",
+    "version": "0.1.1",
+    "sourceRepository": "https://github.com/Meteoveo/homey-meteoveo",
+    "publishedAt": "2026-10-28T17:32:11.848Z",
+    "updatedAt": "2026-10-28T17:32:11.848Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "io.olae.imapclient",
+    "name": "IMAP Client",
+    "developerName": "Ola Eriksson",
+    "developerId": "604eaa07ea27a57b449d78c2",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-28T17:32:12.585Z",
+    "updatedAt": "2026-10-28T17:32:12.585Z",
+    "communityTopicId": 161392
+  },
+  {
+    "appId": "io.github.starredev.ramses",
+    "name": "RAMSES ESP",
+    "developerName": "Bryan van der Starre",
+    "developerId": "6ac24d17bdc7ced970ffe259",
+    "version": "1.0.7",
+    "sourceRepository": "https://github.com/starredev/homey-ramses-esp",
+    "publishedAt": "2026-10-28T17:32:12.585Z",
+    "updatedAt": "2026-10-28T17:32:12.585Z",
+    "communityTopicId": null
   }
 ]
