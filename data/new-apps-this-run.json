@@ -1,1 +1,547 @@
-[]
+[
+  {
+    "id": "dk.hye-knudsen.thermexwifihood",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Thermex",
+        "da": "Thermex"
+      },
+      "version": "1.1.0",
+      "readme": {
+        "en": "Control your Thermex WiFi enabled extractor hood.\r\n\r\nFirst set up the hood in the official Thermex app for your phone. There should be a setting for WiFi and a setting for Smart Home\", where you can set up a password.\r\n\r\nWhen adding a hood in Homey, first enter its local IPv4 address and hood password on the connection screen. The password input is masked. Select the hood on the next screen to add it; these values are saved in Advanced settings and used when connecting to the hood.\r\n\r\nThe device has two independent sliders for light brightness and fan speed and hopefully will get more features as development progresses and you suggestion come in.",
+        "da": "Styr din Thermex-emhætte med WiFi.\n\nOpsæt først emhætten i den officielle Thermex-app på din telefon. Der bør være en indstilling for WiFi og en indstilling for \"Smart Home\", hvor du kan oprette en adgangskode.\n\nNår du tilføjer en emhætte i Homey, skal du først indtaste dens lokale IPv4-adresse og adgangskode på tilslutningsskærmen. Adgangskoden skjules under indtastning. Vælg emhætten på den næste skærm for at tilføje den.\n\nEnheden har to uafhængige skydere til lysstyrke og ventilatorhastighed, men jeg håber at kunne tilføje flere features efterhånden. Kom gerne med forslag."
+      },
+      "description": {
+        "en": "Kitchen extractor hoods since 1958",
+        "da": "Køkkenventilation siden 1958"
+      },
+      "category": "appliances",
+      "brandColor": "#212121",
+      "icon": "https://apps.homeycdn.net/app/dk.hye-knudsen.thermexwifihood/4/8bd93005-e897-4185-9dff-572aadf174f9/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/dk.hye-knudsen.thermexwifihood/4/8bd93005-e897-4185-9dff-572aadf174f9/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/dk.hye-knudsen.thermexwifihood/4/8bd93005-e897-4185-9dff-572aadf174f9/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "thermex_hood",
+          "name": {
+            "en": "Thermex Hood",
+            "da": "Thermex-emhætte"
+          },
+          "class": "other",
+          "capabilities": [
+            "dim.light",
+            "fan_speed.fan",
+            "fan_speed.history",
+            "light_mode.brightness",
+            "hood_light_on",
+            "hood_fan_on",
+            "measure_hood_light_status",
+            "measure_hood_fan_status"
+          ],
+          "capabilitiesOptions": {
+            "dim.light": {
+              "title": {
+                "en": "Light brightness",
+                "da": "Lysstyrke"
+              },
+              "preventInsights": true
+            },
+            "fan_speed.fan": {
+              "title": {
+                "en": "Fan speed",
+                "da": "Ventilatorhastighed"
+              },
+              "preventInsights": true,
+              "min": 0,
+              "max": 1,
+              "step": 0.25,
+              "decimals": 2
+            },
+            "fan_speed.history": {
+              "title": {
+                "en": "Fan speed",
+                "da": "Ventilatorhastighed"
+              },
+              "preventInsights": false,
+              "min": 0,
+              "max": 100,
+              "step": 25,
+              "decimals": 0,
+              "setable": false,
+              "uiComponent": null
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/dk.hye-knudsen.thermexwifihood/4/8bd93005-e897-4185-9dff-572aadf174f9/drivers/thermex_hood/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/dk.hye-knudsen.thermexwifihood/4/8bd93005-e897-4185-9dff-572aadf174f9/drivers/thermex_hood/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/dk.hye-knudsen.thermexwifihood/4/8bd93005-e897-4185-9dff-572aadf174f9/drivers/thermex_hood/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "filter_cleaning_due",
+            "title": {
+              "en": "The filter needs cleaning",
+              "da": "Filteret skal renses"
+            },
+            "hint": {
+              "en": "Triggers once when weighted fan use reaches the cleaning interval. Also triggers if the interval is lowered to or below accumulated use. Reset after cleaning to start again.",
+              "da": "Udløses én gang, når den vægtede ventilatortid når renseintervallet. Udløses også, hvis intervallet sænkes til eller under den optjente tid. Nulstil efter rensning for at starte forfra."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              }
+            ]
+          },
+          {
+            "id": "light_on_for",
+            "title": {
+              "en": "The light has been on for a duration",
+              "da": "Lyset har været tændt i et tidsrum"
+            },
+            "titleFormatted": {
+              "en": "The light has been on for [[duration]] [[unit]]",
+              "da": "Lyset har været tændt i [[duration]] [[unit]]"
+            },
+            "hint": {
+              "en": "Triggers once after the light stays on for this duration. Turning it off resets the timer.",
+              "da": "Udløses én gang, når lyset har været tændt i dette tidsrum. Når lyset slukkes, nulstilles timeren."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              },
+              {
+                "name": "duration",
+                "type": "number",
+                "title": {
+                  "en": "Duration",
+                  "da": "Varighed"
+                },
+                "min": 1,
+                "step": 1,
+                "placeholder": {
+                  "en": "Duration",
+                  "da": "Varighed"
+                }
+              },
+              {
+                "name": "unit",
+                "type": "dropdown",
+                "title": {
+                  "en": "Unit",
+                  "da": "Enhed"
+                },
+                "values": [
+                  {
+                    "id": "seconds",
+                    "label": {
+                      "en": "seconds",
+                      "da": "sekunder"
+                    }
+                  },
+                  {
+                    "id": "minutes",
+                    "label": {
+                      "en": "minutes",
+                      "da": "minutter"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_on_for",
+            "title": {
+              "en": "The fan has been on for a duration",
+              "da": "Ventilatoren har været tændt i et tidsrum"
+            },
+            "titleFormatted": {
+              "en": "The fan has been on for [[duration]] [[unit]]",
+              "da": "Ventilatoren har været tændt i [[duration]] [[unit]]"
+            },
+            "hint": {
+              "en": "Triggers once after the fan stays on for this duration. Turning it off resets the timer.",
+              "da": "Udløses én gang, når ventilatoren har været tændt i dette tidsrum. Når ventilatoren slukkes, nulstilles timeren."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              },
+              {
+                "name": "duration",
+                "type": "number",
+                "title": {
+                  "en": "Duration",
+                  "da": "Varighed"
+                },
+                "min": 1,
+                "step": 1,
+                "placeholder": {
+                  "en": "Duration",
+                  "da": "Varighed"
+                }
+              },
+              {
+                "name": "unit",
+                "type": "dropdown",
+                "title": {
+                  "en": "Unit",
+                  "da": "Enhed"
+                },
+                "values": [
+                  {
+                    "id": "seconds",
+                    "label": {
+                      "en": "seconds",
+                      "da": "sekunder"
+                    }
+                  },
+                  {
+                    "id": "minutes",
+                    "label": {
+                      "en": "minutes",
+                      "da": "minutter"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "filter_cleaning_due",
+            "title": {
+              "en": "The filter !{{needs|does not need}} cleaning",
+              "da": "Filteret !{{skal|skal ikke}} renses"
+            },
+            "hint": {
+              "en": "True when accumulated weighted fan hours have reached the cleaning interval in Advanced settings. Remains true until reset or the limit is raised above accumulated use.",
+              "da": "Sand, når den vægtede ventilatortid har nået renseintervallet i Avancerede indstillinger. Forbliver sand indtil nulstilling, eller indtil grænsen hæves over den optjente tid."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              }
+            ]
+          },
+          {
+            "id": "fan_speed_above_percentage",
+            "title": {
+              "en": "Fan speed !{{is|is not}} above a percentage",
+              "da": "Ventilatorhastigheden !{{er|er ikke}} over en procentværdi"
+            },
+            "titleFormatted": {
+              "en": "Fan speed !{{is|is not}} above [[percentage]]%",
+              "da": "Ventilatorhastigheden !{{er|er ikke}} over [[percentage]] %"
+            },
+            "hint": {
+              "en": "Checks the current fan speed. Equal percentages do not count as above. Above 0% means the fan is on.",
+              "da": "Kontrollerer den aktuelle ventilatorhastighed. Samme procentværdi tæller ikke som over. Over 0 % betyder, at ventilatoren er tændt."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "title": {
+                  "en": "Percentage",
+                  "da": "Procent"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "0-100",
+                  "da": "0-100"
+                }
+              }
+            ]
+          },
+          {
+            "id": "light_brightness_above_percentage",
+            "title": {
+              "en": "Light brightness !{{is|is not}} above a percentage",
+              "da": "Lysstyrken !{{er|er ikke}} over en procentværdi"
+            },
+            "titleFormatted": {
+              "en": "Light brightness !{{is|is not}} above [[percentage]]%",
+              "da": "Lysstyrken !{{er|er ikke}} over [[percentage]] %"
+            },
+            "hint": {
+              "en": "Checks the current light brightness. Equal percentages do not count as above. Above 0% means the light is on.",
+              "da": "Kontrollerer den aktuelle lysstyrke. Samme procentværdi tæller ikke som over. Over 0 % betyder, at lyset er tændt."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "title": {
+                  "en": "Percentage",
+                  "da": "Procent"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "0-100",
+                  "da": "0-100"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "reset_filter_counter",
+            "title": {
+              "en": "Reset the filter cleaning counter",
+              "da": "Nulstil tælleren for filterrensning"
+            },
+            "hint": {
+              "en": "Use after cleaning the filter. Clears accumulated weighted fan hours and starts a new cleaning interval, even if the fan is running.",
+              "da": "Bruges efter rensning af filteret. Nulstiller den vægtede ventilatortid og starter et nyt renseinterval, også når ventilatoren kører."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              }
+            ]
+          },
+          {
+            "id": "set_fan_speed_percentage",
+            "title": {
+              "en": "Set fan speed",
+              "da": "Indstil ventilatorhastighed"
+            },
+            "titleFormatted": {
+              "en": "Set fan speed to [[percentage]]%",
+              "da": "Indstil ventilatorhastigheden til [[percentage]] %"
+            },
+            "hint": {
+              "en": "Choose 0, 25, 50, 75 or 100%. 0% turns the fan off.",
+              "da": "Vælg 0, 25, 50, 75 eller 100 %. 0 % slukker ventilatoren."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "title": {
+                  "en": "Percentage",
+                  "da": "Procent"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 25,
+                "placeholder": {
+                  "en": "0, 25, 50, 75, 100",
+                  "da": "0, 25, 50, 75, 100"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_light_brightness_percentage",
+            "title": {
+              "en": "Set light brightness",
+              "da": "Indstil lysstyrke"
+            },
+            "titleFormatted": {
+              "en": "Set light brightness to [[percentage]]%",
+              "da": "Indstil lysstyrken til [[percentage]] %"
+            },
+            "hint": {
+              "en": "0% turns the light off. A higher percentage turns it on at that brightness.",
+              "da": "0 % slukker lyset. En højere procentværdi tænder lyset med den valgte lysstyrke."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=thermex_hood"
+              },
+              {
+                "name": "percentage",
+                "type": "number",
+                "title": {
+                  "en": "Percentage",
+                  "da": "Procent"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "0-100",
+                  "da": "0-100"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 161368,
+      "state": "live",
+      "stateChangedAt": "2026-10-29T13:44:37.927Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:tvivlsom.skraepper.6s@icloud.com",
+      "source": "https://github.com/JonHyeKnudsen/dk.hye-knudsen.thermexwifihood",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Added a timer for filter cleaning with trigger, condition and action cards related to the timer. The timer can be configured in the settings of the app.",
+        "da": "Tilføjet en timer for filter rengøring med trigger, condition og action kort relateret til timeren. Timeren kan konfigureres i appens indstillinger."
+      },
+      "compatibility": ">=13.0.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "python"
+    },
+    "liveVersion": "1.1.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6adf578b47d7399db6cd7de7",
+      "type": "user",
+      "userId": "6998a216d0096af891dcc4fa",
+      "name": "Jon Hye-Knudsen",
+      "verified": false
+    },
+    "communityTopicId": 161368
+  },
+  {
+    "id": "com.athom.managerapi",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "Manager API Test"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "Manager API Test logs the devices this app can reach through the Homey Web API.\n\nIt is used to test which devices an app with the Web API permission can access, based on the devices you allow it to use.\n"
+      },
+      "description": {
+        "en": "Logs the devices this app can reach through the Homey Web API."
+      },
+      "category": "tools",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/com.athom.managerapi/2/c85a23f1-4abe-4fe8-84df-b9895056aedb/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.athom.managerapi/2/c85a23f1-4abe-4fe8-84df-b9895056aedb/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.athom.managerapi/2/c85a23f1-4abe-4fe8-84df-b9895056aedb/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "api-devices",
+          "name": {
+            "en": "Accessible devices"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "api_device_count"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.athom.managerapi/2/c85a23f1-4abe-4fe8-84df-b9895056aedb/drivers/api-devices/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.athom.managerapi/2/c85a23f1-4abe-4fe8-84df-b9895056aedb/drivers/api-devices/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [],
+          "icon": "https://apps.homeycdn.net/app/com.athom.managerapi/2/c85a23f1-4abe-4fe8-84df-b9895056aedb/drivers/api-devices/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-29T13:47:12.724Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://homey.app/support",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api"
+      ],
+      "apiScopes": [
+        "homey.device.readonly",
+        "homey.zone.readonly"
+      ],
+      "changelog": {
+        "en": "Added driver"
+      },
+      "compatibility": ">=12.4.5",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6299c6b3088e00a306124f68",
+      "type": "user",
+      "userId": "626fb7a8af62d00bbf3dfd4c",
+      "name": "Hermanus Meerlo",
+      "verified": true
+    },
+    "communityTopicId": null
+  }
+]

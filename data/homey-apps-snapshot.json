@@ -19798,5 +19798,27 @@
     "publishedAt": "2026-10-28T17:32:12.585Z",
     "updatedAt": "2026-10-28T17:32:12.585Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "dk.hye-knudsen.thermexwifihood",
+    "name": "Thermex",
+    "developerName": "Jon Hye-Knudsen",
+    "developerId": "6adf578b47d7399db6cd7de7",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/JonHyeKnudsen/dk.hye-knudsen.thermexwifihood",
+    "publishedAt": "2026-10-29T17:42:38.096Z",
+    "updatedAt": "2026-10-29T17:42:38.096Z",
+    "communityTopicId": 161368
+  },
+  {
+    "appId": "com.athom.managerapi",
+    "name": "Manager API Test",
+    "developerName": "Hermanus Meerlo",
+    "developerId": "6299c6b3088e00a306124f68",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-29T17:42:38.096Z",
+    "updatedAt": "2026-10-29T17:42:38.096Z",
+    "communityTopicId": null
   }
 ]

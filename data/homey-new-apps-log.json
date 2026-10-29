@@ -1,17 +1,5 @@
 [
   {
-    "appId": "dk.kvols.ankerprime",
-    "name": "Anker Prime Power Bank",
-    "developerName": "Mads Kvols Hansen",
-    "developerId": "6ab8d2b930dc90a8d6e535c0",
-    "version": "2.0.6",
-    "sourceRepository": "",
-    "publishedAt": "2026-09-28T18:52:09.356Z",
-    "updatedAt": "2026-09-28T18:52:09.356Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-09-28T18:52:09.355Z"
-  },
-  {
     "appId": "com.dklatt.outdoorclimate",
     "name": "Outdoor Climate",
     "developerName": "Dennis Klatt",
@@ -1282,5 +1270,29 @@
     "updatedAt": "2026-10-28T17:32:12.585Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-28T17:32:10.079Z"
+  },
+  {
+    "appId": "dk.hye-knudsen.thermexwifihood",
+    "name": "Thermex",
+    "developerName": "Jon Hye-Knudsen",
+    "developerId": "6adf578b47d7399db6cd7de7",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/JonHyeKnudsen/dk.hye-knudsen.thermexwifihood",
+    "publishedAt": "2026-10-29T17:42:38.096Z",
+    "updatedAt": "2026-10-29T17:42:38.096Z",
+    "communityTopicId": 161368,
+    "discoveredAt": "2026-10-29T17:42:38.095Z"
+  },
+  {
+    "appId": "com.athom.managerapi",
+    "name": "Manager API Test",
+    "developerName": "Hermanus Meerlo",
+    "developerId": "6299c6b3088e00a306124f68",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-29T17:42:38.096Z",
+    "updatedAt": "2026-10-29T17:42:38.096Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-10-29T17:42:38.095Z"
   }
 ]
