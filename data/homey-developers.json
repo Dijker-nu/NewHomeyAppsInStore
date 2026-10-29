@@ -582,6 +582,12 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6ac24d17bdc7ced970ffe259",
+    "developerName": "Bryan van der Starre",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6ac6a04c46da7c02088b1e66",
     "developerName": "by NorthGuard Labs",
     "forumUserID": null,
@@ -954,6 +960,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6a9feaf466ae2e8253114b3d",
+    "developerName": "DESI Smart Lock & Security Systems",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6664af4cc783db54ae8754c6",
     "developerName": "DesignSolar Hungary Ltd.",
     "forumUserID": 29193,
@@ -1192,6 +1204,12 @@
     "developerName": "Elmar Kouwenhoven",
     "forumUserID": 16510,
     "forumUsername": "Elmar"
+  },
+  {
+    "developerId": "6adb64f547d7399db6cc2b7b",
+    "developerName": "Elpriser.dk ApS",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "69a6dc81af832c1e4629a4ea",
@@ -2539,7 +2557,7 @@
   },
   {
     "developerId": "6a50a382ce38f245588d815f",
-    "developerName": "KM L",
+    "developerName": "KM+JT LS",
     "forumUserID": null,
     "forumUsername": null
   },
@@ -3200,8 +3218,8 @@
   {
     "developerId": "6a2d9d28771c1d03c09e8701",
     "developerName": "Menno De Braak",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 49726,
+    "forumUsername": "Menno_De_Braak"
   },
   {
     "developerId": "5dcabb3c1c90c866f936579f",
@@ -3566,8 +3584,8 @@
   {
     "developerId": "604eaa07ea27a57b449d78c2",
     "developerName": "Ola Eriksson",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 12373,
+    "forumUsername": "OlaEriksson"
   },
   {
     "developerId": "68617a8420832e6198b6a774",
@@ -5512,6 +5530,12 @@
     "developerName": "ZperX .",
     "forumUserID": 63561,
     "forumUsername": "ZperX"
+  },
+  {
+    "developerId": "624609ffcd04c7cc9ac94de6",
+    "developerName": "Zsolt Reinhardt",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "6954c3c92f0b99832c06d9e0",
