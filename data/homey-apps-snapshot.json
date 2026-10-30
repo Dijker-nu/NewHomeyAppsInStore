@@ -2831,10 +2831,10 @@
     "name": "Sensibo",
     "developerName": "Tapio Heiskanen",
     "developerId": "6381b62d2c8e04f69d3bbc27",
-    "version": "1.22.4",
+    "version": "1.22.5",
     "sourceRepository": "https://github.com/oh2th/com.sensibo",
     "publishedAt": "2019-11-12T14:04:32.190Z",
-    "updatedAt": "2026-07-06T12:23:26.747Z",
+    "updatedAt": "2026-10-30T10:12:31.887Z",
     "communityTopicId": 90295
   },
   {
@@ -3546,10 +3546,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.11.2",
+    "version": "46.12.0",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-10-24T08:15:13.304Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": 73094
   },
   {
@@ -4041,10 +4041,10 @@
     "name": "HDL SmartBus",
     "developerName": "Andreas Lydersen",
     "developerId": "5e3b2e9c27fdee05c1e9c4b2",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "sourceRepository": "https://github.com/alydersen/hdl-smartbus-homey",
     "publishedAt": "2020-02-05T21:07:40.047Z",
-    "updatedAt": "2026-04-17T16:05:12.395Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": 26575
   },
   {
@@ -5900,10 +5900,10 @@
     "name": "myenergi",
     "developerName": "André Biseth",
     "developerId": "61b8eed1e818c488264f5b52",
-    "version": "2.4.10",
+    "version": "2.4.18",
     "sourceRepository": "https://github.com/bisand/net.biseth.myenergi",
     "publishedAt": "2021-12-14T19:28:24.138Z",
-    "updatedAt": "2026-08-27T11:04:37.011Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": null
   },
   {
@@ -6373,10 +6373,10 @@
     "name": "Vimar",
     "developerName": "Andrea Alberti",
     "developerId": "62c402e4d13d04b0df83c53d",
-    "version": "1.4.8",
+    "version": "1.4.9",
     "sourceRepository": "",
     "publishedAt": "2022-07-05T09:22:44.273Z",
-    "updatedAt": "2026-06-05T12:28:24.335Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": null
   },
   {
@@ -6450,10 +6450,10 @@
     "name": "Solax",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "4.4.8",
+    "version": "4.4.10",
     "sourceRepository": "",
     "publishedAt": "2022-07-14T12:53:37.014Z",
-    "updatedAt": "2026-10-29T10:09:55.957Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": 66471
   },
   {
@@ -7484,10 +7484,10 @@
     "name": "Glowmarkt",
     "developerName": "Jonathan Draper",
     "developerId": "6469ffe2726ffb21b4f7374b",
-    "version": "1.1.7",
+    "version": "1.2.0",
     "sourceRepository": "https://github.com/jmdraper/com.glowmarkt.api",
     "publishedAt": "2023-05-21T11:26:26.175Z",
-    "updatedAt": "2026-06-14T15:40:35.604Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": 81210
   },
   {
@@ -8837,10 +8837,10 @@
     "name": "Sofar",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "1.1.60",
+    "version": "1.1.61",
     "sourceRepository": "https://github.com/AdyRock/ady.sofar",
     "publishedAt": "2024-02-02T23:47:59.267Z",
-    "updatedAt": "2026-10-06T10:29:51.571Z",
+    "updatedAt": "2026-10-30T10:12:31.888Z",
     "communityTopicId": 103017
   },
   {
@@ -12379,10 +12379,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.25.1",
+    "version": "3.26.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-29T10:09:55.958Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": 147496
   },
   {
@@ -13303,10 +13303,10 @@
     "name": "Eaton xComfort",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.7.62",
+    "version": "1.7.78",
     "sourceRepository": "https://github.com/MikeTase/Eaton-xComfort-Bridge-Homey",
     "publishedAt": "2026-02-06T15:34:47.832Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": 839
   },
   {
@@ -14348,10 +14348,10 @@
     "name": "Tailscale Connect",
     "developerName": "Daniel Miguel Tejedor",
     "developerId": "69bd6020699c29709c9e1c96",
-    "version": "1.3.2",
+    "version": "1.3.3",
     "sourceRepository": "",
     "publishedAt": "2026-03-20T14:56:32.706Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": null
   },
   {
@@ -14392,10 +14392,10 @@
     "name": "Flow Version History",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.26",
+    "version": "1.0.27",
     "sourceRepository": "https://github.com/smarthomesven/homey-flow-version-history",
     "publishedAt": "2026-03-21T16:18:24.210Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": 152775
   },
   {
@@ -14414,10 +14414,10 @@
     "name": "Luxtronik Heat Pump Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "2.1.18",
+    "version": "2.1.19",
     "sourceRepository": "https://github.com/andiwirz/com.luxtronik.heatpump",
     "publishedAt": "2026-03-22T01:39:58.462Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": null
   },
   {
@@ -14898,10 +14898,10 @@
     "name": "W",
     "developerName": "Watts Water Technologies",
     "developerId": "69dced90fb6dd7068a78966f",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "sourceRepository": "",
     "publishedAt": "2026-04-13T15:22:04.756Z",
-    "updatedAt": "2026-08-28T08:13:10.495Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": null
   },
   {
@@ -16097,10 +16097,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.705",
+    "version": "1.0.730",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-17T07:54:57.464Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": 156098
   },
   {
@@ -16427,10 +16427,10 @@
     "name": "Wear OS/ESP32 panel Controller",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.46.6",
+    "version": "1.49.5",
     "sourceRepository": "",
     "publishedAt": "2026-07-01T17:00:51.035Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": 156700
   },
   {
@@ -17659,10 +17659,10 @@
     "name": "Adaptive Thermostat",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.1.7",
+    "version": "1.5.1",
     "sourceRepository": "https://github.com/byackee/homey-vtherm",
     "publishedAt": "2026-08-22T11:24:49.247Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-10-30T10:12:31.889Z",
     "communityTopicId": 158634
   },
   {
@@ -18869,10 +18869,10 @@
     "name": "Starlink Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:17.049Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-10-30T10:12:31.890Z",
     "communityTopicId": null
   },
   {
@@ -18979,10 +18979,10 @@
     "name": "OCPP Bridge",
     "developerName": "Wisse Koelman",
     "developerId": "6a9e8ad4336db3df05ad62f1",
-    "version": "1.1.1",
+    "version": "1.1.20",
     "sourceRepository": "",
     "publishedAt": "2026-10-06T01:00:55.654Z",
-    "updatedAt": "2026-10-21T08:42:36.036Z",
+    "updatedAt": "2026-10-30T10:12:31.890Z",
     "communityTopicId": null
   },
   {
@@ -18990,10 +18990,10 @@
     "name": "Thermia Heat Pump",
     "developerName": "Ruud Schellekens",
     "developerId": "6ab63a4230dc90a8d6e48c88",
-    "version": "1.0.3",
+    "version": "1.0.6",
     "sourceRepository": "",
     "publishedAt": "2026-10-06T01:00:56.357Z",
-    "updatedAt": "2026-10-26T09:06:38.851Z",
+    "updatedAt": "2026-10-30T10:12:31.890Z",
     "communityTopicId": 161324
   },
   {
@@ -19562,10 +19562,10 @@
     "name": "WebPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.4.0",
+    "version": "1.6.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-21T16:13:45.803Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-10-30T10:12:31.890Z",
     "communityTopicId": 161151
   },
   {
@@ -19573,10 +19573,10 @@
     "name": "Hegel",
     "developerName": "Robin Noort",
     "developerId": "692a1a3166abe425474c8866",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-21T16:13:47.232Z",
-    "updatedAt": "2026-10-21T16:13:47.232Z",
+    "updatedAt": "2026-10-30T10:12:31.890Z",
     "communityTopicId": null
   },
   {
@@ -19606,10 +19606,10 @@
     "name": "Medication Reminder",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.3.1",
+    "version": "1.5.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-10-30T10:12:31.890Z",
     "communityTopicId": 161097
   },
   {
