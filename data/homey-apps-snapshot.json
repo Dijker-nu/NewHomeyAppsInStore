@@ -19831,5 +19831,38 @@
     "publishedAt": "2026-10-30T10:31:21.861Z",
     "updatedAt": "2026-10-30T10:31:21.861Z",
     "communityTopicId": 161282
+  },
+  {
+    "appId": "nl.erikvl87.avent-baby-monitor",
+    "name": "Philips Avent Baby Monitor",
+    "developerName": "Erik van Leeuwen",
+    "developerId": "66d710c3645b24bd5bd1ab86",
+    "version": "0.2.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-30T17:22:32.894Z",
+    "updatedAt": "2026-10-30T17:22:32.894Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "be.parceltracker",
+    "name": "Parcel Tracker",
+    "developerName": "Danny van Soerland",
+    "developerId": "69cc140b699c29709ca3a1dc",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-30T17:22:33.982Z",
+    "updatedAt": "2026-10-30T17:22:33.982Z",
+    "communityTopicId": 161469
+  },
+  {
+    "appId": "se.happy.sense",
+    "name": "Happy Sense",
+    "developerName": "Fredrik Eidlert",
+    "developerId": "6332db19424625865593b51f",
+    "version": "0.3.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-10-30T17:22:33.983Z",
+    "updatedAt": "2026-10-30T17:22:33.983Z",
+    "communityTopicId": null
   }
 ]
