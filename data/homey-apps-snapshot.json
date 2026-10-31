@@ -19864,5 +19864,16 @@
     "publishedAt": "2026-10-30T17:22:33.983Z",
     "updatedAt": "2026-10-30T17:22:33.983Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "lighting.luxio",
+    "name": "Luxio",
+    "developerName": "Emile Nijssen",
+    "developerId": "5dcaba391c90c866f9364985",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/luxio-lighting/luxio-homey",
+    "publishedAt": "2026-10-31T16:26:12.164Z",
+    "updatedAt": "2026-10-31T16:26:12.164Z",
+    "communityTopicId": null
   }
 ]

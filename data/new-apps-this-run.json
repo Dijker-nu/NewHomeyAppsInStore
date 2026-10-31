@@ -1,1 +1,267 @@
-[]
+[
+  {
+    "id": "lighting.luxio",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "Luxio"
+      },
+      "version": "1.0.2",
+      "readme": {
+        "en": "Turn your LED strips into smart lighting with Luxio, open-source firmware for ESP32-based LED controllers. Set a single color, blend colors into a gradient, or bring your lights to life with animations.\n\nConnect Luxio to Homey Pro or Homey Self-Hosted Server over your local network. Switch your lights on and off, adjust brightness, choose colors, and set the white temperature on compatible strips.\n\nUse Flow to set preset or saved colors, gradients, and animations, or create a gradient with three colors of your choice.\n\nGetting started is simple:\n1. Choose a compatible ESP32-based LED controller, power supply, and LED strip.\n2. Connect the strip and power supply following your controller's instructions.\n3. Open https://app.luxio.lighting to install Luxio over USB and connect it to your Wi-Fi network.\n4. Add a Luxio device in Homey to discover your lights on the same local network.\n\nLuxio supports RGB, RGBW, and RGBCCT strips, including WS2811, WS2812/WS2812B, WS2813, WS2815, WS2814, SK6812, and WS2805.\n\nFind compatible controllers, setup instructions, and the source code at https://luxio.lighting.\n"
+      },
+      "description": {
+        "en": "Connect Luxio LED Strips to Homey."
+      },
+      "category": "lights",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/lighting.luxio/3/8962bab2-e2d8-400f-9569-f73e2d35782a/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/lighting.luxio/3/8962bab2-e2d8-400f-9569-f73e2d35782a/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/lighting.luxio/3/8962bab2-e2d8-400f-9569-f73e2d35782a/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "luxio",
+          "name": {
+            "en": "Luxio"
+          },
+          "class": "light",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "light_hue",
+            "light_saturation"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/lighting.luxio/3/8962bab2-e2d8-400f-9569-f73e2d35782a/drivers/luxio/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/lighting.luxio/3/8962bab2-e2d8-400f-9569-f73e2d35782a/drivers/luxio/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/lighting.luxio/3/8962bab2-e2d8-400f-9569-f73e2d35782a/drivers/luxio/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": [
+          {
+            "id": "set-gradient",
+            "title": {
+              "en": "Set a Gradient"
+            },
+            "titleFormatted": {
+              "en": "Set Gradient [[color1]] [[color2]] [[color3]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "color1",
+                "type": "color",
+                "title": {
+                  "en": "Color 1"
+                }
+              },
+              {
+                "name": "color2",
+                "type": "color",
+                "title": {
+                  "en": "Color 2"
+                }
+              },
+              {
+                "name": "color3",
+                "type": "color",
+                "title": {
+                  "en": "Color 3"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set-saved-color",
+            "title": {
+              "en": "Set a saved color"
+            },
+            "titleFormatted": {
+              "en": "Set saved color [[color]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "color",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Color"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set-saved-gradient",
+            "title": {
+              "en": "Set a saved gradient"
+            },
+            "titleFormatted": {
+              "en": "Set saved gradient [[gradient]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "gradient",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Gradient"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set-saved-animation",
+            "title": {
+              "en": "Set a saved animation"
+            },
+            "titleFormatted": {
+              "en": "Set saved animation [[animation]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "animation",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Animation"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set-preset-color",
+            "title": {
+              "en": "Set a preset color"
+            },
+            "titleFormatted": {
+              "en": "Set preset color [[color]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "color",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Color"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set-preset-gradient",
+            "title": {
+              "en": "Set a preset gradient"
+            },
+            "titleFormatted": {
+              "en": "Set preset gradient [[gradient]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "gradient",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Gradient"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set-preset-animation",
+            "title": {
+              "en": "Set a preset animation"
+            },
+            "titleFormatted": {
+              "en": "Set preset animation [[animation]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=luxio"
+              },
+              {
+                "name": "animation",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Animation"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-10-31T13:53:56.789Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://luxio.lighting",
+      "source": "https://github.com/luxio-lighting/luxio-homey",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Added the source URL."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.2",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcaba391c90c866f9364985",
+      "type": "user",
+      "userId": "5531600e09adaac11cee4c5f",
+      "name": "Emile Nijssen",
+      "verified": true
+    },
+    "communityTopicId": null
+  }
+]
