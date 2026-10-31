@@ -1280,10 +1280,10 @@
     "name": "Aqara",
     "developerName": "Lumi Technology Co., Ltd.",
     "developerId": "6aba92d8c81c8a2ff99cc4d0",
-    "version": "1.19.2",
+    "version": "1.20.0",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:58:26.294Z",
-    "updatedAt": "2026-10-21T08:42:36.034Z",
+    "updatedAt": "2026-10-31T09:47:34.827Z",
     "communityTopicId": 156
   },
   {
@@ -1786,10 +1786,10 @@
     "name": "Slide",
     "developerName": "Innovation in Motion",
     "developerId": "5e7a002c244cb068defd9ae8",
-    "version": "2.0.2",
+    "version": "2.0.3",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:00:20.384Z",
-    "updatedAt": "2024-05-20T13:20:25.380Z",
+    "updatedAt": "2026-10-31T09:47:34.828Z",
     "communityTopicId": 11915
   },
   {
@@ -3161,10 +3161,10 @@
     "name": "temperatur.nu",
     "developerName": "Fredrik Johnsson",
     "developerId": "5dcabc451c90c866f93664b8",
-    "version": "3.1.0",
-    "sourceRepository": "",
+    "version": "3.1.1",
+    "sourceRepository": "https://github.com/fredrikjohnsson/temperaturnu",
     "publishedAt": "2019-11-12T14:05:57.822Z",
-    "updatedAt": "2026-10-29T10:09:55.957Z",
+    "updatedAt": "2026-10-31T09:47:34.828Z",
     "communityTopicId": null
   },
   {
@@ -4932,10 +4932,10 @@
     "name": "Todoist",
     "developerName": "Erik van Leeuwen",
     "developerId": "66d710c3645b24bd5bd1ab86",
-    "version": "2.1.1",
+    "version": "2.2.1",
     "sourceRepository": "https://github.com/erikvl87/nl.erikvl87.todoist",
     "publishedAt": "2021-01-30T21:47:29.320Z",
-    "updatedAt": "2026-10-27T09:09:00.885Z",
+    "updatedAt": "2026-10-31T09:47:34.828Z",
     "communityTopicId": 42818
   },
   {
@@ -10960,10 +10960,10 @@
     "name": "MELCloud Optimizer",
     "developerName": "Kjetil Vetlejord",
     "developerId": "67375672065f03b3ce383521",
-    "version": "14.0.88",
+    "version": "14.0.89",
     "sourceRepository": "",
     "publishedAt": "2025-04-24T21:04:45.703Z",
-    "updatedAt": "2026-10-29T10:09:55.958Z",
+    "updatedAt": "2026-10-31T09:47:34.828Z",
     "communityTopicId": 136325
   },
   {
@@ -11895,10 +11895,10 @@
     "name": "Smart (Components) Toolkit",
     "developerName": "Lars Kvanum",
     "developerId": "68e79f7378936837cbe73285",
-    "version": "1.10.16",
+    "version": "1.10.38",
     "sourceRepository": "https://github.com/Tiwas/SmartComponentsToolkit",
     "publishedAt": "2025-10-09T11:41:39.397Z",
-    "updatedAt": "2026-09-07T12:51:21.180Z",
+    "updatedAt": "2026-10-31T09:47:34.828Z",
     "communityTopicId": null
   },
   {
@@ -12379,10 +12379,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.26.0",
+    "version": "3.27.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-10-30T10:12:31.889Z",
+    "updatedAt": "2026-10-31T09:47:34.828Z",
     "communityTopicId": 147496
   },
   {
@@ -13072,10 +13072,10 @@
     "name": "Siemens Synco Living",
     "developerName": "Solves with Code",
     "developerId": "6970a5912c2f5e3cd2033746",
-    "version": "1.1.6",
+    "version": "1.1.7",
     "sourceRepository": "https://github.com/therogg/homey-synco",
     "publishedAt": "2026-01-21T10:08:17.759Z",
-    "updatedAt": "2026-02-17T13:26:11.429Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -13215,10 +13215,10 @@
     "name": "Creality",
     "developerName": "Uğur BENEK",
     "developerId": "697f46341aed127334df8978",
-    "version": "1.2.12",
+    "version": "1.2.13",
     "sourceRepository": "",
     "publishedAt": "2026-02-01T12:42:09.798Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 150419
   },
   {
@@ -13281,10 +13281,10 @@
     "name": "Mercedes-Benz",
     "developerName": "Anders Dissing",
     "developerId": "6982f8687f99f3517122b175",
-    "version": "1.1.52",
+    "version": "1.1.53",
     "sourceRepository": "https://github.com/andersdissing/Mercedes-Benz-homey-app",
     "publishedAt": "2026-02-04T07:49:31.977Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 150571
   },
   {
@@ -14656,10 +14656,10 @@
     "name": "Remeha",
     "developerName": "Paul Vermeulen",
     "developerId": "69c95873699c29709ca12b8f",
-    "version": "1.1.1",
+    "version": "2.2.1",
     "sourceRepository": "",
     "publishedAt": "2026-03-29T16:50:59.707Z",
-    "updatedAt": "2026-09-29T17:57:30.405Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 153938
   },
   {
@@ -14711,10 +14711,10 @@
     "name": "HeatMeister",
     "developerName": "Paul Vermeulen",
     "developerId": "69c95873699c29709ca12b8f",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "sourceRepository": "",
     "publishedAt": "2026-04-01T16:16:42.693Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -14733,10 +14733,10 @@
     "name": "Huawei FusionSolar Manager",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.3.7",
+    "version": "1.3.9",
     "sourceRepository": "https://github.com/andiwirz/com.huawei.fusionsolar",
     "publishedAt": "2026-04-02T22:16:46.194Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 153353
   },
   {
@@ -15294,10 +15294,10 @@
     "name": "MOVA & Dreame Mower",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.1.41",
+    "version": "1.1.42",
     "sourceRepository": "https://github.com/andiwirz/com.mova-dreame.mower",
     "publishedAt": "2026-05-01T14:59:11.011Z",
-    "updatedAt": "2026-05-01T15:15:58.218Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 154425
   },
   {
@@ -15349,10 +15349,10 @@
     "name": "Mode Switch",
     "developerName": "Erik van Oosten",
     "developerId": "69f795bc2e89d815c5e502ad",
-    "version": "3.5.8",
+    "version": "3.6.1",
     "sourceRepository": "https://github.com/evoosten/com.modeswitch",
     "publishedAt": "2026-05-03T18:49:08.354Z",
-    "updatedAt": "2026-10-12T11:03:24.486Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 154885
   },
   {
@@ -16097,10 +16097,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.730",
+    "version": "1.0.739",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-30T10:12:31.889Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 156098
   },
   {
@@ -16350,10 +16350,10 @@
     "name": "Alfen Eve Single / ACE EV Charger",
     "developerName": "Barney 3245",
     "developerId": "685462f220832e6198b4c37a",
-    "version": "1.3.6",
+    "version": "1.3.7",
     "sourceRepository": "",
     "publishedAt": "2026-06-26T05:58:00.939Z",
-    "updatedAt": "2026-10-21T08:42:36.035Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -16581,10 +16581,10 @@
     "name": "Zigbee Insights",
     "developerName": "KM+JT LS",
     "developerId": "6a50a382ce38f245588d815f",
-    "version": "1.0.13",
+    "version": "1.1.6",
     "sourceRepository": "",
     "publishedAt": "2026-07-10T07:47:14.227Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -17428,10 +17428,10 @@
     "name": "OpenQuatt",
     "developerName": "OpenQuatt",
     "developerId": "6a88174ac8d34196bd67ba17",
-    "version": "1.13.0",
+    "version": "1.21.0",
     "sourceRepository": "https://github.com/OpenQuatt/homey-openquatt",
     "publishedAt": "2026-08-14T09:19:18.960Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -17857,10 +17857,10 @@
     "name": "Air Quality France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-01T10:30:33.102Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -18055,10 +18055,10 @@
     "name": "SolarAssistant",
     "developerName": "Morten Bech",
     "developerId": "6a9dc466336db3df05ad31c1",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/DrChip666/solarassistant-homey",
     "publishedAt": "2026-09-06T19:52:06.345Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 159254
   },
   {
@@ -18165,10 +18165,10 @@
     "name": "Lightkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "0.6.6",
+    "version": "1.0.0",
     "sourceRepository": "https://github.com/thomassidor/lightkeeper",
     "publishedAt": "2026-09-16T08:41:33.359Z",
-    "updatedAt": "2026-09-28T21:11:56.197Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": 159938
   },
   {
@@ -18198,10 +18198,10 @@
     "name": "Météo France",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "0.6.0",
+    "version": "0.7.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T08:53:59.631Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -18308,10 +18308,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.2.3",
+    "version": "1.2.6",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-10-31T09:47:34.829Z",
     "communityTopicId": null
   },
   {
@@ -18559,12 +18559,12 @@
   {
     "appId": "com.sgsmart.csrmesh",
     "name": "SG LEDDim",
-    "developerName": "Jonny Hanssen",
+    "developerName": "Trond Bildøy",
     "developerId": "6a9f88284b2b66c1158ea7af",
     "version": "2.4.1",
     "sourceRepository": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
     "publishedAt": "2026-09-24T16:02:23.949Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 159464
   },
   {
@@ -18572,10 +18572,10 @@
     "name": "Lepro",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "sourceRepository": "https://github.com/smarthomesven/homey-lepro",
     "publishedAt": "2026-09-25T08:55:34.645Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 159951
   },
   {
@@ -18671,10 +18671,10 @@
     "name": "ESPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.6.1",
+    "version": "1.7.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T09:49:12.856Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 161065
   },
   {
@@ -18869,10 +18869,10 @@
     "name": "Starlink Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T10:16:17.049Z",
-    "updatedAt": "2026-10-30T10:12:31.890Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": null
   },
   {
@@ -18902,10 +18902,10 @@
     "name": "HUUM UKU Sauna",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.9.2",
+    "version": "0.9.3",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.huum",
     "publishedAt": "2026-10-05T10:37:08.582Z",
-    "updatedAt": "2026-10-05T10:37:08.582Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 159173
   },
   {
@@ -19067,10 +19067,10 @@
     "name": "UNAS Monitor",
     "developerName": "Henri Dominique Rapin",
     "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": null
   },
   {
@@ -19166,10 +19166,10 @@
     "name": "Widgetkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "1.0.3",
+    "version": "1.1.2",
     "sourceRepository": "https://github.com/thomassidor/widgetkeeper",
     "publishedAt": "2026-10-09T00:01:11.828Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 160453
   },
   {
@@ -19628,10 +19628,10 @@
     "name": "Sensible",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "1.20.0",
+    "version": "1.22.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-10-28T09:49:50.164Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 160962
   },
   {
@@ -19639,10 +19639,10 @@
     "name": "Drivie - Companion",
     "developerName": "Cyril Hendriks",
     "developerId": "6996ebeccd19af4229e539d5",
-    "version": "1.6.30",
+    "version": "1.7.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-23T08:39:47.523Z",
-    "updatedAt": "2026-10-28T09:49:50.164Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 161211
   },
   {
@@ -19804,10 +19804,10 @@
     "name": "Thermex",
     "developerName": "Jon Hye-Knudsen",
     "developerId": "6adf578b47d7399db6cd7de7",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "https://github.com/JonHyeKnudsen/dk.hye-knudsen.thermexwifihood",
     "publishedAt": "2026-10-29T17:42:38.096Z",
-    "updatedAt": "2026-10-29T17:42:38.096Z",
+    "updatedAt": "2026-10-31T09:47:34.830Z",
     "communityTopicId": 161368
   },
   {
