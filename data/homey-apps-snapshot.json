@@ -1529,17 +1529,6 @@
     "communityTopicId": null
   },
   {
-    "appId": "lighting.luxio.homey",
-    "name": "Luxio",
-    "developerName": "Emile Nijssen",
-    "developerId": "5dcaba391c90c866f9364985",
-    "version": "3.1.0",
-    "sourceRepository": "https://github.com/luxio-lighting/luxio-homey",
-    "publishedAt": "2019-11-12T13:59:17.506Z",
-    "updatedAt": "2024-04-01T12:51:38.680Z",
-    "communityTopicId": null
-  },
-  {
     "appId": "martens.screensavers",
     "name": "Screensavers",
     "developerName": "Koen Martens",
@@ -3832,10 +3821,10 @@
     "name": "Plejd",
     "developerName": "Emil Öhman",
     "developerId": "5dd998a831f29db624c0563a",
-    "version": "3.6.1",
+    "version": "3.6.2",
     "sourceRepository": "https://github.com/emilohman/homey-plejd",
     "publishedAt": "2019-11-23T20:38:00.560Z",
-    "updatedAt": "2026-10-20T08:41:17.556Z",
+    "updatedAt": "2026-11-01T10:37:46.448Z",
     "communityTopicId": 43266
   },
   {
@@ -4107,10 +4096,10 @@
     "name": "Ring",
     "developerName": "Danee de Kruyff",
     "developerId": "5dcaba6f1c90c866f9364c85",
-    "version": "2.14.27",
+    "version": "2.14.28",
     "sourceRepository": "https://github.com/daneedk/com.amazon.ring",
     "publishedAt": "2020-03-04T20:24:16.525Z",
-    "updatedAt": "2026-10-10T09:58:43.980Z",
+    "updatedAt": "2026-11-01T10:37:46.448Z",
     "communityTopicId": 76364
   },
   {
@@ -12423,10 +12412,10 @@
     "name": "WarmteWizard",
     "developerName": "Warmte Wizard",
     "developerId": "68ed4f8b78936837cbe81bee",
-    "version": "1.2.9",
+    "version": "1.2.11",
     "sourceRepository": "",
     "publishedAt": "2025-12-11T00:56:34.461Z",
-    "updatedAt": "2026-10-18T08:09:16.568Z",
+    "updatedAt": "2026-11-01T10:37:46.449Z",
     "communityTopicId": null
   },
   {
@@ -15976,10 +15965,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "5.2.6",
+    "version": "5.2.7",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-10-29T10:09:55.958Z",
+    "updatedAt": "2026-11-01T10:37:46.449Z",
     "communityTopicId": null
   },
   {
@@ -16097,10 +16086,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.739",
+    "version": "1.0.741",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-10-31T09:47:34.829Z",
+    "updatedAt": "2026-11-01T10:37:46.450Z",
     "communityTopicId": 156098
   },
   {
@@ -17296,10 +17285,10 @@
     "name": "Jura Connect",
     "developerName": "Wout Van der Aa",
     "developerId": "6a784365ac45e8acfcb8708a",
-    "version": "0.13.0",
+    "version": "0.13.1",
     "sourceRepository": "https://github.com/WoutvanderAa/homey-jura-connect",
     "publishedAt": "2026-08-09T09:17:07.689Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-11-01T10:37:46.450Z",
     "communityTopicId": 158080
   },
   {
@@ -19562,10 +19551,10 @@
     "name": "WebPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-21T16:13:45.803Z",
-    "updatedAt": "2026-10-30T10:12:31.890Z",
+    "updatedAt": "2026-11-01T10:37:46.450Z",
     "communityTopicId": 161151
   },
   {
@@ -19628,10 +19617,10 @@
     "name": "Sensible",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "1.22.0",
+    "version": "1.22.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-10-31T09:47:34.830Z",
+    "updatedAt": "2026-11-01T10:37:46.450Z",
     "communityTopicId": 160962
   },
   {
