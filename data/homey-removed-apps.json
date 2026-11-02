@@ -36,7 +36,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-11-02T11:24:40.234Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
     "type": "private",
     "private": true
   },
@@ -50,7 +50,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-11-02T11:24:40.206Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
     "type": "test",
     "private": false
   },
@@ -64,7 +64,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T19:36:16.541Z",
-    "lastCheckedAt": "2026-11-02T11:24:40.208Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
     "type": "test",
     "private": false
   },
@@ -165,5 +165,75 @@
     "lastCheckedAt": "2026-11-02T11:24:40.330Z",
     "type": "removed",
     "private": null
+  },
+  {
+    "appId": "com.lge.news",
+    "name": "News",
+    "developerName": "LG Electronics",
+    "developerId": "66b19e5c1e5a71f546c72faa",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "communityTopicId": null,
+    "publishedAt": "",
+    "removedAt": "2026-11-02T21:43:28.034Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
+    "type": "private",
+    "private": true
+  },
+  {
+    "appId": "com.roco.ancilla",
+    "name": "Ancilla",
+    "developerName": "Roco .",
+    "developerId": "5dcaba0a1c90c866f9364731",
+    "version": "0.1.4",
+    "sourceRepository": "",
+    "communityTopicId": null,
+    "publishedAt": "",
+    "removedAt": "2026-11-02T21:43:28.034Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
+    "type": "test",
+    "private": false
+  },
+  {
+    "appId": "com.community.heatpumpoptimizer",
+    "name": "Heatpump Smart Control",
+    "developerName": "Kenny S",
+    "developerId": "6acaa815bdc8421d78c58672",
+    "version": "1.7.12",
+    "sourceRepository": "",
+    "communityTopicId": 160675,
+    "publishedAt": "",
+    "removedAt": "2026-11-02T21:43:28.034Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
+    "type": "test",
+    "private": false
+  },
+  {
+    "appId": "com.pepane13.tsun",
+    "name": "TSUN Micro-inverters",
+    "developerName": "Pepane 13",
+    "developerId": "6adb66c547d7399db6cc2baf",
+    "version": "1.7.2",
+    "sourceRepository": "https://github.com/Pepane13/homey-tsun-microinverters",
+    "communityTopicId": 161262,
+    "publishedAt": "",
+    "removedAt": "2026-11-02T21:43:28.034Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
+    "type": "test",
+    "private": false
+  },
+  {
+    "appId": "com.pepane13.netmonitor",
+    "name": "Deco & Internet Monitor",
+    "developerName": "Pepane 13",
+    "developerId": "6adb66c547d7399db6cc2baf",
+    "version": "1.1.2",
+    "sourceRepository": "https://github.com/Pepane13/homey-deco-internet-monitor",
+    "communityTopicId": null,
+    "publishedAt": "",
+    "removedAt": "2026-11-02T21:43:28.034Z",
+    "lastCheckedAt": "2026-11-02T21:43:28.034Z",
+    "type": "test",
+    "private": false
   }
 ]

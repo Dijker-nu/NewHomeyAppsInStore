@@ -11,3 +11,5 @@ ai.zigbee.aqara
 com.roco.ancilla
 nl.joey.hmipgarage
 com.community.heatpumpoptimizer
+com.pepane13.tsun
+com.pepane13.netmonitor
