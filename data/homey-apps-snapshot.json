@@ -2589,10 +2589,10 @@
     "name": "Picnic",
     "developerName": "Sander Maas",
     "developerId": "5dcaba361c90c866f9364965",
-    "version": "3.8.2",
+    "version": "3.9.0",
     "sourceRepository": "https://github.com/Retrospected/app.picnic",
     "publishedAt": "2019-11-12T14:03:42.026Z",
-    "updatedAt": "2026-09-30T09:49:35.524Z",
+    "updatedAt": "2026-11-02T11:24:40.073Z",
     "communityTopicId": 78811
   },
   {
@@ -4096,10 +4096,10 @@
     "name": "Ring",
     "developerName": "Danee de Kruyff",
     "developerId": "5dcaba6f1c90c866f9364c85",
-    "version": "2.14.28",
+    "version": "2.14.30",
     "sourceRepository": "https://github.com/daneedk/com.amazon.ring",
     "publishedAt": "2020-03-04T20:24:16.525Z",
-    "updatedAt": "2026-11-01T10:37:46.448Z",
+    "updatedAt": "2026-11-02T11:24:40.074Z",
     "communityTopicId": 76364
   },
   {
@@ -9365,10 +9365,10 @@
     "name": "Blauberg Vento",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.4.10",
+    "version": "1.4.11",
     "sourceRepository": "https://github.com/kaohlive/com.blauberg.vento",
     "publishedAt": "2024-06-10T22:25:25.545Z",
-    "updatedAt": "2026-10-15T08:25:54.832Z",
+    "updatedAt": "2026-11-02T11:24:40.075Z",
     "communityTopicId": 111339
   },
   {
@@ -12940,10 +12940,10 @@
     "name": "DIFTAR",
     "developerName": "Kenny Moens",
     "developerId": "66ffa09c645b24bd5bc1b47f",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/diftar",
     "publishedAt": "2026-01-11T12:01:18.074Z",
-    "updatedAt": "2026-01-30T14:09:19.265Z",
+    "updatedAt": "2026-11-02T11:24:40.075Z",
     "communityTopicId": 149035
   },
   {
@@ -13589,10 +13589,10 @@
     "name": "Music Assistant",
     "developerName": "Cyril Hendriks",
     "developerId": "6996ebeccd19af4229e539d5",
-    "version": "2.6.4",
+    "version": "2.6.5",
     "sourceRepository": "",
     "publishedAt": "2026-02-19T10:54:36.826Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-11-02T11:24:40.075Z",
     "communityTopicId": 151738
   },
   {
@@ -14645,10 +14645,10 @@
     "name": "Remeha",
     "developerName": "Paul Vermeulen",
     "developerId": "69c95873699c29709ca12b8f",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "sourceRepository": "",
     "publishedAt": "2026-03-29T16:50:59.707Z",
-    "updatedAt": "2026-10-31T09:47:34.829Z",
+    "updatedAt": "2026-11-02T11:24:40.075Z",
     "communityTopicId": 153938
   },
   {
@@ -16086,10 +16086,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.741",
+    "version": "1.0.743",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-11-01T10:37:46.450Z",
+    "updatedAt": "2026-11-02T11:24:40.076Z",
     "communityTopicId": 156098
   },
   {
@@ -16416,10 +16416,10 @@
     "name": "Wear OS/ESP32 panel Controller",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.49.5",
+    "version": "1.49.6",
     "sourceRepository": "",
     "publishedAt": "2026-07-01T17:00:51.035Z",
-    "updatedAt": "2026-10-30T10:12:31.889Z",
+    "updatedAt": "2026-11-02T11:24:40.076Z",
     "communityTopicId": 156700
   },
   {
@@ -17164,10 +17164,10 @@
     "name": "Arlo Connect",
     "developerName": "Mikael Creson",
     "developerId": "6a6f91f632b0f6166a4ed359",
-    "version": "1.0.50",
+    "version": "1.0.55",
     "sourceRepository": "",
     "publishedAt": "2026-08-02T18:52:38.869Z",
-    "updatedAt": "2026-10-24T08:15:13.305Z",
+    "updatedAt": "2026-11-02T11:24:40.076Z",
     "communityTopicId": null
   },
   {
@@ -19078,10 +19078,10 @@
     "name": "Zendure Classic",
     "developerName": "Lars Andresen",
     "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "sourceRepository": "",
     "publishedAt": "2026-10-08T18:05:24.603Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-11-02T11:24:40.076Z",
     "communityTopicId": 160523
   },
   {
@@ -19551,10 +19551,10 @@
     "name": "WebPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.7.0",
+    "version": "1.7.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-21T16:13:45.803Z",
-    "updatedAt": "2026-11-01T10:37:46.450Z",
+    "updatedAt": "2026-11-02T11:24:40.076Z",
     "communityTopicId": 161151
   },
   {
@@ -19617,10 +19617,10 @@
     "name": "Sensible",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "1.22.1",
+    "version": "1.22.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-11-01T10:37:46.450Z",
+    "updatedAt": "2026-11-02T11:24:40.076Z",
     "communityTopicId": 160962
   },
   {
