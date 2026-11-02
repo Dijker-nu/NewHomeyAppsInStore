@@ -19864,5 +19864,16 @@
     "publishedAt": "2026-10-31T16:26:12.164Z",
     "updatedAt": "2026-10-31T16:26:12.164Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.roypedrinis.twon",
+    "name": "2N",
+    "developerName": "Roy PEDRINIS",
+    "developerId": "6adbcbe447d7399db6cc41b2",
+    "version": "0.4.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-02T20:57:39.941Z",
+    "updatedAt": "2026-11-02T20:57:39.941Z",
+    "communityTopicId": null
   }
 ]

@@ -1,1 +1,2042 @@
-[]
+[
+  {
+    "id": "com.roypedrinis.twon",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "2N",
+        "fr": "2N"
+      },
+      "version": "0.4.1",
+      "readme": {
+        "en": "Your 2N intercom is the front door of your smart home. This app brings 2N intercoms, access units and indoor stations into Homey Pro, fully local and without any cloud. See who is at the door on the camera, open it from a Flow, and know in real time who rang, who badged in and who was refused.\n\nUse calls, doors, alarms and the device history to trigger lights, scenes and notifications. It works with the 2N IP Verso 2.0, IP Style, IP Force 2.0, IP One, IP Solo, Access Unit 2.0, Access Unit M, Indoor View and Indoor Compact. Tested with the IP Verso 2.0, Access Unit 2.0 and Indoor View: the other models use the same API but have not all been tested. This is an unofficial app, not affiliated with 2N.\n",
+        "fr": "Votre interphone 2N est la porte d'entrée de votre maison connectée. Cette app intègre les interphones, contrôles d'accès et postes intérieurs 2N à Homey Pro, entièrement en local et sans cloud. Voyez qui est à la porte grâce à la caméra, ouvrez-la depuis un Flow, et sachez en temps réel qui a sonné, qui a badgé et qui a été refusé.\n\nUtilisez les appels, les portes, les alarmes et l'historique de l'appareil pour déclencher lumières, scènes et notifications. Elle fonctionne avec les 2N IP Verso 2.0, IP Style, IP Force 2.0, IP One, IP Solo, Access Unit 2.0, Access Unit M, Indoor View et Indoor Compact. Testée avec les IP Verso 2.0, Access Unit 2.0 et Indoor View : les autres modèles utilisent la même API mais n'ont pas tous été testés. Application non officielle, sans lien avec 2N.\n"
+      },
+      "description": {
+        "en": "Know who is at your door, and let them in from anywhere in your home.",
+        "fr": "Sachez qui est à votre porte et ouvrez-la depuis n'importe où chez vous."
+      },
+      "category": "security",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "access_unit",
+          "name": {
+            "en": "2N Access Unit 2.0"
+          },
+          "class": "other",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit/assets/icon.svg"
+        },
+        {
+          "id": "access_unit_m",
+          "name": {
+            "en": "2N Access Unit M"
+          },
+          "class": "other",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit_m/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit_m/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit_m/assets/icon.svg"
+        },
+        {
+          "id": "indoor_compact",
+          "name": {
+            "en": "2N Indoor Compact"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "alarm_generic"
+          ],
+          "capabilitiesOptions": {
+            "alarm_generic": {
+              "title": {
+                "en": "Call in progress",
+                "fr": "Appel en cours"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_compact/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_compact/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_compact/assets/icon.svg"
+        },
+        {
+          "id": "indoor_view",
+          "name": {
+            "en": "2N Indoor View"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "alarm_generic"
+          ],
+          "capabilitiesOptions": {
+            "alarm_generic": {
+              "title": {
+                "en": "Call in progress",
+                "fr": "Appel en cours"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_view/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_view/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_view/assets/icon.svg"
+        },
+        {
+          "id": "ip_force",
+          "name": {
+            "en": "2N IP Force 2.0"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_force/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_force/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_force/assets/icon.svg"
+        },
+        {
+          "id": "ip_one",
+          "name": {
+            "en": "2N IP One"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_one/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_one/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_one/assets/icon.svg"
+        },
+        {
+          "id": "ip_solo",
+          "name": {
+            "en": "2N IP Solo"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_solo/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_solo/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_solo/assets/icon.svg"
+        },
+        {
+          "id": "ip_style",
+          "name": {
+            "en": "2N IP Style"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_style/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_style/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_style/assets/icon.svg"
+        },
+        {
+          "id": "verso",
+          "name": {
+            "en": "2N IP Verso 2.0"
+          },
+          "class": "doorbell",
+          "capabilities": [
+            "button.switch1"
+          ],
+          "capabilitiesOptions": {
+            "button.switch1": {
+              "title": {
+                "en": "Open door 1",
+                "fr": "Ouvrir porte 1"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/verso/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/verso/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/verso/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "access_limited",
+            "title": {
+              "en": "Access was limited",
+              "fr": "L'accès a été limité"
+            },
+            "titleFormatted": {
+              "en": "Access [[state]]",
+              "fr": "Accès [[state]]"
+            },
+            "hint": {
+              "en": "Triggered when the device reports that access is limited.",
+              "fr": "Déclenché quand l'appareil signale que l'accès est limité."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "is limited",
+                      "fr": "est limité"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "is available again",
+                      "fr": "est de nouveau disponible"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              },
+              {
+                "name": "type",
+                "type": "string",
+                "title": {
+                  "en": "Type",
+                  "fr": "Type"
+                }
+              }
+            ]
+          },
+          {
+            "id": "audio_test_finished",
+            "title": {
+              "en": "The audio test finished",
+              "fr": "Le test audio est terminé"
+            },
+            "titleFormatted": {
+              "en": "The audio test [[result]]",
+              "fr": "Le test audio [[result]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+              },
+              {
+                "type": "dropdown",
+                "name": "result",
+                "values": [
+                  {
+                    "id": "any",
+                    "label": {
+                      "en": "finished",
+                      "fr": "est terminé"
+                    }
+                  },
+                  {
+                    "id": "passed",
+                    "label": {
+                      "en": "passed",
+                      "fr": "a réussi"
+                    }
+                  },
+                  {
+                    "id": "failed",
+                    "label": {
+                      "en": "failed",
+                      "fr": "a échoué"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "result",
+                "type": "string",
+                "title": {
+                  "en": "Result",
+                  "fr": "Résultat"
+                }
+              }
+            ]
+          },
+          {
+            "id": "call_state_changed",
+            "title": {
+              "en": "A call changed state",
+              "fr": "Un appel a changé d'état"
+            },
+            "titleFormatted": {
+              "en": "A call is [[state]]",
+              "fr": "Un appel est [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "any",
+                    "label": {
+                      "en": "in any state",
+                      "fr": "dans un état quelconque"
+                    }
+                  },
+                  {
+                    "id": "ringing",
+                    "label": {
+                      "en": "ringing",
+                      "fr": "en train de sonner"
+                    }
+                  },
+                  {
+                    "id": "connected",
+                    "label": {
+                      "en": "answered",
+                      "fr": "décroché"
+                    }
+                  },
+                  {
+                    "id": "terminated",
+                    "label": {
+                      "en": "ended",
+                      "fr": "terminé"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              },
+              {
+                "name": "direction",
+                "type": "string",
+                "title": {
+                  "en": "Direction",
+                  "fr": "Sens"
+                }
+              },
+              {
+                "name": "peer",
+                "type": "string",
+                "title": {
+                  "en": "Caller / callee",
+                  "fr": "Appelant / appelé"
+                }
+              },
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "fr": "Motif"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "card_held",
+            "title": {
+              "en": "A card was held",
+              "fr": "Un badge a été maintenu"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "uid",
+                "type": "string",
+                "title": {
+                  "en": "Card",
+                  "fr": "Badge"
+                }
+              },
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              }
+            ]
+          },
+          {
+            "id": "card_scanned",
+            "title": {
+              "en": "A card was scanned",
+              "fr": "Un badge a été lu"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "card",
+                "type": "string",
+                "title": {
+                  "en": "Card",
+                  "fr": "Badge"
+                }
+              },
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "code_entered",
+            "title": {
+              "en": "A code was entered",
+              "fr": "Un code a été saisi"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "door_open_too_long",
+            "title": {
+              "en": "Door left open too long",
+              "fr": "Porte restée ouverte trop longtemps"
+            },
+            "titleFormatted": {
+              "en": "The door [[state]]",
+              "fr": "La porte [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "was left open too long",
+                      "fr": "est restée ouverte trop longtemps"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "is closed again",
+                      "fr": "est refermée"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              }
+            ]
+          },
+          {
+            "id": "door_opened",
+            "title": {
+              "en": "A switch was activated",
+              "fr": "Un relais a été activé"
+            },
+            "titleFormatted": {
+              "en": "A switch was activated by [[origin]]",
+              "fr": "Un relais a été activé par [[origin]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "origin",
+                "values": [
+                  {
+                    "id": "any",
+                    "label": {
+                      "en": "anything",
+                      "fr": "n'importe quoi"
+                    }
+                  },
+                  {
+                    "id": "auth",
+                    "label": {
+                      "en": "an authentication",
+                      "fr": "une authentification"
+                    }
+                  },
+                  {
+                    "id": "rex",
+                    "label": {
+                      "en": "the exit button",
+                      "fr": "le bouton de sortie"
+                    }
+                  },
+                  {
+                    "id": "api",
+                    "label": {
+                      "en": "Homey or the API",
+                      "fr": "Homey ou l'API"
+                    }
+                  },
+                  {
+                    "id": "dtmf",
+                    "label": {
+                      "en": "a call code",
+                      "fr": "un code pendant un appel"
+                    }
+                  },
+                  {
+                    "id": "profile",
+                    "label": {
+                      "en": "a schedule",
+                      "fr": "un horaire"
+                    }
+                  },
+                  {
+                    "id": "automation",
+                    "label": {
+                      "en": "an automation",
+                      "fr": "une automatisation"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "switch",
+                "type": "number",
+                "title": {
+                  "en": "Switch",
+                  "fr": "Relais"
+                }
+              },
+              {
+                "name": "origin",
+                "type": "string",
+                "title": {
+                  "en": "Activated by",
+                  "fr": "Activé par"
+                }
+              }
+            ]
+          },
+          {
+            "id": "door_state_changed",
+            "title": {
+              "en": "The door sensor changed state",
+              "fr": "Le capteur de porte a changé d'état"
+            },
+            "titleFormatted": {
+              "en": "The door is [[state]]",
+              "fr": "La porte est [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "opened",
+                    "label": {
+                      "en": "opened",
+                      "fr": "ouverte"
+                    }
+                  },
+                  {
+                    "id": "closed",
+                    "label": {
+                      "en": "closed",
+                      "fr": "fermée"
+                    }
+                  },
+                  {
+                    "id": "any",
+                    "label": {
+                      "en": "opened or closed",
+                      "fr": "ouverte ou fermée"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              }
+            ]
+          },
+          {
+            "id": "dtmf_entered",
+            "title": {
+              "en": "A DTMF code was entered during a call",
+              "fr": "Un code DTMF a été saisi pendant un appel"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              },
+              {
+                "name": "type",
+                "type": "string",
+                "title": {
+                  "en": "Code type",
+                  "fr": "Type de code"
+                }
+              }
+            ]
+          },
+          {
+            "id": "finger_scanned",
+            "title": {
+              "en": "A fingerprint was scanned",
+              "fr": "Une empreinte a été lue"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              },
+              {
+                "name": "uuid",
+                "type": "string",
+                "title": {
+                  "en": "User ID",
+                  "fr": "ID utilisateur"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "key_pressed",
+            "title": {
+              "en": "A button or key was pressed",
+              "fr": "Appui sur un bouton ou une touche"
+            },
+            "titleFormatted": {
+              "en": "A button or key [[key]] was pressed",
+              "fr": "Appui sur le bouton ou la touche [[key]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m|indoor_view|indoor_compact"
+              },
+              {
+                "type": "text",
+                "name": "key",
+                "placeholder": {
+                  "en": "Any (leave empty)",
+                  "fr": "Toutes (laisser vide)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "key",
+                "type": "string",
+                "title": {
+                  "en": "Key",
+                  "fr": "Touche"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "login_blocked",
+            "title": {
+              "en": "The web login was blocked",
+              "fr": "La connexion web a été bloquée"
+            },
+            "hint": {
+              "en": "Too many invalid logins to the device web interface.",
+              "fr": "Trop de connexions invalides à l'interface web de l'appareil."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m|indoor_view|indoor_compact"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "IP address",
+                  "fr": "Adresse IP"
+                }
+              }
+            ]
+          },
+          {
+            "id": "mobile_key_used",
+            "title": {
+              "en": "A Bluetooth mobile key was used",
+              "fr": "Une clé mobile Bluetooth a été utilisée"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              },
+              {
+                "name": "uuid",
+                "type": "string",
+                "title": {
+                  "en": "User ID",
+                  "fr": "ID utilisateur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "motion_detected",
+            "title": {
+              "en": "Motion detected by the camera",
+              "fr": "Mouvement détecté par la caméra"
+            },
+            "titleFormatted": {
+              "en": "Camera motion [[state]]",
+              "fr": "Mouvement caméra [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "detected",
+                      "fr": "détecté"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "ended",
+                      "fr": "terminé"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "noise_detected",
+            "title": {
+              "en": "Unusual noise detected",
+              "fr": "Bruit anormal détecté"
+            },
+            "titleFormatted": {
+              "en": "Unusual noise [[state]]",
+              "fr": "Bruit anormal [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "detected",
+                      "fr": "détecté"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "ended",
+                      "fr": "terminé"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rex_activated",
+            "title": {
+              "en": "The exit button was pressed",
+              "fr": "Le bouton de sortie a été actionné"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ]
+          },
+          {
+            "id": "silent_alarm",
+            "title": {
+              "en": "Silent alarm",
+              "fr": "Alarme silencieuse"
+            },
+            "titleFormatted": {
+              "en": "Silent alarm [[state]]",
+              "fr": "Alarme silencieuse [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "triggered",
+                      "fr": "déclenchée"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "ended",
+                      "fr": "terminée"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              }
+            ]
+          },
+          {
+            "id": "sip_registration_changed",
+            "title": {
+              "en": "The SIP registration changed",
+              "fr": "L'enregistrement SIP a changé"
+            },
+            "titleFormatted": {
+              "en": "The SIP account is [[state]]",
+              "fr": "Le compte SIP est [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "any",
+                    "label": {
+                      "en": "in any state",
+                      "fr": "dans un état quelconque"
+                    }
+                  },
+                  {
+                    "id": "registered",
+                    "label": {
+                      "en": "registered",
+                      "fr": "enregistré"
+                    }
+                  },
+                  {
+                    "id": "unregistered",
+                    "label": {
+                      "en": "unregistered",
+                      "fr": "désenregistré"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              },
+              {
+                "name": "account",
+                "type": "number",
+                "title": {
+                  "en": "SIP account",
+                  "fr": "Compte SIP"
+                }
+              }
+            ]
+          },
+          {
+            "id": "tamper_activated",
+            "title": {
+              "en": "The device cover was opened",
+              "fr": "Le boîtier a été ouvert"
+            },
+            "titleFormatted": {
+              "en": "Tamper switch [[state]]",
+              "fr": "Contact anti-arrachement [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "activated",
+                      "fr": "activé"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "restored",
+                      "fr": "rétabli"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              }
+            ]
+          },
+          {
+            "id": "unauthorized_door_open",
+            "title": {
+              "en": "Forced door opening",
+              "fr": "Ouverture forcée de la porte"
+            },
+            "titleFormatted": {
+              "en": "Forced door opening [[state]]",
+              "fr": "Ouverture forcée de la porte [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "in",
+                    "label": {
+                      "en": "detected",
+                      "fr": "détectée"
+                    }
+                  },
+                  {
+                    "id": "out",
+                    "label": {
+                      "en": "ended",
+                      "fr": "terminée"
+                    }
+                  }
+                ]
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "State",
+                  "fr": "État"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "user_authenticated",
+            "title": {
+              "en": "A user was granted access",
+              "fr": "Un utilisateur a obtenu l'accès"
+            },
+            "titleFormatted": {
+              "en": "[[user]] was granted access",
+              "fr": "[[user]] a obtenu l'accès"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "text",
+                "name": "user",
+                "placeholder": {
+                  "en": "Any user (leave empty)",
+                  "fr": "Tout utilisateur (laisser vide)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "user",
+                "type": "string",
+                "title": {
+                  "en": "User",
+                  "fr": "Utilisateur"
+                }
+              },
+              {
+                "name": "uuid",
+                "type": "string",
+                "title": {
+                  "en": "User ID",
+                  "fr": "ID utilisateur"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              }
+            ]
+          },
+          {
+            "id": "user_rejected",
+            "title": {
+              "en": "Access was refused",
+              "fr": "Un accès a été refusé"
+            },
+            "titleFormatted": {
+              "en": "Access was refused for [[user]]",
+              "fr": "Accès refusé pour [[user]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "text",
+                "name": "user",
+                "placeholder": {
+                  "en": "Any user (leave empty)",
+                  "fr": "Tout utilisateur (laisser vide)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "user",
+                "type": "string",
+                "title": {
+                  "en": "User",
+                  "fr": "Utilisateur"
+                }
+              },
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "fr": "Raison"
+                }
+              },
+              {
+                "name": "picture",
+                "type": "image",
+                "title": {
+                  "en": "Picture",
+                  "fr": "Photo"
+                }
+              },
+              {
+                "name": "reason_code",
+                "type": "string",
+                "title": {
+                  "en": "Reason code",
+                  "fr": "Code du motif"
+                }
+              }
+            ]
+          },
+          {
+            "id": "wavekey_used",
+            "title": {
+              "en": "A WaveKey was used",
+              "fr": "Une WaveKey a été utilisée"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "valid",
+                "type": "boolean",
+                "title": {
+                  "en": "Valid",
+                  "fr": "Valide"
+                }
+              },
+              {
+                "name": "uuid",
+                "type": "string",
+                "title": {
+                  "en": "User ID",
+                  "fr": "ID utilisateur"
+                }
+              },
+              {
+                "name": "type",
+                "type": "string",
+                "title": {
+                  "en": "Type",
+                  "fr": "Type"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "switch_is_active",
+            "title": {
+              "en": "Door switch is !{{active|inactive}}",
+              "fr": "Le relais de porte est !{{actif|inactif}}"
+            },
+            "titleFormatted": {
+              "en": "Door switch [[door]] is !{{active|inactive}}",
+              "fr": "Le relais de la porte [[door]] est !{{actif|inactif}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "switch_is_held",
+            "title": {
+              "en": "Door switch is !{{held open|not held}}",
+              "fr": "Le relais de porte est !{{maintenu|libre}}"
+            },
+            "titleFormatted": {
+              "en": "Door switch [[door]] is !{{held open|not held}}",
+              "fr": "Le relais de la porte [[door]] est !{{maintenu|libre}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "switch_is_locked",
+            "title": {
+              "en": "Door switch is !{{locked|unlocked}}",
+              "fr": "Le relais de porte est !{{verrouillé|déverrouillé}}"
+            },
+            "titleFormatted": {
+              "en": "Door switch [[door]] is !{{locked|unlocked}}",
+              "fr": "Le relais de la porte [[door]] est !{{verrouillé|déverrouillé}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "answer_call",
+            "title": {
+              "en": "Answer the incoming call",
+              "fr": "Décrocher l'appel entrant"
+            },
+            "titleFormatted": {
+              "en": "Answer the incoming call",
+              "fr": "Décrocher l'appel entrant"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=indoor_view|indoor_compact"
+              }
+            ]
+          },
+          {
+            "id": "dial_call",
+            "title": {
+              "en": "Start a call",
+              "fr": "Lancer un appel"
+            },
+            "titleFormatted": {
+              "en": "Call [[number]]",
+              "fr": "Appeler [[number]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+              },
+              {
+                "type": "text",
+                "name": "number",
+                "placeholder": {
+                  "en": "sip:1001@192.168.1.10 or number",
+                  "fr": "sip:1001@192.168.1.10 ou numéro"
+                }
+              }
+            ]
+          },
+          {
+            "id": "hangup_call",
+            "title": {
+              "en": "Hang up the current call",
+              "fr": "Raccrocher l'appel en cours"
+            },
+            "titleFormatted": {
+              "en": "Hang up the current call",
+              "fr": "Raccrocher l'appel en cours"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+              }
+            ]
+          },
+          {
+            "id": "open_door",
+            "title": {
+              "en": "Open the door",
+              "fr": "Ouvrir la porte"
+            },
+            "titleFormatted": {
+              "en": "Open door [[door]]",
+              "fr": "Ouvrir la porte [[door]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_output",
+            "title": {
+              "en": "Set an output",
+              "fr": "Piloter une sortie"
+            },
+            "titleFormatted": {
+              "en": "Set output [[port]] to [[state]]",
+              "fr": "Mettre la sortie [[port]] sur [[state]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "autocomplete",
+                "name": "port",
+                "placeholder": {
+                  "en": "Output",
+                  "fr": "Sortie"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "On",
+                      "fr": "Activée"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "Off",
+                      "fr": "Désactivée"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "switch_hold",
+            "title": {
+              "en": "Hold a door open",
+              "fr": "Maintenir une porte ouverte"
+            },
+            "titleFormatted": {
+              "en": "Hold door [[door]] open for [[minutes]] minutes",
+              "fr": "Maintenir la porte [[door]] ouverte pendant [[minutes]] minutes"
+            },
+            "hint": {
+              "en": "Keeps the door switch active. Use 0 minutes to hold until you release it.",
+              "fr": "Garde le relais de la porte actif. Saisissez 0 minute pour le maintenir jusqu'à sa libération."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "min": 0,
+                "max": 1440,
+                "step": 1,
+                "placeholder": {
+                  "en": "0 until released",
+                  "fr": "0 jusqu'à libération"
+                }
+              }
+            ]
+          },
+          {
+            "id": "switch_lock",
+            "title": {
+              "en": "Lock a door switch",
+              "fr": "Verrouiller un relais de porte"
+            },
+            "titleFormatted": {
+              "en": "Lock door switch [[door]]",
+              "fr": "Verrouiller le relais de la porte [[door]]"
+            },
+            "hint": {
+              "en": "A locked switch cannot be operated, not even with a card or a code.",
+              "fr": "Un relais verrouillé ne peut plus être actionné, même avec un badge ou un code."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "switch_release",
+            "title": {
+              "en": "Release a held door",
+              "fr": "Libérer une porte maintenue"
+            },
+            "titleFormatted": {
+              "en": "Release door [[door]]",
+              "fr": "Libérer la porte [[door]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "switch_unlock",
+            "title": {
+              "en": "Unlock a door switch",
+              "fr": "Déverrouiller un relais de porte"
+            },
+            "titleFormatted": {
+              "en": "Unlock door switch [[door]]",
+              "fr": "Déverrouiller le relais de la porte [[door]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+              },
+              {
+                "type": "dropdown",
+                "name": "door",
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "1",
+                      "fr": "1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "2",
+                      "fr": "2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "3",
+                      "fr": "3"
+                    }
+                  },
+                  {
+                    "id": "4",
+                    "label": {
+                      "en": "4",
+                      "fr": "4"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-02T16:19:15.730Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:roypedrinis@me.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "New app and driver photos, shorter readme, removed placeholder community link, new triggers, actions and conditions."
+      },
+      "compatibility": ">=12.2.0",
+      "tags": {
+        "en": [
+          "2N",
+          "intercom",
+          "doorbell",
+          "access control"
+        ],
+        "fr": [
+          "2N",
+          "interphone",
+          "sonnette",
+          "contrôle d'accès"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.4.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6adbcbe447d7399db6cc41b2",
+      "type": "user",
+      "userId": "5e88c050efcb2f0c762f36c8",
+      "name": "Roy PEDRINIS",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]

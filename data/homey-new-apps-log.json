@@ -1,17 +1,5 @@
 [
   {
-    "appId": "nl.rvginkel.knoppen",
-    "name": "Dashboard Buttons",
-    "developerName": "Rene van Ginkel",
-    "developerId": "6aa2d6504b2b66c115905e09",
-    "version": "1.0.0",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-01T17:37:50.286Z",
-    "updatedAt": "2026-10-01T17:37:50.286Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-01T17:37:50.286Z"
-  },
-  {
     "appId": "com.rickd.huum",
     "name": "HUUM UKU Sauna",
     "developerName": "Richard Dubs",
@@ -1090,5 +1078,17 @@
     "updatedAt": "2026-10-31T16:26:12.164Z",
     "communityTopicId": null,
     "discoveredAt": "2026-10-31T16:26:12.164Z"
+  },
+  {
+    "appId": "com.roypedrinis.twon",
+    "name": "2N",
+    "developerName": "Roy PEDRINIS",
+    "developerId": "6adbcbe447d7399db6cc41b2",
+    "version": "0.4.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-02T20:57:39.941Z",
+    "updatedAt": "2026-11-02T20:57:39.941Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-02T20:57:39.941Z"
   }
 ]
