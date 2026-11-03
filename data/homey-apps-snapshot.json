@@ -19897,5 +19897,27 @@
     "publishedAt": "2026-11-03T11:00:14.367Z",
     "updatedAt": "2026-11-03T11:00:14.367Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "nl.lrvdlinden.weekdot",
+    "name": "Weekdot",
+    "developerName": "Léon van der Linden",
+    "developerId": "649eefe59a54fe7531821578",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-03T15:33:59.627Z",
+    "updatedAt": "2026-11-03T15:33:59.627Z",
+    "communityTopicId": 161566
+  },
+  {
+    "appId": "nl.egteren.tvlift",
+    "name": "Limoss TV Lift",
+    "developerName": "Winfred van Egteren",
+    "developerId": "6ae639845776bdf41f8a2da5",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/wvegteren/homey-tv-lift",
+    "publishedAt": "2026-11-03T15:33:59.627Z",
+    "updatedAt": "2026-11-03T15:33:59.627Z",
+    "communityTopicId": null
   }
 ]
