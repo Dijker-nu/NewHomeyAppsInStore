@@ -1,438 +1,315 @@
 [
   {
-    "id": "com.roypedrinis.twon",
+    "id": "nl.bryan.voldt",
     "rating": null,
     "liveBuild": {
-      "id": 4,
+      "id": 1,
       "name": {
-        "en": "2N",
-        "fr": "2N"
+        "en": "Voldt",
+        "nl": "Voldt"
       },
-      "version": "0.4.1",
+      "version": "1.0.0",
       "readme": {
-        "en": "Your 2N intercom is the front door of your smart home. This app brings 2N intercoms, access units and indoor stations into Homey Pro, fully local and without any cloud. See who is at the door on the camera, open it from a Flow, and know in real time who rang, who badged in and who was refused.\n\nUse calls, doors, alarms and the device history to trigger lights, scenes and notifications. It works with the 2N IP Verso 2.0, IP Style, IP Force 2.0, IP One, IP Solo, Access Unit 2.0, Access Unit M, Indoor View and Indoor Compact. Tested with the IP Verso 2.0, Access Unit 2.0 and Indoor View: the other models use the same API but have not all been tested. This is an unofficial app, not affiliated with 2N.\n",
-        "fr": "Votre interphone 2N est la porte d'entrée de votre maison connectée. Cette app intègre les interphones, contrôles d'accès et postes intérieurs 2N à Homey Pro, entièrement en local et sans cloud. Voyez qui est à la porte grâce à la caméra, ouvrez-la depuis un Flow, et sachez en temps réel qui a sonné, qui a badgé et qui a été refusé.\n\nUtilisez les appels, les portes, les alarmes et l'historique de l'appareil pour déclencher lumières, scènes et notifications. Elle fonctionne avec les 2N IP Verso 2.0, IP Style, IP Force 2.0, IP One, IP Solo, Access Unit 2.0, Access Unit M, Indoor View et Indoor Compact. Testée avec les IP Verso 2.0, Access Unit 2.0 et Indoor View : les autres modèles utilisent la même API mais n'ont pas tous été testés. Application non officielle, sans lien avec 2N.\n"
+        "en": "Take control of charging through your home network. Sign in once with the account from your Voldt mobile app; the local key and charging functions are retrieved automatically. After pairing, Homey controls and monitors the cable locally, without keeping your password.\n\nUse your existing Homey routines to plan charging and follow power and energy in Homey Energy and Insights. Available measurements depend on your cable's firmware. This is an independent community app by PixelBrouwer, not an official Voldt app. Wi-Fi cables with compatible local control are required.\n",
+        "nl": "Regel het laden via je eigen thuisnetwerk. Meld één keer aan met het account uit je Voldt-telefoonapp; de lokale sleutel en laadfuncties worden automatisch opgehaald. Daarna bedient en volgt Homey de kabel lokaal, zonder je wachtwoord te bewaren.\n\nPlan het laden met je bestaande Homey-routines en volg vermogen en energie in Homey Energy en Insights. Beschikbare metingen hangen af van de firmware van je kabel. Dit is een onafhankelijke community-app van PixelBrouwer, geen officiële Voldt-app. Een wifikabel met geschikte lokale bediening is vereist.\n"
       },
       "description": {
-        "en": "Know who is at your door, and let them in from anywhere in your home.",
-        "fr": "Sachez qui est à votre porte et ouvrez-la depuis n'importe où chez vous."
+        "en": "Charge locally, keep track of your energy",
+        "nl": "Lokaal laden, inzicht in je energie"
       },
-      "category": "security",
-      "brandColor": "#000000",
-      "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/assets/images/large.png",
+      "category": "energy",
+      "brandColor": "#164D8E",
+      "icon": "https://apps.homeycdn.net/app/nl.bryan.voldt/1/515bc611-5713-4bb3-adab-0dfcca202ec1/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.bryan.voldt/1/515bc611-5713-4bb3-adab-0dfcca202ec1/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.bryan.voldt/1/515bc611-5713-4bb3-adab-0dfcca202ec1/assets/images/large.png",
       "drivers": [
         {
-          "id": "access_unit",
+          "id": "voldt",
           "name": {
-            "en": "2N Access Unit 2.0"
+            "en": "Voldt cable (local Wi-Fi)",
+            "nl": "Voldt-kabel (lokaal wifi)"
           },
-          "class": "other",
+          "class": "evcharger",
           "capabilities": [
-            "button.switch1"
+            "evcharger_charging",
+            "measure_power",
+            "meter_power",
+            "meter_energy_session",
+            "measure_temperature",
+            "measure_current_limit",
+            "charge_state"
           ],
           "capabilitiesOptions": {
-            "button.switch1": {
+            "evcharger_charging": {
               "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
+                "en": "Charging switch",
+                "nl": "Laadschakelaar"
+              }
+            },
+            "measure_power": {
+              "title": {
+                "en": "Charging power",
+                "nl": "Actueel laadvermogen"
+              },
+              "decimals": 0
+            },
+            "meter_power": {
+              "title": {
+                "en": "Total charged energy",
+                "nl": "Totaal geladen energie"
+              },
+              "decimals": 2
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Cable temperature",
+                "nl": "Kabeltemperatuur"
               }
             }
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit/assets/images/large.png",
+          "energy": {
+            "evCharger": true,
+            "meterPowerImportedCapability": "meter_power"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.bryan.voldt/1/515bc611-5713-4bb3-adab-0dfcca202ec1/drivers/voldt/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.bryan.voldt/1/515bc611-5713-4bb3-adab-0dfcca202ec1/drivers/voldt/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
             "lan"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit/assets/icon.svg"
-        },
+          "icon": "https://apps.homeycdn.net/app/nl.bryan.voldt/1/515bc611-5713-4bb3-adab-0dfcca202ec1/drivers/voldt/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-03T10:14:28.703Z",
+      "bugs": null,
+      "homepage": "https://github.com/PixelBrouwer",
+      "support": "https://github.com/PixelBrouwer",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Pair with your Voldt email and password. Retrieve and verify the local key automatically, reconnect existing devices through app settings, and monitor charging power and energy locally.",
+        "nl": "Koppel met je Voldt-e-mailadres en wachtwoord. Haal de lokale sleutel automatisch op, herstel bestaande koppelingen via App configureren en volg laadvermogen en energie lokaal."
+      },
+      "compatibility": ">=12.9.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ade233647d7399db6cd275c",
+      "type": "user",
+      "userId": "6999b9aff084fec4c4a8109d",
+      "name": "Bryan Suijkerland",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "community.frisquet.connect",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "Frisquet Connect",
+        "fr": "Frisquet Connect"
+      },
+      "version": "0.5.1",
+      "readme": {
+        "en": "Keep your home comfortable throughout the day. Adjust your heating and hot water together, give a room a Boost, and let Homey Flows adapt the heating to your routines. Temperatures, boiler status and equipment information update automatically.\n\nRequires Homey Pro with Homey 12.9 or later, a Frisquet boiler connected to a Frisquet Connect box, an existing Frisquet Connect account and internet access. Runs directly on Homey Pro, without a Home Assistant server. This is an unofficial community integration using Frisquet’s cloud service. Weekly schedules and holidays are managed in the official Frisquet app.\n",
+        "fr": "Profitez d’une maison confortable tout au long de la journée. Réglez le chauffage et l’eau chaude au même endroit, activez le Boost d’une pièce et adaptez le chauffage à vos habitudes avec les Flows Homey. Les températures, l’état de la chaudière et les informations de l’installation s’actualisent automatiquement.\n\nNécessite Homey Pro avec Homey 12.9 ou ultérieur, une chaudière Frisquet reliée à une box Frisquet Connect, un compte Frisquet Connect existant et un accès Internet. Fonctionne directement sur Homey Pro, sans serveur Home Assistant. Cette intégration communautaire non officielle utilise le service cloud de Frisquet. Les programmes hebdomadaires et les vacances se règlent dans l’application officielle Frisquet.\n"
+      },
+      "description": {
+        "en": "Heating and hot water that fit your day",
+        "fr": "Un chauffage et une eau chaude à votre rythme"
+      },
+      "category": "climate",
+      "brandColor": "#28529B",
+      "icon": "https://apps.homeycdn.net/app/community.frisquet.connect/3/171d6346-64f6-4a77-9b75-be3fa48e6e7d/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/community.frisquet.connect/3/171d6346-64f6-4a77-9b75-be3fa48e6e7d/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/community.frisquet.connect/3/171d6346-64f6-4a77-9b75-be3fa48e6e7d/assets/images/large.png",
+      "drivers": [
         {
-          "id": "access_unit_m",
+          "id": "boiler",
           "name": {
-            "en": "2N Access Unit M"
+            "en": "Boiler & heating",
+            "fr": "Chaudière et chauffage"
           },
-          "class": "other",
+          "class": "boiler",
           "capabilities": [
-            "button.switch1"
+            "measure_temperature",
+            "target_temperature",
+            "frisquet_mode",
+            "frisquet_water_mode",
+            "frisquet_profile",
+            "measure_temperature.applied",
+            "frisquet_boost",
+            "frisquet_comfort_temperature",
+            "frisquet_reduced_temperature",
+            "frisquet_frost_temperature",
+            "alarm_generic",
+            "frisquet_alarm",
+            "frisquet_holiday",
+            "frisquet_last_update",
+            "frisquet_command_state",
+            "frisquet_model",
+            "frisquet_product_range",
+            "frisquet_product_variant",
+            "frisquet_rated_power",
+            "frisquet_serial",
+            "frisquet_connect_id",
+            "frisquet_boiler_clock",
+            "alarm_generic.service",
+            "frisquet_service_alarms",
+            "frisquet_water_type",
+            "frisquet_water_solar",
+            "frisquet_water_equipped",
+            "frisquet_installation_name",
+            "frisquet_installation_postcode",
+            "frisquet_installation_country",
+            "frisquet_installation_timezone",
+            "frisquet_alert_emails",
+            "frisquet_alert_phones",
+            "target_temperature.comfort",
+            "target_temperature.reduced",
+            "target_temperature.frost"
           ],
           "capabilitiesOptions": {
-            "button.switch1": {
+            "measure_temperature.outdoor": {
               "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
+                "en": "Outdoor temperature",
+                "fr": "Température extérieure"
               }
+            },
+            "target_temperature": {
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "measure_temperature.applied": {
+              "title": {
+                "en": "Applied setpoint",
+                "fr": "Consigne appliquée"
+              },
+              "preventInsights": true
+            },
+            "alarm_generic.service": {
+              "title": {
+                "en": "Service alarm active",
+                "fr": "Alarme de maintenance active"
+              }
+            },
+            "target_temperature.comfort": {
+              "title": {
+                "en": "Comfort temperature",
+                "fr": "Température Confort"
+              },
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "target_temperature.reduced": {
+              "title": {
+                "en": "Reduced temperature",
+                "fr": "Température Réduit"
+              },
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "target_temperature.frost": {
+              "title": {
+                "en": "Frost temperature",
+                "fr": "Température Hors gel"
+              },
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
             }
           },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit_m/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit_m/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/community.frisquet.connect/3/171d6346-64f6-4a77-9b75-be3fa48e6e7d/drivers/boiler/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/community.frisquet.connect/3/171d6346-64f6-4a77-9b75-be3fa48e6e7d/drivers/boiler/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
-            "lan"
+            "cloud"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/access_unit_m/assets/icon.svg"
-        },
-        {
-          "id": "indoor_compact",
-          "name": {
-            "en": "2N Indoor Compact"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "alarm_generic"
-          ],
-          "capabilitiesOptions": {
-            "alarm_generic": {
-              "title": {
-                "en": "Call in progress",
-                "fr": "Appel en cours"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_compact/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_compact/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_compact/assets/icon.svg"
-        },
-        {
-          "id": "indoor_view",
-          "name": {
-            "en": "2N Indoor View"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "alarm_generic"
-          ],
-          "capabilitiesOptions": {
-            "alarm_generic": {
-              "title": {
-                "en": "Call in progress",
-                "fr": "Appel en cours"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_view/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_view/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/indoor_view/assets/icon.svg"
-        },
-        {
-          "id": "ip_force",
-          "name": {
-            "en": "2N IP Force 2.0"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "button.switch1"
-          ],
-          "capabilitiesOptions": {
-            "button.switch1": {
-              "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_force/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_force/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_force/assets/icon.svg"
-        },
-        {
-          "id": "ip_one",
-          "name": {
-            "en": "2N IP One"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "button.switch1"
-          ],
-          "capabilitiesOptions": {
-            "button.switch1": {
-              "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_one/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_one/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_one/assets/icon.svg"
-        },
-        {
-          "id": "ip_solo",
-          "name": {
-            "en": "2N IP Solo"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "button.switch1"
-          ],
-          "capabilitiesOptions": {
-            "button.switch1": {
-              "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_solo/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_solo/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_solo/assets/icon.svg"
-        },
-        {
-          "id": "ip_style",
-          "name": {
-            "en": "2N IP Style"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "button.switch1"
-          ],
-          "capabilitiesOptions": {
-            "button.switch1": {
-              "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_style/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_style/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/ip_style/assets/icon.svg"
-        },
-        {
-          "id": "verso",
-          "name": {
-            "en": "2N IP Verso 2.0"
-          },
-          "class": "doorbell",
-          "capabilities": [
-            "button.switch1"
-          ],
-          "capabilitiesOptions": {
-            "button.switch1": {
-              "title": {
-                "en": "Open door 1",
-                "fr": "Ouvrir porte 1"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/verso/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/verso/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.roypedrinis.twon/4/36ad7e96-9815-4cfa-b249-f9a95e714529/drivers/verso/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/community.frisquet.connect/3/171d6346-64f6-4a77-9b75-be3fa48e6e7d/drivers/boiler/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "access_limited",
+            "id": "zone_mode_changed",
             "title": {
-              "en": "Access was limited",
-              "fr": "L'accès a été limité"
+              "en": "Heating mode changed",
+              "fr": "Le mode de chauffage a changé"
             },
             "titleFormatted": {
-              "en": "Access [[state]]",
-              "fr": "Accès [[state]]"
-            },
-            "hint": {
-              "en": "Triggered when the device reports that access is limited.",
-              "fr": "Déclenché quand l'appareil signale que l'accès est limité."
+              "en": "[[device]] heating mode changed",
+              "fr": "Le mode chauffage de [[device]] a changé"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "is limited",
-                      "fr": "est limité"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "is available again",
-                      "fr": "est de nouveau disponible"
-                    }
-                  }
-                ]
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
               }
             ],
             "tokens": [
               {
-                "name": "state",
+                "name": "mode",
                 "type": "string",
                 "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              },
-              {
-                "name": "type",
-                "type": "string",
-                "title": {
-                  "en": "Type",
-                  "fr": "Type"
+                  "en": "Mode",
+                  "fr": "Mode"
                 }
               }
             ]
           },
           {
-            "id": "audio_test_finished",
+            "id": "command_state_changed",
             "title": {
-              "en": "The audio test finished",
-              "fr": "Le test audio est terminé"
+              "en": "Command status changed",
+              "fr": "L’état de commande a changé"
             },
             "titleFormatted": {
-              "en": "The audio test [[result]]",
-              "fr": "Le test audio [[result]]"
+              "en": "Command status changed for [[device]]",
+              "fr": "L’état de commande a changé pour [[device]]"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
-              },
-              {
-                "type": "dropdown",
-                "name": "result",
-                "values": [
-                  {
-                    "id": "any",
-                    "label": {
-                      "en": "finished",
-                      "fr": "est terminé"
-                    }
-                  },
-                  {
-                    "id": "passed",
-                    "label": {
-                      "en": "passed",
-                      "fr": "a réussi"
-                    }
-                  },
-                  {
-                    "id": "failed",
-                    "label": {
-                      "en": "failed",
-                      "fr": "a échoué"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "result",
-                "type": "string",
-                "title": {
-                  "en": "Result",
-                  "fr": "Résultat"
-                }
-              }
-            ]
-          },
-          {
-            "id": "call_state_changed",
-            "title": {
-              "en": "A call changed state",
-              "fr": "Un appel a changé d'état"
-            },
-            "titleFormatted": {
-              "en": "A call is [[state]]",
-              "fr": "Un appel est [[state]]"
-            },
-            "args": [
-              {
                 "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "any",
-                    "label": {
-                      "en": "in any state",
-                      "fr": "dans un état quelconque"
-                    }
-                  },
-                  {
-                    "id": "ringing",
-                    "label": {
-                      "en": "ringing",
-                      "fr": "en train de sonner"
-                    }
-                  },
-                  {
-                    "id": "connected",
-                    "label": {
-                      "en": "answered",
-                      "fr": "décroché"
-                    }
-                  },
-                  {
-                    "id": "terminated",
-                    "label": {
-                      "en": "ended",
-                      "fr": "terminé"
-                    }
-                  }
-                ]
+                "filter": "capabilities=frisquet_command_state"
               }
             ],
             "tokens": [
@@ -440,999 +317,44 @@
                 "name": "state",
                 "type": "string",
                 "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              },
-              {
-                "name": "direction",
-                "type": "string",
-                "title": {
-                  "en": "Direction",
-                  "fr": "Sens"
-                }
-              },
-              {
-                "name": "peer",
-                "type": "string",
-                "title": {
-                  "en": "Caller / callee",
-                  "fr": "Appelant / appelé"
-                }
-              },
-              {
-                "name": "reason",
-                "type": "string",
-                "title": {
-                  "en": "Reason",
-                  "fr": "Motif"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "card_held",
-            "title": {
-              "en": "A card was held",
-              "fr": "Un badge a été maintenu"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "uid",
-                "type": "string",
-                "title": {
-                  "en": "Card",
-                  "fr": "Badge"
-                }
-              },
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              }
-            ]
-          },
-          {
-            "id": "card_scanned",
-            "title": {
-              "en": "A card was scanned",
-              "fr": "Un badge a été lu"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "card",
-                "type": "string",
-                "title": {
-                  "en": "Card",
-                  "fr": "Badge"
-                }
-              },
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "code_entered",
-            "title": {
-              "en": "A code was entered",
-              "fr": "Un code a été saisi"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "door_open_too_long",
-            "title": {
-              "en": "Door left open too long",
-              "fr": "Porte restée ouverte trop longtemps"
-            },
-            "titleFormatted": {
-              "en": "The door [[state]]",
-              "fr": "La porte [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "was left open too long",
-                      "fr": "est restée ouverte trop longtemps"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "is closed again",
-                      "fr": "est refermée"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
+                  "en": "Status",
                   "fr": "État"
                 }
               }
             ]
           },
           {
-            "id": "door_opened",
+            "id": "water_mode_changed",
             "title": {
-              "en": "A switch was activated",
-              "fr": "Un relais a été activé"
+              "en": "Boiler mode changed",
+              "fr": "Le mode chaudière a changé"
             },
             "titleFormatted": {
-              "en": "A switch was activated by [[origin]]",
-              "fr": "Un relais a été activé par [[origin]]"
+              "en": "[[device]] boiler mode changed",
+              "fr": "Le mode chaudière de [[device]] a changé"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "origin",
-                "values": [
-                  {
-                    "id": "any",
-                    "label": {
-                      "en": "anything",
-                      "fr": "n'importe quoi"
-                    }
-                  },
-                  {
-                    "id": "auth",
-                    "label": {
-                      "en": "an authentication",
-                      "fr": "une authentification"
-                    }
-                  },
-                  {
-                    "id": "rex",
-                    "label": {
-                      "en": "the exit button",
-                      "fr": "le bouton de sortie"
-                    }
-                  },
-                  {
-                    "id": "api",
-                    "label": {
-                      "en": "Homey or the API",
-                      "fr": "Homey ou l'API"
-                    }
-                  },
-                  {
-                    "id": "dtmf",
-                    "label": {
-                      "en": "a call code",
-                      "fr": "un code pendant un appel"
-                    }
-                  },
-                  {
-                    "id": "profile",
-                    "label": {
-                      "en": "a schedule",
-                      "fr": "un horaire"
-                    }
-                  },
-                  {
-                    "id": "automation",
-                    "label": {
-                      "en": "an automation",
-                      "fr": "une automatisation"
-                    }
-                  }
-                ]
+                "type": "device",
+                "filter": "capabilities=frisquet_water_mode"
               }
             ],
             "tokens": [
               {
-                "name": "switch",
-                "type": "number",
-                "title": {
-                  "en": "Switch",
-                  "fr": "Relais"
-                }
-              },
-              {
-                "name": "origin",
+                "name": "mode",
                 "type": "string",
                 "title": {
-                  "en": "Activated by",
-                  "fr": "Activé par"
+                  "en": "Mode ID",
+                  "fr": "Identifiant du mode"
                 }
-              }
-            ]
-          },
-          {
-            "id": "door_state_changed",
-            "title": {
-              "en": "The door sensor changed state",
-              "fr": "Le capteur de porte a changé d'état"
-            },
-            "titleFormatted": {
-              "en": "The door is [[state]]",
-              "fr": "La porte est [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
               },
               {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "opened",
-                    "label": {
-                      "en": "opened",
-                      "fr": "ouverte"
-                    }
-                  },
-                  {
-                    "id": "closed",
-                    "label": {
-                      "en": "closed",
-                      "fr": "fermée"
-                    }
-                  },
-                  {
-                    "id": "any",
-                    "label": {
-                      "en": "opened or closed",
-                      "fr": "ouverte ou fermée"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
+                "name": "name",
                 "type": "string",
                 "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              }
-            ]
-          },
-          {
-            "id": "dtmf_entered",
-            "title": {
-              "en": "A DTMF code was entered during a call",
-              "fr": "Un code DTMF a été saisi pendant un appel"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              },
-              {
-                "name": "type",
-                "type": "string",
-                "title": {
-                  "en": "Code type",
-                  "fr": "Type de code"
-                }
-              }
-            ]
-          },
-          {
-            "id": "finger_scanned",
-            "title": {
-              "en": "A fingerprint was scanned",
-              "fr": "Une empreinte a été lue"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              },
-              {
-                "name": "uuid",
-                "type": "string",
-                "title": {
-                  "en": "User ID",
-                  "fr": "ID utilisateur"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "key_pressed",
-            "title": {
-              "en": "A button or key was pressed",
-              "fr": "Appui sur un bouton ou une touche"
-            },
-            "titleFormatted": {
-              "en": "A button or key [[key]] was pressed",
-              "fr": "Appui sur le bouton ou la touche [[key]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m|indoor_view|indoor_compact"
-              },
-              {
-                "type": "text",
-                "name": "key",
-                "placeholder": {
-                  "en": "Any (leave empty)",
-                  "fr": "Toutes (laisser vide)"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "key",
-                "type": "string",
-                "title": {
-                  "en": "Key",
-                  "fr": "Touche"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "login_blocked",
-            "title": {
-              "en": "The web login was blocked",
-              "fr": "La connexion web a été bloquée"
-            },
-            "hint": {
-              "en": "Too many invalid logins to the device web interface.",
-              "fr": "Trop de connexions invalides à l'interface web de l'appareil."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m|indoor_view|indoor_compact"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "IP address",
-                  "fr": "Adresse IP"
-                }
-              }
-            ]
-          },
-          {
-            "id": "mobile_key_used",
-            "title": {
-              "en": "A Bluetooth mobile key was used",
-              "fr": "Une clé mobile Bluetooth a été utilisée"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              },
-              {
-                "name": "uuid",
-                "type": "string",
-                "title": {
-                  "en": "User ID",
-                  "fr": "ID utilisateur"
-                }
-              }
-            ]
-          },
-          {
-            "id": "motion_detected",
-            "title": {
-              "en": "Motion detected by the camera",
-              "fr": "Mouvement détecté par la caméra"
-            },
-            "titleFormatted": {
-              "en": "Camera motion [[state]]",
-              "fr": "Mouvement caméra [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "detected",
-                      "fr": "détecté"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "ended",
-                      "fr": "terminé"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "noise_detected",
-            "title": {
-              "en": "Unusual noise detected",
-              "fr": "Bruit anormal détecté"
-            },
-            "titleFormatted": {
-              "en": "Unusual noise [[state]]",
-              "fr": "Bruit anormal [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "detected",
-                      "fr": "détecté"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "ended",
-                      "fr": "terminé"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              }
-            ]
-          },
-          {
-            "id": "rex_activated",
-            "title": {
-              "en": "The exit button was pressed",
-              "fr": "Le bouton de sortie a été actionné"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ]
-          },
-          {
-            "id": "silent_alarm",
-            "title": {
-              "en": "Silent alarm",
-              "fr": "Alarme silencieuse"
-            },
-            "titleFormatted": {
-              "en": "Silent alarm [[state]]",
-              "fr": "Alarme silencieuse [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "triggered",
-                      "fr": "déclenchée"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "ended",
-                      "fr": "terminée"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              }
-            ]
-          },
-          {
-            "id": "sip_registration_changed",
-            "title": {
-              "en": "The SIP registration changed",
-              "fr": "L'enregistrement SIP a changé"
-            },
-            "titleFormatted": {
-              "en": "The SIP account is [[state]]",
-              "fr": "Le compte SIP est [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "any",
-                    "label": {
-                      "en": "in any state",
-                      "fr": "dans un état quelconque"
-                    }
-                  },
-                  {
-                    "id": "registered",
-                    "label": {
-                      "en": "registered",
-                      "fr": "enregistré"
-                    }
-                  },
-                  {
-                    "id": "unregistered",
-                    "label": {
-                      "en": "unregistered",
-                      "fr": "désenregistré"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              },
-              {
-                "name": "account",
-                "type": "number",
-                "title": {
-                  "en": "SIP account",
-                  "fr": "Compte SIP"
-                }
-              }
-            ]
-          },
-          {
-            "id": "tamper_activated",
-            "title": {
-              "en": "The device cover was opened",
-              "fr": "Le boîtier a été ouvert"
-            },
-            "titleFormatted": {
-              "en": "Tamper switch [[state]]",
-              "fr": "Contact anti-arrachement [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "activated",
-                      "fr": "activé"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "restored",
-                      "fr": "rétabli"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              }
-            ]
-          },
-          {
-            "id": "unauthorized_door_open",
-            "title": {
-              "en": "Forced door opening",
-              "fr": "Ouverture forcée de la porte"
-            },
-            "titleFormatted": {
-              "en": "Forced door opening [[state]]",
-              "fr": "Ouverture forcée de la porte [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "in",
-                    "label": {
-                      "en": "detected",
-                      "fr": "détectée"
-                    }
-                  },
-                  {
-                    "id": "out",
-                    "label": {
-                      "en": "ended",
-                      "fr": "terminée"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "state",
-                "type": "string",
-                "title": {
-                  "en": "State",
-                  "fr": "État"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "user_authenticated",
-            "title": {
-              "en": "A user was granted access",
-              "fr": "Un utilisateur a obtenu l'accès"
-            },
-            "titleFormatted": {
-              "en": "[[user]] was granted access",
-              "fr": "[[user]] a obtenu l'accès"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "text",
-                "name": "user",
-                "placeholder": {
-                  "en": "Any user (leave empty)",
-                  "fr": "Tout utilisateur (laisser vide)"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "fr": "Utilisateur"
-                }
-              },
-              {
-                "name": "uuid",
-                "type": "string",
-                "title": {
-                  "en": "User ID",
-                  "fr": "ID utilisateur"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              }
-            ]
-          },
-          {
-            "id": "user_rejected",
-            "title": {
-              "en": "Access was refused",
-              "fr": "Un accès a été refusé"
-            },
-            "titleFormatted": {
-              "en": "Access was refused for [[user]]",
-              "fr": "Accès refusé pour [[user]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "text",
-                "name": "user",
-                "placeholder": {
-                  "en": "Any user (leave empty)",
-                  "fr": "Tout utilisateur (laisser vide)"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "user",
-                "type": "string",
-                "title": {
-                  "en": "User",
-                  "fr": "Utilisateur"
-                }
-              },
-              {
-                "name": "reason",
-                "type": "string",
-                "title": {
-                  "en": "Reason",
-                  "fr": "Raison"
-                }
-              },
-              {
-                "name": "picture",
-                "type": "image",
-                "title": {
-                  "en": "Picture",
-                  "fr": "Photo"
-                }
-              },
-              {
-                "name": "reason_code",
-                "type": "string",
-                "title": {
-                  "en": "Reason code",
-                  "fr": "Code du motif"
-                }
-              }
-            ]
-          },
-          {
-            "id": "wavekey_used",
-            "title": {
-              "en": "A WaveKey was used",
-              "fr": "Une WaveKey a été utilisée"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "valid",
-                "type": "boolean",
-                "title": {
-                  "en": "Valid",
-                  "fr": "Valide"
-                }
-              },
-              {
-                "name": "uuid",
-                "type": "string",
-                "title": {
-                  "en": "User ID",
-                  "fr": "ID utilisateur"
-                }
-              },
-              {
-                "name": "type",
-                "type": "string",
-                "title": {
-                  "en": "Type",
-                  "fr": "Type"
+                  "en": "Mode",
+                  "fr": "Mode"
                 }
               }
             ]
@@ -1440,51 +362,58 @@
         ],
         "conditions": [
           {
-            "id": "switch_is_active",
+            "id": "zone_mode_is",
             "title": {
-              "en": "Door switch is !{{active|inactive}}",
-              "fr": "Le relais de porte est !{{actif|inactif}}"
+              "en": "Heating mode !{{is|is not}}",
+              "fr": "Le mode de chauffage !{{est|n’est pas}}"
             },
             "titleFormatted": {
-              "en": "Door switch [[door]] is !{{active|inactive}}",
-              "fr": "Le relais de la porte [[door]] est !{{actif|inactif}}"
+              "en": "[[device]]: Heating mode !{{is|is not}} [[mode]]",
+              "fr": "[[device]]: Le mode de chauffage !{{est|n’est pas}} [[mode]]"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
               },
               {
+                "name": "mode",
                 "type": "dropdown",
-                "name": "door",
                 "values": [
                   {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
+                    "id": "auto",
+                    "title": {
+                      "en": "Schedule",
+                      "fr": "Programmation"
                     }
                   },
                   {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort always",
+                      "fr": "Confort permanent"
                     }
                   },
                   {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced always",
+                      "fr": "Réduit permanent"
                     }
                   },
                   {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost protection",
+                      "fr": "Hors gel"
+                    }
+                  },
+                  {
+                    "id": "boost",
+                    "title": {
+                      "en": "Boost",
+                      "fr": "Boost"
                     }
                   }
                 ]
@@ -1492,219 +421,82 @@
             ]
           },
           {
-            "id": "switch_is_held",
+            "id": "boost_is_enabled",
             "title": {
-              "en": "Door switch is !{{held open|not held}}",
-              "fr": "Le relais de porte est !{{maintenu|libre}}"
+              "en": "Boost is enabled",
+              "fr": "Le Boost est activé"
             },
             "titleFormatted": {
-              "en": "Door switch [[door]] is !{{held open|not held}}",
-              "fr": "Le relais de la porte [[door]] est !{{maintenu|libre}}"
+              "en": "[[device]]: Boost !{{is|is not}} enabled",
+              "fr": "[[device]]: Le Boost !{{est|n’est pas}} activé"
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "door",
-                "values": [
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
-                    }
-                  },
-                  {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "switch_is_locked",
-            "title": {
-              "en": "Door switch is !{{locked|unlocked}}",
-              "fr": "Le relais de porte est !{{verrouillé|déverrouillé}}"
-            },
-            "titleFormatted": {
-              "en": "Door switch [[door]] is !{{locked|unlocked}}",
-              "fr": "Le relais de la porte [[door]] est !{{verrouillé|déverrouillé}}"
-            },
-            "args": [
-              {
                 "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "door",
-                "values": [
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
-                    }
-                  },
-                  {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
-                    }
-                  }
-                ]
+                "filter": "capabilities=frisquet_boost"
               }
             ]
           }
         ],
         "actions": [
           {
-            "id": "answer_call",
+            "id": "set_zone_mode",
             "title": {
-              "en": "Answer the incoming call",
-              "fr": "Décrocher l'appel entrant"
+              "en": "Set heating mode",
+              "fr": "Régler le mode de chauffage"
             },
             "titleFormatted": {
-              "en": "Answer the incoming call",
-              "fr": "Décrocher l'appel entrant"
+              "en": "[[device]]: Set heating mode to [[mode]]",
+              "fr": "[[device]]: Régler le chauffage sur [[mode]]"
+            },
+            "hint": {
+              "en": "Schedule also cancels temporary overrides across the installation. Frost protection keeps the boiler powered.",
+              "fr": "Programmation annule aussi les dérogations temporaires de l’installation. Hors gel conserve la chaudière alimentée."
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=indoor_view|indoor_compact"
-              }
-            ]
-          },
-          {
-            "id": "dial_call",
-            "title": {
-              "en": "Start a call",
-              "fr": "Lancer un appel"
-            },
-            "titleFormatted": {
-              "en": "Call [[number]]",
-              "fr": "Appeler [[number]]"
-            },
-            "args": [
-              {
                 "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
+                "filter": "capabilities=frisquet_mode"
               },
               {
-                "type": "text",
-                "name": "number",
-                "placeholder": {
-                  "en": "sip:1001@192.168.1.10 or number",
-                  "fr": "sip:1001@192.168.1.10 ou numéro"
-                }
-              }
-            ]
-          },
-          {
-            "id": "hangup_call",
-            "title": {
-              "en": "Hang up the current call",
-              "fr": "Raccrocher l'appel en cours"
-            },
-            "titleFormatted": {
-              "en": "Hang up the current call",
-              "fr": "Raccrocher l'appel en cours"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|ip_style|ip_force|ip_one|ip_solo|indoor_view|indoor_compact"
-              }
-            ]
-          },
-          {
-            "id": "open_door",
-            "title": {
-              "en": "Open the door",
-              "fr": "Ouvrir la porte"
-            },
-            "titleFormatted": {
-              "en": "Open door [[door]]",
-              "fr": "Ouvrir la porte [[door]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
+                "name": "mode",
                 "type": "dropdown",
-                "name": "door",
                 "values": [
                   {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
+                    "id": "auto",
+                    "title": {
+                      "en": "Schedule",
+                      "fr": "Programmation"
                     }
                   },
                   {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort always",
+                      "fr": "Confort permanent"
                     }
                   },
                   {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced always",
+                      "fr": "Réduit permanent"
                     }
                   },
                   {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost protection",
+                      "fr": "Hors gel"
+                    }
+                  },
+                  {
+                    "id": "boost",
+                    "title": {
+                      "en": "Boost",
+                      "fr": "Boost"
                     }
                   }
                 ]
@@ -1712,272 +504,176 @@
             ]
           },
           {
-            "id": "set_output",
+            "id": "set_profile_temperature",
             "title": {
-              "en": "Set an output",
-              "fr": "Piloter une sortie"
+              "en": "Set profile temperature",
+              "fr": "Régler la température d’un profil"
             },
             "titleFormatted": {
-              "en": "Set output [[port]] to [[state]]",
-              "fr": "Mettre la sortie [[port]] sur [[state]]"
+              "en": "[[device]]: Set [[profile]] to [[temperature]] °C",
+              "fr": "[[device]]: Régler [[profile]] à [[temperature]] °C"
+            },
+            "hint": {
+              "en": "Changes the stored profile temperature, including future scheduled periods. Does not switch the active profile.",
+              "fr": "Modifie la consigne enregistrée, y compris pour les prochaines plages. Ne change pas le profil actif."
             },
             "args": [
               {
-                "type": "device",
                 "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
               },
               {
-                "type": "autocomplete",
-                "name": "port",
-                "placeholder": {
-                  "en": "Output",
-                  "fr": "Sortie"
-                }
-              },
-              {
+                "name": "profile",
                 "type": "dropdown",
-                "name": "state",
+                "values": [
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort",
+                      "fr": "Confort"
+                    }
+                  },
+                  {
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced",
+                      "fr": "Réduit"
+                    }
+                  },
+                  {
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost protection",
+                      "fr": "Hors gel"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "en": "Temperature",
+                  "fr": "Température"
+                },
+                "min": 5,
+                "max": 25,
+                "step": 0.5
+              }
+            ]
+          },
+          {
+            "id": "set_hot_water_mode",
+            "title": {
+              "en": "Set hot-water mode",
+              "fr": "Régler le mode eau chaude"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Set hot-water mode to [[mode]]",
+              "fr": "[[device]]: Régler l’eau chaude sur [[mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_water_mode"
+              },
+              {
+                "name": "mode",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Mode",
+                  "fr": "Mode"
+                },
+                "placeholder": {
+                  "en": "Choose a supported mode",
+                  "fr": "Choisir un mode disponible"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_installation_override",
+            "title": {
+              "en": "Set installation override",
+              "fr": "Régler la dérogation générale"
+            },
+            "titleFormatted": {
+              "en": "Set scheduled zones to [[mode]]",
+              "fr": "Régler les zones programmées sur [[mode]]"
+            },
+            "hint": {
+              "en": "Applies to the installation's scheduled zones until the next programme change. Schedule cancels the override.",
+              "fr": "S’applique aux zones programmées de l’installation jusqu’à la prochaine plage. Programmation annule la dérogation."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=boiler"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Schedule",
+                      "fr": "Programmation"
+                    }
+                  },
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort temporarily",
+                      "fr": "Confort temporaire"
+                    }
+                  },
+                  {
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced temporarily",
+                      "fr": "Réduit temporaire"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_boost",
+            "title": {
+              "en": "Set Boost",
+              "fr": "Régler le Boost"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Turn Boost [[enabled]]",
+              "fr": "[[device]]: Régler le Boost sur [[enabled]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_boost"
+              },
+              {
+                "name": "enabled",
+                "type": "dropdown",
                 "values": [
                   {
                     "id": "on",
-                    "label": {
+                    "title": {
                       "en": "On",
-                      "fr": "Activée"
+                      "fr": "Activé"
                     }
                   },
                   {
                     "id": "off",
-                    "label": {
+                    "title": {
                       "en": "Off",
-                      "fr": "Désactivée"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "switch_hold",
-            "title": {
-              "en": "Hold a door open",
-              "fr": "Maintenir une porte ouverte"
-            },
-            "titleFormatted": {
-              "en": "Hold door [[door]] open for [[minutes]] minutes",
-              "fr": "Maintenir la porte [[door]] ouverte pendant [[minutes]] minutes"
-            },
-            "hint": {
-              "en": "Keeps the door switch active. Use 0 minutes to hold until you release it.",
-              "fr": "Garde le relais de la porte actif. Saisissez 0 minute pour le maintenir jusqu'à sa libération."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "door",
-                "values": [
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
-                    }
-                  },
-                  {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "number",
-                "name": "minutes",
-                "min": 0,
-                "max": 1440,
-                "step": 1,
-                "placeholder": {
-                  "en": "0 until released",
-                  "fr": "0 jusqu'à libération"
-                }
-              }
-            ]
-          },
-          {
-            "id": "switch_lock",
-            "title": {
-              "en": "Lock a door switch",
-              "fr": "Verrouiller un relais de porte"
-            },
-            "titleFormatted": {
-              "en": "Lock door switch [[door]]",
-              "fr": "Verrouiller le relais de la porte [[door]]"
-            },
-            "hint": {
-              "en": "A locked switch cannot be operated, not even with a card or a code.",
-              "fr": "Un relais verrouillé ne peut plus être actionné, même avec un badge ou un code."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "door",
-                "values": [
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
-                    }
-                  },
-                  {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "switch_release",
-            "title": {
-              "en": "Release a held door",
-              "fr": "Libérer une porte maintenue"
-            },
-            "titleFormatted": {
-              "en": "Release door [[door]]",
-              "fr": "Libérer la porte [[door]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "door",
-                "values": [
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
-                    }
-                  },
-                  {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "switch_unlock",
-            "title": {
-              "en": "Unlock a door switch",
-              "fr": "Déverrouiller un relais de porte"
-            },
-            "titleFormatted": {
-              "en": "Unlock door switch [[door]]",
-              "fr": "Déverrouiller le relais de la porte [[door]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=verso|access_unit|ip_style|ip_force|ip_one|ip_solo|access_unit_m"
-              },
-              {
-                "type": "dropdown",
-                "name": "door",
-                "values": [
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "1",
-                      "fr": "1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "2",
-                      "fr": "2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "3",
-                      "fr": "3"
-                    }
-                  },
-                  {
-                    "id": "4",
-                    "label": {
-                      "en": "4",
-                      "fr": "4"
+                      "fr": "Désactivé"
                     }
                   }
                 ]
@@ -1990,31 +686,42 @@
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-11-02T16:19:15.730Z",
-      "bugs": null,
-      "homepage": null,
-      "support": "mailto:roypedrinis@me.com",
-      "source": null,
-      "contributors": null,
+      "stateChangedAt": "2026-11-03T09:59:02.848Z",
+      "bugs": "https://github.com/shuguet/homey-frisquet/issues",
+      "homepage": "https://github.com/shuguet/homey-frisquet",
+      "support": "https://github.com/shuguet/homey-frisquet/issues",
+      "source": "https://github.com/shuguet/homey-frisquet",
+      "contributors": {
+        "developers": [
+          {
+            "name": "Guillaume SOURD"
+          },
+          {
+            "name": "Bruno TÊTE"
+          }
+        ],
+        "translators": []
+      },
       "contributing": null,
       "permissions": [],
       "apiScopes": null,
       "changelog": {
-        "en": "New app and driver photos, shorter readme, removed placeholder community link, new triggers, actions and conditions."
+        "en": "Made Homey’s built-in diagnostic report the main support route. Recent logs automatically include device capabilities alongside anonymized raw responses. JSON preview and export remain available under Advanced.",
+        "fr": "Le rapport de diagnostic intégré à Homey devient la méthode principale de support. Les journaux récents incluent automatiquement les capacités des appareils et les réponses brutes anonymisées. L’aperçu et l’export JSON restent disponibles dans la section Avancé."
       },
-      "compatibility": ">=12.2.0",
+      "compatibility": ">=12.9.0",
       "tags": {
         "en": [
-          "2N",
-          "intercom",
-          "doorbell",
-          "access control"
+          "Frisquet",
+          "boiler",
+          "heating",
+          "hot water"
         ],
         "fr": [
-          "2N",
-          "interphone",
-          "sonnette",
-          "contrôle d'accès"
+          "Frisquet",
+          "chaudière",
+          "chauffage",
+          "eau chaude"
         ]
       },
       "platforms": [
@@ -2025,16 +732,616 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.4.1",
-    "testBuild": null,
-    "testVersion": null,
+    "liveVersion": "0.5.1",
+    "testBuild": {
+      "id": 5,
+      "name": {
+        "en": "Frisquet Connect",
+        "fr": "Frisquet Connect"
+      },
+      "version": "0.6.1",
+      "readme": {
+        "en": "Keep your home comfortable throughout the day. Adjust your heating and hot water together, give a room a Boost, and let Homey Flows adapt the heating to your routines. Temperatures, boiler status and equipment information update automatically.\n\nRequires Homey Pro with Homey 12.9 or later, a Frisquet boiler connected to a Frisquet Connect box, an existing Frisquet Connect account and internet access. Runs directly on Homey Pro, without a Home Assistant server. This is an unofficial community integration using Frisquet’s cloud service. Weekly schedules and holidays are managed in the official Frisquet app.\n",
+        "fr": "Profitez d’une maison confortable tout au long de la journée. Réglez le chauffage et l’eau chaude au même endroit, activez le Boost d’une pièce et adaptez le chauffage à vos habitudes avec les Flows Homey. Les températures, l’état de la chaudière et les informations de l’installation s’actualisent automatiquement.\n\nNécessite Homey Pro avec Homey 12.9 ou ultérieur, une chaudière Frisquet reliée à une box Frisquet Connect, un compte Frisquet Connect existant et un accès Internet. Fonctionne directement sur Homey Pro, sans serveur Home Assistant. Cette intégration communautaire non officielle utilise le service cloud de Frisquet. Les programmes hebdomadaires et les vacances se règlent dans l’application officielle Frisquet.\n"
+      },
+      "description": {
+        "en": "Heating and hot water that fit your day",
+        "fr": "Un chauffage et une eau chaude à votre rythme"
+      },
+      "category": "climate",
+      "brandColor": "#28529B",
+      "icon": "https://apps.homeycdn.net/app/community.frisquet.connect/5/f86c557c-a694-41b4-9548-e165bfb8b9d8/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/community.frisquet.connect/5/f86c557c-a694-41b4-9548-e165bfb8b9d8/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/community.frisquet.connect/5/f86c557c-a694-41b4-9548-e165bfb8b9d8/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "boiler",
+          "name": {
+            "en": "Boiler & heating",
+            "fr": "Chaudière et chauffage"
+          },
+          "class": "boiler",
+          "capabilities": [
+            "measure_temperature",
+            "target_temperature",
+            "frisquet_mode",
+            "frisquet_water_mode",
+            "frisquet_profile",
+            "measure_temperature.applied",
+            "frisquet_boost",
+            "frisquet_comfort_temperature",
+            "frisquet_reduced_temperature",
+            "frisquet_frost_temperature",
+            "alarm_generic",
+            "frisquet_alarm",
+            "frisquet_holiday",
+            "frisquet_last_update",
+            "frisquet_command_state",
+            "frisquet_model",
+            "frisquet_product_range",
+            "frisquet_product_variant",
+            "frisquet_rated_power",
+            "frisquet_serial",
+            "frisquet_connect_id",
+            "frisquet_boiler_clock",
+            "alarm_generic.service",
+            "frisquet_service_alarms",
+            "frisquet_water_type",
+            "frisquet_water_solar",
+            "frisquet_water_equipped",
+            "frisquet_installation_name",
+            "frisquet_installation_postcode",
+            "frisquet_installation_country",
+            "frisquet_installation_timezone",
+            "frisquet_alert_emails",
+            "frisquet_alert_phones",
+            "target_temperature.comfort",
+            "target_temperature.reduced",
+            "target_temperature.frost"
+          ],
+          "capabilitiesOptions": {
+            "measure_temperature.outdoor": {
+              "title": {
+                "en": "Outdoor temperature",
+                "fr": "Température extérieure"
+              }
+            },
+            "target_temperature": {
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "measure_temperature.applied": {
+              "title": {
+                "en": "Applied setpoint",
+                "fr": "Consigne appliquée"
+              },
+              "preventInsights": true
+            },
+            "alarm_generic.service": {
+              "title": {
+                "en": "Service alarm active",
+                "fr": "Alarme de maintenance active"
+              }
+            },
+            "target_temperature.comfort": {
+              "title": {
+                "en": "Comfort temperature",
+                "fr": "Température Confort"
+              },
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "target_temperature.reduced": {
+              "title": {
+                "en": "Reduced temperature",
+                "fr": "Température Réduit"
+              },
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            },
+            "target_temperature.frost": {
+              "title": {
+                "en": "Frost temperature",
+                "fr": "Température Hors gel"
+              },
+              "min": 5,
+              "max": 25,
+              "step": 0.5,
+              "decimals": 1
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/community.frisquet.connect/5/f86c557c-a694-41b4-9548-e165bfb8b9d8/drivers/boiler/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/community.frisquet.connect/5/f86c557c-a694-41b4-9548-e165bfb8b9d8/drivers/boiler/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/community.frisquet.connect/5/f86c557c-a694-41b4-9548-e165bfb8b9d8/drivers/boiler/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "zone_mode_changed",
+            "title": {
+              "en": "Heating mode changed",
+              "fr": "Le mode de chauffage a changé"
+            },
+            "titleFormatted": {
+              "en": "[[device]] heating mode changed",
+              "fr": "Le mode chauffage de [[device]] a changé"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "mode",
+                "type": "string",
+                "title": {
+                  "en": "Mode",
+                  "fr": "Mode"
+                }
+              }
+            ]
+          },
+          {
+            "id": "command_state_changed",
+            "title": {
+              "en": "Command status changed",
+              "fr": "L’état de commande a changé"
+            },
+            "titleFormatted": {
+              "en": "Command status changed for [[device]]",
+              "fr": "L’état de commande a changé pour [[device]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_command_state"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "state",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "fr": "État"
+                }
+              }
+            ]
+          },
+          {
+            "id": "water_mode_changed",
+            "title": {
+              "en": "Boiler mode changed",
+              "fr": "Le mode chaudière a changé"
+            },
+            "titleFormatted": {
+              "en": "[[device]] boiler mode changed",
+              "fr": "Le mode chaudière de [[device]] a changé"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_water_mode"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "mode",
+                "type": "string",
+                "title": {
+                  "en": "Mode ID",
+                  "fr": "Identifiant du mode"
+                }
+              },
+              {
+                "name": "name",
+                "type": "string",
+                "title": {
+                  "en": "Mode",
+                  "fr": "Mode"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "zone_mode_is",
+            "title": {
+              "en": "Heating mode !{{is|is not}}",
+              "fr": "Le mode de chauffage !{{est|n’est pas}}"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Heating mode !{{is|is not}} [[mode]]",
+              "fr": "[[device]]: Le mode de chauffage !{{est|n’est pas}} [[mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Schedule",
+                      "fr": "Programmation"
+                    }
+                  },
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort always",
+                      "fr": "Confort permanent"
+                    }
+                  },
+                  {
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced always",
+                      "fr": "Réduit permanent"
+                    }
+                  },
+                  {
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost protection",
+                      "fr": "Hors gel"
+                    }
+                  },
+                  {
+                    "id": "boost",
+                    "title": {
+                      "en": "Boost",
+                      "fr": "Boost"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "boost_is_enabled",
+            "title": {
+              "en": "Boost is enabled",
+              "fr": "Le Boost est activé"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Boost !{{is|is not}} enabled",
+              "fr": "[[device]]: Le Boost !{{est|n’est pas}} activé"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_boost"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_zone_mode",
+            "title": {
+              "en": "Set heating mode",
+              "fr": "Régler le mode de chauffage"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Set heating mode to [[mode]]",
+              "fr": "[[device]]: Régler le chauffage sur [[mode]]"
+            },
+            "hint": {
+              "en": "Schedule also cancels temporary overrides across the installation. Frost protection keeps the boiler powered.",
+              "fr": "Programmation annule aussi les dérogations temporaires de l’installation. Hors gel conserve la chaudière alimentée."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Schedule",
+                      "fr": "Programmation"
+                    }
+                  },
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort always",
+                      "fr": "Confort permanent"
+                    }
+                  },
+                  {
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced always",
+                      "fr": "Réduit permanent"
+                    }
+                  },
+                  {
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost protection",
+                      "fr": "Hors gel"
+                    }
+                  },
+                  {
+                    "id": "boost",
+                    "title": {
+                      "en": "Boost",
+                      "fr": "Boost"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_profile_temperature",
+            "title": {
+              "en": "Set profile temperature",
+              "fr": "Régler la température d’un profil"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Set [[profile]] to [[temperature]] °C",
+              "fr": "[[device]]: Régler [[profile]] à [[temperature]] °C"
+            },
+            "hint": {
+              "en": "Changes the stored profile temperature, including future scheduled periods. Does not switch the active profile.",
+              "fr": "Modifie la consigne enregistrée, y compris pour les prochaines plages. Ne change pas le profil actif."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_mode"
+              },
+              {
+                "name": "profile",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort",
+                      "fr": "Confort"
+                    }
+                  },
+                  {
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced",
+                      "fr": "Réduit"
+                    }
+                  },
+                  {
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost protection",
+                      "fr": "Hors gel"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "en": "Temperature",
+                  "fr": "Température"
+                },
+                "min": 5,
+                "max": 25,
+                "step": 0.5
+              }
+            ]
+          },
+          {
+            "id": "set_hot_water_mode",
+            "title": {
+              "en": "Set hot-water mode",
+              "fr": "Régler le mode eau chaude"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Set hot-water mode to [[mode]]",
+              "fr": "[[device]]: Régler l’eau chaude sur [[mode]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_water_mode"
+              },
+              {
+                "name": "mode",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Mode",
+                  "fr": "Mode"
+                },
+                "placeholder": {
+                  "en": "Choose a supported mode",
+                  "fr": "Choisir un mode disponible"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_installation_override",
+            "title": {
+              "en": "Set installation override",
+              "fr": "Régler la dérogation générale"
+            },
+            "titleFormatted": {
+              "en": "Set scheduled zones to [[mode]]",
+              "fr": "Régler les zones programmées sur [[mode]]"
+            },
+            "hint": {
+              "en": "Applies to the installation's scheduled zones until the next programme change. Schedule cancels the override.",
+              "fr": "S’applique aux zones programmées de l’installation jusqu’à la prochaine plage. Programmation annule la dérogation."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=boiler"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Schedule",
+                      "fr": "Programmation"
+                    }
+                  },
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort temporarily",
+                      "fr": "Confort temporaire"
+                    }
+                  },
+                  {
+                    "id": "reduced",
+                    "title": {
+                      "en": "Reduced temporarily",
+                      "fr": "Réduit temporaire"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_boost",
+            "title": {
+              "en": "Set Boost",
+              "fr": "Régler le Boost"
+            },
+            "titleFormatted": {
+              "en": "[[device]]: Turn Boost [[enabled]]",
+              "fr": "[[device]]: Régler le Boost sur [[enabled]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "capabilities=frisquet_boost"
+              },
+              {
+                "name": "enabled",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "on",
+                    "title": {
+                      "en": "On",
+                      "fr": "Activé"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "title": {
+                      "en": "Off",
+                      "fr": "Désactivé"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "in_review",
+      "stateChangedAt": "2026-11-03T10:15:55.704Z",
+      "bugs": "https://github.com/shuguet/homey-frisquet/issues",
+      "homepage": "https://github.com/shuguet/homey-frisquet",
+      "support": "https://github.com/shuguet/homey-frisquet/issues",
+      "source": "https://github.com/shuguet/homey-frisquet",
+      "contributors": {
+        "developers": [
+          {
+            "name": "Guillaume SOURD"
+          },
+          {
+            "name": "Bruno TÊTE"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Added app-wide refresh settings and optional notifications for prolonged connection failures, recovery, and new boiler or service alarms. Existing installations keep their five-minute interval; new installations default to fifteen minutes. Notifications are off until enabled. Updated the boiler and heating-zone icons with angled device drawings.",
+        "fr": "Ajout d’un intervalle d’actualisation global et de notifications facultatives pour les pertes de connexion prolongées, leur rétablissement et les nouvelles alarmes chaudière ou de maintenance. Les installations existantes conservent cinq minutes ; les nouvelles utilisent quinze minutes. Les notifications sont désactivées par défaut. Nouvelles icônes de chaudière et de zone de chauffage dessinées en perspective."
+      },
+      "compatibility": ">=12.9.0",
+      "tags": {
+        "en": [
+          "Frisquet",
+          "boiler",
+          "heating",
+          "hot water"
+        ],
+        "fr": [
+          "Frisquet",
+          "chaudière",
+          "chauffage",
+          "eau chaude"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "testVersion": "0.6.1",
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6adbcbe447d7399db6cc41b2",
+      "id": "6ae4976b5776bdf41f89c040",
       "type": "user",
-      "userId": "5e88c050efcb2f0c762f36c8",
-      "name": "Roy PEDRINIS",
+      "userId": "67473a1b86be776f7a7f0ad8",
+      "name": "Sylvain Huguet",
       "verified": false
     },
     "communityTopicId": null

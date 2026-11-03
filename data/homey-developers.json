@@ -582,6 +582,12 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6ade233647d7399db6cd275c",
+    "developerName": "Bryan Suijkerland",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6ac24d17bdc7ced970ffe259",
     "developerName": "Bryan van der Starre",
     "forumUserID": null,
@@ -2502,6 +2508,12 @@
     "forumUsername": "KennyMoens"
   },
   {
+    "developerId": "6acaa815bdc8421d78c58672",
+    "developerName": "Kenny S",
+    "forumUserID": 42905,
+    "forumUsername": "Kenny_S"
+  },
+  {
     "developerId": "5dcaba931c90c866f9364e9a",
     "developerName": "Kevin Siml",
     "forumUserID": null,
@@ -3810,6 +3822,12 @@
     "forumUsername": "Pelle_Rosengren"
   },
   {
+    "developerId": "6adb66c547d7399db6cc2baf",
+    "developerName": "Pepane 13",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "5dcab9e31c90c866f93645af",
     "developerName": "Peter Baan",
     "forumUserID": null,
@@ -4894,6 +4912,12 @@
     "developerName": "SwitchBot",
     "forumUserID": 1295,
     "forumUsername": "Adrian_Rockall"
+  },
+  {
+    "developerId": "6ae4976b5776bdf41f89c040",
+    "developerName": "Sylvain Huguet",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "69efab1d384eb48fac0f637c",

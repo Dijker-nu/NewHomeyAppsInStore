@@ -2545,10 +2545,10 @@
     "name": "Shelly (Legacy)",
     "developerName": "Allterco Robotics",
     "developerId": "6a8c4b90222a4450aa38d020",
-    "version": "3.65.1",
+    "version": "3.65.2",
     "sourceRepository": "https://github.com/Drenso/cloud.shelly",
     "publishedAt": "2019-11-12T14:03:35.326Z",
-    "updatedAt": "2026-09-17T12:13:32.674Z",
+    "updatedAt": "2026-11-03T11:00:53.909Z",
     "communityTopicId": 765
   },
   {
@@ -3766,10 +3766,10 @@
     "name": "Philips Air",
     "developerName": "Edwin Biemond",
     "developerId": "5dcabc211c90c866f9366331",
-    "version": "1.0.77",
+    "version": "1.0.82",
     "sourceRepository": "https://github.com/biemond/com.athom.philipsair",
     "publishedAt": "2019-11-14T18:39:12.182Z",
-    "updatedAt": "2026-09-06T18:05:40.151Z",
+    "updatedAt": "2026-11-03T11:00:53.910Z",
     "communityTopicId": 32151
   },
   {
@@ -12027,10 +12027,10 @@
     "name": "Domoticz",
     "developerName": "Jeroen Tebbens",
     "developerId": "5dcab9731c90c866f9364176",
-    "version": "1.1.3",
+    "version": "1.1.8",
     "sourceRepository": "",
     "publishedAt": "2025-10-28T09:56:47.631Z",
-    "updatedAt": "2026-01-31T12:39:53.949Z",
+    "updatedAt": "2026-11-03T11:00:53.911Z",
     "communityTopicId": null
   },
   {
@@ -12511,10 +12511,10 @@
     "name": "Danfoss Ally",
     "developerName": "Joshua de Gier",
     "developerId": "6717e6c07cb24ac67541b220",
-    "version": "1.3.7",
+    "version": "1.3.8",
     "sourceRepository": "https://github.com/PendoNL/nl.pendo.danfoss-ally",
     "publishedAt": "2025-12-14T21:51:04.033Z",
-    "updatedAt": "2026-10-28T09:49:50.162Z",
+    "updatedAt": "2026-11-03T11:00:53.911Z",
     "communityTopicId": 146923
   },
   {
@@ -16086,10 +16086,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.743",
+    "version": "1.0.745",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-11-02T11:24:40.076Z",
+    "updatedAt": "2026-11-03T11:00:53.911Z",
     "communityTopicId": 156098
   },
   {
@@ -18891,10 +18891,10 @@
     "name": "HUUM UKU Sauna",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.9.3",
+    "version": "0.9.4",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.huum",
     "publishedAt": "2026-10-05T10:37:08.582Z",
-    "updatedAt": "2026-10-31T09:47:34.830Z",
+    "updatedAt": "2026-11-03T11:00:53.912Z",
     "communityTopicId": 159173
   },
   {
@@ -19045,10 +19045,10 @@
     "name": "Swiss Dynamic Electricity Tariff",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.dynamictariffch",
     "publishedAt": "2026-10-07T10:23:22.363Z",
-    "updatedAt": "2026-10-26T09:06:38.851Z",
+    "updatedAt": "2026-11-03T11:00:53.912Z",
     "communityTopicId": 160031
   },
   {
@@ -19133,10 +19133,10 @@
     "name": "Marstek B2500",
     "developerName": "dez ware",
     "developerId": "6a5240abce38f245588dd30d",
-    "version": "0.4.16",
+    "version": "0.4.17",
     "sourceRepository": "",
     "publishedAt": "2026-10-08T18:05:27.778Z",
-    "updatedAt": "2026-10-13T10:46:12.224Z",
+    "updatedAt": "2026-11-03T11:00:53.912Z",
     "communityTopicId": 160375
   },
   {
@@ -19287,10 +19287,10 @@
     "name": "Vaillant eBUS",
     "developerName": "Volodymyr Piaskovskyi",
     "developerId": "6ac7f481bdc8421d78c4d31b",
-    "version": "0.4.1",
+    "version": "0.4.4",
     "sourceRepository": "https://github.com/vova275/homey-vaillant-ebus",
     "publishedAt": "2026-10-14T16:05:13.082Z",
-    "updatedAt": "2026-10-14T16:05:13.082Z",
+    "updatedAt": "2026-11-03T11:00:53.912Z",
     "communityTopicId": null
   },
   {
@@ -19441,10 +19441,10 @@
     "name": "GeoZones",
     "developerName": "Vincent Roué",
     "developerId": "69c6883d699c29709ca09066",
-    "version": "2.0.7",
+    "version": "2.0.8",
     "sourceRepository": "https://github.com/vincent-roue/com.roue.geozones",
     "publishedAt": "2026-10-16T15:41:38.691Z",
-    "updatedAt": "2026-10-17T07:54:57.465Z",
+    "updatedAt": "2026-11-03T11:00:53.912Z",
     "communityTopicId": 153017
   },
   {
@@ -19874,6 +19874,28 @@
     "sourceRepository": "",
     "publishedAt": "2026-11-02T20:57:39.941Z",
     "updatedAt": "2026-11-02T20:57:39.941Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.bryan.voldt",
+    "name": "Voldt",
+    "developerName": "Bryan Suijkerland",
+    "developerId": "6ade233647d7399db6cd275c",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-03T11:00:12.924Z",
+    "updatedAt": "2026-11-03T11:00:12.924Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "community.frisquet.connect",
+    "name": "Frisquet Connect",
+    "developerName": "Sylvain Huguet",
+    "developerId": "6ae4976b5776bdf41f89c040",
+    "version": "0.5.1",
+    "sourceRepository": "https://github.com/shuguet/homey-frisquet",
+    "publishedAt": "2026-11-03T11:00:14.367Z",
+    "updatedAt": "2026-11-03T11:00:14.367Z",
     "communityTopicId": null
   }
 ]

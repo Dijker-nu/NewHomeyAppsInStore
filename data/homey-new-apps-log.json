@@ -1090,5 +1090,29 @@
     "updatedAt": "2026-11-02T20:57:39.941Z",
     "communityTopicId": null,
     "discoveredAt": "2026-11-02T20:57:39.941Z"
+  },
+  {
+    "appId": "nl.bryan.voldt",
+    "name": "Voldt",
+    "developerName": "Bryan Suijkerland",
+    "developerId": "6ade233647d7399db6cd275c",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-03T11:00:12.924Z",
+    "updatedAt": "2026-11-03T11:00:12.924Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-03T11:00:12.923Z"
+  },
+  {
+    "appId": "community.frisquet.connect",
+    "name": "Frisquet Connect",
+    "developerName": "Sylvain Huguet",
+    "developerId": "6ae4976b5776bdf41f89c040",
+    "version": "0.5.1",
+    "sourceRepository": "https://github.com/shuguet/homey-frisquet",
+    "publishedAt": "2026-11-03T11:00:14.367Z",
+    "updatedAt": "2026-11-03T11:00:14.367Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-03T11:00:12.923Z"
   }
 ]
