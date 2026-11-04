@@ -19919,5 +19919,49 @@
     "publishedAt": "2026-11-03T15:33:59.627Z",
     "updatedAt": "2026-11-03T15:33:59.627Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.github.moogblob.juwel-appcontrol",
+    "name": "JUWEL",
+    "developerName": "Johan Klintberg",
+    "developerId": "6ad505e7bdc8421d78c99c6c",
+    "version": "1.0.3",
+    "sourceRepository": "https://github.com/moogblob/homey-juwel-appcontrol",
+    "publishedAt": "2026-11-04T18:58:24.866Z",
+    "updatedAt": "2026-11-04T18:58:24.866Z",
+    "communityTopicId": 161074
+  },
+  {
+    "appId": "no.tjahnsen.googlenestcontrols",
+    "name": "Google Nest Controls",
+    "developerName": "Thomas Jahnsen",
+    "developerId": "69c10924699c29709c9eecab",
+    "version": "0.3.55",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-04T18:58:24.866Z",
+    "updatedAt": "2026-11-04T18:58:24.866Z",
+    "communityTopicId": 161182
+  },
+  {
+    "appId": "com.hoymiles.hione",
+    "name": "Hoymiles HiOne",
+    "developerName": "Reinier SecEnablers",
+    "developerId": "69a74690af832c1e4629b6c0",
+    "version": "1.1.10",
+    "sourceRepository": "https://github.com/ItsRaYnor/homey-app-hoymiles-hione",
+    "publishedAt": "2026-11-04T18:58:24.866Z",
+    "updatedAt": "2026-11-04T18:58:24.866Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.glumpf.dailyrhythm",
+    "name": "Daily Rhythm",
+    "developerName": "Lars Andresen",
+    "developerId": "6ac0acc5bdc7ced970ff7032",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-04T18:58:25.880Z",
+    "updatedAt": "2026-11-04T18:58:25.880Z",
+    "communityTopicId": null
   }
 ]
