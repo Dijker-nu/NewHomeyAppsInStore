@@ -920,8 +920,8 @@
   {
     "developerId": "6a7c412dc6a80eeabce17592",
     "developerName": "Davy Bert",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 15692,
+    "forumUsername": "Davy_Bert"
   },
   {
     "developerId": "69eb4cdc384eb48fac0e5b28",
@@ -2248,6 +2248,12 @@
     "developerName": "Johan Hansson",
     "forumUserID": null,
     "forumUsername": null
+  },
+  {
+    "developerId": "6ad505e7bdc8421d78c99c6c",
+    "developerName": "Johan Klintberg",
+    "forumUserID": 54637,
+    "forumUsername": "moogblob"
   },
   {
     "developerId": "5dcab90a1c90c866f9363d9e",
