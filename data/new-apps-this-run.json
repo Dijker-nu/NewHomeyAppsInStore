@@ -1,650 +1,234 @@
 [
   {
-    "id": "ua.te.its.prana",
+    "id": "film.framebuilder.muellkalender",
     "rating": null,
     "liveBuild": {
-      "id": 3,
+      "id": 2,
       "name": {
-        "en": "Prana",
-        "uk": "Prana",
-        "ru": "Prana"
+        "de": "Müllkalender Deutschland",
+        "en": "Waste Calendar Germany"
       },
-      "version": "1.0.2",
+      "version": "0.2.1",
       "readme": {
-        "en": "Control your Prana recuperators from Homey, directly over your home network. No cloud account is needed.\n\nHomey finds the recuperator on the network automatically, or you can add it by its IP address. After that you can switch the fans on and off and set the speed for both fans together or for the supply and extract fans separately. You can choose the operating mode (Manual, Auto, Auto+, Night or Boost), switch the heater, winter mode and linked-fan mode, and set the display brightness.\n\nRecuperators with built-in sensors also report inside and outside temperature, humidity, CO2, VOC and air pressure. These values show up in Insights and can be used in Flows. For example, you can switch to Boost when CO2 rises, use Night mode at bedtime, or turn on the heater when it is freezing outside.\n\nRequirements: a Prana recuperator with Wi-Fi and firmware 47 or newer, on the same network as Homey. To check the firmware, open the Prana Online 2.0 app, press and hold the device card, and choose About Device.\n\nThis app is not made by Prana. It uses the local API that Prana has published.\n",
-        "ru": "Управляйте рекуператорами Prana из Homey напрямую через домашнюю сеть, без облака и учётной записи.\n\nHomey сам находит рекуператор в сети, или его можно добавить по IP-адресу. Дальше можно включать и выключать вентиляторы, задавать скорость обоим вместе или отдельно притоку и вытяжке, выбирать режим (Ручной, Авто, Авто+, Ночной, Boost), управлять нагревателем, зимним режимом и связкой вентиляторов, а также яркостью дисплея.\n\nРекуператоры с датчиками также передают температуру внутри и снаружи, влажность, CO2, ЛОС и давление. Эти значения есть в Insights и доступны во Flow. Например: включать Boost, когда растёт CO2, ночной режим перед сном или нагреватель в мороз.\n\nТребования: рекуператор Prana с Wi-Fi и прошивкой 47 или новее, в одной сети с Homey. Проверить прошивку: приложение Prana Online 2.0 → удерживайте карточку устройства → «Об устройстве».\n\nЭто приложение сделано не компанией Prana. Оно использует локальный API, опубликованный Prana.\n",
-        "uk": "Керуйте рекуператорами Prana з Homey напряму через домашню мережу, без хмари та облікового запису.\n\nHomey сам знаходить рекуператор у мережі, або його можна додати за IP-адресою. Далі можна вмикати й вимикати вентилятори, задавати швидкість обом разом або окремо припливу й витяжці, обирати режим (Ручний, Авто, Авто+, Нічний, Boost), керувати нагрівачем, зимовим режимом і зв'язкою вентиляторів, а також яскравістю дисплея.\n\nРекуператори з датчиками також передають температуру всередині й ззовні, вологість, CO2, ЛОС і тиск. Ці значення є в Insights і доступні у Flow. Наприклад: вмикати Boost, коли зростає CO2, нічний режим перед сном або нагрівач у мороз.\n\nВимоги: рекуператор Prana з Wi-Fi і прошивкою 47 або новішою, в одній мережі з Homey. Перевірити прошивку: застосунок Prana Online 2.0 → утримуйте картку пристрою → «Про пристрій».\n\nЦей застосунок зроблено не компанією Prana. Він використовує локальний API, який опублікувала Prana.\n"
+        "en": "Waste Calendar Germany lets you use your own ICS collection calendar without a fixed waste-provider integration. Never miss a waste collection again. Import your provider’s ICS file or add a waste calendar link. The app matches collection dates to your bins. A beautifully designed, clear widget shows colorful bin icons and upcoming collections at a glance, fitting naturally into your Homey dashboard. Choose which bins to display and when each bin should remind you. Calendar links are updated automatically.\n\nMake reminders fit your daily routine. Use Flow cards to send push notifications, turn on a light or make an announcement through a connected speaker. For push notifications, choose the recipient in your Flow and insert the ready-made Reminder text tag into the message field. Calendar data and settings are stored on your Homey, with no additional account required.\n",
+        "de": "Müllkalender Deutschland macht eigene Abholkalender im ICS-Format ohne feste Entsorger-Anbindung nutzbar. Keine Müllabfuhr mehr vergessen: Importiere die ICS-Datei deines Entsorgers oder füge einen Müllkalender-Link ein. Die App ordnet die Abholtermine deinen Tonnen zu. Ein ansprechend gestaltetes, übersichtliches Widget zeigt dir farbige Tonnen-Icons und die nächsten Abholtermine auf einen Blick, passend zu deinem Homey Dashboard. Du wählst, welche Tonnen angezeigt werden und wann du für jede Tonne erinnert werden möchtest. Kalender-Links werden automatisch aktualisiert.\n\nGestalte deine Erinnerungen so, wie sie zu deinem Alltag passen: Mit den Flow-Karten kannst du Push-Nachrichten senden, eine Lampe leuchten lassen oder eine Durchsage über einen verbundenen Lautsprecher auslösen. Für Push-Nachrichten wählst du in deinem Flow den Empfänger und setzt den fertigen Tag „Erinnerungstext“ ins Nachrichtenfeld ein. Kalender und Einstellungen werden auf deinem Homey gespeichert; ein zusätzliches Benutzerkonto ist nicht erforderlich.\n"
       },
       "description": {
-        "en": "Fresh, filtered air with heat recovery, controlled locally",
-        "uk": "Свіже очищене повітря з рекуперацією тепла, керування локально",
-        "ru": "Свежий очищенный воздух с рекуперацией тепла, управление локально"
+        "en": "Your bins. Your calendar. Your reminders.",
+        "de": "Deine Tonnen. Dein Kalender. Deine Erinnerungen."
       },
-      "category": "climate",
-      "brandColor": "#00AEEF",
-      "icon": "https://apps.homeycdn.net/app/ua.te.its.prana/3/eb6083a0-75e8-4a1f-abb1-67ef0ffa8074/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/ua.te.its.prana/3/eb6083a0-75e8-4a1f-abb1-67ef0ffa8074/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/ua.te.its.prana/3/eb6083a0-75e8-4a1f-abb1-67ef0ffa8074/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "recuperator",
-          "name": {
-            "en": "Recuperator",
-            "uk": "Рекуператор",
-            "ru": "Рекуператор"
-          },
-          "class": "fan",
-          "capabilities": [
-            "onoff",
-            "fan_speed",
-            "fan_speed.supply",
-            "fan_speed.extract",
-            "prana_mode",
-            "prana_heater",
-            "prana_winter",
-            "prana_bound",
-            "prana_brightness"
-          ],
-          "capabilitiesOptions": {
-            "fan_speed": {
-              "title": {
-                "en": "Speed",
-                "uk": "Швидкість",
-                "ru": "Скорость"
-              },
-              "step": 0.1
-            },
-            "fan_speed.supply": {
-              "title": {
-                "en": "Supply speed",
-                "uk": "Швидкість припливу",
-                "ru": "Скорость притока"
-              },
-              "step": 0.1
-            },
-            "fan_speed.extract": {
-              "title": {
-                "en": "Extract speed",
-                "uk": "Швидкість витяжки",
-                "ru": "Скорость вытяжки"
-              },
-              "step": 0.1
-            },
-            "measure_temperature.inside": {
-              "title": {
-                "en": "Inside temperature",
-                "uk": "Температура всередині",
-                "ru": "Температура внутри"
-              }
-            },
-            "measure_temperature.outside": {
-              "title": {
-                "en": "Outside temperature",
-                "uk": "Температура ззовні",
-                "ru": "Температура снаружи"
-              }
-            },
-            "measure_temperature.inside2": {
-              "title": {
-                "en": "Inside temperature 2",
-                "uk": "Температура всередині 2",
-                "ru": "Температура внутри 2"
-              }
-            },
-            "measure_temperature.outside2": {
-              "title": {
-                "en": "Outside temperature 2",
-                "uk": "Температура ззовні 2",
-                "ru": "Температура снаружи 2"
-              }
-            }
-          },
-          "energy": {
-            "approximation": {
-              "usageOn": 30,
-              "usageOff": 1
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/ua.te.its.prana/3/eb6083a0-75e8-4a1f-abb1-67ef0ffa8074/drivers/recuperator/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/ua.te.its.prana/3/eb6083a0-75e8-4a1f-abb1-67ef0ffa8074/drivers/recuperator/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "lan"
-          ],
-          "icon": "https://apps.homeycdn.net/app/ua.te.its.prana/3/eb6083a0-75e8-4a1f-abb1-67ef0ffa8074/drivers/recuperator/assets/icon.svg"
-        }
-      ],
+      "category": "tools",
+      "brandColor": "#355445",
+      "icon": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/assets/images/large.png",
+      "drivers": null,
       "flow": {
         "triggers": [
           {
-            "id": "mode_changed",
+            "id": "any_reminder",
             "title": {
-              "en": "The mode changed",
-              "uk": "Режим змінився",
-              "ru": "Режим изменился"
+              "en": "A waste collection reminder is due",
+              "de": "Eine Müllabfuhr-Erinnerung ist fällig"
             },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              }
-            ],
             "tokens": [
               {
-                "name": "mode",
+                "name": "bin_name",
                 "type": "string",
                 "title": {
-                  "en": "Mode",
-                  "uk": "Режим",
-                  "ru": "Режим"
-                },
-                "example": {
-                  "en": "boost",
-                  "uk": "boost",
-                  "ru": "boost"
+                  "en": "Bin name",
+                  "de": "Tonnenname"
+                }
+              },
+              {
+                "name": "collection_date",
+                "type": "string",
+                "title": {
+                  "en": "Collection date",
+                  "de": "Abholdatum"
+                }
+              },
+              {
+                "name": "days_until",
+                "type": "number",
+                "title": {
+                  "en": "Days until collection",
+                  "de": "Tage bis zur Abholung"
+                }
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Reminder text",
+                  "de": "Erinnerungstext"
                 }
               }
             ]
           },
           {
-            "id": "heater_changed",
+            "id": "bin_reminder",
             "title": {
-              "en": "The heater turned on or off",
-              "uk": "Нагрівач увімкнувся або вимкнувся",
-              "ru": "Нагреватель включился или выключился"
+              "en": "A selected bin reminder is due",
+              "de": "Die Erinnerung für eine ausgewählte Tonne ist fällig"
+            },
+            "titleFormatted": {
+              "en": "Reminder for [[bin]] is due",
+              "de": "Die Erinnerung für [[bin]] ist fällig"
             },
             "args": [
               {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
+                "name": "bin",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Bin",
+                  "de": "Tonne"
+                }
               }
             ],
             "tokens": [
               {
-                "name": "heater",
-                "type": "boolean",
+                "name": "bin_name",
+                "type": "string",
                 "title": {
-                  "en": "Heater",
-                  "uk": "Нагрівач",
-                  "ru": "Нагреватель"
-                },
-                "example": true
-              }
-            ]
-          },
-          {
-            "id": "winter_changed",
-            "title": {
-              "en": "Winter mode turned on or off",
-              "uk": "Зимовий режим увімкнувся або вимкнувся",
-              "ru": "Зимний режим включился или выключился"
-            },
-            "args": [
+                  "en": "Bin name",
+                  "de": "Tonnenname"
+                }
+              },
               {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "winter",
-                "type": "boolean",
+                "name": "collection_date",
+                "type": "string",
                 "title": {
-                  "en": "Winter mode",
-                  "uk": "Зимовий режим",
-                  "ru": "Зимний режим"
-                },
-                "example": true
+                  "en": "Collection date",
+                  "de": "Abholdatum"
+                }
+              },
+              {
+                "name": "days_until",
+                "type": "number",
+                "title": {
+                  "en": "Days until collection",
+                  "de": "Tage bis zur Abholung"
+                }
+              },
+              {
+                "name": "message",
+                "type": "string",
+                "title": {
+                  "en": "Reminder text",
+                  "de": "Erinnerungstext"
+                }
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "mode_is",
+            "id": "any_collection_in",
             "title": {
-              "en": "The mode !{{is|is not}}",
-              "uk": "Режим !{{дорівнює|не дорівнює}}",
-              "ru": "Режим !{{равен|не равен}}"
+              "en": "There is a collection in a number of days",
+              "de": "Eine Abholung findet in einer Anzahl von Tagen statt"
             },
             "titleFormatted": {
-              "en": "The mode !{{is|is not}} [[mode]]",
-              "uk": "Режим !{{дорівнює|не дорівнює}} [[mode]]",
-              "ru": "Режим !{{равен|не равен}} [[mode]]"
+              "en": "There is a collection in [[days]] days",
+              "de": "Eine Abholung findet in [[days]] Tagen statt"
             },
             "args": [
               {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
+                "name": "days",
+                "type": "number",
+                "title": {
+                  "en": "Days from today (0 = today, 1 = tomorrow)",
+                  "de": "Tage ab heute (0 = heute, 1 = morgen)"
+                },
+                "min": 0,
+                "max": 550,
+                "step": 1,
+                "value": 1
+              }
+            ]
+          },
+          {
+            "id": "bin_collection_in",
+            "title": {
+              "en": "A selected bin is collected in a number of days",
+              "de": "Eine ausgewählte Tonne wird in einer Anzahl von Tagen abgeholt"
+            },
+            "titleFormatted": {
+              "en": "[[bin]] is collected in [[days]] days",
+              "de": "[[bin]] wird in [[days]] Tagen abgeholt"
+            },
+            "args": [
+              {
+                "name": "bin",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Bin",
+                  "de": "Tonne"
+                }
               },
               {
-                "name": "mode",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "manual",
-                    "label": {
-                      "en": "Manual",
-                      "uk": "Ручний",
-                      "ru": "Ручной"
-                    }
-                  },
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto",
-                      "uk": "Авто",
-                      "ru": "Авто"
-                    }
-                  },
-                  {
-                    "id": "auto_plus",
-                    "label": {
-                      "en": "Auto+",
-                      "uk": "Авто+",
-                      "ru": "Авто+"
-                    }
-                  },
-                  {
-                    "id": "night",
-                    "label": {
-                      "en": "Night",
-                      "uk": "Нічний",
-                      "ru": "Ночной"
-                    }
-                  },
-                  {
-                    "id": "boost",
-                    "label": {
-                      "en": "Boost",
-                      "uk": "Boost",
-                      "ru": "Boost"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "heater_is_on",
-            "title": {
-              "en": "The heater !{{is|is not}} on",
-              "uk": "Нагрівач !{{увімкнений|не увімкнений}}",
-              "ru": "Нагреватель !{{включён|не включён}}"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              }
-            ]
-          },
-          {
-            "id": "winter_is_on",
-            "title": {
-              "en": "Winter mode !{{is|is not}} on",
-              "uk": "Зимовий режим !{{увімкнений|не увімкнений}}",
-              "ru": "Зимний режим !{{включён|не включён}}"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              }
-            ]
-          },
-          {
-            "id": "bound_is_on",
-            "title": {
-              "en": "Fans !{{are|are not}} linked",
-              "uk": "Вентилятори !{{зв'язані|не зв'язані}}",
-              "ru": "Вентиляторы !{{связаны|не связаны}}"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
+                "name": "days",
+                "type": "number",
+                "title": {
+                  "en": "Days from today (0 = today, 1 = tomorrow)",
+                  "de": "Tage ab heute (0 = heute, 1 = morgen)"
+                },
+                "min": 0,
+                "max": 550,
+                "step": 1,
+                "value": 1
               }
             ]
           }
         ],
         "actions": [
           {
-            "id": "set_mode",
+            "id": "refresh_calendar",
             "title": {
-              "en": "Set mode",
-              "uk": "Встановити режим",
-              "ru": "Установить режим"
-            },
-            "titleFormatted": {
-              "en": "Set mode to [[mode]]",
-              "uk": "Встановити режим [[mode]]",
-              "ru": "Установить режим [[mode]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              },
-              {
-                "name": "mode",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "manual",
-                    "label": {
-                      "en": "Manual",
-                      "uk": "Ручний",
-                      "ru": "Ручной"
-                    }
-                  },
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Auto",
-                      "uk": "Авто",
-                      "ru": "Авто"
-                    }
-                  },
-                  {
-                    "id": "auto_plus",
-                    "label": {
-                      "en": "Auto+",
-                      "uk": "Авто+",
-                      "ru": "Авто+"
-                    }
-                  },
-                  {
-                    "id": "night",
-                    "label": {
-                      "en": "Night",
-                      "uk": "Нічний",
-                      "ru": "Ночной"
-                    }
-                  },
-                  {
-                    "id": "boost",
-                    "label": {
-                      "en": "Boost",
-                      "uk": "Boost",
-                      "ru": "Boost"
-                    }
-                  }
-                ]
-              }
-            ]
+              "en": "Refresh calendar from ICS URL",
+              "de": "Kalender über den ICS-Link aktualisieren"
+            }
           },
           {
-            "id": "boost_for",
+            "id": "set_reminders",
             "title": {
-              "en": "Boost for a while",
-              "uk": "Boost на певний час",
-              "ru": "Boost на время"
+              "en": "Enable or disable reminders for a bin",
+              "de": "Erinnerungen für eine Tonne aktivieren oder deaktivieren"
             },
             "titleFormatted": {
-              "en": "Boost for [[minutes]] minutes",
-              "uk": "Boost на [[minutes]] хв",
-              "ru": "Boost на [[minutes]] мин"
-            },
-            "hint": {
-              "en": "Turns on Boost, then returns to the mode that was active before.",
-              "uk": "Вмикає Boost, а потім повертає режим, який був до того.",
-              "ru": "Включает Boost, а затем возвращает прежний режим."
+              "en": "Set reminders for [[bin]] to [[enabled]]",
+              "de": "Erinnerungen für [[bin]] auf [[enabled]] setzen"
             },
             "args": [
               {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              },
-              {
-                "name": "minutes",
-                "type": "number",
-                "min": 1,
-                "max": 240,
-                "step": 1,
-                "placeholder": {
-                  "en": "Minutes",
-                  "uk": "Хвилини",
-                  "ru": "Минуты"
+                "name": "bin",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Bin",
+                  "de": "Tonne"
                 }
-              }
-            ]
-          },
-          {
-            "id": "set_speed",
-            "title": {
-              "en": "Set fan speed step",
-              "uk": "Встановити крок швидкості",
-              "ru": "Установить шаг скорости"
-            },
-            "titleFormatted": {
-              "en": "Set [[fan]] speed to step [[step]]",
-              "uk": "Встановити швидкість ([[fan]]) на крок [[step]]",
-              "ru": "Установить скорость ([[fan]]) на шаг [[step]]"
-            },
-            "hint": {
-              "en": "Speed step as shown on the recuperator (1 to the maximum of your model). Turns the fans on.",
-              "uk": "Крок швидкості, як на рекуператорі (від 1 до максимуму вашої моделі). Вмикає вентилятори.",
-              "ru": "Шаг скорости, как на рекуператоре (от 1 до максимума вашей модели). Включает вентиляторы."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
               },
               {
-                "name": "fan",
+                "name": "enabled",
                 "type": "dropdown",
-                "values": [
-                  {
-                    "id": "both",
-                    "label": {
-                      "en": "both fans",
-                      "uk": "обох вентиляторів",
-                      "ru": "обоих вентиляторов"
-                    }
-                  },
-                  {
-                    "id": "supply",
-                    "label": {
-                      "en": "supply",
-                      "uk": "припливу",
-                      "ru": "притока"
-                    }
-                  },
-                  {
-                    "id": "extract",
-                    "label": {
-                      "en": "extract",
-                      "uk": "витяжки",
-                      "ru": "вытяжки"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "step",
-                "type": "number",
-                "min": 1,
-                "max": 10,
-                "step": 1,
-                "placeholder": {
-                  "en": "Step",
-                  "uk": "Крок",
-                  "ru": "Шаг"
-                }
-              }
-            ]
-          },
-          {
-            "id": "set_heater",
-            "title": {
-              "en": "Turn the heater on or off",
-              "uk": "Увімкнути або вимкнути нагрівач",
-              "ru": "Включить или выключить нагреватель"
-            },
-            "titleFormatted": {
-              "en": "Turn the heater [[state]]",
-              "uk": "Нагрівач: [[state]]",
-              "ru": "Нагреватель: [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
+                "title": {
+                  "en": "Reminders",
+                  "de": "Erinnerungen"
+                },
                 "values": [
                   {
                     "id": "on",
-                    "label": {
-                      "en": "on",
-                      "uk": "увімк.",
-                      "ru": "вкл."
+                    "title": {
+                      "en": "On",
+                      "de": "Ein"
                     }
                   },
                   {
                     "id": "off",
-                    "label": {
-                      "en": "off",
-                      "uk": "вимк.",
-                      "ru": "выкл."
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_winter",
-            "title": {
-              "en": "Turn winter mode on or off",
-              "uk": "Увімкнути або вимкнути зимовий режим",
-              "ru": "Включить или выключить зимний режим"
-            },
-            "titleFormatted": {
-              "en": "Turn winter mode [[state]]",
-              "uk": "Зимовий режим: [[state]]",
-              "ru": "Зимний режим: [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "on",
-                      "uk": "увімк.",
-                      "ru": "вкл."
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "off",
-                      "uk": "вимк.",
-                      "ru": "выкл."
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_brightness",
-            "title": {
-              "en": "Set display brightness",
-              "uk": "Встановити яскравість дисплея",
-              "ru": "Установить яркость дисплея"
-            },
-            "titleFormatted": {
-              "en": "Set display brightness to [[level]]",
-              "uk": "Встановити яскравість дисплея [[level]]",
-              "ru": "Установить яркость дисплея [[level]]"
-            },
-            "hint": {
-              "en": "0 turns the display off, 6 is the brightest.",
-              "uk": "0 вимикає дисплей, 6 — найяскравіше.",
-              "ru": "0 выключает дисплей, 6 — самый яркий."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              },
-              {
-                "name": "level",
-                "type": "number",
-                "min": 0,
-                "max": 6,
-                "step": 1,
-                "placeholder": {
-                  "en": "0–6",
-                  "uk": "0–6",
-                  "ru": "0–6"
-                }
-              }
-            ]
-          },
-          {
-            "id": "set_bound",
-            "title": {
-              "en": "Link or unlink the fans",
-              "uk": "Зв'язати або роз'єднати вентилятори",
-              "ru": "Связать или разъединить вентиляторы"
-            },
-            "titleFormatted": {
-              "en": "Turn linked fans [[state]]",
-              "uk": "Зв'язані вентилятори: [[state]]",
-              "ru": "Связанные вентиляторы: [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=recuperator"
-              },
-              {
-                "name": "state",
-                "type": "dropdown",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "on",
-                      "uk": "увімк.",
-                      "ru": "вкл."
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "off",
-                      "uk": "вимк.",
-                      "ru": "выкл."
+                    "title": {
+                      "en": "Off",
+                      "de": "Aus"
                     }
                   }
                 ]
@@ -653,55 +237,43 @@
           }
         ]
       },
-      "widgets": null,
+      "widgets": {
+        "collection": {
+          "name": {
+            "en": "Bin Calendar",
+            "de": "Müllkalender"
+          },
+          "height": 210,
+          "api": {
+            "state": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "id": "collection",
+          "settings": [],
+          "previewDark": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/widgets/collection/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/widgets/collection/preview-light.png"
+        }
+      },
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-11-05T10:10:16.041Z",
+      "stateChangedAt": "2026-11-05T11:27:21.289Z",
       "bugs": null,
       "homepage": null,
-      "support": "mailto:vova275@gmail.com",
+      "support": "mailto:hallo@chrimux.de",
       "source": null,
       "contributors": null,
       "contributing": null,
       "permissions": [],
       "apiScopes": null,
       "changelog": {
-        "en": "New app image, device photo and a recuperator icon for the device.",
-        "uk": "Нове зображення застосунку, фото пристрою та іконка рекуператора.",
-        "ru": "Новое изображение приложения, фото устройства и иконка рекуператора."
+        "en": "Updated the App Store image to remove promotional text, following Athom’s review feedback.",
+        "de": "App-Store-Grafik gemäß Athoms Rückmeldung ohne Werbetext überarbeitet."
       },
-      "compatibility": ">=12.4.0",
-      "tags": {
-        "en": [
-          "prana",
-          "recuperator",
-          "ventilation",
-          "heat recovery",
-          "fresh air",
-          "hrv",
-          "erv",
-          "co2"
-        ],
-        "uk": [
-          "prana",
-          "прана",
-          "рекуператор",
-          "вентиляція",
-          "рекуперація",
-          "свіже повітря",
-          "co2"
-        ],
-        "ru": [
-          "prana",
-          "прана",
-          "рекуператор",
-          "вентиляция",
-          "рекуперация",
-          "свежий воздух",
-          "co2"
-        ]
-      },
+      "compatibility": ">=12.3.0",
+      "tags": null,
       "platforms": [
         "local"
       ],
@@ -710,16 +282,16 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.2",
+    "liveVersion": "0.2.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6ac7f481bdc8421d78c4d31b",
+      "id": "6ae8ed8c5776bdf41f8ad145",
       "type": "user",
-      "userId": "5b06fec79bed7464170e2183",
-      "name": "Volodymyr Piaskovskyi",
+      "userId": "693308c55803af04d53307d8",
+      "name": "Chris Müller",
       "verified": false
     },
     "communityTopicId": null
