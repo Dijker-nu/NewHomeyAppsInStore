@@ -19985,5 +19985,16 @@
     "publishedAt": "2026-11-05T11:41:30.722Z",
     "updatedAt": "2026-11-05T11:41:30.722Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "io.esphome",
+    "name": "ESPHome",
+    "developerName": "Abe Haverkamp",
+    "developerId": "683ca2f005693ceb74af0a22",
+    "version": "0.5.0",
+    "sourceRepository": "https://github.com/Doekse/esphome-homey",
+    "publishedAt": "2026-11-05T19:10:17.853Z",
+    "updatedAt": "2026-11-05T19:10:17.853Z",
+    "communityTopicId": null
   }
 ]

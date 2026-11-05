@@ -1,278 +1,3430 @@
 [
   {
-    "id": "film.framebuilder.muellkalender",
+    "id": "io.esphome",
     "rating": null,
     "liveBuild": {
-      "id": 2,
+      "id": 8,
       "name": {
-        "de": "Müllkalender Deutschland",
-        "en": "Waste Calendar Germany"
+        "en": "ESPHome"
       },
-      "version": "0.2.1",
+      "version": "0.5.0",
       "readme": {
-        "en": "Waste Calendar Germany lets you use your own ICS collection calendar without a fixed waste-provider integration. Never miss a waste collection again. Import your provider’s ICS file or add a waste calendar link. The app matches collection dates to your bins. A beautifully designed, clear widget shows colorful bin icons and upcoming collections at a glance, fitting naturally into your Homey dashboard. Choose which bins to display and when each bin should remind you. Calendar links are updated automatically.\n\nMake reminders fit your daily routine. Use Flow cards to send push notifications, turn on a light or make an announcement through a connected speaker. For push notifications, choose the recipient in your Flow and insert the ready-made Reminder text tag into the message field. Calendar data and settings are stored on your Homey, with no additional account required.\n",
-        "de": "Müllkalender Deutschland macht eigene Abholkalender im ICS-Format ohne feste Entsorger-Anbindung nutzbar. Keine Müllabfuhr mehr vergessen: Importiere die ICS-Datei deines Entsorgers oder füge einen Müllkalender-Link ein. Die App ordnet die Abholtermine deinen Tonnen zu. Ein ansprechend gestaltetes, übersichtliches Widget zeigt dir farbige Tonnen-Icons und die nächsten Abholtermine auf einen Blick, passend zu deinem Homey Dashboard. Du wählst, welche Tonnen angezeigt werden und wann du für jede Tonne erinnert werden möchtest. Kalender-Links werden automatisch aktualisiert.\n\nGestalte deine Erinnerungen so, wie sie zu deinem Alltag passen: Mit den Flow-Karten kannst du Push-Nachrichten senden, eine Lampe leuchten lassen oder eine Durchsage über einen verbundenen Lautsprecher auslösen. Für Push-Nachrichten wählst du in deinem Flow den Empfänger und setzt den fertigen Tag „Erinnerungstext“ ins Nachrichtenfeld ein. Kalender und Einstellungen werden auf deinem Homey gespeichert; ein zusätzliches Benutzerkonto ist nicht erforderlich.\n"
+        "en": "With ESPHome you can easily build your own smart devices based on ESP. The ESPHome app for Homey connects them to Homey over a direct local connection.\n\nSupport for ESPHome devices with Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player and more entities. The ESPHome app for Homey lets you control these entities via Homey and in Flows, and gather their data in Insights.\n\nFor this integration Homey connects directly to your ESPHome devices on the local network via the Native API, with automatic discovery over mDNS.\n",
+        "ar": "مع ESPHome يمكنك بسهولة بناء أجهزتك الذكية الخاصة المستندة إلى ESP. يربط تطبيق ESPHome لـ Homey هذه الأجهزة بـ Homey عبر اتصال محلي مباشر.\n\nدعم لأجهزة ESPHome التي تتضمن كيانات Light وSwitch وSensor وBinary sensor وCover وClimate وFan وLock وButton وNumber وSelect وMedia player وغيرها. مع تطبيق ESPHome لـ Homey يمكنك التحكم في هذه الكيانات عبر Homey وفي Flows، وجمع بياناتها في Insights.\n\nفي هذا التكامل يتصل Homey مباشرةً بأجهزة ESPHome الخاصة بك على الشبكة المحلية عبر Native API، مع الاكتشاف التلقائي عبر mDNS.\n",
+        "da": "Med ESPHome bygger du nemt dine egne smarte enheder baseret på ESP. ESPHome-appen til Homey forbinder dem til Homey via en direkte lokal forbindelse.\n\nUnderstøttelse af ESPHome-enheder med Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player og flere entities. Med ESPHome-appen til Homey kan du styre disse entities via Homey og i Flows og indsamle deres data i Insights.\n\nTil denne integration forbinder Homey sig direkte til dine ESPHome-enheder på det lokale netværk via Native API, med automatisk opdagelse over mDNS.\n",
+        "de": "Mit ESPHome baust du ganz einfach eigene smarte Geräte auf ESP-Basis. Die ESPHome-App für Homey verbindet sie über eine direkte lokale Verbindung mit Homey.\n\nUnterstützung für ESPHome-Geräte mit Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player und weiteren Entities. Mit der ESPHome-App für Homey steuerst du diese Entities über Homey und in Flows und erfasst ihre Daten in Insights.\n\nFür diese Integration verbindet sich Homey über die Native API direkt mit deinen ESPHome-Geräten im lokalen Netzwerk, mit automatischer Erkennung über mDNS.\n",
+        "es": "Con ESPHome construyes fácilmente tus propios dispositivos inteligentes basados en ESP. La app ESPHome para Homey los conecta a Homey mediante una conexión local directa.\n\nCompatibilidad con dispositivos ESPHome con entidades Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player y más. Con la app ESPHome para Homey puedes controlar estas entidades a través de Homey y en Flows, y recopilar sus datos en Insights.\n\nPara esta integración, Homey se conecta directamente a tus dispositivos ESPHome en la red local a través de la Native API, con descubrimiento automático mediante mDNS.\n",
+        "fr": "Avec ESPHome, tu construis facilement tes propres appareils connectés à base d’ESP. L’app ESPHome pour Homey les relie à Homey via une connexion locale directe.\n\nPrise en charge des appareils ESPHome avec les entités Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player et plus encore. L’app ESPHome pour Homey te permet de les contrôler via Homey et dans Flows, et de collecter leurs données dans Insights.\n\nPour cette intégration, Homey se connecte directement à tes appareils ESPHome sur le réseau local via la Native API, avec découverte automatique via mDNS.\n",
+        "it": "Con ESPHome costruisci facilmente i tuoi dispositivi smart basati su ESP. L’app ESPHome per Homey li collega a Homey tramite una connessione locale diretta.\n\nSupporto per dispositivi ESPHome con entità Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player e altre ancora. Con l’app ESPHome per Homey puoi controllare queste entità tramite Homey e nei Flows, e raccogliere i loro dati in Insights.\n\nPer questa integrazione Homey si collega direttamente ai tuoi dispositivi ESPHome sulla rete locale tramite la Native API, con rilevamento automatico via mDNS.\n",
+        "ko": "ESPHome으로 ESP 기반의 나만의 스마트 기기를 쉽게 만들 수 있습니다. Homey용 ESPHome 앱은 직접 로컬 연결로 기기를 Homey에 연결합니다.\n\nLight, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player 등의 엔터티를 포함한 ESPHome 장치를 지원합니다. Homey용 ESPHome 앱으로 Homey와 Flows에서 이러한 엔터티를 제어하고 Insights에서 데이터를 수집할 수 있습니다.\n\n이 통합에서 Homey는 Native API를 통해 로컬 네트워크의 ESPHome 장치에 직접 연결하며, mDNS로 자동 검색합니다.\n",
+        "nl": "Met ESPHome bouw je eenvoudig je eigen slimme apparaten op basis van ESP. De ESPHome-app voor Homey koppelt ze via een directe lokale verbinding aan Homey.\n\nOndersteuning voor ESPHome-apparaten met Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player en meer entities. Met de ESPHome-app voor Homey kun je deze entities bedienen via Homey en in Flows, en hun data verzamelen in Insights.\n\nVoor deze integratie maakt Homey rechtstreeks verbinding met je ESPHome-apparaten op het lokale netwerk via de Native API, met automatische ontdekking via mDNS.\n",
+        "no": "Med ESPHome bygger du enkelt dine egne smarte enheter basert på ESP. ESPHome-appen for Homey kobler dem til Homey via en direkte lokal tilkobling.\n\nStøtte for ESPHome-enheter med Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player og flere entities. Med ESPHome-appen for Homey kan du styre disse entities via Homey og i Flows, og samle inn dataene deres i Insights.\n\nFor denne integrasjonen kobler Homey seg direkte til ESPHome-enhetene dine på det lokale nettverket via Native API, med automatisk oppdagelse over mDNS.\n",
+        "pl": "Z ESPHome łatwo zbudujesz własne inteligentne urządzenia oparte na ESP. Aplikacja ESPHome dla Homey łączy je z Homey przez bezpośrednie lokalne połączenie.\n\nWsparcie dla urządzeń ESPHome z encjami Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player i innymi. Dzięki aplikacji ESPHome dla Homey możesz sterować tymi encjami przez Homey oraz w Flows, a także zbierać ich dane w Insights.\n\nW tej integracji Homey łączy się bezpośrednio z Twoimi urządzeniami ESPHome w sieci lokalnej przez Native API, z automatycznym wykrywaniem przez mDNS.\n",
+        "ru": "С ESPHome легко собрать собственные умные устройства на базе ESP. Приложение ESPHome для Homey подключает их к Homey через прямое локальное соединение.\n\nПоддержка устройств ESPHome с сущностями Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player и другими. С приложением ESPHome для Homey вы можете управлять этими сущностями через Homey и в Flows, а также собирать их данные в Insights.\n\nВ этой интеграции Homey подключается напрямую к вашим устройствам ESPHome в локальной сети через Native API, с автоматическим обнаружением по mDNS.\n",
+        "sv": "Med ESPHome bygger du enkelt dina egna smarta enheter baserade på ESP. ESPHome-appen för Homey kopplar dem till Homey via en direkt lokal anslutning.\n\nStöd för ESPHome-enheter med Light, Switch, Sensor, Binary sensor, Cover, Climate, Fan, Lock, Button, Number, Select, Media player och fler entities. Med ESPHome-appen för Homey kan du styra dessa entities via Homey och i Flows, och samla in deras data i Insights.\n\nFör den här integrationen ansluter Homey direkt till dina ESPHome-enheter på det lokala nätverket via Native API, med automatisk upptäckt över mDNS.\n"
       },
       "description": {
-        "en": "Your bins. Your calendar. Your reminders.",
-        "de": "Deine Tonnen. Dein Kalender. Deine Erinnerungen."
+        "en": "Connect your ESPHome devices to Homey",
+        "ar": "صِل أجهزة ESPHome الخاصة بك بـ Homey",
+        "da": "Tilslut dine ESPHome-enheder til Homey",
+        "de": "Verbinde deine ESPHome-Geräte mit Homey",
+        "es": "Conecta tus dispositivos ESPHome a Homey",
+        "fr": "Connecte tes appareils ESPHome à Homey",
+        "it": "Collega i tuoi dispositivi ESPHome a Homey",
+        "ko": "Homey에 ESPHome 장치를 연결하세요",
+        "nl": "Verbind je ESPHome-apparaten met Homey",
+        "no": "Koble dine ESPHome-enheter til Homey",
+        "pl": "Połącz swoje urządzenia ESPHome z Homey",
+        "ru": "Подключи свои устройства ESPHome к Homey",
+        "sv": "Anslut dina ESPHome-enheter till Homey"
       },
-      "category": "tools",
-      "brandColor": "#355445",
-      "icon": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/assets/images/large.png",
-      "drivers": null,
+      "category": "appliances",
+      "brandColor": "#00ccff",
+      "icon": "https://apps.homeycdn.net/app/io.esphome/8/cbe35bd2-e6d9-48d9-b1e6-d5061c654971/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/io.esphome/8/cbe35bd2-e6d9-48d9-b1e6-d5061c654971/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/io.esphome/8/cbe35bd2-e6d9-48d9-b1e6-d5061c654971/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "esphome-device",
+          "name": {
+            "en": "ESPHome Device",
+            "ar": "جهاز ESPHome",
+            "da": "ESPHome-enhed",
+            "de": "ESPHome-Gerät",
+            "es": "Dispositivo ESPHome",
+            "fr": "Appareil ESPHome",
+            "it": "Dispositivo ESPHome",
+            "ko": "ESPHome 장치",
+            "nl": "ESPHome-apparaat",
+            "no": "ESPHome-enhet",
+            "pl": "Urządzenie ESPHome",
+            "ru": "Устройство ESPHome",
+            "sv": "ESPHome-enhet"
+          },
+          "class": "other",
+          "capabilities": [
+            "aircleaner_mode",
+            "alarm_battery",
+            "alarm_co",
+            "alarm_cold",
+            "alarm_connectivity",
+            "alarm_contact",
+            "alarm_door_fault",
+            "alarm_doorbell",
+            "alarm_gas",
+            "alarm_generic",
+            "alarm_heat",
+            "alarm_light",
+            "alarm_moisture",
+            "alarm_motion",
+            "alarm_noise",
+            "alarm_occupancy",
+            "alarm_open",
+            "alarm_plugged_in",
+            "alarm_power",
+            "alarm_presence",
+            "alarm_problem",
+            "alarm_running",
+            "alarm_safety",
+            "alarm_smoke",
+            "alarm_tamper",
+            "alarm_triggered",
+            "alarm_vibration",
+            "battery_charging_state",
+            "button",
+            "button.refresh",
+            "dim",
+            "esphome_boolean",
+            "esphome_button",
+            "esphome_number",
+            "esphome_select",
+            "esphome_string",
+            "event_button",
+            "event_generic",
+            "fan_mode",
+            "fan_oscillate",
+            "fan_speed",
+            "garagedoor_closed",
+            "light_effect",
+            "light_hue",
+            "light_mode",
+            "light_saturation",
+            "light_temperature",
+            "locked",
+            "measure_absolute_humidity",
+            "measure_aqi",
+            "measure_apparent_power",
+            "measure_area",
+            "measure_battery",
+            "measure_battery_voltage",
+            "measure_blood_glucose",
+            "measure_ch2o",
+            "measure_co",
+            "measure_co2",
+            "measure_conductivity",
+            "measure_content_volume",
+            "measure_current",
+            "measure_data_rate",
+            "measure_data_size",
+            "measure_date",
+            "measure_dew_point",
+            "measure_distance",
+            "measure_duration",
+            "measure_energy_distance",
+            "measure_frequency",
+            "measure_humidity",
+            "measure_irradiance",
+            "measure_luminance",
+            "measure_moisture",
+            "measure_monetary",
+            "measure_noise",
+            "measure_nox",
+            "measure_nox_index",
+            "measure_o3",
+            "measure_ph",
+            "measure_pm1",
+            "measure_pm10",
+            "measure_pm25",
+            "measure_pm4",
+            "measure_power",
+            "measure_power_factor",
+            "measure_pressure",
+            "measure_radon",
+            "measure_rain",
+            "measure_rain_intensity",
+            "measure_reactive_power",
+            "measure_rotation",
+            "measure_signal_strength",
+            "measure_so2",
+            "measure_speed",
+            "measure_temperature",
+            "measure_timestamp",
+            "measure_tvoc",
+            "measure_tvoc_index",
+            "measure_ultraviolet",
+            "measure_uptime",
+            "measure_voltage",
+            "measure_water",
+            "measure_weight",
+            "measure_wind_angle",
+            "measure_wind_strength",
+            "meter_gas",
+            "meter_power",
+            "meter_reactive_energy",
+            "meter_water",
+            "onoff",
+            "open",
+            "speaker_playing",
+            "speaker_stop",
+            "swing_mode",
+            "target_humidity",
+            "target_temperature",
+            "target_temperature_max",
+            "target_temperature_min",
+            "thermostat_mode",
+            "thermostat_preset",
+            "valve_position",
+            "volume_down",
+            "volume_mute",
+            "volume_set",
+            "volume_up",
+            "windowcoverings_closed",
+            "windowcoverings_set",
+            "windowcoverings_state",
+            "windowcoverings_tilt_down",
+            "windowcoverings_tilt_set",
+            "windowcoverings_tilt_up"
+          ],
+          "capabilitiesOptions": {
+            "button.refresh": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Refresh capabilities",
+                "ar": "تحديث القدرات",
+                "da": "Opdater capabilities",
+                "de": "Capabilities aktualisieren",
+                "es": "Actualizar capabilities",
+                "fr": "Actualiser les capabilities",
+                "it": "Aggiorna le capabilities",
+                "ko": "capabilities 새로고침",
+                "nl": "Capabilities actualiseren",
+                "no": "Oppdater capabilities",
+                "pl": "Odśwież capabilities",
+                "ru": "Обновить capabilities",
+                "sv": "Uppdatera capabilities"
+              },
+              "desc": {
+                "en": "Adds new entities and removes ones no longer on the device. Unchanged capabilities stay. Remapped entities can break Flows and Insights. The device must be online.",
+                "ar": "يضيف الكيانات الجديدة ويزيل ما لم يعد على الجهاز. القدرات غير المتغيرة تبقى. إعادة تعيين الكيانات قد يكسر Flows وInsights. يجب أن يكون الجهاز متصلاً.",
+                "da": "Tilføjer nye entiteter og fjerner dem, der ikke længere er på enheden. Uændrede capabilities bliver. Om-mappede entiteter kan ødelægge Flows og Insights. Enheden skal være online.",
+                "de": "Fügt neue Entitäten hinzu und entfernt nicht mehr vorhandene. Unveränderte Capabilities bleiben. Neu zugeordnete Entitäten können Flows und Insights unterbrechen. Das Gerät muss online sein.",
+                "es": "Añade entidades nuevas y elimina las que ya no están en el dispositivo. Las capabilities sin cambios se mantienen. Las entidades reasignadas pueden romper Flows e Insights. El dispositivo debe estar en línea.",
+                "fr": "Ajoute les nouvelles entités et retire celles qui ne sont plus sur l’appareil. Les capabilities inchangées restent. Une nouvelle correspondance peut casser les Flows et Insights. L’appareil doit être en ligne.",
+                "it": "Aggiunge le nuove entità e rimuove quelle non più sul dispositivo. Le capabilities invariate restano. Le entità rimappate possono interrompere Flow e Insights. Il dispositivo deve essere online.",
+                "ko": "새 엔티티를 추가하고 장치에 더 이상 없는 엔티티는 제거합니다. 변경되지 않은 capabilities는 유지됩니다. 다시 매핑된 엔티티는 Flow와 Insights를 깨뜨릴 수 있습니다. 장치가 온라인 상태여야 합니다.",
+                "nl": "Voegt nieuwe entities toe en verwijdert entities die niet meer op het apparaat aanwezig zijn. Ongewijzigde capabilities blijven. Opnieuw gemapte entities kunnen Flows en Insights kapot maken. Het apparaat moet online zijn.",
+                "no": "Legger til nye entiteter og fjerner de som ikke lenger er på enheten. Uendrede capabilities blir. Om-mappede entiteter kan ødelegge Flows og Insights. Enheten må være tilkoblet.",
+                "pl": "Dodaje nowe encje i usuwa te, których już nie ma na urządzeniu. Niezmienione capabilities zostają. Ponownie zmapowane encje mogą zepsuć Flows i Insights. Urządzenie musi być online.",
+                "ru": "Добавляет новые сущности и удаляет те, которых больше нет на устройстве. Неизменённые capabilities остаются. Повторно сопоставленные сущности могут сломать Flows и Insights. Устройство должно быть в сети.",
+                "sv": "Lägger till nya entiteter och tar bort de som inte längre finns på enheten. Oförändrade capabilities är kvar. Om-mappade entiteter kan förstöra Flows och Insights. Enheten måste vara online."
+              }
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/io.esphome/8/cbe35bd2-e6d9-48d9-b1e6-d5061c654971/drivers/esphome-device/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/io.esphome/8/cbe35bd2-e6d9-48d9-b1e6-d5061c654971/drivers/esphome-device/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/io.esphome/8/cbe35bd2-e6d9-48d9-b1e6-d5061c654971/drivers/esphome-device/assets/icon.svg"
+        }
+      ],
       "flow": {
         "triggers": [
           {
-            "id": "any_reminder",
+            "id": "aircleaner_mode_changed",
             "title": {
-              "en": "A waste collection reminder is due",
-              "de": "Eine Müllabfuhr-Erinnerung ist fällig"
+              "en": "The air cleaner mode changed to",
+              "ar": "تغيّر وضع منقّي الهواء إلى",
+              "da": "Luftrensertilstanden er ændret til",
+              "de": "Der Luftreiniger-Modus wurde geändert zu",
+              "es": "El modo del purificador ha cambiado a",
+              "fr": "Le mode du purificateur a changé pour",
+              "it": "La modalità del purificatore è cambiata in",
+              "ko": "공기청정기 모드가 다음으로 변경됨",
+              "nl": "De luchtreinigermodus is veranderd naar",
+              "no": "Luftrensermodus er endret til",
+              "pl": "Tryb oczyszczacza zmienił się na",
+              "ru": "Режим очистителя изменился на",
+              "sv": "Luftrenarläget har ändrats till"
             },
-            "tokens": [
+            "titleFormatted": {
+              "en": "The air cleaner mode changed to [[aircleaner_mode]]",
+              "ar": "تغيّر وضع منقّي الهواء إلى [[aircleaner_mode]]",
+              "da": "Luftrensertilstanden er ændret til [[aircleaner_mode]]",
+              "de": "Der Luftreiniger-Modus wurde geändert zu [[aircleaner_mode]]",
+              "es": "El modo del purificador ha cambiado a [[aircleaner_mode]]",
+              "fr": "Le mode du purificateur a changé pour [[aircleaner_mode]]",
+              "it": "La modalità del purificatore è cambiata in [[aircleaner_mode]]",
+              "ko": "공기청정기 모드가 [[aircleaner_mode]](으)로 변경됨",
+              "nl": "De luchtreinigermodus is veranderd naar [[aircleaner_mode]]",
+              "no": "Luftrensermodus er endret til [[aircleaner_mode]]",
+              "pl": "Tryb oczyszczacza zmienił się na [[aircleaner_mode]]",
+              "ru": "Режим очистителя изменился на [[aircleaner_mode]]",
+              "sv": "Luftrenarläget har ändrats till [[aircleaner_mode]]"
+            },
+            "args": [
               {
-                "name": "bin_name",
-                "type": "string",
-                "title": {
-                  "en": "Bin name",
-                  "de": "Tonnenname"
-                }
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=aircleaner_mode"
               },
               {
-                "name": "collection_date",
-                "type": "string",
+                "name": "aircleaner_mode",
                 "title": {
-                  "en": "Collection date",
-                  "de": "Abholdatum"
-                }
-              },
-              {
-                "name": "days_until",
-                "type": "number",
-                "title": {
-                  "en": "Days until collection",
-                  "de": "Tage bis zur Abholung"
-                }
-              },
-              {
-                "name": "message",
-                "type": "string",
-                "title": {
-                  "en": "Reminder text",
-                  "de": "Erinnerungstext"
-                }
+                  "en": "Mode",
+                  "ar": "الوضع",
+                  "da": "Tilstand",
+                  "de": "Modus",
+                  "es": "Modo",
+                  "fr": "Mode",
+                  "it": "Modalità",
+                  "ko": "모드",
+                  "nl": "Modus",
+                  "no": "Modus",
+                  "pl": "Tryb",
+                  "ru": "Режим",
+                  "sv": "Läge"
+                },
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "fan",
+                    "title": {
+                      "en": "Fan",
+                      "ar": "مروحة",
+                      "da": "Ventilator",
+                      "de": "Lüfter",
+                      "es": "Ventilador",
+                      "fr": "Ventilateur",
+                      "it": "Ventilatore",
+                      "ko": "팬",
+                      "nl": "Ventilator",
+                      "no": "Vifte",
+                      "pl": "Wentylator",
+                      "ru": "Вентилятор",
+                      "sv": "Fläkt"
+                    }
+                  },
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Auto"
+                    }
+                  },
+                  {
+                    "id": "silent",
+                    "title": {
+                      "en": "Silent",
+                      "ar": "صامت",
+                      "da": "Stille",
+                      "de": "Leise",
+                      "es": "Silencioso",
+                      "fr": "Silencieux",
+                      "it": "Silenzioso",
+                      "ko": "조용히",
+                      "nl": "Stil",
+                      "no": "Stille",
+                      "pl": "Cichy",
+                      "ru": "Тихий",
+                      "sv": "Tyst"
+                    }
+                  },
+                  {
+                    "id": "favorite",
+                    "title": {
+                      "en": "Favorite"
+                    }
+                  }
+                ]
               }
             ]
           },
           {
-            "id": "bin_reminder",
+            "id": "alarm_doorbell_received",
             "title": {
-              "en": "A selected bin reminder is due",
-              "de": "Die Erinnerung für eine ausgewählte Tonne ist fällig"
-            },
-            "titleFormatted": {
-              "en": "Reminder for [[bin]] is due",
-              "de": "Die Erinnerung für [[bin]] ist fällig"
+              "en": "Someone rang the doorbell",
+              "ar": "شخص ما رن جرس الباب",
+              "da": "Nogen ringede på dørklokken",
+              "de": "Jemand hat geklingelt",
+              "es": "Alguien ha llamado al timbre",
+              "fr": "Quelqu’un a sonné à la porte",
+              "it": "Qualcuno ha suonato il campanello",
+              "ko": "누가 초인종을 눌렀음",
+              "nl": "Iemand heeft aangebeld",
+              "no": "Noen ringte på døren",
+              "pl": "Ktoś zadzwonił do drzwi",
+              "ru": "Кто-то позвонил в дверь",
+              "sv": "Någon ringde på dörren"
             },
             "args": [
               {
-                "name": "bin",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Bin",
-                  "de": "Tonne"
-                }
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_doorbell"
               }
             ],
             "tokens": [
               {
-                "name": "bin_name",
-                "type": "string",
+                "name": "name",
                 "title": {
-                  "en": "Bin name",
-                  "de": "Tonnenname"
-                }
-              },
-              {
-                "name": "collection_date",
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
                 "type": "string",
-                "title": {
-                  "en": "Collection date",
-                  "de": "Abholdatum"
-                }
-              },
+                "example": "Front door"
+              }
+            ]
+          },
+          {
+            "id": "alarm_plugged_in_false",
+            "title": {
+              "en": "The plugged in alarm turned off",
+              "ar": "تم إيقاف إنذار التوصيل",
+              "da": "Tilsluttet-alarmen blev slukket",
+              "de": "Der Eingesteckt-Alarm wurde ausgeschaltet",
+              "es": "La alarma de enchufado se ha desactivado",
+              "fr": "L’alarme branché s’est désactivée",
+              "it": "L’allarme collegato si è disattivato",
+              "ko": "연결됨 알람이 꺼짐",
+              "nl": "Het ingeplugd alarm gaat uit",
+              "no": "Tilkoblet-alarmen ble slått av",
+              "pl": "Alarm podłączenia wyłączył się",
+              "ru": "Сигнал «подключено» выключился",
+              "sv": "Inkopplad-larmet slogs av"
+            },
+            "args": [
               {
-                "name": "days_until",
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_plugged_in"
+              }
+            ]
+          },
+          {
+            "id": "alarm_plugged_in_true",
+            "title": {
+              "en": "The plugged in alarm turned on",
+              "ar": "تم تشغيل إنذار التوصيل",
+              "da": "Tilsluttet-alarmen blev tændt",
+              "de": "Der Eingesteckt-Alarm wurde eingeschaltet",
+              "es": "La alarma de enchufado se ha activado",
+              "fr": "L’alarme branché s’est activée",
+              "it": "L’allarme collegato si è attivato",
+              "ko": "연결됨 알람이 켜짐",
+              "nl": "Het ingeplugd alarm gaat aan",
+              "no": "Tilkoblet-alarmen ble slått på",
+              "pl": "Alarm podłączenia włączył się",
+              "ru": "Сигнал «подключено» включился",
+              "sv": "Inkopplad-larmet slogs på"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_plugged_in"
+              }
+            ]
+          },
+          {
+            "id": "alarm_triggered_false",
+            "title": {
+              "en": "The home alarm is no longer triggered",
+              "ar": "لم يعد إنذار المنزل يعمل",
+              "da": "Husalarmen udløses ikke længere",
+              "de": "Die Alarmanlage wird nicht mehr ausgelöst",
+              "es": "La alarma del hogar ya no se dispara",
+              "fr": "L’alarme maison ne se déclenche plus",
+              "it": "L’allarme casa non è più attivo",
+              "ko": "홈 알람이 더 이상 울리지 않음",
+              "nl": "Het huisalarm gaat niet langer af",
+              "no": "Husalarmen utløses ikke lenger",
+              "pl": "Alarm domowy nie jest już uruchomiony",
+              "ru": "Домашняя сигнализация больше не срабатывает",
+              "sv": "Hemlarmet utlöses inte längre"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_triggered"
+              }
+            ]
+          },
+          {
+            "id": "alarm_triggered_true",
+            "title": {
+              "en": "The home alarm is triggered",
+              "ar": "يتم تشغيل إنذار المنزل",
+              "da": "Husalarmen udløses",
+              "de": "Die Alarmanlage wird ausgelöst",
+              "es": "La alarma del hogar se dispara",
+              "fr": "L’alarme maison se déclenche",
+              "it": "L’allarme casa si attiva",
+              "ko": "홈 알람이 울림",
+              "nl": "Het huisalarm gaat af",
+              "no": "Husalarmen utløses",
+              "pl": "Alarm domowy zostaje uruchomiony",
+              "ru": "Домашняя сигнализация срабатывает",
+              "sv": "Hemlarmet utlöses"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_triggered"
+              }
+            ]
+          },
+          {
+            "id": "esphome_boolean_false",
+            "title": {
+              "en": "A boolean became false",
+              "ar": "أصبح boolean خاطئًا",
+              "da": "En boolean blev falsk",
+              "de": "Ein Boolean wurde falsch",
+              "es": "Un booleano pasó a falso",
+              "fr": "Un booléen est devenu faux",
+              "it": "Un booleano è diventato falso",
+              "ko": "boolean이 false가 됨",
+              "nl": "Een boolean werd onwaar",
+              "no": "En boolean ble usann",
+              "pl": "Wartość boolean stała się fałszywa",
+              "ru": "Boolean стал false",
+              "sv": "En boolean blev falsk"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_boolean"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Flag"
+              }
+            ]
+          },
+          {
+            "id": "esphome_boolean_true",
+            "title": {
+              "en": "A boolean became true",
+              "ar": "أصبح boolean صحيحًا",
+              "da": "En boolean blev sand",
+              "de": "Ein Boolean wurde wahr",
+              "es": "Un booleano pasó a verdadero",
+              "fr": "Un booléen est devenu vrai",
+              "it": "Un booleano è diventato vero",
+              "ko": "boolean이 true가 됨",
+              "nl": "Een boolean werd waar",
+              "no": "En boolean ble sann",
+              "pl": "Wartość boolean stała się prawdziwa",
+              "ru": "Boolean стал true",
+              "sv": "En boolean blev sann"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_boolean"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Flag"
+              }
+            ]
+          },
+          {
+            "id": "esphome_number_changed",
+            "title": {
+              "en": "A number value changed",
+              "ar": "تغيّرت قيمة رقمية",
+              "da": "En talværdi er ændret",
+              "de": "Ein Zahlenwert hat sich geändert",
+              "es": "Un valor numérico ha cambiado",
+              "fr": "Une valeur numérique a changé",
+              "it": "Un valore numerico è cambiato",
+              "ko": "숫자 값이 변경됨",
+              "nl": "Een nummerwaarde is veranderd",
+              "no": "En tallverdi er endret",
+              "pl": "Wartość liczbowa uległa zmianie",
+              "ru": "Числовое значение изменилось",
+              "sv": "Ett nummervärde har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_number"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "esphome_number",
+                "title": {
+                  "en": "Number",
+                  "ar": "رقم",
+                  "da": "Tal",
+                  "de": "Nummer",
+                  "es": "Número",
+                  "fr": "Nombre",
+                  "it": "Numero",
+                  "ko": "숫자",
+                  "nl": "Nummer",
+                  "no": "Tall",
+                  "pl": "Liczba",
+                  "ru": "Число",
+                  "sv": "Nummer"
+                },
                 "type": "number",
-                "title": {
-                  "en": "Days until collection",
-                  "de": "Tage bis zur Abholung"
-                }
+                "example": 42
               },
               {
-                "name": "message",
-                "type": "string",
+                "name": "name",
                 "title": {
-                  "en": "Reminder text",
-                  "de": "Erinnerungstext"
-                }
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Sensor"
+              }
+            ]
+          },
+          {
+            "id": "esphome_select_changed",
+            "title": {
+              "en": "A select option changed",
+              "ar": "تغيّر خيار Select",
+              "da": "En Select-indstilling er ændret",
+              "de": "Eine Select-Option hat sich geändert",
+              "es": "Una opción de Select ha cambiado",
+              "fr": "Une option Select a changé",
+              "it": "Un’opzione Select è cambiata",
+              "ko": "Select 옵션이 변경됨",
+              "nl": "Een Select-optie is veranderd",
+              "no": "Et Select-alternativ er endret",
+              "pl": "Opcja Select uległa zmianie",
+              "ru": "Параметр Select изменился",
+              "sv": "Ett Select-alternativ har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_select"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "esphome_select",
+                "title": {
+                  "en": "Select"
+                },
+                "type": "string",
+                "example": "Auto"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Mode"
+              }
+            ]
+          },
+          {
+            "id": "esphome_string_changed",
+            "title": {
+              "en": "A text value changed",
+              "ar": "تغيّرت قيمة نصية",
+              "da": "En tekstværdi er ændret",
+              "de": "Ein Textwert hat sich geändert",
+              "es": "Un valor de texto ha cambiado",
+              "fr": "Une valeur texte a changé",
+              "it": "Un valore di testo è cambiato",
+              "ko": "텍스트 값이 변경됨",
+              "nl": "Een tekstwaarde is veranderd",
+              "no": "En tekstverdi er endret",
+              "pl": "Wartość tekstowa uległa zmianie",
+              "ru": "Текстовое значение изменилось",
+              "sv": "Ett textvärde har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_string"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "esphome_string",
+                "title": {
+                  "en": "Text",
+                  "ar": "نص",
+                  "da": "Tekst",
+                  "de": "Text",
+                  "es": "Texto",
+                  "fr": "Texte",
+                  "it": "Testo",
+                  "ko": "텍스트",
+                  "nl": "Tekst",
+                  "no": "Tekst",
+                  "pl": "Tekst",
+                  "ru": "Текст",
+                  "sv": "Text"
+                },
+                "type": "string",
+                "example": "ok"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Status"
+              }
+            ]
+          },
+          {
+            "id": "event_button_received",
+            "title": {
+              "en": "A button was pressed",
+              "ar": "تم الضغط على زر",
+              "da": "Der blev trykket på en knap",
+              "de": "Ein Knopf wurde gedrückt",
+              "es": "Se ha pulsado un botón",
+              "fr": "Un bouton a été enfoncé",
+              "it": "È stato premuto un pulsante",
+              "ko": "버튼 눌림",
+              "nl": "Een knop werd ingedrukt",
+              "no": "En knapp ble trykket inn",
+              "pl": "Któryś przycisk został naciśnięty",
+              "ru": "Одна из кнопок нажата",
+              "sv": "En knapp trycktes in"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=event_button"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "event_button",
+                "title": {
+                  "en": "Event",
+                  "ar": "حدث",
+                  "da": "Begivenhed",
+                  "de": "Ereignis",
+                  "es": "Evento",
+                  "fr": "Evénement",
+                  "it": "Evento",
+                  "ko": "이벤트",
+                  "nl": "Evenement",
+                  "no": "Hendelse",
+                  "pl": "Zdarzenie",
+                  "ru": "Событие",
+                  "sv": "Händelse"
+                },
+                "type": "string",
+                "example": "Click"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Button 1"
+              }
+            ]
+          },
+          {
+            "id": "event_generic_received",
+            "title": {
+              "en": "An event occurred",
+              "ar": "وقع حدث",
+              "da": "En begivenhed indtraf",
+              "de": "Ein Ereignis ist aufgetreten",
+              "es": "Ha ocurrido un evento",
+              "fr": "Un événement s’est produit",
+              "it": "Si è verificato un evento",
+              "ko": "이벤트가 발생함",
+              "nl": "Er is een evenement opgetreden",
+              "no": "En hendelse inntraff",
+              "pl": "Wystąpiło zdarzenie",
+              "ru": "Произошло событие",
+              "sv": "En händelse inträffade"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=event_generic"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "event_generic",
+                "title": {
+                  "en": "Event",
+                  "ar": "حدث",
+                  "da": "Begivenhed",
+                  "de": "Ereignis",
+                  "es": "Evento",
+                  "fr": "Evénement",
+                  "it": "Evento",
+                  "ko": "이벤트",
+                  "nl": "Evenement",
+                  "no": "Hendelse",
+                  "pl": "Zdarzenie",
+                  "ru": "Событие",
+                  "sv": "Händelse"
+                },
+                "type": "string",
+                "example": "Click"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "string",
+                "example": "Button 1"
+              }
+            ]
+          },
+          {
+            "id": "fan_mode_changed",
+            "title": {
+              "en": "The fan mode changed to",
+              "ar": "تغيّر وضع المروحة إلى",
+              "da": "Ventilatortilstanden er ændret til",
+              "de": "Der Lüftermodus wurde geändert zu",
+              "es": "El modo del ventilador ha cambiado a",
+              "fr": "Le mode du ventilateur a changé pour",
+              "it": "La modalità della ventola è cambiata in",
+              "ko": "팬 모드가 다음으로 변경됨",
+              "nl": "De ventilatormodus is veranderd naar",
+              "no": "Viftemodus er endret til",
+              "pl": "Tryb wentylatora zmienił się na",
+              "ru": "Режим вентилятора изменился на",
+              "sv": "Fläktläget har ändrats till"
+            },
+            "titleFormatted": {
+              "en": "The fan mode changed to [[fan_mode]]",
+              "ar": "تغيّر وضع المروحة إلى [[fan_mode]]",
+              "da": "Ventilatortilstanden er ændret til [[fan_mode]]",
+              "de": "Der Lüftermodus wurde geändert zu [[fan_mode]]",
+              "es": "El modo del ventilador ha cambiado a [[fan_mode]]",
+              "fr": "Le mode du ventilateur a changé pour [[fan_mode]]",
+              "it": "La modalità della ventola è cambiata in [[fan_mode]]",
+              "ko": "팬 모드가 [[fan_mode]](으)로 변경됨",
+              "nl": "De ventilatormodus is veranderd naar [[fan_mode]]",
+              "no": "Viftemodus er endret til [[fan_mode]]",
+              "pl": "Tryb wentylatora zmienił się na [[fan_mode]]",
+              "ru": "Режим вентилятора изменился на [[fan_mode]]",
+              "sv": "Fläktläget har ändrats till [[fan_mode]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_mode"
+              },
+              {
+                "name": "fan_mode",
+                "title": {
+                  "en": "Mode",
+                  "ar": "الوضع",
+                  "da": "Tilstand",
+                  "de": "Modus",
+                  "es": "Modo",
+                  "fr": "Mode",
+                  "it": "Modalità",
+                  "ko": "모드",
+                  "nl": "Modus",
+                  "no": "Modus",
+                  "pl": "Tryb",
+                  "ru": "Режим",
+                  "sv": "Läge"
+                },
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "normal",
+                    "title": {
+                      "en": "Normal",
+                      "ar": "عادي",
+                      "da": "Normal",
+                      "de": "Normal",
+                      "es": "Normal",
+                      "fr": "Normal",
+                      "it": "Normale",
+                      "ko": "일반",
+                      "nl": "Normaal",
+                      "no": "Normal",
+                      "pl": "Normalny",
+                      "ru": "Нормальный",
+                      "sv": "Normal"
+                    }
+                  },
+                  {
+                    "id": "nature",
+                    "title": {
+                      "en": "Nature",
+                      "ar": "طبيعي",
+                      "da": "Natur",
+                      "de": "Natur",
+                      "es": "Naturaleza",
+                      "fr": "Nature",
+                      "it": "Natura",
+                      "ko": "자연",
+                      "nl": "Natuurlijk",
+                      "no": "Natur",
+                      "pl": "Natura",
+                      "ru": "Природа",
+                      "sv": "Natur"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_oscillate_false",
+            "title": {
+              "en": "Oscillation turned off",
+              "ar": "تم إيقاف التذبذب",
+              "da": "Oscillation er slået fra",
+              "de": "Oszillation wurde ausgeschaltet",
+              "es": "La oscilación se ha desactivado",
+              "fr": "L’oscillation a été désactivée",
+              "it": "L’oscillazione è stata disattivata",
+              "ko": "오실레이션이 꺼짐",
+              "nl": "Oscillatie is uitgeschakeld",
+              "no": "Oscillasjon er slått av",
+              "pl": "Oscylacja została wyłączona",
+              "ru": "Осцилляция выключена",
+              "sv": "Oscillation har slagits av"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_oscillate"
+              }
+            ]
+          },
+          {
+            "id": "fan_oscillate_true",
+            "title": {
+              "en": "Oscillation turned on",
+              "ar": "تم تشغيل التذبذب",
+              "da": "Oscillation er slået til",
+              "de": "Oszillation wurde eingeschaltet",
+              "es": "La oscilación se ha activado",
+              "fr": "L’oscillation a été activée",
+              "it": "L’oscillazione è stata attivata",
+              "ko": "오실레이션이 켜짐",
+              "nl": "Oscillatie is ingeschakeld",
+              "no": "Oscillasjon er slått på",
+              "pl": "Oscylacja została włączona",
+              "ru": "Осцилляция включена",
+              "sv": "Oscillation har slagits på"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_oscillate"
+              }
+            ]
+          },
+          {
+            "id": "fan_speed_changed",
+            "title": {
+              "en": "The fan speed changed",
+              "ar": "تغيّرت سرعة المروحة",
+              "da": "Ventilatorhastigheden er ændret",
+              "de": "Die Lüftergeschwindigkeit hat sich geändert",
+              "es": "La velocidad del ventilador ha cambiado",
+              "fr": "La vitesse du ventilateur a changé",
+              "it": "La velocità della ventola è cambiata",
+              "ko": "팬 속도가 변경됨",
+              "nl": "De ventilatorsnelheid is veranderd",
+              "no": "Viftehastigheten er endret",
+              "pl": "Prędkość wentylatora uległa zmianie",
+              "ru": "Скорость вентилятора изменилась",
+              "sv": "Fläkthastigheten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_speed"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "fan_speed",
+                "title": {
+                  "en": "Fan speed",
+                  "ar": "سرعة المروحة",
+                  "da": "Ventilatorhastighed",
+                  "de": "Lüftergeschwindigkeit",
+                  "es": "Velocidad del ventilador",
+                  "fr": "Vitesse du ventilateur",
+                  "it": "Velocità della ventola",
+                  "ko": "팬 속도",
+                  "nl": "Ventilator snelheid",
+                  "no": "Viftehastighet",
+                  "pl": "Prędkość wentylatora",
+                  "ru": "Скорость вентилятора",
+                  "sv": "Fläkthastighet"
+                },
+                "type": "number",
+                "example": 0.5
+              }
+            ]
+          },
+          {
+            "id": "light_effect_changed",
+            "title": {
+              "en": "The light effect changed to",
+              "ar": "تغيّر تأثير الإضاءة إلى",
+              "da": "Lyseffekten er ændret til",
+              "de": "Der Lichteffekt wurde geändert zu",
+              "es": "El efecto de luz ha cambiado a",
+              "fr": "L’effet lumineux a changé pour",
+              "it": "L’effetto luce è cambiato in",
+              "ko": "조명 효과가 다음으로 변경됨",
+              "nl": "Het lichteffect is veranderd naar",
+              "no": "Lyseffekten er endret til",
+              "pl": "Efekt świetlny zmienił się na",
+              "ru": "Световой эффект изменился на",
+              "sv": "Ljuseffekten har ändrats till"
+            },
+            "titleFormatted": {
+              "en": "The light effect changed to [[light_effect]]",
+              "ar": "تغيّر تأثير الإضاءة إلى [[light_effect]]",
+              "da": "Lyseffekten er ændret til [[light_effect]]",
+              "de": "Der Lichteffekt wurde geändert zu [[light_effect]]",
+              "es": "El efecto de luz ha cambiado a [[light_effect]]",
+              "fr": "L’effet lumineux a changé pour [[light_effect]]",
+              "it": "L’effetto luce è cambiato in [[light_effect]]",
+              "ko": "조명 효과가 [[light_effect]](으)로 변경됨",
+              "nl": "Het lichteffect is veranderd naar [[light_effect]]",
+              "no": "Lyseffekten er endret til [[light_effect]]",
+              "pl": "Efekt świetlny zmienił się na [[light_effect]]",
+              "ru": "Световой эффект изменился на [[light_effect]]",
+              "sv": "Ljuseffekten har ändrats till [[light_effect]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=light_effect"
+              },
+              {
+                "name": "light_effect",
+                "title": {
+                  "en": "Light effect",
+                  "ar": "تأثير الإضاءة",
+                  "da": "Lyseffekt",
+                  "de": "Lichteffekt",
+                  "es": "Efecto de luz",
+                  "fr": "Effet lumineux",
+                  "it": "Effetto luce",
+                  "ko": "조명 효과",
+                  "nl": "Lichteffect",
+                  "no": "Lyseffekt",
+                  "pl": "Efekt świetlny",
+                  "ru": "Световой эффект",
+                  "sv": "Ljuseffekt"
+                },
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "measure_absolute_humidity_changed",
+            "title": {
+              "en": "The absolute humidity changed",
+              "ar": "تغيّرت الرطوبة المطلقة",
+              "da": "Den absolutte luftfugtighed er ændret",
+              "de": "Die absolute Luftfeuchtigkeit hat sich geändert",
+              "es": "La humedad absoluta ha cambiado",
+              "fr": "L’humidité absolue a changé",
+              "it": "L’umidità assoluta è cambiata",
+              "ko": "절대 습도가 변경됨",
+              "nl": "De absolute luchtvochtigheid is veranderd",
+              "no": "Den absolutte luftfuktigheten er endret",
+              "pl": "Wilgotność bezwzględna uległa zmianie",
+              "ru": "Абсолютная влажность изменилась",
+              "sv": "Den absoluta luftfuktigheten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_absolute_humidity"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_absolute_humidity",
+                "title": {
+                  "en": "Absolute humidity",
+                  "ar": "الرطوبة المطلقة",
+                  "da": "Absolut luftfugtighed",
+                  "de": "Absolute Luftfeuchtigkeit",
+                  "es": "Humedad absoluta",
+                  "fr": "Humidité absolue",
+                  "it": "Umidità assoluta",
+                  "ko": "절대 습도",
+                  "nl": "Absolute luchtvochtigheid",
+                  "no": "Absolutt luftfuktighet",
+                  "pl": "Wilgotność bezwzględna",
+                  "ru": "Абсолютная влажность",
+                  "sv": "Absolut luftfuktighet"
+                },
+                "type": "number",
+                "example": 10
+              }
+            ]
+          },
+          {
+            "id": "measure_apparent_power_changed",
+            "title": {
+              "en": "The apparent power changed",
+              "ar": "تغيّرت القدرة الظاهرية",
+              "da": "Den tilsyneladende effekt er ændret",
+              "de": "Die Scheinleistung hat sich geändert",
+              "es": "La potencia aparente ha cambiado",
+              "fr": "La puissance apparente a changé",
+              "it": "La potenza apparente è cambiata",
+              "ko": "피상 전력이 변경됨",
+              "nl": "Het schijnbaar vermogen is veranderd",
+              "no": "Den tilsynelatende effekten er endret",
+              "pl": "Moc pozorna uległa zmianie",
+              "ru": "Полная мощность изменилась",
+              "sv": "Den skenbara effekten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_apparent_power"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_apparent_power",
+                "title": {
+                  "en": "Apparent power",
+                  "ar": "القدرة الظاهرية",
+                  "da": "Tilsyneladende effekt",
+                  "de": "Scheinleistung",
+                  "es": "Potencia aparente",
+                  "fr": "Puissance apparente",
+                  "it": "Potenza apparente",
+                  "ko": "피상 전력",
+                  "nl": "Schijnbaar vermogen",
+                  "no": "Tilsynelatende effekt",
+                  "pl": "Moc pozorna",
+                  "ru": "Полная мощность",
+                  "sv": "Skenbar effekt"
+                },
+                "type": "number",
+                "example": 100
+              }
+            ]
+          },
+          {
+            "id": "measure_area_changed",
+            "title": {
+              "en": "The area changed",
+              "ar": "تغيّرت المساحة",
+              "da": "Arealet er ændret",
+              "de": "Die Fläche hat sich geändert",
+              "es": "El área ha cambiado",
+              "fr": "La surface a changé",
+              "it": "L’area è cambiata",
+              "ko": "면적이 변경됨",
+              "nl": "De oppervlakte is veranderd",
+              "no": "Arealet er endret",
+              "pl": "Powierzchnia uległa zmianie",
+              "ru": "Площадь изменилась",
+              "sv": "Arean har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_area"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_area",
+                "title": {
+                  "en": "Area",
+                  "ar": "المساحة",
+                  "da": "Areal",
+                  "de": "Fläche",
+                  "es": "Área",
+                  "fr": "Surface",
+                  "it": "Area",
+                  "ko": "면적",
+                  "nl": "Oppervlakte",
+                  "no": "Areal",
+                  "pl": "Powierzchnia",
+                  "ru": "Площадь",
+                  "sv": "Area"
+                },
+                "type": "number",
+                "example": 12.5
+              }
+            ]
+          },
+          {
+            "id": "measure_battery_voltage_changed",
+            "title": {
+              "en": "The battery voltage changed",
+              "ar": "تغيّر جهد البطارية",
+              "da": "Batterispændingen er ændret",
+              "de": "Die Batteriespannung hat sich geändert",
+              "es": "El voltaje de la batería ha cambiado",
+              "fr": "La tension de la batterie a changé",
+              "it": "La tensione della batteria è cambiata",
+              "ko": "배터리 전압이 변경됨",
+              "nl": "De batterijspanning is veranderd",
+              "no": "Batterispenningen er endret",
+              "pl": "Napięcie baterii uległo zmianie",
+              "ru": "Напряжение батареи изменилось",
+              "sv": "Batterispänningen har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_battery_voltage"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_battery_voltage",
+                "title": {
+                  "en": "Battery voltage",
+                  "ar": "جهد البطارية",
+                  "da": "Batterispænding",
+                  "de": "Batteriespannung",
+                  "es": "Voltaje de la batería",
+                  "fr": "Tension de la batterie",
+                  "it": "Tensione batteria",
+                  "ko": "배터리 전압",
+                  "nl": "Batterijspanning",
+                  "no": "Batterispenning",
+                  "pl": "Napięcie baterii",
+                  "ru": "Напряжение батареи",
+                  "sv": "Batterispänning"
+                },
+                "type": "number",
+                "example": 12.6
+              }
+            ]
+          },
+          {
+            "id": "measure_blood_glucose_changed",
+            "title": {
+              "en": "The blood glucose changed",
+              "ar": "تغيّر سكر الدم",
+              "da": "Blodsukkeret er ændret",
+              "de": "Der Blutzucker hat sich geändert",
+              "es": "La glucosa en sangre ha cambiado",
+              "fr": "La glycémie a changé",
+              "it": "La glicemia è cambiata",
+              "ko": "혈당이 변경됨",
+              "nl": "De bloedglucose is veranderd",
+              "no": "Blodsukkeret er endret",
+              "pl": "Glukoza we krwi uległa zmianie",
+              "ru": "Глюкоза крови изменилась",
+              "sv": "Blodsockret har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_blood_glucose"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_blood_glucose",
+                "title": {
+                  "en": "Blood glucose",
+                  "ar": "سكر الدم",
+                  "da": "Blodsukker",
+                  "de": "Blutzucker",
+                  "es": "Glucosa en sangre",
+                  "fr": "Glycémie",
+                  "it": "Glicemia",
+                  "ko": "혈당",
+                  "nl": "Bloedglucose",
+                  "no": "Blodsukker",
+                  "pl": "Glukoza we krwi",
+                  "ru": "Глюкоза крови",
+                  "sv": "Blodsocker"
+                },
+                "type": "number",
+                "example": 5.5
+              }
+            ]
+          },
+          {
+            "id": "measure_conductivity_changed",
+            "title": {
+              "en": "The conductivity changed",
+              "ar": "تغيّرت التوصيلية",
+              "da": "Ledningsevnen er ændret",
+              "de": "Die Leitfähigkeit hat sich geändert",
+              "es": "La conductividad ha cambiado",
+              "fr": "La conductivité a changé",
+              "it": "La conduttività è cambiata",
+              "ko": "전도도가 변경됨",
+              "nl": "De geleidbaarheid is veranderd",
+              "no": "Konduktiviteten er endret",
+              "pl": "Przewodność uległa zmianie",
+              "ru": "Проводимость изменилась",
+              "sv": "Konduktiviteten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_conductivity"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_conductivity",
+                "title": {
+                  "en": "Conductivity",
+                  "ar": "التوصيلية",
+                  "da": "Ledningsevne",
+                  "de": "Leitfähigkeit",
+                  "es": "Conductividad",
+                  "fr": "Conductivité",
+                  "it": "Conduttività",
+                  "ko": "전도도",
+                  "nl": "Geleidbaarheid",
+                  "no": "Konduktivitet",
+                  "pl": "Przewodność",
+                  "ru": "Проводимость",
+                  "sv": "Konduktivitet"
+                },
+                "type": "number",
+                "example": 400
+              }
+            ]
+          },
+          {
+            "id": "measure_date_changed",
+            "title": {
+              "en": "The date changed",
+              "ar": "تغيّر التاريخ",
+              "da": "Datoen er ændret",
+              "de": "Das Datum hat sich geändert",
+              "es": "La fecha ha cambiado",
+              "fr": "La date a changé",
+              "it": "La data è cambiata",
+              "ko": "날짜가 변경됨",
+              "nl": "De datum is veranderd",
+              "no": "Datoen er endret",
+              "pl": "Data uległa zmianie",
+              "ru": "Дата изменилась",
+              "sv": "Datumet har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_date"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_date",
+                "title": {
+                  "en": "Date",
+                  "ar": "التاريخ",
+                  "da": "Dato",
+                  "de": "Datum",
+                  "es": "Fecha",
+                  "fr": "Date",
+                  "it": "Data",
+                  "ko": "날짜",
+                  "nl": "Datum",
+                  "no": "Dato",
+                  "pl": "Data",
+                  "ru": "Дата",
+                  "sv": "Datum"
+                },
+                "type": "string",
+                "example": "2026-08-14"
+              }
+            ]
+          },
+          {
+            "id": "measure_dew_point_changed",
+            "title": {
+              "en": "The dew point changed",
+              "ar": "تغيّرت نقطة الندى",
+              "da": "Dugpunktet er ændret",
+              "de": "Der Taupunkt hat sich geändert",
+              "es": "El punto de rocío ha cambiado",
+              "fr": "Le point de rosée a changé",
+              "it": "Il punto di rugiada è cambiato",
+              "ko": "이슬점이 변경됨",
+              "nl": "Het dauwpunt is veranderd",
+              "no": "Duggpunktet er endret",
+              "pl": "Punkt rosy uległ zmianie",
+              "ru": "Точка росы изменилась",
+              "sv": "Daggpunkten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_dew_point"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_dew_point",
+                "title": {
+                  "en": "Dew point",
+                  "ar": "نقطة الندى",
+                  "da": "Dugpunkt",
+                  "de": "Taupunkt",
+                  "es": "Punto de rocío",
+                  "fr": "Point de rosée",
+                  "it": "Punto di rugiada",
+                  "ko": "이슬점",
+                  "nl": "Dauwpunt",
+                  "no": "Duggpunkt",
+                  "pl": "Punkt rosy",
+                  "ru": "Точка росы",
+                  "sv": "Daggpunkt"
+                },
+                "type": "number",
+                "example": 12.5
+              }
+            ]
+          },
+          {
+            "id": "measure_duration_changed",
+            "title": {
+              "en": "The duration changed",
+              "ar": "تغيّرت المدة",
+              "da": "Varigheden er ændret",
+              "de": "Die Dauer hat sich geändert",
+              "es": "La duración ha cambiado",
+              "fr": "La durée a changé",
+              "it": "La durata è cambiata",
+              "ko": "기간이 변경됨",
+              "nl": "De duur is veranderd",
+              "no": "Varigheten er endret",
+              "pl": "Czas trwania uległ zmianie",
+              "ru": "Длительность изменилась",
+              "sv": "Varaktigheten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_duration"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_duration",
+                "title": {
+                  "en": "Duration",
+                  "ar": "المدة",
+                  "da": "Varighed",
+                  "de": "Dauer",
+                  "es": "Duración",
+                  "fr": "Durée",
+                  "it": "Durata",
+                  "ko": "기간",
+                  "nl": "Duur",
+                  "no": "Varighet",
+                  "pl": "Czas trwania",
+                  "ru": "Длительность",
+                  "sv": "Varaktighet"
+                },
+                "type": "number",
+                "example": 60
+              }
+            ]
+          },
+          {
+            "id": "measure_energy_distance_changed",
+            "title": {
+              "en": "The energy per distance changed",
+              "ar": "تغيّرت الطاقة لكل مسافة",
+              "da": "Energien pr. afstand er ændret",
+              "de": "Die Energie pro Distanz hat sich geändert",
+              "es": "La energía por distancia ha cambiado",
+              "fr": "L’énergie par distance a changé",
+              "it": "L’energia per distanza è cambiata",
+              "ko": "거리당 에너지가 변경됨",
+              "nl": "De energie per afstand is veranderd",
+              "no": "Energien per avstand er endret",
+              "pl": "Energia na dystans uległa zmianie",
+              "ru": "Энергия на расстояние изменилась",
+              "sv": "Energin per avstånd har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_energy_distance"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_energy_distance",
+                "title": {
+                  "en": "Energy per distance",
+                  "ar": "الطاقة لكل مسافة",
+                  "da": "Energi pr. afstand",
+                  "de": "Energie pro Distanz",
+                  "es": "Energía por distancia",
+                  "fr": "Énergie par distance",
+                  "it": "Energia per distanza",
+                  "ko": "거리당 에너지",
+                  "nl": "Energie per afstand",
+                  "no": "Energi per avstand",
+                  "pl": "Energia na dystans",
+                  "ru": "Энергия на расстояние",
+                  "sv": "Energi per avstånd"
+                },
+                "type": "number",
+                "example": 15
+              }
+            ]
+          },
+          {
+            "id": "measure_irradiance_changed",
+            "title": {
+              "en": "The irradiance changed",
+              "ar": "تغيّر الإشعاع",
+              "da": "Irradiansen er ændret",
+              "de": "Die Bestrahlungsstärke hat sich geändert",
+              "es": "La irradiancia ha cambiado",
+              "fr": "L’irradiance a changé",
+              "it": "L’irradianza è cambiata",
+              "ko": "일사량이 변경됨",
+              "nl": "De instraling is veranderd",
+              "no": "Irradiansen er endret",
+              "pl": "Natężenie napromieniowania uległo zmianie",
+              "ru": "Облучённость изменилась",
+              "sv": "Irradiansen har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_irradiance"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_irradiance",
+                "title": {
+                  "en": "Irradiance",
+                  "ar": "الإشعاع",
+                  "da": "Irradians",
+                  "de": "Bestrahlungsstärke",
+                  "es": "Irradiancia",
+                  "fr": "Irradiance",
+                  "it": "Irradianza",
+                  "ko": "일사량",
+                  "nl": "Instraling",
+                  "no": "Irradians",
+                  "pl": "Natężenie napromieniowania",
+                  "ru": "Облучённость",
+                  "sv": "Irradians"
+                },
+                "type": "number",
+                "example": 800
+              }
+            ]
+          },
+          {
+            "id": "measure_nox_index_changed",
+            "title": {
+              "en": "The NOx index changed",
+              "ar": "تغيّر مؤشر NOx",
+              "da": "NOx-indekset er ændret",
+              "de": "Der NOx-Index hat sich geändert",
+              "es": "El índice NOx ha cambiado",
+              "fr": "L’indice NOx a changé",
+              "it": "L’indice NOx è cambiato",
+              "ko": "NOx 지수가 변경됨",
+              "nl": "De NOx-index is veranderd",
+              "no": "NOx-indeksen er endret",
+              "pl": "Indeks NOx uległ zmianie",
+              "ru": "Индекс NOx изменился",
+              "sv": "NOx-indexet har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_nox_index"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_nox_index",
+                "title": {
+                  "en": "NOx index",
+                  "ar": "مؤشر NOx",
+                  "da": "NOx-indeks",
+                  "de": "NOx-Index",
+                  "es": "Índice NOx",
+                  "fr": "Indice NOx",
+                  "it": "Indice NOx",
+                  "ko": "NOx 지수",
+                  "nl": "NOx-index",
+                  "no": "NOx-indeks",
+                  "pl": "Indeks NOx",
+                  "ru": "Индекс NOx",
+                  "sv": "NOx-index"
+                },
+                "type": "number",
+                "example": 1
+              }
+            ]
+          },
+          {
+            "id": "measure_pm4_changed",
+            "title": {
+              "en": "The PM4 value changed",
+              "ar": "تغيّرت قيمة PM4",
+              "da": "PM4-værdien er ændret",
+              "de": "Der PM4-Wert hat sich geändert",
+              "es": "El valor de PM4 ha cambiado",
+              "fr": "La valeur PM4 a changé",
+              "it": "Il valore PM4 è cambiato",
+              "ko": "PM4 값이 변경됨",
+              "nl": "De PM4-waarde is veranderd",
+              "no": "PM4-verdien er endret",
+              "pl": "Wartość PM4 uległa zmianie",
+              "ru": "Значение PM4 изменилось",
+              "sv": "PM4-värdet har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_pm4"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_pm4",
+                "title": {
+                  "en": "PM4"
+                },
+                "type": "number",
+                "example": 2
+              }
+            ]
+          },
+          {
+            "id": "measure_power_factor_changed",
+            "title": {
+              "en": "The power factor changed",
+              "ar": "تغيّر معامل القدرة",
+              "da": "Effektfaktoren er ændret",
+              "de": "Der Leistungsfaktor hat sich geändert",
+              "es": "El factor de potencia ha cambiado",
+              "fr": "Le facteur de puissance a changé",
+              "it": "Il fattore di potenza è cambiato",
+              "ko": "역률이 변경됨",
+              "nl": "De arbeidsfactor is veranderd",
+              "no": "Effektfaktoren er endret",
+              "pl": "Współczynnik mocy uległ zmianie",
+              "ru": "Коэффициент мощности изменился",
+              "sv": "Effektfaktorn har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_power_factor"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_power_factor",
+                "title": {
+                  "en": "Power factor",
+                  "ar": "معامل القدرة",
+                  "da": "Effektfaktor",
+                  "de": "Leistungsfaktor",
+                  "es": "Factor de potencia",
+                  "fr": "Facteur de puissance",
+                  "it": "Fattore di potenza",
+                  "ko": "역률",
+                  "nl": "Arbeidsfactor",
+                  "no": "Effektfaktor",
+                  "pl": "Współczynnik mocy",
+                  "ru": "Коэффициент мощности",
+                  "sv": "Effektfaktor"
+                },
+                "type": "number",
+                "example": 0.95
+              }
+            ]
+          },
+          {
+            "id": "measure_reactive_power_changed",
+            "title": {
+              "en": "The reactive power changed",
+              "ar": "تغيّرت القدرة التفاعلية",
+              "da": "Den reaktive effekt er ændret",
+              "de": "Die Blindleistung hat sich geändert",
+              "es": "La potencia reactiva ha cambiado",
+              "fr": "La puissance réactive a changé",
+              "it": "La potenza reattiva è cambiata",
+              "ko": "무효 전력이 변경됨",
+              "nl": "Het blindvermogen is veranderd",
+              "no": "Den reaktive effekten er endret",
+              "pl": "Moc bierna uległa zmianie",
+              "ru": "Реактивная мощность изменилась",
+              "sv": "Den reaktiva effekten har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_reactive_power"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_reactive_power",
+                "title": {
+                  "en": "Reactive power",
+                  "ar": "القدرة التفاعلية",
+                  "da": "Reaktiv effekt",
+                  "de": "Blindleistung",
+                  "es": "Potencia reactiva",
+                  "fr": "Puissance réactive",
+                  "it": "Potenza reattiva",
+                  "ko": "무효 전력",
+                  "nl": "Blindvermogen",
+                  "no": "Reaktiv effekt",
+                  "pl": "Moc bierna",
+                  "ru": "Реактивная мощность",
+                  "sv": "Reaktiv effekt"
+                },
+                "type": "number",
+                "example": 50
+              }
+            ]
+          },
+          {
+            "id": "measure_timestamp_changed",
+            "title": {
+              "en": "The timestamp changed",
+              "ar": "تغيّر الطابع الزمني",
+              "da": "Tidsstemplet er ændret",
+              "de": "Der Zeitstempel hat sich geändert",
+              "es": "La marca de tiempo ha cambiado",
+              "fr": "L’horodatage a changé",
+              "it": "Il timestamp è cambiato",
+              "ko": "타임스탬프가 변경됨",
+              "nl": "Het tijdstempel is veranderd",
+              "no": "Tidsstempelet er endret",
+              "pl": "Znacznik czasu uległ zmianie",
+              "ru": "Метка времени изменилась",
+              "sv": "Tidsstämpeln har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_timestamp"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_timestamp",
+                "title": {
+                  "en": "Timestamp",
+                  "ar": "طابع زمني",
+                  "da": "Tidsstempel",
+                  "de": "Zeitstempel",
+                  "es": "Marca de tiempo",
+                  "fr": "Horodatage",
+                  "it": "Timestamp",
+                  "ko": "타임스탬프",
+                  "nl": "Tijdstempel",
+                  "no": "Tidsstempel",
+                  "pl": "Znacznik czasu",
+                  "ru": "Метка времени",
+                  "sv": "Tidsstämpel"
+                },
+                "type": "string",
+                "example": "2026-08-14T21:00:00Z"
+              }
+            ]
+          },
+          {
+            "id": "measure_uptime_changed",
+            "title": {
+              "en": "The uptime changed",
+              "ar": "تغيّر الـ uptime",
+              "da": "Uptime er ændret",
+              "de": "Die Uptime hat sich geändert",
+              "es": "El uptime ha cambiado",
+              "fr": "L’uptime a changé",
+              "it": "L’uptime è cambiato",
+              "ko": "uptime이 변경됨",
+              "nl": "De uptime is veranderd",
+              "no": "Uptime er endret",
+              "pl": "Uptime uległ zmianie",
+              "ru": "Uptime изменился",
+              "sv": "Uptime har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=measure_uptime"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "measure_uptime",
+                "title": {
+                  "en": "Uptime"
+                },
+                "type": "string",
+                "example": "1h 2m"
+              }
+            ]
+          },
+          {
+            "id": "meter_reactive_energy_changed",
+            "title": {
+              "en": "The reactive energy meter changed",
+              "ar": "تغيّر عدّاد الطاقة التفاعلية",
+              "da": "Den reaktive energimåler er ændret",
+              "de": "Der Blindenergiezähler hat sich geändert",
+              "es": "El contador de energía reactiva ha cambiado",
+              "fr": "Le compteur d’énergie réactive a changé",
+              "it": "Il contatore di energia reattiva è cambiato",
+              "ko": "무효 에너지 미터가 변경됨",
+              "nl": "De blindenergiemeter is veranderd",
+              "no": "Den reaktive energimåleren er endret",
+              "pl": "Licznik energii biernej uległ zmianie",
+              "ru": "Счётчик реактивной энергии изменился",
+              "sv": "Den reaktiva energimätaren har ändrats"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=meter_reactive_energy"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "meter_reactive_energy",
+                "title": {
+                  "en": "Reactive energy",
+                  "ar": "الطاقة التفاعلية",
+                  "da": "Reaktiv energi",
+                  "de": "Blindenergie",
+                  "es": "Energía reactiva",
+                  "fr": "Énergie réactive",
+                  "it": "Energia reattiva",
+                  "ko": "무효 에너지",
+                  "nl": "Blindenergie",
+                  "no": "Reaktiv energi",
+                  "pl": "Energia bierna",
+                  "ru": "Реактивная энергия",
+                  "sv": "Reaktiv energi"
+                },
+                "type": "number",
+                "example": 1.5
+              }
+            ]
+          },
+          {
+            "id": "thermostat_preset_changed",
+            "title": {
+              "en": "The preset changed to",
+              "ar": "تغيّر الإعداد المسبق إلى",
+              "da": "Forudindstillingen er ændret til",
+              "de": "Die Voreinstellung wurde geändert zu",
+              "es": "El preajuste ha cambiado a",
+              "fr": "Le préréglage a changé pour",
+              "it": "La preimpostazione è cambiata in",
+              "ko": "프리셋이 다음으로 변경됨",
+              "nl": "De voorinstelling is veranderd naar",
+              "no": "Forhåndsinnstillingen er endret til",
+              "pl": "Preset zmienił się na",
+              "ru": "Предустановка изменилась на",
+              "sv": "Förinställningen har ändrats till"
+            },
+            "titleFormatted": {
+              "en": "The preset changed to [[thermostat_preset]]",
+              "ar": "تغيّر الإعداد المسبق إلى [[thermostat_preset]]",
+              "da": "Forudindstillingen er ændret til [[thermostat_preset]]",
+              "de": "Die Voreinstellung wurde geändert zu [[thermostat_preset]]",
+              "es": "El preajuste ha cambiado a [[thermostat_preset]]",
+              "fr": "Le préréglage a changé pour [[thermostat_preset]]",
+              "it": "La preimpostazione è cambiata in [[thermostat_preset]]",
+              "ko": "프리셋이 [[thermostat_preset]](으)로 변경됨",
+              "nl": "De voorinstelling is veranderd naar [[thermostat_preset]]",
+              "no": "Forhåndsinnstillingen er endret til [[thermostat_preset]]",
+              "pl": "Preset zmienił się na [[thermostat_preset]]",
+              "ru": "Предустановка изменилась на [[thermostat_preset]]",
+              "sv": "Förinställningen har ändrats till [[thermostat_preset]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=thermostat_preset"
+              },
+              {
+                "name": "thermostat_preset",
+                "title": {
+                  "en": "Preset",
+                  "ar": "إعداد مسبق",
+                  "da": "Forudindstilling",
+                  "de": "Voreinstellung",
+                  "es": "Preajuste",
+                  "fr": "Préréglage",
+                  "it": "Preimpostazione",
+                  "ko": "프리셋",
+                  "nl": "Voorinstelling",
+                  "no": "Forhåndsinnstilling",
+                  "pl": "Preset",
+                  "ru": "Предустановка",
+                  "sv": "Förinställning"
+                },
+                "type": "autocomplete"
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "any_collection_in",
+            "id": "aircleaner_mode_is",
             "title": {
-              "en": "There is a collection in a number of days",
-              "de": "Eine Abholung findet in einer Anzahl von Tagen statt"
+              "en": "The air cleaner mode !{{is|is not}}",
+              "ar": "وضع منقّي الهواء !{{هو|ليس}}",
+              "da": "Luftrensertilstanden !{{er|er ikke}}",
+              "de": "Der Luftreiniger-Modus !{{ist|ist nicht}}",
+              "es": "El modo del purificador !{{es|no es}}",
+              "fr": "Le mode du purificateur !{{est|n’est pas}}",
+              "it": "La modalità del purificatore !{{è|non è}}",
+              "ko": "공기청정기 모드가 !{{임|아님}}",
+              "nl": "De luchtreinigermodus !{{is|is niet}}",
+              "no": "Luftrensermodus !{{er|er ikke}}",
+              "pl": "Tryb oczyszczacza !{{jest|nie jest}}",
+              "ru": "Режим очистителя !{{является|не является}}",
+              "sv": "Luftrenarläget !{{är|är inte}}"
             },
             "titleFormatted": {
-              "en": "There is a collection in [[days]] days",
-              "de": "Eine Abholung findet in [[days]] Tagen statt"
+              "en": "The air cleaner mode !{{is|is not}} [[aircleaner_mode]]",
+              "ar": "وضع منقّي الهواء !{{هو|ليس}} [[aircleaner_mode]]",
+              "da": "Luftrensertilstanden !{{er|er ikke}} [[aircleaner_mode]]",
+              "de": "Der Luftreiniger-Modus !{{ist|ist nicht}} [[aircleaner_mode]]",
+              "es": "El modo del purificador !{{es|no es}} [[aircleaner_mode]]",
+              "fr": "Le mode du purificateur !{{est|n’est pas}} [[aircleaner_mode]]",
+              "it": "La modalità del purificatore !{{è|non è}} [[aircleaner_mode]]",
+              "ko": "공기청정기 모드가 [[aircleaner_mode]]!{{임|아님}}",
+              "nl": "De luchtreinigermodus !{{is|is niet}} [[aircleaner_mode]]",
+              "no": "Luftrensermodus !{{er|er ikke}} [[aircleaner_mode]]",
+              "pl": "Tryb oczyszczacza !{{jest|nie jest}} [[aircleaner_mode]]",
+              "ru": "Режим очистителя !{{является|не является}} [[aircleaner_mode]]",
+              "sv": "Luftrenarläget !{{är|är inte}} [[aircleaner_mode]]"
             },
             "args": [
               {
-                "name": "days",
-                "type": "number",
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=aircleaner_mode"
+              },
+              {
+                "name": "aircleaner_mode",
                 "title": {
-                  "en": "Days from today (0 = today, 1 = tomorrow)",
-                  "de": "Tage ab heute (0 = heute, 1 = morgen)"
+                  "en": "Mode",
+                  "ar": "الوضع",
+                  "da": "Tilstand",
+                  "de": "Modus",
+                  "es": "Modo",
+                  "fr": "Mode",
+                  "it": "Modalità",
+                  "ko": "모드",
+                  "nl": "Modus",
+                  "no": "Modus",
+                  "pl": "Tryb",
+                  "ru": "Режим",
+                  "sv": "Läge"
                 },
-                "min": 0,
-                "max": 550,
-                "step": 1,
-                "value": 1
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "fan",
+                    "title": {
+                      "en": "Fan",
+                      "ar": "مروحة",
+                      "da": "Ventilator",
+                      "de": "Lüfter",
+                      "es": "Ventilador",
+                      "fr": "Ventilateur",
+                      "it": "Ventilatore",
+                      "ko": "팬",
+                      "nl": "Ventilator",
+                      "no": "Vifte",
+                      "pl": "Wentylator",
+                      "ru": "Вентилятор",
+                      "sv": "Fläkt"
+                    }
+                  },
+                  {
+                    "id": "auto",
+                    "title": {
+                      "en": "Auto"
+                    }
+                  },
+                  {
+                    "id": "silent",
+                    "title": {
+                      "en": "Silent",
+                      "ar": "صامت",
+                      "da": "Stille",
+                      "de": "Leise",
+                      "es": "Silencioso",
+                      "fr": "Silencieux",
+                      "it": "Silenzioso",
+                      "ko": "조용히",
+                      "nl": "Stil",
+                      "no": "Stille",
+                      "pl": "Cichy",
+                      "ru": "Тихий",
+                      "sv": "Tyst"
+                    }
+                  },
+                  {
+                    "id": "favorite",
+                    "title": {
+                      "en": "Favorite"
+                    }
+                  }
+                ]
               }
             ]
           },
           {
-            "id": "bin_collection_in",
+            "id": "alarm_plugged_in_is",
             "title": {
-              "en": "A selected bin is collected in a number of days",
-              "de": "Eine ausgewählte Tonne wird in einer Anzahl von Tagen abgeholt"
-            },
-            "titleFormatted": {
-              "en": "[[bin]] is collected in [[days]] days",
-              "de": "[[bin]] wird in [[days]] Tagen abgeholt"
+              "en": "The plugged in alarm is !{{on|off}}",
+              "ar": "إنذار التوصيل !{{يعمل|متوقف}}",
+              "da": "Tilsluttet-alarmen er !{{tændt|slukket}}",
+              "de": "Der Eingesteckt-Alarm ist !{{an|aus}}",
+              "es": "La alarma de enchufado está !{{activada|desactivada}}",
+              "fr": "L’alarme branché est !{{activée|désactivée}}",
+              "it": "L’allarme collegato è !{{attivo|disattivo}}",
+              "ko": "연결됨 알람이 !{{켜짐|꺼짐}}",
+              "nl": "Het ingeplugd alarm is !{{aan|uit}}",
+              "no": "Tilkoblet-alarmen er !{{på|av}}",
+              "pl": "Alarm podłączenia jest !{{włączony|wyłączony}}",
+              "ru": "Сигнал «подключено» !{{включён|выключен}}",
+              "sv": "Inkopplad-larmet är !{{på|av}}"
             },
             "args": [
               {
-                "name": "bin",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Bin",
-                  "de": "Tonne"
-                }
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_plugged_in"
+              }
+            ]
+          },
+          {
+            "id": "alarm_triggered_is",
+            "title": {
+              "en": "The home alarm is !{{triggered|not triggered}}",
+              "ar": "إنذار المنزل !{{مُفعّل|غير مُفعّل}}",
+              "da": "Husalarmen er !{{udløst|ikke udløst}}",
+              "de": "Die Alarmanlage ist !{{ausgelöst|nicht ausgelöst}}",
+              "es": "La alarma del hogar está !{{activada|no activada}}",
+              "fr": "L’alarme maison est !{{déclenchée|non déclenchée}}",
+              "it": "L’allarme casa è !{{attivato|non attivato}}",
+              "ko": "홈 알람이 !{{울림|울리지 않음}}",
+              "nl": "Het huisalarm is !{{geactiveerd|niet geactiveerd}}",
+              "no": "Husalarmen er !{{utløst|ikke utløst}}",
+              "pl": "Alarm domowy jest !{{uruchomiony|nieuruchomiony}}",
+              "ru": "Домашняя сигнализация !{{сработала|не сработала}}",
+              "sv": "Hemlarmet är !{{utlöst|inte utlöst}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=alarm_triggered"
+              }
+            ]
+          },
+          {
+            "id": "esphome_boolean_is",
+            "title": {
+              "en": "A boolean is !{{true|false}}",
+              "ar": "الـ boolean !{{صحيح|خاطئ}}",
+              "da": "En boolean er !{{sand|falsk}}",
+              "de": "Ein Boolean ist !{{wahr|falsch}}",
+              "es": "Un booleano es !{{verdadero|falso}}",
+              "fr": "Un booléen est !{{vrai|faux}}",
+              "it": "Un booleano è !{{vero|falso}}",
+              "ko": "boolean이 !{{true|false}}",
+              "nl": "Een boolean is !{{waar|onwaar}}",
+              "no": "En boolean er !{{sann|usann}}",
+              "pl": "Wartość boolean jest !{{prawdziwa|fałszywa}}",
+              "ru": "Boolean !{{истинен|ложен}}",
+              "sv": "En boolean är !{{sann|falsk}}"
+            },
+            "titleFormatted": {
+              "en": "[[name]] is !{{true|false}}",
+              "ar": "[[name]] !{{صحيح|خاطئ}}",
+              "da": "[[name]] er !{{sand|falsk}}",
+              "de": "[[name]] ist !{{wahr|falsch}}",
+              "es": "[[name]] es !{{verdadero|falso}}",
+              "fr": "[[name]] est !{{vrai|faux}}",
+              "it": "[[name]] è !{{vero|falso}}",
+              "ko": "[[name]]이(가) !{{true|false}}",
+              "nl": "[[name]] is !{{waar|onwaar}}",
+              "no": "[[name]] er !{{sann|usann}}",
+              "pl": "[[name]] jest !{{prawdziwe|fałszywe}}",
+              "ru": "[[name]] !{{истинно|ложно}}",
+              "sv": "[[name]] är !{{sann|falsk}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_boolean"
               },
               {
-                "name": "days",
-                "type": "number",
+                "name": "name",
                 "title": {
-                  "en": "Days from today (0 = today, 1 = tomorrow)",
-                  "de": "Tage ab heute (0 = heute, 1 = morgen)"
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
                 },
-                "min": 0,
-                "max": 550,
-                "step": 1,
-                "value": 1
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "esphome_select_is",
+            "title": {
+              "en": "A select option !{{is|is not}}",
+              "ar": "خيار Select !{{هو|ليس}}",
+              "da": "En Select-indstilling !{{er|er ikke}}",
+              "de": "Eine Select-Option !{{ist|ist nicht}}",
+              "es": "Una opción de Select !{{es|no es}}",
+              "fr": "Une option Select !{{est|n’est pas}}",
+              "it": "Un’opzione Select !{{è|non è}}",
+              "ko": "Select 옵션이 !{{임|아님}}",
+              "nl": "Een Select-optie !{{is|is niet}}",
+              "no": "Et Select-alternativ !{{er|er ikke}}",
+              "pl": "Opcja Select !{{jest|nie jest}}",
+              "ru": "Параметр Select !{{является|не является}}",
+              "sv": "Ett Select-alternativ !{{är|är inte}}"
+            },
+            "titleFormatted": {
+              "en": "[[name]] !{{is|is not}} [[esphome_select]]",
+              "ar": "[[name]] !{{هو|ليس}} [[esphome_select]]",
+              "da": "[[name]] !{{er|er ikke}} [[esphome_select]]",
+              "de": "[[name]] !{{ist|ist nicht}} [[esphome_select]]",
+              "es": "[[name]] !{{es|no es}} [[esphome_select]]",
+              "fr": "[[name]] !{{est|n’est pas}} [[esphome_select]]",
+              "it": "[[name]] !{{è|non è}} [[esphome_select]]",
+              "ko": "[[name]]이(가) [[esphome_select]]!{{임|아님}}",
+              "nl": "[[name]] !{{is|is niet}} [[esphome_select]]",
+              "no": "[[name]] !{{er|er ikke}} [[esphome_select]]",
+              "pl": "[[name]] !{{jest|nie jest}} [[esphome_select]]",
+              "ru": "[[name]] !{{является|не является}} [[esphome_select]]",
+              "sv": "[[name]] !{{är|är inte}} [[esphome_select]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_select"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "autocomplete"
+              },
+              {
+                "name": "esphome_select",
+                "title": {
+                  "en": "Select"
+                },
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "esphome_string_is",
+            "title": {
+              "en": "A text value !{{is|is not}}",
+              "ar": "قيمة نصية !{{هي|ليست}}",
+              "da": "En tekstværdi !{{er|er ikke}}",
+              "de": "Ein Textwert !{{ist|ist nicht}}",
+              "es": "Un valor de texto !{{es|no es}}",
+              "fr": "Une valeur texte !{{est|n’est pas}}",
+              "it": "Un valore di testo !{{è|non è}}",
+              "ko": "텍스트 값이 !{{임|아님}}",
+              "nl": "Een tekstwaarde !{{is|is niet}}",
+              "no": "En tekstverdi !{{er|er ikke}}",
+              "pl": "Wartość tekstowa !{{jest|nie jest}}",
+              "ru": "Текстовое значение !{{является|не является}}",
+              "sv": "Ett textvärde !{{är|är inte}}"
+            },
+            "titleFormatted": {
+              "en": "[[name]] !{{is|is not}} [[esphome_string]]",
+              "ar": "[[name]] !{{هو|ليس}} [[esphome_string]]",
+              "da": "[[name]] !{{er|er ikke}} [[esphome_string]]",
+              "de": "[[name]] !{{ist|ist nicht}} [[esphome_string]]",
+              "es": "[[name]] !{{es|no es}} [[esphome_string]]",
+              "fr": "[[name]] !{{est|n’est pas}} [[esphome_string]]",
+              "it": "[[name]] !{{è|non è}} [[esphome_string]]",
+              "ko": "[[name]]이(가) [[esphome_string]]!{{임|아님}}",
+              "nl": "[[name]] !{{is|is niet}} [[esphome_string]]",
+              "no": "[[name]] !{{er|er ikke}} [[esphome_string]]",
+              "pl": "[[name]] !{{jest|nie jest}} [[esphome_string]]",
+              "ru": "[[name]] !{{является|не является}} [[esphome_string]]",
+              "sv": "[[name]] !{{är|är inte}} [[esphome_string]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_string"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "autocomplete"
+              },
+              {
+                "name": "esphome_string",
+                "title": {
+                  "en": "Text",
+                  "ar": "نص",
+                  "da": "Tekst",
+                  "de": "Text",
+                  "es": "Texto",
+                  "fr": "Texte",
+                  "it": "Testo",
+                  "ko": "텍스트",
+                  "nl": "Tekst",
+                  "no": "Tekst",
+                  "pl": "Tekst",
+                  "ru": "Текст",
+                  "sv": "Text"
+                },
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "id": "fan_mode_is",
+            "title": {
+              "en": "The fan mode !{{is|is not}}",
+              "ar": "وضع المروحة !{{هو|ليس}}",
+              "da": "Ventilatortilstanden !{{er|er ikke}}",
+              "de": "Der Lüftermodus !{{ist|ist nicht}}",
+              "es": "El modo del ventilador !{{es|no es}}",
+              "fr": "Le mode du ventilateur !{{est|n’est pas}}",
+              "it": "La modalità della ventola !{{è|non è}}",
+              "ko": "팬 모드가 !{{임|아님}}",
+              "nl": "De ventilatormodus !{{is|is niet}}",
+              "no": "Viftemodus !{{er|er ikke}}",
+              "pl": "Tryb wentylatora !{{jest|nie jest}}",
+              "ru": "Режим вентилятора !{{является|не является}}",
+              "sv": "Fläktläget !{{är|är inte}}"
+            },
+            "titleFormatted": {
+              "en": "The fan mode !{{is|is not}} [[fan_mode]]",
+              "ar": "وضع المروحة !{{هو|ليس}} [[fan_mode]]",
+              "da": "Ventilatortilstanden !{{er|er ikke}} [[fan_mode]]",
+              "de": "Der Lüftermodus !{{ist|ist nicht}} [[fan_mode]]",
+              "es": "El modo del ventilador !{{es|no es}} [[fan_mode]]",
+              "fr": "Le mode du ventilateur !{{est|n’est pas}} [[fan_mode]]",
+              "it": "La modalità della ventola !{{è|non è}} [[fan_mode]]",
+              "ko": "팬 모드가 [[fan_mode]]!{{임|아님}}",
+              "nl": "De ventilatormodus !{{is|is niet}} [[fan_mode]]",
+              "no": "Viftemodus !{{er|er ikke}} [[fan_mode]]",
+              "pl": "Tryb wentylatora !{{jest|nie jest}} [[fan_mode]]",
+              "ru": "Режим вентилятора !{{является|не является}} [[fan_mode]]",
+              "sv": "Fläktläget !{{är|är inte}} [[fan_mode]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_mode"
+              },
+              {
+                "name": "fan_mode",
+                "title": {
+                  "en": "Mode",
+                  "ar": "الوضع",
+                  "da": "Tilstand",
+                  "de": "Modus",
+                  "es": "Modo",
+                  "fr": "Mode",
+                  "it": "Modalità",
+                  "ko": "모드",
+                  "nl": "Modus",
+                  "no": "Modus",
+                  "pl": "Tryb",
+                  "ru": "Режим",
+                  "sv": "Läge"
+                },
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "normal",
+                    "title": {
+                      "en": "Normal",
+                      "ar": "عادي",
+                      "da": "Normal",
+                      "de": "Normal",
+                      "es": "Normal",
+                      "fr": "Normal",
+                      "it": "Normale",
+                      "ko": "일반",
+                      "nl": "Normaal",
+                      "no": "Normal",
+                      "pl": "Normalny",
+                      "ru": "Нормальный",
+                      "sv": "Normal"
+                    }
+                  },
+                  {
+                    "id": "nature",
+                    "title": {
+                      "en": "Nature",
+                      "ar": "طبيعي",
+                      "da": "Natur",
+                      "de": "Natur",
+                      "es": "Naturaleza",
+                      "fr": "Nature",
+                      "it": "Natura",
+                      "ko": "자연",
+                      "nl": "Natuurlijk",
+                      "no": "Natur",
+                      "pl": "Natura",
+                      "ru": "Природа",
+                      "sv": "Natur"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_oscillate_is",
+            "title": {
+              "en": "Oscillation is !{{on|off}}",
+              "ar": "التذبذب !{{يعمل|متوقف}}",
+              "da": "Oscillation er !{{til|fra}}",
+              "de": "Oszillation ist !{{an|aus}}",
+              "es": "La oscilación está !{{activada|desactivada}}",
+              "fr": "L’oscillation est !{{activée|désactivée}}",
+              "it": "L’oscillazione è !{{attiva|disattiva}}",
+              "ko": "오실레이션이 !{{켜짐|꺼짐}}",
+              "nl": "Oscillatie is !{{aan|uit}}",
+              "no": "Oscillasjon er !{{på|av}}",
+              "pl": "Oscylacja jest !{{włączona|wyłączona}}",
+              "ru": "Осцилляция !{{включена|выключена}}",
+              "sv": "Oscillation är !{{på|av}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_oscillate"
+              }
+            ]
+          },
+          {
+            "id": "light_effect_is",
+            "title": {
+              "en": "The light effect !{{is|is not}}",
+              "ar": "تأثير الإضاءة !{{هو|ليس}}",
+              "da": "Lyseffekten !{{er|er ikke}}",
+              "de": "Der Lichteffekt !{{ist|ist nicht}}",
+              "es": "El efecto de luz !{{es|no es}}",
+              "fr": "L’effet lumineux !{{est|n’est pas}}",
+              "it": "L’effetto luce !{{è|non è}}",
+              "ko": "조명 효과가 !{{임|아님}}",
+              "nl": "Het lichteffect !{{is|is niet}}",
+              "no": "Lyseffekten !{{er|er ikke}}",
+              "pl": "Efekt świetlny !{{jest|nie jest}}",
+              "ru": "Световой эффект !{{является|не является}}",
+              "sv": "Ljuseffekten !{{är|är inte}}"
+            },
+            "titleFormatted": {
+              "en": "The light effect !{{is|is not}} [[light_effect]]",
+              "ar": "تأثير الإضاءة !{{هو|ليس}} [[light_effect]]",
+              "da": "Lyseffekten !{{er|er ikke}} [[light_effect]]",
+              "de": "Der Lichteffekt !{{ist|ist nicht}} [[light_effect]]",
+              "es": "El efecto de luz !{{es|no es}} [[light_effect]]",
+              "fr": "L’effet lumineux !{{est|n’est pas}} [[light_effect]]",
+              "it": "L’effetto luce !{{è|non è}} [[light_effect]]",
+              "ko": "조명 효과가 [[light_effect]]!{{임|아님}}",
+              "nl": "Het lichteffect !{{is|is niet}} [[light_effect]]",
+              "no": "Lyseffekten !{{er|er ikke}} [[light_effect]]",
+              "pl": "Efekt świetlny !{{jest|nie jest}} [[light_effect]]",
+              "ru": "Световой эффект !{{является|не является}} [[light_effect]]",
+              "sv": "Ljuseffekten !{{är|är inte}} [[light_effect]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=light_effect"
+              },
+              {
+                "name": "light_effect",
+                "title": {
+                  "en": "Light effect",
+                  "ar": "تأثير الإضاءة",
+                  "da": "Lyseffekt",
+                  "de": "Lichteffekt",
+                  "es": "Efecto de luz",
+                  "fr": "Effet lumineux",
+                  "it": "Effetto luce",
+                  "ko": "조명 효과",
+                  "nl": "Lichteffect",
+                  "no": "Lyseffekt",
+                  "pl": "Efekt świetlny",
+                  "ru": "Световой эффект",
+                  "sv": "Ljuseffekt"
+                },
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "thermostat_preset_is",
+            "title": {
+              "en": "The preset !{{is|is not}}",
+              "ar": "الإعداد المسبق !{{هو|ليس}}",
+              "da": "Forudindstillingen !{{er|er ikke}}",
+              "de": "Die Voreinstellung !{{ist|ist nicht}}",
+              "es": "El preajuste !{{es|no es}}",
+              "fr": "Le préréglage !{{est|n’est pas}}",
+              "it": "La preimpostazione !{{è|non è}}",
+              "ko": "프리셋이 !{{임|아님}}",
+              "nl": "De voorinstelling !{{is|is niet}}",
+              "no": "Forhåndsinnstillingen !{{er|er ikke}}",
+              "pl": "Preset !{{jest|nie jest}}",
+              "ru": "Предустановка !{{является|не является}}",
+              "sv": "Förinställningen !{{är|är inte}}"
+            },
+            "titleFormatted": {
+              "en": "The preset !{{is|is not}} [[thermostat_preset]]",
+              "ar": "الإعداد المسبق !{{هو|ليس}} [[thermostat_preset]]",
+              "da": "Forudindstillingen !{{er|er ikke}} [[thermostat_preset]]",
+              "de": "Die Voreinstellung !{{ist|ist nicht}} [[thermostat_preset]]",
+              "es": "El preajuste !{{es|no es}} [[thermostat_preset]]",
+              "fr": "Le préréglage !{{est|n’est pas}} [[thermostat_preset]]",
+              "it": "La preimpostazione !{{è|non è}} [[thermostat_preset]]",
+              "ko": "프리셋이 [[thermostat_preset]]!{{임|아님}}",
+              "nl": "De voorinstelling !{{is|is niet}} [[thermostat_preset]]",
+              "no": "Forhåndsinnstillingen !{{er|er ikke}} [[thermostat_preset]]",
+              "pl": "Preset !{{jest|nie jest}} [[thermostat_preset]]",
+              "ru": "Предустановка !{{является|не является}} [[thermostat_preset]]",
+              "sv": "Förinställningen !{{är|är inte}} [[thermostat_preset]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=thermostat_preset"
+              },
+              {
+                "name": "thermostat_preset",
+                "title": {
+                  "en": "Preset",
+                  "ar": "إعداد مسبق",
+                  "da": "Forudindstilling",
+                  "de": "Voreinstellung",
+                  "es": "Preajuste",
+                  "fr": "Préréglage",
+                  "it": "Preimpostazione",
+                  "ko": "프리셋",
+                  "nl": "Voorinstelling",
+                  "no": "Forhåndsinnstilling",
+                  "pl": "Preset",
+                  "ru": "Предустановка",
+                  "sv": "Förinställning"
+                },
+                "type": "autocomplete"
               }
             ]
           }
         ],
         "actions": [
           {
-            "id": "refresh_calendar",
+            "id": "aircleaner_mode_set",
             "title": {
-              "en": "Refresh calendar from ICS URL",
-              "de": "Kalender über den ICS-Link aktualisieren"
-            }
-          },
-          {
-            "id": "set_reminders",
-            "title": {
-              "en": "Enable or disable reminders for a bin",
-              "de": "Erinnerungen für eine Tonne aktivieren oder deaktivieren"
+              "en": "Set the air cleaner mode to",
+              "ar": "اضبط وضع منقّي الهواء على",
+              "da": "Indstil luftrensertilstand til",
+              "de": "Luftreiniger-Modus setzen auf",
+              "es": "Establecer el modo del purificador en",
+              "fr": "Régler le mode du purificateur sur",
+              "it": "Imposta la modalità del purificatore su",
+              "ko": "공기청정기 모드를 다음으로 설정",
+              "nl": "Zet de luchtreinigermodus op",
+              "no": "Sett luftrensermodus til",
+              "pl": "Ustaw tryb oczyszczacza na",
+              "ru": "Установить режим очистителя на",
+              "sv": "Ställ in luftrenarläge till"
             },
             "titleFormatted": {
-              "en": "Set reminders for [[bin]] to [[enabled]]",
-              "de": "Erinnerungen für [[bin]] auf [[enabled]] setzen"
+              "en": "Set the air cleaner mode to [[aircleaner_mode]]",
+              "ar": "اضبط وضع منقّي الهواء على [[aircleaner_mode]]",
+              "da": "Indstil luftrensertilstand til [[aircleaner_mode]]",
+              "de": "Luftreiniger-Modus setzen auf [[aircleaner_mode]]",
+              "es": "Establecer el modo del purificador en [[aircleaner_mode]]",
+              "fr": "Régler le mode du purificateur sur [[aircleaner_mode]]",
+              "it": "Imposta la modalità del purificatore su [[aircleaner_mode]]",
+              "ko": "공기청정기 모드를 [[aircleaner_mode]](으)로 설정",
+              "nl": "Zet de luchtreinigermodus op [[aircleaner_mode]]",
+              "no": "Sett luftrensermodus til [[aircleaner_mode]]",
+              "pl": "Ustaw tryb oczyszczacza na [[aircleaner_mode]]",
+              "ru": "Установить режим очистителя на [[aircleaner_mode]]",
+              "sv": "Ställ in luftrenarläge till [[aircleaner_mode]]"
             },
             "args": [
               {
-                "name": "bin",
-                "type": "autocomplete",
-                "title": {
-                  "en": "Bin",
-                  "de": "Tonne"
-                }
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=aircleaner_mode"
               },
               {
-                "name": "enabled",
-                "type": "dropdown",
+                "name": "aircleaner_mode",
                 "title": {
-                  "en": "Reminders",
-                  "de": "Erinnerungen"
+                  "en": "Mode",
+                  "ar": "الوضع",
+                  "da": "Tilstand",
+                  "de": "Modus",
+                  "es": "Modo",
+                  "fr": "Mode",
+                  "it": "Modalità",
+                  "ko": "모드",
+                  "nl": "Modus",
+                  "no": "Modus",
+                  "pl": "Tryb",
+                  "ru": "Режим",
+                  "sv": "Läge"
                 },
+                "type": "dropdown",
                 "values": [
                   {
-                    "id": "on",
+                    "id": "fan",
                     "title": {
-                      "en": "On",
-                      "de": "Ein"
+                      "en": "Fan",
+                      "ar": "مروحة",
+                      "da": "Ventilator",
+                      "de": "Lüfter",
+                      "es": "Ventilador",
+                      "fr": "Ventilateur",
+                      "it": "Ventilatore",
+                      "ko": "팬",
+                      "nl": "Ventilator",
+                      "no": "Vifte",
+                      "pl": "Wentylator",
+                      "ru": "Вентилятор",
+                      "sv": "Fläkt"
                     }
                   },
                   {
-                    "id": "off",
+                    "id": "auto",
                     "title": {
-                      "en": "Off",
-                      "de": "Aus"
+                      "en": "Auto"
+                    }
+                  },
+                  {
+                    "id": "silent",
+                    "title": {
+                      "en": "Silent",
+                      "ar": "صامت",
+                      "da": "Stille",
+                      "de": "Leise",
+                      "es": "Silencioso",
+                      "fr": "Silencieux",
+                      "it": "Silenzioso",
+                      "ko": "조용히",
+                      "nl": "Stil",
+                      "no": "Stille",
+                      "pl": "Cichy",
+                      "ru": "Тихий",
+                      "sv": "Tyst"
+                    }
+                  },
+                  {
+                    "id": "favorite",
+                    "title": {
+                      "en": "Favorite"
                     }
                   }
                 ]
               }
             ]
+          },
+          {
+            "id": "esphome_button_press",
+            "title": {
+              "en": "Press a button",
+              "ar": "اضغط زرًا",
+              "da": "Tryk på en knap",
+              "de": "Eine Taste drücken",
+              "es": "Pulsar un botón",
+              "fr": "Appuyer sur un bouton",
+              "it": "Premi un pulsante",
+              "ko": "버튼 누르기",
+              "nl": "Druk op een knop",
+              "no": "Trykk på en knapp",
+              "pl": "Naciśnij przycisk",
+              "ru": "Нажать кнопку",
+              "sv": "Tryck på en knapp"
+            },
+            "titleFormatted": {
+              "en": "Press the [[name]] button",
+              "ar": "اضغط زر [[name]]",
+              "da": "Tryk på [[name]]-knappen",
+              "de": "Die Taste [[name]] drücken",
+              "es": "Pulsar el botón [[name]]",
+              "fr": "Appuyer sur le bouton [[name]]",
+              "it": "Premi il pulsante [[name]]",
+              "ko": "[[name]] 버튼 누르기",
+              "nl": "Druk op de [[name]]-knop",
+              "no": "Trykk på [[name]]-knappen",
+              "pl": "Naciśnij przycisk [[name]]",
+              "ru": "Нажать кнопку [[name]]",
+              "sv": "Tryck på knappen [[name]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_button"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "esphome_number_set",
+            "title": {
+              "en": "Set a number value to",
+              "ar": "اضبط قيمة رقمية على",
+              "da": "Indstil en talværdi til",
+              "de": "Zahlenwert setzen auf",
+              "es": "Establecer un valor numérico en",
+              "fr": "Définir une valeur numérique sur",
+              "it": "Imposta un valore numerico su",
+              "ko": "숫자 값을 다음으로 설정",
+              "nl": "Zet een nummerwaarde op",
+              "no": "Sett en tallverdi til",
+              "pl": "Ustaw wartość liczbową na",
+              "ru": "Установить числовое значение на",
+              "sv": "Ställ in ett nummervärde till"
+            },
+            "titleFormatted": {
+              "en": "Set [[name]] to [[esphome_number]]",
+              "ar": "اضبط [[name]] على [[esphome_number]]",
+              "da": "Indstil [[name]] til [[esphome_number]]",
+              "de": "[[name]] setzen auf [[esphome_number]]",
+              "es": "Establecer [[name]] en [[esphome_number]]",
+              "fr": "Définir [[name]] sur [[esphome_number]]",
+              "it": "Imposta [[name]] su [[esphome_number]]",
+              "ko": "[[name]]을(를) [[esphome_number]](으)로 설정",
+              "nl": "Zet [[name]] op [[esphome_number]]",
+              "no": "Sett [[name]] til [[esphome_number]]",
+              "pl": "Ustaw [[name]] na [[esphome_number]]",
+              "ru": "Установить [[name]] на [[esphome_number]]",
+              "sv": "Ställ in [[name]] till [[esphome_number]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_number"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "autocomplete"
+              },
+              {
+                "name": "esphome_number",
+                "title": {
+                  "en": "Number",
+                  "ar": "رقم",
+                  "da": "Tal",
+                  "de": "Nummer",
+                  "es": "Número",
+                  "fr": "Nombre",
+                  "it": "Numero",
+                  "ko": "숫자",
+                  "nl": "Nummer",
+                  "no": "Tall",
+                  "pl": "Liczba",
+                  "ru": "Число",
+                  "sv": "Nummer"
+                },
+                "type": "number"
+              }
+            ]
+          },
+          {
+            "id": "esphome_select_set",
+            "title": {
+              "en": "Set a select option to",
+              "ar": "اضبط خيار Select على",
+              "da": "Indstil en Select-indstilling til",
+              "de": "Select-Option setzen auf",
+              "es": "Establecer una opción de Select en",
+              "fr": "Définir une option Select sur",
+              "it": "Imposta un’opzione Select su",
+              "ko": "Select 옵션을 다음으로 설정",
+              "nl": "Zet een Select-optie op",
+              "no": "Sett et Select-alternativ til",
+              "pl": "Ustaw opcję Select na",
+              "ru": "Установить параметр Select на",
+              "sv": "Ställ in ett Select-alternativ till"
+            },
+            "titleFormatted": {
+              "en": "Set [[name]] to [[esphome_select]]",
+              "ar": "اضبط [[name]] على [[esphome_select]]",
+              "da": "Indstil [[name]] til [[esphome_select]]",
+              "de": "[[name]] setzen auf [[esphome_select]]",
+              "es": "Establecer [[name]] en [[esphome_select]]",
+              "fr": "Définir [[name]] sur [[esphome_select]]",
+              "it": "Imposta [[name]] su [[esphome_select]]",
+              "ko": "[[name]]을(를) [[esphome_select]](으)로 설정",
+              "nl": "Zet [[name]] op [[esphome_select]]",
+              "no": "Sett [[name]] til [[esphome_select]]",
+              "pl": "Ustaw [[name]] na [[esphome_select]]",
+              "ru": "Установить [[name]] на [[esphome_select]]",
+              "sv": "Ställ in [[name]] till [[esphome_select]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=esphome_select"
+              },
+              {
+                "name": "name",
+                "title": {
+                  "en": "Name",
+                  "ar": "الاسم",
+                  "da": "Navn",
+                  "de": "Name",
+                  "es": "Nombre",
+                  "fr": "Nom",
+                  "it": "Nome",
+                  "ko": "이름",
+                  "nl": "Naam",
+                  "no": "Navn",
+                  "pl": "Nazwa",
+                  "ru": "Имя",
+                  "sv": "Namn"
+                },
+                "type": "autocomplete"
+              },
+              {
+                "name": "esphome_select",
+                "title": {
+                  "en": "Select"
+                },
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "fan_mode_set",
+            "title": {
+              "en": "Set the fan mode to",
+              "ar": "اضبط وضع المروحة على",
+              "da": "Indstil ventilatortilstand til",
+              "de": "Lüftermodus setzen auf",
+              "es": "Establecer el modo del ventilador en",
+              "fr": "Régler le mode du ventilateur sur",
+              "it": "Imposta la modalità della ventola su",
+              "ko": "팬 모드를 다음으로 설정",
+              "nl": "Zet de ventilatormodus op",
+              "no": "Sett viftemodus til",
+              "pl": "Ustaw tryb wentylatora na",
+              "ru": "Установить режим вентилятора на",
+              "sv": "Ställ in fläktläge till"
+            },
+            "titleFormatted": {
+              "en": "Set the fan mode to [[fan_mode]]",
+              "ar": "اضبط وضع المروحة على [[fan_mode]]",
+              "da": "Indstil ventilatortilstand til [[fan_mode]]",
+              "de": "Lüftermodus setzen auf [[fan_mode]]",
+              "es": "Establecer el modo del ventilador en [[fan_mode]]",
+              "fr": "Régler le mode du ventilateur sur [[fan_mode]]",
+              "it": "Imposta la modalità della ventola su [[fan_mode]]",
+              "ko": "팬 모드를 [[fan_mode]](으)로 설정",
+              "nl": "Zet de ventilatormodus op [[fan_mode]]",
+              "no": "Sett viftemodus til [[fan_mode]]",
+              "pl": "Ustaw tryb wentylatora na [[fan_mode]]",
+              "ru": "Установить режим вентилятора на [[fan_mode]]",
+              "sv": "Ställ in fläktläge till [[fan_mode]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_mode"
+              },
+              {
+                "name": "fan_mode",
+                "title": {
+                  "en": "Mode",
+                  "ar": "الوضع",
+                  "da": "Tilstand",
+                  "de": "Modus",
+                  "es": "Modo",
+                  "fr": "Mode",
+                  "it": "Modalità",
+                  "ko": "모드",
+                  "nl": "Modus",
+                  "no": "Modus",
+                  "pl": "Tryb",
+                  "ru": "Режим",
+                  "sv": "Läge"
+                },
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "normal",
+                    "title": {
+                      "en": "Normal",
+                      "ar": "عادي",
+                      "da": "Normal",
+                      "de": "Normal",
+                      "es": "Normal",
+                      "fr": "Normal",
+                      "it": "Normale",
+                      "ko": "일반",
+                      "nl": "Normaal",
+                      "no": "Normal",
+                      "pl": "Normalny",
+                      "ru": "Нормальный",
+                      "sv": "Normal"
+                    }
+                  },
+                  {
+                    "id": "nature",
+                    "title": {
+                      "en": "Nature",
+                      "ar": "طبيعي",
+                      "da": "Natur",
+                      "de": "Natur",
+                      "es": "Naturaleza",
+                      "fr": "Nature",
+                      "it": "Natura",
+                      "ko": "자연",
+                      "nl": "Natuurlijk",
+                      "no": "Natur",
+                      "pl": "Natura",
+                      "ru": "Природа",
+                      "sv": "Natur"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_oscillate_off",
+            "title": {
+              "en": "Turn oscillation off",
+              "ar": "إيقاف التذبذب",
+              "da": "Slå oscillation fra",
+              "de": "Oszillation ausschalten",
+              "es": "Desactivar la oscilación",
+              "fr": "Désactiver l’oscillation",
+              "it": "Disattiva l’oscillazione",
+              "ko": "오실레이션 끄기",
+              "nl": "Schakel oscillatie uit",
+              "no": "Slå oscillasjon av",
+              "pl": "Wyłącz oscylację",
+              "ru": "Выключить осцилляцию",
+              "sv": "Slå av oscillation"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_oscillate"
+              }
+            ]
+          },
+          {
+            "id": "fan_oscillate_on",
+            "title": {
+              "en": "Turn oscillation on",
+              "ar": "تشغيل التذبذب",
+              "da": "Slå oscillation til",
+              "de": "Oszillation einschalten",
+              "es": "Activar la oscilación",
+              "fr": "Activer l’oscillation",
+              "it": "Attiva l’oscillazione",
+              "ko": "오실레이션 켜기",
+              "nl": "Schakel oscillatie in",
+              "no": "Slå oscillasjon på",
+              "pl": "Włącz oscylację",
+              "ru": "Включить осцилляцию",
+              "sv": "Slå på oscillation"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_oscillate"
+              }
+            ]
+          },
+          {
+            "id": "fan_oscillate_toggle",
+            "title": {
+              "en": "Toggle oscillation",
+              "ar": "تبديل التذبذب",
+              "da": "Skift oscillation",
+              "de": "Oszillation umschalten",
+              "es": "Alternar la oscilación",
+              "fr": "Basculer l’oscillation",
+              "it": "Commuta l’oscillazione",
+              "ko": "오실레이션 전환",
+              "nl": "Schakel oscillatie om",
+              "no": "Veksle oscillasjon",
+              "pl": "Przełącz oscylację",
+              "ru": "Переключить осцилляцию",
+              "sv": "Växla oscillation"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_oscillate"
+              }
+            ]
+          },
+          {
+            "id": "fan_speed_set",
+            "title": {
+              "en": "Set the fan speed to",
+              "ar": "اضبط سرعة المروحة على",
+              "da": "Indstil ventilatorhastighed til",
+              "de": "Lüftergeschwindigkeit setzen auf",
+              "es": "Establecer la velocidad del ventilador en",
+              "fr": "Régler la vitesse du ventilateur sur",
+              "it": "Imposta la velocità della ventola su",
+              "ko": "팬 속도를 다음으로 설정",
+              "nl": "Zet de ventilatorsnelheid op",
+              "no": "Sett viftehastighet til",
+              "pl": "Ustaw prędkość wentylatora na",
+              "ru": "Установить скорость вентилятора на",
+              "sv": "Ställ in fläkthastighet till"
+            },
+            "titleFormatted": {
+              "en": "Set the fan speed to [[fan_speed]]",
+              "ar": "اضبط سرعة المروحة على [[fan_speed]]",
+              "da": "Indstil ventilatorhastighed til [[fan_speed]]",
+              "de": "Lüftergeschwindigkeit setzen auf [[fan_speed]]",
+              "es": "Establecer la velocidad del ventilador en [[fan_speed]]",
+              "fr": "Régler la vitesse du ventilateur sur [[fan_speed]]",
+              "it": "Imposta la velocità della ventola su [[fan_speed]]",
+              "ko": "팬 속도를 [[fan_speed]](으)로 설정",
+              "nl": "Zet de ventilatorsnelheid op [[fan_speed]]",
+              "no": "Sett viftehastighet til [[fan_speed]]",
+              "pl": "Ustaw prędkość wentylatora na [[fan_speed]]",
+              "ru": "Установить скорость вентилятора на [[fan_speed]]",
+              "sv": "Ställ in fläkthastighet till [[fan_speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=fan_speed"
+              },
+              {
+                "name": "fan_speed",
+                "title": {
+                  "en": "Fan speed",
+                  "ar": "سرعة المروحة",
+                  "da": "Ventilatorhastighed",
+                  "de": "Lüftergeschwindigkeit",
+                  "es": "Velocidad del ventilador",
+                  "fr": "Vitesse du ventilateur",
+                  "it": "Velocità della ventola",
+                  "ko": "팬 속도",
+                  "nl": "Ventilator snelheid",
+                  "no": "Viftehastighet",
+                  "pl": "Prędkość wentylatora",
+                  "ru": "Скорость вентилятора",
+                  "sv": "Fläkthastighet"
+                },
+                "type": "range",
+                "min": 0,
+                "max": 1,
+                "step": 0.01,
+                "value": 0.5,
+                "label": "%",
+                "labelMultiplier": 100,
+                "labelDecimals": 0
+              }
+            ]
+          },
+          {
+            "id": "identify",
+            "title": {
+              "en": "Identify the device",
+              "ar": "تعرّف على الجهاز",
+              "da": "Identificer enheden",
+              "de": "Gerät identifizieren",
+              "es": "Identificar el dispositivo",
+              "fr": "Identifier l’appareil",
+              "it": "Identifica il dispositivo",
+              "ko": "장치 식별",
+              "nl": "Identificeer het apparaat",
+              "no": "Identifiser enheten",
+              "pl": "Zidentyfikuj urządzenie",
+              "ru": "Идентифицировать устройство",
+              "sv": "Identifiera enheten"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=identify"
+              }
+            ]
+          },
+          {
+            "id": "light_effect_set",
+            "title": {
+              "en": "Set the light effect to",
+              "ar": "اضبط تأثير الإضاءة على",
+              "da": "Indstil lyseffekt til",
+              "de": "Lichteffekt setzen auf",
+              "es": "Establecer el efecto de luz en",
+              "fr": "Régler l’effet lumineux sur",
+              "it": "Imposta l’effetto luce su",
+              "ko": "조명 효과를 다음으로 설정",
+              "nl": "Zet het lichteffect op",
+              "no": "Sett lyseffekt til",
+              "pl": "Ustaw efekt świetlny na",
+              "ru": "Установить световой эффект на",
+              "sv": "Ställ in ljuseffekt till"
+            },
+            "titleFormatted": {
+              "en": "Set the light effect to [[light_effect]]",
+              "ar": "اضبط تأثير الإضاءة على [[light_effect]]",
+              "da": "Indstil lyseffekt til [[light_effect]]",
+              "de": "Lichteffekt setzen auf [[light_effect]]",
+              "es": "Establecer el efecto de luz en [[light_effect]]",
+              "fr": "Régler l’effet lumineux sur [[light_effect]]",
+              "it": "Imposta l’effetto luce su [[light_effect]]",
+              "ko": "조명 효과를 [[light_effect]](으)로 설정",
+              "nl": "Zet het lichteffect op [[light_effect]]",
+              "no": "Sett lyseffekt til [[light_effect]]",
+              "pl": "Ustaw efekt świetlny na [[light_effect]]",
+              "ru": "Установить световой эффект на [[light_effect]]",
+              "sv": "Ställ in ljuseffekt till [[light_effect]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=light_effect"
+              },
+              {
+                "name": "light_effect",
+                "title": {
+                  "en": "Light effect",
+                  "ar": "تأثير الإضاءة",
+                  "da": "Lyseffekt",
+                  "de": "Lichteffekt",
+                  "es": "Efecto de luz",
+                  "fr": "Effet lumineux",
+                  "it": "Effetto luce",
+                  "ko": "조명 효과",
+                  "nl": "Lichteffect",
+                  "no": "Lyseffekt",
+                  "pl": "Efekt świetlny",
+                  "ru": "Световой эффект",
+                  "sv": "Ljuseffekt"
+                },
+                "type": "autocomplete"
+              }
+            ]
+          },
+          {
+            "id": "open",
+            "title": {
+              "en": "Open Door",
+              "ar": "فتح الباب",
+              "da": "Åbn dør",
+              "de": "Tür öffnen",
+              "es": "Abrir puerta",
+              "fr": "Ouvrir la porte",
+              "it": "Apri porta",
+              "ko": "문 열기",
+              "nl": "Deur openen",
+              "no": "Åpne dør",
+              "pl": "Otwórz drzwi",
+              "ru": "Открыть дверь",
+              "sv": "Öppna dörr"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=open"
+              }
+            ]
+          },
+          {
+            "id": "restart",
+            "title": {
+              "en": "Restart the device",
+              "ar": "أعد تشغيل الجهاز",
+              "da": "Genstart enheden",
+              "de": "Gerät neu starten",
+              "es": "Reiniciar el dispositivo",
+              "fr": "Redémarrer l’appareil",
+              "it": "Riavvia il dispositivo",
+              "ko": "장치 재시작",
+              "nl": "Herstart het apparaat",
+              "no": "Start enheten på nytt",
+              "pl": "Uruchom ponownie urządzenie",
+              "ru": "Перезапустить устройство",
+              "sv": "Starta om enheten"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=restart"
+              }
+            ]
+          },
+          {
+            "id": "thermostat_preset_set",
+            "title": {
+              "en": "Set the preset to",
+              "ar": "اضبط الإعداد المسبق على",
+              "da": "Indstil forudindstilling til",
+              "de": "Voreinstellung setzen auf",
+              "es": "Establecer el preajuste en",
+              "fr": "Régler le préréglage sur",
+              "it": "Imposta la preimpostazione su",
+              "ko": "프리셋을 다음으로 설정",
+              "nl": "Zet de voorinstelling op",
+              "no": "Sett forhåndsinnstilling til",
+              "pl": "Ustaw preset na",
+              "ru": "Установить предустановку на",
+              "sv": "Ställ in förinställningen till"
+            },
+            "titleFormatted": {
+              "en": "Set the preset to [[thermostat_preset]]",
+              "ar": "اضبط الإعداد المسبق على [[thermostat_preset]]",
+              "da": "Indstil forudindstilling til [[thermostat_preset]]",
+              "de": "Voreinstellung setzen auf [[thermostat_preset]]",
+              "es": "Establecer el preajuste en [[thermostat_preset]]",
+              "fr": "Régler le préréglage sur [[thermostat_preset]]",
+              "it": "Imposta la preimpostazione su [[thermostat_preset]]",
+              "ko": "프리셋을 [[thermostat_preset]](으)로 설정",
+              "nl": "Zet de voorinstelling op [[thermostat_preset]]",
+              "no": "Sett forhåndsinnstilling til [[thermostat_preset]]",
+              "pl": "Ustaw preset na [[thermostat_preset]]",
+              "ru": "Установить предустановку на [[thermostat_preset]]",
+              "sv": "Ställ in förinställningen till [[thermostat_preset]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=esphome-device&capabilities=thermostat_preset"
+              },
+              {
+                "name": "thermostat_preset",
+                "title": {
+                  "en": "Preset",
+                  "ar": "إعداد مسبق",
+                  "da": "Forudindstilling",
+                  "de": "Voreinstellung",
+                  "es": "Preajuste",
+                  "fr": "Préréglage",
+                  "it": "Preimpostazione",
+                  "ko": "프리셋",
+                  "nl": "Voorinstelling",
+                  "no": "Forhåndsinnstilling",
+                  "pl": "Preset",
+                  "ru": "Предустановка",
+                  "sv": "Förinställning"
+                },
+                "type": "autocomplete"
+              }
+            ]
           }
         ]
       },
-      "widgets": {
-        "collection": {
-          "name": {
-            "en": "Bin Calendar",
-            "de": "Müllkalender"
-          },
-          "height": 210,
-          "api": {
-            "state": {
-              "method": "GET",
-              "path": "/"
-            }
-          },
-          "id": "collection",
-          "settings": [],
-          "previewDark": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/widgets/collection/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/film.framebuilder.muellkalender/2/9b764554-4329-40b2-9d2e-cd9b898619b4/widgets/collection/preview-light.png"
-        }
-      },
+      "widgets": null,
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-11-05T11:27:21.289Z",
-      "bugs": null,
+      "stateChangedAt": "2026-11-05T17:09:18.417Z",
+      "bugs": "https://github.com/Doekse/esphome-homey/issues",
       "homepage": null,
-      "support": "mailto:hallo@chrimux.de",
-      "source": null,
+      "support": null,
+      "source": "https://github.com/Doekse/esphome-homey",
       "contributors": null,
       "contributing": null,
-      "permissions": [],
+      "permissions": [
+        "homey:wireless:ble"
+      ],
       "apiScopes": null,
       "changelog": {
-        "en": "Updated the App Store image to remove promotional text, following Athom’s review feedback.",
-        "de": "App-Store-Grafik gemäß Athoms Rückmeldung ohne Werbetext überarbeitet."
+        "en": "Devices now pick up firmware entity changes on their own. Homey now sets an encryption key for devices that don't have one, and Repair can show it"
       },
-      "compatibility": ">=12.3.0",
+      "compatibility": ">=13.0.0",
       "tags": null,
       "platforms": [
         "local"
@@ -280,18 +3432,18 @@
       "sdk": 3,
       "platformLocalRequiredFeatures": [],
       "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
+      "runtime": "python"
     },
-    "liveVersion": "0.2.1",
+    "liveVersion": "0.5.0",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6ae8ed8c5776bdf41f8ad145",
+      "id": "683ca2f005693ceb74af0a22",
       "type": "user",
-      "userId": "693308c55803af04d53307d8",
-      "name": "Chris Müller",
+      "userId": "64a413d86918f70b8dd78378",
+      "name": "Abe Haverkamp",
       "verified": false
     },
     "communityTopicId": null
