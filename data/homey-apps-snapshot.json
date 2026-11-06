@@ -20007,5 +20007,38 @@
     "publishedAt": "2026-11-06T11:05:53.836Z",
     "updatedAt": "2026-11-06T11:05:53.836Z",
     "communityTopicId": 161466
+  },
+  {
+    "appId": "no.husmodus",
+    "name": "House Guard",
+    "developerName": "by NorthGuard Labs",
+    "developerId": "6ac6a04c46da7c02088b1e66",
+    "version": "0.4.51",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-06T18:37:37.571Z",
+    "updatedAt": "2026-11-06T18:37:37.571Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.fladby.amsleser",
+    "name": "AMS reader",
+    "developerName": "Vegard Fladby",
+    "developerId": "62970e8d088e00a306c93893",
+    "version": "0.5.2",
+    "sourceRepository": "https://github.com/Allram/com.fladby.amsleser",
+    "publishedAt": "2026-11-06T18:37:38.372Z",
+    "updatedAt": "2026-11-06T18:37:38.372Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.vyx.stookwijzer",
+    "name": "Stookwijzer",
+    "developerName": "Nick Peters",
+    "developerId": "6aea0e7947152fc80b7c837d",
+    "version": "1.1.0",
+    "sourceRepository": "https://github.com/nick-vyx/homey-stookwijzer",
+    "publishedAt": "2026-11-06T18:37:38.804Z",
+    "updatedAt": "2026-11-06T18:37:38.804Z",
+    "communityTopicId": null
   }
 ]
