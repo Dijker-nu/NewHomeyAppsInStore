@@ -6417,10 +6417,10 @@
     "name": "Plejd",
     "developerName": "Plejd AB",
     "developerId": "6ace2ff79f22c4b3e2e6d291",
-    "version": "1.2.3",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2022-07-11T14:58:25.523Z",
-    "updatedAt": "2026-10-14T08:50:55.597Z",
+    "updatedAt": "2026-11-06T11:06:26.548Z",
     "communityTopicId": 116532
   },
   {
@@ -6516,10 +6516,10 @@
     "name": "GoodWe Inverter",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "1.16.10",
+    "version": "1.16.12",
     "sourceRepository": "",
     "publishedAt": "2022-08-04T10:30:46.262Z",
-    "updatedAt": "2026-10-27T09:09:00.886Z",
+    "updatedAt": "2026-11-06T11:06:26.548Z",
     "communityTopicId": 66903
   },
   {
@@ -10168,10 +10168,10 @@
     "name": "IKEA DIRIGERA Gateway",
     "developerName": "Sander Theeuwes-Stout",
     "developerId": "67366aef065f03b3ce380d86",
-    "version": "1.0.20",
+    "version": "1.0.21",
     "sourceRepository": "https://github.com/theeuwes-it/homey-dirigera-gateway",
     "publishedAt": "2024-11-14T21:26:07.793Z",
-    "updatedAt": "2026-11-05T11:09:18.809Z",
+    "updatedAt": "2026-11-06T11:06:26.549Z",
     "communityTopicId": null
   },
   {
@@ -10344,10 +10344,10 @@
     "name": "Homevolt",
     "developerName": "Love Thyresson",
     "developerId": "67718e3ee5ac96c52a6ba4e0",
-    "version": "1.7.3",
+    "version": "1.7.4",
     "sourceRepository": "https://github.com/lovethyresson/com.homevolt.local",
     "publishedAt": "2024-12-29T18:00:30.720Z",
-    "updatedAt": "2026-08-17T15:57:12.789Z",
+    "updatedAt": "2026-11-06T11:06:26.549Z",
     "communityTopicId": 128447
   },
   {
@@ -10861,10 +10861,10 @@
     "name": "Growatt",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "2.6.0",
+    "version": "3.0.0",
     "sourceRepository": "",
     "publishedAt": "2025-04-08T09:44:30.050Z",
-    "updatedAt": "2026-10-28T09:49:50.162Z",
+    "updatedAt": "2026-11-06T11:06:26.549Z",
     "communityTopicId": 134233
   },
   {
@@ -12368,10 +12368,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.29.1",
+    "version": "3.30.1",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-05T11:09:18.810Z",
+    "updatedAt": "2026-11-06T11:06:26.549Z",
     "communityTopicId": 147496
   },
   {
@@ -15646,10 +15646,10 @@
     "name": "One2Track",
     "developerName": "MR Luto",
     "developerId": "69b564d3816882ede9249e65",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "sourceRepository": "",
     "publishedAt": "2026-05-15T13:03:47.181Z",
-    "updatedAt": "2026-10-16T08:18:42.776Z",
+    "updatedAt": "2026-11-06T11:06:26.550Z",
     "communityTopicId": null
   },
   {
@@ -16086,10 +16086,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.750",
+    "version": "1.0.753",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-11-05T11:09:18.810Z",
+    "updatedAt": "2026-11-06T11:06:26.550Z",
     "communityTopicId": 156098
   },
   {
@@ -16680,10 +16680,10 @@
     "name": "Link2Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "sourceRepository": "https://github.com/smarthomesven/homey-link2home",
     "publishedAt": "2026-07-14T00:12:43.396Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-11-06T11:06:26.550Z",
     "communityTopicId": 157174
   },
   {
@@ -17395,10 +17395,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-08-13T00:42:22.394Z",
-    "updatedAt": "2026-09-29T17:35:13.600Z",
+    "updatedAt": "2026-11-06T11:06:26.550Z",
     "communityTopicId": 158618
   },
   {
@@ -19837,10 +19837,10 @@
     "name": "Parcel Tracker",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-30T17:22:33.982Z",
-    "updatedAt": "2026-11-05T11:09:18.811Z",
+    "updatedAt": "2026-11-06T11:06:26.550Z",
     "communityTopicId": 161469
   },
   {
@@ -19903,10 +19903,10 @@
     "name": "Weekdot",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-11-03T15:33:59.627Z",
-    "updatedAt": "2026-11-03T15:33:59.627Z",
+    "updatedAt": "2026-11-06T11:06:26.550Z",
     "communityTopicId": 161566
   },
   {
@@ -19996,5 +19996,16 @@
     "publishedAt": "2026-11-05T19:10:17.853Z",
     "updatedAt": "2026-11-05T19:10:17.853Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "be.dreocommunity",
+    "name": "DREO (Community)",
+    "developerName": "Danny van Soerland",
+    "developerId": "69cc140b699c29709ca3a1dc",
+    "version": "1.2.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-06T11:05:53.836Z",
+    "updatedAt": "2026-11-06T11:05:53.836Z",
+    "communityTopicId": 161466
   }
 ]
