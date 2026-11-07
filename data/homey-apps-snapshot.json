@@ -6516,10 +6516,10 @@
     "name": "GoodWe Inverter",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "1.16.12",
+    "version": "1.16.13",
     "sourceRepository": "",
     "publishedAt": "2022-08-04T10:30:46.262Z",
-    "updatedAt": "2026-11-06T11:06:26.548Z",
+    "updatedAt": "2026-11-07T10:25:34.158Z",
     "communityTopicId": 66903
   },
   {
@@ -8606,10 +8606,10 @@
     "name": "Nous",
     "developerName": "NovaCore Labs",
     "developerId": "6a8bdd7a94f0069d62618521",
-    "version": "2.23.2",
+    "version": "2.23.3",
     "sourceRepository": "",
     "publishedAt": "2023-12-30T18:24:31.292Z",
-    "updatedAt": "2026-11-05T11:09:18.809Z",
+    "updatedAt": "2026-11-07T10:25:34.158Z",
     "communityTopicId": 99614
   },
   {
@@ -12368,10 +12368,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.30.1",
+    "version": "3.30.5",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-06T11:06:26.549Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": 147496
   },
   {
@@ -12775,10 +12775,10 @@
     "name": "Blueriiot BlueConnect Local",
     "developerName": "Kenny Moens",
     "developerId": "66ffa09c645b24bd5bc1b47f",
-    "version": "0.2.5",
+    "version": "0.2.7",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/blueriiot",
     "publishedAt": "2025-12-28T15:40:13.869Z",
-    "updatedAt": "2026-04-17T13:45:19.563Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": 147995
   },
   {
@@ -13160,10 +13160,10 @@
     "name": "Stream Deck",
     "developerName": "Stefan Renne",
     "developerId": "680b8f7861abe0f3b0bf262a",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/stefanrenne/nl.stefanrenne.streamdeck",
     "publishedAt": "2026-01-30T15:51:55.679Z",
-    "updatedAt": "2026-10-14T08:50:55.597Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": 151256
   },
   {
@@ -14194,10 +14194,10 @@
     "name": "Skoda",
     "developerName": "Škoda Auto",
     "developerId": "6aa8fe2a3bf2cee70abf525a",
-    "version": "2.8.0",
+    "version": "2.8.1",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/skoda",
     "publishedAt": "2026-03-16T15:23:15.534Z",
-    "updatedAt": "2026-11-05T11:09:18.810Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": 152568
   },
   {
@@ -14524,10 +14524,10 @@
     "name": "Formula 1 Live Timing",
     "developerName": "Stèphan Eizinga (MonkeySoft)",
     "developerId": "5dcabc991c90c866f936678e",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/steffjenl/nl.monkeysoft.f1",
     "publishedAt": "2026-03-24T23:29:34.241Z",
-    "updatedAt": "2026-06-04T15:42:37.906Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": 153042
   },
   {
@@ -15965,10 +15965,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "5.2.8",
+    "version": "5.2.9",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-04T11:08:59.497Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": null
   },
   {
@@ -16086,10 +16086,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.753",
+    "version": "1.0.755",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-11-06T11:06:26.550Z",
+    "updatedAt": "2026-11-07T10:25:34.159Z",
     "communityTopicId": 156098
   },
   {
@@ -17120,10 +17120,10 @@
     "name": "Navien Smart",
     "developerName": "Geunwon Mo",
     "developerId": "669f56321e5a71f546d08f20",
-    "version": "0.6.6",
+    "version": "0.6.7",
     "sourceRepository": "https://github.com/moKorean/com.lomohome.navien",
     "publishedAt": "2026-07-31T07:30:43.633Z",
-    "updatedAt": "2026-08-24T14:01:50.437Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": null
   },
   {
@@ -17230,10 +17230,10 @@
     "name": "Fluidra Pool",
     "developerName": "Cédric Bonneau",
     "developerId": "6a74d6dc0db799b142530c18",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "sourceRepository": "",
     "publishedAt": "2026-08-06T18:56:00.874Z",
-    "updatedAt": "2026-08-11T09:39:52.188Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": null
   },
   {
@@ -17494,10 +17494,10 @@
     "name": "HomeFlux",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "0.9.6",
+    "version": "1.0.0",
     "sourceRepository": "https://github.com/DavyBert/homey-dashboard-HomeFlux",
     "publishedAt": "2026-08-15T20:24:19.753Z",
-    "updatedAt": "2026-11-05T11:09:18.810Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 161252
   },
   {
@@ -17648,10 +17648,10 @@
     "name": "Adaptive Thermostat",
     "developerName": "vincent fresnel",
     "developerId": "6a86d386c6a80eeabce73263",
-    "version": "1.5.1",
+    "version": "1.5.3",
     "sourceRepository": "https://github.com/byackee/homey-vtherm",
     "publishedAt": "2026-08-22T11:24:49.247Z",
-    "updatedAt": "2026-10-30T10:12:31.889Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 158634
   },
   {
@@ -18385,10 +18385,10 @@
     "name": "Fully Kiosk Browser",
     "developerName": "Emile Nijssen",
     "developerId": "5dcaba391c90c866f9364985",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-20T15:01:00.031Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": null
   },
   {
@@ -18814,10 +18814,10 @@
     "name": "Sonnounce",
     "developerName": "Tobias Vinzents",
     "developerId": "6aa1b37b4b2b66c1158fc9a4",
-    "version": "2.1.0",
+    "version": "2.2.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T23:17:34.955Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 159398
   },
   {
@@ -19232,10 +19232,10 @@
     "name": "Fox ESS",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "1.1.2",
+    "version": "2.0.0",
     "sourceRepository": "https://github.com/gruijter/com.foxess",
     "publishedAt": "2026-10-13T10:45:39.282Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 159666
   },
   {
@@ -19276,10 +19276,10 @@
     "name": "PV Forecast",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "2.8.2",
+    "version": "2.8.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-14T16:05:13.081Z",
-    "updatedAt": "2026-11-05T11:09:18.811Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 160366
   },
   {
@@ -19595,10 +19595,10 @@
     "name": "Medication Reminder",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-11-05T11:09:18.811Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 161097
   },
   {
@@ -20002,10 +20002,10 @@
     "name": "DREO (Community)",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "sourceRepository": "",
     "publishedAt": "2026-11-06T11:05:53.836Z",
-    "updatedAt": "2026-11-06T11:05:53.836Z",
+    "updatedAt": "2026-11-07T10:25:34.160Z",
     "communityTopicId": 161466
   },
   {
