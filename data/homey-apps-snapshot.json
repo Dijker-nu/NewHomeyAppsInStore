@@ -3535,10 +3535,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.14.0",
+    "version": "46.16.0",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-11-04T11:08:59.495Z",
+    "updatedAt": "2026-11-08T10:33:44.505Z",
     "communityTopicId": 73094
   },
   {
@@ -7066,10 +7066,10 @@
     "name": "H",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "23.6.0",
+    "version": "23.7.0",
     "sourceRepository": "https://github.com/OlivierZal/com.heatzy",
     "publishedAt": "2023-02-10T23:08:25.337Z",
-    "updatedAt": "2026-11-05T11:09:18.809Z",
+    "updatedAt": "2026-11-08T10:33:44.506Z",
     "communityTopicId": 76406
   },
   {
@@ -12368,10 +12368,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.30.5",
+    "version": "3.30.9",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-07T10:25:34.159Z",
+    "updatedAt": "2026-11-08T10:33:44.506Z",
     "communityTopicId": 147496
   },
   {
@@ -12522,10 +12522,10 @@
     "name": "Wasp in a Box",
     "developerName": "Andy van Dongen",
     "developerId": "693fd43f66abe4254753dd39",
-    "version": "2.2.1",
+    "version": "2.2.3",
     "sourceRepository": "https://community.homey.app/t/app-pro-wasp-in-a-box-virtual-presence-detection-based-on-sensor-triggers/147021",
     "publishedAt": "2025-12-15T10:36:15.185Z",
-    "updatedAt": "2026-10-26T09:06:38.850Z",
+    "updatedAt": "2026-11-08T10:33:44.506Z",
     "communityTopicId": 147021
   },
   {
@@ -15965,10 +15965,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "5.2.9",
+    "version": "5.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-07T10:25:34.159Z",
+    "updatedAt": "2026-11-08T10:33:44.507Z",
     "communityTopicId": null
   },
   {
@@ -16416,10 +16416,10 @@
     "name": "Wear OS/ESP32 panel Controller",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.49.6",
+    "version": "1.50.0",
     "sourceRepository": "",
     "publishedAt": "2026-07-01T17:00:51.035Z",
-    "updatedAt": "2026-11-02T11:24:40.076Z",
+    "updatedAt": "2026-11-08T10:33:44.507Z",
     "communityTopicId": 156700
   },
   {
@@ -17395,10 +17395,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.9",
+    "version": "1.0.11",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-08-13T00:42:22.394Z",
-    "updatedAt": "2026-11-06T11:06:26.550Z",
+    "updatedAt": "2026-11-08T10:33:44.507Z",
     "communityTopicId": 158618
   },
   {
@@ -19749,10 +19749,10 @@
     "name": "BLUETTI",
     "developerName": "Gabriel Pedrosa Machado",
     "developerId": "69782a0e6b884a38a96c58e6",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "sourceRepository": "https://github.com/gpmachado/com.gpm.bluetti",
     "publishedAt": "2026-10-28T17:32:11.153Z",
-    "updatedAt": "2026-11-05T11:09:18.811Z",
+    "updatedAt": "2026-11-08T10:33:44.507Z",
     "communityTopicId": 160644
   },
   {
