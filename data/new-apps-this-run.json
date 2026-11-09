@@ -1,1 +1,1033 @@
-[]
+[
+  {
+    "id": "com.mariomark.energyflow",
+    "rating": null,
+    "liveBuild": {
+      "id": 27,
+      "name": {
+        "en": "Energy Flow",
+        "nl": "Energy Flow"
+      },
+      "version": "0.5.4",
+      "readme": {
+        "en": "Bring your home's energy to life on your Homey Dashboard. Energy Flow turns readings from your connected Homey devices into an animated overview of the electricity moving through your home. See how grid use, solar power and energy storage relate, and explore available consumption history at a glance.\n\nThe separate Water Flow and Gas Flow widgets make it easy to follow everyday utility consumption. Energy Flow uses the devices you already have in Homey, needs no additional account and never controls your equipment. It clearly indicates when historical information is unavailable or incomplete.\n",
+        "nl": "Met Energy Flow zie je op je Homey Dashboard hoe stroom door je huis beweegt. Een geanimeerd huis maakt netverbruik, teruglevering, zonne-energie en thuisbatterijen inzichtelijk. Zo begrijp je in één oogopslag waar je energie vandaan komt en waar deze naartoe gaat.\n\nMet de aparte Water Flow- en Gas Flow-widgets volg je ook je water- en gasverbruik. De app gebruikt apparaten die al met Homey zijn verbonden en toont beschikbare meetgeschiedenis zonder apparaten aan te sturen. Je hebt geen extra account nodig."
+      },
+      "description": {
+        "nl": "Zie stroom, gas en zonne-energie samenkomen in één levendig dashboard.",
+        "en": "See electricity, gas and solar energy come alive in one dashboard."
+      },
+      "category": "energy",
+      "brandColor": "#5CA5C8",
+      "icon": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": {
+        "energy-flow": {
+          "name": {
+            "en": "Energy Flow",
+            "nl": "Energiestroom"
+          },
+          "settings": [
+            {
+              "id": "showPrices",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Show electricity market prices",
+                "nl": "Stroommarktprijzen tonen"
+              }
+            },
+            {
+              "id": "priceMode",
+              "type": "dropdown",
+              "value": "market",
+              "title": {
+                "en": "Electricity price source",
+                "nl": "Bron van stroomtarief"
+              },
+              "hint": {
+                "en": "Market reference, your Homey Energy contract, or manually entered fixed/dynamic terms.",
+                "nl": "Marktprijzen ter vergelijking, je Homey Energy-contract of handmatig ingestelde vaste/dynamische tarieven."
+              },
+              "values": [
+                {
+                  "id": "market",
+                  "title": {
+                    "en": "Market reference only",
+                    "nl": "Alleen marktprijzen"
+                  }
+                },
+                {
+                  "id": "homey",
+                  "title": {
+                    "en": "Automatic from Homey Energy",
+                    "nl": "Automatisch via Homey Energy"
+                  }
+                },
+                {
+                  "id": "fixed",
+                  "title": {
+                    "en": "Manual fixed all-in tariff",
+                    "nl": "Handmatig vast tarief (inclusief)"
+                  }
+                },
+                {
+                  "id": "dynamic",
+                  "title": {
+                    "en": "Manual dynamic tariff",
+                    "nl": "Handmatig dynamisch tarief"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "priceSupplier",
+              "type": "text",
+              "value": "",
+              "title": {
+                "en": "Supplier name (optional)",
+                "nl": "Leverancier (optioneel)"
+              },
+              "hint": {
+                "en": "Display only, not a supplier preset. Your contract terms determine the price.",
+                "nl": "Alleen als naam. De voorwaarden van jouw contract bepalen de prijs."
+              }
+            },
+            {
+              "id": "priceFixedRate",
+              "type": "number",
+              "value": null,
+              "min": 0,
+              "max": 25,
+              "title": {
+                "en": "Fixed all-in price per kWh",
+                "nl": "Vaste prijs inclusief per kWh"
+              },
+              "hint": {
+                "en": "Only for Manual Fixed. Enter the complete rate in your Homey currency, including taxes.",
+                "nl": "Alleen bij Handmatig vast. Vul het volledige tarief in je Homey-valuta in, inclusief belastingen."
+              }
+            },
+            {
+              "id": "priceMarkup",
+              "type": "number",
+              "value": null,
+              "min": -2,
+              "max": 5,
+              "title": {
+                "en": "Dynamic supplier markup per kWh",
+                "nl": "Dynamische leveranciersopslag per kWh"
+              },
+              "hint": {
+                "en": "Only for Manual Dynamic. Use the Homey currency; enter 0 if none.",
+                "nl": "Alleen bij Handmatig dynamisch. In de Homey-valuta; vul 0 in als er geen opslag is."
+              }
+            },
+            {
+              "id": "priceEnergyTax",
+              "type": "number",
+              "value": null,
+              "min": 0,
+              "max": 5,
+              "title": {
+                "en": "Energy tax per kWh before VAT",
+                "nl": "Energiebelasting per kWh vóór btw"
+              },
+              "hint": {
+                "en": "Only for Manual Dynamic. Enter 0 if already included in the market price.",
+                "nl": "Alleen bij Handmatig dynamisch. Vul 0 in als dit al in de marktprijs zit."
+              }
+            },
+            {
+              "id": "priceVat",
+              "type": "number",
+              "value": null,
+              "min": 0,
+              "max": 100,
+              "title": {
+                "en": "VAT percentage on dynamic tariff",
+                "nl": "Btw-percentage voor dynamisch tarief"
+              },
+              "hint": {
+                "en": "Only for Manual Dynamic. Enter 0 if prices already include VAT.",
+                "nl": "Alleen bij Handmatig dynamisch. Vul 0 in als btw al is inbegrepen."
+              }
+            },
+            {
+              "id": "grid",
+              "type": "autocomplete",
+              "title": {
+                "en": "Electricity meter / P1",
+                "nl": "Stroommeter / P1"
+              },
+              "hint": {
+                "en": "Choose an existing Homey device. Clear the field to omit this source.",
+                "nl": "Kies een bestaand Homey-apparaat. Wis het veld om deze bron weg te laten."
+              }
+            },
+            {
+              "id": "solar",
+              "type": "autocomplete",
+              "title": {
+                "en": "Solar panels",
+                "nl": "Zonnepanelen"
+              },
+              "hint": {
+                "en": "Choose an existing Homey device. Clear the field to omit this source.",
+                "nl": "Kies een bestaand Homey-apparaat. Wis het veld om deze bron weg te laten."
+              }
+            },
+            {
+              "id": "solar2",
+              "type": "autocomplete",
+              "title": {
+                "en": "Solar panels 2 (optional)",
+                "nl": "Zonnepanelen 2 (optioneel)"
+              },
+              "hint": {
+                "en": "Choose an existing Homey device. Clear the field to omit this source.",
+                "nl": "Kies een bestaand Homey-apparaat. Wis het veld om deze bron weg te laten."
+              }
+            },
+            {
+              "id": "solar3",
+              "type": "autocomplete",
+              "title": {
+                "en": "Solar panels 3 (optional)",
+                "nl": "Zonnepanelen 3 (optioneel)"
+              },
+              "hint": {
+                "en": "Choose an existing Homey device. Clear the field to omit this source.",
+                "nl": "Kies een bestaand Homey-apparaat. Wis het veld om deze bron weg te laten."
+              }
+            },
+            {
+              "id": "gas",
+              "type": "autocomplete",
+              "title": {
+                "en": "Gas meter (optional)",
+                "nl": "Gasmeter (optioneel)"
+              },
+              "hint": {
+                "en": "Choose an existing Homey device. Clear the field to omit this source.",
+                "nl": "Kies een bestaand Homey-apparaat. Wis het veld om deze bron weg te laten."
+              }
+            },
+            {
+              "id": "water",
+              "type": "autocomplete",
+              "title": {
+                "en": "Water meter (optional)",
+                "nl": "Watermeter (optioneel)"
+              },
+              "hint": {
+                "en": "Choose an existing Homey device. Clear the field to omit this source.",
+                "nl": "Kies een bestaand Homey-apparaat. Wis het veld om deze bron weg te laten."
+              }
+            },
+            {
+              "id": "battery",
+              "type": "autocomplete",
+              "title": {
+                "en": "Home battery (optional)",
+                "nl": "Thuisbatterij (optioneel)"
+              },
+              "hint": {
+                "en": "Choose a separate energy device. Clear the field to hide this source. Read-only.",
+                "nl": "Kies een afzonderlijk energieapparaat. Wis het veld om deze bron te verbergen. Alleen uitlezen."
+              }
+            },
+            {
+              "id": "battery2",
+              "type": "autocomplete",
+              "title": {
+                "en": "Home battery 2 (optional)",
+                "nl": "Thuisbatterij 2 (optioneel)"
+              },
+              "hint": {
+                "en": "Choose a separate energy device. Clear the field to hide this source. Read-only.",
+                "nl": "Kies een afzonderlijk energieapparaat. Wis het veld om deze bron te verbergen. Alleen uitlezen."
+              }
+            },
+            {
+              "id": "battery3",
+              "type": "autocomplete",
+              "title": {
+                "en": "Home battery 3 (optional)",
+                "nl": "Thuisbatterij 3 (optioneel)"
+              },
+              "hint": {
+                "en": "Choose a separate energy device. Clear the field to hide this source. Read-only.",
+                "nl": "Kies een afzonderlijk energieapparaat. Wis het veld om deze bron te verbergen. Alleen uitlezen."
+              }
+            },
+            {
+              "id": "ev",
+              "type": "autocomplete",
+              "title": {
+                "en": "EV charger (optional)",
+                "nl": "Laadpaal (optioneel)"
+              },
+              "hint": {
+                "en": "Choose a separate energy device. Clear the field to hide this source. Read-only.",
+                "nl": "Kies een afzonderlijk energieapparaat. Wis het veld om deze bron te verbergen. Alleen uitlezen."
+              }
+            },
+            {
+              "id": "demo",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Demo when no devices are selected",
+                "nl": "Demo als er geen apparaten geselecteerd zijn"
+              }
+            },
+            {
+              "id": "reverseGrid",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Reverse grid sign (only if your meter uses negative import)",
+                "nl": "Net-teken omkeren (alleen als je meter import negatief weergeeft)"
+              }
+            },
+            {
+              "id": "hideBrandLabel",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Hide small Energy Flow label",
+                "nl": "Kleine tekst 'Energy Flow' verbergen"
+              },
+              "hint": {
+                "en": "Hide only the small brand label above the dashboard title; keep the main title and Homey app name.",
+                "nl": "Verberg alleen het kleine opschrift boven de dashboardtitel. De grote titel en appnaam blijven zichtbaar."
+              }
+            },
+            {
+              "id": "layout",
+              "type": "dropdown",
+              "value": "auto",
+              "title": {
+                "en": "Layout",
+                "nl": "Layout"
+              },
+              "hint": {
+                "en": "Choose how Energy Flow is displayed in this dashboard widget. Homey controls the outer widget width.",
+                "nl": "Kies hoe Energy Flow in deze dashboardwidget wordt weergegeven. Homey bepaalt de buitenste widgetbreedte."
+              },
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Automatic",
+                    "nl": "Automatisch"
+                  }
+                },
+                {
+                  "id": "full",
+                  "title": {
+                    "en": "Full",
+                    "nl": "Compleet"
+                  }
+                },
+                {
+                  "id": "tablet",
+                  "title": {
+                    "en": "Tablet",
+                    "nl": "Tablet"
+                  }
+                },
+                {
+                  "id": "compact",
+                  "title": {
+                    "en": "Compact",
+                    "nl": "Compact"
+                  }
+                },
+                {
+                  "id": "overview",
+                  "title": {
+                    "en": "Overview only",
+                    "nl": "Alleen overzicht"
+                  }
+                },
+                {
+                  "id": "house",
+                  "title": {
+                    "en": "House only",
+                    "nl": "Alleen huis"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "houseSize",
+              "type": "dropdown",
+              "value": "normal",
+              "title": {
+                "en": "House illustration size",
+                "nl": "Grootte huisillustratie"
+              },
+              "hint": {
+                "en": "Make the animated house larger without scaling text. Available dashboard tile space still limits its size.",
+                "nl": "Maak het geanimeerde huis groter zonder de tekst te vergroten. De beschikbare ruimte in je dashboardtegel bepaalt de maximale grootte."
+              },
+              "values": [
+                {
+                  "id": "normal",
+                  "title": {
+                    "en": "Normal (default)",
+                    "nl": "Normaal (standaard)"
+                  }
+                },
+                {
+                  "id": "large",
+                  "title": {
+                    "en": "Large",
+                    "nl": "Groot"
+                  }
+                },
+                {
+                  "id": "extra",
+                  "title": {
+                    "en": "Extra large",
+                    "nl": "Extra groot"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "tabletEmphasis",
+              "type": "dropdown",
+              "value": "balanced",
+              "title": {
+                "en": "Tablet emphasis",
+                "nl": "Tabletverdeling"
+              },
+              "hint": {
+                "en": "Adjust the balance between the home and readings in Tablet mode or a wide Automatic layout. Narrow widgets keep readable source blocks.",
+                "nl": "Verdeel de ruimte tussen het huis en de waarden in Tablet of een brede automatische layout. Smalle widgets houden leesbare bronblokken."
+              },
+              "values": [
+                {
+                  "id": "balanced",
+                  "title": {
+                    "en": "Balanced",
+                    "nl": "Gebalanceerd"
+                  }
+                },
+                {
+                  "id": "house",
+                  "title": {
+                    "en": "Larger home",
+                    "nl": "Huis extra groot"
+                  }
+                },
+                {
+                  "id": "data",
+                  "title": {
+                    "en": "Larger data",
+                    "nl": "Data extra groot"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "theme",
+              "type": "dropdown",
+              "value": "auto",
+              "title": {
+                "en": "Appearance",
+                "nl": "Weergave"
+              },
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Follow Homey",
+                    "nl": "Volg Homey"
+                  }
+                },
+                {
+                  "id": "dark",
+                  "title": {
+                    "en": "Dark",
+                    "nl": "Donker"
+                  }
+                },
+                {
+                  "id": "light",
+                  "title": {
+                    "en": "Light",
+                    "nl": "Licht"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "displayScale",
+              "type": "dropdown",
+              "value": "auto",
+              "title": {
+                "en": "Display scale",
+                "nl": "Weergaveschaal"
+              },
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Automatic",
+                    "nl": "Automatisch"
+                  }
+                },
+                {
+                  "id": "75",
+                  "title": {
+                    "en": "75%",
+                    "nl": "75%"
+                  }
+                },
+                {
+                  "id": "85",
+                  "title": {
+                    "en": "85%",
+                    "nl": "85%"
+                  }
+                },
+                {
+                  "id": "100",
+                  "title": {
+                    "en": "100%",
+                    "nl": "100%"
+                  }
+                },
+                {
+                  "id": "110",
+                  "title": {
+                    "en": "110%",
+                    "nl": "110%"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "hideLive",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Hide LIVE indicator",
+                "nl": "LIVE-indicator verbergen"
+              }
+            },
+            {
+              "id": "hideNow",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Hide Now",
+                "nl": "Nu verbergen"
+              }
+            },
+            {
+              "id": "hideTime",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Hide time",
+                "nl": "Tijd verbergen"
+              }
+            },
+            {
+              "id": "hideTitle",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Hide title",
+                "nl": "Titel verbergen"
+              }
+            },
+            {
+              "id": "hideHouse",
+              "type": "checkbox",
+              "value": false,
+              "title": {
+                "en": "Hide house illustration",
+                "nl": "Huisillustratie verbergen"
+              }
+            }
+          ],
+          "api": {
+            "openSession": {
+              "method": "POST",
+              "path": "/session"
+            },
+            "closeSession": {
+              "method": "POST",
+              "path": "/session/close"
+            },
+            "getPeriod": {
+              "method": "POST",
+              "path": "/period"
+            },
+            "getMarketPrices": {
+              "method": "POST",
+              "path": "/market-prices"
+            }
+          },
+          "id": "energy-flow",
+          "previewDark": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/widgets/energy-flow/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/widgets/energy-flow/preview-light.png"
+        },
+        "gas-flow": {
+          "name": {
+            "en": "Gas Flow",
+            "nl": "Gas Flow"
+          },
+          "settings": [
+            {
+              "id": "meter",
+              "type": "autocomplete",
+              "title": {
+                "en": "Gas meter",
+                "nl": "Gasmeter"
+              },
+              "hint": {
+                "en": "Choose an existing Homey meter. This selection applies only to this widget.",
+                "nl": "Kies een bestaande Homey-meter. Deze selectie geldt alleen voor deze widget."
+              }
+            },
+            {
+              "id": "view",
+              "type": "dropdown",
+              "title": {
+                "en": "Display",
+                "nl": "Weergave"
+              },
+              "value": "auto",
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Dynamic",
+                    "nl": "Dynamisch"
+                  }
+                },
+                {
+                  "id": "compact",
+                  "title": {
+                    "en": "Compact",
+                    "nl": "Compact"
+                  }
+                },
+                {
+                  "id": "normal",
+                  "title": {
+                    "en": "Normal",
+                    "nl": "Normaal"
+                  }
+                },
+                {
+                  "id": "expanded",
+                  "title": {
+                    "en": "Expanded",
+                    "nl": "Uitgebreid"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Dynamic adapts to the available width. Homey controls the outer widget width.",
+                "nl": "Dynamisch past zich aan de beschikbare breedte aan. Homey bepaalt de buitenste widgetbreedte."
+              }
+            },
+            {
+              "id": "period",
+              "type": "dropdown",
+              "title": {
+                "en": "Default period",
+                "nl": "Standaardperiode"
+              },
+              "value": "day",
+              "values": [
+                {
+                  "id": "day",
+                  "title": {
+                    "en": "Today",
+                    "nl": "Vandaag"
+                  }
+                },
+                {
+                  "id": "week",
+                  "title": {
+                    "en": "Week",
+                    "nl": "Week"
+                  }
+                },
+                {
+                  "id": "month",
+                  "title": {
+                    "en": "Month",
+                    "nl": "Maand"
+                  }
+                },
+                {
+                  "id": "year",
+                  "title": {
+                    "en": "Year",
+                    "nl": "Jaar"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "theme",
+              "type": "dropdown",
+              "title": {
+                "en": "Appearance",
+                "nl": "Thema"
+              },
+              "value": "auto",
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Automatic",
+                    "nl": "Automatisch"
+                  }
+                },
+                {
+                  "id": "dark",
+                  "title": {
+                    "en": "Dark",
+                    "nl": "Donker"
+                  }
+                },
+                {
+                  "id": "light",
+                  "title": {
+                    "en": "Light",
+                    "nl": "Licht"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "animation",
+              "type": "checkbox",
+              "title": {
+                "en": "Animate actual flow",
+                "nl": "Actueel debiet animeren"
+              },
+              "value": true
+            },
+            {
+              "id": "comparison",
+              "type": "checkbox",
+              "title": {
+                "en": "Show previous period",
+                "nl": "Vorige periode tonen"
+              },
+              "value": false
+            },
+            {
+              "id": "costs",
+              "type": "checkbox",
+              "title": {
+                "en": "Show verified costs",
+                "nl": "Betrouwbare kosten tonen"
+              },
+              "value": true
+            },
+            {
+              "id": "demo",
+              "type": "checkbox",
+              "title": {
+                "en": "Demo when no meter is selected",
+                "nl": "Demo als geen meter is geselecteerd"
+              },
+              "value": false
+            }
+          ],
+          "api": {
+            "openSession": {
+              "method": "POST",
+              "path": "/session"
+            },
+            "closeSession": {
+              "method": "POST",
+              "path": "/session/close"
+            },
+            "getPeriod": {
+              "method": "POST",
+              "path": "/period"
+            }
+          },
+          "id": "gas-flow",
+          "previewDark": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/widgets/gas-flow/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/widgets/gas-flow/preview-light.png"
+        },
+        "water-flow": {
+          "name": {
+            "en": "Water Flow",
+            "nl": "Water Flow"
+          },
+          "settings": [
+            {
+              "id": "meter",
+              "type": "autocomplete",
+              "title": {
+                "en": "Water meter",
+                "nl": "Watermeter"
+              },
+              "hint": {
+                "en": "Choose an existing Homey meter. This selection applies only to this widget.",
+                "nl": "Kies een bestaande Homey-meter. Deze selectie geldt alleen voor deze widget."
+              }
+            },
+            {
+              "id": "view",
+              "type": "dropdown",
+              "title": {
+                "en": "Display",
+                "nl": "Weergave"
+              },
+              "value": "auto",
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Dynamic",
+                    "nl": "Dynamisch"
+                  }
+                },
+                {
+                  "id": "compact",
+                  "title": {
+                    "en": "Compact",
+                    "nl": "Compact"
+                  }
+                },
+                {
+                  "id": "normal",
+                  "title": {
+                    "en": "Normal",
+                    "nl": "Normaal"
+                  }
+                },
+                {
+                  "id": "expanded",
+                  "title": {
+                    "en": "Expanded",
+                    "nl": "Uitgebreid"
+                  }
+                }
+              ],
+              "hint": {
+                "en": "Dynamic adapts to the available width. Homey controls the outer widget width.",
+                "nl": "Dynamisch past zich aan de beschikbare breedte aan. Homey bepaalt de buitenste widgetbreedte."
+              }
+            },
+            {
+              "id": "period",
+              "type": "dropdown",
+              "title": {
+                "en": "Default period",
+                "nl": "Standaardperiode"
+              },
+              "value": "day",
+              "values": [
+                {
+                  "id": "day",
+                  "title": {
+                    "en": "Today",
+                    "nl": "Vandaag"
+                  }
+                },
+                {
+                  "id": "week",
+                  "title": {
+                    "en": "Week",
+                    "nl": "Week"
+                  }
+                },
+                {
+                  "id": "month",
+                  "title": {
+                    "en": "Month",
+                    "nl": "Maand"
+                  }
+                },
+                {
+                  "id": "year",
+                  "title": {
+                    "en": "Year",
+                    "nl": "Jaar"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "theme",
+              "type": "dropdown",
+              "title": {
+                "en": "Appearance",
+                "nl": "Thema"
+              },
+              "value": "auto",
+              "values": [
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Automatic",
+                    "nl": "Automatisch"
+                  }
+                },
+                {
+                  "id": "dark",
+                  "title": {
+                    "en": "Dark",
+                    "nl": "Donker"
+                  }
+                },
+                {
+                  "id": "light",
+                  "title": {
+                    "en": "Light",
+                    "nl": "Licht"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "animation",
+              "type": "checkbox",
+              "title": {
+                "en": "Animate actual flow",
+                "nl": "Actueel debiet animeren"
+              },
+              "value": true
+            },
+            {
+              "id": "comparison",
+              "type": "checkbox",
+              "title": {
+                "en": "Show previous period",
+                "nl": "Vorige periode tonen"
+              },
+              "value": false
+            },
+            {
+              "id": "costs",
+              "type": "checkbox",
+              "title": {
+                "en": "Show verified costs",
+                "nl": "Betrouwbare kosten tonen"
+              },
+              "value": true
+            },
+            {
+              "id": "demo",
+              "type": "checkbox",
+              "title": {
+                "en": "Demo when no meter is selected",
+                "nl": "Demo als geen meter is geselecteerd"
+              },
+              "value": false
+            }
+          ],
+          "api": {
+            "openSession": {
+              "method": "POST",
+              "path": "/session"
+            },
+            "closeSession": {
+              "method": "POST",
+              "path": "/session/close"
+            },
+            "getPeriod": {
+              "method": "POST",
+              "path": "/period"
+            }
+          },
+          "id": "water-flow",
+          "previewDark": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/widgets/water-flow/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.mariomark.energyflow/27/561b69e7-f821-4d5b-90ab-7fbc645b31bc/widgets/water-flow/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 161321,
+      "state": "live",
+      "stateChangedAt": "2026-11-09T09:13:00.101Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://community.homey.app/t/app-test-energy-flow-a-visual-energy-dashboard-for-homey-pro/161321/9",
+      "source": null,
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "mariomark1541"
+          }
+        }
+      },
+      "permissions": [
+        "homey:manager:api"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "nl": "Homey App Store-verbeteringen: kortere Nederlandse en Engelse appbeschrijvingen en nieuwe, tekstvrije voorbeelden voor de Water Flow- en Gas Flow-widgets. Geen wijzigingen aan de werking.",
+        "en": "Homey App Store improvements: shorter Dutch and English app descriptions and new text-free previews of the Water Flow and Gas Flow widgets. App functionality is unchanged."
+      },
+      "compatibility": ">=12.4.5",
+      "tags": {
+        "en": [
+          "energy",
+          "dashboard",
+          "electricity",
+          "solar panels",
+          "gas",
+          "home battery",
+          "P1 meter",
+          "history"
+        ],
+        "nl": [
+          "energie",
+          "dashboard",
+          "stroom",
+          "zonnepanelen",
+          "gas",
+          "thuisbatterij",
+          "P1-meter",
+          "historie"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.5.4",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ab593e330dc90a8d6e447b6",
+      "type": "user",
+      "userId": "5cfb6f6e05caf00c414a05e8",
+      "name": "Mark Moorlag",
+      "verified": false
+    },
+    "communityTopicId": 161321
+  }
+]
