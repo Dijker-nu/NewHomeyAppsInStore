@@ -20051,5 +20051,82 @@
     "publishedAt": "2026-11-09T11:46:31.854Z",
     "updatedAt": "2026-11-09T11:46:31.854Z",
     "communityTopicId": 161321
+  },
+  {
+    "appId": "com.community.anycubicconnect",
+    "name": "Anycubic Connect",
+    "developerName": "Maurice Vd waarsenburg",
+    "developerId": "6aca5f25bdc8421d78c578a6",
+    "version": "1.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-09T23:53:43.450Z",
+    "updatedAt": "2026-11-09T23:53:43.450Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.patrick.bekendmakingennl",
+    "name": "Bekendmakingen NL",
+    "developerName": "Patrick Blijie",
+    "developerId": "6a9c30f0336db3df05acdb4e",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/glijie/bekendmakingennl-homey",
+    "publishedAt": "2026-11-09T23:53:44.223Z",
+    "updatedAt": "2026-11-09T23:53:44.223Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "digital.o1.homematic-hcu",
+    "name": "Homematic HCU",
+    "developerName": "Mario Kempter",
+    "developerId": "6910d5e0ae1d27bf09a08cf9",
+    "version": "0.9.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-09T23:53:44.615Z",
+    "updatedAt": "2026-11-09T23:53:44.615Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.jeffreydebruijn.fuelprices",
+    "name": "Fuel Prices",
+    "developerName": "JdeB Web Solutions",
+    "developerId": "6aecf65372573f07ae70a60c",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-09T23:53:45.021Z",
+    "updatedAt": "2026-11-09T23:53:45.021Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.bcare.moon.unofficial",
+    "name": "B-Care Baby Monitor",
+    "developerName": "Jan Harm Veenstra",
+    "developerId": "6aecbd6e47152fc80b7e401a",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-09T23:53:45.459Z",
+    "updatedAt": "2026-11-09T23:53:45.459Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.flinx.garage",
+    "name": "F-linX Garage Door",
+    "developerName": "JanosKevin Bakacs",
+    "developerId": "6aea3b7247152fc80b7cb495",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-09T23:53:45.876Z",
+    "updatedAt": "2026-11-09T23:53:45.876Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.byluto.appcleaner",
+    "name": "App Cleaner",
+    "developerName": "MR Luto",
+    "developerId": "69b564d3816882ede9249e65",
+    "version": "1.10.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-09T23:53:46.333Z",
+    "updatedAt": "2026-11-09T23:53:46.333Z",
+    "communityTopicId": null
   }
 ]
