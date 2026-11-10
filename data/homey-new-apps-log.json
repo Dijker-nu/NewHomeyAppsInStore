@@ -1066,5 +1066,17 @@
     "updatedAt": "2026-11-09T23:53:46.333Z",
     "communityTopicId": null,
     "discoveredAt": "2026-11-09T23:53:43.450Z"
+  },
+  {
+    "appId": "com.ozonos.aircleaner",
+    "name": "Ozonos",
+    "developerName": "Danee de Kruyff",
+    "developerId": "5dcaba6f1c90c866f9364c85",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-10T11:22:38.019Z",
+    "updatedAt": "2026-11-10T11:22:38.019Z",
+    "communityTopicId": 159217,
+    "discoveredAt": "2026-11-10T11:22:38.019Z"
   }
 ]

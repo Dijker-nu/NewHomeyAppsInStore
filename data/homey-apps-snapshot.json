@@ -708,10 +708,10 @@
     "name": "Netatmo",
     "developerName": "Athom B.V.",
     "developerId": "6a84336d4430c25338c20073",
-    "version": "5.8.7",
+    "version": "5.8.8",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:55:29.168Z",
-    "updatedAt": "2026-09-03T15:13:46.305Z",
+    "updatedAt": "2026-11-10T11:23:16.737Z",
     "communityTopicId": null
   },
   {
@@ -1412,10 +1412,10 @@
     "name": "BeNext",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "1.3.9",
-    "sourceRepository": "https://github.org/Qluster-IT/nl.qluster-it.BeNext/",
+    "version": "1.4.0",
+    "sourceRepository": "https://github.com/Qluster-IT/nl.qluster-it.BeNext/",
     "publishedAt": "2019-11-12T13:58:56.737Z",
-    "updatedAt": "2026-10-27T09:09:00.884Z",
+    "updatedAt": "2026-11-10T11:23:16.737Z",
     "communityTopicId": 76104
   },
   {
@@ -2820,10 +2820,10 @@
     "name": "Sensibo",
     "developerName": "Tapio Heiskanen",
     "developerId": "6381b62d2c8e04f69d3bbc27",
-    "version": "1.23.0",
+    "version": "1.27.1",
     "sourceRepository": "https://github.com/oh2th/com.sensibo",
     "publishedAt": "2019-11-12T14:04:32.190Z",
-    "updatedAt": "2026-11-04T11:08:59.495Z",
+    "updatedAt": "2026-11-10T11:23:16.738Z",
     "communityTopicId": 90295
   },
   {
@@ -4030,10 +4030,10 @@
     "name": "HDL SmartBus",
     "developerName": "Andreas Lydersen",
     "developerId": "5e3b2e9c27fdee05c1e9c4b2",
-    "version": "1.4.3",
+    "version": "1.5.0",
     "sourceRepository": "https://github.com/alydersen/hdl-smartbus-homey",
     "publishedAt": "2020-02-05T21:07:40.047Z",
-    "updatedAt": "2026-10-30T10:12:31.888Z",
+    "updatedAt": "2026-11-10T11:23:16.738Z",
     "communityTopicId": 26575
   },
   {
@@ -6351,10 +6351,10 @@
     "name": "Daikin ONECTA",
     "developerName": "ML Development",
     "developerId": "62af0e5dd6f97ae6cfe805d8",
-    "version": "8.0.3",
+    "version": "8.0.4",
     "sourceRepository": "",
     "publishedAt": "2022-06-19T11:54:05.486Z",
-    "updatedAt": "2026-11-05T11:09:18.809Z",
+    "updatedAt": "2026-11-10T11:23:16.738Z",
     "communityTopicId": 54088
   },
   {
@@ -6867,11 +6867,11 @@
     "appId": "eu.niko",
     "name": "Niko Zigbee®",
     "developerName": "Niko Europe",
-    "developerId": "639b1ed72c8e04f69dddc2f8",
+    "developerId": "6af2da5d32a8ba92dcc533ca",
     "version": "2.3.0",
     "sourceRepository": "",
     "publishedAt": "2022-11-24T13:08:46.182Z",
-    "updatedAt": "2026-06-30T12:26:49.065Z",
+    "updatedAt": "2026-11-10T11:23:16.738Z",
     "communityTopicId": 142307
   },
   {
@@ -7152,12 +7152,12 @@
   {
     "appId": "no.kjeet90.ostbergheru",
     "name": "Östberg Heru",
-    "developerName": "Kjetil Haugland",
-    "developerId": "614d6bd22d485c6ff687fd88",
+    "developerName": "Daan de Vries",
+    "developerId": "6af2ea020f89e422d5f22a26",
     "version": "1.7.0",
     "sourceRepository": "https://github.com/kjeet90/homey-ostberg-heru",
     "publishedAt": "2023-03-05T12:19:32.608Z",
-    "updatedAt": "2026-08-31T07:16:18.063Z",
+    "updatedAt": "2026-11-10T11:23:16.738Z",
     "communityTopicId": 77169
   },
   {
@@ -7528,10 +7528,10 @@
     "name": "Smarter ThinQ for LG",
     "developerName": "Martin Verbeek",
     "developerId": "602ad593ea27a57b44539bd7",
-    "version": "4.5.0",
+    "version": "4.5.3",
     "sourceRepository": "",
     "publishedAt": "2023-06-07T16:26:44.096Z",
-    "updatedAt": "2026-09-23T13:58:27.849Z",
+    "updatedAt": "2026-11-10T11:23:16.738Z",
     "communityTopicId": 82324
   },
   {
@@ -8276,10 +8276,10 @@
     "name": "Sonnen Batterie",
     "developerName": "Sonnen",
     "developerId": "6ac696709f2544391f2930fd",
-    "version": "2.7.0",
+    "version": "2.8.0",
     "sourceRepository": "https://github.com/HarpunDK/Homey.Sonnen",
     "publishedAt": "2023-11-14T21:14:46.746Z",
-    "updatedAt": "2026-10-23T08:40:17.686Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 96052
   },
   {
@@ -9249,17 +9249,6 @@
     "publishedAt": "2024-05-12T13:01:05.278Z",
     "updatedAt": "2025-04-23T15:59:17.406Z",
     "communityTopicId": 109539
-  },
-  {
-    "appId": "ady.smartthings",
-    "name": "SmartThings Community",
-    "developerName": "Adrian Rockall",
-    "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "2.0.40",
-    "sourceRepository": "https://github.com/AdyRock/com.smartthings",
-    "publishedAt": "2024-05-15T10:00:29.067Z",
-    "updatedAt": "2026-06-23T06:20:36.617Z",
-    "communityTopicId": 61418
   },
   {
     "appId": "com.gslender.izone.ac",
@@ -11343,12 +11332,12 @@
   {
     "appId": "com.tweakers.zendure",
     "name": "Zendure Local",
-    "developerName": "Erwin Stout",
-    "developerId": "6a95cf7430ac038fba715b7f",
+    "developerName": "Zendure community development",
+    "developerId": "6af23d28f2a6dec528d6f073",
     "version": "1.0.16",
     "sourceRepository": "https://github.com/stefkampen/com.tweakers.zendure",
     "publishedAt": "2025-08-02T19:23:11.721Z",
-    "updatedAt": "2026-08-12T20:35:10.565Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": null
   },
   {
@@ -11994,10 +11983,10 @@
     "name": "Matter Bridge",
     "developerName": "Athom B.V.",
     "developerId": "6a84336d4430c25338c20073",
-    "version": "0.9.1",
+    "version": "0.9.2",
     "sourceRepository": "https://github.com/athombv/com.athom.matter-bridge",
     "publishedAt": "2025-10-24T15:03:18.239Z",
-    "updatedAt": "2026-11-09T11:46:59.438Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": null
   },
   {
@@ -12368,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.30.10",
+    "version": "3.32.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-09T11:46:59.438Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 147496
   },
   {
@@ -13270,10 +13259,10 @@
     "name": "Mercedes-Benz",
     "developerName": "Anders Dissing",
     "developerId": "6982f8687f99f3517122b175",
-    "version": "1.1.53",
+    "version": "1.1.54",
     "sourceRepository": "https://github.com/andersdissing/Mercedes-Benz-homey-app",
     "publishedAt": "2026-02-04T07:49:31.977Z",
-    "updatedAt": "2026-10-31T09:47:34.829Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 150571
   },
   {
@@ -13314,10 +13303,10 @@
     "name": "Flexit GO",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "1.14.0",
+    "version": "1.14.1",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.flexit",
     "publishedAt": "2026-02-07T06:11:27.584Z",
-    "updatedAt": "2026-11-04T11:08:59.497Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 151048
   },
   {
@@ -13468,10 +13457,10 @@
     "name": "F1 Tracker Pro",
     "developerName": "Mark Keulen",
     "developerId": "698df377608b9fa107cddc5f",
-    "version": "1.3.0",
+    "version": "1.4.2",
     "sourceRepository": "",
     "publishedAt": "2026-02-12T15:38:03.200Z",
-    "updatedAt": "2026-05-27T15:24:54.529Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 152566
   },
   {
@@ -13973,11 +13962,11 @@
     "appId": "com.eltako",
     "name": "Eltako",
     "developerName": "ELTAKO GmbH",
-    "developerId": "69a6dc81af832c1e4629a4ea",
+    "developerId": "6af2ef26f2a6dec528f5eff9",
     "version": "1.0.0",
     "sourceRepository": "https://github.com/Doekse/eltako-homey",
     "publishedAt": "2026-03-03T13:05:05.732Z",
-    "updatedAt": "2026-03-04T16:43:21.094Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 151999
   },
   {
@@ -15151,10 +15140,10 @@
     "name": "myAudi",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "1.1.4",
+    "version": "1.1.5",
     "sourceRepository": "https://github.com/andiwirz/com.audi.etron",
     "publishedAt": "2026-04-24T21:44:36.116Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-11-10T11:23:16.739Z",
     "communityTopicId": 155543
   },
   {
@@ -15987,10 +15976,10 @@
     "name": "Enphase Controller",
     "developerName": "Bram Tops",
     "developerId": "6a16131b4d288cb6b98499f1",
-    "version": "2.0.4",
+    "version": "2.0.8",
     "sourceRepository": "https://github.com/BramTops/Homey-EnphaseController",
     "publishedAt": "2026-05-26T21:39:39.974Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 155720
   },
   {
@@ -16086,10 +16075,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.755",
+    "version": "1.0.756",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-11-07T10:25:34.159Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 156098
   },
   {
@@ -16295,10 +16284,10 @@
     "name": "Waterguard",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "1.1.0",
+    "version": "1.1.1",
     "sourceRepository": "https://github.com/olemarkus/waterguard",
     "publishedAt": "2026-06-21T17:54:39.454Z",
-    "updatedAt": "2026-08-14T18:47:17.411Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 156510
   },
   {
@@ -17395,10 +17384,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-08-13T00:42:22.394Z",
-    "updatedAt": "2026-11-08T10:33:44.507Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 158618
   },
   {
@@ -18143,10 +18132,10 @@
     "name": "Porsche Connect",
     "developerName": "error404.nl",
     "developerId": "6aa64db23bf2cee70a44dbf7",
-    "version": "1.4.3",
+    "version": "1.4.5",
     "sourceRepository": "",
     "publishedAt": "2026-09-14T22:49:51.407Z",
-    "updatedAt": "2026-10-28T09:49:50.164Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": null
   },
   {
@@ -18198,10 +18187,10 @@
     "name": "Energy Price Forecast",
     "developerName": "Hendrik Soppa",
     "developerId": "6a94ac0730ac038fba711ce4",
-    "version": "1.2.1",
+    "version": "1.3.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T15:41:11.360Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": null
   },
   {
@@ -19199,10 +19188,10 @@
     "name": "Universal RF Remote",
     "developerName": "Bo Sundgaard",
     "developerId": "6ac80645bdc8421d78c4d6e1",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "sourceRepository": "https://github.com/bosund/universal-rf-remote",
     "publishedAt": "2026-10-12T20:31:30.596Z",
-    "updatedAt": "2026-10-28T09:49:50.164Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 160781
   },
   {
@@ -19276,10 +19265,10 @@
     "name": "PV Forecast",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "2.8.3",
+    "version": "2.8.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-14T16:05:13.081Z",
-    "updatedAt": "2026-11-07T10:25:34.160Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 160366
   },
   {
@@ -19397,10 +19386,10 @@
     "name": "HeatSmart",
     "developerName": "Thomas Ekdahl",
     "developerId": "6a22e9d956adb8c38bb8327a",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-16T08:18:14.025Z",
-    "updatedAt": "2026-11-09T11:46:59.439Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": null
   },
   {
@@ -19430,10 +19419,10 @@
     "name": "Laundry Tracker",
     "developerName": "Simon Salvin",
     "developerId": "6acd2e5bbdc8421d78c61bff",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-16T15:41:38.691Z",
-    "updatedAt": "2026-11-04T11:08:59.497Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 160830
   },
   {
@@ -19903,10 +19892,10 @@
     "name": "Weekdot",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "sourceRepository": "",
     "publishedAt": "2026-11-03T15:33:59.627Z",
-    "updatedAt": "2026-11-06T11:06:26.550Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 161566
   },
   {
@@ -20002,10 +19991,10 @@
     "name": "DREO (Community)",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.2.3",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-11-06T11:05:53.836Z",
-    "updatedAt": "2026-11-07T10:25:34.160Z",
+    "updatedAt": "2026-11-10T11:23:16.740Z",
     "communityTopicId": 161466
   },
   {
@@ -20128,5 +20117,16 @@
     "publishedAt": "2026-11-09T23:53:46.333Z",
     "updatedAt": "2026-11-09T23:53:46.333Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.ozonos.aircleaner",
+    "name": "Ozonos",
+    "developerName": "Danee de Kruyff",
+    "developerId": "5dcaba6f1c90c866f9364c85",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-10T11:22:38.019Z",
+    "updatedAt": "2026-11-10T11:22:38.019Z",
+    "communityTopicId": 159217
   }
 ]

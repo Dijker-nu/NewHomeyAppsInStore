@@ -852,6 +852,12 @@
     "forumUsername": "ThaYoung1"
   },
   {
+    "developerId": "6af2ea020f89e422d5f22a26",
+    "developerName": "Daan de Vries",
+    "forumUserID": 41435,
+    "forumUsername": "dsdevries"
+  },
+  {
     "developerId": "67c1091260b8d5d3bad1631b",
     "developerName": "Daan Leenders",
     "forumUserID": null,
@@ -1228,6 +1234,12 @@
     "developerName": "ELTAKO GmbH",
     "forumUserID": 33362,
     "forumUsername": "Doekse"
+  },
+  {
+    "developerId": "6af2ef26f2a6dec528f5eff9",
+    "developerName": "ELTAKO GmbH",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
   },
   {
     "developerId": "5dd998a831f29db624c0563a",
@@ -2058,6 +2070,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6aecbd6e47152fc80b7e401a",
+    "developerName": "Jan Harm Veenstra",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6077e4d650eb3175ac9d1cf8",
     "developerName": "Jan-Ivar Bøyum",
     "forumUserID": null,
@@ -2082,6 +2100,12 @@
     "forumUsername": "Jojobaoil"
   },
   {
+    "developerId": "6aea3b7247152fc80b7cb495",
+    "developerName": "JanosKevin Bakacs",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6a8b0a6ec6a80eeabce83a86",
     "developerName": "Jari Minnen",
     "forumUserID": null,
@@ -2092,6 +2116,12 @@
     "developerName": "Jasco Products LLC",
     "forumUserID": 17660,
     "forumUsername": "drenso"
+  },
+  {
+    "developerId": "6aecf65372573f07ae70a60c",
+    "developerName": "JdeB Web Solutions",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "5ee12e305f2aefd511273940",
@@ -3018,6 +3048,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6910d5e0ae1d27bf09a08cf9",
+    "developerName": "Mario Kempter",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "652be2603d167bf020f792a5",
     "developerName": "Marius Sveipe",
     "forumUserID": null,
@@ -3206,6 +3242,12 @@
   {
     "developerId": "6854172d20832e6198b4bb92",
     "developerName": "Mattias Jagefeldt",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6aca5f25bdc8421d78c578a6",
+    "developerName": "Maurice Vd waarsenburg",
     "forumUserID": null,
     "forumUsername": null
   },
@@ -3553,6 +3595,12 @@
   },
   {
     "developerId": "639b1ed72c8e04f69dddc2f8",
+    "developerName": "Niko Europe",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
+    "developerId": "6af2da5d32a8ba92dcc533ca",
     "developerName": "Niko Europe",
     "forumUserID": 17660,
     "forumUsername": "drenso"
@@ -5588,6 +5636,12 @@
   {
     "developerId": "699f0612af832c1e46277c29",
     "developerName": "Zendo Smart Home and Office",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6af23d28f2a6dec528d6f073",
+    "developerName": "Zendure community development",
     "forumUserID": null,
     "forumUsername": null
   },

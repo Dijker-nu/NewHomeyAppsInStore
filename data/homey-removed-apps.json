@@ -8,7 +8,7 @@
     "sourceRepository": "",
     "publishedAt": "2022-05-02T20:20:45.160Z",
     "communityTopicId": 63043,
-    "lastCheckedAt": "2026-11-09T11:46:59.548Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.915Z",
     "removedAt": "2026-09-22T21:00:34.629Z",
     "liveVersion": "0.1.1",
     "private": true,
@@ -21,7 +21,7 @@
     "developerId": "68be80a592a3a87a4b59b1ee",
     "version": "1.1.10",
     "removedAt": "2026-09-22T20:47:36.013Z",
-    "lastCheckedAt": "2026-11-09T11:47:00.232Z",
+    "lastCheckedAt": "2026-11-10T11:23:19.897Z",
     "private": true,
     "type": "private",
     "communityTopicId": 145469
@@ -36,7 +36,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.750Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.942Z",
     "type": "private",
     "private": true
   },
@@ -50,7 +50,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T17:27:58.330Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.546Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.928Z",
     "type": "test",
     "private": false
   },
@@ -64,7 +64,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-09-29T19:36:16.541Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.543Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.909Z",
     "type": "test",
     "private": false
   },
@@ -78,7 +78,7 @@
     "communityTopicId": null,
     "publishedAt": "2026-04-16T21:01:06.030Z",
     "removedAt": "2026-10-01T10:16:38.796Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.555Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.904Z",
     "type": "removed",
     "private": null
   },
@@ -92,7 +92,7 @@
     "communityTopicId": null,
     "publishedAt": "2026-09-14T09:03:49.293Z",
     "removedAt": "2026-10-01T10:16:38.802Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.544Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.906Z",
     "type": "private",
     "private": true
   },
@@ -106,7 +106,7 @@
     "communityTopicId": 16518,
     "publishedAt": "2019-11-12T14:07:39.113Z",
     "removedAt": "2026-10-05T10:37:47.248Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.541Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.917Z",
     "type": "private",
     "private": true
   },
@@ -120,7 +120,7 @@
     "communityTopicId": null,
     "publishedAt": "2021-06-18T22:31:48.814Z",
     "removedAt": "2026-10-14T08:50:55.739Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.638Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.986Z",
     "type": "removed",
     "private": null
   },
@@ -134,7 +134,7 @@
     "communityTopicId": null,
     "publishedAt": "2020-07-29T19:38:48.631Z",
     "removedAt": "2026-10-27T09:09:01.757Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.637Z",
+    "lastCheckedAt": "2026-11-10T11:23:17.033Z",
     "type": "removed",
     "private": null
   },
@@ -148,7 +148,7 @@
     "communityTopicId": 161392,
     "publishedAt": "2026-10-28T17:32:12.585Z",
     "removedAt": "2026-10-29T10:09:56.095Z",
-    "lastCheckedAt": "2026-11-09T11:47:00.115Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.988Z",
     "type": "removed",
     "private": null
   },
@@ -162,7 +162,7 @@
     "communityTopicId": null,
     "publishedAt": "2019-11-12T13:59:17.506Z",
     "removedAt": "2026-11-01T10:37:46.524Z",
-    "lastCheckedAt": "2026-11-09T11:47:00.116Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.996Z",
     "type": "removed",
     "private": null
   },
@@ -176,7 +176,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-11-02T21:43:28.034Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.657Z",
+    "lastCheckedAt": "2026-11-10T11:23:17.003Z",
     "type": "private",
     "private": true
   },
@@ -190,7 +190,7 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-11-02T21:43:28.034Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.665Z",
+    "lastCheckedAt": "2026-11-10T11:23:17.012Z",
     "type": "test",
     "private": false
   },
@@ -204,7 +204,7 @@
     "communityTopicId": 160675,
     "publishedAt": "",
     "removedAt": "2026-11-02T21:43:28.034Z",
-    "lastCheckedAt": "2026-11-09T11:46:59.747Z",
+    "lastCheckedAt": "2026-11-10T11:23:17.049Z",
     "type": "test",
     "private": false
   },
@@ -218,7 +218,7 @@
     "communityTopicId": 161262,
     "publishedAt": "",
     "removedAt": "2026-11-02T21:43:28.034Z",
-    "lastCheckedAt": "2026-11-09T11:47:00.127Z",
+    "lastCheckedAt": "2026-11-10T11:23:17.077Z",
     "type": "test",
     "private": false
   },
@@ -232,8 +232,22 @@
     "communityTopicId": null,
     "publishedAt": "",
     "removedAt": "2026-11-02T21:43:28.034Z",
-    "lastCheckedAt": "2026-11-09T11:47:00.172Z",
+    "lastCheckedAt": "2026-11-10T11:23:17.081Z",
     "type": "test",
     "private": false
+  },
+  {
+    "appId": "ady.smartthings",
+    "name": "SmartThings Community",
+    "developerName": "Adrian Rockall",
+    "developerId": "6582174b559f0bfcc1d7bce5",
+    "version": "2.0.40",
+    "sourceRepository": "https://github.com/AdyRock/com.smartthings",
+    "communityTopicId": 61418,
+    "publishedAt": "2024-05-15T10:00:29.067Z",
+    "removedAt": "2026-11-10T11:23:16.821Z",
+    "lastCheckedAt": "2026-11-10T11:23:16.821Z",
+    "type": "removed",
+    "private": null
   }
 ]
