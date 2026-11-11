@@ -1,41 +1,5 @@
 [
   {
-    "appId": "com.rapinology.htrends",
-    "name": "Sensor Trends",
-    "developerName": "Henri Dominique Rapin",
-    "developerId": "6a96972b30ac038fba71a2f2",
-    "version": "1.0.4",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-12T11:02:41.465Z",
-    "updatedAt": "2026-10-12T11:02:41.465Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-12T11:02:41.465Z"
-  },
-  {
-    "appId": "info.schellekens.amperae",
-    "name": "Opel Ampera-e (WiCAN)",
-    "developerName": "Ruud Schellekens",
-    "developerId": "6ab63a4230dc90a8d6e48c88",
-    "version": "1.0.3",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-12T11:02:42.842Z",
-    "updatedAt": "2026-10-12T11:02:42.842Z",
-    "communityTopicId": 160353,
-    "discoveredAt": "2026-10-12T11:02:41.465Z"
-  },
-  {
-    "appId": "com.glumpf.warp",
-    "name": "WARP Charger",
-    "developerName": "Lars Andresen",
-    "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.0.20",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-12T11:02:42.842Z",
-    "updatedAt": "2026-10-12T11:02:42.842Z",
-    "communityTopicId": 160717,
-    "discoveredAt": "2026-10-12T11:02:41.465Z"
-  },
-  {
     "appId": "dk.sundgaard.universalrfremote",
     "name": "Universal RF Remote",
     "developerName": "Bo Sundgaard",
@@ -1078,5 +1042,29 @@
     "updatedAt": "2026-11-10T11:22:38.019Z",
     "communityTopicId": 159217,
     "discoveredAt": "2026-11-10T11:22:38.019Z"
+  },
+  {
+    "appId": "app.tiledash",
+    "name": "Tiledash",
+    "developerName": "Wim Haanstra",
+    "developerId": "65948967e707314c73d9c155",
+    "version": "1.0.3",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-11T18:57:11.815Z",
+    "updatedAt": "2026-11-11T18:57:11.815Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-11T18:57:11.815Z"
+  },
+  {
+    "appId": "com.uteamup",
+    "name": "UteamUP",
+    "developerName": "Gísli Guðmundsson",
+    "developerId": "6adb5a5e47d7399db6cc2965",
+    "version": "0.1.1",
+    "sourceRepository": "https://github.com/UteamUP/homey-uteamup",
+    "publishedAt": "2026-11-11T18:57:12.715Z",
+    "updatedAt": "2026-11-11T18:57:12.715Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-11T18:57:11.815Z"
   }
 ]

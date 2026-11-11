@@ -1,1 +1,1555 @@
-[]
+[
+  {
+    "id": "app.tiledash",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Tiledash",
+        "nl": "Tiledash",
+        "de": "Tiledash",
+        "es": "Tiledash",
+        "fr": "Tiledash"
+      },
+      "version": "1.0.3",
+      "readme": {
+        "en": "Tiledash puts your home on dashboards for your phone, a tablet on the wall or an e-ink screen. With this app, a tap on a tile starts a Flow, and your Flows can change that tile in return. They can switch it on or off, show a text, a number, a colour or an icon, or hide it until it matters. Think of a movie night button that dims the lights and stays lit while the film runs, or an alarm tile that turns red while the house is armed.\nThe app itself is free. It works with a Tiledash Pro account, a separate paid service from Tiledash.\n",
+        "de": "Tiledash bringt Ihr Zuhause auf Dashboards für Ihr Telefon, ein Tablet an der Wand oder einen E-Ink-Bildschirm. Mit dieser App startet ein Tippen auf eine Kachel einen Flow, und Ihre Flows können diese Kachel im Gegenzug ändern. Sie schalten sie ein oder aus, zeigen einen Text, eine Zahl, eine Farbe oder ein Symbol, oder verbergen sie, bis sie wichtig wird. Denken Sie an eine Filmabend-Taste, die das Licht dimmt und leuchtet, solange der Film läuft, oder an eine Alarm-Kachel, die rot wird, solange das Haus scharf ist.\nDie App selbst ist kostenlos. Sie funktioniert mit einem Tiledash-Pro-Konto, einem separaten kostenpflichtigen Dienst von Tiledash.\n",
+        "es": "Tiledash lleva tu casa a dashboards para tu móvil, una tablet en la pared o una pantalla de tinta electrónica. Con esta app, tocar un mosaico inicia un Flow, y tus Flows pueden cambiar ese mosaico a su vez. Pueden encenderlo o apagarlo, mostrar un texto, un número, un color o un icono, u ocultarlo hasta que importe. Piensa en un botón de noche de cine que atenúa las luces y sigue encendido mientras dura la película, o en un mosaico de alarma que se pone rojo mientras la casa está armada.\nLa app en sí es gratuita. Funciona con una cuenta Tiledash Pro, un servicio de pago aparte de Tiledash.\n",
+        "fr": "Tiledash met votre maison sur des tableaux de bord pour votre téléphone, une tablette au mur ou un écran à encre électronique. Avec cette app, un appui sur une tuile lance un Flow, et vos Flows peuvent modifier cette tuile en retour. Ils l’allument ou l’éteignent, affichent un texte, un nombre, une couleur ou une icône, ou la masquent jusqu’à ce qu’elle compte. Pensez à un bouton soirée cinéma qui tamise les lumières et reste allumé pendant le film, ou à une tuile d’alarme qui passe au rouge tant que la maison est sous alarme.\nL’app elle-même est gratuite. Elle fonctionne avec un compte Tiledash Pro, un service payant distinct proposé par Tiledash.\n",
+        "nl": "Tiledash zet je huis op dashboards voor je telefoon, een tablet aan de muur of een e-inkscherm. Met deze app start een tik op een tegel een Flow, en je Flows kunnen die tegel op hun beurt veranderen. Ze zetten hem aan of uit, tonen een tekst, een getal, een kleur of een icoon, of verbergen hem tot hij ertoe doet. Denk aan een filmavondknop die de lampen dimt en blijft branden zolang de film loopt, of een alarmtegel die rood wordt zolang het huis beveiligd is.\nDe app zelf is gratis. Hij werkt met een Tiledash Pro-account, een aparte betaalde dienst van Tiledash.\n"
+      },
+      "description": {
+        "en": "Your dashboards start flows, and flows change your tiles.",
+        "nl": "Je dashboards starten flows, en flows veranderen je tegels.",
+        "de": "Ihre Dashboards starten Flows, und Flows ändern Ihre Kacheln.",
+        "es": "Tus dashboards inician Flows y los Flows cambian tus mosaicos.",
+        "fr": "Vos tableaux de bord lancent des Flows, et les Flows modifient vos tuiles."
+      },
+      "category": "tools",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/app.tiledash/4/937913b7-628c-4316-a92a-186245a2bf37/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/app.tiledash/4/937913b7-628c-4316-a92a-186245a2bf37/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/app.tiledash/4/937913b7-628c-4316-a92a-186245a2bf37/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": [
+          {
+            "id": "tile_pressed",
+            "title": {
+              "en": "A tile is pressed",
+              "nl": "Een tegel wordt ingedrukt",
+              "de": "Eine Kachel wird gedrückt",
+              "es": "Se pulsa un mosaico",
+              "fr": "On appuie sur une tuile"
+            },
+            "titleFormatted": {
+              "en": "[[tile]] is pressed",
+              "nl": "[[tile]] wordt ingedrukt",
+              "de": "[[tile]] wird gedrückt",
+              "es": "Se pulsa [[tile]]",
+              "fr": "On appuie sur [[tile]]"
+            },
+            "hint": {
+              "en": "Runs when someone presses this tile on a Tiledash dashboard. The gesture tag says how: tap, hold or double.",
+              "nl": "Start als iemand deze tegel op een Tiledash-dashboard indrukt. De tag Gebaar zegt hoe: tap, hold of double.",
+              "de": "Startet, wenn jemand diese Kachel auf einem Tiledash-Dashboard drückt. Der Tag Geste sagt, wie: tap, hold oder double.",
+              "es": "Se ejecuta cuando alguien pulsa este mosaico en un dashboard de Tiledash. La etiqueta Gesto dice cómo: tap, hold o double.",
+              "fr": "Se déclenche quand quelqu’un appuie sur cette tuile dans un tableau de bord Tiledash. Le tag Geste dit comment : tap, hold ou double."
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "gesture",
+                "type": "string",
+                "title": {
+                  "en": "Gesture",
+                  "nl": "Gebaar",
+                  "de": "Geste",
+                  "es": "Gesto",
+                  "fr": "Geste"
+                },
+                "example": {
+                  "en": "tap"
+                }
+              },
+              {
+                "name": "dashboard",
+                "type": "string",
+                "title": {
+                  "en": "Dashboard",
+                  "nl": "Dashboard",
+                  "de": "Dashboard",
+                  "es": "Dashboard",
+                  "fr": "Tableau de bord"
+                },
+                "example": {
+                  "en": "Home"
+                }
+              },
+              {
+                "name": "screen",
+                "type": "string",
+                "title": {
+                  "en": "Screen",
+                  "nl": "Scherm",
+                  "de": "Bildschirm",
+                  "es": "Pantalla",
+                  "fr": "Écran"
+                },
+                "example": {
+                  "en": "Hallway panel",
+                  "nl": "Gangpaneel",
+                  "de": "Flurpanel",
+                  "es": "Panel del pasillo",
+                  "fr": "Panneau du couloir"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "tile_is_on",
+            "title": {
+              "en": "A tile is !{{on|off}}",
+              "nl": "Een tegel staat !{{aan|uit}}",
+              "de": "Eine Kachel ist !{{ein|aus}}",
+              "es": "Un mosaico está !{{encendido|apagado}}",
+              "fr": "Une tuile est !{{allumée|éteinte}}"
+            },
+            "titleFormatted": {
+              "en": "[[tile]] is !{{on|off}}",
+              "nl": "[[tile]] staat !{{aan|uit}}",
+              "de": "[[tile]] ist !{{ein|aus}}",
+              "es": "[[tile]] está !{{encendido|apagado}}",
+              "fr": "[[tile]] est !{{allumée|éteinte}}"
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_tile_color",
+            "title": {
+              "en": "Give a tile a colour",
+              "nl": "Geef een tegel een kleur",
+              "de": "Einer Kachel eine Farbe geben",
+              "es": "Dar un color a un mosaico",
+              "fr": "Donner une couleur à une tuile"
+            },
+            "titleFormatted": {
+              "en": "Make [[tile]] [[color]]",
+              "nl": "Maak [[tile]] [[color]]",
+              "de": "[[tile]] die Farbe [[color]] geben",
+              "es": "Poner [[tile]] de color [[color]]",
+              "fr": "Mettre [[tile]] en [[color]]"
+            },
+            "hint": {
+              "en": "The colours of your Tiledash theme: green is good, amber a warning, red danger.",
+              "nl": "De kleuren van je Tiledash-thema: groen is goed, oranje een waarschuwing, rood gevaar.",
+              "de": "Die Farben Ihres Tiledash-Themes: Grün ist gut, Gelb eine Warnung, Rot Gefahr.",
+              "es": "Los colores de tu tema de Tiledash: verde es bueno, ámbar un aviso y rojo peligro.",
+              "fr": "Les couleurs de votre thème Tiledash : vert pour bon, ambre pour un avertissement, rouge pour danger."
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "color",
+                "title": {
+                  "en": "Colour",
+                  "nl": "Kleur",
+                  "de": "Farbe",
+                  "es": "Color",
+                  "fr": "Couleur"
+                },
+                "values": [
+                  {
+                    "id": "none",
+                    "label": {
+                      "en": "its own colour",
+                      "nl": "zijn eigen kleur",
+                      "de": "ihre eigene Farbe",
+                      "es": "su propio color",
+                      "fr": "sa propre couleur"
+                    }
+                  },
+                  {
+                    "id": "accent",
+                    "label": {
+                      "en": "the accent colour",
+                      "nl": "de accentkleur",
+                      "de": "die Akzentfarbe",
+                      "es": "el color de acento",
+                      "fr": "la couleur d’accent"
+                    }
+                  },
+                  {
+                    "id": "lit",
+                    "label": {
+                      "en": "warm",
+                      "nl": "warm",
+                      "de": "warm",
+                      "es": "cálido",
+                      "fr": "chaud"
+                    }
+                  },
+                  {
+                    "id": "cool",
+                    "label": {
+                      "en": "cool",
+                      "nl": "koel",
+                      "de": "kühl",
+                      "es": "frío",
+                      "fr": "froid"
+                    }
+                  },
+                  {
+                    "id": "good",
+                    "label": {
+                      "en": "green",
+                      "nl": "groen",
+                      "de": "grün",
+                      "es": "verde",
+                      "fr": "vert"
+                    }
+                  },
+                  {
+                    "id": "warn",
+                    "label": {
+                      "en": "amber",
+                      "nl": "oranje",
+                      "de": "gelb",
+                      "es": "ámbar",
+                      "fr": "ambre"
+                    }
+                  },
+                  {
+                    "id": "danger",
+                    "label": {
+                      "en": "red",
+                      "nl": "rood",
+                      "de": "rot",
+                      "es": "rojo",
+                      "fr": "rouge"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_tile_icon",
+            "title": {
+              "en": "Give a tile an icon",
+              "nl": "Geef een tegel een icoon",
+              "de": "Einer Kachel ein Symbol geben",
+              "es": "Dar un icono a un mosaico",
+              "fr": "Donner une icône à une tuile"
+            },
+            "titleFormatted": {
+              "en": "Give [[tile]] the icon [[icon]]",
+              "nl": "Geef [[tile]] het icoon [[icon]]",
+              "de": "[[tile]] das Symbol [[icon]] geben",
+              "es": "Dar a [[tile]] el icono [[icon]]",
+              "fr": "Donner à [[tile]] l’icône [[icon]]"
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              },
+              {
+                "type": "autocomplete",
+                "name": "icon",
+                "title": {
+                  "en": "Icon",
+                  "nl": "Icoon",
+                  "de": "Symbol",
+                  "es": "Icono",
+                  "fr": "Icône"
+                },
+                "placeholder": {
+                  "en": "Shield",
+                  "nl": "Schild",
+                  "de": "Schild",
+                  "es": "Escudo",
+                  "fr": "Bouclier"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_tile_number",
+            "title": {
+              "en": "Give a tile a number",
+              "nl": "Geef een tegel een getal",
+              "de": "Einer Kachel eine Zahl geben",
+              "es": "Dar un número a un mosaico",
+              "fr": "Donner un nombre à une tuile"
+            },
+            "titleFormatted": {
+              "en": "Set [[tile]]'s number to [[number]]",
+              "nl": "Zet het getal van [[tile]] op [[number]]",
+              "de": "Zahl von [[tile]] auf [[number]] setzen",
+              "es": "Poner el número de [[tile]] en [[number]]",
+              "fr": "Mettre le nombre de [[tile]] à [[number]]"
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              },
+              {
+                "type": "number",
+                "name": "number",
+                "title": {
+                  "en": "Number",
+                  "nl": "Getal",
+                  "de": "Zahl",
+                  "es": "Número",
+                  "fr": "Nombre"
+                },
+                "placeholder": {
+                  "en": "3"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_tile_on",
+            "title": {
+              "en": "Turn a tile on or off",
+              "nl": "Zet een tegel aan of uit",
+              "de": "Eine Kachel ein- oder ausschalten",
+              "es": "Encender o apagar un mosaico",
+              "fr": "Allumer ou éteindre une tuile"
+            },
+            "titleFormatted": {
+              "en": "Turn [[tile]] [[state]]",
+              "nl": "Zet [[tile]] [[state]]",
+              "de": "[[tile]] schalten: [[state]]",
+              "es": "[[state]] [[tile]]",
+              "fr": "[[state]] [[tile]]"
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "title": {
+                  "en": "State",
+                  "nl": "Stand",
+                  "de": "Zustand",
+                  "es": "Estado",
+                  "fr": "État"
+                },
+                "values": [
+                  {
+                    "id": "on",
+                    "label": {
+                      "en": "on",
+                      "nl": "aan",
+                      "de": "ein",
+                      "es": "Encender",
+                      "fr": "Allumer"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "en": "off",
+                      "nl": "uit",
+                      "de": "aus",
+                      "es": "Apagar",
+                      "fr": "Éteindre"
+                    }
+                  },
+                  {
+                    "id": "toggle",
+                    "label": {
+                      "en": "the other way",
+                      "nl": "andersom",
+                      "de": "umgekehrt",
+                      "es": "Invertir",
+                      "fr": "Inverser"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_tile_text",
+            "title": {
+              "en": "Give a tile a text",
+              "nl": "Geef een tegel een tekst",
+              "de": "Einer Kachel einen Text geben",
+              "es": "Dar un texto a un mosaico",
+              "fr": "Donner un texte à une tuile"
+            },
+            "titleFormatted": {
+              "en": "Set [[tile]]'s text to [[text]]",
+              "nl": "Zet de tekst van [[tile]] op [[text]]",
+              "de": "Text von [[tile]] auf [[text]] setzen",
+              "es": "Poner el texto de [[tile]] en [[text]]",
+              "fr": "Mettre le texte de [[tile]] à [[text]]"
+            },
+            "hint": {
+              "en": "Shown under the tile's name. Empty clears it.",
+              "nl": "Staat onder de naam van de tegel. Leeg haalt hem weg.",
+              "de": "Steht unter dem Namen der Kachel. Leer entfernt ihn.",
+              "es": "Se muestra bajo el nombre del mosaico. Vacío lo borra.",
+              "fr": "Affiché sous le nom de la tuile. Vide l’efface."
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              },
+              {
+                "type": "text",
+                "name": "text",
+                "title": {
+                  "en": "Text",
+                  "nl": "Tekst",
+                  "de": "Text",
+                  "es": "Texto",
+                  "fr": "Texte"
+                },
+                "placeholder": {
+                  "en": "Armed for the night",
+                  "nl": "Ingeschakeld voor de nacht",
+                  "de": "Für die Nacht scharf",
+                  "es": "Armada para la noche",
+                  "fr": "Armée pour la nuit"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_tile_visible",
+            "title": {
+              "en": "Show or hide a tile",
+              "nl": "Toon of verberg een tegel",
+              "de": "Eine Kachel zeigen oder verbergen",
+              "es": "Mostrar u ocultar un mosaico",
+              "fr": "Afficher ou masquer une tuile"
+            },
+            "titleFormatted": {
+              "en": "Make [[tile]] [[visible]]",
+              "nl": "Maak [[tile]] [[visible]]",
+              "de": "[[tile]] [[visible]] machen",
+              "es": "Dejar [[tile]] [[visible]]",
+              "fr": "Rendre [[tile]] [[visible]]"
+            },
+            "args": [
+              {
+                "type": "autocomplete",
+                "name": "tile",
+                "title": {
+                  "en": "Tile",
+                  "nl": "Tegel",
+                  "de": "Kachel",
+                  "es": "Mosaico",
+                  "fr": "Tuile"
+                },
+                "placeholder": {
+                  "en": "Kitchen button",
+                  "nl": "Keukenknop",
+                  "de": "Küchenknopf",
+                  "es": "Botón de la cocina",
+                  "fr": "Bouton de la cuisine"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "visible",
+                "title": {
+                  "en": "Show or hide",
+                  "nl": "Tonen of verbergen",
+                  "de": "Zeigen oder verbergen",
+                  "es": "Mostrar u ocultar",
+                  "fr": "Afficher ou masquer"
+                },
+                "values": [
+                  {
+                    "id": "show",
+                    "label": {
+                      "en": "visible",
+                      "nl": "zichtbaar",
+                      "de": "sichtbar",
+                      "es": "visible",
+                      "fr": "visible"
+                    }
+                  },
+                  {
+                    "id": "hide",
+                    "label": {
+                      "en": "hidden",
+                      "nl": "verborgen",
+                      "de": "unsichtbar",
+                      "es": "oculto",
+                      "fr": "invisible"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-11T15:31:41.177Z",
+      "bugs": "https://github.com/tiledash/tiledash/issues",
+      "homepage": "https://tiledash.app",
+      "support": "https://tiledash.app/docs/guide/homey-app",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "New icon, pictures and App Store text",
+        "nl": "Nieuw icoon, nieuwe afbeeldingen en App Store-tekst",
+        "de": "Neues Symbol, neue Bilder und App-Store-Text",
+        "es": "Nuevo icono, imágenes y texto para la App Store",
+        "fr": "Nouvelle icône, nouvelles images et texte pour l’App Store"
+      },
+      "compatibility": ">=12.0.0",
+      "tags": {
+        "en": [
+          "dashboard",
+          "tiles",
+          "wall panel",
+          "buttons",
+          "flows",
+          "tablet"
+        ],
+        "nl": [
+          "dashboard",
+          "tegels",
+          "wandpaneel",
+          "knoppen",
+          "flows",
+          "tablet"
+        ],
+        "de": [
+          "Dashboard",
+          "Kacheln",
+          "Wandpanel",
+          "Tasten",
+          "Flows",
+          "Tablet"
+        ],
+        "es": [
+          "dashboard",
+          "mosaicos",
+          "panel de pared",
+          "botones",
+          "Flows",
+          "tablet"
+        ],
+        "fr": [
+          "tableau de bord",
+          "tuiles",
+          "panneau mural",
+          "boutons",
+          "Flows",
+          "tablette"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.3",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "65948967e707314c73d9c155",
+      "type": "user",
+      "userId": "658e65a0a810b08e3bf57f13",
+      "name": "Wim Haanstra",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.uteamup",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "UteamUP"
+      },
+      "version": "0.1.1",
+      "readme": {
+        "en": "Bring your UteamUP maintenance work into the home or building you already automate with Homey. See open, in-progress, on-hold and overdue work orders, stock alerts and IoT alerts as live values, and let Flows react when work becomes overdue or an alert starts.\n\nFlows can also report a problem when a leak or smoke sensor goes off, create and complete work orders, change their status, set an asset's state, run preventive maintenance and record meter readings. You connect with a UteamUP API key from a company on the Premium or Enterprise plan; the key's role decides what Homey may see and do.\n"
+      },
+      "description": {
+        "en": "Keep maintenance work in step with your home and building"
+      },
+      "category": "tools",
+      "brandColor": "#206BB5",
+      "icon": "https://apps.homeycdn.net/app/com.uteamup/2/f54d2f84-1b39-4fe9-aabe-7815353d22be/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.uteamup/2/f54d2f84-1b39-4fe9-aabe-7815353d22be/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.uteamup/2/f54d2f84-1b39-4fe9-aabe-7815353d22be/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "company",
+          "name": {
+            "en": "UteamUP company"
+          },
+          "class": "service",
+          "capabilities": [
+            "uteamup_open_workorders",
+            "uteamup_in_progress_workorders",
+            "uteamup_on_hold_workorders",
+            "uteamup_overdue_workorders",
+            "uteamup_stock_alerts",
+            "uteamup_critical_stock",
+            "uteamup_iot_alerts",
+            "uteamup_iot_alert_active"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.uteamup/2/f54d2f84-1b39-4fe9-aabe-7815353d22be/drivers/company/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.uteamup/2/f54d2f84-1b39-4fe9-aabe-7815353d22be/drivers/company/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.uteamup/2/f54d2f84-1b39-4fe9-aabe-7815353d22be/drivers/company/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "event_received",
+            "title": {
+              "en": "An event arrived from UteamUP"
+            },
+            "titleFormatted": {
+              "en": "Event [[event]] arrived from UteamUP"
+            },
+            "hint": {
+              "en": "Needs live events. Leave the event empty to react to every event, or enter one such as workorder.created or iot.alert.created."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "text",
+                "name": "event",
+                "required": false,
+                "title": {
+                  "en": "Event"
+                },
+                "placeholder": {
+                  "en": "workorder.created"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "event",
+                "type": "string",
+                "title": {
+                  "en": "Event"
+                },
+                "example": "iot.alert.created"
+              },
+              {
+                "name": "title",
+                "type": "string",
+                "title": {
+                  "en": "Title"
+                },
+                "example": "Boiler pressure high"
+              },
+              {
+                "name": "delivery_id",
+                "type": "string",
+                "title": {
+                  "en": "Delivery"
+                },
+                "example": "d6c1…"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "overdue_changed",
+            "title": {
+              "en": "The number of overdue work orders changed"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "overdue",
+                "type": "number",
+                "title": {
+                  "en": "Overdue"
+                },
+                "example": 2
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "iot_alert_started",
+            "title": {
+              "en": "An IoT alert became active"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "count",
+                "type": "number",
+                "title": {
+                  "en": "Alerts"
+                },
+                "example": 1
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "critical_stock_started",
+            "title": {
+              "en": "Stock became critical"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "overdue_above",
+            "title": {
+              "en": "Overdue work orders !{{are|are not}} above a number"
+            },
+            "titleFormatted": {
+              "en": "Overdue work orders !{{are|are not}} above [[count]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "number",
+                "name": "count",
+                "min": 0,
+                "step": 1,
+                "title": {
+                  "en": "Number"
+                },
+                "placeholder": {
+                  "en": "0"
+                }
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "iot_alert_active",
+            "title": {
+              "en": "An IoT alert !{{is|is not}} active"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "create_work_order",
+            "title": {
+              "en": "Create a work order"
+            },
+            "titleFormatted": {
+              "en": "Create work order [[name]] with priority [[priority]], due in [[due_in_days]] days, description [[description]], asset [[asset_guid]], assignee [[assignee_guid]]"
+            },
+            "hint": {
+              "en": "Asset and assignee are optional UteamUP GUIDs."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "text",
+                "name": "name",
+                "title": {
+                  "en": "Name"
+                },
+                "placeholder": {
+                  "en": "Check the boiler"
+                }
+              },
+              {
+                "type": "number",
+                "name": "priority",
+                "min": 1,
+                "max": 5,
+                "step": 1,
+                "title": {
+                  "en": "Priority (1–5)"
+                },
+                "placeholder": {
+                  "en": "2"
+                }
+              },
+              {
+                "type": "number",
+                "name": "due_in_days",
+                "min": 0,
+                "max": 3650,
+                "step": 1,
+                "title": {
+                  "en": "Due in days"
+                },
+                "placeholder": {
+                  "en": "1"
+                }
+              },
+              {
+                "type": "text",
+                "name": "description",
+                "required": false,
+                "title": {
+                  "en": "Description"
+                }
+              },
+              {
+                "type": "text",
+                "name": "asset_guid",
+                "required": false,
+                "title": {
+                  "en": "Asset GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              },
+              {
+                "type": "text",
+                "name": "assignee_guid",
+                "required": false,
+                "title": {
+                  "en": "Assignee GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "work_order_guid",
+                "type": "string",
+                "title": {
+                  "en": "Work order GUID"
+                },
+                "example": "11111111-1111-4111-8111-111111111111"
+              },
+              {
+                "name": "ticket_id",
+                "type": "string",
+                "title": {
+                  "en": "Ticket"
+                },
+                "example": "WO-42"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "create_quick_report",
+            "title": {
+              "en": "Report a problem"
+            },
+            "titleFormatted": {
+              "en": "Report [[description]] with severity [[severity]] on asset [[asset_guid]], tags [[tags]]"
+            },
+            "hint": {
+              "en": "Creates a quick report in UteamUP, for example when a leak sensor goes off. Tags are comma separated."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "text",
+                "name": "description",
+                "title": {
+                  "en": "Description"
+                },
+                "placeholder": {
+                  "en": "Water detected in the boiler room"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "severity",
+                "title": {
+                  "en": "Severity"
+                },
+                "values": [
+                  {
+                    "id": "low",
+                    "title": {
+                      "en": "Low"
+                    }
+                  },
+                  {
+                    "id": "medium",
+                    "title": {
+                      "en": "Medium"
+                    }
+                  },
+                  {
+                    "id": "high",
+                    "title": {
+                      "en": "High"
+                    }
+                  },
+                  {
+                    "id": "critical",
+                    "title": {
+                      "en": "Critical"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "name": "asset_guid",
+                "required": false,
+                "title": {
+                  "en": "Asset GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              },
+              {
+                "type": "text",
+                "name": "tags",
+                "required": false,
+                "title": {
+                  "en": "Tags"
+                },
+                "placeholder": {
+                  "en": "leak, homey"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "work_order_guid",
+                "type": "string",
+                "title": {
+                  "en": "Work order GUID"
+                },
+                "example": "11111111-1111-4111-8111-111111111111"
+              },
+              {
+                "name": "ticket_id",
+                "type": "string",
+                "title": {
+                  "en": "Ticket"
+                },
+                "example": "WO-42"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "set_work_order_status",
+            "title": {
+              "en": "Set a work order status"
+            },
+            "titleFormatted": {
+              "en": "Set [[work_order]] to [[status]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "autocomplete",
+                "name": "work_order",
+                "title": {
+                  "en": "Work order"
+                },
+                "placeholder": {
+                  "en": "Pick or type a work order GUID"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "status",
+                "title": {
+                  "en": "Status"
+                },
+                "values": [
+                  {
+                    "id": "not_started",
+                    "title": {
+                      "en": "Not started"
+                    }
+                  },
+                  {
+                    "id": "pending",
+                    "title": {
+                      "en": "Pending"
+                    }
+                  },
+                  {
+                    "id": "in_progress",
+                    "title": {
+                      "en": "In progress"
+                    }
+                  },
+                  {
+                    "id": "on_hold",
+                    "title": {
+                      "en": "On hold"
+                    }
+                  },
+                  {
+                    "id": "completed",
+                    "title": {
+                      "en": "Completed"
+                    }
+                  },
+                  {
+                    "id": "cancelled",
+                    "title": {
+                      "en": "Cancelled"
+                    }
+                  }
+                ]
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "complete_work_order",
+            "title": {
+              "en": "Complete a work order"
+            },
+            "titleFormatted": {
+              "en": "Complete [[work_order]] with notes [[notes]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "autocomplete",
+                "name": "work_order",
+                "title": {
+                  "en": "Work order"
+                },
+                "placeholder": {
+                  "en": "Pick or type a work order GUID"
+                }
+              },
+              {
+                "type": "text",
+                "name": "notes",
+                "required": false,
+                "title": {
+                  "en": "Notes"
+                }
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "set_asset_state",
+            "title": {
+              "en": "Set an asset state"
+            },
+            "titleFormatted": {
+              "en": "Set asset [[asset_guid]] to [[state]] because [[reason]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "text",
+                "name": "asset_guid",
+                "required": true,
+                "title": {
+                  "en": "Asset GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "state",
+                "title": {
+                  "en": "State"
+                },
+                "values": [
+                  {
+                    "id": "online",
+                    "title": {
+                      "en": "Online"
+                    }
+                  },
+                  {
+                    "id": "offline",
+                    "title": {
+                      "en": "Offline"
+                    }
+                  },
+                  {
+                    "id": "standby",
+                    "title": {
+                      "en": "Standby"
+                    }
+                  },
+                  {
+                    "id": "under_maintenance",
+                    "title": {
+                      "en": "Under maintenance"
+                    }
+                  },
+                  {
+                    "id": "degraded",
+                    "title": {
+                      "en": "Degraded"
+                    }
+                  },
+                  {
+                    "id": "lost",
+                    "title": {
+                      "en": "Lost"
+                    }
+                  },
+                  {
+                    "id": "stolen",
+                    "title": {
+                      "en": "Stolen"
+                    }
+                  },
+                  {
+                    "id": "in_transit",
+                    "title": {
+                      "en": "In transit"
+                    }
+                  },
+                  {
+                    "id": "in_storage",
+                    "title": {
+                      "en": "In storage"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "text",
+                "name": "reason",
+                "required": false,
+                "title": {
+                  "en": "Reason"
+                }
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "run_pm_schedule",
+            "title": {
+              "en": "Run preventive maintenance now"
+            },
+            "titleFormatted": {
+              "en": "Run preventive maintenance schedule [[schedule_guid]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "text",
+                "name": "schedule_guid",
+                "required": true,
+                "title": {
+                  "en": "Schedule GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "work_order_guid",
+                "type": "string",
+                "title": {
+                  "en": "Work order GUID"
+                },
+                "example": "11111111-1111-4111-8111-111111111111"
+              },
+              {
+                "name": "ticket_id",
+                "type": "string",
+                "title": {
+                  "en": "Ticket"
+                },
+                "example": "WO-42"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "record_meter_reading",
+            "title": {
+              "en": "Record a meter reading"
+            },
+            "titleFormatted": {
+              "en": "Record [[value]] on meter [[attribute_definition_guid]] of asset [[asset_guid]] with notes [[notes]]"
+            },
+            "hint": {
+              "en": "Every reading is stored permanently in UteamUP, so keep the Flow interval coarse."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "number",
+                "name": "value",
+                "title": {
+                  "en": "Value"
+                },
+                "placeholder": {
+                  "en": "42.5"
+                }
+              },
+              {
+                "type": "text",
+                "name": "asset_guid",
+                "required": true,
+                "title": {
+                  "en": "Asset GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              },
+              {
+                "type": "text",
+                "name": "attribute_definition_guid",
+                "required": true,
+                "title": {
+                  "en": "Meter GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              },
+              {
+                "type": "text",
+                "name": "notes",
+                "required": false,
+                "title": {
+                  "en": "Notes"
+                }
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "append_journal_entry",
+            "title": {
+              "en": "Add a line to a journal"
+            },
+            "titleFormatted": {
+              "en": "Add [[entry]] to journal [[journal_guid]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=company"
+              },
+              {
+                "type": "text",
+                "name": "journal_guid",
+                "required": true,
+                "title": {
+                  "en": "Journal GUID"
+                },
+                "placeholder": {
+                  "en": "00000000-0000-0000-0000-000000000000"
+                }
+              },
+              {
+                "type": "text",
+                "name": "entry",
+                "title": {
+                  "en": "Entry"
+                },
+                "placeholder": {
+                  "en": "Filter replaced"
+                }
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-11T15:45:40.645Z",
+      "bugs": "https://github.com/UteamUP/homey-uteamup/issues",
+      "homepage": "https://uteamup.com",
+      "support": "mailto:support@uteamup.com",
+      "source": "https://github.com/UteamUP/homey-uteamup",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Secure live-event verification and replay protection. Updated store image and English text for Homey certification."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": {
+        "en": [
+          "maintenance",
+          "work order",
+          "cmms",
+          "facility",
+          "building",
+          "alerts",
+          "meter"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.1.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6adb5a5e47d7399db6cc2965",
+      "type": "user",
+      "userId": "6adb598a8d00d7b6ab492c8e",
+      "name": "Gísli Guðmundsson",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]
