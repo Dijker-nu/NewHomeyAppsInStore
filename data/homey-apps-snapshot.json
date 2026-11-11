@@ -8716,10 +8716,10 @@
     "name": "E3DC - HPS",
     "developerName": "Copiis",
     "developerId": "6ac4b7104c7de6266bbce51f",
-    "version": "1.8.85",
+    "version": "1.8.86",
     "sourceRepository": "https://github.com/Copiis/e3dc-4-homey",
     "publishedAt": "2024-01-07T22:05:21.210Z",
-    "updatedAt": "2026-10-15T08:25:54.832Z",
+    "updatedAt": "2026-11-11T11:10:46.320Z",
     "communityTopicId": 105181
   },
   {
@@ -10850,10 +10850,10 @@
     "name": "Growatt",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "sourceRepository": "",
     "publishedAt": "2025-04-08T09:44:30.050Z",
-    "updatedAt": "2026-11-06T11:06:26.549Z",
+    "updatedAt": "2026-11-11T11:10:46.321Z",
     "communityTopicId": 134233
   },
   {
@@ -12225,10 +12225,10 @@
     "name": "Duux Gen2",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "2.10.3",
+    "version": "2.10.4",
     "sourceRepository": "https://github.com/smarthomesven/homey-duux-gen2",
     "publishedAt": "2025-11-18T16:27:43.875Z",
-    "updatedAt": "2026-10-14T08:50:55.597Z",
+    "updatedAt": "2026-11-11T11:10:46.321Z",
     "communityTopicId": 145511
   },
   {
@@ -13259,10 +13259,10 @@
     "name": "Mercedes-Benz",
     "developerName": "Anders Dissing",
     "developerId": "6982f8687f99f3517122b175",
-    "version": "1.1.54",
+    "version": "1.1.55",
     "sourceRepository": "https://github.com/andersdissing/Mercedes-Benz-homey-app",
     "publishedAt": "2026-02-04T07:49:31.977Z",
-    "updatedAt": "2026-11-10T11:23:16.739Z",
+    "updatedAt": "2026-11-11T11:10:46.321Z",
     "communityTopicId": 150571
   },
   {
@@ -13589,10 +13589,10 @@
     "name": "Kliko Calendar",
     "developerName": "Jan-Kees de Rijke",
     "developerId": "69906058cd19af4229e22d88",
-    "version": "2.0.0",
+    "version": "2.0.3",
     "sourceRepository": "https://github.com/jankeesder/homey-kliko-kalender",
     "publishedAt": "2026-02-19T12:22:48.760Z",
-    "updatedAt": "2026-09-26T19:56:53.065Z",
+    "updatedAt": "2026-11-11T11:10:46.321Z",
     "communityTopicId": null
   },
   {
@@ -15536,10 +15536,10 @@
     "name": "OCPP Server",
     "developerName": "DnetLabs BV",
     "developerId": "69d5b2b1fb6dd7068a7678a1",
-    "version": "1.0.10",
+    "version": "1.0.16",
     "sourceRepository": "",
     "publishedAt": "2026-05-10T20:18:47.688Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-11-11T11:10:46.321Z",
     "communityTopicId": null
   },
   {
@@ -16724,10 +16724,10 @@
     "name": "Thermia Online",
     "developerName": "Niklas Johansson",
     "developerId": "6a57a55ace38f245588ef124",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "sourceRepository": "",
     "publishedAt": "2026-07-15T15:20:58.401Z",
-    "updatedAt": "2026-10-21T08:42:36.035Z",
+    "updatedAt": "2026-11-11T11:10:46.322Z",
     "communityTopicId": null
   },
   {
@@ -17109,10 +17109,10 @@
     "name": "Navien Smart",
     "developerName": "Geunwon Mo",
     "developerId": "669f56321e5a71f546d08f20",
-    "version": "0.6.7",
+    "version": "0.7.0",
     "sourceRepository": "https://github.com/moKorean/com.lomohome.navien",
     "publishedAt": "2026-07-31T07:30:43.633Z",
-    "updatedAt": "2026-11-07T10:25:34.160Z",
+    "updatedAt": "2026-11-11T11:10:46.322Z",
     "communityTopicId": null
   },
   {
@@ -17384,10 +17384,10 @@
     "name": "SmartEK63",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "sourceRepository": "https://github.com/smarthomesven/homey-smartek63",
     "publishedAt": "2026-08-13T00:42:22.394Z",
-    "updatedAt": "2026-11-10T11:23:16.740Z",
+    "updatedAt": "2026-11-11T11:10:46.322Z",
     "communityTopicId": 158618
   },
   {
@@ -19265,10 +19265,10 @@
     "name": "PV Forecast",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "2.8.4",
+    "version": "2.8.5",
     "sourceRepository": "",
     "publishedAt": "2026-10-14T16:05:13.081Z",
-    "updatedAt": "2026-11-10T11:23:16.740Z",
+    "updatedAt": "2026-11-11T11:10:46.322Z",
     "communityTopicId": 160366
   },
   {
