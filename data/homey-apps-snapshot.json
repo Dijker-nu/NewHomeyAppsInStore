@@ -20150,5 +20150,38 @@
     "publishedAt": "2026-11-11T18:57:12.715Z",
     "updatedAt": "2026-11-11T18:57:12.715Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.simon.dashboardalarmkeypad",
+    "name": "Dashboard Alarm Keypad",
+    "developerName": "Simon Salvin",
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "version": "1.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-12T19:25:21.109Z",
+    "updatedAt": "2026-11-12T19:25:21.109Z",
+    "communityTopicId": 161154
+  },
+  {
+    "appId": "com.zenisun",
+    "name": "Zenisun",
+    "developerName": "Roy PEDRINIS",
+    "developerId": "6adbcbe447d7399db6cc41b2",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-12T19:25:21.109Z",
+    "updatedAt": "2026-11-12T19:25:21.109Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.jacobsen.maintenancemonitor",
+    "name": "Maintenance Monitor",
+    "developerName": "Sander Jacobsen",
+    "developerId": "69c437cb699c29709c9fda9e",
+    "version": "1.1.2",
+    "sourceRepository": "https://github.com/sanderjacobsen/nl.jacobsen.maintenancemonitor",
+    "publishedAt": "2026-11-12T19:25:21.874Z",
+    "updatedAt": "2026-11-12T19:25:21.874Z",
+    "communityTopicId": null
   }
 ]

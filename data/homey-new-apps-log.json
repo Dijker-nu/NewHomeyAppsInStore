@@ -1,77 +1,5 @@
 [
   {
-    "appId": "dk.sundgaard.universalrfremote",
-    "name": "Universal RF Remote",
-    "developerName": "Bo Sundgaard",
-    "developerId": "6ac80645bdc8421d78c4d6e1",
-    "version": "1.0.1",
-    "sourceRepository": "https://github.com/bosund/universal-rf-remote",
-    "publishedAt": "2026-10-12T20:31:30.596Z",
-    "updatedAt": "2026-10-12T20:31:30.596Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-12T20:31:30.596Z"
-  },
-  {
-    "appId": "com.evcharging.predictor",
-    "name": "EV Charging Predictor",
-    "developerName": "Wesley Neelen",
-    "developerId": "6ab55f4830dc90a8d6e437f5",
-    "version": "1.4.6",
-    "sourceRepository": "https://github.com/wez3/homey-ev-charging-predictor",
-    "publishedAt": "2026-10-12T20:31:31.950Z",
-    "updatedAt": "2026-10-12T20:31:31.950Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-12T20:31:30.596Z"
-  },
-  {
-    "appId": "nl.joey.hmipgarage",
-    "name": "Homematic IP Garage Door",
-    "developerName": "Joey Gosenson",
-    "developerId": "6acb666bbdc8421d78c5b8d7",
-    "version": "1.6.1",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-13T10:45:38.595Z",
-    "updatedAt": "2026-10-13T10:45:38.595Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-13T10:45:38.595Z"
-  },
-  {
-    "appId": "com.foxess",
-    "name": "Fox ESS",
-    "developerName": "RM de Gruijter",
-    "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "1.1.1",
-    "sourceRepository": "https://github.com/gruijter/com.foxess",
-    "publishedAt": "2026-10-13T10:45:39.282Z",
-    "updatedAt": "2026-10-13T10:45:39.282Z",
-    "communityTopicId": 159666,
-    "discoveredAt": "2026-10-13T10:45:38.595Z"
-  },
-  {
-    "appId": "com.solarwatt",
-    "name": "Solarwatt",
-    "developerName": "RM de Gruijter",
-    "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "1.2.1",
-    "sourceRepository": "https://github.com/gruijter/com.solarwatt",
-    "publishedAt": "2026-10-13T10:45:39.282Z",
-    "updatedAt": "2026-10-13T10:45:39.282Z",
-    "communityTopicId": 157511,
-    "discoveredAt": "2026-10-13T10:45:38.595Z"
-  },
-  {
-    "appId": "ro.ciprian.midea.ccm15",
-    "name": "Midea",
-    "developerName": "Ciprian Moldoveanu",
-    "developerId": "6aca988bbdc8421d78c58300",
-    "version": "0.1.13",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-13T15:21:35.007Z",
-    "updatedAt": "2026-10-13T15:21:35.007Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-13T15:21:35.007Z"
-  },
-  {
     "appId": "io.github.robinnoort.volumio",
     "name": "Volumio",
     "developerName": "Robin Noort",
@@ -1066,5 +994,41 @@
     "updatedAt": "2026-11-11T18:57:12.715Z",
     "communityTopicId": null,
     "discoveredAt": "2026-11-11T18:57:11.815Z"
+  },
+  {
+    "appId": "com.simon.dashboardalarmkeypad",
+    "name": "Dashboard Alarm Keypad",
+    "developerName": "Simon Salvin",
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "version": "1.1.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-12T19:25:21.109Z",
+    "updatedAt": "2026-11-12T19:25:21.109Z",
+    "communityTopicId": 161154,
+    "discoveredAt": "2026-11-12T19:25:21.109Z"
+  },
+  {
+    "appId": "com.zenisun",
+    "name": "Zenisun",
+    "developerName": "Roy PEDRINIS",
+    "developerId": "6adbcbe447d7399db6cc41b2",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-12T19:25:21.109Z",
+    "updatedAt": "2026-11-12T19:25:21.109Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-12T19:25:21.109Z"
+  },
+  {
+    "appId": "nl.jacobsen.maintenancemonitor",
+    "name": "Maintenance Monitor",
+    "developerName": "Sander Jacobsen",
+    "developerId": "69c437cb699c29709c9fda9e",
+    "version": "1.1.2",
+    "sourceRepository": "https://github.com/sanderjacobsen/nl.jacobsen.maintenancemonitor",
+    "publishedAt": "2026-11-12T19:25:21.874Z",
+    "updatedAt": "2026-11-12T19:25:21.874Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-12T19:25:21.109Z"
   }
 ]
