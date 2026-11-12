@@ -48,10 +48,10 @@
     "name": "Aeotec",
     "developerName": "Aeotec Group",
     "developerId": "5f589222eae76b0597a1b12d",
-    "version": "3.20.1",
+    "version": "3.20.3",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:51:42.892Z",
-    "updatedAt": "2026-10-23T08:40:17.684Z",
+    "updatedAt": "2026-11-12T11:28:40.928Z",
     "communityTopicId": null
   },
   {
@@ -1291,10 +1291,10 @@
     "name": "Xiaomi Mi Home",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "3.5.49",
+    "version": "3.5.55",
     "sourceRepository": "https://github.com/shaarkys/com.xiaomi-miio",
     "publishedAt": "2019-11-12T13:58:32.200Z",
-    "updatedAt": "2026-10-27T09:09:00.884Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 118
   },
   {
@@ -2083,10 +2083,10 @@
     "name": "Smart Presence",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "0.9.16",
+    "version": "0.9.17",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:02:01.318Z",
-    "updatedAt": "2026-09-09T06:04:27.099Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 33794
   },
   {
@@ -2380,10 +2380,10 @@
     "name": "Webhook Manager",
     "developerName": "Jorden Chamid",
     "developerId": "5dcab9af1c90c866f9364397",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:02:55.479Z",
-    "updatedAt": "2023-01-16T14:03:48.210Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 50357
   },
   {
@@ -2391,10 +2391,10 @@
     "name": "Broadlink",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "3.1.75",
+    "version": "3.1.85",
     "sourceRepository": "https://github.com/shaarkys/com.broadlink",
     "publishedAt": "2019-11-12T14:02:56.496Z",
-    "updatedAt": "2026-10-25T08:33:10.504Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 6389
   },
   {
@@ -3766,10 +3766,10 @@
     "name": "Philips Air",
     "developerName": "Edwin Biemond",
     "developerId": "5dcabc211c90c866f9366331",
-    "version": "1.0.82",
+    "version": "1.0.86",
     "sourceRepository": "https://github.com/biemond/com.athom.philipsair",
     "publishedAt": "2019-11-14T18:39:12.182Z",
-    "updatedAt": "2026-11-03T11:00:53.910Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 32151
   },
   {
@@ -4954,10 +4954,10 @@
     "name": "Device Capabilities",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "3.0.9",
+    "version": "3.1.0",
     "sourceRepository": "https://github.com/Qluster-IT/nl.qluster-it.DeviceCapabilities/",
     "publishedAt": "2021-02-10T22:06:08.432Z",
-    "updatedAt": "2026-10-27T09:09:00.885Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 43287
   },
   {
@@ -5383,10 +5383,10 @@
     "name": "Net Scan",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "2.1.5",
+    "version": "2.1.6",
     "sourceRepository": "https://github.com/shaarkys/homey-netscan",
     "publishedAt": "2021-05-21T07:57:49.794Z",
-    "updatedAt": "2026-08-06T13:24:56.714Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 47454
   },
   {
@@ -5537,10 +5537,10 @@
     "name": "Synology",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.10.7",
+    "version": "1.10.8",
     "sourceRepository": "https://github.com/martijnpoppen/com.synology",
     "publishedAt": "2021-07-15T13:18:33.960Z",
-    "updatedAt": "2024-09-27T06:17:22.410Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 49744
   },
   {
@@ -7605,10 +7605,10 @@
     "name": "P2000",
     "developerName": "PixelForges",
     "developerId": "6ac4bc064c7de6266bbdb73e",
-    "version": "6.2.4",
+    "version": "6.2.6",
     "sourceRepository": "",
     "publishedAt": "2023-07-01T12:00:27.336Z",
-    "updatedAt": "2026-10-07T10:23:44.580Z",
+    "updatedAt": "2026-11-12T11:28:40.929Z",
     "communityTopicId": 83738
   },
   {
@@ -7616,10 +7616,10 @@
     "name": "Lifeliner",
     "developerName": "PixelForges",
     "developerId": "6ac4bc064c7de6266bbdb73e",
-    "version": "6.1.1",
+    "version": "6.1.2",
     "sourceRepository": "",
     "publishedAt": "2023-07-02T09:04:57.703Z",
-    "updatedAt": "2026-10-07T10:23:44.580Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 83742
   },
   {
@@ -7715,10 +7715,10 @@
     "name": "Lutron Caséta",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.9.2",
+    "version": "1.9.3",
     "sourceRepository": "",
     "publishedAt": "2023-07-21T14:53:42.338Z",
-    "updatedAt": "2026-11-04T11:08:59.496Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 143582
   },
   {
@@ -7803,10 +7803,10 @@
     "name": "KNMI",
     "developerName": "PixelForges",
     "developerId": "6ac4bc064c7de6266bbdb73e",
-    "version": "4.2.4",
+    "version": "4.3.5",
     "sourceRepository": "",
     "publishedAt": "2023-08-06T06:09:36.331Z",
-    "updatedAt": "2026-11-05T11:09:18.809Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 86268
   },
   {
@@ -10531,10 +10531,10 @@
     "name": "Android TV",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.4.1",
+    "version": "1.4.3",
     "sourceRepository": "https://github.com/drenso/homey-android-tv",
     "publishedAt": "2025-02-17T17:09:55.379Z",
-    "updatedAt": "2026-11-04T11:08:59.496Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 131001
   },
   {
@@ -11312,10 +11312,10 @@
     "name": "Weheat",
     "developerName": "Edwin van de Pol",
     "developerId": "5dcabc2c1c90c866f936638b",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "sourceRepository": "",
     "publishedAt": "2025-07-20T12:23:57.323Z",
-    "updatedAt": "2026-10-05T10:37:47.106Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 139878
   },
   {
@@ -11774,10 +11774,10 @@
     "name": "Itho Daalderop",
     "developerName": "MonkeySoft",
     "developerId": "6a921eafa524daf89cd46941",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "sourceRepository": "",
     "publishedAt": "2025-09-29T19:56:45.180Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 142944
   },
   {
@@ -12390,10 +12390,10 @@
     "name": "DEVIreg™ ZigBee",
     "developerName": "Ole Kristensen",
     "developerId": "693991b566abe4254750e461",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "sourceRepository": "https://github.com/den-frie-vilje/dk.denfrievilje.deviconnect",
     "publishedAt": "2025-12-10T15:28:53.559Z",
-    "updatedAt": "2026-07-13T15:55:13.567Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 146682
   },
   {
@@ -12412,10 +12412,10 @@
     "name": "Tuya",
     "developerName": "Drenso V.O.F.",
     "developerId": "6a84b9f0ba59f820310285f9",
-    "version": "1.5.13",
+    "version": "1.5.14",
     "sourceRepository": "https://github.com/Drenso/com.tuya2",
     "publishedAt": "2025-12-11T13:35:10.690Z",
-    "updatedAt": "2026-11-04T11:08:59.496Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 146735
   },
   {
@@ -13226,10 +13226,10 @@
     "name": "ESPHome Controller",
     "developerName": "Uğur BENEK",
     "developerId": "697f46341aed127334df8978",
-    "version": "1.3.49",
+    "version": "1.3.53",
     "sourceRepository": "",
     "publishedAt": "2026-02-02T19:04:22.779Z",
-    "updatedAt": "2026-10-04T09:55:25.658Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 150421
   },
   {
@@ -14337,10 +14337,10 @@
     "name": "CEZ Distribution",
     "developerName": "Kamil Sýkora",
     "developerId": "69bd8402699c29709c9e21e0",
-    "version": "2.1.3",
+    "version": "2.3.2",
     "sourceRepository": "https://github.com/kamilsykora-maker/homey-cez-distribuce",
     "publishedAt": "2026-03-20T17:29:38.578Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 152742
   },
   {
@@ -14381,10 +14381,10 @@
     "name": "Microsoft 365",
     "developerName": "Stèphan Eizinga (MonkeySoft)",
     "developerId": "5dcabc991c90c866f936678e",
-    "version": "1.0.6",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/steffjenl/nl.monkeysoft.microsoft365",
     "publishedAt": "2026-03-21T19:26:47.886Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": null
   },
   {
@@ -15184,10 +15184,10 @@
     "name": "Android Automotive",
     "developerName": "Simone Di Maio",
     "developerId": "68ceb8fccbb72125ed109820",
-    "version": "1.5.4",
+    "version": "1.6.3",
     "sourceRepository": "https://github.com/s-dimaio/com.dimapp.aaos",
     "publishedAt": "2026-04-26T19:33:17.267Z",
-    "updatedAt": "2026-10-26T09:06:38.851Z",
+    "updatedAt": "2026-11-12T11:28:40.930Z",
     "communityTopicId": 155279
   },
   {
@@ -16581,10 +16581,10 @@
     "name": "Arylic",
     "developerName": "Rakoit",
     "developerId": "6ab4f11299b9541712fa2dd1",
-    "version": "1.0.13",
+    "version": "1.0.14",
     "sourceRepository": "",
     "publishedAt": "2026-07-10T09:26:44.359Z",
-    "updatedAt": "2026-09-27T12:41:48.666Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": null
   },
   {
@@ -17580,12 +17580,12 @@
   {
     "appId": "nl.artiled",
     "name": "ArtiLED",
-    "developerName": "Michel van Osenbruggen",
-    "developerId": "6a8408ddc6a80eeabce60987",
+    "developerName": "ArtiLED B.V.",
+    "developerId": "6af583021ea3eca81332520a",
     "version": "0.6.4",
     "sourceRepository": "",
     "publishedAt": "2026-08-18T07:25:17.338Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": null
   },
   {
@@ -18286,10 +18286,10 @@
     "name": "HomeFlux EMS",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.2.27",
+    "version": "1.2.41",
     "sourceRepository": "",
     "publishedAt": "2026-09-17T08:45:14.130Z",
-    "updatedAt": "2026-11-05T11:09:18.810Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": 158982
   },
   {
@@ -18330,10 +18330,10 @@
     "name": "Wemo",
     "developerName": "Antoine Chaulieu",
     "developerId": "6a8aabbfc6a80eeabce82a73",
-    "version": "0.4.14",
+    "version": "0.5.9",
     "sourceRepository": "",
     "publishedAt": "2026-09-18T15:20:11.997Z",
-    "updatedAt": "2026-10-09T10:42:52.305Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": 159683
   },
   {
@@ -18396,10 +18396,10 @@
     "name": "TRMNL",
     "developerName": "TRMNL",
     "developerId": "6a8eb3b23bdd81c33fa5674e",
-    "version": "0.4.7",
+    "version": "0.4.8",
     "sourceRepository": "https://github.com/usetrmnl/trmnl-homey-app",
     "publishedAt": "2026-09-21T17:18:35.168Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": null
   },
   {
@@ -18869,10 +18869,10 @@
     "name": "Dashboard Buttons",
     "developerName": "Rene van Ginkel",
     "developerId": "6aa2d6504b2b66c115905e09",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-01T17:37:50.286Z",
-    "updatedAt": "2026-10-23T08:40:17.688Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": null
   },
   {
@@ -19499,8 +19499,8 @@
     "version": "0.1.8",
     "sourceRepository": "",
     "publishedAt": "2026-10-19T17:52:50.394Z",
-    "updatedAt": "2026-10-19T17:52:50.394Z",
-    "communityTopicId": null
+    "updatedAt": "2026-11-12T11:28:40.931Z",
+    "communityTopicId": 161098
   },
   {
     "appId": "com.techboys.anthbot",
@@ -19925,10 +19925,10 @@
     "name": "Google Nest Controls",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "0.3.55",
+    "version": "0.3.57",
     "sourceRepository": "",
     "publishedAt": "2026-11-04T18:58:24.866Z",
-    "updatedAt": "2026-11-04T18:58:24.866Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": 161182
   },
   {
@@ -20002,10 +20002,10 @@
     "name": "House Guard",
     "developerName": "by NorthGuard Labs",
     "developerId": "6ac6a04c46da7c02088b1e66",
-    "version": "0.4.51",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-11-06T18:37:37.571Z",
-    "updatedAt": "2026-11-06T18:37:37.571Z",
+    "updatedAt": "2026-11-12T11:28:40.931Z",
     "communityTopicId": null
   },
   {
