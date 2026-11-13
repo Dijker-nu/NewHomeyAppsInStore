@@ -1218,6 +1218,12 @@
     "forumUsername": "drenso"
   },
   {
+    "developerId": "6af5c2e47e8ffc3637d86d26",
+    "developerName": "ELKO AS",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
     "developerId": "67503465ba38533f5bef9f83",
     "developerName": "ELKO EP s.r.o. EP",
     "forumUserID": null,
@@ -4362,6 +4368,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "69c1b52d699c29709c9f1a8c",
+    "developerName": "Robert Cristofoli",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "66e9a8bb645b24bd5be193da",
     "developerName": "Robert Hertzer",
     "forumUserID": null,
@@ -4514,8 +4526,8 @@
   {
     "developerId": "6adbcbe447d7399db6cc41b2",
     "developerName": "Roy PEDRINIS",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 33643,
+    "forumUsername": "Roy_PEDRINIS"
   },
   {
     "developerId": "69520c982f0b99832c0606bc",
@@ -4645,6 +4657,12 @@
   },
   {
     "developerId": "6436cc2fe9c847218dbaa0f1",
+    "developerName": "Schneider Electric",
+    "forumUserID": 17660,
+    "forumUsername": "drenso"
+  },
+  {
+    "developerId": "6af5bc937571bdf1a947244b",
     "developerName": "Schneider Electric",
     "forumUserID": 17660,
     "forumUsername": "drenso"

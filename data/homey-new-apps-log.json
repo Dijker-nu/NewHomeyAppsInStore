@@ -1,17 +1,5 @@
 [
   {
-    "appId": "io.github.robinnoort.volumio",
-    "name": "Volumio",
-    "developerName": "Robin Noort",
-    "developerId": "692a1a3166abe425474c8866",
-    "version": "2.1.0",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-14T08:50:12.978Z",
-    "updatedAt": "2026-10-14T08:50:12.978Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-14T08:50:12.977Z"
-  },
-  {
     "appId": "be.pvforecast",
     "name": "PV Forecast",
     "developerName": "Danny van Soerland",
@@ -1030,5 +1018,17 @@
     "updatedAt": "2026-11-12T19:25:21.874Z",
     "communityTopicId": null,
     "discoveredAt": "2026-11-12T19:25:21.109Z"
+  },
+  {
+    "appId": "com.aroma-link",
+    "name": "Aroma-Link Diffuser",
+    "developerName": "Robert Cristofoli",
+    "developerId": "69c1b52d699c29709c9f1a8c",
+    "version": "1.0.7",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-13T11:12:02.013Z",
+    "updatedAt": "2026-11-13T11:12:02.013Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-13T11:12:02.013Z"
   }
 ]
