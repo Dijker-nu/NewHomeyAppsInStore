@@ -1,226 +1,749 @@
 [
   {
-    "id": "com.aroma-link",
+    "id": "com.simplepc.christmascountdown",
     "rating": null,
     "liveBuild": {
-      "id": 7,
+      "id": 2,
       "name": {
-        "en": "Aroma-Link Diffuser",
-        "nl": "Aroma-Link Diffuser"
+        "en": "Christmas Countdown"
       },
-      "version": "1.0.7",
+      "version": "1.0.1",
       "readme": {
-        "en": "Bring scent into your smart home. This app connects Homey to aroma diffusers that you normally control with the Aroma-Link app, so you can switch your diffuser on or off, adjust the scent intensity and choose how long it diffuses and pauses, all from Homey.\n\nUse Flows to start the diffuser when you come home, lower the intensity in the evening or get a notification when it goes offline. Pairing is done with the email address and password of your Aroma-Link account.\n",
-        "nl": "Breng geur in je slimme huis. Deze app koppelt Homey aan geurverspreiders die je normaal bedient met de Aroma-Link-app. Zo zet je de diffuser aan of uit, pas je de geurintensiteit aan en bepaal je hoe lang hij verspreidt en pauzeert, allemaal vanuit Homey.\n\nGebruik Flows om de diffuser te starten als je thuiskomt, de intensiteit 's avonds te verlagen of een melding te krijgen als hij offline gaat. Koppelen doe je met het e-mailadres en wachtwoord van je Aroma-Link-account.\n"
+        "en": "Bring a little festive magic to your Homey dashboard. Christmas Countdown shows exactly how many sleeps are left until Christmas Day, updating by itself every night so the whole family can watch the number shrink.\nChoose from eight hand-crafted designs, from falling snow and twinkling fairy lights to a cheeky Santa mouse, a cosy fireside and a snowy mountain cabin, then let your flows join in, from a daily spoken countdown to festive lights on Christmas morning.\n"
       },
       "description": {
-        "en": "Let your home smell great, automatically",
-        "nl": "Laat je huis automatisch heerlijk ruiken"
+        "en": "Count down the sleeps until Christmas right on your dashboard."
       },
-      "category": "appliances",
-      "brandColor": "#64DCC8",
-      "icon": "https://apps.homeycdn.net/app/com.aroma-link/7/569ddfbb-8b5b-4a29-93cf-d265be3c2b1d/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.aroma-link/7/569ddfbb-8b5b-4a29-93cf-d265be3c2b1d/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.aroma-link/7/569ddfbb-8b5b-4a29-93cf-d265be3c2b1d/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "diffuser",
-          "name": {
-            "en": "Diffuser",
-            "nl": "Diffuser"
-          },
-          "class": "other",
-          "capabilities": [
-            "onoff",
-            "aroma_link_intensity",
-            "aroma_link_work_time",
-            "aroma_link_pause_time",
-            "aroma_link_online",
-            "aroma_link_pulse"
-          ],
-          "capabilitiesOptions": {
-            "aroma_link_intensity": {
-              "min": 1,
-              "max": 5,
-              "step": 1
-            },
-            "aroma_link_work_time": {
-              "min": 10,
-              "max": 600,
-              "step": 10,
-              "units": {
-                "en": "sec",
-                "nl": "sec"
-              }
-            },
-            "aroma_link_pause_time": {
-              "min": 10,
-              "max": 600,
-              "step": 10,
-              "units": {
-                "en": "sec",
-                "nl": "sec"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.aroma-link/7/569ddfbb-8b5b-4a29-93cf-d265be3c2b1d/drivers/diffuser/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.aroma-link/7/569ddfbb-8b5b-4a29-93cf-d265be3c2b1d/drivers/diffuser/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "cloud"
-          ],
-          "icon": "https://apps.homeycdn.net/app/com.aroma-link/7/569ddfbb-8b5b-4a29-93cf-d265be3c2b1d/drivers/diffuser/assets/icon.svg"
-        }
-      ],
+      "category": "tools",
+      "brandColor": "#B3202A",
+      "icon": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/assets/images/large.png",
+      "drivers": null,
       "flow": {
         "triggers": [
           {
-            "id": "diffuser_went_offline",
+            "id": "advent_door",
             "title": {
-              "en": "Diffuser went offline",
-              "nl": "Diffuser ging offline"
+              "en": "An advent door opens"
+            },
+            "hint": {
+              "en": "Runs just after midnight each day from 1 to 24 December."
+            },
+            "tokens": [
+              {
+                "name": "door",
+                "type": "number",
+                "title": {
+                  "en": "Door number"
+                },
+                "example": 12
+              },
+              {
+                "name": "days",
+                "type": "number",
+                "title": {
+                  "en": "Days left"
+                },
+                "example": 24
+              }
+            ]
+          },
+          {
+            "id": "christmas_day",
+            "title": {
+              "en": "Christmas Day begins"
+            },
+            "hint": {
+              "en": "Runs just after midnight on 25 December."
+            }
+          },
+          {
+            "id": "days_left",
+            "title": {
+              "en": "The countdown reaches a number of days"
+            },
+            "titleFormatted": {
+              "en": "The countdown reaches [[days]] days"
+            },
+            "hint": {
+              "en": "Runs just after midnight on the day the countdown reaches this number. Use 0 for Christmas Day."
             },
             "args": [
               {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=diffuser"
+                "type": "number",
+                "name": "days",
+                "title": {
+                  "en": "Days"
+                },
+                "placeholder": {
+                  "en": "7"
+                },
+                "min": 0,
+                "max": 366,
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "days",
+                "type": "number",
+                "title": {
+                  "en": "Days left"
+                },
+                "example": 24
+              }
+            ]
+          },
+          {
+            "id": "new_day",
+            "title": {
+              "en": "A new countdown day starts"
+            },
+            "hint": {
+              "en": "Runs just after midnight every day."
+            },
+            "tokens": [
+              {
+                "name": "days",
+                "type": "number",
+                "title": {
+                  "en": "Days left"
+                },
+                "example": 24
+              }
+            ]
+          },
+          {
+            "id": "season_starts",
+            "title": {
+              "en": "The Christmas season starts"
+            },
+            "hint": {
+              "en": "Runs once a year on the reminder date chosen in the app settings."
+            },
+            "tokens": [
+              {
+                "name": "days",
+                "type": "number",
+                "title": {
+                  "en": "Days left"
+                },
+                "example": 24
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "is_online",
+            "id": "fewer_than",
             "title": {
-              "en": "Diffuser is !{{online|offline}}",
-              "nl": "Diffuser is !{{online|offline}}"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=diffuser"
-              }
-            ]
-          }
-        ],
-        "actions": [
-          {
-            "id": "set_intensity",
-            "title": {
-              "en": "Set intensity",
-              "nl": "Stel intensiteit in"
+              "en": "Days until Christmas !{{is|isn't}} below a number"
             },
             "titleFormatted": {
-              "en": "Set intensity to [[intensity]]",
-              "nl": "Stel intensiteit in op [[intensity]]"
+              "en": "Days until Christmas !{{is|isn't}} below [[days]]"
             },
             "args": [
               {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=diffuser"
-              },
-              {
-                "name": "intensity",
-                "type": "range",
-                "min": 1,
-                "max": 5,
-                "step": 1,
-                "label": {
-                  "en": "Intensity (1-5)",
-                  "nl": "Intensiteit (1-5)"
-                }
+                "type": "number",
+                "name": "days",
+                "title": {
+                  "en": "Days"
+                },
+                "placeholder": {
+                  "en": "10"
+                },
+                "min": 0,
+                "max": 366,
+                "step": 1
               }
             ]
           },
           {
-            "id": "set_schedule",
+            "id": "is_advent",
             "title": {
-              "en": "Set schedule",
-              "nl": "Schema instellen"
+              "en": "It !{{is|isn't}} Advent"
             },
-            "titleFormatted": {
-              "en": "Set schedule to [[work_time]] sec work / [[pause_time]] sec pause",
-              "nl": "Stel schema in op [[work_time]] sec werk / [[pause_time]] sec pauze"
-            },
-            "args": [
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=diffuser"
-              },
-              {
-                "name": "work_time",
-                "type": "number",
-                "min": 10,
-                "max": 600,
-                "step": 10,
-                "label": {
-                  "en": "Work time (seconds)",
-                  "nl": "Werktijd (seconden)"
-                }
-              },
-              {
-                "name": "pause_time",
-                "type": "number",
-                "min": 10,
-                "max": 600,
-                "step": 10,
-                "label": {
-                  "en": "Pause time (seconds)",
-                  "nl": "Pauzetijd (seconden)"
-                }
-              }
-            ]
+            "hint": {
+              "en": "Advent runs from 1 to 24 December."
+            }
+          },
+          {
+            "id": "is_christmas_day",
+            "title": {
+              "en": "It !{{is|isn't}} Christmas Day"
+            }
           }
-        ]
+        ],
+        "actions": null
       },
-      "widgets": null,
+      "widgets": {
+        "advent-calendar": {
+          "name": {
+            "en": "Advent Calendar"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "cream",
+              "values": [
+                {
+                  "id": "cream",
+                  "title": {
+                    "en": "Cream"
+                  }
+                },
+                {
+                  "id": "gold",
+                  "title": {
+                    "en": "Gold"
+                  }
+                },
+                {
+                  "id": "white",
+                  "title": {
+                    "en": "Snow white"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "advent-calendar",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/advent-calendar/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/advent-calendar/preview-light.png"
+        },
+        "fairy-lights": {
+          "name": {
+            "en": "Fairy Lights"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "gold",
+              "values": [
+                {
+                  "id": "gold",
+                  "title": {
+                    "en": "Gold"
+                  }
+                },
+                {
+                  "id": "white",
+                  "title": {
+                    "en": "Snow white"
+                  }
+                },
+                {
+                  "id": "red",
+                  "title": {
+                    "en": "Berry red"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "fairy-lights",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/fairy-lights/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/fairy-lights/preview-light.png"
+        },
+        "fireside-cabin": {
+          "name": {
+            "en": "Cabin Fireside"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "gold",
+              "values": [
+                {
+                  "id": "gold",
+                  "title": {
+                    "en": "Gold"
+                  }
+                },
+                {
+                  "id": "cream",
+                  "title": {
+                    "en": "Cream"
+                  }
+                },
+                {
+                  "id": "orange",
+                  "title": {
+                    "en": "Ember orange"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "fireside-cabin",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/fireside-cabin/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/fireside-cabin/preview-light.png"
+        },
+        "fireside-cream": {
+          "name": {
+            "en": "Fireside"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "red",
+              "values": [
+                {
+                  "id": "red",
+                  "title": {
+                    "en": "Berry red"
+                  }
+                },
+                {
+                  "id": "green",
+                  "title": {
+                    "en": "Pine green"
+                  }
+                },
+                {
+                  "id": "brown",
+                  "title": {
+                    "en": "Chestnut brown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "fireside-cream",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/fireside-cream/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/fireside-cream/preview-light.png"
+        },
+        "midnight-snow": {
+          "name": {
+            "en": "Midnight Snow"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "white",
+              "values": [
+                {
+                  "id": "white",
+                  "title": {
+                    "en": "Snow white"
+                  }
+                },
+                {
+                  "id": "gold",
+                  "title": {
+                    "en": "Gold"
+                  }
+                },
+                {
+                  "id": "coral",
+                  "title": {
+                    "en": "Coral"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "snow",
+              "type": "number",
+              "title": {
+                "en": "Amount of snow"
+              },
+              "hint": {
+                "en": "Number of falling snowflakes (0 turns the snow off)."
+              },
+              "value": 28,
+              "min": 0,
+              "max": 60
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "midnight-snow",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/midnight-snow/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/midnight-snow/preview-light.png"
+        },
+        "santa-mouse": {
+          "name": {
+            "en": "Santa Mouse"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "white",
+              "values": [
+                {
+                  "id": "white",
+                  "title": {
+                    "en": "Snow white"
+                  }
+                },
+                {
+                  "id": "gold",
+                  "title": {
+                    "en": "Gold"
+                  }
+                },
+                {
+                  "id": "coral",
+                  "title": {
+                    "en": "Coral"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "snow",
+              "type": "number",
+              "title": {
+                "en": "Amount of snow"
+              },
+              "hint": {
+                "en": "Number of falling snowflakes (0 turns the snow off)."
+              },
+              "value": 22,
+              "min": 0,
+              "max": 60
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "santa-mouse",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/santa-mouse/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/santa-mouse/preview-light.png"
+        },
+        "santa-snow": {
+          "name": {
+            "en": "Santa in the Snow"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "red",
+              "values": [
+                {
+                  "id": "red",
+                  "title": {
+                    "en": "Santa red"
+                  }
+                },
+                {
+                  "id": "navy",
+                  "title": {
+                    "en": "Midnight blue"
+                  }
+                },
+                {
+                  "id": "white",
+                  "title": {
+                    "en": "Snow white"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "santa-snow",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/santa-snow/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/santa-snow/preview-light.png"
+        },
+        "snowy-cabin": {
+          "name": {
+            "en": "Snowy Cabin"
+          },
+          "height": "100%",
+          "transparent": false,
+          "settings": [
+            {
+              "id": "accent",
+              "type": "dropdown",
+              "title": {
+                "en": "Number colour"
+              },
+              "value": "red",
+              "values": [
+                {
+                  "id": "red",
+                  "title": {
+                    "en": "Berry red"
+                  }
+                },
+                {
+                  "id": "green",
+                  "title": {
+                    "en": "Holly green"
+                  }
+                },
+                {
+                  "id": "brown",
+                  "title": {
+                    "en": "Log brown"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "snow",
+              "type": "number",
+              "title": {
+                "en": "Amount of snow"
+              },
+              "hint": {
+                "en": "Number of falling snowflakes (0 turns the snow off)."
+              },
+              "value": 16,
+              "min": 0,
+              "max": 60
+            },
+            {
+              "id": "size",
+              "type": "dropdown",
+              "title": {
+                "en": "Size"
+              },
+              "hint": {
+                "en": "Half height suits a wide spot on your dashboard."
+              },
+              "value": "square",
+              "values": [
+                {
+                  "id": "square",
+                  "title": {
+                    "en": "Square"
+                  }
+                },
+                {
+                  "id": "half",
+                  "title": {
+                    "en": "Half height"
+                  }
+                }
+              ]
+            }
+          ],
+          "id": "snowy-cabin",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/snowy-cabin/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.christmascountdown/2/9eda3ecf-ce82-439f-b5bd-73e42860973f/widgets/snowy-cabin/preview-light.png"
+        }
+      },
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-11-13T09:05:41.641Z",
+      "stateChangedAt": "2026-11-13T13:24:37.398Z",
       "bugs": null,
       "homepage": null,
-      "support": null,
+      "support": "https://community.homey.app/t/app-pro-christmas-countdown/162025",
       "source": null,
-      "contributors": {
-        "developers": [
-          {
-            "name": "Robert Cristofoli"
-          },
-          {
-            "name": "mr-sparks (scent-assistant, Aroma-Link API reference, MIT)"
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "SimonSalvin"
           }
-        ],
-        "translators": []
+        }
       },
-      "contributing": null,
       "permissions": [],
       "apiScopes": null,
       "changelog": {
-        "en": "New Scent burst button in the device: a short burst of scent on demand.",
-        "nl": "Nieuwe Geurstoot-knop bij het apparaat: een korte geurstoot wanneer je wilt."
+        "en": "Added a link to the Christmas Countdown community forum topic for support, questions and design ideas."
       },
-      "compatibility": ">=5.0.0",
+      "compatibility": ">=12.3.0",
       "tags": {
         "en": [
-          "diffuser",
-          "scent",
-          "aroma",
-          "fragrance",
-          "essential oil"
-        ],
-        "nl": [
-          "diffuser",
-          "geur",
-          "aroma",
-          "geurverspreider",
-          "etherische olie"
+          "christmas",
+          "countdown",
+          "advent",
+          "santa",
+          "holiday",
+          "dashboard",
+          "widget"
         ]
       },
       "platforms": [
@@ -231,16 +754,1431 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "1.0.7",
+    "liveVersion": "1.0.1",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "69c1b52d699c29709c9f1a8c",
+      "id": "6acd2e5bbdc8421d78c61bff",
       "type": "user",
-      "userId": "673fc4d08bbc32d8111f3791",
-      "name": "Robert Cristofoli",
+      "userId": "61c9d6faedefef0baea7e2f0",
+      "name": "Simon Salvin",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "com.bskhvac",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "BSK Zephyr"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Bring your BSK Zephyr decentralized heat recovery ventilation units into Homey. Switch them on and off, choose the fan speed and the ventilation mode, and keep an eye on the temperature and humidity each unit measures. Flows let the house decide: a quiet night speed at bedtime, more fresh air while cooking, or a notification when the humidity boost kicks in.\n\nSign in with the e-mail address and password of your BSK Connect account to add your units. This is a community app that is not made or endorsed by BSK. It talks to the BSK Connect cloud, so your units and Homey both need an internet connection.\n",
+        "sk": "Pridajte svoje decentrálne rekuperačné jednotky BSK Zephyr do Homey. Zapínajte a vypínajte ich, vyberajte rýchlosť ventilátora a režim vetrania a sledujte teplotu a vlhkosť, ktorú každá jednotka meria. Vo Flow nechajte rozhodovať domácnosť: tichá nočná rýchlosť pred spaním, viac čerstvého vzduchu počas varenia alebo upozornenie, keď sa spustí boost vlhkosti.\n\nJednotky pridáte prihlásením e-mailovou adresou a heslom svojho účtu BSK Connect. Toto je komunitná aplikácia, ktorú nevytvorila ani neschválila spoločnosť BSK. Komunikuje s cloudom BSK Connect, takže jednotky aj Homey potrebujú pripojenie na internet.\n"
+      },
+      "description": {
+        "en": "Fresh air with heat recovery, on autopilot",
+        "sk": "Čerstvý vzduch s rekuperáciou, úplne automaticky"
+      },
+      "category": "climate",
+      "brandColor": "#0B6E8E",
+      "icon": "https://apps.homeycdn.net/app/com.bskhvac/1/5083c78c-bddb-4467-8cf9-766daf1a32ea/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.bskhvac/1/5083c78c-bddb-4467-8cf9-766daf1a32ea/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.bskhvac/1/5083c78c-bddb-4467-8cf9-766daf1a32ea/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "zephyr",
+          "name": {
+            "en": "Zephyr",
+            "sk": "Zephyr"
+          },
+          "class": "fan",
+          "capabilities": [
+            "onoff",
+            "zephyr_fan_speed",
+            "zephyr_fan_mode",
+            "measure_temperature",
+            "measure_humidity",
+            "zephyr_humidity_boost",
+            "zephyr_humidity_boost_active",
+            "zephyr_filter_timer",
+            "zephyr_hygiene_status"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.bskhvac/1/5083c78c-bddb-4467-8cf9-766daf1a32ea/drivers/zephyr/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.bskhvac/1/5083c78c-bddb-4467-8cf9-766daf1a32ea/drivers/zephyr/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.bskhvac/1/5083c78c-bddb-4467-8cf9-766daf1a32ea/drivers/zephyr/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "fan_speed_changed",
+            "title": {
+              "en": "The fan speed changed",
+              "sk": "Rýchlosť ventilátora sa zmenila"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "speed",
+                "type": "string",
+                "title": {
+                  "en": "Speed",
+                  "sk": "Rýchlosť"
+                },
+                "example": {
+                  "en": "night",
+                  "sk": "night"
+                }
+              }
+            ]
+          },
+          {
+            "id": "fan_mode_changed",
+            "title": {
+              "en": "The ventilation mode changed",
+              "sk": "Režim vetrania sa zmenil"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "mode",
+                "type": "string",
+                "title": {
+                  "en": "Mode",
+                  "sk": "Režim"
+                },
+                "example": {
+                  "en": "cycle",
+                  "sk": "cycle"
+                }
+              }
+            ]
+          },
+          {
+            "id": "humidity_boost_started",
+            "title": {
+              "en": "The humidity boost started",
+              "sk": "Boost vlhkosti sa spustil"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              }
+            ]
+          },
+          {
+            "id": "humidity_boost_stopped",
+            "title": {
+              "en": "The humidity boost stopped",
+              "sk": "Boost vlhkosti sa skončil"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "fan_speed_is",
+            "title": {
+              "en": "The fan speed !{{is|is not}}",
+              "sk": "Rýchlosť ventilátora !{{je|nie je}}"
+            },
+            "titleFormatted": {
+              "en": "The fan speed !{{is|is not}} [[speed]]",
+              "sk": "Rýchlosť ventilátora !{{je|nie je}} [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              },
+              {
+                "name": "speed",
+                "type": "dropdown",
+                "title": {
+                  "en": "Speed",
+                  "sk": "Rýchlosť"
+                },
+                "values": [
+                  {
+                    "id": "night",
+                    "label": {
+                      "en": "Night",
+                      "sk": "Noc"
+                    },
+                    "title": {
+                      "en": "Night",
+                      "sk": "Noc"
+                    }
+                  },
+                  {
+                    "id": "low",
+                    "label": {
+                      "en": "Low",
+                      "sk": "Nízka"
+                    },
+                    "title": {
+                      "en": "Low",
+                      "sk": "Nízka"
+                    }
+                  },
+                  {
+                    "id": "medium",
+                    "label": {
+                      "en": "Medium",
+                      "sk": "Stredná"
+                    },
+                    "title": {
+                      "en": "Medium",
+                      "sk": "Stredná"
+                    }
+                  },
+                  {
+                    "id": "high",
+                    "label": {
+                      "en": "High",
+                      "sk": "Vysoká"
+                    },
+                    "title": {
+                      "en": "High",
+                      "sk": "Vysoká"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "fan_mode_is",
+            "title": {
+              "en": "The ventilation mode !{{is|is not}}",
+              "sk": "Režim vetrania !{{je|nie je}}"
+            },
+            "titleFormatted": {
+              "en": "The ventilation mode !{{is|is not}} [[mode]]",
+              "sk": "Režim vetrania !{{je|nie je}} [[mode]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "title": {
+                  "en": "Mode",
+                  "sk": "Režim"
+                },
+                "values": [
+                  {
+                    "id": "cycle",
+                    "label": {
+                      "en": "Cycle (heat recovery)",
+                      "sk": "Rekuperácia (Cycle)"
+                    },
+                    "title": {
+                      "en": "Cycle (heat recovery)",
+                      "sk": "Rekuperácia (Cycle)"
+                    }
+                  },
+                  {
+                    "id": "supply",
+                    "label": {
+                      "en": "Supply",
+                      "sk": "Prívod vzduchu (Supply)"
+                    },
+                    "title": {
+                      "en": "Supply",
+                      "sk": "Prívod vzduchu (Supply)"
+                    }
+                  },
+                  {
+                    "id": "extract",
+                    "label": {
+                      "en": "Extract",
+                      "sk": "Odvod vzduchu (Extract)"
+                    },
+                    "title": {
+                      "en": "Extract",
+                      "sk": "Odvod vzduchu (Extract)"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "humidity_boost_is_active",
+            "title": {
+              "en": "The humidity boost !{{is|is not}} active",
+              "sk": "Boost vlhkosti !{{je|nie je}} aktívny"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_fan_speed",
+            "title": {
+              "en": "Set the fan speed",
+              "sk": "Nastaviť rýchlosť ventilátora"
+            },
+            "titleFormatted": {
+              "en": "Set the fan speed to [[speed]]",
+              "sk": "Nastaviť rýchlosť ventilátora na [[speed]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              },
+              {
+                "name": "speed",
+                "type": "dropdown",
+                "title": {
+                  "en": "Speed",
+                  "sk": "Rýchlosť"
+                },
+                "values": [
+                  {
+                    "id": "night",
+                    "label": {
+                      "en": "Night",
+                      "sk": "Noc"
+                    },
+                    "title": {
+                      "en": "Night",
+                      "sk": "Noc"
+                    }
+                  },
+                  {
+                    "id": "low",
+                    "label": {
+                      "en": "Low",
+                      "sk": "Nízka"
+                    },
+                    "title": {
+                      "en": "Low",
+                      "sk": "Nízka"
+                    }
+                  },
+                  {
+                    "id": "medium",
+                    "label": {
+                      "en": "Medium",
+                      "sk": "Stredná"
+                    },
+                    "title": {
+                      "en": "Medium",
+                      "sk": "Stredná"
+                    }
+                  },
+                  {
+                    "id": "high",
+                    "label": {
+                      "en": "High",
+                      "sk": "Vysoká"
+                    },
+                    "title": {
+                      "en": "High",
+                      "sk": "Vysoká"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_fan_mode",
+            "title": {
+              "en": "Set the ventilation mode",
+              "sk": "Nastaviť režim vetrania"
+            },
+            "titleFormatted": {
+              "en": "Set the ventilation mode to [[mode]]",
+              "sk": "Nastaviť režim vetrania na [[mode]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              },
+              {
+                "name": "mode",
+                "type": "dropdown",
+                "title": {
+                  "en": "Mode",
+                  "sk": "Režim"
+                },
+                "values": [
+                  {
+                    "id": "cycle",
+                    "label": {
+                      "en": "Cycle (heat recovery)",
+                      "sk": "Rekuperácia (Cycle)"
+                    },
+                    "title": {
+                      "en": "Cycle (heat recovery)",
+                      "sk": "Rekuperácia (Cycle)"
+                    }
+                  },
+                  {
+                    "id": "supply",
+                    "label": {
+                      "en": "Supply",
+                      "sk": "Prívod vzduchu (Supply)"
+                    },
+                    "title": {
+                      "en": "Supply",
+                      "sk": "Prívod vzduchu (Supply)"
+                    }
+                  },
+                  {
+                    "id": "extract",
+                    "label": {
+                      "en": "Extract",
+                      "sk": "Odvod vzduchu (Extract)"
+                    },
+                    "title": {
+                      "en": "Extract",
+                      "sk": "Odvod vzduchu (Extract)"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_humidity_boost",
+            "title": {
+              "en": "Set the humidity boost threshold",
+              "sk": "Nastaviť prah vlhkosti pre boost"
+            },
+            "titleFormatted": {
+              "en": "Set the humidity boost threshold to [[threshold]] %",
+              "sk": "Nastaviť prah vlhkosti pre boost na [[threshold]] %"
+            },
+            "hint": {
+              "en": "The unit ventilates harder when the humidity rises above this value. 100 % switches the humidity boost off.",
+              "sk": "Keď vlhkosť stúpne nad túto hodnotu, jednotka vetrá intenzívnejšie. Hodnota 100 % boost vlhkosti vypne."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=zephyr"
+              },
+              {
+                "name": "threshold",
+                "type": "number",
+                "title": {
+                  "en": "Threshold",
+                  "sk": "Prah"
+                },
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "70",
+                  "sk": "70"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-13T13:43:08.644Z",
+      "bugs": "https://github.com/BranislavJenci1/com.bskhvac/issues",
+      "homepage": null,
+      "support": "https://github.com/BranislavJenci1/com.bskhvac/issues",
+      "source": "https://github.com/BranislavJenci1/com.bskhvac",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "First version: power, fan speed, ventilation mode, humidity boost, temperature and humidity for BSK Zephyr units.",
+        "sk": "Prvá verzia: napájanie, rýchlosť ventilátora, režim vetrania, boost vlhkosti, teplota a vlhkosť pre jednotky BSK Zephyr."
+      },
+      "compatibility": ">=5.0.0",
+      "tags": {
+        "en": [
+          "bsk",
+          "zephyr",
+          "bsk connect",
+          "heat recovery",
+          "ventilation",
+          "hrv",
+          "mvhr",
+          "fan"
+        ],
+        "sk": [
+          "bsk",
+          "zephyr",
+          "bsk connect",
+          "rekuperácia",
+          "rekuperačná jednotka",
+          "vetranie",
+          "ventilátor"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6af2e5470f89e422d5f229b6",
+      "type": "user",
+      "userId": "67c6156e43804996d4b20f63",
+      "name": "Branislav Jenči",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "nl.unscripted.lamarzocco",
+    "rating": null,
+    "liveBuild": {
+      "id": 11,
+      "name": {
+        "en": "La Marzocco",
+        "nl": "La Marzocco"
+      },
+      "version": "0.5.28",
+      "readme": {
+        "en": "Your coffee routine, automated. Connect your La Marzocco to Homey and make your espresso machine part of your day. Switch it on automatically on workdays or put it in standby when you leave home. Warming up can start before you even think about coffee.\n\nAdjust the coffee temperature, turn the steam boiler on or off, and check the boiler status and total coffee count. Create your own Homey Flows, such as a notification when the coffee boiler is ready.\n\nThe app supports the Linea Mini R, Linea Micra and GS3 (AV/MP). Choose the steam level on the Mini R and Micra. Set the steam temperature on the GS3 and adjust the four dose presets on the GS3 AV. You start brewing at the machine itself.\n\nTo get started, your machine must be connected to the internet and linked in the official La Marzocco app. Pair it with Homey using your La Marzocco account email address and password. Sign-in with Apple or Google is not supported.\n\nThis is an independent community app, not made by La Marzocco.\n",
+        "nl": "Je koffieroutine, slim geregeld. Verbind je La Marzocco met Homey en laat je espressomachine meedoen met je dag. Schakel hem automatisch in op een werkdag of zet hem in stand-by wanneer je van huis gaat. Zo begint het opwarmen al voordat je zelf aan koffie denkt.\n\nPas de koffietemperatuur aan, schakel de stoomboiler in of uit en bekijk de boilerstatus en het totale aantal gezette koffies. Maak je eigen Homey Flows, bijvoorbeeld voor een melding zodra de koffieboiler gereed is.\n\nDe app ondersteunt de Linea Mini R, Linea Micra en GS3 (AV/MP). Op de Mini R en Micra kies je het stoomniveau. Op de GS3 stel je de stoomtemperatuur in en bij de GS3 AV ook de hoeveelheden van de vier doseerknoppen. Je koffie zet je zelf aan de machine.\n\nOm te beginnen moet je machine met internet verbonden zijn en in de officiële La Marzocco-app staan. Koppel hem aan Homey met het e-mailadres en wachtwoord van je La Marzocco-account. Inloggen via Apple of Google wordt niet ondersteund.\n\nDit is een onafhankelijke community-app, niet gemaakt door La Marzocco.\n"
+      },
+      "description": {
+        "en": "Your coffee routine, automated",
+        "nl": "Je koffieroutine, slim geregeld"
+      },
+      "category": "appliances",
+      "brandColor": "#A82A30",
+      "icon": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "linea-mini-r",
+          "name": {
+            "en": "Linea Mini R",
+            "nl": "Linea Mini R"
+          },
+          "class": "coffeemachine",
+          "capabilities": [
+            "onoff",
+            "target_temperature",
+            "onoff.steam",
+            "coffee_boiler_status",
+            "steam_boiler_status",
+            "steam_level",
+            "meter_coffees"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Machine",
+                "nl": "Machine"
+              }
+            },
+            "target_temperature": {
+              "title": {
+                "en": "Coffee temperature",
+                "nl": "Koffietemperatuur"
+              },
+              "min": 80,
+              "max": 100,
+              "step": 0.1,
+              "decimals": 1
+            },
+            "onoff.steam": {
+              "title": {
+                "en": "Steam boiler",
+                "nl": "Stoomboiler"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/linea-mini-r/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/linea-mini-r/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/linea-mini-r/assets/icon.svg"
+        },
+        {
+          "id": "linea-micra",
+          "name": {
+            "en": "Linea Micra",
+            "nl": "Linea Micra"
+          },
+          "class": "coffeemachine",
+          "capabilities": [
+            "onoff",
+            "target_temperature",
+            "onoff.steam",
+            "coffee_boiler_status",
+            "steam_boiler_status",
+            "steam_level",
+            "meter_coffees"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Machine",
+                "nl": "Machine"
+              }
+            },
+            "target_temperature": {
+              "title": {
+                "en": "Coffee temperature",
+                "nl": "Koffietemperatuur"
+              },
+              "min": 80,
+              "max": 100,
+              "step": 0.1,
+              "decimals": 1
+            },
+            "onoff.steam": {
+              "title": {
+                "en": "Steam boiler",
+                "nl": "Stoomboiler"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/linea-micra/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/linea-micra/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/linea-micra/assets/icon.svg"
+        },
+        {
+          "id": "gs3",
+          "name": {
+            "en": "GS3 (AV / MP)",
+            "nl": "GS3 (AV / MP)"
+          },
+          "class": "coffeemachine",
+          "capabilities": [
+            "onoff",
+            "target_temperature",
+            "onoff.steam",
+            "coffee_boiler_status",
+            "steam_boiler_status",
+            "target_temperature.steam",
+            "meter_coffees"
+          ],
+          "capabilitiesOptions": {
+            "onoff": {
+              "title": {
+                "en": "Machine",
+                "nl": "Machine"
+              }
+            },
+            "target_temperature": {
+              "title": {
+                "en": "Coffee temperature",
+                "nl": "Koffietemperatuur"
+              },
+              "min": 80,
+              "max": 110,
+              "step": 0.1,
+              "decimals": 1
+            },
+            "onoff.steam": {
+              "title": {
+                "en": "Steam boiler",
+                "nl": "Stoomboiler"
+              }
+            },
+            "target_temperature.steam": {
+              "title": {
+                "en": "Steam temperature",
+                "nl": "Stoomtemperatuur"
+              },
+              "min": 95,
+              "max": 140,
+              "step": 0.1,
+              "decimals": 1
+            },
+            "coffee_dose.a": {
+              "title": {
+                "en": "Espresso",
+                "nl": "Espresso"
+              }
+            },
+            "coffee_dose.b": {
+              "title": {
+                "en": "Doppio",
+                "nl": "Doppio"
+              }
+            },
+            "coffee_dose.c": {
+              "title": {
+                "en": "Lungo",
+                "nl": "Lungo"
+              }
+            },
+            "coffee_dose.d": {
+              "title": {
+                "en": "Americano",
+                "nl": "Americano"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/gs3/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/gs3/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.unscripted.lamarzocco/11/c41fb198-3274-4e86-8927-622908787425/drivers/gs3/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "coffee_ready",
+            "title": {
+              "nl": "De koffieboiler is gereed",
+              "en": "The coffee boiler is ready"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              }
+            ]
+          },
+          {
+            "id": "boiler_status_changed",
+            "title": {
+              "nl": "De boilerstatus is veranderd",
+              "en": "The boiler status changed"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "boiler",
+                "type": "string",
+                "title": {
+                  "nl": "Boiler",
+                  "en": "Boiler"
+                }
+              },
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "nl": "Status",
+                  "en": "Status"
+                }
+              }
+            ]
+          },
+          {
+            "id": "steam_level_changed",
+            "title": {
+              "nl": "Het stoomniveau is veranderd",
+              "en": "The steam level changed"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "level",
+                "type": "number",
+                "title": {
+                  "nl": "Stoomniveau",
+                  "en": "Steam level"
+                }
+              }
+            ]
+          },
+          {
+            "id": "coffee_count_changed",
+            "title": {
+              "nl": "De koffieteller is veranderd",
+              "en": "The coffee count changed"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "count",
+                "type": "number",
+                "title": {
+                  "nl": "Totaal koffies",
+                  "en": "Total coffees"
+                }
+              },
+              {
+                "name": "change",
+                "type": "number",
+                "title": {
+                  "nl": "Verschil",
+                  "en": "Change"
+                }
+              }
+            ]
+          },
+          {
+            "id": "steam_temperature_changed",
+            "title": {
+              "nl": "De ingestelde stoomtemperatuur is veranderd",
+              "en": "The target steam temperature changed"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=gs3&capabilities=target_temperature.steam"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "nl": "Stoomtemperatuur (°C)",
+                  "en": "Steam temperature (°C)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "gs3_dose_changed",
+            "title": {
+              "nl": "De waterdosering is veranderd",
+              "en": "The water dose changed"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=gs3&capabilities=coffee_dose.a"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "recipe",
+                "type": "string",
+                "title": {
+                  "nl": "Koffiekeuze",
+                  "en": "Coffee"
+                }
+              },
+              {
+                "name": "dose",
+                "type": "string",
+                "title": {
+                  "nl": "Knopcode (A–D)",
+                  "en": "Button code (A–D)"
+                }
+              },
+              {
+                "name": "pulses",
+                "type": "number",
+                "title": {
+                  "nl": "Pulsen",
+                  "en": "Pulses"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "boiler_has_status",
+            "title": {
+              "nl": "De boiler heeft status…",
+              "en": "The boiler has status…"
+            },
+            "titleFormatted": {
+              "nl": "[[boiler]] heeft status [[status]]",
+              "en": "[[boiler]] has status [[status]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              },
+              {
+                "name": "boiler",
+                "type": "dropdown",
+                "title": {
+                  "nl": "Boiler",
+                  "en": "Boiler"
+                },
+                "values": [
+                  {
+                    "id": "coffee",
+                    "label": {
+                      "nl": "Koffieboiler",
+                      "en": "Coffee boiler"
+                    }
+                  },
+                  {
+                    "id": "steam",
+                    "label": {
+                      "nl": "Stoomboiler",
+                      "en": "Steam boiler"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "status",
+                "type": "dropdown",
+                "title": {
+                  "nl": "Status",
+                  "en": "Status"
+                },
+                "values": [
+                  {
+                    "id": "standby",
+                    "label": {
+                      "nl": "Stand-by",
+                      "en": "Standby"
+                    }
+                  },
+                  {
+                    "id": "heating",
+                    "label": {
+                      "nl": "Opwarmen",
+                      "en": "Heating"
+                    }
+                  },
+                  {
+                    "id": "ready",
+                    "label": {
+                      "nl": "Gereed",
+                      "en": "Ready"
+                    }
+                  },
+                  {
+                    "id": "no_water",
+                    "label": {
+                      "nl": "Geen water",
+                      "en": "No water"
+                    }
+                  },
+                  {
+                    "id": "eco",
+                    "label": {
+                      "nl": "Eco",
+                      "en": "Eco"
+                    }
+                  },
+                  {
+                    "id": "off",
+                    "label": {
+                      "nl": "Uit",
+                      "en": "Off"
+                    }
+                  },
+                  {
+                    "id": "unknown",
+                    "label": {
+                      "nl": "Onbekend",
+                      "en": "Unknown"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "steam_level_is",
+            "title": {
+              "nl": "Het stoomniveau is…",
+              "en": "The steam level is…"
+            },
+            "titleFormatted": {
+              "nl": "Het stoomniveau is [[level]]",
+              "en": "The steam level is [[level]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra"
+              },
+              {
+                "name": "level",
+                "type": "dropdown",
+                "title": {
+                  "nl": "Stoomniveau",
+                  "en": "Steam level"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "nl": "Niveau 1",
+                      "en": "Level 1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "nl": "Niveau 2",
+                      "en": "Level 2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "nl": "Niveau 3",
+                      "en": "Level 3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "coffee_count_at_least",
+            "title": {
+              "nl": "Het aantal koffies is minimaal…",
+              "en": "The coffee count is at least…"
+            },
+            "titleFormatted": {
+              "nl": "Het aantal koffies is minimaal [[count]]",
+              "en": "The coffee count is at least [[count]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              },
+              {
+                "name": "count",
+                "type": "number",
+                "min": 0,
+                "step": 1,
+                "title": {
+                  "nl": "Aantal",
+                  "en": "Count"
+                }
+              }
+            ]
+          },
+          {
+            "id": "steam_temperature_at_least",
+            "title": {
+              "nl": "De stoomtemperatuur is ingesteld op minimaal…",
+              "en": "The steam temperature is set to at least…"
+            },
+            "titleFormatted": {
+              "nl": "De stoomtemperatuur is ingesteld op minimaal [[temperature]] °C",
+              "en": "The steam temperature is set to at least [[temperature]] °C"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=gs3&capabilities=target_temperature.steam"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "nl": "Stoomtemperatuur (°C)",
+                  "en": "Steam temperature (°C)"
+                },
+                "min": 95,
+                "max": 140,
+                "step": 0.1
+              }
+            ]
+          },
+          {
+            "id": "gs3_dose_at_least",
+            "title": {
+              "nl": "De waterdosering is minimaal…",
+              "en": "The water dose is at least…"
+            },
+            "titleFormatted": {
+              "nl": "De waterdosering voor [[dose]] is minimaal [[pulses]] pulsen",
+              "en": "The water dose for [[dose]] is at least [[pulses]] pulses"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=gs3&capabilities=coffee_dose.a"
+              },
+              {
+                "name": "dose",
+                "type": "dropdown",
+                "title": {
+                  "nl": "Koffiekeuze",
+                  "en": "Coffee"
+                },
+                "values": [
+                  {
+                    "id": "DoseA",
+                    "label": {
+                      "nl": "Espresso",
+                      "en": "Espresso"
+                    }
+                  },
+                  {
+                    "id": "DoseB",
+                    "label": {
+                      "nl": "Doppio",
+                      "en": "Doppio"
+                    }
+                  },
+                  {
+                    "id": "DoseC",
+                    "label": {
+                      "nl": "Lungo",
+                      "en": "Lungo"
+                    }
+                  },
+                  {
+                    "id": "DoseD",
+                    "label": {
+                      "nl": "Americano",
+                      "en": "Americano"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "pulses",
+                "type": "number",
+                "title": {
+                  "nl": "Pulsen",
+                  "en": "Pulses"
+                },
+                "min": 0,
+                "max": 9999,
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "steam_on",
+            "title": {
+              "en": "Turn steam boiler on",
+              "nl": "Zet de stoomboiler aan"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              }
+            ]
+          },
+          {
+            "id": "steam_off",
+            "title": {
+              "en": "Turn steam boiler off",
+              "nl": "Zet de stoomboiler uit"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra|gs3"
+              }
+            ]
+          },
+          {
+            "id": "set_steam_level",
+            "title": {
+              "nl": "Zet het stoomniveau op…",
+              "en": "Set steam level to…"
+            },
+            "titleFormatted": {
+              "nl": "Zet het stoomniveau op [[level]]",
+              "en": "Set steam level to [[level]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=linea-mini-r|linea-micra"
+              },
+              {
+                "name": "level",
+                "type": "dropdown",
+                "title": {
+                  "nl": "Stoomniveau",
+                  "en": "Steam level"
+                },
+                "values": [
+                  {
+                    "id": "1",
+                    "label": {
+                      "nl": "Niveau 1",
+                      "en": "Level 1"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "nl": "Niveau 2",
+                      "en": "Level 2"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "nl": "Niveau 3",
+                      "en": "Level 3"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "set_steam_temperature",
+            "title": {
+              "nl": "Stel de stoomtemperatuur in…",
+              "en": "Set steam temperature…"
+            },
+            "titleFormatted": {
+              "nl": "Zet de stoomtemperatuur op [[temperature]] °C",
+              "en": "Set steam temperature to [[temperature]] °C"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=gs3&capabilities=target_temperature.steam"
+              },
+              {
+                "name": "temperature",
+                "type": "number",
+                "title": {
+                  "nl": "Stoomtemperatuur (°C)",
+                  "en": "Steam temperature (°C)"
+                },
+                "min": 95,
+                "max": 140,
+                "step": 0.1
+              }
+            ]
+          },
+          {
+            "id": "set_gs3_dose",
+            "title": {
+              "nl": "Stel de waterdosering in…",
+              "en": "Set water dose…"
+            },
+            "titleFormatted": {
+              "nl": "Zet [[dose]] op [[pulses]] pulsen",
+              "en": "Set [[dose]] to [[pulses]] pulses"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=gs3&capabilities=coffee_dose.a"
+              },
+              {
+                "name": "dose",
+                "type": "dropdown",
+                "title": {
+                  "nl": "Koffiekeuze",
+                  "en": "Coffee"
+                },
+                "values": [
+                  {
+                    "id": "DoseA",
+                    "label": {
+                      "nl": "Espresso",
+                      "en": "Espresso"
+                    }
+                  },
+                  {
+                    "id": "DoseB",
+                    "label": {
+                      "nl": "Doppio",
+                      "en": "Doppio"
+                    }
+                  },
+                  {
+                    "id": "DoseC",
+                    "label": {
+                      "nl": "Lungo",
+                      "en": "Lungo"
+                    }
+                  },
+                  {
+                    "id": "DoseD",
+                    "label": {
+                      "nl": "Americano",
+                      "en": "Americano"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "pulses",
+                "type": "number",
+                "title": {
+                  "nl": "Pulsen",
+                  "en": "Pulses"
+                },
+                "min": 0,
+                "max": 9999,
+                "step": 1
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-13T14:55:56.625Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:support@unscripted.nl",
+      "source": null,
+      "contributors": {
+        "developers": [
+          {
+            "name": "Philippe Faut"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Updated the developer attribution to Philippe Faut. Includes the coordinated illustrated device images on white.",
+        "nl": "De ontwikkelaarsvermelding aangepast naar Philippe Faut. Met de bijpassende geïllustreerde apparaatbeelden op wit."
+      },
+      "compatibility": ">=12.9.0",
+      "tags": {
+        "en": [
+          "coffee",
+          "espresso",
+          "Linea Mini R",
+          "Linea Micra",
+          "GS3"
+        ],
+        "nl": [
+          "koffie",
+          "espresso",
+          "Linea Mini R",
+          "Linea Micra",
+          "GS3"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.5.28",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6af20bfbf2a6dec528cc5925",
+      "type": "org",
+      "userId": null,
+      "name": "Unscripted",
       "verified": false
     },
     "communityTopicId": null

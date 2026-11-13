@@ -20194,5 +20194,38 @@
     "publishedAt": "2026-11-13T11:12:02.013Z",
     "updatedAt": "2026-11-13T11:12:02.013Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.simplepc.christmascountdown",
+    "name": "Christmas Countdown",
+    "developerName": "Simon Salvin",
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-13T18:52:34.721Z",
+    "updatedAt": "2026-11-13T18:52:34.721Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.bskhvac",
+    "name": "BSK Zephyr",
+    "developerName": "Branislav Jenči",
+    "developerId": "6af2e5470f89e422d5f229b6",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/BranislavJenci1/com.bskhvac",
+    "publishedAt": "2026-11-13T18:52:35.393Z",
+    "updatedAt": "2026-11-13T18:52:35.393Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.unscripted.lamarzocco",
+    "name": "La Marzocco",
+    "developerName": "Unscripted",
+    "developerId": "6af20bfbf2a6dec528cc5925",
+    "version": "0.5.28",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-13T18:52:35.763Z",
+    "updatedAt": "2026-11-13T18:52:35.763Z",
+    "communityTopicId": null
   }
 ]
