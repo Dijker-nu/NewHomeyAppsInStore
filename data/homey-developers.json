@@ -558,6 +558,12 @@
     "forumUsername": "bramtops"
   },
   {
+    "developerId": "6af2e5470f89e422d5f229b6",
+    "developerName": "Branislav Jenči",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "60a61488d2e36db0eb91350c",
     "developerName": "Brel Home",
     "forumUserID": null,
@@ -5420,6 +5426,12 @@
   {
     "developerId": "647702fda12dfed23f6f6fbc",
     "developerName": "Unfolded Circle ApS",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6af20bfbf2a6dec528cc5925",
+    "developerName": "Unscripted",
     "forumUserID": null,
     "forumUsername": null
   },
