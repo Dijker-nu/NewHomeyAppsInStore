@@ -1159,10 +1159,10 @@
     "name": "TKB Home",
     "developerName": "Phil Shotton",
     "developerId": "64497abc03533553d8087fa2",
-    "version": "3.1.7",
+    "version": "3.1.10",
     "sourceRepository": "https://github.com/pshotton/com.tkbhome",
     "publishedAt": "2019-11-12T13:57:54.321Z",
-    "updatedAt": "2026-09-02T10:01:53.683Z",
+    "updatedAt": "2026-11-15T11:11:44.869Z",
     "communityTopicId": null
   },
   {
@@ -5625,10 +5625,10 @@
     "name": "Flow Checker",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.38.2",
+    "version": "1.38.3",
     "sourceRepository": "https://github.com/martijnpoppen/com.athom.flowchecker",
     "publishedAt": "2021-08-30T21:59:24.615Z",
-    "updatedAt": "2026-11-14T10:38:36.282Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 50986
   },
   {
@@ -7121,10 +7121,10 @@
     "name": "Zaptec",
     "developerName": "Patrick Wadström",
     "developerId": "63fba92a3ec2f7cbc3afc1e0",
-    "version": "1.10.4",
+    "version": "1.13.0",
     "sourceRepository": "https://github.com/patricke94/com.zaptec",
     "publishedAt": "2023-02-26T18:47:06.101Z",
-    "updatedAt": "2025-11-04T13:19:08.454Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 118631
   },
   {
@@ -7572,10 +7572,10 @@
     "name": "WhatsApp",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "3.0.26",
+    "version": "3.0.27",
     "sourceRepository": "https://github.com/martijnpoppen/com.whatsapp",
     "publishedAt": "2023-06-26T07:44:55.880Z",
-    "updatedAt": "2026-11-14T10:38:36.283Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 90749
   },
   {
@@ -10454,10 +10454,10 @@
     "name": "U",
     "developerName": "Koktail software development",
     "developerId": "63775e9308e3ec50c7800003",
-    "version": "1.1.7",
+    "version": "1.2.2",
     "sourceRepository": "",
     "publishedAt": "2025-02-04T17:48:49.817Z",
-    "updatedAt": "2026-09-26T10:58:51.848Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": null
   },
   {
@@ -11675,10 +11675,10 @@
     "name": "Marstek Energy Storage",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.5.23",
+    "version": "1.5.24",
     "sourceRepository": "https://github.com/kaohlive/com.kaoh.Marstek",
     "publishedAt": "2025-09-13T22:10:57.968Z",
-    "updatedAt": "2026-08-25T07:08:36.278Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 142928
   },
   {
@@ -11829,10 +11829,10 @@
     "name": "Ollama",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.9",
+    "version": "1.2.10",
     "sourceRepository": "https://github.com/smarthomesven/homey-ollama",
     "publishedAt": "2025-10-05T12:47:01.295Z",
-    "updatedAt": "2026-10-10T09:58:43.980Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 143768
   },
   {
@@ -12225,10 +12225,10 @@
     "name": "Duux Gen2",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "2.10.4",
+    "version": "2.10.5",
     "sourceRepository": "https://github.com/smarthomesven/homey-duux-gen2",
     "publishedAt": "2025-11-18T16:27:43.875Z",
-    "updatedAt": "2026-11-11T11:10:46.321Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 145511
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.35.0",
+    "version": "3.35.4",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-14T10:38:36.283Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 147496
   },
   {
@@ -12401,10 +12401,10 @@
     "name": "WarmteWizard",
     "developerName": "Warmte Wizard",
     "developerId": "68ed4f8b78936837cbe81bee",
-    "version": "1.2.12",
+    "version": "1.2.13",
     "sourceRepository": "",
     "publishedAt": "2025-12-11T00:56:34.461Z",
-    "updatedAt": "2026-11-05T11:09:18.810Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": null
   },
   {
@@ -12654,10 +12654,10 @@
     "name": "Web Proxy",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.18",
+    "version": "1.1.19",
     "sourceRepository": "https://github.com/smarthomesven/homey-web-proxy",
     "publishedAt": "2025-12-20T18:58:25.598Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-11-15T11:11:44.870Z",
     "communityTopicId": 147450
   },
   {
@@ -12918,10 +12918,10 @@
     "name": "HomeWizard Cleaner",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.17",
+    "version": "1.1.18",
     "sourceRepository": "https://github.com/smarthomesven/homey-homewizard-cleaner",
     "publishedAt": "2026-01-10T23:52:11.368Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 149357
   },
   {
@@ -13017,10 +13017,10 @@
     "name": "ASUSTOR",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "sourceRepository": "https://github.com/smarthomesven/homey-asustor",
     "publishedAt": "2026-01-18T20:39:51.828Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 149531
   },
   {
@@ -13061,10 +13061,10 @@
     "name": "AdGuard Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.3.3",
+    "version": "1.3.4",
     "sourceRepository": "https://github.com/smarthomesven/homey-adguard-home",
     "publishedAt": "2026-01-22T19:49:21.791Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 149822
   },
   {
@@ -14370,10 +14370,10 @@
     "name": "Flow Version History",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.27",
+    "version": "1.0.28",
     "sourceRepository": "https://github.com/smarthomesven/homey-flow-version-history",
     "publishedAt": "2026-03-21T16:18:24.210Z",
-    "updatedAt": "2026-10-30T10:12:31.889Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 152775
   },
   {
@@ -14964,10 +14964,10 @@
     "name": "TP-Link Omada",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "sourceRepository": "https://github.com/smarthomesven/homey-tplink-omada",
     "publishedAt": "2026-04-15T19:01:37.879Z",
-    "updatedAt": "2026-10-10T09:58:43.981Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 153824
   },
   {
@@ -15151,10 +15151,10 @@
     "name": "ThirdReality Hub",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "sourceRepository": "https://github.com/smarthomesven/homey-thirdreality-hub",
     "publishedAt": "2026-04-24T23:26:24.834Z",
-    "updatedAt": "2026-10-16T08:18:42.775Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 154176
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.2.4",
+    "version": "6.3.3",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-14T10:38:36.284Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": null
   },
   {
@@ -16229,10 +16229,10 @@
     "name": "VW Group Vehicles",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "sourceRepository": "https://github.com/andiwirz/com.vwgroup.vehiclevata",
     "publishedAt": "2026-06-19T18:12:51.015Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 156345
   },
   {
@@ -16669,10 +16669,10 @@
     "name": "Link2Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.12",
+    "version": "1.0.13",
     "sourceRepository": "https://github.com/smarthomesven/homey-link2home",
     "publishedAt": "2026-07-14T00:12:43.396Z",
-    "updatedAt": "2026-11-06T11:06:26.550Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 157174
   },
   {
@@ -17285,10 +17285,10 @@
     "name": "Nordlux Smart Light",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.4.4",
+    "version": "1.4.5",
     "sourceRepository": "https://github.com/smarthomesven/homey-nordlux",
     "publishedAt": "2026-08-09T21:24:19.617Z",
-    "updatedAt": "2026-10-14T08:50:55.598Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 158091
   },
   {
@@ -18550,10 +18550,10 @@
     "name": "Lepro",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.0",
+    "version": "1.1.2",
     "sourceRepository": "https://github.com/smarthomesven/homey-lepro",
     "publishedAt": "2026-09-25T08:55:34.645Z",
-    "updatedAt": "2026-10-31T09:47:34.830Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 159951
   },
   {
@@ -18803,10 +18803,10 @@
     "name": "Sonnounce",
     "developerName": "Tobias Vinzents",
     "developerId": "6aa1b37b4b2b66c1158fc9a4",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T23:17:34.955Z",
-    "updatedAt": "2026-11-07T10:25:34.160Z",
+    "updatedAt": "2026-11-15T11:11:44.871Z",
     "communityTopicId": 159398
   },
   {
