@@ -1,1 +1,777 @@
-[]
+[
+  {
+    "id": "com.simplepc.rointe",
+    "rating": null,
+    "liveBuild": {
+      "id": 11,
+      "name": {
+        "en": "Rointe"
+      },
+      "version": "0.5.6",
+      "readme": {
+        "en": "Rointe brings your Rointe Nexa radiators and towel rails into Homey, so you can see each room's temperature and set the heating from your dashboard or your Flows. Two dashboard widgets let you turn a dial to heat a room or a whole group of rooms, and holiday mode keeps the house frost-free, or on a simple schedule for pets, while you're away, then puts every radiator back as it was. A Towel rails widget turns a towel rail on for a set time with one tap, using its own timer.\n\nAdd a radiator, sign in with your Rointe Nexa email and password, and pick the radiators you want. Your password is only used while adding radiators and isn't stored. This is a community app and isn't made or supported by Rointe.\n",
+        "es": "Rointe lleva tus radiadores y toalleros Rointe Nexa a Homey, para que veas la temperatura de cada habitación y controles la calefacción desde tu panel o tus Flows. Dos widgets te permiten girar un mando para calentar una habitación o un grupo entero, y el modo vacaciones mantiene la casa sin heladas, o con un programa sencillo para las mascotas, mientras estás fuera, y después deja cada radiador como estaba. El widget Toalleros enciende un toallero durante un tiempo fijo con un solo toque, usando su propio temporizador.\n\nAñade un radiador, inicia sesión con el correo y la contraseña de Rointe Nexa y elige los radiadores que quieras. Tu contraseña solo se usa al añadir los radiadores y no se guarda. Es una app de la comunidad y no está hecha ni respaldada por Rointe.\n",
+        "fr": "Rointe intègre vos radiateurs et sèche-serviettes Rointe Nexa à Homey : vous voyez la température de chaque pièce et réglez le chauffage depuis votre tableau de bord ou vos Flows. Deux widgets vous permettent de tourner une molette pour chauffer une pièce ou tout un groupe de pièces, et le mode vacances garde la maison hors gel, ou sur un programme simple pour les animaux, pendant votre absence, puis remet chaque radiateur comme il était. Le widget Sèche-serviettes allume un sèche-serviettes pour une durée choisie d'une seule touche, grâce à sa propre minuterie.\n\nAjoutez un radiateur, connectez-vous avec l'e-mail et le mot de passe de Rointe Nexa, puis choisissez vos radiateurs. Votre mot de passe ne sert qu'à l'ajout des radiateurs et n'est pas conservé. Cette app est communautaire : elle n'est ni conçue ni prise en charge par Rointe.\n",
+        "nl": "Rointe brengt je Rointe Nexa-radiatoren en handdoekradiatoren naar Homey, zodat je de temperatuur van elke kamer ziet en de verwarming regelt vanaf je dashboard of in je Flows. Met twee dashboardwidgets draai je aan een knop om een kamer of een hele groep kamers te verwarmen, en de vakantiestand houdt het huis vorstvrij, of op een eenvoudig schema voor huisdieren, terwijl je weg bent en zet daarna elke radiator terug zoals hij was. Met de widget Handdoekradiatoren zet je met één tik een handdoekradiator aan voor een vaste tijd, op zijn eigen timer.\n\nVoeg een radiator toe, log in met het e-mailadres en wachtwoord van Rointe Nexa en kies de radiatoren die je wilt. Je wachtwoord wordt alleen gebruikt bij het toevoegen van radiatoren en wordt niet bewaard. Dit is een community-app en wordt niet gemaakt of ondersteund door Rointe.\n"
+      },
+      "description": {
+        "en": "Warm rooms, exactly when you want them.",
+        "nl": "Warme kamers, precies wanneer jij dat wilt.",
+        "fr": "Des pièces chaudes, exactement quand vous le voulez.",
+        "es": "Habitaciones cálidas, justo cuando las quieres."
+      },
+      "category": "climate",
+      "brandColor": "#e4002b",
+      "icon": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/assets/images/small.jpg",
+      "imageLarge": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/assets/images/large.jpg",
+      "drivers": [
+        {
+          "id": "radiator",
+          "name": {
+            "en": "Rointe radiator",
+            "nl": "Rointe-radiator",
+            "fr": "Radiateur Rointe",
+            "es": "Radiador Rointe"
+          },
+          "class": "thermostat",
+          "capabilities": [
+            "target_temperature",
+            "measure_temperature",
+            "thermostat_mode",
+            "rointe_preset",
+            "rointe_heating",
+            "operational_state",
+            "alarm_contact",
+            "measure_power"
+          ],
+          "capabilitiesOptions": {
+            "target_temperature": {
+              "min": 7,
+              "max": 30,
+              "step": 0.5
+            },
+            "thermostat_mode": {
+              "values": [
+                {
+                  "id": "heat",
+                  "title": {
+                    "en": "Heat",
+                    "nl": "Verwarmen",
+                    "fr": "Chauffer",
+                    "es": "Calentar"
+                  }
+                },
+                {
+                  "id": "auto",
+                  "title": {
+                    "en": "Schedule",
+                    "nl": "Schema",
+                    "fr": "Programme",
+                    "es": "Programa"
+                  }
+                },
+                {
+                  "id": "off",
+                  "title": {
+                    "en": "Off",
+                    "nl": "Uit",
+                    "fr": "Arrêt",
+                    "es": "Apagado"
+                  }
+                }
+              ]
+            },
+            "operational_state": {
+              "title": {
+                "en": "Activity",
+                "nl": "Activiteit",
+                "fr": "Activité",
+                "es": "Actividad"
+              },
+              "uiComponent": null,
+              "values": [
+                {
+                  "id": "running",
+                  "title": {
+                    "en": "Heating",
+                    "nl": "Verwarmt",
+                    "fr": "Chauffe",
+                    "es": "Calentando"
+                  }
+                },
+                {
+                  "id": "stopped",
+                  "title": {
+                    "en": "Idle",
+                    "nl": "Inactief",
+                    "fr": "Inactif",
+                    "es": "Inactivo"
+                  }
+                }
+              ]
+            },
+            "alarm_contact": {
+              "title": {
+                "en": "Window open",
+                "nl": "Raam open",
+                "fr": "Fenêtre ouverte",
+                "es": "Ventana abierta"
+              }
+            },
+            "measure_power": {
+              "approximated": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/drivers/radiator/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/drivers/radiator/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/drivers/radiator/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "holiday_ended",
+            "title": {
+              "en": "Holiday ended",
+              "nl": "Vakantie beëindigd",
+              "fr": "Vacances terminées",
+              "es": "Vacaciones terminadas"
+            }
+          },
+          {
+            "id": "holiday_started",
+            "title": {
+              "en": "Holiday started",
+              "nl": "Vakantie gestart",
+              "fr": "Vacances démarrées",
+              "es": "Vacaciones empezadas"
+            },
+            "tokens": [
+              {
+                "name": "until",
+                "type": "string",
+                "title": {
+                  "en": "Back",
+                  "nl": "Terug",
+                  "fr": "Retour",
+                  "es": "Vuelta"
+                },
+                "example": {
+                  "en": "Sat 14 Feb, 16:00",
+                  "nl": "za 14 feb, 16:00",
+                  "fr": "sam. 14 févr., 16:00",
+                  "es": "sáb, 14 feb, 16:00"
+                }
+              }
+            ]
+          },
+          {
+            "id": "went_offline",
+            "title": {
+              "en": "Went offline",
+              "nl": "Ging offline",
+              "fr": "Est passé hors ligne",
+              "es": "Se desconectó"
+            },
+            "hint": {
+              "en": "When the radiator drops off Rointe, or Homey can't reach Rointe for 5 minutes.",
+              "nl": "Wanneer de radiator wegvalt bij Rointe, of Homey Rointe 5 minuten niet kan bereiken.",
+              "fr": "Quand le radiateur se déconnecte de Rointe, ou que Homey ne peut pas joindre Rointe pendant 5 minutes.",
+              "es": "Cuando el radiador se desconecta de Rointe, o Homey no puede conectar con Rointe durante 5 minutos."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "reason",
+                "type": "string",
+                "title": {
+                  "en": "Reason",
+                  "nl": "Reden",
+                  "fr": "Raison",
+                  "es": "Motivo"
+                },
+                "example": {
+                  "en": "The radiator is offline in Rointe",
+                  "nl": "De radiator is offline in Rointe",
+                  "fr": "Le radiateur est hors ligne dans Rointe",
+                  "es": "El radiador está desconectado en Rointe"
+                }
+              }
+            ]
+          },
+          {
+            "id": "came_online",
+            "title": {
+              "en": "Came back online",
+              "nl": "Weer online",
+              "fr": "Est revenu en ligne",
+              "es": "Volvió a conectarse"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "holiday_active",
+            "title": {
+              "en": "Holiday !{{is|isn't}} on",
+              "nl": "Vakantie !{{is|is niet}} actief",
+              "fr": "Les vacances !{{sont|ne sont pas}} en cours",
+              "es": "Las vacaciones !{{están|no están}} activas"
+            }
+          },
+          {
+            "id": "preset_is",
+            "title": {
+              "en": "Preset !{{is|isn't}}",
+              "nl": "Voorinstelling !{{is|is niet}}",
+              "fr": "Le préréglage !{{est|n'est pas}}",
+              "es": "El preajuste !{{es|no es}}"
+            },
+            "titleFormatted": {
+              "en": "Preset !{{is|isn't}} [[preset]]",
+              "nl": "Voorinstelling !{{is|is niet}} [[preset]]",
+              "fr": "Le préréglage !{{est|n'est pas}} [[preset]]",
+              "es": "El preajuste !{{es|no es}} [[preset]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator"
+              },
+              {
+                "type": "dropdown",
+                "name": "preset",
+                "title": {
+                  "en": "Preset",
+                  "nl": "Voorinstelling",
+                  "fr": "Préréglage",
+                  "es": "Preajuste"
+                },
+                "values": [
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort",
+                      "nl": "Comfort",
+                      "fr": "Confort",
+                      "es": "Confort"
+                    }
+                  },
+                  {
+                    "id": "eco",
+                    "title": {
+                      "en": "Eco",
+                      "nl": "Eco",
+                      "fr": "Éco",
+                      "es": "Eco"
+                    }
+                  },
+                  {
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost",
+                      "nl": "Vorst",
+                      "fr": "Hors-gel",
+                      "es": "Antiheladas"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "timer_running",
+            "title": {
+              "en": "Timer !{{is|isn't}} running",
+              "nl": "Timer !{{loopt|loopt niet}}",
+              "fr": "La minuterie !{{est|n'est pas}} en cours",
+              "es": "El temporizador !{{está|no está}} en marcha"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator&capabilities=rointe_timer_left"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "holiday_end",
+            "title": {
+              "en": "End holiday now",
+              "nl": "Vakantie nu beëindigen",
+              "fr": "Terminer les vacances maintenant",
+              "es": "Terminar las vacaciones ahora"
+            },
+            "hint": {
+              "en": "Returns every radiator to how it was before the holiday.",
+              "nl": "Zet elke radiator terug zoals hij voor de vakantie was.",
+              "fr": "Remet chaque radiateur comme il était avant les vacances.",
+              "es": "Deja cada radiador como estaba antes de las vacaciones."
+            }
+          },
+          {
+            "id": "holiday_start",
+            "title": {
+              "en": "Start holiday",
+              "nl": "Vakantie starten",
+              "fr": "Démarrer les vacances",
+              "es": "Empezar vacaciones"
+            },
+            "titleFormatted": {
+              "en": "Start holiday until [[date]] at [[time]]",
+              "nl": "Vakantie starten tot [[date]] om [[time]]",
+              "fr": "Démarrer les vacances jusqu'au [[date]] à [[time]]",
+              "es": "Empezar vacaciones hasta el [[date]] a las [[time]]"
+            },
+            "hint": {
+              "en": "Puts the radiators in holiday mode until you're back, then returns each one to how it was. If a holiday is already on, this changes the return time.",
+              "nl": "Zet de radiatoren in vakantiestand tot je terug bent en zet daarna elke radiator terug zoals hij was. Is er al een vakantie bezig, dan verandert dit de terugkeertijd.",
+              "fr": "Met les radiateurs en mode vacances jusqu'à votre retour, puis remet chacun comme il était. Si des vacances sont déjà en cours, cela change l'heure de retour.",
+              "es": "Pone los radiadores en modo vacaciones hasta que vuelvas y después deja cada uno como estaba. Si ya hay unas vacaciones en curso, cambia la hora de vuelta."
+            },
+            "args": [
+              {
+                "name": "date",
+                "type": "date",
+                "title": {
+                  "en": "Return date",
+                  "nl": "Terugkeerdatum",
+                  "fr": "Date de retour",
+                  "es": "Fecha de vuelta"
+                }
+              },
+              {
+                "name": "time",
+                "type": "time",
+                "title": {
+                  "en": "Return time",
+                  "nl": "Terugkeertijd",
+                  "fr": "Heure de retour",
+                  "es": "Hora de vuelta"
+                }
+              }
+            ]
+          },
+          {
+            "id": "reconnect",
+            "title": {
+              "en": "Reconnect to Rointe",
+              "nl": "Opnieuw verbinden met Rointe",
+              "fr": "Se reconnecter à Rointe",
+              "es": "Volver a conectar con Rointe"
+            },
+            "hint": {
+              "en": "Signs in to Rointe again and restarts the live connection for all your radiators. Not normally needed: the app reconnects by itself.",
+              "nl": "Meldt opnieuw aan bij Rointe en start de live verbinding voor al je radiatoren opnieuw. Normaal niet nodig: de app maakt zelf opnieuw verbinding.",
+              "fr": "Se reconnecte à Rointe et redémarre la connexion en direct de tous vos radiateurs. Normalement inutile : l'app se reconnecte toute seule.",
+              "es": "Vuelve a iniciar sesión en Rointe y reinicia la conexión en directo de todos tus radiadores. Normalmente no hace falta: la app se reconecta sola."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator"
+              }
+            ]
+          },
+          {
+            "id": "set_preset",
+            "title": {
+              "en": "Set preset",
+              "nl": "Voorinstelling kiezen",
+              "fr": "Choisir le préréglage",
+              "es": "Elegir preajuste"
+            },
+            "titleFormatted": {
+              "en": "Set preset to [[preset]]",
+              "nl": "Voorinstelling instellen op [[preset]]",
+              "fr": "Régler le préréglage sur [[preset]]",
+              "es": "Poner el preajuste en [[preset]]"
+            },
+            "hint": {
+              "en": "Heats the radiator at its saved Comfort, Eco or Frost temperature.",
+              "nl": "Verwarmt de radiator op de opgeslagen Comfort-, Eco- of Vorsttemperatuur.",
+              "fr": "Chauffe le radiateur à sa température Confort, Éco ou Hors-gel enregistrée.",
+              "es": "Calienta el radiador a su temperatura guardada de Confort, Eco o Antiheladas."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator"
+              },
+              {
+                "type": "dropdown",
+                "name": "preset",
+                "title": {
+                  "en": "Preset",
+                  "nl": "Voorinstelling",
+                  "fr": "Préréglage",
+                  "es": "Preajuste"
+                },
+                "values": [
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort",
+                      "nl": "Comfort",
+                      "fr": "Confort",
+                      "es": "Confort"
+                    }
+                  },
+                  {
+                    "id": "eco",
+                    "title": {
+                      "en": "Eco",
+                      "nl": "Eco",
+                      "fr": "Éco",
+                      "es": "Eco"
+                    }
+                  },
+                  {
+                    "id": "frost",
+                    "title": {
+                      "en": "Frost",
+                      "nl": "Vorst",
+                      "fr": "Hors-gel",
+                      "es": "Antiheladas"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "start_timer",
+            "title": {
+              "en": "Turn on with the timer",
+              "nl": "Aanzetten met de timer",
+              "fr": "Allumer avec la minuterie",
+              "es": "Encender con el temporizador"
+            },
+            "titleFormatted": {
+              "en": "Turn on for [[minutes]] minutes at [[heat]]",
+              "nl": "[[minutes]] minuten aanzetten op [[heat]]",
+              "fr": "Allumer [[minutes]] minutes à [[heat]]",
+              "es": "Encender [[minutes]] minutos a [[heat]]"
+            },
+            "hint": {
+              "en": "Uses the towel rail's own countdown timer, so it switches itself off at the end even if Homey or the internet drops out.",
+              "nl": "Gebruikt de eigen timer van de handdoekradiator, dus hij gaat aan het eind vanzelf uit, ook als Homey of internet wegvalt.",
+              "fr": "Utilise la minuterie du sèche-serviettes, qui s'éteint donc tout seul à la fin, même si Homey ou internet sont coupés.",
+              "es": "Usa el temporizador propio del toallero, así que se apaga solo al terminar aunque Homey o internet se caigan."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator&capabilities=rointe_timer_left"
+              },
+              {
+                "type": "number",
+                "name": "minutes",
+                "title": {
+                  "en": "Minutes",
+                  "nl": "Minuten",
+                  "fr": "Minutes",
+                  "es": "Minutos"
+                },
+                "min": 1,
+                "max": 240,
+                "step": 1,
+                "placeholder": {
+                  "en": "30"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "heat",
+                "title": {
+                  "en": "Heat",
+                  "nl": "Warmte",
+                  "fr": "Chaleur",
+                  "es": "Calor"
+                },
+                "values": [
+                  {
+                    "id": "max",
+                    "title": {
+                      "en": "max power",
+                      "nl": "maximaal vermogen",
+                      "fr": "pleine puissance",
+                      "es": "máxima potencia"
+                    }
+                  },
+                  {
+                    "id": "comfort",
+                    "title": {
+                      "en": "Comfort temperature",
+                      "nl": "Comforttemperatuur",
+                      "fr": "température Confort",
+                      "es": "temperatura de Confort"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "stop_timer",
+            "title": {
+              "en": "Stop the timer",
+              "nl": "Timer stoppen",
+              "fr": "Arrêter la minuterie",
+              "es": "Parar el temporizador"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=radiator&capabilities=rointe_timer_left"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": {
+        "groups": {
+          "name": {
+            "en": "Heating groups",
+            "nl": "Verwarmingsgroepen",
+            "fr": "Groupes de chauffage",
+            "es": "Grupos de calefacción"
+          },
+          "height": 560,
+          "transparent": false,
+          "settings": [
+            {
+              "id": "title",
+              "type": "text",
+              "title": {
+                "en": "Title",
+                "nl": "Titel",
+                "fr": "Titre",
+                "es": "Título"
+              },
+              "value": "Heating groups"
+            }
+          ],
+          "api": {
+            "getState": {
+              "method": "GET",
+              "path": "/state"
+            },
+            "setGroups": {
+              "method": "POST",
+              "path": "/groups"
+            },
+            "heat": {
+              "method": "POST",
+              "path": "/heat"
+            },
+            "off": {
+              "method": "POST",
+              "path": "/off"
+            },
+            "startHoliday": {
+              "method": "POST",
+              "path": "/holiday/start"
+            },
+            "endHoliday": {
+              "method": "POST",
+              "path": "/holiday/end"
+            }
+          },
+          "id": "groups",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/widgets/groups/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/widgets/groups/preview-light.png"
+        },
+        "heating": {
+          "name": {
+            "en": "Heating dial",
+            "nl": "Verwarmingsknop",
+            "fr": "Molette de chauffage",
+            "es": "Mando de calefacción"
+          },
+          "height": 560,
+          "transparent": false,
+          "settings": [
+            {
+              "id": "title",
+              "type": "text",
+              "title": {
+                "en": "Title",
+                "nl": "Titel",
+                "fr": "Titre",
+                "es": "Título"
+              },
+              "value": "Heating"
+            }
+          ],
+          "devices": {
+            "type": "app",
+            "singular": false
+          },
+          "api": {
+            "getState": {
+              "method": "GET",
+              "path": "/state"
+            },
+            "heat": {
+              "method": "POST",
+              "path": "/heat"
+            },
+            "off": {
+              "method": "POST",
+              "path": "/off"
+            }
+          },
+          "id": "heating",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/widgets/heating/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/widgets/heating/preview-light.png"
+        },
+        "towels": {
+          "name": {
+            "en": "Towel rails",
+            "nl": "Handdoekradiatoren",
+            "fr": "Sèche-serviettes",
+            "es": "Toalleros"
+          },
+          "height": 300,
+          "transparent": false,
+          "settings": [
+            {
+              "id": "title",
+              "type": "text",
+              "title": {
+                "en": "Title",
+                "nl": "Titel",
+                "fr": "Titre",
+                "es": "Título"
+              },
+              "value": "Towel rails"
+            },
+            {
+              "id": "heat",
+              "type": "dropdown",
+              "title": {
+                "en": "Heat",
+                "nl": "Warmte",
+                "fr": "Chaleur",
+                "es": "Calor"
+              },
+              "value": "max",
+              "values": [
+                {
+                  "id": "max",
+                  "title": {
+                    "en": "Max power",
+                    "nl": "Maximaal vermogen",
+                    "fr": "Pleine puissance",
+                    "es": "Máxima potencia"
+                  }
+                },
+                {
+                  "id": "comfort",
+                  "title": {
+                    "en": "Comfort temperature",
+                    "nl": "Comforttemperatuur",
+                    "fr": "Température Confort",
+                    "es": "Temperatura de Confort"
+                  }
+                }
+              ]
+            }
+          ],
+          "api": {
+            "getState": {
+              "method": "GET",
+              "path": "/state"
+            },
+            "startTimer": {
+              "method": "POST",
+              "path": "/start"
+            },
+            "stopTimer": {
+              "method": "POST",
+              "path": "/stop"
+            }
+          },
+          "id": "towels",
+          "previewDark": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/widgets/towels/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.simplepc.rointe/11/470f131a-77ac-4428-9e55-1fe2cab34ff6/widgets/towels/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 161240,
+      "state": "live",
+      "stateChangedAt": "2026-11-16T09:37:59.665Z",
+      "bugs": "https://community.homey.app/t/app-pro-test-rointe-your-rointe-nexa-radiators-live-in-homey/161240",
+      "homepage": null,
+      "support": "mailto:simon@simple-pc.com",
+      "source": null,
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "SimonSalvin"
+          }
+        }
+      },
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "New Towel rails widget: tap 2h, 1h, 30m or 15m to run a towel rail on its own timer, with a countdown and Reset. Flow cards for the timer and for Comfort, Eco and Frost, and those temperatures as radiator settings. Window open and estimated power for Homey Energy. The Motion indicator is gone: the radiators' presence sensors weren't reliable enough outside the radiator. Holiday mode settings are easier to read on a phone.",
+        "nl": "Nieuwe widget Handdoekradiatoren: tik op 2u, 1u, 30m of 15m om een handdoekradiator op zijn eigen timer te laten draaien, met aftellen en Reset. Flowkaarten voor de timer en voor Comfort, Eco en Vorst, en die temperaturen als radiatorinstellingen. Raam open en geschat vermogen voor Homey Energy. De bewegingsindicator is verdwenen: de aanwezigheidssensoren van de radiatoren waren buiten de radiator niet betrouwbaar genoeg. De instellingen van de vakantiemodus zijn beter leesbaar op een telefoon.",
+        "fr": "Nouveau widget Sèche-serviettes : touchez 2h, 1h, 30m ou 15m pour lancer un sèche-serviettes sur sa propre minuterie, avec compte à rebours et Réinitialiser. Cartes Flow pour la minuterie et pour Confort, Éco et Hors-gel, et ces températures dans les réglages du radiateur. Fenêtre ouverte et puissance estimée pour Homey Energy. L'indicateur Mouvement disparaît : les détecteurs de présence des radiateurs n'étaient pas assez fiables en dehors du radiateur. Les réglages du mode vacances sont plus lisibles sur un téléphone.",
+        "es": "Nuevo widget Toalleros: toca 2h, 1h, 30m o 15m para poner un toallero en marcha con su propio temporizador, con cuenta atrás y Reiniciar. Tarjetas de Flow para el temporizador y para Confort, Eco y Antiheladas, y esas temperaturas en los ajustes del radiador. Ventana abierta y potencia estimada para Homey Energy. Se quita el indicador de Movimiento: los sensores de presencia de los radiadores no eran lo bastante fiables fuera del radiador. Los ajustes del modo vacaciones se leen mejor en el móvil."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.5.6",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6acd2e5bbdc8421d78c61bff",
+      "type": "user",
+      "userId": "61c9d6faedefef0baea7e2f0",
+      "name": "Simon Salvin",
+      "verified": false
+    },
+    "communityTopicId": 161240
+  }
+]

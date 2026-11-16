@@ -422,10 +422,10 @@
     "name": "Bosch-Siemens Home Connect",
     "developerName": "Home Connect GmbH",
     "developerId": "63c030ba92d9f5336c833d95",
-    "version": "3.2.84",
+    "version": "3.2.85",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:53:52.137Z",
-    "updatedAt": "2025-12-16T17:37:50.998Z",
+    "updatedAt": "2026-11-16T11:40:55.313Z",
     "communityTopicId": null
   },
   {
@@ -433,10 +433,10 @@
     "name": "HomeWizard",
     "developerName": "Jeroen Tebbens",
     "developerId": "5dcab9731c90c866f9364176",
-    "version": "3.19.9",
+    "version": "3.20.5",
     "sourceRepository": "https://github.com/jtebbens/com.homewizard",
     "publishedAt": "2019-11-12T13:53:55.890Z",
-    "updatedAt": "2026-10-02T09:54:22.794Z",
+    "updatedAt": "2026-11-16T11:40:55.314Z",
     "communityTopicId": 19267
   },
   {
@@ -4030,10 +4030,10 @@
     "name": "HDL SmartBus",
     "developerName": "Andreas Lydersen",
     "developerId": "5e3b2e9c27fdee05c1e9c4b2",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "sourceRepository": "https://github.com/alydersen/hdl-smartbus-homey",
     "publishedAt": "2020-02-05T21:07:40.047Z",
-    "updatedAt": "2026-11-10T11:23:16.738Z",
+    "updatedAt": "2026-11-16T11:40:55.314Z",
     "communityTopicId": 26575
   },
   {
@@ -4063,10 +4063,10 @@
     "name": "Weather Underground",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "4.0.8",
+    "version": "4.0.11",
     "sourceRepository": "https://github.com/AdyRock/com.weatherunderground",
     "publishedAt": "2020-02-25T19:20:32.622Z",
-    "updatedAt": "2026-05-31T22:00:53.068Z",
+    "updatedAt": "2026-11-16T11:40:55.314Z",
     "communityTopicId": 26309
   },
   {
@@ -4644,12 +4644,12 @@
   {
     "appId": "com.gruijter.beeclear",
     "name": "BeeClear",
-    "developerName": "BeeClear .",
-    "developerId": "6469fac1726ffb21b4f04245",
+    "developerName": "Robin de Gruijter",
+    "developerId": "5dcab95d1c90c866f9364089",
     "version": "3.1.0",
     "sourceRepository": "",
     "publishedAt": "2020-09-26T16:30:22.093Z",
-    "updatedAt": "2024-12-13T14:53:10.774Z",
+    "updatedAt": "2026-11-16T11:40:55.314Z",
     "communityTopicId": 80608
   },
   {
@@ -5438,10 +5438,10 @@
     "name": "CallMeBot",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "2.1.0",
+    "version": "2.1.1",
     "sourceRepository": "https://github.com/gruijter/com.gruijter.callmebot",
     "publishedAt": "2021-06-12T18:44:37.868Z",
-    "updatedAt": "2026-10-13T10:46:12.220Z",
+    "updatedAt": "2026-11-16T11:40:55.314Z",
     "communityTopicId": 48374
   },
   {
@@ -9552,10 +9552,10 @@
     "name": "Find My",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.9.9",
+    "version": "1.9.10",
     "sourceRepository": "https://github.com/martijnpoppen/com.apple.findmy",
     "publishedAt": "2024-08-16T14:07:36.540Z",
-    "updatedAt": "2026-10-26T09:06:38.850Z",
+    "updatedAt": "2026-11-16T11:40:55.315Z",
     "communityTopicId": 114491
   },
   {
@@ -9970,10 +9970,10 @@
     "name": "Jablotron Futura",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2024-10-14T22:36:06.905Z",
-    "updatedAt": "2026-06-20T20:25:05.901Z",
+    "updatedAt": "2026-11-16T11:40:55.315Z",
     "communityTopicId": null
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.35.4",
+    "version": "3.36.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-15T11:11:44.870Z",
+    "updatedAt": "2026-11-16T11:40:55.315Z",
     "communityTopicId": 147496
   },
   {
@@ -13666,10 +13666,10 @@
     "name": "Hoymiles Wi-Fi Solar Panel",
     "developerName": "Gabriel Pedrosa Machado",
     "developerId": "69782a0e6b884a38a96c58e6",
-    "version": "1.1.26",
+    "version": "1.1.27",
     "sourceRepository": "https://github.com/gpmachado/gpm.hoymiles.solarpanel",
     "publishedAt": "2026-02-22T16:59:55.855Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-11-16T11:40:55.315Z",
     "communityTopicId": 158383
   },
   {
@@ -13853,10 +13853,10 @@
     "name": "Deye Inverter (Local)",
     "developerName": "Gabriel Pedrosa Machado",
     "developerId": "69782a0e6b884a38a96c58e6",
-    "version": "1.4.16",
+    "version": "1.4.17",
     "sourceRepository": "https://github.com/gpmachado/gpm.deye.solarpanel.tcp",
     "publishedAt": "2026-02-28T00:42:21.913Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-11-16T11:40:55.315Z",
     "communityTopicId": 158384
   },
   {
@@ -15514,10 +15514,10 @@
     "name": "hOn Haier Smart",
     "developerName": "Luca Amoroso",
     "developerId": "69daa5fffb6dd7068a780acb",
-    "version": "1.3.5",
+    "version": "1.3.7",
     "sourceRepository": "",
     "publishedAt": "2026-05-09T16:28:23.199Z",
-    "updatedAt": "2026-09-03T14:06:46.371Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": null
   },
   {
@@ -15580,10 +15580,10 @@
     "name": "Motionblinds",
     "developerName": "Coulisse B.V.",
     "developerId": "6a9ee4850033914307ab1bf3",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-05-13T16:49:20.020Z",
-    "updatedAt": "2026-07-02T11:41:19.153Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 156768
   },
   {
@@ -15635,10 +15635,10 @@
     "name": "One2Track",
     "developerName": "MR Luto",
     "developerId": "69b564d3816882ede9249e65",
-    "version": "1.4.2",
+    "version": "1.4.3",
     "sourceRepository": "",
     "publishedAt": "2026-05-15T13:03:47.181Z",
-    "updatedAt": "2026-11-06T11:06:26.550Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": null
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.3.3",
+    "version": "6.3.7",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-15T11:11:44.871Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": null
   },
   {
@@ -16922,10 +16922,10 @@
     "name": "Device Watchdog",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "1.9.56",
+    "version": "1.9.58",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.devicewatchdog",
     "publishedAt": "2026-07-24T11:45:21.817Z",
-    "updatedAt": "2026-11-04T11:08:59.497Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 157537
   },
   {
@@ -17582,10 +17582,10 @@
     "name": "ArtiLED",
     "developerName": "ArtiLED B.V.",
     "developerId": "6af583021ea3eca81332520a",
-    "version": "0.6.4",
+    "version": "0.6.5",
     "sourceRepository": "",
     "publishedAt": "2026-08-18T07:25:17.338Z",
-    "updatedAt": "2026-11-12T11:28:40.931Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": null
   },
   {
@@ -18539,10 +18539,10 @@
     "name": "SG LEDDim",
     "developerName": "Trond Bildøy",
     "developerId": "6a9f88284b2b66c1158ea7af",
-    "version": "2.6.1",
+    "version": "2.9.0",
     "sourceRepository": "https://github.com/fiskentnt/com.sgsmart.csrmesh",
     "publishedAt": "2026-09-24T16:02:23.949Z",
-    "updatedAt": "2026-11-04T11:08:59.497Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 159464
   },
   {
@@ -19375,10 +19375,10 @@
     "name": "MG iSMART",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.7.1",
+    "version": "1.7.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-16T08:18:14.025Z",
-    "updatedAt": "2026-11-05T11:09:18.811Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 160703
   },
   {
@@ -19738,10 +19738,10 @@
     "name": "BLUETTI",
     "developerName": "Gabriel Pedrosa Machado",
     "developerId": "69782a0e6b884a38a96c58e6",
-    "version": "0.5.2",
+    "version": "0.5.3",
     "sourceRepository": "https://github.com/gpmachado/com.gpm.bluetti",
     "publishedAt": "2026-10-28T17:32:11.153Z",
-    "updatedAt": "2026-11-08T10:33:44.507Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 160644
   },
   {
@@ -19859,10 +19859,10 @@
     "name": "2N",
     "developerName": "Roy PEDRINIS",
     "developerId": "6adbcbe447d7399db6cc41b2",
-    "version": "0.4.1",
+    "version": "1.1.2",
     "sourceRepository": "",
     "publishedAt": "2026-11-02T20:57:39.941Z",
-    "updatedAt": "2026-11-13T11:12:41.906Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 162135
   },
   {
@@ -19914,10 +19914,10 @@
     "name": "JUWEL",
     "developerName": "Johan Klintberg",
     "developerId": "6ad505e7bdc8421d78c99c6c",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "sourceRepository": "https://github.com/moogblob/homey-juwel-appcontrol",
     "publishedAt": "2026-11-04T18:58:24.866Z",
-    "updatedAt": "2026-11-04T18:58:24.866Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 161074
   },
   {
@@ -20156,10 +20156,10 @@
     "name": "Dashboard Alarm Keypad",
     "developerName": "Simon Salvin",
     "developerId": "6acd2e5bbdc8421d78c61bff",
-    "version": "1.1.2",
+    "version": "1.1.4",
     "sourceRepository": "",
     "publishedAt": "2026-11-12T19:25:21.109Z",
-    "updatedAt": "2026-11-12T19:25:21.109Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": 161154
   },
   {
@@ -20167,10 +20167,10 @@
     "name": "Zenisun",
     "developerName": "Roy PEDRINIS",
     "developerId": "6adbcbe447d7399db6cc41b2",
-    "version": "1.0.0",
+    "version": "1.1.6",
     "sourceRepository": "",
     "publishedAt": "2026-11-12T19:25:21.109Z",
-    "updatedAt": "2026-11-12T19:25:21.109Z",
+    "updatedAt": "2026-11-16T11:40:55.316Z",
     "communityTopicId": null
   },
   {
@@ -20227,5 +20227,16 @@
     "publishedAt": "2026-11-13T18:52:35.763Z",
     "updatedAt": "2026-11-13T18:52:35.763Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.simplepc.rointe",
+    "name": "Rointe",
+    "developerName": "Simon Salvin",
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "version": "0.5.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-16T11:40:29.235Z",
+    "updatedAt": "2026-11-16T11:40:29.235Z",
+    "communityTopicId": 161240
   }
 ]
