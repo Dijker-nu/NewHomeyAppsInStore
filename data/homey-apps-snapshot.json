@@ -20238,5 +20238,82 @@
     "publishedAt": "2026-11-16T11:40:29.235Z",
     "updatedAt": "2026-11-16T11:40:29.235Z",
     "communityTopicId": 161240
+  },
+  {
+    "appId": "no.salhus.foreldrestyring",
+    "name": "TV Parental Control",
+    "developerName": "Erik Salhus",
+    "developerId": "6ae78ebf5776bdf41f8a8143",
+    "version": "1.0.1",
+    "sourceRepository": "https://github.com/eriksalhus/foreldrestyring",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": 161648
+  },
+  {
+    "appId": "com.simon.fuelpricesuk",
+    "name": "Fuel Prices UK",
+    "developerName": "Simon Salvin",
+    "developerId": "6acd2e5bbdc8421d78c61bff",
+    "version": "1.2.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": 162054
+  },
+  {
+    "appId": "no.vaermeldingen",
+    "name": "Værmeldingen",
+    "developerName": "Thomas Jahnsen",
+    "developerId": "69c10924699c29709c9eecab",
+    "version": "1.4.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": 161501
+  },
+  {
+    "appId": "com.roypedrinis.poolwise",
+    "name": "PoolWise",
+    "developerName": "Roy PEDRINIS",
+    "developerId": "6adbcbe447d7399db6cc41b2",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": 162164
+  },
+  {
+    "appId": "com.roypedrinis.airwise",
+    "name": "AirWise",
+    "developerName": "Roy PEDRINIS",
+    "developerId": "6adbcbe447d7399db6cc41b2",
+    "version": "1.6.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": 162170
+  },
+  {
+    "appId": "com.roue.frameo",
+    "name": "Frameo",
+    "developerName": "Vincent Roué",
+    "developerId": "69c6883d699c29709ca09066",
+    "version": "0.14.1",
+    "sourceRepository": "https://github.com/vincent-roue/com.roue.frameo/tree/v0.14.1",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": 161844
+  },
+  {
+    "appId": "com.wolf.smartset",
+    "name": "Wolf SmartSet",
+    "developerName": "Henri Apperloo",
+    "developerId": "69b30019af832c1e463170e2",
+    "version": "1.0.2",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "communityTopicId": null
   }
 ]
