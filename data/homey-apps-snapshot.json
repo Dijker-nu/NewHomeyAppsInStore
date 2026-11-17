@@ -1280,10 +1280,10 @@
     "name": "Aqara",
     "developerName": "Lumi Technology Co., Ltd.",
     "developerId": "6aba92d8c81c8a2ff99cc4d0",
-    "version": "1.20.0",
+    "version": "1.21.1",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:58:26.294Z",
-    "updatedAt": "2026-10-31T09:47:34.827Z",
+    "updatedAt": "2026-11-17T12:02:36.341Z",
     "communityTopicId": 156
   },
   {
@@ -3535,10 +3535,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.16.0",
+    "version": "46.16.1",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-11-08T10:33:44.505Z",
+    "updatedAt": "2026-11-17T12:02:36.341Z",
     "communityTopicId": 73094
   },
   {
@@ -3678,10 +3678,10 @@
     "name": "Namron",
     "developerName": "Namron AS",
     "developerId": "6aaaadaf99b954171239f0bf",
-    "version": "2.3.5",
+    "version": "2.3.11",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:08:02.877Z",
-    "updatedAt": "2026-09-22T12:32:26.639Z",
+    "updatedAt": "2026-11-17T12:02:36.341Z",
     "communityTopicId": null
   },
   {
@@ -4008,10 +4008,10 @@
     "name": "Synology Surveillance Station 2",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "4.2.1",
+    "version": "4.2.2",
     "sourceRepository": "https://github.com/martijnpoppen/athom.com.synology.ss",
     "publishedAt": "2020-02-02T18:40:59.118Z",
-    "updatedAt": "2025-10-27T08:42:37.527Z",
+    "updatedAt": "2026-11-17T12:02:36.341Z",
     "communityTopicId": 71552
   },
   {
@@ -9354,10 +9354,10 @@
     "name": "Blauberg Vento",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "1.4.11",
+    "version": "1.4.12",
     "sourceRepository": "https://github.com/kaohlive/com.blauberg.vento",
     "publishedAt": "2024-06-10T22:25:25.545Z",
-    "updatedAt": "2026-11-02T11:24:40.075Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 111339
   },
   {
@@ -9552,10 +9552,10 @@
     "name": "Find My",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "1.9.10",
+    "version": "1.9.11",
     "sourceRepository": "https://github.com/martijnpoppen/com.apple.findmy",
     "publishedAt": "2024-08-16T14:07:36.540Z",
-    "updatedAt": "2026-11-16T11:40:55.315Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 114491
   },
   {
@@ -10014,10 +10014,10 @@
     "name": "Viessmann",
     "developerName": "Kenny Moens",
     "developerId": "66ffa09c645b24bd5bc1b47f",
-    "version": "1.6.2",
+    "version": "2.2.0",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/viessmann",
     "publishedAt": "2024-10-22T06:14:41.957Z",
-    "updatedAt": "2026-04-13T13:35:04.217Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 116744
   },
   {
@@ -10069,10 +10069,10 @@
     "name": "tado° Home Manager",
     "developerName": "Arun Neelicattu",
     "developerId": "65cb5dd9e0e2f40476d6bff7",
-    "version": "3.1.0",
+    "version": "3.1.1",
     "sourceRepository": "https://github.com/abn/com.tado.community.home",
     "publishedAt": "2024-10-30T00:23:59.617Z",
-    "updatedAt": "2026-10-14T08:50:55.597Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": null
   },
   {
@@ -10135,10 +10135,10 @@
     "name": "Worlty",
     "developerName": "월티 DSG",
     "developerId": "67331915065f03b3ce3717dd",
-    "version": "2.0.7",
+    "version": "2.0.10",
     "sourceRepository": "",
     "publishedAt": "2024-11-12T09:00:05.971Z",
-    "updatedAt": "2026-11-04T11:08:59.496Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": null
   },
   {
@@ -12005,10 +12005,10 @@
     "name": "Repenic Ltd",
     "developerName": "Electric HZC",
     "developerId": "5eeb896a5f2aefd511cfe18d",
-    "version": "1.0.25",
+    "version": "1.0.26",
     "sourceRepository": "",
     "publishedAt": "2025-10-28T09:44:41.718Z",
-    "updatedAt": "2026-10-23T08:40:17.687Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": null
   },
   {
@@ -12049,10 +12049,10 @@
     "name": "Apple TV & HomePod",
     "developerName": "Bas Milius",
     "developerId": "67feb54bad3776de40f10636",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "sourceRepository": "https://github.com/basmilius/homey-apple",
     "publishedAt": "2025-11-01T15:53:05.100Z",
-    "updatedAt": "2026-09-21T21:02:17.785Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 147663
   },
   {
@@ -12148,10 +12148,10 @@
     "name": "Mon Suivi Conso Enedis",
     "developerName": "Clément FEVRE",
     "developerId": "6910bd2eae1d27bf09a0859d",
-    "version": "1.28.0",
+    "version": "1.29.2",
     "sourceRepository": "",
     "publishedAt": "2025-11-09T16:11:26.334Z",
-    "updatedAt": "2026-07-22T14:07:15.458Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 145206
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.36.0",
+    "version": "3.40.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-16T11:40:55.315Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 147496
   },
   {
@@ -13380,10 +13380,10 @@
     "name": "Stellantis Vehicles",
     "developerName": "Martijn de Bont",
     "developerId": "6797f3d4046d79a42f28dcb2",
-    "version": "1.5.3",
+    "version": "2.0.1",
     "sourceRepository": "",
     "publishedAt": "2026-02-08T22:13:44.169Z",
-    "updatedAt": "2026-04-10T14:14:42.167Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": null
   },
   {
@@ -14238,10 +14238,10 @@
     "name": "Claude",
     "developerName": "Bas Milius",
     "developerId": "67feb54bad3776de40f10636",
-    "version": "1.5.0",
+    "version": "1.7.0",
     "sourceRepository": "https://github.com/basmilius/homey-claude",
     "publishedAt": "2026-03-17T10:56:18.492Z",
-    "updatedAt": "2026-09-21T12:26:27.269Z",
+    "updatedAt": "2026-11-17T12:02:36.342Z",
     "communityTopicId": 152648
   },
   {
@@ -15503,10 +15503,10 @@
     "name": "Dutch Railways",
     "developerName": "Lucas van der Have",
     "developerId": "5dcababa1c90c866f9365022",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "sourceRepository": "https://github.com/lucasvdh/codes.lucasvdh.ns",
     "publishedAt": "2026-05-09T16:27:12.900Z",
-    "updatedAt": "2026-05-10T12:35:04.685Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": null
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.3.7",
+    "version": "6.3.10",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-16T11:40:55.316Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": null
   },
   {
@@ -16229,10 +16229,10 @@
     "name": "VW Group Vehicles",
     "developerName": "Andi W.",
     "developerId": "69bf44e3699c29709c9e7cd5",
-    "version": "0.1.4",
+    "version": "0.1.6",
     "sourceRepository": "https://github.com/andiwirz/com.vwgroup.vehiclevata",
     "publishedAt": "2026-06-19T18:12:51.015Z",
-    "updatedAt": "2026-11-15T11:11:44.871Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": 156345
   },
   {
@@ -16691,10 +16691,10 @@
     "name": "Home Overview",
     "developerName": "Erik van Oosten",
     "developerId": "69f795bc2e89d815c5e502ad",
-    "version": "1.12.5",
+    "version": "1.13.0",
     "sourceRepository": "https://github.com/evoosten/com.homeoverview",
     "publishedAt": "2026-07-15T10:15:49.681Z",
-    "updatedAt": "2026-10-28T09:49:50.163Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": 158364
   },
   {
@@ -19826,10 +19826,10 @@
     "name": "Parcel Tracker",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-30T17:22:33.982Z",
-    "updatedAt": "2026-11-06T11:06:26.550Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": 161469
   },
   {
@@ -19892,10 +19892,10 @@
     "name": "Weekdot",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "sourceRepository": "",
     "publishedAt": "2026-11-03T15:33:59.627Z",
-    "updatedAt": "2026-11-10T11:23:16.740Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": 161566
   },
   {
@@ -19925,10 +19925,10 @@
     "name": "Google Nest Controls",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "0.3.57",
+    "version": "0.3.60",
     "sourceRepository": "",
     "publishedAt": "2026-11-04T18:58:24.866Z",
-    "updatedAt": "2026-11-12T11:28:40.931Z",
+    "updatedAt": "2026-11-17T12:02:36.343Z",
     "communityTopicId": 161182
   },
   {
@@ -20071,8 +20071,8 @@
     "version": "0.9.1",
     "sourceRepository": "",
     "publishedAt": "2026-11-09T23:53:44.615Z",
-    "updatedAt": "2026-11-09T23:53:44.615Z",
-    "communityTopicId": null
+    "updatedAt": "2026-11-17T12:02:36.343Z",
+    "communityTopicId": 162110
   },
   {
     "appId": "nl.jeffreydebruijn.fuelprices",
