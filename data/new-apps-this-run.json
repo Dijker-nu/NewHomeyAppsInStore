@@ -1,1 +1,3095 @@
-[]
+[
+  {
+    "id": "com.sensy-one",
+    "rating": null,
+    "liveBuild": {
+      "id": 7,
+      "name": {
+        "en": "SENSY-ONE",
+        "nl": "SENSY-ONE"
+      },
+      "version": "1.0.6",
+      "readme": {
+        "en": "The SENSY-ONE app for Homey helps you get more out of your sensors. Understand the air quality and climate in your home and let your smart home respond to presence.\n\nConnect your SENSY-ONE devices to Homey Pro and use their measurements in Flows and Insights. Set up presence zones or show messages and camera snapshots on your AirDot. Your devices connect locally over Wi-Fi, Ethernet, Zigbee or Bluetooth LE, depending on the model. No additional bridge or cloud account is needed.\n\nThis app supports AirBee, AirDot, S1 Pro, E1 Pro and S1 Pro Zigbee. Available measurements and features vary by device.\n",
+        "nl": "De SENSY-ONE-app voor Homey helpt je om meer uit je sensoren te halen. Krijg inzicht in de luchtkwaliteit en het klimaat in huis en laat je slimme huis reageren op aanwezigheid.\n\nVerbind je SENSY-ONE-apparaten met Homey Pro en gebruik hun metingen in Flows en Insights. Stel aanwezigheidszones in of toon berichten en camerasnapshots op je AirDot. Je apparaten verbinden lokaal via wifi, ethernet, Zigbee of Bluetooth LE, afhankelijk van het model. Een extra bridge of cloudaccount is niet nodig.\n\nDeze app ondersteunt AirBee, AirDot, S1 Pro, E1 Pro en S1 Pro Zigbee. De beschikbare metingen en functies verschillen per apparaat.\n"
+      },
+      "description": {
+        "en": "Reliable sensing for your smart home.",
+        "nl": "Betrouwbare metingen voor je slimme huis."
+      },
+      "category": "climate",
+      "brandColor": "#402BC3",
+      "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/assets/images/sensy-one-family-small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/assets/images/sensy-one-family-large.png",
+      "drivers": [
+        {
+          "id": "airbee-zigbee",
+          "name": {
+            "en": "AirBee Zigbee",
+            "nl": "AirBee Zigbee"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_co2",
+            "measure_temperature",
+            "measure_humidity",
+            "measure_pressure"
+          ],
+          "capabilitiesOptions": {
+            "measure_temperature": {
+              "decimals": 2
+            },
+            "measure_humidity": {
+              "decimals": 2
+            },
+            "measure_pressure": {
+              "decimals": 0
+            },
+            "measure_co2": {
+              "decimals": 0
+            }
+          },
+          "energy": {
+            "batteries": [
+              "OTHER"
+            ],
+            "approximation": {
+              "usageConstant": 0.000053064
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airbee-zigbee/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airbee-zigbee/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airbee-zigbee/assets/icon.svg"
+        },
+        {
+          "id": "airbee-ble",
+          "name": {
+            "en": "AirBee BLE",
+            "nl": "AirBee BLE"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_co2",
+            "measure_temperature",
+            "measure_humidity",
+            "measure_pressure"
+          ],
+          "capabilitiesOptions": {
+            "measure_temperature": {
+              "decimals": 2
+            },
+            "measure_humidity": {
+              "decimals": 2
+            },
+            "measure_pressure": {
+              "decimals": 0
+            },
+            "measure_co2": {
+              "decimals": 0
+            }
+          },
+          "energy": {
+            "batteries": [
+              "OTHER"
+            ],
+            "approximation": {
+              "usageConstant": 0.000044784
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airbee-ble/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airbee-ble/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "ble"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airbee-ble/assets/icon.svg"
+        },
+        {
+          "id": "airdot",
+          "name": {
+            "en": "AirDot",
+            "nl": "AirDot"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_co2",
+            "measure_pm1",
+            "measure_pm25",
+            "measure_pm4",
+            "measure_pm10",
+            "measure_voc_index",
+            "measure_nox_index",
+            "measure_temperature",
+            "measure_humidity",
+            "measure_pressure",
+            "measure_luminance",
+            "air_quality",
+            "onoff.display",
+            "dim",
+            "onoff.buzzer"
+          ],
+          "capabilitiesOptions": {
+            "measure_pm1": {
+              "decimals": 2
+            },
+            "measure_pm25": {
+              "decimals": 2
+            },
+            "measure_pm4": {
+              "decimals": 2
+            },
+            "measure_pm10": {
+              "decimals": 2
+            },
+            "measure_temperature": {
+              "decimals": 2
+            },
+            "measure_humidity": {
+              "decimals": 2
+            },
+            "onoff.display": {
+              "title": {
+                "en": "Display",
+                "nl": "Scherm"
+              },
+              "preventInsights": true
+            },
+            "dim": {
+              "title": {
+                "en": "Display brightness",
+                "nl": "Schermhelderheid"
+              },
+              "preventInsights": true,
+              "step": 0.01
+            },
+            "onoff.buzzer": {
+              "title": {
+                "en": "Buzzer",
+                "nl": "Zoemer"
+              },
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airdot/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airdot/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/airdot/assets/icon.svg"
+        },
+        {
+          "id": "s1-pro",
+          "name": {
+            "en": "S1 Pro",
+            "nl": "S1 Pro"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_temperature",
+            "measure_humidity",
+            "measure_pressure",
+            "measure_luminance",
+            "measure_iaq",
+            "measure_co2.bme688",
+            "measure_voc_equivalent",
+            "measure_gas_resistance",
+            "alarm_presence",
+            "alarm_motion",
+            "measure_target_count",
+            "sensor_iaq_accuracy",
+            "sensor_iaq_classification",
+            "button.radar_restart",
+            "button.radar_factory_reset",
+            "button.esp32_restart",
+            "button.esp32_factory_reset",
+            "button.scd40_calibrate",
+            "button.scd40_factory_reset",
+            "onoff.led",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "onoff.buzzer"
+          ],
+          "capabilitiesOptions": {
+            "measure_co2": {
+              "title": {
+                "en": "CO₂ (SCD40)",
+                "nl": "CO₂ (SCD40)"
+              },
+              "decimals": 0
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Temperature (BME688)",
+                "nl": "Temperature (BME688)"
+              },
+              "decimals": 2
+            },
+            "measure_humidity": {
+              "title": {
+                "en": "Humidity (BME688)",
+                "nl": "Humidity (BME688)"
+              },
+              "decimals": 2
+            },
+            "measure_pressure": {
+              "title": {
+                "en": "Air pressure",
+                "nl": "Air pressure"
+              },
+              "decimals": 1
+            },
+            "measure_luminance": {
+              "title": {
+                "en": "Ambient light",
+                "nl": "Ambient light"
+              },
+              "decimals": 1
+            },
+            "measure_iaq": {
+              "title": {
+                "en": "IAQ (BME688)",
+                "nl": "IAQ (BME688)"
+              },
+              "decimals": 1
+            },
+            "measure_voc_equivalent": {
+              "title": {
+                "en": "VOC equivalent (BME688)",
+                "nl": "VOC equivalent (BME688)"
+              },
+              "decimals": 3
+            },
+            "measure_gas_resistance": {
+              "title": {
+                "en": "Gas resistance (BME688)",
+                "nl": "Gas resistance (BME688)"
+              },
+              "decimals": 1
+            },
+            "measure_temperature.scd40": {
+              "title": {
+                "en": "Temperature (SCD40)",
+                "nl": "Temperature (SCD40)"
+              },
+              "decimals": 2
+            },
+            "measure_humidity.scd40": {
+              "title": {
+                "en": "Humidity (SCD40)",
+                "nl": "Humidity (SCD40)"
+              },
+              "decimals": 2
+            },
+            "measure_target_count": {
+              "title": {
+                "en": "Detected targets",
+                "nl": "Detected targets"
+              },
+              "decimals": 0,
+              "max": 3
+            },
+            "sensor_iaq_accuracy": {
+              "title": {
+                "en": "IAQ accuracy",
+                "nl": "IAQ accuracy"
+              }
+            },
+            "sensor_iaq_classification": {
+              "title": {
+                "en": "IAQ classification",
+                "nl": "IAQ classification"
+              }
+            },
+            "button.radar_restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart radar",
+                "nl": "Radar herstarten"
+              },
+              "desc": {
+                "en": "Restart the radar module. Presence detection briefly pauses. Wi-Fi and saved settings are retained.",
+                "nl": "Herstart de radarmodule. Aanwezigheidsdetectie wordt kort onderbroken. Wifi en opgeslagen instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.radar_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset radar",
+                "nl": "Radar fabrieksreset"
+              },
+              "desc": {
+                "en": "Restore the radar module to factory settings and restart it. This cannot be undone. Wi-Fi, Homey pairing and the S1 Pro software settings are retained.",
+                "nl": "Zet de radarmodule terug naar fabrieksinstellingen en herstart deze. Dit kan niet ongedaan worden gemaakt. Wifi, de Homey-koppeling en de S1 Pro-software-instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.esp32_restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart ESP32",
+                "nl": "ESP32 herstarten"
+              },
+              "desc": {
+                "en": "Restart the entire S1 Pro. It will briefly disconnect and then reconnect automatically. Saved settings are retained.",
+                "nl": "Herstart de hele S1 Pro. Het apparaat verbreekt kort de verbinding en verbindt daarna automatisch opnieuw. Opgeslagen instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.esp32_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset ESP32",
+                "nl": "ESP32 fabrieksreset"
+              },
+              "desc": {
+                "en": "Erase the saved S1 Pro settings, including Wi-Fi credentials, then restart. This cannot be undone. Set up Wi-Fi again to reconnect the device to Homey.",
+                "nl": "Wis de opgeslagen S1 Pro-instellingen, inclusief wifi-gegevens, en herstart. Dit kan niet ongedaan worden gemaakt. Stel wifi opnieuw in om het apparaat weer met Homey te verbinden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.scd40_calibrate": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Calibrate SCD40",
+                "nl": "SCD40 kalibreren"
+              },
+              "desc": {
+                "en": "Calibrate CO₂ using the fixed 426 ppm firmware reference. Only use after more than 3 minutes in stable reference air at 426 ppm. An incorrect reference causes incorrect readings.",
+                "nl": "Kalibreer CO₂ met de vaste firmwarereferentie van 426 ppm. Gebruik dit alleen na meer dan 3 minuten in stabiele referentielucht van 426 ppm. Een onjuiste referentie geeft onjuiste metingen."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.scd40_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset SCD40",
+                "nl": "SCD40 fabrieksreset"
+              },
+              "desc": {
+                "en": "Restore the SCD40 calibration to factory settings. The firmware then restarts the entire S1 Pro. Wi-Fi and Homey pairing are retained.",
+                "nl": "Herstel de SCD40-kalibratie naar fabrieksinstellingen. De firmware herstart daarna de hele S1 Pro. Wifi en de Homey-koppeling blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "alarm_presence": {
+              "title": {
+                "en": "Presence",
+                "nl": "Aanwezigheid"
+              },
+              "zoneActivity": true
+            },
+            "alarm_motion": {
+              "title": {
+                "en": "Movement",
+                "nl": "Beweging"
+              },
+              "zoneActivity": false
+            },
+            "measure_co2.bme688": {
+              "title": {
+                "en": "CO₂ equivalent (BME688)",
+                "nl": "CO₂-equivalent (BME688)"
+              },
+              "decimals": 0,
+              "min": 0,
+              "max": 1000000
+            },
+            "onoff.led": {
+              "title": {
+                "en": "LED",
+                "nl": "Led"
+              },
+              "preventInsights": true,
+              "uiState": false
+            },
+            "dim": {
+              "title": {
+                "en": "LED brightness",
+                "nl": "Ledhelderheid"
+              },
+              "preventInsights": true
+            },
+            "light_hue": {
+              "title": {
+                "en": "LED hue",
+                "nl": "Ledkleur"
+              },
+              "preventInsights": true
+            },
+            "light_saturation": {
+              "title": {
+                "en": "LED saturation",
+                "nl": "Ledverzadiging"
+              },
+              "preventInsights": true
+            },
+            "onoff.buzzer": {
+              "title": {
+                "en": "Buzzer",
+                "nl": "Zoemer"
+              },
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/s1-pro/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/s1-pro/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/s1-pro/assets/icon.svg"
+        },
+        {
+          "id": "e1-pro",
+          "name": {
+            "en": "E1 Pro",
+            "nl": "E1 Pro"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_pressure",
+            "measure_luminance",
+            "alarm_presence",
+            "measure_target_count",
+            "button.radar_restart",
+            "button.radar_factory_reset",
+            "button.esp32_restart",
+            "button.esp32_factory_reset",
+            "button.scd40_calibrate",
+            "button.scd40_factory_reset",
+            "onoff.led",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "onoff.buzzer"
+          ],
+          "capabilitiesOptions": {
+            "measure_co2": {
+              "title": {
+                "en": "CO₂ (SCD40)",
+                "nl": "CO₂ (SCD40)"
+              },
+              "decimals": 0
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Temperature (BME688)",
+                "nl": "Temperature (BME688)"
+              },
+              "decimals": 2
+            },
+            "measure_humidity": {
+              "title": {
+                "en": "Humidity (BME688)",
+                "nl": "Humidity (BME688)"
+              },
+              "decimals": 2
+            },
+            "measure_pressure": {
+              "title": {
+                "en": "Air pressure",
+                "nl": "Air pressure"
+              },
+              "decimals": 1
+            },
+            "measure_luminance": {
+              "title": {
+                "en": "Ambient light",
+                "nl": "Ambient light"
+              },
+              "decimals": 1
+            },
+            "measure_iaq": {
+              "title": {
+                "en": "IAQ (BME688)",
+                "nl": "IAQ (BME688)"
+              },
+              "decimals": 1
+            },
+            "measure_voc_equivalent": {
+              "title": {
+                "en": "VOC equivalent (BME688)",
+                "nl": "VOC equivalent (BME688)"
+              },
+              "decimals": 3
+            },
+            "measure_gas_resistance": {
+              "title": {
+                "en": "Gas resistance (BME688)",
+                "nl": "Gas resistance (BME688)"
+              },
+              "decimals": 1
+            },
+            "measure_temperature.scd40": {
+              "title": {
+                "en": "Temperature (SCD40)",
+                "nl": "Temperature (SCD40)"
+              },
+              "decimals": 2
+            },
+            "measure_humidity.scd40": {
+              "title": {
+                "en": "Humidity (SCD40)",
+                "nl": "Humidity (SCD40)"
+              },
+              "decimals": 2
+            },
+            "measure_target_count": {
+              "title": {
+                "en": "Detected targets",
+                "nl": "Detected targets"
+              },
+              "decimals": 0,
+              "max": 5
+            },
+            "sensor_iaq_accuracy": {
+              "title": {
+                "en": "IAQ accuracy",
+                "nl": "IAQ accuracy"
+              }
+            },
+            "sensor_iaq_classification": {
+              "title": {
+                "en": "IAQ classification",
+                "nl": "IAQ classification"
+              }
+            },
+            "button.radar_restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart radar",
+                "nl": "Radar herstarten"
+              },
+              "desc": {
+                "en": "Restart the radar module. Presence detection briefly pauses. The network connection and saved settings are retained.",
+                "nl": "Herstart de radarmodule. Aanwezigheidsdetectie wordt kort onderbroken. De netwerkverbinding en opgeslagen instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.radar_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset radar",
+                "nl": "Radar fabrieksreset"
+              },
+              "desc": {
+                "en": "Restore the radar module to factory settings and restart it. This cannot be undone. Network configuration, Homey pairing and the E1 Pro software settings are retained.",
+                "nl": "Zet de radarmodule terug naar fabrieksinstellingen en herstart deze. Dit kan niet ongedaan worden gemaakt. Netwerkinstellingen, de Homey-koppeling en de E1 Pro-software-instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.esp32_restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart ESP32",
+                "nl": "ESP32 herstarten"
+              },
+              "desc": {
+                "en": "Restart the entire E1 Pro. It will briefly disconnect and then reconnect automatically. Saved settings are retained.",
+                "nl": "Herstart de hele E1 Pro. Het apparaat verbreekt kort de verbinding en verbindt daarna automatisch opnieuw. Opgeslagen instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.esp32_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset ESP32",
+                "nl": "ESP32 fabrieksreset"
+              },
+              "desc": {
+                "en": "Erase saved E1 Pro settings and restart. This cannot be undone. Wi-Fi credentials are erased on Wi-Fi firmware; Ethernet reconnects automatically.",
+                "nl": "Wis de opgeslagen E1 Pro-instellingen en herstart. Dit kan niet ongedaan worden gemaakt. Bij wifi-firmware worden wifi-gegevens gewist; ethernet verbindt automatisch opnieuw."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.scd40_calibrate": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Calibrate SCD40",
+                "nl": "SCD40 kalibreren"
+              },
+              "desc": {
+                "en": "Calibrate CO₂ using the fixed 426 ppm firmware reference. Only use after more than 3 minutes in stable reference air at 426 ppm. An incorrect reference causes incorrect readings.",
+                "nl": "Kalibreer CO₂ met de vaste firmwarereferentie van 426 ppm. Gebruik dit alleen na meer dan 3 minuten in stabiele referentielucht van 426 ppm. Een onjuiste referentie geeft onjuiste metingen."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.scd40_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset SCD40",
+                "nl": "SCD40 fabrieksreset"
+              },
+              "desc": {
+                "en": "Restore the SCD40 calibration to factory settings. The firmware then restarts the entire E1 Pro. Wi-Fi and Homey pairing are retained.",
+                "nl": "Herstel de SCD40-kalibratie naar fabrieksinstellingen. De firmware herstart daarna de hele E1 Pro. Wifi en de Homey-koppeling blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "alarm_presence": {
+              "title": {
+                "en": "Presence",
+                "nl": "Aanwezigheid"
+              },
+              "zoneActivity": true
+            },
+            "measure_co2.bme688": {
+              "title": {
+                "en": "CO₂ equivalent (BME688)",
+                "nl": "CO₂-equivalent (BME688)"
+              },
+              "decimals": 0,
+              "min": 0,
+              "max": 1000000
+            },
+            "onoff.led": {
+              "title": {
+                "en": "LED",
+                "nl": "Led"
+              },
+              "preventInsights": true,
+              "uiState": false
+            },
+            "dim": {
+              "title": {
+                "en": "LED brightness",
+                "nl": "Ledhelderheid"
+              },
+              "preventInsights": true
+            },
+            "light_hue": {
+              "title": {
+                "en": "LED hue",
+                "nl": "Ledkleur"
+              },
+              "preventInsights": true
+            },
+            "light_saturation": {
+              "title": {
+                "en": "LED saturation",
+                "nl": "Ledverzadiging"
+              },
+              "preventInsights": true
+            },
+            "onoff.buzzer": {
+              "title": {
+                "en": "Buzzer",
+                "nl": "Zoemer"
+              },
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/e1-pro/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/e1-pro/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/e1-pro/assets/icon.svg"
+        },
+        {
+          "id": "s1-pro-zigbee",
+          "name": {
+            "en": "S1 Pro Zigbee",
+            "nl": "S1 Pro Zigbee"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_temperature",
+            "measure_humidity",
+            "measure_pressure",
+            "measure_luminance",
+            "measure_iaq",
+            "measure_co2.bme688",
+            "measure_voc_equivalent",
+            "measure_gas_resistance",
+            "alarm_presence",
+            "alarm_motion",
+            "measure_target_count",
+            "sensor_iaq_accuracy",
+            "sensor_iaq_classification",
+            "button.radar_restart",
+            "button.radar_factory_reset",
+            "button.esp32_restart",
+            "button.esp32_factory_reset",
+            "button.scd40_calibrate",
+            "button.scd40_factory_reset",
+            "onoff.led",
+            "dim",
+            "light_hue",
+            "light_saturation",
+            "onoff.buzzer"
+          ],
+          "capabilitiesOptions": {
+            "measure_co2": {
+              "title": {
+                "en": "CO₂ (SCD40)",
+                "nl": "CO₂ (SCD40)"
+              },
+              "decimals": 0
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Temperature (BME688)",
+                "nl": "Temperature (BME688)"
+              },
+              "decimals": 2
+            },
+            "measure_humidity": {
+              "title": {
+                "en": "Humidity (BME688)",
+                "nl": "Humidity (BME688)"
+              },
+              "decimals": 2
+            },
+            "measure_pressure": {
+              "title": {
+                "en": "Air pressure",
+                "nl": "Air pressure"
+              },
+              "decimals": 1
+            },
+            "measure_luminance": {
+              "title": {
+                "en": "Ambient light",
+                "nl": "Ambient light"
+              },
+              "decimals": 1
+            },
+            "measure_iaq": {
+              "title": {
+                "en": "IAQ (BME688)",
+                "nl": "IAQ (BME688)"
+              },
+              "decimals": 1
+            },
+            "measure_voc_equivalent": {
+              "title": {
+                "en": "VOC equivalent (BME688)",
+                "nl": "VOC equivalent (BME688)"
+              },
+              "decimals": 3
+            },
+            "measure_gas_resistance": {
+              "title": {
+                "en": "Gas resistance (BME688)",
+                "nl": "Gas resistance (BME688)"
+              },
+              "decimals": 1
+            },
+            "measure_temperature.scd40": {
+              "title": {
+                "en": "Temperature (SCD40)",
+                "nl": "Temperature (SCD40)"
+              },
+              "decimals": 2
+            },
+            "measure_humidity.scd40": {
+              "title": {
+                "en": "Humidity (SCD40)",
+                "nl": "Humidity (SCD40)"
+              },
+              "decimals": 2
+            },
+            "measure_target_count": {
+              "title": {
+                "en": "Detected targets",
+                "nl": "Detected targets"
+              },
+              "decimals": 0,
+              "max": 3
+            },
+            "sensor_iaq_accuracy": {
+              "title": {
+                "en": "IAQ accuracy",
+                "nl": "IAQ accuracy"
+              }
+            },
+            "sensor_iaq_classification": {
+              "title": {
+                "en": "IAQ classification",
+                "nl": "IAQ classification"
+              }
+            },
+            "button.radar_restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart radar",
+                "nl": "Radar herstarten"
+              },
+              "desc": {
+                "en": "Restart the radar module. Presence detection briefly pauses; saved settings and Zigbee pairing are retained.",
+                "nl": "Herstart de radarmodule. Aanwezigheidsdetectie pauzeert kort; opgeslagen instellingen en de Zigbee-koppeling blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.radar_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset radar",
+                "nl": "Radar fabrieksreset"
+              },
+              "desc": {
+                "en": "Restore the radar module to factory settings. Zigbee pairing and software zone settings are retained.",
+                "nl": "Herstel de fabrieksinstellingen van de radarmodule. De Zigbee-koppeling en softwarezone-instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.esp32_restart": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Restart ESP32",
+                "nl": "ESP32 herstarten"
+              },
+              "desc": {
+                "en": "Restart the entire S1 Pro Zigbee. It will briefly disconnect and then reconnect automatically. Saved settings are retained.",
+                "nl": "Herstart de hele S1 Pro Zigbee. Het apparaat verbreekt kort de verbinding en verbindt daarna automatisch opnieuw. Opgeslagen instellingen blijven behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.esp32_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset ESP32",
+                "nl": "ESP32 fabrieksreset"
+              },
+              "desc": {
+                "en": "Erase saved device settings and Zigbee pairing, then restart. This cannot be undone. Pair the sensor with Homey again afterwards.",
+                "nl": "Wis de opgeslagen apparaatinstellingen en Zigbee-koppeling en herstart. Dit kan niet ongedaan worden gemaakt. Koppel de sensor daarna opnieuw aan Homey."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.scd40_calibrate": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Calibrate SCD40",
+                "nl": "SCD40 kalibreren"
+              },
+              "desc": {
+                "en": "Calibrate CO₂ using the reference set in device settings. Only use after at least three minutes in stable air with that known CO₂ concentration. An incorrect reference causes incorrect readings.",
+                "nl": "Kalibreer CO₂ met de referentie uit de apparaatinstellingen. Gebruik dit alleen na minstens drie minuten in stabiele lucht met die bekende CO₂-concentratie. Een onjuiste referentie geeft onjuiste metingen."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "button.scd40_factory_reset": {
+              "maintenanceAction": true,
+              "title": {
+                "en": "Factory reset SCD40",
+                "nl": "SCD40 fabrieksreset"
+              },
+              "desc": {
+                "en": "Restore SCD40 calibration to factory settings and resume measurements. Zigbee pairing is retained.",
+                "nl": "Herstel de SCD40-kalibratie naar fabrieksinstellingen en hervat de metingen. De Zigbee-koppeling blijft behouden."
+              },
+              "preventTag": true,
+              "preventInsights": true
+            },
+            "alarm_presence": {
+              "title": {
+                "en": "Presence",
+                "nl": "Aanwezigheid"
+              },
+              "zoneActivity": true
+            },
+            "alarm_motion": {
+              "title": {
+                "en": "Movement",
+                "nl": "Beweging"
+              },
+              "zoneActivity": false
+            },
+            "measure_co2.bme688": {
+              "title": {
+                "en": "CO₂ equivalent (BME688)",
+                "nl": "CO₂-equivalent (BME688)"
+              },
+              "decimals": 0,
+              "min": 0,
+              "max": 1000000
+            },
+            "onoff.led": {
+              "title": {
+                "en": "LED",
+                "nl": "Led"
+              },
+              "preventInsights": true,
+              "uiState": false
+            },
+            "dim": {
+              "title": {
+                "en": "LED brightness",
+                "nl": "Ledhelderheid"
+              },
+              "preventInsights": true
+            },
+            "light_hue": {
+              "title": {
+                "en": "LED hue",
+                "nl": "Ledkleur"
+              },
+              "preventInsights": true
+            },
+            "light_saturation": {
+              "title": {
+                "en": "LED saturation",
+                "nl": "Ledverzadiging"
+              },
+              "preventInsights": true
+            },
+            "onoff.buzzer": {
+              "title": {
+                "en": "Buzzer",
+                "nl": "Zoemer"
+              },
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/s1-pro-zigbee/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/s1-pro-zigbee/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "zigbee"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.sensy-one/7/642ed064-175a-4648-9240-aec464867402/drivers/s1-pro-zigbee/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "presence_detected",
+            "title": {
+              "en": "Presence detected",
+              "nl": "Aanwezigheid gedetecteerd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              }
+            ]
+          },
+          {
+            "id": "presence_cleared",
+            "title": {
+              "en": "Presence ended",
+              "nl": "Geen aanwezigheid meer"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              }
+            ]
+          },
+          {
+            "id": "zone_occupied",
+            "title": {
+              "en": "A zone becomes occupied",
+              "nl": "Een zone wordt bezet"
+            },
+            "titleFormatted": {
+              "en": "[[scope]] becomes occupied",
+              "nl": "[[scope]] wordt bezet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              }
+            ]
+          },
+          {
+            "id": "zone_cleared",
+            "title": {
+              "en": "A zone becomes clear",
+              "nl": "Een zone wordt vrij"
+            },
+            "titleFormatted": {
+              "en": "[[scope]] becomes clear",
+              "nl": "[[scope]] wordt vrij"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              }
+            ]
+          },
+          {
+            "id": "movement_detected",
+            "title": {
+              "en": "Movement detected",
+              "nl": "Beweging gedetecteerd"
+            },
+            "titleFormatted": {
+              "en": "Movement detected in [[scope]]",
+              "nl": "Beweging gedetecteerd in [[scope]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              }
+            ]
+          },
+          {
+            "id": "target_count_changed",
+            "title": {
+              "en": "The target count changed",
+              "nl": "Het aantal targets is veranderd"
+            },
+            "titleFormatted": {
+              "en": "The target count in [[scope]] changed",
+              "nl": "Het aantal targets in [[scope]] is veranderd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "count",
+                "type": "number",
+                "title": {
+                  "en": "Target count",
+                  "nl": "Aantal targets"
+                }
+              },
+              {
+                "name": "previous_count",
+                "type": "number",
+                "title": {
+                  "en": "Previous target count",
+                  "nl": "Vorig aantal targets"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_co2_above",
+            "title": {
+              "en": "CO₂ rises above a value",
+              "nl": "CO₂ stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "CO₂ rises above [[threshold]] ppm",
+              "nl": "CO₂ stijgt boven [[threshold]] ppm"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (ppm)",
+                  "nl": "Grenswaarde (ppm)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "CO₂ (ppm)",
+                  "nl": "CO₂ (ppm)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (ppm)",
+                  "nl": "Vorige waarde (ppm)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_co2_below",
+            "title": {
+              "en": "CO₂ falls below a value",
+              "nl": "CO₂ daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "CO₂ falls below [[threshold]] ppm",
+              "nl": "CO₂ daalt onder [[threshold]] ppm"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (ppm)",
+                  "nl": "Grenswaarde (ppm)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "CO₂ (ppm)",
+                  "nl": "CO₂ (ppm)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (ppm)",
+                  "nl": "Vorige waarde (ppm)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm1_above",
+            "title": {
+              "en": "PM1 rises above a value",
+              "nl": "PM1 stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM1 rises above [[threshold]] µg/m³",
+              "nl": "PM1 stijgt boven [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM1 (µg/m³)",
+                  "nl": "PM1 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm1_below",
+            "title": {
+              "en": "PM1 falls below a value",
+              "nl": "PM1 daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM1 falls below [[threshold]] µg/m³",
+              "nl": "PM1 daalt onder [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM1 (µg/m³)",
+                  "nl": "PM1 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm25_above",
+            "title": {
+              "en": "PM2.5 rises above a value",
+              "nl": "PM2.5 stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM2.5 rises above [[threshold]] µg/m³",
+              "nl": "PM2.5 stijgt boven [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM2.5 (µg/m³)",
+                  "nl": "PM2.5 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm25_below",
+            "title": {
+              "en": "PM2.5 falls below a value",
+              "nl": "PM2.5 daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM2.5 falls below [[threshold]] µg/m³",
+              "nl": "PM2.5 daalt onder [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM2.5 (µg/m³)",
+                  "nl": "PM2.5 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm4_above",
+            "title": {
+              "en": "PM4 rises above a value",
+              "nl": "PM4 stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM4 rises above [[threshold]] µg/m³",
+              "nl": "PM4 stijgt boven [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM4 (µg/m³)",
+                  "nl": "PM4 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm4_below",
+            "title": {
+              "en": "PM4 falls below a value",
+              "nl": "PM4 daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM4 falls below [[threshold]] µg/m³",
+              "nl": "PM4 daalt onder [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM4 (µg/m³)",
+                  "nl": "PM4 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm10_above",
+            "title": {
+              "en": "PM10 rises above a value",
+              "nl": "PM10 stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM10 rises above [[threshold]] µg/m³",
+              "nl": "PM10 stijgt boven [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM10 (µg/m³)",
+                  "nl": "PM10 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pm10_below",
+            "title": {
+              "en": "PM10 falls below a value",
+              "nl": "PM10 daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "PM10 falls below [[threshold]] µg/m³",
+              "nl": "PM10 daalt onder [[threshold]] µg/m³"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (µg/m³)",
+                  "nl": "Grenswaarde (µg/m³)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "PM10 (µg/m³)",
+                  "nl": "PM10 (µg/m³)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (µg/m³)",
+                  "nl": "Vorige waarde (µg/m³)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_voc_index_above",
+            "title": {
+              "en": "VOC Index rises above a value",
+              "nl": "VOC-index stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "VOC Index rises above [[threshold]] index",
+              "nl": "VOC-index stijgt boven [[threshold]] index"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (index)",
+                  "nl": "Grenswaarde (index)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "VOC Index (index)",
+                  "nl": "VOC-index (index)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (index)",
+                  "nl": "Vorige waarde (index)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_voc_index_below",
+            "title": {
+              "en": "VOC Index falls below a value",
+              "nl": "VOC-index daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "VOC Index falls below [[threshold]] index",
+              "nl": "VOC-index daalt onder [[threshold]] index"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (index)",
+                  "nl": "Grenswaarde (index)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "VOC Index (index)",
+                  "nl": "VOC-index (index)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (index)",
+                  "nl": "Vorige waarde (index)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_nox_index_above",
+            "title": {
+              "en": "NOx Index rises above a value",
+              "nl": "NOx-index stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "NOx Index rises above [[threshold]] index",
+              "nl": "NOx-index stijgt boven [[threshold]] index"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (index)",
+                  "nl": "Grenswaarde (index)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "NOx Index (index)",
+                  "nl": "NOx-index (index)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (index)",
+                  "nl": "Vorige waarde (index)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_nox_index_below",
+            "title": {
+              "en": "NOx Index falls below a value",
+              "nl": "NOx-index daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "NOx Index falls below [[threshold]] index",
+              "nl": "NOx-index daalt onder [[threshold]] index"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (index)",
+                  "nl": "Grenswaarde (index)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "NOx Index (index)",
+                  "nl": "NOx-index (index)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (index)",
+                  "nl": "Vorige waarde (index)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_temperature_above",
+            "title": {
+              "en": "Temperature rises above a value",
+              "nl": "Temperatuur stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "Temperature rises above [[threshold]] °C",
+              "nl": "Temperatuur stijgt boven [[threshold]] °C"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (°C)",
+                  "nl": "Grenswaarde (°C)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Temperature (°C)",
+                  "nl": "Temperatuur (°C)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (°C)",
+                  "nl": "Vorige waarde (°C)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_temperature_below",
+            "title": {
+              "en": "Temperature falls below a value",
+              "nl": "Temperatuur daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "Temperature falls below [[threshold]] °C",
+              "nl": "Temperatuur daalt onder [[threshold]] °C"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (°C)",
+                  "nl": "Grenswaarde (°C)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Temperature (°C)",
+                  "nl": "Temperatuur (°C)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (°C)",
+                  "nl": "Vorige waarde (°C)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_humidity_above",
+            "title": {
+              "en": "Humidity rises above a value",
+              "nl": "Luchtvochtigheid stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "Humidity rises above [[threshold]] %",
+              "nl": "Luchtvochtigheid stijgt boven [[threshold]] %"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (%)",
+                  "nl": "Grenswaarde (%)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Humidity (%)",
+                  "nl": "Luchtvochtigheid (%)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (%)",
+                  "nl": "Vorige waarde (%)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_humidity_below",
+            "title": {
+              "en": "Humidity falls below a value",
+              "nl": "Luchtvochtigheid daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "Humidity falls below [[threshold]] %",
+              "nl": "Luchtvochtigheid daalt onder [[threshold]] %"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (%)",
+                  "nl": "Grenswaarde (%)"
+                },
+                "step": 0.01
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Humidity (%)",
+                  "nl": "Luchtvochtigheid (%)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (%)",
+                  "nl": "Vorige waarde (%)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pressure_above",
+            "title": {
+              "en": "Air pressure rises above a value",
+              "nl": "Luchtdruk stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "Air pressure rises above [[threshold]] hPa",
+              "nl": "Luchtdruk stijgt boven [[threshold]] hPa"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (hPa)",
+                  "nl": "Grenswaarde (hPa)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Air pressure (hPa)",
+                  "nl": "Luchtdruk (hPa)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (hPa)",
+                  "nl": "Vorige waarde (hPa)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_pressure_below",
+            "title": {
+              "en": "Air pressure falls below a value",
+              "nl": "Luchtdruk daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "Air pressure falls below [[threshold]] hPa",
+              "nl": "Luchtdruk daalt onder [[threshold]] hPa"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (hPa)",
+                  "nl": "Grenswaarde (hPa)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Air pressure (hPa)",
+                  "nl": "Luchtdruk (hPa)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (hPa)",
+                  "nl": "Vorige waarde (hPa)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_luminance_above",
+            "title": {
+              "en": "Illuminance rises above a value",
+              "nl": "Verlichtingssterkte stijgt boven een waarde"
+            },
+            "titleFormatted": {
+              "en": "Illuminance rises above [[threshold]] lx",
+              "nl": "Verlichtingssterkte stijgt boven [[threshold]] lx"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (lx)",
+                  "nl": "Grenswaarde (lx)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Illuminance (lx)",
+                  "nl": "Verlichtingssterkte (lx)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (lx)",
+                  "nl": "Vorige waarde (lx)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_measure_luminance_below",
+            "title": {
+              "en": "Illuminance falls below a value",
+              "nl": "Verlichtingssterkte daalt onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "Illuminance falls below [[threshold]] lx",
+              "nl": "Verlichtingssterkte daalt onder [[threshold]] lx"
+            },
+            "hint": {
+              "en": "Runs only when a fresh measurement crosses the threshold. The first reading after startup, reconnection or missing data does not trigger this Flow.",
+              "nl": "Start alleen wanneer een actuele meting de grens passeert. De eerste meting na opstarten, opnieuw verbinden of ontbrekende gegevens start deze Flow niet."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "title": {
+                  "en": "Threshold (lx)",
+                  "nl": "Grenswaarde (lx)"
+                },
+                "step": 1
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Illuminance (lx)",
+                  "nl": "Verlichtingssterkte (lx)"
+                }
+              },
+              {
+                "name": "previous_value",
+                "type": "number",
+                "title": {
+                  "en": "Previous value (lx)",
+                  "nl": "Vorige waarde (lx)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "air_quality_changed",
+            "title": {
+              "en": "Air quality status changed",
+              "nl": "Luchtkwaliteitsstatus is veranderd"
+            },
+            "hint": {
+              "en": "The status text uses the language selected on AirDot.",
+              "nl": "De statustekst gebruikt de taal die op AirDot is ingesteld."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=airdot"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "air_quality",
+                "type": "string",
+                "title": {
+                  "en": "Air quality",
+                  "nl": "Luchtkwaliteit"
+                }
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "presence_is",
+            "title": {
+              "en": "Presence !{{is|is not}} detected",
+              "nl": "Er is !{{wel|geen}} aanwezigheid"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              }
+            ]
+          },
+          {
+            "id": "zone_presence_is",
+            "title": {
+              "en": "A zone !{{is|is not}} occupied",
+              "nl": "Een zone is !{{wel|niet}} bezet"
+            },
+            "titleFormatted": {
+              "en": "[[scope]] !{{is|is not}} occupied",
+              "nl": "[[scope]] is !{{wel|niet}} bezet"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              }
+            ]
+          },
+          {
+            "id": "movement_is",
+            "title": {
+              "en": "Movement !{{is|is not}} detected",
+              "nl": "Er is !{{wel|geen}} beweging"
+            },
+            "titleFormatted": {
+              "en": "Movement !{{is|is not}} detected in [[scope]]",
+              "nl": "Er is !{{wel|geen}} beweging in [[scope]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              }
+            ]
+          },
+          {
+            "id": "target_count_compare",
+            "title": {
+              "en": "Compare the target count",
+              "nl": "Vergelijk het aantal targets"
+            },
+            "titleFormatted": {
+              "en": "The target count in [[scope]] !{{is|is not}} [[comparison]] [[count]]",
+              "nl": "Het aantal targets in [[scope]] is !{{wel|niet}} [[comparison]] [[count]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "autocomplete",
+                "name": "scope",
+                "title": {
+                  "en": "Area",
+                  "nl": "Gebied"
+                },
+                "placeholder": {
+                  "en": "Choose an area",
+                  "nl": "Kies een gebied"
+                }
+              },
+              {
+                "type": "dropdown",
+                "name": "comparison",
+                "title": {
+                  "en": "Comparison",
+                  "nl": "Vergelijking"
+                },
+                "values": [
+                  {
+                    "id": "above",
+                    "title": {
+                      "en": "higher than",
+                      "nl": "hoger dan"
+                    }
+                  },
+                  {
+                    "id": "below",
+                    "title": {
+                      "en": "lower than",
+                      "nl": "lager dan"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "number",
+                "name": "count",
+                "title": {
+                  "en": "Count",
+                  "nl": "Aantal"
+                },
+                "min": 0,
+                "max": 5,
+                "step": 1
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "show_message",
+            "title": {
+              "en": "Show a message",
+              "nl": "Toon een bericht"
+            },
+            "titleFormatted": {
+              "en": "Show [[title]]: [[message]], [[seconds]] seconds, color [[color]], sound [[sound]]",
+              "nl": "Toon [[title]]: [[message]], [[seconds]] seconden, kleur [[color]], geluid [[sound]]"
+            },
+            "hint": {
+              "en": "0 seconds keeps the message visible until dismissed. Title: 64 bytes, message: 240 bytes.",
+              "nl": "0 seconden houdt het bericht zichtbaar tot je het sluit. Titel: 64 bytes, bericht: 240 bytes."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=airdot",
+                "title": {
+                  "en": "AirDot",
+                  "nl": "AirDot"
+                }
+              },
+              {
+                "name": "title",
+                "type": "text",
+                "title": {
+                  "en": "Title",
+                  "nl": "Titel"
+                }
+              },
+              {
+                "name": "message",
+                "type": "text",
+                "title": {
+                  "en": "Message",
+                  "nl": "Bericht"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds (0 = until closed)",
+                  "nl": "Seconden (0 = tot sluiten)"
+                },
+                "min": 0,
+                "max": 3600,
+                "step": 1,
+                "placeholder": {
+                  "en": "10",
+                  "nl": "10"
+                }
+              },
+              {
+                "name": "sound",
+                "type": "checkbox",
+                "title": {
+                  "en": "Play a sound",
+                  "nl": "Speel een geluid af"
+                }
+              },
+              {
+                "name": "color",
+                "type": "dropdown",
+                "title": {
+                  "en": "Text color",
+                  "nl": "Tekstkleur"
+                },
+                "values": [
+                  {
+                    "id": "#FFFFFF",
+                    "title": {
+                      "en": "White",
+                      "nl": "Wit"
+                    }
+                  },
+                  {
+                    "id": "#FFC107",
+                    "title": {
+                      "en": "Yellow",
+                      "nl": "Geel"
+                    }
+                  },
+                  {
+                    "id": "#FF9800",
+                    "title": {
+                      "en": "Orange",
+                      "nl": "Oranje"
+                    }
+                  },
+                  {
+                    "id": "#FF5252",
+                    "title": {
+                      "en": "Red",
+                      "nl": "Rood"
+                    }
+                  },
+                  {
+                    "id": "#4CAF50",
+                    "title": {
+                      "en": "Green",
+                      "nl": "Groen"
+                    }
+                  },
+                  {
+                    "id": "#42A5F5",
+                    "title": {
+                      "en": "Blue",
+                      "nl": "Blauw"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "show_image",
+            "title": {
+              "en": "Show an image",
+              "nl": "Toon een afbeelding"
+            },
+            "titleFormatted": {
+              "en": "Show [[droptoken]] for [[seconds]] seconds, sound [[sound]]",
+              "nl": "Toon [[droptoken]] gedurende [[seconds]] seconden, geluid [[sound]]"
+            },
+            "hint": {
+              "en": "Select an image tag from your camera. JPEG and PNG are prepared automatically. 0 seconds keeps the image visible until dismissed.",
+              "nl": "Kies een afbeeldingstag van je camera. JPEG en PNG worden automatisch geschikt gemaakt. 0 seconden houdt de afbeelding zichtbaar tot je hem sluit."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=airdot",
+                "title": {
+                  "en": "AirDot",
+                  "nl": "AirDot"
+                }
+              },
+              {
+                "name": "seconds",
+                "type": "number",
+                "title": {
+                  "en": "Seconds (0 = until closed)",
+                  "nl": "Seconden (0 = tot sluiten)"
+                },
+                "min": 0,
+                "max": 3600,
+                "step": 1,
+                "placeholder": {
+                  "en": "10",
+                  "nl": "10"
+                }
+              },
+              {
+                "name": "sound",
+                "type": "checkbox",
+                "title": {
+                  "en": "Play a sound",
+                  "nl": "Speel een geluid af"
+                }
+              }
+            ]
+          },
+          {
+            "id": "clear_display",
+            "title": {
+              "en": "Close the message or photo",
+              "nl": "Sluit het bericht of de foto"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=airdot",
+                "title": {
+                  "en": "AirDot",
+                  "nl": "AirDot"
+                }
+              }
+            ]
+          },
+          {
+            "id": "led_on",
+            "title": {
+              "en": "Turn the LED on",
+              "nl": "Zet de led aan"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              }
+            ]
+          },
+          {
+            "id": "led_off",
+            "title": {
+              "en": "Turn the LED off",
+              "nl": "Zet de led uit"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              }
+            ]
+          },
+          {
+            "id": "led_brightness",
+            "title": {
+              "en": "Set LED brightness",
+              "nl": "Stel de ledhelderheid in"
+            },
+            "titleFormatted": {
+              "en": "Set LED brightness to [[brightness]]",
+              "nl": "Stel de ledhelderheid in op [[brightness]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "range",
+                "name": "brightness",
+                "title": {
+                  "en": "Brightness",
+                  "nl": "Helderheid"
+                },
+                "min": 0,
+                "max": 1,
+                "step": 0.01,
+                "label": "%",
+                "labelMultiplier": 100,
+                "labelDecimals": 0
+              }
+            ]
+          },
+          {
+            "id": "led_color",
+            "title": {
+              "en": "Set LED color",
+              "nl": "Stel de ledkleur in"
+            },
+            "titleFormatted": {
+              "en": "Set the LED color to [[color]]",
+              "nl": "Stel de ledkleur in op [[color]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "color",
+                "name": "color",
+                "title": {
+                  "en": "Color",
+                  "nl": "Kleur"
+                }
+              }
+            ]
+          },
+          {
+            "id": "buzzer_on",
+            "title": {
+              "en": "Turn the buzzer on",
+              "nl": "Zet de zoemer aan"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee|airdot"
+              }
+            ]
+          },
+          {
+            "id": "buzzer_off",
+            "title": {
+              "en": "Turn the buzzer off",
+              "nl": "Zet de zoemer uit"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee|airdot"
+              }
+            ]
+          },
+          {
+            "id": "buzzer_timed",
+            "title": {
+              "en": "Sound the buzzer temporarily",
+              "nl": "Laat de zoemer tijdelijk klinken"
+            },
+            "titleFormatted": {
+              "en": "Sound the buzzer for [[seconds]] seconds",
+              "nl": "Laat de zoemer [[seconds]] seconden klinken"
+            },
+            "hint": {
+              "en": "Stops automatically. A new timed alert replaces the previous timer. Manual on/off cancels it. If disconnected, stopping is retried after reconnecting.",
+              "nl": "Stopt automatisch. Een nieuwe tijdelijke piep vervangt de vorige timer. Handmatig aan/uit annuleert de timer. Bij verbindingsverlies wordt stoppen na herstel opnieuw geprobeerd."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=s1-pro|e1-pro|s1-pro-zigbee"
+              },
+              {
+                "type": "number",
+                "name": "seconds",
+                "title": {
+                  "en": "Seconds",
+                  "nl": "Seconden"
+                },
+                "min": 0.1,
+                "max": 60,
+                "step": 0.1
+              }
+            ]
+          },
+          {
+            "id": "airdot_display_page",
+            "title": {
+              "en": "Show a display page",
+              "nl": "Toon een schermpagina"
+            },
+            "titleFormatted": {
+              "en": "Show [[page]] on the display",
+              "nl": "Toon [[page]] op het scherm"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=airdot"
+              },
+              {
+                "name": "page",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Page",
+                  "nl": "Pagina"
+                }
+              }
+            ]
+          },
+          {
+            "id": "airdot_display_on",
+            "title": {
+              "en": "Turn the display on",
+              "nl": "Zet het scherm aan"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=airdot"
+              }
+            ]
+          },
+          {
+            "id": "airdot_display_off",
+            "title": {
+              "en": "Turn the display off",
+              "nl": "Zet het scherm uit"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=airdot"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-18T20:35:20.888Z",
+      "bugs": null,
+      "homepage": "https://sensy-one.com",
+      "support": "https://discord.gg/TB78Wprn66",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:zigbee",
+        "homey:wireless:ble"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Updated the AirDot NOx Index and PM4 capability icons.",
+        "nl": "De capability-iconen voor NOx-index en PM4 van AirDot bijgewerkt."
+      },
+      "compatibility": ">=13.5.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.6",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6ac0c7c4b7afc5b9924b04bf",
+      "type": "org",
+      "userId": null,
+      "name": "SENSY-ONE",
+      "verified": true
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "eu.maco",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "MACO",
+        "nl": "MACO",
+        "de": "MACO",
+        "fr": "MACO",
+        "it": "MACO",
+        "es": "MACO",
+        "da": "MACO",
+        "no": "MACO",
+        "sv": "MACO",
+        "pl": "MACO",
+        "ru": "MACO",
+        "ko": "MACO",
+        "ar": "MACO"
+      },
+      "version": "0.0.4",
+      "readme": {
+        "en": "MACO has spent generations perfecting window and door fittings across Europe. With Sense by MACO, that same attention to detail now reaches your smart home: discreet contact sensors installed in the rebate, invisible from the outside, yet always aware of whether an opening is closed or left ajar. Connect them to Homey Pro via Matter over Thread and use their live status in Flows to protect your home, save energy, and automate everyday routines.\n",
+        "da": "I generationer har MACO finpudset beslag til vinduer og døre i hele Europa. Med Sense by MACO bringes den samme omhu ind i dit smarte hjem: diskrete kontaktsensorer i karmen, usynlige udefra, men altid klar over, om en åbning er lukket eller står på klem. Forbind dem til Homey Pro via Matter over Thread, og brug deres livestatus i Flows til at sikre hjemmet, spare energi og automatisere hverdagen.\n",
+        "de": "Seit Generationen verfeinert MACO Fenster- und Türbeschläge in ganz Europa. Mit Sense by MACO kommt dieselbe Sorgfalt in Ihr Smart Home: unauffällige Kontaktsensoren in der Falz, von außen unsichtbar, aber stets informiert, ob ein Element geschlossen oder offen steht. Verbinden Sie sie über Matter over Thread mit Homey Pro und nutzen Sie den Live-Status in Flows, um Ihr Zuhause zu schützen, Energie zu sparen und Alltagsabläufe zu automatisieren.\n",
+        "es": "Durante generaciones, MACO ha perfeccionado los herrajes para ventanas y puertas en toda Europa. Con Sense by MACO, ese mismo cuidado llega a tu hogar inteligente: sensores de contacto discretos en el marco, invisibles desde fuera, pero siempre atentos a si una abertura está cerrada o entreabierta. Conéctalos a Homey Pro mediante Matter over Thread y usa su estado en tiempo real en Flows para proteger tu casa, ahorrar energía y automatizar el día a día.\n",
+        "fr": "Depuis des générations, MACO perfectionne la quincaillerie de fenêtres et de portes en Europe. Avec Sense by MACO, cette même exigence rejoint votre maison connectée : des capteurs de contact discrets dans la feuillure, invisibles de l'extérieur, mais toujours attentifs à l'état ouvert ou fermé de chaque ouverture. Associez-les à Homey Pro via Matter over Thread et exploitez ce statut en temps réel dans vos Flows pour sécuriser votre foyer, économiser l'énergie et automatiser le quotidien.\n",
+        "it": "Da generazioni MACO perfeziona le ferramenta per finestre e porte in tutta Europa. Con Sense by MACO, la stessa cura del dettaglio entra nella tua casa smart: sensori di contatto discreti nel telaio, invisibili dall'esterno, ma sempre consapevoli se un'apertura è chiusa o lasciata socchiusa. Collegali a Homey Pro tramite Matter over Thread e usa lo stato in tempo reale nei Flow per proteggere la casa, risparmiare energia e automatizzare le routine quotidiane.\n",
+        "ko": "MACO는 수 세대에 걸쳐 유럽 전역의 창호·도어 하드웨어를 다듬어 왔습니다. Sense by MACO는 그 정밀함을 스마트 홈으로 이어갑니다. 프레임 안에 숨겨진 접점 센서는 밖에서는 보이지 않지만, 창문과 문이 닫혀 있는지 열려 있는지 항상 파악합니다. Matter over Thread로 Homey Pro에 연결하고 실시간 상태를 Flow에 활용해 집을 보호하고, 에너지를 절약하며, 일상을 자동화하세요.\n",
+        "nl": "Al generaties lang heeft MACO raam- en deurbeslag in Europa verfijnd. Met Sense by MACO gaat diezelfde precisie naar je slimme huis: discrete contactsensoren in de sponning, van buiten onzichtbaar, maar altijd op de hoogte of een opening dicht of open staat. Koppel ze met Homey Pro via Matter over Thread en gebruik die live status in Flows om je woning te beveiligen, energie te besparen en dagelijkse routines te automatiseren.\n",
+        "no": "I generasjoner har MACO finjustert beslag for vinduer og dører i hele Europa. Med Sense by MACO tar den samme presisjonen steget inn i ditt smarte hjem: diskrete kontaktsensorer i karmen, usynlige utenfra, men alltid klar over om en åpning er lukket eller på gløtt. Koble dem til Homey Pro via Matter over Thread, og bruk livestatusen i Flows for å sikre hjemmet, spare energi og automatisere hverdagen.\n",
+        "pl": "Od pokoleń MACO dopracowuje okucia okienne i drzwiowe w całej Europie. Dzięki Sense by MACO ta sama dbałość o szczegóły trafia do Twojego inteligentnego domu: dyskretne czujniki kontaktowe w ościeżnicy, niewidoczne z zewnątrz, a jednak zawsze świadome, czy otwór jest zamknięty, czy uchylony. Połącz je z Homey Pro przez Matter over Thread i wykorzystuj bieżący status w Flow, by chronić dom, oszczędzać energię i automatyzować codzienność.\n",
+        "ru": "На протяжении поколений MACO совершенствует оконную и дверную фурнитуру по всей Европе. Sense by MACO переносит эту же тщательность в ваш умный дом: незаметные контактные датчики в пазу, невидимые снаружи, но всегда знающие, закрыто ли окно или дверь приоткрыта. Подключите их к Homey Pro через Matter over Thread и используйте актуальный статус в Flow для защиты дома, экономии энергии и автоматизации повседневных сценариев.\n",
+        "sv": "I generationer har MACO finslipat beslag för fönster och dörrar i hela Europa. Med Sense by MACO förs samma noggrannhet in i ditt smarta hem: diskreta kontaktsensorer i karmen, osynliga utifrån, men alltid medvetna om om en öppning är stängd eller på glänt. Anslut dem till Homey Pro via Matter over Thread och använd deras livestatus i Flows för att skydda hemmet, spara energi och automatisera vardagen.\n"
+      },
+      "description": {
+        "en": "Technology in motion",
+        "nl": "Techniek in beweging",
+        "de": "Technik, die bewegt",
+        "fr": "La technologie qui évolue",
+        "it": "Tecnologia che si muove",
+        "es": "Tecnología que se mueve",
+        "da": "Teknologi i bevægelse",
+        "no": "Teknologi i bevegelse",
+        "sv": "Teknik i rörelse",
+        "pl": "Technika, która porusza",
+        "ru": "Технология, которая движется",
+        "ko": "움직이는 기술",
+        "ar": "تقنية قيد الحركة"
+      },
+      "category": "security",
+      "brandColor": "#007DC5",
+      "icon": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "sense-casement",
+          "name": {
+            "en": "Casement Sensor"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "alarm_contact",
+            "measure_battery"
+          ],
+          "energy": {
+            "batteries": [
+              "CR2032",
+              "CR2032"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-casement/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-casement/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "matter"
+          ],
+          "icon": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-casement/assets/icon.svg"
+        },
+        {
+          "id": "sense-door",
+          "name": {
+            "en": "Door Sensor"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "alarm_contact",
+            "measure_battery"
+          ],
+          "energy": {
+            "batteries": [
+              "CR2032",
+              "CR2032"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-door/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-door/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "matter"
+          ],
+          "icon": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-door/assets/icon.svg"
+        },
+        {
+          "id": "sense-universal",
+          "name": {
+            "en": "Universal Sensor"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "alarm_contact",
+            "measure_battery"
+          ],
+          "energy": {
+            "batteries": [
+              "AAA"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-universal/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-universal/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "matter"
+          ],
+          "icon": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-universal/assets/icon.svg"
+        },
+        {
+          "id": "sense-window-pro-tt",
+          "name": {
+            "en": "Window Pro T&T Sensor"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "alarm_contact",
+            "measure_battery"
+          ],
+          "energy": {
+            "batteries": [
+              "CR2032",
+              "CR2032"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-window-pro-tt/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-window-pro-tt/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "matter"
+          ],
+          "icon": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-window-pro-tt/assets/icon.svg"
+        },
+        {
+          "id": "sense-window-tt",
+          "name": {
+            "en": "Window T&T Sensor"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "alarm_contact",
+            "measure_battery"
+          ],
+          "energy": {
+            "batteries": [
+              "AAA"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-window-tt/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-window-tt/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "matter"
+          ],
+          "icon": "https://apps.homeycdn.net/app/eu.maco/4/7d7efefc-1fce-4a86-a5e5-20eb6b5926cd/drivers/sense-window-tt/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 162416,
+      "state": "live",
+      "stateChangedAt": "2026-11-18T20:46:09.561Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:abe.haverkamp+maco@homey.app",
+      "source": "https://github.com/Doekse/maco-homey",
+      "contributors": {
+        "developers": [
+          {
+            "name": "Abe Haverkamp (developer)"
+          },
+          {
+            "name": "Bas van der Ploeg (icons)"
+          }
+        ],
+        "translators": []
+      },
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Added some missing translations"
+      },
+      "compatibility": ">=12.4.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [
+        "matter"
+      ],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.0.4",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {
+      "nl": "https://www.maco.eu/nl-NL/Home",
+      "de": "https://www.maco.eu/de-DE/Home",
+      "it": "https://www.maco.eu/it-IT/Maico",
+      "pl": "https://www.maco.eu/pl-PL/Home",
+      "es": "https://www.maco.eu/es-ES/Home",
+      "en": "https://www.maco.eu/en-INT/Home",
+      "fr": "https://www.maco.eu/fr-FR/Home",
+      "da": "https://www.maco.eu/en-INT/Home",
+      "no": "https://www.maco.eu/en-INT/Home",
+      "ru": "https://www.maco.eu/en-INT/Home",
+      "sv": "https://www.maco.eu/en-INT/Home"
+    },
+    "author": {
+      "id": "6a51099bce38f245588d9125",
+      "type": "user",
+      "userId": "6a5104e6403a1c750b315312",
+      "name": "Mayer &amp; Co Beschläge GmbH",
+      "verified": true
+    },
+    "communityTopicId": 162416
+  }
+]

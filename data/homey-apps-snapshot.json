@@ -20315,5 +20315,27 @@
     "publishedAt": "2026-11-16T19:56:10.997Z",
     "updatedAt": "2026-11-16T19:56:10.997Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "com.sensy-one",
+    "name": "SENSY-ONE",
+    "developerName": "SENSY-ONE",
+    "developerId": "6ac0c7c4b7afc5b9924b04bf",
+    "version": "1.0.6",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-18T22:44:44.256Z",
+    "updatedAt": "2026-11-18T22:44:44.256Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "eu.maco",
+    "name": "MACO",
+    "developerName": "Mayer &amp; Co Beschläge GmbH",
+    "developerId": "6a51099bce38f245588d9125",
+    "version": "0.0.4",
+    "sourceRepository": "https://github.com/Doekse/maco-homey",
+    "publishedAt": "2026-11-18T22:44:45.305Z",
+    "updatedAt": "2026-11-18T22:44:45.305Z",
+    "communityTopicId": 162416
   }
 ]
