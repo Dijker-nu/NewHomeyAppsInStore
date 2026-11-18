@@ -2391,10 +2391,10 @@
     "name": "Broadlink",
     "developerName": "Bretislav Kubesa",
     "developerId": "65aea98ae366acd9f08cc0f1",
-    "version": "3.1.85",
+    "version": "3.1.86",
     "sourceRepository": "https://github.com/shaarkys/com.broadlink",
     "publishedAt": "2019-11-12T14:02:56.496Z",
-    "updatedAt": "2026-11-12T11:28:40.929Z",
+    "updatedAt": "2026-11-18T11:55:18.097Z",
     "communityTopicId": 6389
   },
   {
@@ -3348,10 +3348,10 @@
     "name": "Philips TV",
     "developerName": "Lucas van der Have",
     "developerId": "5dcababa1c90c866f9365022",
-    "version": "3.8.0",
+    "version": "3.8.2",
     "sourceRepository": "https://github.com/lucasvdh/codes.lucasvdh.philips-jointspace",
     "publishedAt": "2019-11-12T14:06:40.151Z",
-    "updatedAt": "2026-11-14T10:38:36.282Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 14064
   },
   {
@@ -8021,12 +8021,12 @@
   {
     "appId": "io.quatt",
     "name": "Quatt",
-    "developerName": "Quatt Community",
-    "developerId": "6a8817e9c8d34196bd67d0d9",
+    "developerName": "OpenQuatt",
+    "developerId": "6a88174ac8d34196bd67ba17",
     "version": "1.10.1",
     "sourceRepository": "https://github.com/trietsch/io.quatt",
     "publishedAt": "2023-10-09T09:15:49.093Z",
-    "updatedAt": "2026-08-28T07:20:12.817Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 91446
   },
   {
@@ -9607,10 +9607,10 @@
     "name": "CZ spot prices",
     "developerName": "Jiri Pech",
     "developerId": "66c3a07fd17e7883073ccec0",
-    "version": "3.0.8",
+    "version": "3.0.9",
     "sourceRepository": "https://github.com/PechJiri/CZspotprices",
     "publishedAt": "2024-08-26T16:44:15.802Z",
-    "updatedAt": "2026-04-23T07:28:20.279Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 116949
   },
   {
@@ -10850,10 +10850,10 @@
     "name": "Growatt",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "3.1.1",
+    "version": "3.2.0",
     "sourceRepository": "",
     "publishedAt": "2025-04-08T09:44:30.050Z",
-    "updatedAt": "2026-11-14T10:38:36.283Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 134233
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.40.0",
+    "version": "3.42.1",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-17T12:02:36.342Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 147496
   },
   {
@@ -13512,10 +13512,10 @@
     "name": "Dashboard Studio",
     "developerName": "Michel Satoer",
     "developerId": "6991c948cd19af4229e27966",
-    "version": "2.3.5",
+    "version": "2.4.1",
     "sourceRepository": "",
     "publishedAt": "2026-02-15T13:25:28.308Z",
-    "updatedAt": "2026-11-09T11:46:59.439Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 151169
   },
   {
@@ -14843,10 +14843,10 @@
     "name": "Diagral",
     "developerName": "Luca Amoroso",
     "developerId": "69daa5fffb6dd7068a780acb",
-    "version": "1.1.15",
+    "version": "1.1.16",
     "sourceRepository": "https://github.com/lucaamo/homey-diagral",
     "publishedAt": "2026-04-12T20:09:06.674Z",
-    "updatedAt": "2026-11-14T10:38:36.284Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": null
   },
   {
@@ -14898,10 +14898,10 @@
     "name": "Arr Video Suite",
     "developerName": "Jurjen Ladenius",
     "developerId": "69de17d9fb6dd7068a78f4bd",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "sourceRepository": "https://github.com/jurjen74/homey-arr",
     "publishedAt": "2026-04-14T10:32:57.228Z",
-    "updatedAt": "2026-10-24T08:15:13.305Z",
+    "updatedAt": "2026-11-18T11:55:18.098Z",
     "communityTopicId": 153760
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.3.10",
+    "version": "6.3.11",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-17T12:02:36.343Z",
+    "updatedAt": "2026-11-18T11:55:18.099Z",
     "communityTopicId": null
   },
   {
@@ -17582,10 +17582,10 @@
     "name": "ArtiLED",
     "developerName": "ArtiLED B.V.",
     "developerId": "6af583021ea3eca81332520a",
-    "version": "0.6.5",
+    "version": "0.6.6",
     "sourceRepository": "",
     "publishedAt": "2026-08-18T07:25:17.338Z",
-    "updatedAt": "2026-11-16T11:40:55.316Z",
+    "updatedAt": "2026-11-18T11:55:18.099Z",
     "communityTopicId": null
   },
   {
@@ -19276,10 +19276,10 @@
     "name": "Vaillant eBUS",
     "developerName": "Volodymyr Piaskovskyi",
     "developerId": "6ac7f481bdc8421d78c4d31b",
-    "version": "0.4.4",
+    "version": "0.4.7",
     "sourceRepository": "https://github.com/vova275/homey-vaillant-ebus",
     "publishedAt": "2026-10-14T16:05:13.082Z",
-    "updatedAt": "2026-11-03T11:00:53.912Z",
+    "updatedAt": "2026-11-18T11:55:18.099Z",
     "communityTopicId": null
   },
   {
@@ -19584,10 +19584,10 @@
     "name": "Medication Reminder",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-11-07T10:25:34.160Z",
+    "updatedAt": "2026-11-18T11:55:18.099Z",
     "communityTopicId": 161097
   },
   {
@@ -19958,10 +19958,10 @@
     "name": "Prana",
     "developerName": "Volodymyr Piaskovskyi",
     "developerId": "6ac7f481bdc8421d78c4d31b",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-11-05T11:08:40.660Z",
-    "updatedAt": "2026-11-05T11:08:40.660Z",
+    "updatedAt": "2026-11-18T11:55:18.099Z",
     "communityTopicId": null
   },
   {
