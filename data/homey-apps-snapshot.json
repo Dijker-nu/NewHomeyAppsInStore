@@ -20337,5 +20337,16 @@
     "publishedAt": "2026-11-18T22:44:45.305Z",
     "updatedAt": "2026-11-18T22:44:45.305Z",
     "communityTopicId": 162416
+  },
+  {
+    "appId": "com.andresensoft.warp",
+    "name": "WARP Charger",
+    "developerName": "Lars Andresen",
+    "developerId": "6ac0acc5bdc7ced970ff7032",
+    "version": "2.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-19T16:53:48.117Z",
+    "updatedAt": "2026-11-19T16:53:48.117Z",
+    "communityTopicId": 160717
   }
 ]
