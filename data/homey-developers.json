@@ -3306,6 +3306,12 @@
     "forumUsername": "DrFatalis"
   },
   {
+    "developerId": "6a51099bce38f245588d9125",
+    "developerName": "Mayer &amp; Co Beschläge GmbH",
+    "forumUserID": 33362,
+    "forumUsername": "Doekse"
+  },
+  {
     "developerId": "69e702dcfb6dd7068a7c3cbe",
     "developerName": "MCOHome Technology Co.,Ltd",
     "forumUserID": 24,
@@ -4750,6 +4756,12 @@
     "developerName": "Sensereo Limited",
     "forumUserID": 33362,
     "forumUsername": "Doekse"
+  },
+  {
+    "developerId": "6ac0c7c4b7afc5b9924b04bf",
+    "developerName": "SENSY-ONE",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "6a46d53f935e917a36aff9b8",
