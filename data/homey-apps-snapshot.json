@@ -245,11 +245,11 @@
     "appId": "com.doorbird",
     "name": "DoorBird",
     "developerName": "DoorBird GmbH",
-    "developerId": "603919ccea27a57b447dc29d",
+    "developerId": "6afb88027571bdf1a96543c3",
     "version": "3.3.5",
     "sourceRepository": "https://github.com/jghaanstra/com.doorbird",
     "publishedAt": "2019-11-12T13:52:36.167Z",
-    "updatedAt": "2024-08-23T10:41:22.227Z",
+    "updatedAt": "2026-11-20T11:53:24.283Z",
     "communityTopicId": 115
   },
   {
@@ -663,11 +663,11 @@
     "appId": "com.mcohome",
     "name": "MCOHome",
     "developerName": "MCOHome Technology Co.,Ltd",
-    "developerId": "69e702dcfb6dd7068a7c3cbe",
+    "developerId": "6afb886a7571bdf1a96553d8",
     "version": "2.0.1",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:55:06.613Z",
-    "updatedAt": "2026-09-21T18:50:33.504Z",
+    "updatedAt": "2026-11-20T11:53:24.283Z",
     "communityTopicId": 159
   },
   {
@@ -2984,11 +2984,11 @@
     "appId": "com.plugwise.adam",
     "name": "Plugwise",
     "developerName": "Plugwise B.V.",
-    "developerId": "5dcabc1f1c90c866f936631b",
-    "version": "3.2.0",
+    "developerId": "6af85bfd7571bdf1a9ca242b",
+    "version": "3.3.0",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T14:05:19.295Z",
-    "updatedAt": "2025-10-19T21:39:42.634Z",
+    "updatedAt": "2026-11-20T11:53:24.284Z",
     "communityTopicId": null
   },
   {
@@ -3535,10 +3535,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.16.1",
+    "version": "46.17.1",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-11-17T12:02:36.341Z",
+    "updatedAt": "2026-11-20T11:53:24.284Z",
     "communityTopicId": 73094
   },
   {
@@ -4096,10 +4096,10 @@
     "name": "Ring",
     "developerName": "Danee de Kruyff",
     "developerId": "5dcaba6f1c90c866f9364c85",
-    "version": "2.14.30",
+    "version": "2.14.31",
     "sourceRepository": "https://github.com/daneedk/com.amazon.ring",
     "publishedAt": "2020-03-04T20:24:16.525Z",
-    "updatedAt": "2026-11-02T11:24:40.074Z",
+    "updatedAt": "2026-11-20T11:53:24.284Z",
     "communityTopicId": 76364
   },
   {
@@ -4391,12 +4391,12 @@
   {
     "appId": "com.frient",
     "name": "frient",
-    "developerName": "frient A/S",
-    "developerId": "5ef3a8d3bded7e23093d549d",
+    "developerName": "Frient A/S",
+    "developerId": "6afb877dfb4523aa704a9d04",
     "version": "3.0.1",
     "sourceRepository": "",
     "publishedAt": "2020-06-23T09:24:22.103Z",
-    "updatedAt": "2026-10-21T08:42:36.034Z",
+    "updatedAt": "2026-11-20T11:53:24.284Z",
     "communityTopicId": 76161
   },
   {
@@ -5339,10 +5339,10 @@
     "name": "Misol and Ecowitt",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "0.2.35",
+    "version": "0.2.36",
     "sourceRepository": "https://github.com/AdyRock/com.misol",
     "publishedAt": "2021-05-05T00:40:02.262Z",
-    "updatedAt": "2026-09-19T12:58:52.078Z",
+    "updatedAt": "2026-11-20T11:53:24.284Z",
     "communityTopicId": 47076
   },
   {
@@ -8199,10 +8199,10 @@
     "name": "Omnik",
     "developerName": "Lucas van der Have",
     "developerId": "5dcababa1c90c866f9365022",
-    "version": "1.5.2",
+    "version": "1.6.0",
     "sourceRepository": "https://github.com/lucasvdh/codes.lucasvdh.omnik",
     "publishedAt": "2023-11-07T18:48:35.370Z",
-    "updatedAt": "2026-05-14T15:21:04.808Z",
+    "updatedAt": "2026-11-20T11:53:24.284Z",
     "communityTopicId": 94499
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.42.1",
+    "version": "3.45.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-18T11:55:18.098Z",
+    "updatedAt": "2026-11-20T11:53:24.285Z",
     "communityTopicId": 147496
   },
   {
@@ -13908,10 +13908,10 @@
     "name": "Trivia",
     "developerName": "Arnt Soløy",
     "developerId": "69a09cf9af832c1e4627d48f",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "sourceRepository": "",
     "publishedAt": "2026-02-28T22:23:57.244Z",
-    "updatedAt": "2026-09-04T20:45:09.665Z",
+    "updatedAt": "2026-11-20T11:53:24.285Z",
     "communityTopicId": null
   },
   {
@@ -14423,12 +14423,12 @@
   {
     "appId": "com.zinvolt",
     "name": "ZinVolt",
-    "developerName": "‎ ‎ZinVolt",
-    "developerId": "69c00d6e699c29709c9ea901",
+    "developerName": "ZinVolt",
+    "developerId": "6af85cfafb4523aa70ad3b96",
     "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-03-22T15:41:27.208Z",
-    "updatedAt": "2026-07-26T10:22:15.428Z",
+    "updatedAt": "2026-11-20T11:53:24.285Z",
     "communityTopicId": null
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.3.11",
+    "version": "6.3.12",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-18T11:55:18.099Z",
+    "updatedAt": "2026-11-20T11:53:24.285Z",
     "communityTopicId": null
   },
   {
@@ -17483,10 +17483,10 @@
     "name": "HomeFlux",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "sourceRepository": "https://github.com/DavyBert/homey-dashboard-HomeFlux",
     "publishedAt": "2026-08-15T20:24:19.753Z",
-    "updatedAt": "2026-11-07T10:25:34.160Z",
+    "updatedAt": "2026-11-20T11:53:24.285Z",
     "communityTopicId": 161252
   },
   {
@@ -18605,10 +18605,10 @@
     "name": "Aikion",
     "developerName": "Innomenta",
     "developerId": "6ab0409e2c418bed59fba3ec",
-    "version": "3.1.0",
+    "version": "3.6.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-28T09:56:22.527Z",
-    "updatedAt": "2026-10-12T11:03:24.487Z",
+    "updatedAt": "2026-11-20T11:53:24.285Z",
     "communityTopicId": null
   },
   {
@@ -18649,10 +18649,10 @@
     "name": "ESPanel",
     "developerName": "Leopold Junkers",
     "developerId": "6abaa70730dc90a8d6e5b566",
-    "version": "1.17.0",
+    "version": "1.18.0",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T09:49:12.856Z",
-    "updatedAt": "2026-11-19T11:51:46.155Z",
+    "updatedAt": "2026-11-20T11:53:24.286Z",
     "communityTopicId": 161065
   },
   {
@@ -19122,10 +19122,10 @@
     "name": "Marstek B2500",
     "developerName": "dez ware",
     "developerId": "6a5240abce38f245588dd30d",
-    "version": "0.4.17",
+    "version": "0.5.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-08T18:05:27.778Z",
-    "updatedAt": "2026-11-03T11:00:53.912Z",
+    "updatedAt": "2026-11-20T11:53:24.286Z",
     "communityTopicId": 160375
   },
   {
@@ -19171,17 +19171,6 @@
     "publishedAt": "2026-10-12T11:02:42.842Z",
     "updatedAt": "2026-10-17T07:54:57.465Z",
     "communityTopicId": 160353
-  },
-  {
-    "appId": "com.glumpf.warp",
-    "name": "WARP Charger",
-    "developerName": "Lars Andresen",
-    "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.1.0",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-12T11:02:42.842Z",
-    "updatedAt": "2026-11-14T10:38:36.285Z",
-    "communityTopicId": 160717
   },
   {
     "appId": "dk.sundgaard.universalrfremote",
@@ -19617,10 +19606,10 @@
     "name": "Drivie - Companion",
     "developerName": "Cyril Hendriks",
     "developerId": "6996ebeccd19af4229e539d5",
-    "version": "1.8.2",
+    "version": "1.9.1",
     "sourceRepository": "",
     "publishedAt": "2026-10-23T08:39:47.523Z",
-    "updatedAt": "2026-11-13T11:12:41.906Z",
+    "updatedAt": "2026-11-20T11:53:24.286Z",
     "communityTopicId": 161211
   },
   {

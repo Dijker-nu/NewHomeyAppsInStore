@@ -1092,6 +1092,12 @@
     "forumUsername": "TedTolboom"
   },
   {
+    "developerId": "6afb88027571bdf1a96543c3",
+    "developerName": "DoorBird GmbH",
+    "forumUserID": 24,
+    "forumUsername": "TedTolboom"
+  },
+  {
     "developerId": "6998befbcd19af4229e5965e",
     "developerName": "Douglas Krug",
     "forumUserID": 58000,
@@ -1574,6 +1580,12 @@
   {
     "developerId": "5ef3a8d3bded7e23093d549d",
     "developerName": "frient A/S",
+    "forumUserID": 28304,
+    "forumUsername": "frient"
+  },
+  {
+    "developerId": "6afb877dfb4523aa704a9d04",
+    "developerName": "Frient A/S",
     "forumUserID": 28304,
     "forumUsername": "frient"
   },
@@ -3318,6 +3330,12 @@
     "forumUsername": "TedTolboom"
   },
   {
+    "developerId": "6afb886a7571bdf1a96553d8",
+    "developerName": "MCOHome Technology Co.,Ltd",
+    "forumUserID": 24,
+    "forumUsername": "TedTolboom"
+  },
+  {
     "developerId": "5e988d15733507fad55ea499",
     "developerName": "Menno Bliek (Momotica)",
     "forumUserID": null,
@@ -4075,6 +4093,12 @@
   },
   {
     "developerId": "5dcabc1f1c90c866f936631b",
+    "developerName": "Plugwise B.V.",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6af85bfd7571bdf1a9ca242b",
     "developerName": "Plugwise B.V.",
     "forumUserID": null,
     "forumUsername": null
@@ -5708,6 +5732,12 @@
   {
     "developerId": "684ef1a69181f12fe14f13a3",
     "developerName": "Zendure DE GmbH",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
+    "developerId": "6af85cfafb4523aa70ad3b96",
+    "developerName": "ZinVolt",
     "forumUserID": null,
     "forumUsername": null
   },
