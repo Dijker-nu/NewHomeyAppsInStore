@@ -3535,10 +3535,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.17.1",
+    "version": "46.18.2",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-11-20T11:53:24.284Z",
+    "updatedAt": "2026-11-21T11:21:59.640Z",
     "communityTopicId": 73094
   },
   {
@@ -4008,10 +4008,10 @@
     "name": "Synology Surveillance Station 2",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "4.2.2",
+    "version": "4.2.3",
     "sourceRepository": "https://github.com/martijnpoppen/athom.com.synology.ss",
     "publishedAt": "2020-02-02T18:40:59.118Z",
-    "updatedAt": "2026-11-17T12:02:36.341Z",
+    "updatedAt": "2026-11-21T11:21:59.641Z",
     "communityTopicId": 71552
   },
   {
@@ -7572,10 +7572,10 @@
     "name": "WhatsApp",
     "developerName": "Martijn Poppen",
     "developerId": "5ff80f9160b08808d0bf4a68",
-    "version": "3.0.27",
+    "version": "3.0.29",
     "sourceRepository": "https://github.com/martijnpoppen/com.whatsapp",
     "publishedAt": "2023-06-26T07:44:55.880Z",
-    "updatedAt": "2026-11-15T11:11:44.870Z",
+    "updatedAt": "2026-11-21T11:21:59.641Z",
     "communityTopicId": 90749
   },
   {
@@ -8604,12 +8604,12 @@
   {
     "appId": "net.franceweb.nous",
     "name": "Nous",
-    "developerName": "NovaCore Labs",
-    "developerId": "6a8bdd7a94f0069d62618521",
+    "developerName": "Nous Technology",
+    "developerId": "6afd82467e8ffc36374e7066",
     "version": "2.23.3",
     "sourceRepository": "",
     "publishedAt": "2023-12-30T18:24:31.292Z",
-    "updatedAt": "2026-11-07T10:25:34.158Z",
+    "updatedAt": "2026-11-21T11:21:59.641Z",
     "communityTopicId": 99614
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.45.0",
+    "version": "3.45.1",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-20T11:53:24.285Z",
+    "updatedAt": "2026-11-21T11:21:59.642Z",
     "communityTopicId": 147496
   },
   {
@@ -13512,10 +13512,10 @@
     "name": "Dashboard Studio",
     "developerName": "Michel Satoer",
     "developerId": "6991c948cd19af4229e27966",
-    "version": "2.4.1",
+    "version": "2.5.2",
     "sourceRepository": "",
     "publishedAt": "2026-02-15T13:25:28.308Z",
-    "updatedAt": "2026-11-18T11:55:18.098Z",
+    "updatedAt": "2026-11-21T11:21:59.642Z",
     "communityTopicId": 151169
   },
   {
@@ -14428,8 +14428,8 @@
     "version": "1.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-03-22T15:41:27.208Z",
-    "updatedAt": "2026-11-20T11:53:24.285Z",
-    "communityTopicId": null
+    "updatedAt": "2026-11-21T11:21:59.642Z",
+    "communityTopicId": 162228
   },
   {
     "appId": "com.arteco",
@@ -20321,10 +20321,10 @@
     "name": "MACO",
     "developerName": "Mayer &amp; Co Beschläge GmbH",
     "developerId": "6a51099bce38f245588d9125",
-    "version": "0.0.4",
+    "version": "1.0.0",
     "sourceRepository": "https://github.com/Doekse/maco-homey",
     "publishedAt": "2026-11-18T22:44:45.305Z",
-    "updatedAt": "2026-11-18T22:44:45.305Z",
+    "updatedAt": "2026-11-21T11:21:59.643Z",
     "communityTopicId": 162416
   },
   {

@@ -3696,6 +3696,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6afd82467e8ffc36374e7066",
+    "developerName": "Nous Technology",
+    "forumUserID": 30022,
+    "forumUsername": "SergeP"
+  },
+  {
     "developerId": "6a8bdd7a94f0069d62618521",
     "developerName": "NovaCore Labs",
     "forumUserID": 30022,
@@ -5738,8 +5744,8 @@
   {
     "developerId": "6af85cfafb4523aa70ad3b96",
     "developerName": "ZinVolt",
-    "forumUserID": null,
-    "forumUsername": null
+    "forumUserID": 24,
+    "forumUsername": "TedTolboom"
   },
   {
     "developerId": "6a9186cd30ac038fba7073fc",
