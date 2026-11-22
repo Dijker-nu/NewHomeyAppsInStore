@@ -356,10 +356,10 @@
     "name": "Archive Insights",
     "developerName": "Robin de Gruijter",
     "developerId": "5dcab95d1c90c866f9364089",
-    "version": "5.4.0",
+    "version": "5.5.0",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:53:35.686Z",
-    "updatedAt": "2026-10-23T08:40:17.684Z",
+    "updatedAt": "2026-11-22T11:39:10.564Z",
     "communityTopicId": 10976
   },
   {
@@ -3084,10 +3084,10 @@
     "name": "Volvo On Call",
     "developerName": "Richard Barkestam",
     "developerId": "5dcabbb31c90c866f9365da2",
-    "version": "1.7.1",
+    "version": "1.8.1",
     "sourceRepository": "https://github.com/ricott/homey-com.volvocars",
     "publishedAt": "2019-11-12T14:05:48.227Z",
-    "updatedAt": "2026-10-29T10:09:55.957Z",
+    "updatedAt": "2026-11-22T11:39:10.564Z",
     "communityTopicId": 20828
   },
   {
@@ -3535,10 +3535,10 @@
     "name": "M",
     "developerName": "Olivier Zalmanski",
     "developerId": "6331d503424625865530e6d3",
-    "version": "46.18.2",
+    "version": "46.19.1",
     "sourceRepository": "https://github.com/OlivierZal/com.melcloud",
     "publishedAt": "2019-11-12T14:07:39.937Z",
-    "updatedAt": "2026-11-21T11:21:59.640Z",
+    "updatedAt": "2026-11-22T11:39:10.564Z",
     "communityTopicId": 73094
   },
   {
@@ -4096,10 +4096,10 @@
     "name": "Ring",
     "developerName": "Danee de Kruyff",
     "developerId": "5dcaba6f1c90c866f9364c85",
-    "version": "2.14.31",
+    "version": "2.14.32",
     "sourceRepository": "https://github.com/daneedk/com.amazon.ring",
     "publishedAt": "2020-03-04T20:24:16.525Z",
-    "updatedAt": "2026-11-20T11:53:24.284Z",
+    "updatedAt": "2026-11-22T11:39:10.565Z",
     "communityTopicId": 76364
   },
   {
@@ -12082,10 +12082,10 @@
     "name": "NextDNS",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.31",
+    "version": "1.0.32",
     "sourceRepository": "https://github.com/smarthomesven/homey-nextdns",
     "publishedAt": "2025-11-03T18:02:28.609Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-22T11:39:10.565Z",
     "communityTopicId": 144903
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.45.1",
+    "version": "3.47.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-21T11:21:59.642Z",
+    "updatedAt": "2026-11-22T11:39:10.565Z",
     "communityTopicId": 147496
   },
   {
@@ -12863,10 +12863,10 @@
     "name": "Zyxel Nebula",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.22",
+    "version": "1.0.23",
     "sourceRepository": "https://github.com/smarthomesven/homey-zyxel-nebula",
     "publishedAt": "2026-01-03T00:16:20.830Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-22T11:39:10.565Z",
     "communityTopicId": 148409
   },
   {
@@ -13061,10 +13061,10 @@
     "name": "AdGuard Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.3.4",
+    "version": "1.3.5",
     "sourceRepository": "https://github.com/smarthomesven/homey-adguard-home",
     "publishedAt": "2026-01-22T19:49:21.791Z",
-    "updatedAt": "2026-11-15T11:11:44.871Z",
+    "updatedAt": "2026-11-22T11:39:10.565Z",
     "communityTopicId": 149822
   },
   {
@@ -13633,10 +13633,10 @@
     "name": "Sunsa",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.28",
+    "version": "1.0.30",
     "sourceRepository": "https://github.com/smarthomesven/homey-sunsa",
     "publishedAt": "2026-02-21T17:58:33.508Z",
-    "updatedAt": "2026-09-08T16:16:22.148Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 151476
   },
   {
@@ -13908,10 +13908,10 @@
     "name": "Trivia",
     "developerName": "Arnt Soløy",
     "developerId": "69a09cf9af832c1e4627d48f",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "sourceRepository": "",
     "publishedAt": "2026-02-28T22:23:57.244Z",
-    "updatedAt": "2026-11-20T11:53:24.285Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": null
   },
   {
@@ -15800,10 +15800,10 @@
     "name": "Trane Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "sourceRepository": "https://github.com/smarthomesven/homey-trane-home",
     "publishedAt": "2026-05-21T02:26:13.125Z",
-    "updatedAt": "2026-08-20T21:37:00.420Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 156885
   },
   {
@@ -16075,10 +16075,10 @@
     "name": "Ajax Security System",
     "developerName": "Mike Taselaar",
     "developerId": "6984f3387f99f35171239712",
-    "version": "1.0.761",
+    "version": "1.0.762",
     "sourceRepository": "",
     "publishedAt": "2026-06-05T15:50:23.864Z",
-    "updatedAt": "2026-11-14T10:38:36.284Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 156098
   },
   {
@@ -16438,10 +16438,10 @@
     "name": "American Standard Home",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "sourceRepository": "https://github.com/smarthomesven/homey-asair-home",
     "publishedAt": "2026-07-04T22:46:01.025Z",
-    "updatedAt": "2026-08-26T10:14:12.718Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 156895
   },
   {
@@ -16790,10 +16790,10 @@
     "name": "OSAIO",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.1.8",
+    "version": "1.1.9",
     "sourceRepository": "https://github.com/smarthomesven/homey-osaio",
     "publishedAt": "2026-07-19T01:30:40.041Z",
-    "updatedAt": "2026-10-13T10:46:12.223Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 157336
   },
   {
@@ -17230,10 +17230,10 @@
     "name": "Innr Bridge",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "sourceRepository": "https://github.com/smarthomesven/homey-innr-bridge",
     "publishedAt": "2026-08-07T02:55:37.920Z",
-    "updatedAt": "2026-09-19T23:08:15.627Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 157997
   },
   {
@@ -17483,10 +17483,10 @@
     "name": "HomeFlux",
     "developerName": "Davy Bert",
     "developerId": "6a7c412dc6a80eeabce17592",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "https://github.com/DavyBert/homey-dashboard-HomeFlux",
     "publishedAt": "2026-08-15T20:24:19.753Z",
-    "updatedAt": "2026-11-20T11:53:24.285Z",
+    "updatedAt": "2026-11-22T11:39:10.566Z",
     "communityTopicId": 161252
   },
   {
