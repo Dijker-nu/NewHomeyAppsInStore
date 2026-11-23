@@ -1,1 +1,2153 @@
-[]
+[
+  {
+    "id": "com.zperx.infrared",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "InfraRed Toolkit"
+      },
+      "version": "0.0.5",
+      "readme": {
+        "en": "Infrared Is Not Dead. Your Homey Proves It. Get your IR to the next level.\r\n\r\nInfrared is the most widely used wireless protocol for home appliances on the planet, and probably the most overlooked one as well.\r\nThis app brings back the feature I missed the most after it was removed: triggering flows with your IR remote.  Because it is so much easier than the alternatives. I turn on the TV, and Homey automatically switches the HiFi to the right input, dims the lights and closes the blinds. No reaching for the phone, no unlocking it, no finding the app or a widget, no starting a flow by hand, and no arguing with Siri, Alexa or any of the other ladies. I also programmed one of the spare buttons on my remote to trigger the full sleep flow. The best automation is the kind you trigger without even thinking about it.\r\n\r\nFEATURES\r\n•  Learn mode: point a remote at Homey, press a button, and the signal is captured and verified. Press the same button again to confirm. Finetune it.\r\n•  Manual entry: Paste a code in Pronto Hex, HEX, Global Caché, Broadlink or the native Homey format.\r\n•  IR database: Global Caché keeps an online database with more than 285,000 codes. Look one up and enter it by hand.\r\n•  Single command or full remote: Add one button, or build a remote with several named, iconised commands such as power, volume, navigation and playback.\r\n•  Custom icons\r\n•  Quick on/off button: Map two commands to a single on/off toggle.\r\n•  Advanced view: inspect the pulse graph, carrier, hex value, bit length and pulse/gap timings of any captured signal.\r\n•  Toggle-bit handling for RC5 and RC6, so both variants of a keypress are recognised.\r\n•  Trigger flows: a learned infrared signal can start a Homey flow.\r\n•  Action flows: Send out recorded or manually entered codes\r\n\r\nHARDWARE\r\nYou need a pre-2023 Homey to receive signals and to trigger flows with infrared. The 2023 and later models do not have IR receivers. However they do have IR transmitters so you can still add infrared signals manually and send them.\r\nThis means the \"old\" Homeys just went up in value if you care about IR. Long live the classics.\r\nPractical tip: if IR reception matters to you, turn off the LED ring on your pre-2023 Homey. It can cause interference, and learning works noticeably better with the ring dark.\r\n\r\nSUPPORTED PROTOCOLS AND CARRIER FREQUENCIES\r\nNEC 38 kHz\r\nSony SIRC 40 kHz\r\nSamsung 38 kHz\r\nJVC 38 kHz\r\nPanasonic 37 kHz\r\nRC5 36 kHz\r\nRC6 (mode 0) 36 kHz\r\nRC6 (mode 6A) 36 kHz\r\nGeneric (raw) 38 kHz, up to 128 bits\r\n\r\nThe app has been tested with RC5 and RC6 (Philips remotes). Homey turned out to be more responsive to infrared than my own devices also the signals sent out by homey are stronger than my remotes.\r\n\r\nNON-SUPPORTED PROTOCOLS AND LIMITATIONS\r\nThe infrared world is more complex than it looks, so do not be surprised if a number of remotes will not work. Typical examples that are out of scope:\t\r\n•  Sharp and Denon coding, which uses a very different timing structure.\r\n•  Mitsubishi, Toshiba and RCA code formats.\r\n•  Cisco and other 56/57 kHz systems. Carriers far outside roughly 30 to 45 kHz are not handled.\r\n•  Bang & Olufsen, which uses a 455 kHz carrier, and similar exotic hardware.\r\n•  Air conditioners that send one very long state frame (temperature, mode and fan speed all at once), such as Daikin, Fujitsu, Mitsubishi, Midea and Toshiba. Those frames are simply too  long for Homey to handle."
+      },
+      "description": {
+        "en": "Get your InfraRed to the next level"
+      },
+      "category": "tools",
+      "brandColor": "#B4182D",
+      "icon": "https://apps.homeycdn.net/app/com.zperx.infrared/4/46464a75-0eea-4f74-aa0c-49765977315f/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.zperx.infrared/4/46464a75-0eea-4f74-aa0c-49765977315f/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.zperx.infrared/4/46464a75-0eea-4f74-aa0c-49765977315f/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "ir_signal",
+          "name": {
+            "en": "IR signal"
+          },
+          "class": "remote",
+          "capabilities": [
+            "button",
+            "onoff"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/com.zperx.infrared/4/46464a75-0eea-4f74-aa0c-49765977315f/drivers/ir_signal/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.zperx.infrared/4/46464a75-0eea-4f74-aa0c-49765977315f/drivers/ir_signal/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.zperx.infrared/4/46464a75-0eea-4f74-aa0c-49765977315f/drivers/ir_signal/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "any_ir_received",
+            "title": {
+              "en": "Any IR signal received"
+            },
+            "titleFormatted": {
+              "en": "Any IR signal received with sensitivity [[sensitivity]]"
+            },
+            "hint": {
+              "en": "Triggers when Homey receives an infrared signal. Sensitivity has a permitted range of 0.0 to 0.5. A value of 0.0 is strictest, 0.5 is most lenient and 0.4 is the default. Below 0.3, signals only caught by the generic profile are ignored."
+            },
+            "args": [
+              {
+                "name": "sensitivity",
+                "type": "dropdown",
+                "title": {
+                  "en": "Sensitivity, permitted range 0.0 to 0.5"
+                },
+                "values": [
+                  {
+                    "id": "0.0",
+                    "title": {
+                      "en": "0.0, strictest minimum"
+                    }
+                  },
+                  {
+                    "id": "0.1",
+                    "title": {
+                      "en": "0.1"
+                    }
+                  },
+                  {
+                    "id": "0.2",
+                    "title": {
+                      "en": "0.2"
+                    }
+                  },
+                  {
+                    "id": "0.3",
+                    "title": {
+                      "en": "0.3"
+                    }
+                  },
+                  {
+                    "id": "0.4",
+                    "title": {
+                      "en": "0.4, default"
+                    }
+                  },
+                  {
+                    "id": "0.5",
+                    "title": {
+                      "en": "0.5, most lenient maximum"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "ir_signal_received",
+            "title": {
+              "en": "IR signal received"
+            },
+            "titleFormatted": {
+              "en": "IR command [[command]] received with sensitivity [[sensitivity]]"
+            },
+            "hint": {
+              "en": "Triggers when Homey receives the IR command stored on this device. Sensitivity has a permitted range of 0.0 to 0.5. A value of 0.0 only accepts the exact stored code from the same protocol, 0.5 is most lenient and 0.3 is the default. The RC5 and RC6 toggle bit never counts as a difference."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ir_signal"
+              },
+              {
+                "name": "command",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Command"
+                },
+                "placeholder": {
+                  "en": "Select a command"
+                }
+              },
+              {
+                "name": "sensitivity",
+                "type": "dropdown",
+                "title": {
+                  "en": "Sensitivity, permitted range 0.0 to 0.5"
+                },
+                "values": [
+                  {
+                    "id": "0.0",
+                    "title": {
+                      "en": "0.0, exact match minimum"
+                    }
+                  },
+                  {
+                    "id": "0.1",
+                    "title": {
+                      "en": "0.1"
+                    }
+                  },
+                  {
+                    "id": "0.2",
+                    "title": {
+                      "en": "0.2"
+                    }
+                  },
+                  {
+                    "id": "0.3",
+                    "title": {
+                      "en": "0.3, default"
+                    }
+                  },
+                  {
+                    "id": "0.4",
+                    "title": {
+                      "en": "0.4"
+                    }
+                  },
+                  {
+                    "id": "0.5",
+                    "title": {
+                      "en": "0.5, most lenient maximum"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "conditions": null,
+        "actions": [
+          {
+            "id": "send_code",
+            "title": {
+              "en": "Send code"
+            },
+            "titleFormatted": {
+              "en": "Send [[code_type]] code [[code]] with [[repeat]] repetitions"
+            },
+            "hint": {
+              "en": "Sends any supported infrared code. Repetitions default to 10 and use a permitted range of 1 to 255. For alternating RC5 or RC6 toggle frames, use the RC5 or RC6 action card."
+            },
+            "args": [
+              {
+                "name": "code_type",
+                "type": "dropdown",
+                "title": {
+                  "en": "Code type"
+                },
+                "values": [
+                  {
+                    "id": "prontohex",
+                    "title": {
+                      "en": "Pronto Hex"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "code",
+                "type": "text",
+                "title": {
+                  "en": "Code"
+                },
+                "placeholder": {
+                  "en": "0000 0098 0000 000A 0044 0022 ..."
+                }
+              },
+              {
+                "name": "repeat",
+                "type": "number",
+                "required": false,
+                "title": {
+                  "en": "Repetitions, 1 to 255"
+                },
+                "placeholder": {
+                  "en": "10, default"
+                },
+                "min": 1,
+                "max": 255,
+                "step": 1
+              }
+            ]
+          },
+          {
+            "id": "send_code_toggle",
+            "title": {
+              "en": "Send RC5 or RC6 code"
+            },
+            "titleFormatted": {
+              "en": "Send [[code_type]] code [[code]] with [[repeat]] repetitions for [[toggle]] toggle frames"
+            },
+            "hint": {
+              "en": "Only accepts an RC5 or RC6 code with a recognised toggle bit. Repetitions default to 10 for each frame. Toggle count defaults to 1. A toggle count of 4 sends toggle 0, toggle 1, toggle 0 and toggle 1."
+            },
+            "args": [
+              {
+                "name": "code_type",
+                "type": "dropdown",
+                "title": {
+                  "en": "Code type"
+                },
+                "values": [
+                  {
+                    "id": "prontohex",
+                    "title": {
+                      "en": "Pronto Hex"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "code",
+                "type": "text",
+                "title": {
+                  "en": "Code"
+                },
+                "placeholder": {
+                  "en": "0000 0098 0000 000A 0044 0022 ..."
+                }
+              },
+              {
+                "name": "repeat",
+                "type": "number",
+                "required": false,
+                "title": {
+                  "en": "Repetitions, 1 to 255"
+                },
+                "placeholder": {
+                  "en": "10, default"
+                },
+                "min": 1,
+                "max": 255,
+                "step": 1
+              },
+              {
+                "name": "toggle",
+                "type": "number",
+                "required": false,
+                "title": {
+                  "en": "Toggle count, 1 to 255"
+                },
+                "placeholder": {
+                  "en": "1, default"
+                },
+                "min": 1,
+                "max": 255,
+                "step": 1
+              }
+            ]
+          },
+          {
+            "id": "send_stored",
+            "title": {
+              "en": "Send stored code"
+            },
+            "titleFormatted": {
+              "en": "Send [[command]] with [[repeat]] repetitions"
+            },
+            "hint": {
+              "en": "Sends a stored command. Repetitions default to 10 and use a permitted range of 1 to 255. For alternating RC5 or RC6 toggle frames, use the stored RC5 or RC6 action card."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ir_signal"
+              },
+              {
+                "name": "command",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Command"
+                },
+                "placeholder": {
+                  "en": "Select a command"
+                }
+              },
+              {
+                "name": "repeat",
+                "type": "number",
+                "required": false,
+                "title": {
+                  "en": "Repetitions, 1 to 255"
+                },
+                "placeholder": {
+                  "en": "10, default"
+                },
+                "min": 1,
+                "max": 255,
+                "step": 1
+              }
+            ]
+          },
+          {
+            "id": "send_stored_toggle",
+            "title": {
+              "en": "Send stored RC5 or RC6 code"
+            },
+            "titleFormatted": {
+              "en": "Send [[command]] with [[repeat]] repetitions for [[toggle]] toggle frames"
+            },
+            "hint": {
+              "en": "Only lists stored RC5 or RC6 commands with a recognised toggle bit. Repetitions default to 10 for each frame. Toggle count defaults to 1. A toggle count of 4 sends toggle 0, toggle 1, toggle 0 and toggle 1."
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=ir_signal"
+              },
+              {
+                "name": "command",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Command"
+                },
+                "placeholder": {
+                  "en": "Select a command"
+                }
+              },
+              {
+                "name": "repeat",
+                "type": "number",
+                "required": false,
+                "title": {
+                  "en": "Repetitions, 1 to 255"
+                },
+                "placeholder": {
+                  "en": "10, default"
+                },
+                "min": 1,
+                "max": 255,
+                "step": 1
+              },
+              {
+                "name": "toggle",
+                "type": "number",
+                "required": false,
+                "title": {
+                  "en": "Toggle count, 1 to 255"
+                },
+                "placeholder": {
+                  "en": "1, default"
+                },
+                "min": 1,
+                "max": 255,
+                "step": 1
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 159528,
+      "state": "live",
+      "stateChangedAt": "2026-11-23T08:50:16.533Z",
+      "bugs": "https://github.com/4tetra4/homey.infrared/issues",
+      "homepage": "https://www.youtube.com/@zperx",
+      "support": "https://community.homey.app/t/159528",
+      "source": "https://github.com/4tetra4/homey.infrared",
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:ir"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Replaced the app icon, as the App Store doesn't allow it to match the device icon."
+      },
+      "compatibility": ">=12.5.0",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.0.5",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6a9186cd30ac038fba7073fc",
+      "type": "user",
+      "userId": "5718b3be4e0014d27c9df5b9",
+      "name": "ZperX .",
+      "verified": false
+    },
+    "communityTopicId": 159528
+  },
+  {
+    "id": "com.komobimoto",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Komobi Moto"
+      },
+      "version": "1.2.0",
+      "readme": {
+        "en": "Bring your motorcycle or scooter into your smart home. See at a glance whether it is parked or on the road, and let your home respond when you ride off, park, come home or when the theft alarm goes off.\n\nLog in with your Komobi Moto account and add every vehicle in your garage as its own device. Everyone in your home can add the vehicles of their own Komobi account: you log in each time you add vehicles. Each vehicle shows whether it is parked or riding, the theft alarm, the battery of the tracker, the vehicle and the key fob, the odometer, its location and how far it is from home.\n\nUse the flow cards to act when your vehicle starts riding or parks, when the theft alarm goes off or is switched on or off, when it arrives home or leaves, when the vehicle or key fob battery runs low, when you leave your key fob behind, or when Komobi stores a new ride with its distance, duration, speed and driving score.\n\nAdd the vehicle status widget to your dashboard to see the status of a vehicle at a glance.\n\nThis app is not made by or affiliated with Komobi. It uses the same online service as the Komobi Moto app, so your vehicle needs an active Komobi subscription.\n",
+        "nl": "Haal je motor of scooter je slimme huis in. Zie in één oogopslag of hij geparkeerd staat of onderweg is, en laat je huis reageren als je wegrijdt, parkeert, thuiskomt of als het diefstalalarm afgaat.\n\nLog in met je Komobi Moto account en voeg elk voertuig uit je garage toe als een eigen apparaat. Iedereen in huis kan de voertuigen van zijn eigen Komobi account toevoegen: je logt in elke keer dat je voertuigen toevoegt. Per voertuig zie je of het geparkeerd staat of rijdt, het diefstalalarm, de batterij van de tracker, de accu van het voertuig en de batterij van de sleutelhanger, de kilometerstand, de locatie en hoe ver het van huis is.\n\nGebruik de flowkaarten om iets te doen als je voertuig gaat rijden of parkeert, als het diefstalalarm afgaat of aan- of uitgezet wordt, als het thuiskomt of vertrekt, als de accu of de batterij van de sleutelhanger bijna leeg is, als je je sleutelhanger vergeet, of als Komobi een nieuwe rit opslaat met de afstand, duur, snelheid en rijscore.\n\nZet de voertuigstatus widget op je dashboard om de status van een voertuig in één oogopslag te zien.\n\nDeze app is niet gemaakt door of verbonden aan Komobi. Hij gebruikt dezelfde online dienst als de Komobi Moto app, dus je voertuig heeft een actief Komobi abonnement nodig.\n"
+      },
+      "description": {
+        "en": "Keep an eye on your motorcycle with your Komobi Moto GPS tracker",
+        "nl": "Houd je motor in de gaten met je Komobi Moto GPS-tracker"
+      },
+      "category": "internet",
+      "brandColor": "#00B188",
+      "icon": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "vehicle",
+          "name": {
+            "en": "Motorcycle / scooter",
+            "nl": "Motor / scooter"
+          },
+          "class": "vehicle",
+          "capabilities": [
+            "vehicle_status",
+            "riding",
+            "alarm_theft",
+            "theft_alarm_armed",
+            "measure_battery",
+            "measure_voltage",
+            "meter_odometer",
+            "measure_speed",
+            "distance_from_home",
+            "location_latitude",
+            "location_longitude",
+            "last_communication"
+          ],
+          "capabilitiesOptions": {
+            "measure_battery": {
+              "title": {
+                "en": "Tracker battery",
+                "nl": "Tracker batterij"
+              }
+            },
+            "measure_voltage": {
+              "title": {
+                "en": "Vehicle battery",
+                "nl": "Accu voertuig"
+              },
+              "decimals": 1
+            },
+            "measure_speed": {
+              "title": {
+                "en": "Speed",
+                "nl": "Snelheid"
+              },
+              "units": {
+                "en": "km/h"
+              },
+              "decimals": 0
+            }
+          },
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/drivers/vehicle/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/drivers/vehicle/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/drivers/vehicle/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "arrived-home",
+            "title": {
+              "en": "Arrived home",
+              "nl": "Thuisgekomen"
+            },
+            "titleFormatted": {
+              "en": "Arrived within [[radius]] meters of home",
+              "nl": "Binnen [[radius]] meter van huis gekomen"
+            },
+            "hint": {
+              "en": "Home is the location set for your Homey",
+              "nl": "Thuis is de locatie die voor je Homey is ingesteld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              },
+              {
+                "type": "number",
+                "name": "radius",
+                "min": 25,
+                "max": 100000,
+                "step": 25,
+                "placeholder": {
+                  "en": "Radius in meters",
+                  "nl": "Straal in meters"
+                },
+                "title": {
+                  "en": "Radius (m)",
+                  "nl": "Straal (m)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              }
+            ]
+          },
+          {
+            "id": "key-fob-battery-dropped-below",
+            "title": {
+              "en": "Key fob battery dropped below a percentage",
+              "nl": "Batterij sleutelhanger zakte onder een percentage"
+            },
+            "titleFormatted": {
+              "en": "Key fob battery dropped below [[battery]]%",
+              "nl": "Batterij sleutelhanger zakte onder [[battery]]%"
+            },
+            "hint": {
+              "en": "Runs for every key fob of the vehicle on its own",
+              "nl": "Werkt voor elke sleutelhanger van het voertuig afzonderlijk"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle&capabilities=measure_keyfob_battery"
+              },
+              {
+                "type": "number",
+                "name": "battery",
+                "min": 1,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "Percentage",
+                  "nl": "Percentage"
+                },
+                "title": {
+                  "en": "Battery (%)",
+                  "nl": "Batterij (%)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "type": "string",
+                "name": "key_fob",
+                "title": {
+                  "en": "Key fob id",
+                  "nl": "Id sleutelhanger"
+                },
+                "example": "CFFBCA9CF8A8"
+              },
+              {
+                "type": "number",
+                "name": "battery",
+                "title": {
+                  "en": "Battery (%)",
+                  "nl": "Batterij (%)"
+                },
+                "example": 15
+              }
+            ]
+          },
+          {
+            "id": "key-fob-forgotten",
+            "title": {
+              "en": "Key fob was left behind",
+              "nl": "Sleutelhanger is achtergelaten"
+            },
+            "hint": {
+              "en": "Komobi warns that the vehicle left without this key fob nearby. Only works when the forgotten key warning is on in the Komobi app.",
+              "nl": "Komobi waarschuwt dat het voertuig vertrok zonder deze sleutelhanger in de buurt. Werkt alleen als de waarschuwing voor een vergeten sleutel aan staat in de Komobi app."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle&capabilities=measure_keyfob_battery"
+              }
+            ],
+            "tokens": [
+              {
+                "type": "string",
+                "name": "key_fob",
+                "title": {
+                  "en": "Key fob id",
+                  "nl": "Id sleutelhanger"
+                },
+                "example": "CFFBCA9CF8A8"
+              },
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              }
+            ]
+          },
+          {
+            "id": "left-home",
+            "title": {
+              "en": "Left home",
+              "nl": "Van huis vertrokken"
+            },
+            "titleFormatted": {
+              "en": "Went further than [[radius]] meters from home",
+              "nl": "Verder dan [[radius]] meter van huis gegaan"
+            },
+            "hint": {
+              "en": "Home is the location set for your Homey",
+              "nl": "Thuis is de locatie die voor je Homey is ingesteld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              },
+              {
+                "type": "number",
+                "name": "radius",
+                "min": 25,
+                "max": 100000,
+                "step": 25,
+                "placeholder": {
+                  "en": "Radius in meters",
+                  "nl": "Straal in meters"
+                },
+                "title": {
+                  "en": "Radius (m)",
+                  "nl": "Straal (m)"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              }
+            ]
+          },
+          {
+            "id": "location-changed",
+            "title": {
+              "en": "Location changed",
+              "nl": "Locatie is veranderd"
+            },
+            "hint": {
+              "en": "The vehicle moved more than 50 meters since the last update",
+              "nl": "Het voertuig is meer dan 50 meter verplaatst sinds de vorige update"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              },
+              {
+                "type": "number",
+                "name": "speed",
+                "title": {
+                  "en": "Speed (km/h)",
+                  "nl": "Snelheid (km/u)"
+                },
+                "example": 50
+              },
+              {
+                "type": "number",
+                "name": "distance_from_home",
+                "title": {
+                  "en": "Distance from home (km)",
+                  "nl": "Afstand tot thuis (km)"
+                },
+                "example": 2.4
+              }
+            ]
+          },
+          {
+            "id": "parked",
+            "title": {
+              "en": "Parked",
+              "nl": "Geparkeerd"
+            },
+            "hint": {
+              "en": "The tracker reports the vehicle is parked",
+              "nl": "De tracker meldt dat het voertuig geparkeerd is"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              },
+              {
+                "type": "number",
+                "name": "odometer",
+                "title": {
+                  "en": "Odometer (km)",
+                  "nl": "Kilometerstand (km)"
+                },
+                "example": 12345
+              }
+            ]
+          },
+          {
+            "id": "ride-finished",
+            "title": {
+              "en": "A ride was recorded",
+              "nl": "Een rit is opgeslagen"
+            },
+            "hint": {
+              "en": "Komobi saved a new ride in the ride history",
+              "nl": "Komobi heeft een nieuwe rit in de rittengeschiedenis opgeslagen"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "distance",
+                "title": {
+                  "en": "Distance (km)",
+                  "nl": "Afstand (km)"
+                },
+                "example": 42.5
+              },
+              {
+                "type": "number",
+                "name": "duration",
+                "title": {
+                  "en": "Duration (minutes)",
+                  "nl": "Duur (minuten)"
+                },
+                "example": 55
+              },
+              {
+                "type": "number",
+                "name": "average_speed",
+                "title": {
+                  "en": "Average speed (km/h)",
+                  "nl": "Gemiddelde snelheid (km/u)"
+                },
+                "example": 46
+              },
+              {
+                "type": "number",
+                "name": "max_speed",
+                "title": {
+                  "en": "Max speed (km/h)",
+                  "nl": "Topsnelheid (km/u)"
+                },
+                "example": 112
+              },
+              {
+                "type": "number",
+                "name": "driving_score",
+                "title": {
+                  "en": "Driving score (0-10)",
+                  "nl": "Rijscore (0-10)"
+                },
+                "example": 8.4
+              },
+              {
+                "type": "string",
+                "name": "name",
+                "title": {
+                  "en": "Ride name",
+                  "nl": "Ritnaam"
+                },
+                "example": "Amsterdam - Utrecht"
+              }
+            ]
+          },
+          {
+            "id": "started-riding",
+            "title": {
+              "en": "Started riding",
+              "nl": "Begon met rijden"
+            },
+            "hint": {
+              "en": "The tracker reports the vehicle is no longer parked",
+              "nl": "De tracker meldt dat het voertuig niet meer geparkeerd staat"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              },
+              {
+                "type": "number",
+                "name": "odometer",
+                "title": {
+                  "en": "Odometer (km)",
+                  "nl": "Kilometerstand (km)"
+                },
+                "example": 12345
+              }
+            ]
+          },
+          {
+            "id": "theft-alarm-armed",
+            "title": {
+              "en": "Theft alarm was armed",
+              "nl": "Diefstalalarm werd ingeschakeld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          },
+          {
+            "id": "theft-alarm-disarmed",
+            "title": {
+              "en": "Theft alarm was disarmed",
+              "nl": "Diefstalalarm werd uitgeschakeld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          },
+          {
+            "id": "theft-alarm-fired",
+            "title": {
+              "en": "Theft alarm went off",
+              "nl": "Diefstalalarm ging af"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "latitude",
+                "title": {
+                  "en": "Latitude",
+                  "nl": "Breedtegraad"
+                },
+                "example": 52.37
+              },
+              {
+                "type": "number",
+                "name": "longitude",
+                "title": {
+                  "en": "Longitude",
+                  "nl": "Lengtegraad"
+                },
+                "example": 4.89
+              }
+            ]
+          },
+          {
+            "id": "vehicle-battery-dropped-below",
+            "title": {
+              "en": "Vehicle battery dropped below a voltage",
+              "nl": "Accuspanning zakte onder een waarde"
+            },
+            "titleFormatted": {
+              "en": "Vehicle battery dropped below [[voltage]] V",
+              "nl": "Accuspanning zakte onder [[voltage]] V"
+            },
+            "hint": {
+              "en": "A healthy 12 V battery sits around 12.6 V when the engine is off",
+              "nl": "Een gezonde 12 V accu zit rond 12,6 V als de motor uit staat"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              },
+              {
+                "type": "number",
+                "name": "voltage",
+                "min": 0,
+                "max": 60,
+                "step": 0.1,
+                "placeholder": {
+                  "en": "Voltage",
+                  "nl": "Spanning"
+                },
+                "title": {
+                  "en": "Voltage",
+                  "nl": "Spanning"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "type": "number",
+                "name": "voltage",
+                "title": {
+                  "en": "Battery voltage (V)",
+                  "nl": "Accuspanning (V)"
+                },
+                "example": 11.8
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "is-near-home",
+            "title": {
+              "en": "!{{Is|Isn't}} near home",
+              "nl": "!{{Is|Is niet}} in de buurt van huis"
+            },
+            "titleFormatted": {
+              "en": "!{{Is|Isn't}} within [[radius]] meters of home",
+              "nl": "!{{Is|Is niet}} binnen [[radius]] meter van huis"
+            },
+            "hint": {
+              "en": "Home is the location set for your Homey",
+              "nl": "Thuis is de locatie die voor je Homey is ingesteld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              },
+              {
+                "type": "number",
+                "name": "radius",
+                "min": 25,
+                "max": 100000,
+                "step": 25,
+                "placeholder": {
+                  "en": "Radius in meters",
+                  "nl": "Straal in meters"
+                },
+                "title": {
+                  "en": "Radius (m)",
+                  "nl": "Straal (m)"
+                }
+              }
+            ]
+          },
+          {
+            "id": "is-riding",
+            "title": {
+              "en": "!{{Is|Isn't}} riding",
+              "nl": "!{{Rijdt|Rijdt niet}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          },
+          {
+            "id": "key-fob-is-forgotten",
+            "title": {
+              "en": "A key fob !{{is|isn't}} left behind",
+              "nl": "Een sleutelhanger !{{is|is niet}} achtergelaten"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle&capabilities=measure_keyfob_battery"
+              }
+            ]
+          },
+          {
+            "id": "theft-alarm-is-active",
+            "title": {
+              "en": "Theft alarm !{{is|isn't}} going off",
+              "nl": "Diefstalalarm !{{gaat|gaat niet}} af"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          },
+          {
+            "id": "theft-alarm-is-armed",
+            "title": {
+              "en": "Theft alarm !{{is|isn't}} armed",
+              "nl": "Diefstalalarm !{{is|is niet}} ingeschakeld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "refresh-vehicle",
+            "title": {
+              "en": "Refresh status",
+              "nl": "Status verversen"
+            },
+            "hint": {
+              "en": "Fetch the latest status from Komobi right away",
+              "nl": "Haal direct de laatste status op bij Komobi"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=vehicle"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": {
+        "vehicle-status": {
+          "name": {
+            "en": "Vehicle status",
+            "nl": "Voertuigstatus"
+          },
+          "settings": [],
+          "devices": {
+            "type": "app",
+            "singular": true
+          },
+          "height": 190,
+          "api": {
+            "getVehicleStatus": {
+              "method": "GET",
+              "path": "/"
+            }
+          },
+          "id": "vehicle-status",
+          "previewDark": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/widgets/vehicle-status/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/com.komobimoto/4/2f120fce-f5ae-4af1-9643-7efa3fadbd0a/widgets/vehicle-status/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 162236,
+      "state": "live",
+      "stateChangedAt": "2026-11-23T09:01:47.790Z",
+      "bugs": "https://github.com/StefanIndustries/HomeyKomobi/issues",
+      "homepage": null,
+      "support": "https://github.com/StefanIndustries/HomeyKomobi/issues",
+      "source": "https://github.com/StefanIndustries/HomeyKomobi",
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "bunq": {
+            "username": "StefanJSimon"
+          },
+          "paypal": {
+            "username": "StefanIndustries96"
+          }
+        }
+      },
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "en": "New App Store images and a motorcycle icon for vehicles. Your Komobi password is now stored once per account instead of with every vehicle.",
+        "nl": "Nieuwe afbeeldingen in de App Store en een motoricoon voor voertuigen. Je Komobi wachtwoord wordt nu één keer per account opgeslagen in plaats van bij elk voertuig."
+      },
+      "compatibility": ">=12.4.0",
+      "tags": {
+        "en": [
+          "komobi",
+          "motorcycle",
+          "scooter",
+          "gps",
+          "tracker",
+          "anti-theft",
+          "bike"
+        ],
+        "nl": [
+          "komobi",
+          "motor",
+          "scooter",
+          "gps",
+          "tracker",
+          "diefstal",
+          "motorfiets"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.2.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcaba1e1c90c866f9364835",
+      "type": "user",
+      "userId": "5a12d5de9ed0c256666feb9f",
+      "name": "Stefan Simon",
+      "verified": false
+    },
+    "communityTopicId": 162236
+  },
+  {
+    "id": "nl.monkeysoft.resol",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Resol VBus",
+        "nl": "Resol VBus"
+      },
+      "version": "1.0.2",
+      "readme": {
+        "en": "Read your Resol solar and heating controllers (DeltaSol MX, BS, SLT and many more) in Homey. The app connects locally to a KM2, DL2, DL3 or VBus/LAN module over your network. No cloud account is needed.\n\nAdd one device per controller, or one device per temperature sensor so you can place them in different rooms. Temperatures, pump speeds, irradiation, flow, operating hours and error status appear automatically. Use flow cards for value changes, errors, lost connection, and values above or below a threshold. Writing a value back to the controller is experimental and disabled by default.\n",
+        "nl": "Lees je Resol zonne- en verwarmingsregelaars (DeltaSol MX, BS, SLT en vele andere) uit in Homey. De app maakt lokaal verbinding met een KM2, DL2, DL3 of VBus/LAN-module in je netwerk. Een cloudaccount is niet nodig.\n\nVoeg per regelaar een apparaat toe, of per temperatuursensor zodat je ze in verschillende kamers kunt plaatsen. Temperaturen, pompsnelheden, instraling, doorstroming, bedrijfsuren en foutstatus verschijnen automatisch. Gebruik flowkaarten voor waardeveranderingen, fouten, verbroken verbinding en waarden boven of onder een grens. Een waarde terugschrijven naar de regelaar is experimenteel en standaard uitgeschakeld.\n"
+      },
+      "description": {
+        "en": "Read Resol solar and heating controllers (DeltaSol and others) via a KM2, DL2, DL3 or VBus/LAN adapter.",
+        "nl": "Lees Resol zonne- en verwarmingsregelaars (DeltaSol e.a.) uit via een KM2, DL2, DL3 of VBus/LAN-adapter."
+      },
+      "category": "energy",
+      "brandColor": "#E30613",
+      "icon": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "resol-controller",
+          "name": {
+            "en": "Resol Controller",
+            "nl": "Resol regelaar"
+          },
+          "class": "sensor",
+          "capabilities": [],
+          "imageSmall": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/drivers/resol-controller/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/drivers/resol-controller/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/drivers/resol-controller/assets/icon.svg",
+          "connectivity": null
+        },
+        {
+          "id": "resol-sensor",
+          "name": {
+            "en": "Resol Temperature Sensor",
+            "nl": "Resol temperatuursensor"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "measure_temperature"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/drivers/resol-sensor/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/drivers/resol-sensor/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.monkeysoft.resol/4/0944b49a-6019-4219-b992-f543bc79be0a/drivers/resol-sensor/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "connection_lost",
+            "title": {
+              "en": "Controller stopped sending data",
+              "nl": "Regelaar stuurt geen data meer"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              }
+            ]
+          },
+          {
+            "id": "connection_restored",
+            "title": {
+              "en": "Controller data restored",
+              "nl": "Regelaardata hersteld"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              }
+            ]
+          },
+          {
+            "id": "controller_error",
+            "title": {
+              "en": "Controller reports an error",
+              "nl": "Regelaar meldt een fout"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              }
+            ]
+          },
+          {
+            "id": "value_changed",
+            "title": {
+              "en": "A value changed",
+              "nl": "Een waarde is gewijzigd"
+            },
+            "titleFormatted": {
+              "en": "[[field]] changed",
+              "nl": "[[field]] is gewijzigd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              },
+              {
+                "type": "autocomplete",
+                "name": "field",
+                "placeholder": {
+                  "en": "Sensor",
+                  "nl": "Sensor"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                },
+                "example": 21.5
+              },
+              {
+                "name": "field",
+                "type": "string",
+                "title": {
+                  "en": "Sensor",
+                  "nl": "Sensor"
+                },
+                "example": "Temperature sensor 1"
+              }
+            ]
+          }
+        ],
+        "conditions": [
+          {
+            "id": "controller_online",
+            "title": {
+              "en": "Controller !{{is|is not}} online",
+              "nl": "Regelaar !{{is|is niet}} online"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              }
+            ]
+          },
+          {
+            "id": "relay_is_on",
+            "title": {
+              "en": "Output !{{is|is not}} running",
+              "nl": "Uitgang !{{is|is niet}} actief"
+            },
+            "titleFormatted": {
+              "en": "[[field]] !{{is|is not}} running",
+              "nl": "[[field]] !{{is|is niet}} actief"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              },
+              {
+                "type": "autocomplete",
+                "name": "field",
+                "placeholder": {
+                  "en": "Sensor",
+                  "nl": "Sensor"
+                }
+              }
+            ]
+          },
+          {
+            "id": "value_above",
+            "title": {
+              "en": "Value !{{is above|is not above}} threshold",
+              "nl": "Waarde !{{is boven|is niet boven}} drempel"
+            },
+            "titleFormatted": {
+              "en": "[[field]] !{{is above|is not above}} [[threshold]]",
+              "nl": "[[field]] !{{is boven|is niet boven}} [[threshold]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              },
+              {
+                "type": "autocomplete",
+                "name": "field",
+                "placeholder": {
+                  "en": "Sensor",
+                  "nl": "Sensor"
+                }
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "placeholder": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ]
+          },
+          {
+            "id": "value_below",
+            "title": {
+              "en": "Value !{{is below|is not below}} threshold",
+              "nl": "Waarde !{{is onder|is niet onder}} drempel"
+            },
+            "titleFormatted": {
+              "en": "[[field]] !{{is below|is not below}} [[threshold]]",
+              "nl": "[[field]] !{{is onder|is niet onder}} [[threshold]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              },
+              {
+                "type": "autocomplete",
+                "name": "field",
+                "placeholder": {
+                  "en": "Sensor",
+                  "nl": "Sensor"
+                }
+              },
+              {
+                "type": "number",
+                "name": "threshold",
+                "placeholder": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_controller_value",
+            "title": {
+              "en": "Set controller value (experimental)",
+              "nl": "Stel regelaarwaarde in (experimenteel)"
+            },
+            "titleFormatted": {
+              "en": "Set value id [[value_id]] to [[value]]",
+              "nl": "Zet value-id [[value_id]] op [[value]]"
+            },
+            "hint": {
+              "en": "Needs 'Allow writing' in device settings. Value ids are controller specific (see Resol docs).",
+              "nl": "Vereist 'Schrijven toestaan' in apparaatinstellingen. Value-id's zijn regelaarspecifiek (zie Resol-documentatie)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=resol-controller"
+              },
+              {
+                "type": "number",
+                "name": "value_id",
+                "placeholder": {
+                  "en": "Value id",
+                  "nl": "Value-id"
+                }
+              },
+              {
+                "type": "number",
+                "name": "value",
+                "placeholder": {
+                  "en": "Value",
+                  "nl": "Waarde"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": 161797,
+      "state": "live",
+      "stateChangedAt": "2026-11-23T09:11:57.376Z",
+      "bugs": "https://github.com/steffjenl/nl.monkeysoft.resol/issues",
+      "homepage": "https://monkeysoft.nl",
+      "support": "mailto:hallo@monkeysoft.nl",
+      "source": "https://github.com/steffjenl/nl.monkeysoft.resol",
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "steffjenl"
+          }
+        }
+      },
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Driver-specific icons",
+        "nl": "Eigen pictogram per driver"
+      },
+      "compatibility": ">=12.0.0",
+      "tags": {
+        "en": [
+          "resol",
+          "deltasol",
+          "vbus",
+          "solar",
+          "solar thermal",
+          "heating",
+          "km2",
+          "dl2",
+          "dl3"
+        ],
+        "nl": [
+          "resol",
+          "deltasol",
+          "vbus",
+          "zonneboiler",
+          "zonthermisch",
+          "verwarming",
+          "km2",
+          "dl2",
+          "dl3"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.2",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "5dcabc991c90c866f936678e",
+      "type": "user",
+      "userId": "5d03b4669dd131698a043c8b",
+      "name": "Stèphan Eizinga (MonkeySoft)",
+      "verified": false
+    },
+    "communityTopicId": 161797
+  },
+  {
+    "id": "app.freekiosk",
+    "rating": null,
+    "liveBuild": {
+      "id": 2,
+      "name": {
+        "en": "FreeKiosk"
+      },
+      "version": "1.0.1",
+      "readme": {
+        "en": "Connect your FreeKiosk Android kiosk to Homey to monitor and control it as part of your home automations. Keep common kiosk controls alongside your other Homey devices and use them in your everyday routines.\n\nThe live camera stream is available in the Homey mobile app, but not in the Homey Web App because FreeKiosk serves it as multipart/x-mixed-replace.\nThis application was entirely vibe-coded with AI assistance.\nIt does not yet implement every feature available in FreeKiosk; additional features can be added upon request.\n"
+      },
+      "description": {
+        "en": "Bring your Android kiosk into your smart home and keep everyday controls within reach."
+      },
+      "category": "appliances",
+      "brandColor": "#0173e5",
+      "icon": "https://apps.homeycdn.net/app/app.freekiosk/2/6dacef53-1844-4572-b571-b7115e9f8660/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/app.freekiosk/2/6dacef53-1844-4572-b571-b7115e9f8660/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/app.freekiosk/2/6dacef53-1844-4572-b571-b7115e9f8660/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "freekiosk",
+          "name": {
+            "en": "FreeKiosk Device"
+          },
+          "class": "camera",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "measure_battery",
+            "measure_luminance",
+            "volume_set",
+            "battery_charging",
+            "screensaver_active",
+            "current_url",
+            "auto_brightness",
+            "reload_webview_button",
+            "wake_button",
+            "stop_audio_button",
+            "beep_button",
+            "clear_cache_button"
+          ],
+          "energy": {
+            "batteries": [
+              "INTERNAL"
+            ]
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/app.freekiosk/2/6dacef53-1844-4572-b571-b7115e9f8660/drivers/freekiosk/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/app.freekiosk/2/6dacef53-1844-4572-b571-b7115e9f8660/drivers/freekiosk/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/app.freekiosk/2/6dacef53-1844-4572-b571-b7115e9f8660/drivers/freekiosk/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": [
+          {
+            "id": "screen_is_on",
+            "title": {
+              "en": "Screen is on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "battery_below",
+            "title": {
+              "en": "Battery level is below"
+            },
+            "titleFormatted": {
+              "en": "Battery level is below [[value]]%"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "Battery %"
+                }
+              }
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "set_brightness",
+            "title": {
+              "en": "Set brightness"
+            },
+            "titleFormatted": {
+              "en": "Set brightness to [[value]]%"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "Percentage"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "value",
+                "type": "number",
+                "title": {
+                  "en": "Brightness"
+                },
+                "example": 50
+              }
+            ]
+          },
+          {
+            "id": "set_volume",
+            "title": {
+              "en": "Set volume"
+            },
+            "titleFormatted": {
+              "en": "Set volume to [[value]]%"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "Volume"
+                }
+              }
+            ]
+          },
+          {
+            "id": "open_url",
+            "title": {
+              "en": "Navigate to URL"
+            },
+            "titleFormatted": {
+              "en": "Navigate to [[url]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "url",
+                "type": "text",
+                "placeholder": {
+                  "en": "https://example.com"
+                }
+              }
+            ]
+          },
+          {
+            "id": "reload_webview",
+            "title": {
+              "en": "Reload webview"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "screen_on",
+            "title": {
+              "en": "Turn screen on"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "screen_off",
+            "title": {
+              "en": "Turn screen off"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "reboot_device",
+            "title": {
+              "en": "Reboot device"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "lock_device",
+            "title": {
+              "en": "Lock device"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "show_toast",
+            "title": {
+              "en": "Show toast"
+            },
+            "titleFormatted": {
+              "en": "Show toast: [[text]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "text",
+                "type": "text",
+                "placeholder": {
+                  "en": "Message"
+                }
+              }
+            ]
+          },
+          {
+            "id": "speak_text",
+            "title": {
+              "en": "Speak text"
+            },
+            "titleFormatted": {
+              "en": "Speak [[text]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "text",
+                "type": "text",
+                "placeholder": {
+                  "en": "Text"
+                }
+              }
+            ]
+          },
+          {
+            "id": "clear_cache",
+            "title": {
+              "en": "Clear webview cache"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "launch_app",
+            "title": {
+              "en": "Launch app"
+            },
+            "titleFormatted": {
+              "en": "Launch app [[package]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "package",
+                "type": "text",
+                "placeholder": {
+                  "en": "Android package name"
+                }
+              }
+            ]
+          },
+          {
+            "id": "play_audio",
+            "title": {
+              "en": "Play audio from URL"
+            },
+            "titleFormatted": {
+              "en": "Play audio from [[url]], loop [[loop]], volume [[volume]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              },
+              {
+                "name": "url",
+                "type": "text",
+                "placeholder": {
+                  "en": "Audio URL"
+                }
+              },
+              {
+                "name": "loop",
+                "type": "checkbox",
+                "placeholder": {
+                  "en": "Loop"
+                }
+              },
+              {
+                "name": "volume",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "Volume"
+                }
+              }
+            ]
+          },
+          {
+            "id": "screensaver_on",
+            "title": {
+              "en": "Activate screensaver"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "screensaver_off",
+            "title": {
+              "en": "Deactivate screensaver"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "wake_device",
+            "title": {
+              "en": "Wake device"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "stop_audio",
+            "title": {
+              "en": "Stop audio"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          },
+          {
+            "id": "play_beep",
+            "title": {
+              "en": "Play beep"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=freekiosk"
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-23T11:58:22.065Z",
+      "bugs": null,
+      "homepage": null,
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Issues solved for submitting app and pass certification."
+      },
+      "compatibility": ">=12.7.0",
+      "tags": {
+        "en": [
+          "FreeKiosk",
+          "Android",
+          "kiosk",
+          "tablet"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [
+        "camera-streaming"
+      ],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6adf352747d7399db6cd7794",
+      "type": "user",
+      "userId": "644d1e27375c660b7b58d167",
+      "name": "Sébastien Castermans",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]

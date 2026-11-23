@@ -246,10 +246,10 @@
     "name": "DoorBird",
     "developerName": "DoorBird GmbH",
     "developerId": "6afb88027571bdf1a96543c3",
-    "version": "3.3.5",
+    "version": "3.3.6",
     "sourceRepository": "https://github.com/jghaanstra/com.doorbird",
     "publishedAt": "2019-11-12T13:52:36.167Z",
-    "updatedAt": "2026-11-20T11:53:24.283Z",
+    "updatedAt": "2026-11-23T13:09:23.568Z",
     "communityTopicId": 115
   },
   {
@@ -3942,10 +3942,10 @@
     "name": "Flic",
     "developerName": "Gerard Ricart",
     "developerId": "5dcabc8f1c90c866f9366748",
-    "version": "2.0.1",
+    "version": "2.0.3",
     "sourceRepository": "https://github.com/XattSPT/io.flic",
     "publishedAt": "2020-01-02T18:22:13.174Z",
-    "updatedAt": "2021-04-12T17:42:30.993Z",
+    "updatedAt": "2026-11-23T13:09:23.569Z",
     "communityTopicId": null
   },
   {
@@ -4360,10 +4360,10 @@
     "name": "IcalCalendar",
     "developerName": "Rune Moskvil Lyngås",
     "developerId": "5ed7b0396d2bd86d07c27b5f",
-    "version": "3.3.2",
+    "version": "3.4.0",
     "sourceRepository": "https://github.com/runely/calendar-homey",
     "publishedAt": "2020-06-03T14:55:36.857Z",
-    "updatedAt": "2026-09-27T09:09:45.254Z",
+    "updatedAt": "2026-11-23T13:09:23.569Z",
     "communityTopicId": 80708
   },
   {
@@ -7528,10 +7528,10 @@
     "name": "Smarter ThinQ for LG",
     "developerName": "Martin Verbeek",
     "developerId": "602ad593ea27a57b44539bd7",
-    "version": "4.5.3",
+    "version": "4.5.4",
     "sourceRepository": "",
     "publishedAt": "2023-06-07T16:26:44.096Z",
-    "updatedAt": "2026-11-10T11:23:16.738Z",
+    "updatedAt": "2026-11-23T13:09:23.569Z",
     "communityTopicId": 82324
   },
   {
@@ -10124,10 +10124,10 @@
     "name": "Amazon Echo",
     "developerName": "Stefan Schweiger",
     "developerId": "65c34188e0e2f404761c8b51",
-    "version": "2.5.0",
+    "version": "2.5.1",
     "sourceRepository": "https://github.com/stefan-schweiger/dev.schweiger.echo",
     "publishedAt": "2024-11-10T13:47:39.930Z",
-    "updatedAt": "2026-10-28T09:49:50.162Z",
+    "updatedAt": "2026-11-23T13:09:23.570Z",
     "communityTopicId": 120365
   },
   {
@@ -10179,10 +10179,10 @@
     "name": "Midea",
     "developerName": "Marc Teutelink",
     "developerId": "673d011a065f03b3ce38f5a5",
-    "version": "1.0.18",
+    "version": "1.0.19",
     "sourceRepository": "",
     "publishedAt": "2024-11-21T14:58:31.607Z",
-    "updatedAt": "2025-04-21T21:11:54.933Z",
+    "updatedAt": "2026-11-23T13:09:23.570Z",
     "communityTopicId": 121036
   },
   {
@@ -12357,10 +12357,10 @@
     "name": "PELS Energy Manager",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "3.47.0",
+    "version": "3.49.0",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.pels",
     "publishedAt": "2025-12-04T11:30:41.051Z",
-    "updatedAt": "2026-11-22T11:39:10.565Z",
+    "updatedAt": "2026-11-23T13:09:23.570Z",
     "communityTopicId": 147496
   },
   {
@@ -13534,10 +13534,10 @@
     "name": "9to5Google",
     "developerName": "Sven Serlier",
     "developerId": "68e268c515677f0f51ffe6f4",
-    "version": "1.0.15",
+    "version": "1.0.16",
     "sourceRepository": "https://github.com/smarthomesven/homey-9to5google",
     "publishedAt": "2026-02-15T17:56:14.261Z",
-    "updatedAt": "2026-09-08T14:48:15.909Z",
+    "updatedAt": "2026-11-23T13:09:23.570Z",
     "communityTopicId": 151165
   },
   {
@@ -14744,10 +14744,10 @@
     "name": "Computer",
     "developerName": "Ole Kallerud",
     "developerId": "69d2f397fb6dd7068a75c8c3",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-04-06T00:05:56.131Z",
-    "updatedAt": "2026-04-14T19:09:28.626Z",
+    "updatedAt": "2026-11-23T13:09:23.570Z",
     "communityTopicId": null
   },
   {
@@ -15239,10 +15239,10 @@
     "name": "Virtual Drivers",
     "developerName": "Michal Stráník",
     "developerId": "62cfe4f7d13d04b0df74848f",
-    "version": "1.0.8",
+    "version": "1.0.12",
     "sourceRepository": "",
     "publishedAt": "2026-04-28T08:51:48.728Z",
-    "updatedAt": "2026-11-13T11:12:41.906Z",
+    "updatedAt": "2026-11-23T13:09:23.570Z",
     "communityTopicId": null
   },
   {
@@ -16812,10 +16812,10 @@
     "name": "DeWarmte",
     "developerName": "Dave Nelissen",
     "developerId": "6a5c92802ddac2379c77ac22",
-    "version": "1.2.8",
+    "version": "1.2.9",
     "sourceRepository": "https://github.com/daven68/nl.davenelissen.dewarmte",
     "publishedAt": "2026-07-19T09:01:52.539Z",
-    "updatedAt": "2026-11-13T11:12:41.906Z",
+    "updatedAt": "2026-11-23T13:09:23.571Z",
     "communityTopicId": null
   },
   {
@@ -19408,10 +19408,10 @@
     "name": "Laundry Tracker",
     "developerName": "Simon Salvin",
     "developerId": "6acd2e5bbdc8421d78c61bff",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "sourceRepository": "",
     "publishedAt": "2026-10-16T15:41:38.691Z",
-    "updatedAt": "2026-11-10T11:23:16.740Z",
+    "updatedAt": "2026-11-23T13:09:23.571Z",
     "communityTopicId": 160830
   },
   {
@@ -20337,5 +20337,49 @@
     "publishedAt": "2026-11-19T16:53:48.117Z",
     "updatedAt": "2026-11-19T16:53:48.117Z",
     "communityTopicId": 160717
+  },
+  {
+    "appId": "com.zperx.infrared",
+    "name": "InfraRed Toolkit",
+    "developerName": "ZperX .",
+    "developerId": "6a9186cd30ac038fba7073fc",
+    "version": "0.0.5",
+    "sourceRepository": "https://github.com/4tetra4/homey.infrared",
+    "publishedAt": "2026-11-23T13:08:33.308Z",
+    "updatedAt": "2026-11-23T13:08:33.308Z",
+    "communityTopicId": 159528
+  },
+  {
+    "appId": "com.komobimoto",
+    "name": "Komobi Moto",
+    "developerName": "Stefan Simon",
+    "developerId": "5dcaba1e1c90c866f9364835",
+    "version": "1.2.0",
+    "sourceRepository": "https://github.com/StefanIndustries/HomeyKomobi",
+    "publishedAt": "2026-11-23T13:08:33.309Z",
+    "updatedAt": "2026-11-23T13:08:33.309Z",
+    "communityTopicId": 162236
+  },
+  {
+    "appId": "nl.monkeysoft.resol",
+    "name": "Resol VBus",
+    "developerName": "Stèphan Eizinga (MonkeySoft)",
+    "developerId": "5dcabc991c90c866f936678e",
+    "version": "1.0.2",
+    "sourceRepository": "https://github.com/steffjenl/nl.monkeysoft.resol",
+    "publishedAt": "2026-11-23T13:08:33.309Z",
+    "updatedAt": "2026-11-23T13:08:33.309Z",
+    "communityTopicId": 161797
+  },
+  {
+    "appId": "app.freekiosk",
+    "name": "FreeKiosk",
+    "developerName": "Sébastien Castermans",
+    "developerId": "6adf352747d7399db6cd7794",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-23T13:08:33.309Z",
+    "updatedAt": "2026-11-23T13:08:33.309Z",
+    "communityTopicId": null
   }
 ]
