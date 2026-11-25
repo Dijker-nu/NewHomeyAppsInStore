@@ -1,1 +1,224 @@
-[]
+[
+  {
+    "id": "app.socbridge.ev9",
+    "rating": null,
+    "liveBuild": {
+      "id": 3,
+      "name": {
+        "en": "Battery to Tibber",
+        "sv": "Battery to Tibber"
+      },
+      "version": "0.4.0",
+      "readme": {
+        "en": "Keep the battery level of your manually added Tibber vehicle up to date from a selected battery-reporting device in Homey or a Flow. Send the actual percentage, or optionally adjust it for your car's AC charge limit so Tibber can plan charging towards that limit. Tibber keeps control of charging. Vehicle and home-charger connection checks can be combined without GPS; a home-location check is optional. Tested with Kia EV9 and Zaptec; other integrations need validation with their users. This independent community app uses Tibber's unofficial app API.\n\nFull Homey access is needed to find and read your selected source devices and, if you opt in, request vehicle status through the Kia app. Location permission supports the optional home check and address selection. Optional saved Tibber credentials stay in the app's internal storage on Homey; the developer does not receive them. Setup includes a safe same-value write test before automation is enabled.\r\n",
+        "sv": "Låt batterinivån för din manuellt tillagda bil i Tibber uppdateras från en vald batterienhet i Homey eller ett Flow. Skicka verklig procent, eller anpassa värdet efter bilens AC-laddgräns så att Tibber kan planera laddningen mot den gränsen. Tibber behåller laddstyrningen. Bilens och hemmaladdarens inkopplingssignaler kan kombineras utan GPS; hemkontroll med position är valfri. Testat med Kia EV9 och Zaptec; andra integrationer behöver verifieras med sina användare. Denna oberoende community-app använder Tibbers inofficiella app-API.\n\nFull åtkomst till Homey behövs för att hitta och läsa de källenheter du väljer och, efter eget val, begära fordonsstatus genom Kia-appen. Platsbehörigheten används för frivillig hemkontroll och adressval. Om du sparar Tibber-inloggningen ligger den i appens interna lagring på Homey; utgivaren får den inte. Guiden innehåller ett säkert skrivtest med samma procent innan automatiken aktiveras.\r\n"
+      },
+      "description": {
+        "en": "Let your charging plan follow your car battery",
+        "sv": "Låt laddplaneringen följa bilens batteri"
+      },
+      "category": "energy",
+      "brandColor": "#165D63",
+      "icon": "https://apps.homeycdn.net/app/app.socbridge.ev9/3/af31a36e-c575-4206-bea5-26bc585dd79e/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/app.socbridge.ev9/3/af31a36e-c575-4206-bea5-26bc585dd79e/assets/images/battery-tibber-small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/app.socbridge.ev9/3/af31a36e-c575-4206-bea5-26bc585dd79e/assets/images/battery-tibber-large.png",
+      "drivers": [
+        {
+          "id": "bridge",
+          "name": {
+            "en": "Tibber updates",
+            "sv": "Tibber-uppdatering"
+          },
+          "class": "other",
+          "capabilities": [
+            "onoff",
+            "measure_soc",
+            "measure_soc.planning"
+          ],
+          "capabilitiesOptions": {
+            "measure_soc.planning": {
+              "title": {
+                "en": "Planning level",
+                "sv": "Planeringsvärde"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/app.socbridge.ev9/3/af31a36e-c575-4206-bea5-26bc585dd79e/drivers/bridge/assets/images/neutral-small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/app.socbridge.ev9/3/af31a36e-c575-4206-bea5-26bc585dd79e/drivers/bridge/assets/images/neutral-large.png",
+          "platforms": [
+            "local"
+          ],
+          "icon": "https://apps.homeycdn.net/app/app.socbridge.ev9/3/af31a36e-c575-4206-bea5-26bc585dd79e/drivers/bridge/assets/icon.svg",
+          "connectivity": null
+        }
+      ],
+      "flow": {
+        "triggers": [
+          {
+            "id": "refresh_requested",
+            "title": {
+              "en": "A vehicle status refresh is requested",
+              "sv": "En uppdatering av bilens status begärs"
+            },
+            "hint": {
+              "en": "Optional. Connect to your vehicle app’s refresh action. Uses the interval selected in setup; an event is not confirmation of fresh vehicle data.",
+              "sv": "Valfritt. Koppla till bilappens uppdateringskort. Använder intervallet du valt i guiden; en händelse bekräftar inte att biluppgifterna är färska."
+            }
+          }
+        ],
+        "conditions": null,
+        "actions": [
+          {
+            "id": "sync",
+            "title": {
+              "en": "Update the battery value in Tibber now",
+              "sv": "Uppdatera batterivärdet i Tibber nu"
+            }
+          },
+          {
+            "id": "pause",
+            "title": {
+              "en": "Pause automatic Tibber updates",
+              "sv": "Pausa automatisk uppdatering av Tibber"
+            }
+          },
+          {
+            "id": "resume",
+            "title": {
+              "en": "Resume automatic Tibber updates",
+              "sv": "Återuppta automatisk uppdatering av Tibber"
+            }
+          },
+          {
+            "id": "connected",
+            "title": {
+              "en": "Tell the app a car is plugged in at home",
+              "sv": "Meddela appen att en bil är inkopplad hemma"
+            },
+            "hint": {
+              "en": "For charger detection via Flow. Run when your home charger reports a connected car. This action reports a connection; it does not start charging.",
+              "sv": "För laddaravkänning via Flow. Kör när hemmaladdaren rapporterar en ansluten bil. Kortet meddelar en anslutning; det startar inte laddningen."
+            }
+          },
+          {
+            "id": "disconnected",
+            "title": {
+              "en": "Tell the app the home charger is unplugged",
+              "sv": "Meddela appen att bilen kopplats ur hemma"
+            },
+            "hint": {
+              "en": "For charger detection via Flow. Run when the car disconnects from your home charger.",
+              "sv": "För laddaravkänning via Flow. Kör när bilen kopplas från hemmaladdaren."
+            }
+          },
+          {
+            "id": "set_soc",
+            "title": {
+              "en": "Provide battery level and charge limit via Flow",
+              "sv": "Ange batterinivå och laddgräns via Flow"
+            },
+            "titleFormatted": {
+              "en": "Provide battery [[soc]] % and AC charge limit [[target]] %",
+              "sv": "Ange batterinivå [[soc]] % och AC-laddgräns [[target]] %"
+            },
+            "hint": {
+              "en": "Advanced: for Flow as the battery data source. Provide the actual battery percentage and AC target; the app calculates the Tibber planning value.",
+              "sv": "Avancerat: för Flow som datakälla. Ange faktisk batteriprocent och AC-laddgräns; appen räknar fram Tibbers planeringsvärde."
+            },
+            "args": [
+              {
+                "name": "soc",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "title": {
+                  "en": "Actual battery %",
+                  "sv": "Faktiskt batteri %"
+                }
+              },
+              {
+                "name": "target",
+                "type": "number",
+                "min": 50,
+                "max": 100,
+                "title": {
+                  "en": "AC charge limit %",
+                  "sv": "AC-laddgräns %"
+                }
+              }
+            ]
+          },
+          {
+            "id": "set_soc_only",
+            "title": {
+              "en": "Provide battery level from Flow",
+              "sv": "Ange batterinivå från Flow"
+            },
+            "titleFormatted": {
+              "en": "Provide battery level [[soc]] %",
+              "sv": "Ange batterinivå [[soc]] %"
+            },
+            "hint": {
+              "en": "Supply a current vehicle battery percentage. No charge limit is needed. Only for Flow input mode; the Flow must enforce any desired connection or home checks.",
+              "sv": "Lämna en aktuell batteriprocent för bilen. Laddgräns behövs inte. Bara för Flow som datakälla; Flowet ansvarar för önskade inkopplings- och hemkontroller."
+            },
+            "args": [
+              {
+                "name": "soc",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "title": {
+                  "en": "Actual battery %",
+                  "sv": "Faktiskt batteri %"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-25T14:48:24.640Z",
+      "bugs": "https://github.com/QuietCircuitLabs/battery-to-tibber/issues",
+      "homepage": "https://github.com/QuietCircuitLabs/battery-to-tibber",
+      "support": "https://github.com/QuietCircuitLabs/battery-to-tibber/issues",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api",
+        "homey:manager:geolocation"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Brand-neutral battery input from Homey devices or Flow. Optional AC charge target and home location check. Configurable vehicle/charger connection checks and opt-in guarded refresh requests. Updated setup and short permission explanation.",
+        "sv": "Batterivärden från valfri kompatibel Homey-enhet eller Flow. Valfri AC-laddgräns och hemkontroll. Valbara inkopplingskontroller och försiktiga statusförfrågningar efter eget val. Ny installationsguide och kort förklaring av behörigheter."
+      },
+      "compatibility": ">=12.4.5",
+      "tags": null,
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.4.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6af31cb40f89e422d5f237e6",
+      "type": "user",
+      "userId": "6315fc8c3789830bb4022a88",
+      "name": "Christian Klauser",
+      "verified": false
+    },
+    "communityTopicId": null
+  }
+]
