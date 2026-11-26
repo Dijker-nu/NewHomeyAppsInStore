@@ -20447,5 +20447,38 @@
     "publishedAt": "2026-11-26T12:49:18.677Z",
     "updatedAt": "2026-11-26T12:49:18.677Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "nl.rilaahq.togsense",
+    "name": "TOG Sense",
+    "developerName": "Rilaa",
+    "developerId": "6afecdd5c1aa7af2c66bcd08",
+    "version": "0.2.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-26T17:56:47.010Z",
+    "updatedAt": "2026-11-26T17:56:47.010Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "nl.jeffreydebruijn.chargepoints",
+    "name": "Charge Point Finder NL",
+    "developerName": "JdeB Web Solutions",
+    "developerId": "6aecf65372573f07ae70a60c",
+    "version": "1.0.1",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-26T17:56:48.040Z",
+    "updatedAt": "2026-11-26T17:56:48.040Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "be.functor.mealie",
+    "name": "Mealie",
+    "developerName": "Kenny Moens",
+    "developerId": "66ffa09c645b24bd5bc1b47f",
+    "version": "0.3.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-26T17:56:48.487Z",
+    "updatedAt": "2026-11-26T17:56:48.487Z",
+    "communityTopicId": 162097
   }
 ]

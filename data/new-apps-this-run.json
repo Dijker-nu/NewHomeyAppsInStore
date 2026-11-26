@@ -1,624 +1,2457 @@
 [
   {
-    "id": "com.github.hrkvalvik.deepal",
+    "id": "nl.rilaahq.togsense",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "TOG Sense",
+        "nl": "TOG Sense",
+        "de": "TOG Sense",
+        "fr": "TOG Sense"
+      },
+      "version": "0.2.0",
+      "readme": {
+        "en": "Knowing what your baby should wear to bed starts with the temperature in the nursery. TOG Sense reads a temperature sensor in the nursery, looks at how cold it will get outside tonight where your Homey is, and shows on your dashboard which bodysuit, sleepsuit and TOG sleeping bag fit tonight, from the inside out. With your child's date of birth the advice also takes age into account, and the app settings list the size and TOG of each item.\nEvery piece of advice follows the safe sleep rules: one bodysuit, at most one sleepsuit and always one sleeping bag, without a blanket or hat in bed. When the room is too cold for that, the advice is to heat the room rather than add another layer. For the best result, choose a sensor near the cot rather than one on the radiator.\n",
+        "de": "Was dein Baby heute Nacht anziehen sollte, hängt von der Temperatur im Kinderzimmer ab. TOG Sense liest einen Temperatursensor im Kinderzimmer, schaut, wie kalt es heute Nacht draußen am Standort deines Homey wird, und zeigt auf deinem Dashboard, welcher Body, welcher Schlafanzug und welcher TOG-Schlafsack heute Nacht passen, von innen nach außen. Mit dem Geburtsdatum deines Kindes berücksichtigt die Empfehlung auch das Alter, und in den Einstellungen der App stehen für jedes Teil Größe und TOG.\nJede Empfehlung folgt den Regeln für sicheren Schlaf: ein Body, höchstens ein Schlafanzug und immer ein Schlafsack, ohne Decke oder Mütze im Bett. Ist das Zimmer dafür zu kalt, lautet die Empfehlung, das Zimmer zu heizen statt eine weitere Schicht anzuziehen. Wähle für das beste Ergebnis einen Sensor beim Bettchen und nicht einen am Heizkörper.\n",
+        "fr": "Ce que votre bébé doit porter cette nuit dépend de la température de sa chambre. TOG Sense lit un capteur de température dans la chambre de bébé, regarde le froid prévu cette nuit à l'emplacement de votre Homey, et affiche sur votre tableau de bord le body, le pyjama et la gigoteuse TOG qui conviennent cette nuit, de l'intérieur vers l'extérieur. Avec la date de naissance de votre enfant, le conseil tient aussi compte de son âge, et les réglages de l'app indiquent la taille et le TOG de chaque pièce.\nChaque conseil suit les règles du sommeil sûr : un body, au plus un pyjama et toujours une gigoteuse, sans couverture ni bonnet au lit. Si la chambre est trop froide pour cela, le conseil est de chauffer la chambre plutôt que d'ajouter une couche. Pour un meilleur résultat, choisissez un capteur près du lit plutôt qu'un capteur sur le radiateur.\n",
+        "nl": "Wat je baby vannacht aan moet, begint bij de temperatuur in de kinderkamer. TOG Sense leest een temperatuursensor in de kinderkamer, kijkt hoe koud het vannacht buiten wordt op de plek van je Homey, en laat op je dashboard zien welke romper, pyjama en TOG-slaapzak vannacht passen, van binnen naar buiten. Met de geboortedatum van je kind houdt het advies ook rekening met de leeftijd, en in de instellingen van de app staan per stuk de maat en de TOG.\nElk advies volgt de regels voor veilig slapen: één romper, hoogstens één pyjama en altijd één slaapzak, zonder deken of mutsje in bed. Is de kamer daarvoor te koud, dan is het advies de kamer te verwarmen in plaats van nog een laag. Kies voor het beste resultaat een sensor bij het bedje en niet een op de radiator.\n"
+      },
+      "description": {
+        "en": "Which bodysuit, sleepsuit and TOG sleeping bag your baby needs tonight",
+        "nl": "Welke romper, pyjama en TOG-slaapzak je baby vannacht aan moet",
+        "de": "Welcher Body, welcher Schlafanzug und welcher TOG-Schlafsack heute Nacht zu deinem Baby passt",
+        "fr": "Quel body, quel pyjama et quelle gigoteuse TOG pour votre bébé cette nuit"
+      },
+      "category": "climate",
+      "brandColor": "#8a1c35",
+      "icon": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/assets/images/large.png",
+      "drivers": null,
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": {
+        "sleepwear": {
+          "name": {
+            "en": "Sleepwear tonight",
+            "nl": "Slaapkleding vannacht",
+            "de": "Schlafkleidung heute Nacht",
+            "fr": "Tenue de nuit ce soir"
+          },
+          "height": 360,
+          "settings": [
+            {
+              "id": "sensor",
+              "type": "autocomplete",
+              "title": {
+                "en": "Nursery temperature sensor",
+                "nl": "Temperatuursensor kinderkamer",
+                "de": "Temperatursensor Kinderzimmer",
+                "fr": "Capteur de température de la chambre"
+              },
+              "hint": {
+                "en": "The advice is calculated from this sensor's temperature, with tonight's outside low at your Homey's location. Choose a sensor in the room, near the bed, not one on the radiator.",
+                "nl": "Het advies wordt berekend met de temperatuur van deze sensor, samen met hoe koud het vannacht buiten wordt op de plek van je Homey. Kies een sensor in de kamer, bij het bedje, en niet een op de radiator.",
+                "de": "Die Empfehlung wird mit der Temperatur dieses Sensors berechnet, zusammen damit, wie kalt es heute Nacht draußen am Standort deines Homey wird. Wähle einen Sensor im Zimmer, beim Bettchen, nicht einen am Heizkörper.",
+                "fr": "Le conseil est calculé avec la température de ce capteur et le froid prévu cette nuit à l'emplacement de votre Homey. Choisissez un capteur dans la chambre, près du lit, pas un capteur sur le radiateur."
+              }
+            },
+            {
+              "id": "born",
+              "type": "text",
+              "title": {
+                "en": "Child's date of birth",
+                "nl": "Geboortedatum kindje",
+                "de": "Geburtsdatum deines Kindes",
+                "fr": "Date de naissance de votre enfant"
+              },
+              "value": "",
+              "hint": {
+                "en": "For example 14-06-2025. Under 3 months a little warmer in a cool room, from 2 years a little lighter; also the sizes on the products page.",
+                "nl": "Bijvoorbeeld 14-06-2025. Jonger dan 3 maanden iets warmer in een frisse kamer, vanaf 2 jaar iets lichter; en de maten op de pagina met producten.",
+                "de": "Zum Beispiel 14.06.2025. Unter 3 Monaten etwas wärmer in einem kühlen Zimmer, ab 2 Jahren etwas leichter; außerdem die Größen auf der Produktseite.",
+                "fr": "Par exemple 14/06/2025. Avant 3 mois un peu plus chaud dans une chambre fraîche, à partir de 2 ans un peu plus léger ; et les tailles sur la page des produits."
+              }
+            },
+            {
+              "id": "warmth",
+              "type": "dropdown",
+              "title": {
+                "en": "Does your child get cold or warm easily?",
+                "nl": "Heeft je kindje het snel koud of warm?",
+                "de": "Friert dein Kind schnell, oder wird ihm schnell warm?",
+                "fr": "Votre enfant a-t-il vite froid ou vite chaud ?"
+              },
+              "value": "gemiddeld",
+              "hint": {
+                "en": "Gets cold easily: calculated as if the room is 1 °C colder; warm easily: 1 °C warmer.",
+                "nl": "Snel koud: gerekend alsof de kamer 1 °C kouder is; snel warm: 1 °C warmer.",
+                "de": "Friert schnell: gerechnet, als wäre das Zimmer 1 °C kälter; wird schnell warm: 1 °C wärmer.",
+                "fr": "A vite froid : calcul comme si la chambre était 1 °C plus froide ; a vite chaud : 1 °C plus chaude."
+              },
+              "values": [
+                {
+                  "id": "gemiddeld",
+                  "label": {
+                    "en": "Average",
+                    "nl": "Gemiddeld",
+                    "de": "Durchschnittlich",
+                    "fr": "Normal"
+                  }
+                },
+                {
+                  "id": "snel_koud",
+                  "label": {
+                    "en": "Gets cold easily",
+                    "nl": "Snel koud",
+                    "de": "Friert schnell",
+                    "fr": "A vite froid"
+                  }
+                },
+                {
+                  "id": "snel_warm",
+                  "label": {
+                    "en": "Gets warm easily",
+                    "nl": "Snel warm",
+                    "de": "Wird schnell warm",
+                    "fr": "A vite chaud"
+                  }
+                }
+              ]
+            }
+          ],
+          "api": {
+            "postAdvice": {
+              "method": "POST",
+              "path": "/advice"
+            }
+          },
+          "id": "sleepwear",
+          "previewDark": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/widgets/sleepwear/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/widgets/sleepwear/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-26T13:23:12.464Z",
+      "bugs": null,
+      "homepage": "https://togsense.app",
+      "support": null,
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:api",
+        "homey:manager:geolocation"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "en": "First test version: the widget shows which bodysuit, sleepsuit and TOG sleeping bag fit tonight, based on the nursery sensor and tonight's outside temperature.",
+        "nl": "Eerste testversie: de widget laat zien welke romper, pyjama en TOG-slaapzak vannacht passen, op basis van de sensor in de kinderkamer en de buitentemperatuur van vannacht.",
+        "de": "Erste Testversion: Das Widget zeigt, welcher Body, welcher Schlafanzug und welcher TOG-Schlafsack heute Nacht passen, anhand des Sensors im Kinderzimmer und der Außentemperatur heute Nacht.",
+        "fr": "Première version de test : le widget indique le body, le pyjama et la gigoteuse TOG qui conviennent cette nuit, selon le capteur de la chambre et la température extérieure de la nuit."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": {
+        "en": [
+          "baby",
+          "tog",
+          "sleeping bag",
+          "nursery",
+          "temperature"
+        ],
+        "nl": [
+          "baby",
+          "tog",
+          "slaapzak",
+          "kinderkamer",
+          "temperatuur"
+        ],
+        "de": [
+          "Baby",
+          "TOG",
+          "Schlafsack",
+          "Kinderzimmer",
+          "Temperatur"
+        ],
+        "fr": [
+          "bébé",
+          "TOG",
+          "gigoteuse",
+          "chambre de bébé",
+          "température"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "0.2.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6afecdd5c1aa7af2c66bcd08",
+      "type": "org",
+      "userId": null,
+      "name": "Rilaa",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "nl.jeffreydebruijn.chargepoints",
     "rating": null,
     "liveBuild": {
       "id": 2,
       "name": {
-        "en": "Changan Deepal (Unofficial)"
+        "en": "Charge Point Finder NL",
+        "nl": "Laadpaal Zoeker"
       },
-      "version": "0.2.1",
+      "version": "1.0.1",
       "readme": {
-        "en": "Connect your Deepal or Changan car to your smart home. See the battery, range and charging at a glance, and use the dashboard widget and Flows to lock the car, start the climate or turn on the seat and steering wheel heating. Built and tested on a Deepal S05.\n\nThis is an unofficial app. It is not made or endorsed by Changan or Deepal, and you use it at your own risk. Create a dedicated Changan account for Homey, because logging in can sign that account out of the My Changan app, and set the remote-control PIN in the My Changan app before you log in here.\n",
-        "no": "Koble Deepal- eller Changan-bilen din til smarthjemmet. Se batteri, rekkevidde og lading med et øyekast, og bruk dashbordwidgeten og flyter til å låse bilen, starte klimaanlegget eller slå på sete- og rattvarme. Bygget og testet på en Deepal S05.\n\nDette er en uoffisiell app. Den er ikke laget eller godkjent av Changan eller Deepal, og du bruker den på eget ansvar. Opprett en egen Changan-konto til Homey, fordi innlogging kan logge den kontoen ut av My Changan-appen, og sett PIN-koden for fjernkontroll i My Changan-appen før du logger inn her.\n"
+        "en": "No driveway and no charger at home? Then the question is always the same: is there a public charging point free within walking distance, and what will it cost? Laadpaal Zoeker answers that on your Homey. It shows every public charging point within the radius you choose, which ones are free right now, and the price per kWh and per charging session according to the operator's tariff, so you can walk straight to the cheapest free one.\n\nPick a favourite charging point, such as the one in front of your door, and get a notification the moment it becomes free or occupied. Availability and tariffs come from the open data of the Dutch National Road Traffic Data Portal (NDW), so the app works throughout the Netherlands without an account. Where an operator publishes no tariff, the app shows an approximate price, marked with ±.\n",
+        "nl": "Geen oprit en geen laadpaal thuis? Dan is de vraag steeds dezelfde: is er op loopafstand een openbare laadpaal vrij, en wat kost laden daar? Laadpaal Zoeker geeft het antwoord op je Homey. Je ziet alle openbare laadpalen binnen de straal die je kiest, welke er nu vrij zijn, en de prijs per kWh en per laadsessie volgens het tarief van de exploitant. Zo loop je meteen naar de goedkoopste vrije paal.\n\nKies een favoriete laadpaal, bijvoorbeeld die voor je deur, en krijg een melding zodra hij vrij komt of bezet raakt. Beschikbaarheid en tarieven komen uit de open data van het Nationaal Dataportaal Wegverkeer (NDW), dus de app werkt in heel Nederland en zonder account. Publiceert een exploitant geen tarief, dan toont de app een benadering, herkenbaar aan een ±.\n"
       },
       "description": {
-        "en": "Keep an eye on your car and control it from your smart home",
-        "no": "Hold øye med bilen og styr den fra smarthjemmet"
+        "en": "See which public charging point near you is free, and what it costs.",
+        "nl": "Zie welke openbare laadpaal bij jou in de buurt vrij is, en wat hij kost."
       },
-      "category": "climate",
-      "brandColor": "#20B2AA",
-      "icon": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/assets/images/large.png",
+      "category": "energy",
+      "brandColor": "#1F7A5C",
+      "icon": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/assets/images/large.png",
       "drivers": [
         {
-          "id": "vehicle",
+          "id": "chargepoints",
           "name": {
-            "en": "Deepal vehicle",
-            "no": "Deepal-kjøretøy"
+            "en": "Charging points nearby",
+            "nl": "Laadpalen in de buurt"
           },
-          "class": "car",
+          "class": "sensor",
           "capabilities": [
-            "measure_battery",
-            "ev_charging_state",
-            "deepal_range",
-            "deepal_charge_time_remaining",
-            "measure_current",
-            "locked",
-            "deepal_climate",
-            "target_temperature",
-            "deepal_seat_heat.driver",
-            "deepal_seat_heat.passenger",
-            "deepal_steering_wheel_heat",
-            "measure_temperature",
-            "measure_temperature.outside",
-            "measure_humidity",
-            "alarm_contact.doors",
-            "alarm_contact.trunk",
-            "alarm_contact.windows",
-            "deepal_tire_pressure.front_left",
-            "deepal_tire_pressure.front_right",
-            "deepal_tire_pressure.rear_left",
-            "deepal_tire_pressure.rear_right",
-            "alarm_generic.tire_pressure",
-            "deepal_odometer",
-            "deepal_last_update"
+            "cp_free",
+            "cp_price_text",
+            "cp_session_text",
+            "cp_address",
+            "cp_distance",
+            "cp_nearest",
+            "cp_nearest_distance",
+            "cp_nearest_price_text",
+            "cp_price",
+            "cp_session_cost",
+            "cp_nearest_price"
           ],
           "capabilitiesOptions": {
-            "target_temperature": {
-              "min": 16,
-              "max": 32,
-              "step": 0.5
-            },
-            "measure_temperature": {
+            "cp_session_text": {
               "title": {
-                "en": "Cabin temperature",
-                "no": "Kupétemperatur"
+                "en": "Cost cheapest session",
+                "nl": "Kosten goedkoopste sessie"
               }
             },
-            "measure_temperature.outside": {
+            "cp_session_cost": {
               "title": {
-                "en": "Outside temperature",
-                "no": "Utetemperatur"
-              }
-            },
-            "measure_humidity": {
-              "title": {
-                "en": "Cabin humidity",
-                "no": "Luftfuktighet i kupeen"
-              }
-            },
-            "measure_current": {
-              "title": {
-                "en": "Charge current",
-                "no": "Ladestrøm"
-              }
-            },
-            "locked": {
-              "title": {
-                "en": "Locked",
-                "no": "Låst"
-              }
-            },
-            "alarm_contact.doors": {
-              "title": {
-                "en": "Doors / hood open",
-                "no": "Dører / panser åpent"
-              }
-            },
-            "alarm_contact.trunk": {
-              "title": {
-                "en": "Trunk open",
-                "no": "Bagasjerom åpent"
-              }
-            },
-            "alarm_contact.windows": {
-              "title": {
-                "en": "Windows open",
-                "no": "Vinduer åpne"
-              }
-            },
-            "deepal_tire_pressure.front_left": {
-              "title": {
-                "en": "Tire pressure front left",
-                "no": "Dekktrykk foran venstre"
-              }
-            },
-            "deepal_tire_pressure.front_right": {
-              "title": {
-                "en": "Tire pressure front right",
-                "no": "Dekktrykk foran høyre"
-              }
-            },
-            "deepal_tire_pressure.rear_left": {
-              "title": {
-                "en": "Tire pressure rear left",
-                "no": "Dekktrykk bak venstre"
-              }
-            },
-            "deepal_tire_pressure.rear_right": {
-              "title": {
-                "en": "Tire pressure rear right",
-                "no": "Dekktrykk bak høyre"
-              }
-            },
-            "alarm_generic.tire_pressure": {
-              "title": {
-                "en": "Tire pressure warning",
-                "no": "Dekktrykkvarsel"
-              }
-            },
-            "deepal_seat_heat.driver": {
-              "title": {
-                "en": "Driver seat heating",
-                "no": "Setevarme fører"
-              }
-            },
-            "deepal_seat_heat.passenger": {
-              "title": {
-                "en": "Passenger seat heating",
-                "no": "Setevarme passasjer"
+                "en": "Cost cheapest session",
+                "nl": "Kosten goedkoopste sessie"
               }
             }
           },
-          "energy": {
-            "electricCar": true
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/drivers/vehicle/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/drivers/vehicle/assets/images/large.png",
+          "imageSmall": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/chargepoints/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/chargepoints/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
             "cloud"
           ],
-          "icon": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/drivers/vehicle/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/chargepoints/assets/icon.svg"
+        },
+        {
+          "id": "favorite",
+          "name": {
+            "en": "Favourite charging point",
+            "nl": "Favoriete laadpaal"
+          },
+          "class": "sensor",
+          "capabilities": [
+            "cp_fav_status",
+            "cp_fav_free",
+            "cp_free",
+            "cp_price_text",
+            "cp_session_text",
+            "cp_price",
+            "cp_session_cost"
+          ],
+          "capabilitiesOptions": {
+            "cp_free": {
+              "title": {
+                "en": "Free connectors",
+                "nl": "Vrije connectors"
+              }
+            },
+            "cp_price": {
+              "title": {
+                "en": "Price",
+                "nl": "Prijs"
+              },
+              "insights": true
+            },
+            "cp_price_text": {
+              "title": {
+                "en": "Price",
+                "nl": "Prijs"
+              }
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/favorite/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/favorite/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/favorite/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "charging_started",
+            "id": "cheapest_changed",
             "title": {
-              "en": "Charging started",
-              "no": "Lading startet"
+              "en": "The cheapest charging point changed",
+              "nl": "De goedkoopste laadpaal is veranderd"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "charging_stopped",
-            "title": {
-              "en": "Charging stopped",
-              "no": "Lading stoppet"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "warning_light_on",
-            "title": {
-              "en": "A dashboard warning light turned on",
-              "no": "Et varsellys i dashbordet ble slått på"
-            },
-            "hint": {
-              "en": "S05 only: reported while the car is on.",
-              "no": "Kun S05: rapporteres mens bilen er på."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
+                "filter": "driver_id=chargepoints"
               }
             ],
             "tokens": [
               {
-                "name": "light",
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
                 "type": "string",
                 "title": {
-                  "en": "Warning light",
-                  "no": "Varsellys"
+                  "en": "Address",
+                  "nl": "Adres"
                 },
-                "example": {
-                  "en": "ABS warning",
-                  "no": "ABS-varsel"
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "fav_became_free",
+            "title": {
+              "en": "My charging point became free",
+              "nl": "Mijn laadpaal is vrij gekomen"
+            },
+            "hint": {
+              "en": "Triggers when no connector was free and now at least one is.",
+              "nl": "Gaat af als er geen connector vrij was en nu minstens één."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=favorite"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kerkstraat 5"
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 1
+              },
+              {
+                "name": "total",
+                "type": "number",
+                "title": {
+                  "en": "Total connectors",
+                  "nl": "Totaal connectors"
+                },
+                "example": 2
+              },
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "fav_became_occupied",
+            "title": {
+              "en": "My charging point became occupied",
+              "nl": "Mijn laadpaal is bezet geraakt"
+            },
+            "hint": {
+              "en": "Triggers when the last free connector is taken.",
+              "nl": "Gaat af als de laatste vrije connector bezet raakt."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=favorite"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kerkstraat 5"
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 1
+              },
+              {
+                "name": "total",
+                "type": "number",
+                "title": {
+                  "en": "Total connectors",
+                  "nl": "Totaal connectors"
+                },
+                "example": 2
+              },
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "fav_status_changed",
+            "title": {
+              "en": "The status of my charging point changed",
+              "nl": "De status van mijn laadpaal is veranderd"
+            },
+            "hint": {
+              "en": "Free, occupied or not reported (no status update for more than 7 days).",
+              "nl": "Vrij, bezet of niet gemeld (langer dan 7 dagen geen statusmelding)."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=favorite"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "status",
+                "type": "string",
+                "title": {
+                  "en": "Status",
+                  "nl": "Status"
+                },
+                "example": "Vrij"
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kerkstraat 5"
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 1
+              },
+              {
+                "name": "total",
+                "type": "number",
+                "title": {
+                  "en": "Total connectors",
+                  "nl": "Totaal connectors"
+                },
+                "example": 2
+              },
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "free_above",
+            "title": {
+              "en": "Free connectors rise above",
+              "nl": "Vrije connectors stijgen boven"
+            },
+            "titleFormatted": {
+              "en": "Free connectors rise above [[count]]",
+              "nl": "Vrije connectors stijgen boven [[count]]"
+            },
+            "hint": {
+              "en": "Triggers once when the number goes from at most this value to above it.",
+              "nl": "Gaat één keer af als het aantal van hooguit deze waarde naar erboven gaat."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              },
+              {
+                "type": "number",
+                "name": "count",
+                "min": 0,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "2",
+                  "nl": "2"
                 }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "free_available",
+            "title": {
+              "en": "A charging point becomes free nearby",
+              "nl": "Er komt een vrije laadpaal in de buurt"
+            },
+            "hint": {
+              "en": "Triggers when there were no free connectors in the search area and now there are.",
+              "nl": "Gaat af als er in het zoekgebied geen vrije connector was en er nu wel een is."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "free_changed",
+            "title": {
+              "en": "The number of free connectors changed",
+              "nl": "Het aantal vrije connectors is veranderd"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              },
+              {
+                "name": "previous_free",
+                "type": "number",
+                "title": {
+                  "en": "Previously free",
+                  "nl": "Eerder vrij"
+                },
+                "example": 2
+              }
+            ]
+          },
+          {
+            "id": "none_free",
+            "title": {
+              "en": "No free charging point left nearby",
+              "nl": "Er is geen vrije laadpaal meer in de buurt"
+            },
+            "hint": {
+              "en": "Triggers when the last free connector in the search area is taken.",
+              "nl": "Gaat af als de laatste vrije connector in het zoekgebied bezet raakt."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "price_below",
+            "title": {
+              "en": "The lowest charging price drops below",
+              "nl": "De laagste laadprijs zakt onder"
+            },
+            "titleFormatted": {
+              "en": "The lowest charging price drops below € [[price]]/kWh",
+              "nl": "De laagste laadprijs zakt onder € [[price]]/kWh"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              },
+              {
+                "type": "number",
+                "name": "price",
+                "min": 0,
+                "max": 5,
+                "step": 0.01,
+                "placeholder": {
+                  "en": "0.35",
+                  "nl": "0,35"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
+              }
+            ]
+          },
+          {
+            "id": "price_dropped",
+            "title": {
+              "en": "The lowest charging price dropped",
+              "nl": "De laagste laadprijs is gedaald"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "price",
+                "type": "number",
+                "title": {
+                  "en": "Price (€/kWh)",
+                  "nl": "Prijs (€/kWh)"
+                },
+                "example": 0.36
+              },
+              {
+                "name": "address",
+                "type": "string",
+                "title": {
+                  "en": "Address",
+                  "nl": "Adres"
+                },
+                "example": "Kooltjesbuurt 1"
+              },
+              {
+                "name": "operator",
+                "type": "string",
+                "title": {
+                  "en": "Operator",
+                  "nl": "Exploitant"
+                },
+                "example": "EQUANS"
+              },
+              {
+                "name": "distance",
+                "type": "number",
+                "title": {
+                  "en": "Distance (m)",
+                  "nl": "Afstand (m)"
+                },
+                "example": 144
+              },
+              {
+                "name": "power",
+                "type": "number",
+                "title": {
+                  "en": "Power (kW)",
+                  "nl": "Vermogen (kW)"
+                },
+                "example": 11
+              },
+              {
+                "name": "free",
+                "type": "number",
+                "title": {
+                  "en": "Free connectors",
+                  "nl": "Vrije connectors"
+                },
+                "example": 3
+              },
+              {
+                "name": "previous",
+                "type": "number",
+                "title": {
+                  "en": "Previous price",
+                  "nl": "Vorige prijs"
+                },
+                "example": 0.4
+              },
+              {
+                "name": "list",
+                "type": "string",
+                "title": {
+                  "en": "Top 3 free",
+                  "nl": "Top 3 vrij"
+                },
+                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
+              },
+              {
+                "name": "session_cost",
+                "type": "number",
+                "title": {
+                  "en": "Cost per session (€)",
+                  "nl": "Kosten per sessie (€)"
+                },
+                "example": 6.94
               }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "is_charging",
+            "id": "fav_is_free",
             "title": {
-              "en": "Is !{{|not}} charging",
-              "no": "Lader !{{|ikke}}"
+              "en": "My charging point !{{is|is not}} free",
+              "nl": "Mijn laadpaal !{{is|is niet}} vrij"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
+                "filter": "driver_id=favorite"
               }
             ]
           },
           {
-            "id": "is_plugged_in",
+            "id": "fav_status_is",
             "title": {
-              "en": "Is !{{|not}} plugged in",
-              "no": "Er !{{|ikke}} koblet til lader"
+              "en": "The status of my charging point !{{is|is not}} ...",
+              "nl": "De status van mijn laadpaal !{{is|is niet}} ..."
+            },
+            "titleFormatted": {
+              "en": "The status of my charging point !{{is|is not}} [[status]]",
+              "nl": "De status van mijn laadpaal !{{is|is niet}} [[status]]"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
+                "filter": "driver_id=favorite"
+              },
+              {
+                "type": "dropdown",
+                "name": "status",
+                "values": [
+                  {
+                    "id": "free",
+                    "label": {
+                      "en": "Free",
+                      "nl": "Vrij"
+                    }
+                  },
+                  {
+                    "id": "occupied",
+                    "label": {
+                      "en": "Occupied",
+                      "nl": "Bezet"
+                    }
+                  },
+                  {
+                    "id": "unknown",
+                    "label": {
+                      "en": "Not reported",
+                      "nl": "Niet gemeld"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "free_at_least",
+            "title": {
+              "en": "At least ... connectors !{{are|are not}} free",
+              "nl": "Er !{{zijn|zijn niet}} minstens ... connectors vrij"
+            },
+            "titleFormatted": {
+              "en": "At least [[count]] connectors !{{are|are not}} free",
+              "nl": "Er !{{zijn|zijn niet}} minstens [[count]] connectors vrij"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              },
+              {
+                "type": "number",
+                "name": "count",
+                "min": 1,
+                "max": 100,
+                "step": 1,
+                "placeholder": {
+                  "en": "1",
+                  "nl": "1"
+                }
+              }
+            ]
+          },
+          {
+            "id": "has_free",
+            "title": {
+              "en": "There is a free charging point nearby",
+              "nl": "Er is een vrije laadpaal in de buurt"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              }
+            ]
+          },
+          {
+            "id": "price_below",
+            "title": {
+              "en": "The lowest charging price is below",
+              "nl": "De laagste laadprijs is lager dan"
+            },
+            "titleFormatted": {
+              "en": "The lowest charging price is below € [[price]]/kWh",
+              "nl": "De laagste laadprijs is lager dan € [[price]]/kWh"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
+              },
+              {
+                "type": "number",
+                "name": "price",
+                "min": 0,
+                "max": 5,
+                "step": 0.01,
+                "placeholder": {
+                  "en": "0.35",
+                  "nl": "0,35"
+                }
               }
             ]
           }
         ],
         "actions": [
           {
-            "id": "climate_on",
+            "id": "refresh",
             "title": {
-              "en": "Start climate",
-              "no": "Start klima"
-            },
-            "titleFormatted": {
-              "en": "Start climate at [[temperature]] °C",
-              "no": "Start klima på [[temperature]] °C"
+              "en": "Refresh charging points now",
+              "nl": "Ververs laadpalen nu"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
+                "filter": "driver_id=chargepoints"
+              }
+            ]
+          },
+          {
+            "id": "set_location",
+            "title": {
+              "en": "Change search location",
+              "nl": "Wijzig zoeklocatie"
+            },
+            "titleFormatted": {
+              "en": "Search around latitude [[lat]] longitude [[lon]]",
+              "nl": "Zoek rond breedtegraad [[lat]] lengtegraad [[lon]]"
+            },
+            "hint": {
+              "en": "Leave empty fields to use the Homey location again.",
+              "nl": "Laat de velden leeg om weer de Homey-locatie te gebruiken."
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=chargepoints"
               },
               {
-                "type": "number",
-                "name": "temperature",
-                "min": 16,
-                "max": 32,
-                "step": 0.5,
+                "type": "text",
+                "name": "lat",
                 "placeholder": {
-                  "en": "22",
-                  "no": "22"
+                  "en": "52.3731",
+                  "nl": "52.3731"
+                }
+              },
+              {
+                "type": "text",
+                "name": "lon",
+                "placeholder": {
+                  "en": "4.8926",
+                  "nl": "4.8926"
                 }
               }
             ]
           },
           {
-            "id": "climate_off",
+            "id": "set_radius",
             "title": {
-              "en": "Stop climate",
-              "no": "Stopp klima"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "flash_lights",
-            "title": {
-              "en": "Flash the lights",
-              "no": "Blink med lysene"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "sound_horn",
-            "title": {
-              "en": "Sound the horn",
-              "no": "Tut med hornet"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "flash_and_horn",
-            "title": {
-              "en": "Flash the lights and sound the horn",
-              "no": "Blink med lysene og tut med hornet"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "open_trunk",
-            "title": {
-              "en": "Open the trunk",
-              "no": "Åpne bagasjerommet"
-            },
-            "hint": {
-              "en": "Requires the remote-control PIN.",
-              "no": "Krever PIN-koden for fjernkontroll."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "set_windows",
-            "title": {
-              "en": "Open or close the windows",
-              "no": "Åpne eller lukke vinduene"
+              "en": "Change search radius",
+              "nl": "Wijzig zoekstraal"
             },
             "titleFormatted": {
-              "en": "[[state]] the windows",
-              "no": "[[state]] vinduene"
-            },
-            "hint": {
-              "en": "Requires the remote-control PIN.",
-              "no": "Krever PIN-koden for fjernkontroll."
+              "en": "Change search radius to [[radius]] m",
+              "nl": "Wijzig zoekstraal naar [[radius]] m"
             },
             "args": [
               {
                 "type": "device",
                 "name": "device",
-                "filter": "driver_id=vehicle"
+                "filter": "driver_id=chargepoints"
               },
               {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "open",
-                    "label": {
-                      "en": "Open",
-                      "no": "Åpne"
-                    }
-                  },
-                  {
-                    "id": "close",
-                    "label": {
-                      "en": "Close",
-                      "no": "Lukk"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_charge_limit",
-            "title": {
-              "en": "Set charge limit",
-              "no": "Sett ladegrense"
-            },
-            "titleFormatted": {
-              "en": "Set charge limit to [[percent]] %",
-              "no": "Sett ladegrense til [[percent]] %"
-            },
-            "hint": {
-              "en": "Not supported by the S05 EV (the car accepts it without effect).",
-              "no": "Støttes ikke av S05 EV (bilen godtar den uten effekt)."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "type": "range",
-                "name": "percent",
-                "min": 50,
-                "max": 100,
-                "step": 5,
-                "label": " %"
-              }
-            ]
-          },
-          {
-            "id": "wake_and_refresh",
-            "title": {
-              "en": "Wake the car and refresh",
-              "no": "Vekk bilen og oppdater"
-            },
-            "hint": {
-              "en": "Wakes an S05 (at most once every 5 minutes) and waits up to 60 s for a fresh report.",
-              "no": "Vekker en S05 (maks én gang hvert 5. minutt) og venter opptil 60 s på en ny rapport."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              }
-            ]
-          },
-          {
-            "id": "set_seat_heat",
-            "title": {
-              "en": "Set seat heating",
-              "no": "Sett setevarme"
-            },
-            "titleFormatted": {
-              "en": "Set [[seat]] seat heating to [[level]]",
-              "no": "Sett setevarme for [[seat]] til [[level]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "type": "dropdown",
-                "name": "seat",
-                "values": [
-                  {
-                    "id": "driver",
-                    "label": {
-                      "en": "driver",
-                      "no": "fører"
-                    }
-                  },
-                  {
-                    "id": "passenger",
-                    "label": {
-                      "en": "passenger",
-                      "no": "passasjer"
-                    }
-                  },
-                  {
-                    "id": "both",
-                    "label": {
-                      "en": "both front",
-                      "no": "begge foran"
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "dropdown",
-                "name": "level",
-                "values": [
-                  {
-                    "id": "0",
-                    "label": {
-                      "en": "Off",
-                      "no": "Av"
-                    }
-                  },
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "Level 1",
-                      "no": "Nivå 1"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "Level 2",
-                      "no": "Nivå 2"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "Level 3",
-                      "no": "Nivå 3"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_steering_wheel_heat",
-            "title": {
-              "en": "Turn steering wheel heating on or off",
-              "no": "Slå rattvarme av eller på"
-            },
-            "titleFormatted": {
-              "en": "Turn steering wheel heating [[state]]",
-              "no": "Slå rattvarme [[state]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=vehicle"
-              },
-              {
-                "type": "dropdown",
-                "name": "state",
-                "values": [
-                  {
-                    "id": "on",
-                    "label": {
-                      "en": "on",
-                      "no": "på"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "off",
-                      "no": "av"
-                    }
-                  }
-                ]
+                "type": "number",
+                "name": "radius",
+                "min": 100,
+                "max": 25000,
+                "step": 50,
+                "placeholder": {
+                  "en": "500",
+                  "nl": "500"
+                }
               }
             ]
           }
         ]
       },
       "widgets": {
-        "car": {
+        "nearby": {
           "name": {
-            "en": "Deepal car",
-            "no": "Deepal-bil"
+            "en": "Charging points nearby",
+            "nl": "Laadpalen in de buurt"
           },
-          "height": 430,
-          "transparent": false,
-          "api": {
-            "getState": {
-              "method": "GET",
-              "path": "/state"
+          "settings": [
+            {
+              "id": "device",
+              "type": "autocomplete",
+              "title": {
+                "en": "Device (empty = first)",
+                "nl": "Apparaat (leeg = eerste)"
+              }
             },
-            "command": {
+            {
+              "id": "sort",
+              "type": "dropdown",
+              "title": {
+                "en": "Sort",
+                "nl": "Sorteren"
+              },
+              "value": "distance",
+              "values": [
+                {
+                  "id": "distance",
+                  "title": {
+                    "en": "Nearest first",
+                    "nl": "Dichtstbij eerst"
+                  }
+                },
+                {
+                  "id": "price",
+                  "title": {
+                    "en": "Cheapest first",
+                    "nl": "Goedkoopste eerst"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "priceMode",
+              "type": "dropdown",
+              "title": {
+                "en": "Show price as",
+                "nl": "Prijs tonen als"
+              },
+              "value": "kwh",
+              "values": [
+                {
+                  "id": "kwh",
+                  "title": {
+                    "en": "Per kWh",
+                    "nl": "Per kWh"
+                  }
+                },
+                {
+                  "id": "session",
+                  "title": {
+                    "en": "Per session",
+                    "nl": "Per sessie"
+                  }
+                },
+                {
+                  "id": "both",
+                  "title": {
+                    "en": "Both",
+                    "nl": "Allebei"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "onlyFree",
+              "type": "checkbox",
+              "title": {
+                "en": "Only show free charging points",
+                "nl": "Alleen vrije laadpalen tonen"
+              },
+              "value": false
+            },
+            {
+              "id": "rows",
+              "type": "number",
+              "title": {
+                "en": "Maximum number of rows",
+                "nl": "Maximaal aantal regels"
+              },
+              "value": 8,
+              "min": 1,
+              "max": 30
+            }
+          ],
+          "api": {
+            "getResult": {
+              "method": "GET",
+              "path": "/result/:device"
+            },
+            "refresh": {
               "method": "POST",
-              "path": "/command"
+              "path": "/refresh/:device"
             }
           },
-          "id": "car",
-          "settings": [],
-          "previewDark": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/widgets/car/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/com.github.hrkvalvik.deepal/2/e50e784c-7ba2-4691-9f43-4719c1364112/widgets/car/preview-light.png"
+          "id": "nearby",
+          "previewDark": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/widgets/nearby/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/widgets/nearby/preview-light.png"
         }
       },
       "screensavers": [],
       "homeyCommunityTopicId": null,
       "state": "live",
-      "stateChangedAt": "2026-11-26T10:47:52.612Z",
+      "stateChangedAt": "2026-11-26T15:01:20.754Z",
       "bugs": null,
       "homepage": null,
-      "support": "https://github.com/hrkvalvik/homey-deepal/issues",
-      "source": "https://github.com/hrkvalvik/homey-deepal",
-      "contributors": {
-        "developers": [
+      "support": "mailto:info@jeffreydebruijn.nl",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [
+        "homey:manager:geolocation"
+      ],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Clearer app description: prices follow the operator tariff, only missing tariffs are approximated (±).",
+        "nl": "Duidelijkere omschrijving: prijzen volgen het tarief van de exploitant, alleen ontbrekende tarieven worden benaderd (±)."
+      },
+      "compatibility": ">=12.3.0",
+      "tags": {
+        "en": [
+          "ev",
+          "charging",
+          "charge point",
+          "public charging",
+          "charging price",
+          "netherlands",
+          "ndw"
+        ],
+        "nl": [
+          "ev",
+          "laadpaal",
+          "laadpunt",
+          "openbaar laden",
+          "laadprijs",
+          "laadtarief",
+          "elektrisch rijden",
+          "ndw"
+        ]
+      },
+      "platforms": [
+        "local"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.1",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6aecf65372573f07ae70a60c",
+      "type": "org",
+      "userId": null,
+      "name": "JdeB Web Solutions",
+      "verified": false
+    },
+    "communityTopicId": null
+  },
+  {
+    "id": "be.functor.mealie",
+    "rating": null,
+    "liveBuild": {
+      "id": 4,
+      "name": {
+        "en": "Mealie",
+        "nl": "Mealie"
+      },
+      "version": "0.3.0",
+      "readme": {
+        "en": "See today's menu at a glance and keep your meal plan in sync with your smart home. Show what is planned for breakfast, lunch and dinner on your dashboard, and let your flows plan meals.\n\nYour server is reached directly over your network, so Homey and the server must be able to reach each other. Create an API token in your profile to connect.\n",
+        "nl": "Zie in één oogopslag wat er vandaag op het menu staat en houd je maaltijdplanning en boodschappenlijstje in sync met je slimme woning. Toon op je dashboard wat er gepland is voor ontbijt, lunch en avondeten, en laat je flows maaltijden plannen of je boodschappenlijstje aanvullen.\n\nJe server wordt rechtstreeks via je netwerk bereikt, dus Homey en de server moeten elkaar kunnen bereiken. Maak een API-token aan in je profiel om te verbinden.\n"
+      },
+      "description": {
+        "en": "What's for dinner? Your menu, always at hand",
+        "nl": "Wat eten we vandaag? Je menu, altijd bij de hand"
+      },
+      "category": "tools",
+      "brandColor": "#E58325",
+      "icon": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "mealplan",
+          "name": {
+            "en": "Meal plan",
+            "nl": "Maaltijdplanning"
+          },
+          "class": "other",
+          "capabilities": [
+            "meal_breakfast",
+            "meal_lunch",
+            "meal_dinner",
+            "meal_breakfast_tomorrow",
+            "meal_lunch_tomorrow",
+            "meal_dinner_tomorrow"
+          ],
+          "imageSmall": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/drivers/mealplan/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/drivers/mealplan/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "lan"
+          ],
+          "icon": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/drivers/mealplan/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": [
           {
-            "name": "Sunek0 and the ha-deepal-alternative contributors"
+            "id": "todays_meal_changed",
+            "title": {
+              "en": "Today's meal changed",
+              "nl": "Het menu van vandaag is gewijzigd"
+            },
+            "titleFormatted": {
+              "en": "Today's [[meal]] changed",
+              "nl": "Het menu voor [[meal]] vandaag is gewijzigd"
+            },
+            "args": [
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "tokens": [
+              {
+                "name": "name",
+                "type": "string",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "example": {
+                  "en": "Lasagna",
+                  "nl": "Lasagne"
+                }
+              },
+              {
+                "name": "prep_time",
+                "type": "number",
+                "title": {
+                  "en": "Prep time (minutes)",
+                  "nl": "Voorbereidingstijd (minuten)"
+                },
+                "example": 30
+              },
+              {
+                "name": "cook_time",
+                "type": "number",
+                "title": {
+                  "en": "Cooking time (minutes)",
+                  "nl": "Kooktijd (minuten)"
+                },
+                "example": 30
+              },
+              {
+                "name": "total_time",
+                "type": "number",
+                "title": {
+                  "en": "Total time (minutes)",
+                  "nl": "Totale tijd (minuten)"
+                },
+                "example": 30
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
           }
         ],
-        "translators": []
+        "conditions": [
+          {
+            "id": "meal_planned_today",
+            "title": {
+              "en": "A meal is planned today",
+              "nl": "Er is een maaltijd gepland vandaag"
+            },
+            "titleFormatted": {
+              "en": "[[meal]] !{{is|isn't}} planned today",
+              "nl": "[[meal]] !{{is|is niet}} gepland voor vandaag"
+            },
+            "args": [
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "meal_planned_tomorrow",
+            "title": {
+              "en": "A meal is planned tomorrow",
+              "nl": "Er is een maaltijd gepland morgen"
+            },
+            "titleFormatted": {
+              "en": "[[meal]] !{{is|isn't}} planned tomorrow",
+              "nl": "[[meal]] !{{is|is niet}} gepland voor morgen"
+            },
+            "args": [
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "meal_takes_time",
+            "title": {
+              "en": "A meal takes longer or shorter than",
+              "nl": "Een maaltijd duurt langer of korter dan"
+            },
+            "titleFormatted": {
+              "en": "[[day]] [[meal]] takes [[comparison]] [[minutes]] minutes in total",
+              "nl": "[[meal]] [[day]] duurt [[comparison]] [[minutes]] minuten in totaal"
+            },
+            "hint": {
+              "en": "Uses the total time of the planned recipe. False when nothing is planned or the recipe has no time.",
+              "nl": "Gebruikt de totale tijd van het geplande recept. Onwaar als er niets gepland is of het recept geen tijd heeft."
+            },
+            "args": [
+              {
+                "name": "day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Day",
+                  "nl": "Dag"
+                },
+                "values": [
+                  {
+                    "id": "today",
+                    "label": {
+                      "en": "Today's",
+                      "nl": "vandaag"
+                    }
+                  },
+                  {
+                    "id": "tomorrow",
+                    "label": {
+                      "en": "Tomorrow's",
+                      "nl": "morgen"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "comparison",
+                "type": "dropdown",
+                "title": {
+                  "en": "Comparison",
+                  "nl": "Vergelijking"
+                },
+                "values": [
+                  {
+                    "id": "more",
+                    "label": {
+                      "en": "more than",
+                      "nl": "langer dan"
+                    }
+                  },
+                  {
+                    "id": "less",
+                    "label": {
+                      "en": "less than",
+                      "nl": "korter dan"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "minutes",
+                "type": "number",
+                "title": {
+                  "en": "Minutes",
+                  "nl": "Minuten"
+                },
+                "min": 0,
+                "step": 5,
+                "placeholder": {
+                  "en": "45",
+                  "nl": "45"
+                }
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          }
+        ],
+        "actions": [
+          {
+            "id": "add_random_recipe_to_meal_plan",
+            "title": {
+              "en": "Add a random recipe to the meal plan",
+              "nl": "Voeg een willekeurig recept toe aan de maaltijdplanning"
+            },
+            "titleFormatted": {
+              "en": "Plan a random [[meal]] [[day]]",
+              "nl": "Plan een willekeurig [[meal]] [[day]]"
+            },
+            "hint": {
+              "en": "Mealie picks the recipe, following the rules of your meal plan.",
+              "nl": "Mealie kiest het recept volgens de regels van je maaltijdplanning."
+            },
+            "args": [
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  },
+                  {
+                    "id": "side",
+                    "label": {
+                      "en": "Side dish",
+                      "nl": "Bijgerecht"
+                    }
+                  },
+                  {
+                    "id": "snack",
+                    "label": {
+                      "en": "Snack",
+                      "nl": "Snack"
+                    }
+                  },
+                  {
+                    "id": "drink",
+                    "label": {
+                      "en": "Drink",
+                      "nl": "Drankje"
+                    }
+                  },
+                  {
+                    "id": "dessert",
+                    "label": {
+                      "en": "Dessert",
+                      "nl": "Dessert"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Day",
+                  "nl": "Dag"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Today",
+                      "nl": "Vandaag"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Tomorrow",
+                      "nl": "Morgen"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "In 2 days",
+                      "nl": "Over 2 dagen"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "In 3 days",
+                      "nl": "Over 3 dagen"
+                    }
+                  },
+                  {
+                    "id": "7",
+                    "label": {
+                      "en": "In a week",
+                      "nl": "Over een week"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "add_recipe_to_meal_plan",
+            "title": {
+              "en": "Add a recipe to the meal plan",
+              "nl": "Voeg een recept toe aan de maaltijdplanning"
+            },
+            "titleFormatted": {
+              "en": "Plan [[recipe]] as [[meal]] [[day]]",
+              "nl": "Plan [[recipe]] als [[meal]] [[day]]"
+            },
+            "args": [
+              {
+                "name": "recipe",
+                "type": "autocomplete",
+                "title": {
+                  "en": "Recipe",
+                  "nl": "Recept"
+                },
+                "placeholder": {
+                  "en": "Search a recipe",
+                  "nl": "Zoek een recept"
+                }
+              },
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  },
+                  {
+                    "id": "side",
+                    "label": {
+                      "en": "Side dish",
+                      "nl": "Bijgerecht"
+                    }
+                  },
+                  {
+                    "id": "snack",
+                    "label": {
+                      "en": "Snack",
+                      "nl": "Snack"
+                    }
+                  },
+                  {
+                    "id": "drink",
+                    "label": {
+                      "en": "Drink",
+                      "nl": "Drankje"
+                    }
+                  },
+                  {
+                    "id": "dessert",
+                    "label": {
+                      "en": "Dessert",
+                      "nl": "Dessert"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Day",
+                  "nl": "Dag"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Today",
+                      "nl": "Vandaag"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Tomorrow",
+                      "nl": "Morgen"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "In 2 days",
+                      "nl": "Over 2 dagen"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "In 3 days",
+                      "nl": "Over 3 dagen"
+                    }
+                  },
+                  {
+                    "id": "7",
+                    "label": {
+                      "en": "In a week",
+                      "nl": "Over een week"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "add_text_to_meal_plan",
+            "title": {
+              "en": "Add a note to the meal plan",
+              "nl": "Voeg een notitie toe aan de maaltijdplanning"
+            },
+            "titleFormatted": {
+              "en": "Plan [[text]] as [[meal]] [[day]]",
+              "nl": "Plan [[text]] als [[meal]] [[day]]"
+            },
+            "args": [
+              {
+                "name": "text",
+                "type": "text",
+                "title": {
+                  "en": "Text",
+                  "nl": "Tekst"
+                },
+                "placeholder": {
+                  "en": "Takeaway",
+                  "nl": "Afhaalmaaltijd"
+                }
+              },
+              {
+                "name": "meal",
+                "type": "dropdown",
+                "title": {
+                  "en": "Meal",
+                  "nl": "Maaltijd"
+                },
+                "values": [
+                  {
+                    "id": "breakfast",
+                    "label": {
+                      "en": "Breakfast",
+                      "nl": "Ontbijt"
+                    }
+                  },
+                  {
+                    "id": "lunch",
+                    "label": {
+                      "en": "Lunch",
+                      "nl": "Lunch"
+                    }
+                  },
+                  {
+                    "id": "dinner",
+                    "label": {
+                      "en": "Dinner",
+                      "nl": "Avondeten"
+                    }
+                  },
+                  {
+                    "id": "side",
+                    "label": {
+                      "en": "Side dish",
+                      "nl": "Bijgerecht"
+                    }
+                  },
+                  {
+                    "id": "snack",
+                    "label": {
+                      "en": "Snack",
+                      "nl": "Snack"
+                    }
+                  },
+                  {
+                    "id": "drink",
+                    "label": {
+                      "en": "Drink",
+                      "nl": "Drankje"
+                    }
+                  },
+                  {
+                    "id": "dessert",
+                    "label": {
+                      "en": "Dessert",
+                      "nl": "Dessert"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "day",
+                "type": "dropdown",
+                "title": {
+                  "en": "Day",
+                  "nl": "Dag"
+                },
+                "values": [
+                  {
+                    "id": "0",
+                    "label": {
+                      "en": "Today",
+                      "nl": "Vandaag"
+                    }
+                  },
+                  {
+                    "id": "1",
+                    "label": {
+                      "en": "Tomorrow",
+                      "nl": "Morgen"
+                    }
+                  },
+                  {
+                    "id": "2",
+                    "label": {
+                      "en": "In 2 days",
+                      "nl": "Over 2 dagen"
+                    }
+                  },
+                  {
+                    "id": "3",
+                    "label": {
+                      "en": "In 3 days",
+                      "nl": "Over 3 dagen"
+                    }
+                  },
+                  {
+                    "id": "7",
+                    "label": {
+                      "en": "In a week",
+                      "nl": "Over een week"
+                    }
+                  }
+                ]
+              },
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          },
+          {
+            "id": "sync_now",
+            "title": {
+              "en": "Refresh from Mealie",
+              "nl": "Vernieuwen vanuit Mealie"
+            },
+            "titleFormatted": {
+              "en": "Refresh from Mealie",
+              "nl": "Vernieuwen vanuit Mealie"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=mealplan"
+              }
+            ],
+            "platforms": [
+              "local"
+            ]
+          }
+        ]
       },
-      "contributing": null,
+      "widgets": {
+        "todays_meals": {
+          "name": {
+            "en": "Today's meals",
+            "nl": "Menu van vandaag"
+          },
+          "height": 200,
+          "settings": [
+            {
+              "id": "device",
+              "type": "autocomplete",
+              "title": {
+                "en": "Meal plan (optional when you have one)",
+                "nl": "Maaltijdplanning (optioneel als je er één hebt)"
+              }
+            },
+            {
+              "id": "show_images",
+              "type": "checkbox",
+              "value": true,
+              "title": {
+                "en": "Show recipe pictures",
+                "nl": "Toon receptafbeeldingen"
+              }
+            }
+          ],
+          "api": {
+            "getState": {
+              "method": "GET",
+              "path": "/state"
+            }
+          },
+          "id": "todays_meals",
+          "previewDark": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/widgets/todays_meals/preview-dark.png",
+          "previewLight": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/widgets/todays_meals/preview-light.png"
+        }
+      },
+      "screensavers": [],
+      "homeyCommunityTopicId": 162097,
+      "state": "live",
+      "stateChangedAt": "2026-11-26T16:15:24.931Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "https://community.homey.app/t/162097",
+      "source": null,
+      "contributors": null,
+      "contributing": {
+        "donate": {
+          "paypal": {
+            "username": "functorsolutions"
+          }
+        }
+      },
       "permissions": [],
       "apiScopes": null,
       "changelog": {
-        "en": "New driver icon"
+        "en": "Tomorrow's meals as capabilities, prep/cooking/total time tokens on the meal changed trigger, and new conditions: a meal is planned tomorrow, and a meal takes more or less than a number of minutes.",
+        "nl": "Het menu van morgen als capabilities, tokens voor voorbereidings-, kook- en totale tijd bij de menu-gewijzigd-trigger, en nieuwe voorwaarden: er is een maaltijd gepland voor morgen, en een maaltijd duurt langer of korter dan een aantal minuten."
       },
-      "compatibility": ">=12.4.5",
+      "compatibility": ">=12.1.0",
       "tags": null,
       "platforms": [
         "local"
@@ -628,634 +2461,18 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.2.1",
+    "liveVersion": "0.3.0",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "6adcbb2f47d7399db6cc968d",
+      "id": "66ffa09c645b24bd5bc1b47f",
       "type": "user",
-      "userId": "6405b74a6abe380b862ecb9b",
-      "name": "Trond-Daniel Kvalvik",
+      "userId": "66ab1174ab6ab8914d6e08cc",
+      "name": "Kenny Moens",
       "verified": false
     },
-    "communityTopicId": null
-  },
-  {
-    "id": "org.barelysufficient.auk",
-    "rating": null,
-    "liveBuild": {
-      "id": 5,
-      "name": {
-        "en": "Auk",
-        "no": "Auk"
-      },
-      "version": "0.1.0",
-      "readme": {
-        "en": "Control your Auk indoor garden from Homey. The app talks to the garden directly over Bluetooth, so it needs an Auk with Bluetooth, such as Auk Mini 2.\n\nTurn the light on or off, dim it, or let it follow the growth mode. Switch growth mode between Herbs & salads, Fruits & veggies and Slow, and choose what time the light comes on each day.\n\nYou can control the garden from the device in Homey or from Flows.\n",
-        "no": "Styr din Auk-hage via Homey. Appen snakker direkte med enheten over Bluetooth, så du trenger en Auk med Bluetooth, som Auk Mini 2.\n\nVia appen kan du slå lyset på eller av, dim lyset, eller la det følge en av vekstmodusene. Bytt vekstmodus mellom Urter og salat, Frukt og grønt og Sakte, og velg når lyset skal slås på hver dag.\n\nDu kan styre Auk-enheten enten direkte via appen eller via flows.\n"
-      },
-      "description": {
-        "en": "Follow and control your Auk indoor garden",
-        "no": "Følg med på og styr Auk-hagen din"
-      },
-      "category": "appliances",
-      "brandColor": "#075D39",
-      "icon": "https://apps.homeycdn.net/app/org.barelysufficient.auk/5/69eca759-3e9d-4f65-bb8e-c45d4c2c6e9b/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/org.barelysufficient.auk/5/69eca759-3e9d-4f65-bb8e-c45d4c2c6e9b/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/org.barelysufficient.auk/5/69eca759-3e9d-4f65-bb8e-c45d4c2c6e9b/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "mini2",
-          "name": {
-            "en": "Auk Mini 2",
-            "no": "Auk Mini 2"
-          },
-          "class": "light",
-          "capabilities": [
-            "onoff",
-            "auk_light_mode",
-            "auk_growth_mode",
-            "auk_light_on_time",
-            "auk_next_light_off"
-          ],
-          "capabilitiesOptions": {
-            "onoff": {
-              "title": {
-                "en": "Light",
-                "no": "Lys"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/org.barelysufficient.auk/5/69eca759-3e9d-4f65-bb8e-c45d4c2c6e9b/drivers/mini2/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/org.barelysufficient.auk/5/69eca759-3e9d-4f65-bb8e-c45d4c2c6e9b/drivers/mini2/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "ble"
-          ],
-          "icon": "https://apps.homeycdn.net/app/org.barelysufficient.auk/5/69eca759-3e9d-4f65-bb8e-c45d4c2c6e9b/drivers/mini2/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": [
-          {
-            "id": "light_mode_changed",
-            "title": {
-              "en": "Light mode changed",
-              "no": "Lysmodus endret seg"
-            },
-            "hint": {
-              "en": "Fires when the light mode changes, whether from a button press, the Auk app, Homey or the daily reset to the schedule.",
-              "no": "Utløses når lysmodus endrer seg, enten fra knappen, Auk-appen, Homey eller den daglige tilbakestillingen til tidsplanen."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "mode",
-                "type": "string",
-                "title": {
-                  "en": "Light mode",
-                  "no": "Lysmodus"
-                },
-                "example": {
-                  "en": "On",
-                  "no": "På"
-                }
-              },
-              {
-                "name": "previous_mode",
-                "type": "string",
-                "title": {
-                  "en": "Previous light mode",
-                  "no": "Forrige lysmodus"
-                },
-                "example": {
-                  "en": "Schedule",
-                  "no": "Tidsplan"
-                }
-              }
-            ]
-          },
-          {
-            "id": "light_mode_changed_to",
-            "title": {
-              "en": "Light mode changed to …",
-              "no": "Lysmodus endret seg til …"
-            },
-            "titleFormatted": {
-              "en": "Light mode changed to [[mode]]",
-              "no": "Lysmodus endret seg til [[mode]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "dropdown",
-                "name": "mode",
-                "values": [
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Schedule",
-                      "no": "Tidsplan"
-                    }
-                  },
-                  {
-                    "id": "full",
-                    "label": {
-                      "en": "On",
-                      "no": "På"
-                    }
-                  },
-                  {
-                    "id": "dim",
-                    "label": {
-                      "en": "Dimmed",
-                      "no": "Dempet"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off",
-                      "no": "Av"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "previous_mode",
-                "type": "string",
-                "title": {
-                  "en": "Previous light mode",
-                  "no": "Forrige lysmodus"
-                },
-                "example": {
-                  "en": "Schedule",
-                  "no": "Tidsplan"
-                }
-              }
-            ]
-          },
-          {
-            "id": "growth_mode_changed",
-            "title": {
-              "en": "Growth mode changed",
-              "no": "Vekstmodus endret seg"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "mode",
-                "type": "string",
-                "title": {
-                  "en": "Growth mode",
-                  "no": "Vekstmodus"
-                },
-                "example": {
-                  "en": "On",
-                  "no": "På"
-                }
-              },
-              {
-                "name": "previous_mode",
-                "type": "string",
-                "title": {
-                  "en": "Previous growth mode",
-                  "no": "Forrige vekstmodus"
-                },
-                "example": {
-                  "en": "Schedule",
-                  "no": "Tidsplan"
-                }
-              }
-            ]
-          },
-          {
-            "id": "growth_mode_changed_to",
-            "title": {
-              "en": "Growth mode changed to …",
-              "no": "Vekstmodus endret seg til …"
-            },
-            "titleFormatted": {
-              "en": "Growth mode changed to [[mode]]",
-              "no": "Vekstmodus endret seg til [[mode]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "dropdown",
-                "name": "mode",
-                "values": [
-                  {
-                    "id": "herbs",
-                    "label": {
-                      "en": "Herbs & salads",
-                      "no": "Urter og salat"
-                    }
-                  },
-                  {
-                    "id": "fruit",
-                    "label": {
-                      "en": "Fruits & veggies",
-                      "no": "Frukt og grønt"
-                    }
-                  },
-                  {
-                    "id": "slow",
-                    "label": {
-                      "en": "Slow",
-                      "no": "Sakte"
-                    }
-                  }
-                ]
-              }
-            ],
-            "tokens": [
-              {
-                "name": "previous_mode",
-                "type": "string",
-                "title": {
-                  "en": "Previous growth mode",
-                  "no": "Forrige vekstmodus"
-                },
-                "example": {
-                  "en": "Schedule",
-                  "no": "Tidsplan"
-                }
-              }
-            ]
-          },
-          {
-            "id": "light_on_time_changed",
-            "title": {
-              "en": "Lights-on time changed",
-              "no": "Lys på-tidspunkt endret seg"
-            },
-            "hint": {
-              "en": "Fires when the daily lights-on time changes, for example when the light button on the garden restarts the cycle.",
-              "no": "Utløses når den daglige lys på-tidspunkten endrer seg, for eksempel når lysknappen på hagen starter syklusen på nytt."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "time",
-                "type": "string",
-                "title": {
-                  "en": "Lights-on time",
-                  "no": "Lys på-tidspunkt"
-                },
-                "example": "05:30"
-              },
-              {
-                "name": "previous_time",
-                "type": "string",
-                "title": {
-                  "en": "Previous lights-on time",
-                  "no": "Forrige lys på-tidspunkt"
-                },
-                "example": "07:00"
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "light_mode_is",
-            "title": {
-              "en": "Light mode is …",
-              "no": "Lysmodus er …"
-            },
-            "titleFormatted": {
-              "en": "Light mode !{{is|is not}} [[mode]]",
-              "no": "Lysmodus !{{er|er ikke}} [[mode]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "dropdown",
-                "name": "mode",
-                "values": [
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Schedule",
-                      "no": "Tidsplan"
-                    }
-                  },
-                  {
-                    "id": "full",
-                    "label": {
-                      "en": "On",
-                      "no": "På"
-                    }
-                  },
-                  {
-                    "id": "dim",
-                    "label": {
-                      "en": "Dimmed",
-                      "no": "Dempet"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off",
-                      "no": "Av"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "growth_mode_is",
-            "title": {
-              "en": "Growth mode is …",
-              "no": "Vekstmodus er …"
-            },
-            "titleFormatted": {
-              "en": "Growth mode !{{is|is not}} [[mode]]",
-              "no": "Vekstmodus !{{er|er ikke}} [[mode]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "dropdown",
-                "name": "mode",
-                "values": [
-                  {
-                    "id": "herbs",
-                    "label": {
-                      "en": "Herbs & salads",
-                      "no": "Urter og salat"
-                    }
-                  },
-                  {
-                    "id": "fruit",
-                    "label": {
-                      "en": "Fruits & veggies",
-                      "no": "Frukt og grønt"
-                    }
-                  },
-                  {
-                    "id": "slow",
-                    "label": {
-                      "en": "Slow",
-                      "no": "Sakte"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "light_on_time_is",
-            "title": {
-              "en": "Lights-on time is …",
-              "no": "Lys på-tidspunkt er …"
-            },
-            "titleFormatted": {
-              "en": "Lights-on time !{{is|is not}} [[time]]",
-              "no": "Lys på-tidspunkt !{{er|er ikke}} [[time]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "time",
-                "name": "time"
-              }
-            ]
-          }
-        ],
-        "actions": [
-          {
-            "id": "set_light_mode",
-            "title": {
-              "en": "Set light mode",
-              "no": "Sett lysmodus"
-            },
-            "titleFormatted": {
-              "en": "Set light mode to [[mode]]",
-              "no": "Sett lysmodus til [[mode]]"
-            },
-            "hint": {
-              "en": "On, dimmed and off last until the device returns to its schedule at the next daily reset.",
-              "no": "På, dempet og av varer til enheten går tilbake til tidsplanen ved neste daglige tilbakestilling."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "dropdown",
-                "name": "mode",
-                "values": [
-                  {
-                    "id": "auto",
-                    "label": {
-                      "en": "Schedule",
-                      "no": "Tidsplan"
-                    }
-                  },
-                  {
-                    "id": "full",
-                    "label": {
-                      "en": "On",
-                      "no": "På"
-                    }
-                  },
-                  {
-                    "id": "dim",
-                    "label": {
-                      "en": "Dimmed",
-                      "no": "Dempet"
-                    }
-                  },
-                  {
-                    "id": "off",
-                    "label": {
-                      "en": "Off",
-                      "no": "Av"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_growth_mode",
-            "title": {
-              "en": "Set growth mode",
-              "no": "Sett vekstmodus"
-            },
-            "titleFormatted": {
-              "en": "Set growth mode to [[mode]]",
-              "no": "Sett vekstmodus til [[mode]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "dropdown",
-                "name": "mode",
-                "values": [
-                  {
-                    "id": "herbs",
-                    "label": {
-                      "en": "Herbs & salads",
-                      "no": "Urter og salat"
-                    }
-                  },
-                  {
-                    "id": "fruit",
-                    "label": {
-                      "en": "Fruits & veggies",
-                      "no": "Frukt og grønt"
-                    }
-                  },
-                  {
-                    "id": "slow",
-                    "label": {
-                      "en": "Slow",
-                      "no": "Sakte"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "set_light_on_time",
-            "title": {
-              "en": "Set lights-on time",
-              "no": "Sett lys på-tidspunkt"
-            },
-            "titleFormatted": {
-              "en": "Turn the light on daily at [[time]]",
-              "no": "Slå på lyset daglig kl. [[time]]"
-            },
-            "hint": {
-              "en": "The light stays on for 16 hours from this time each day, or 20 hours in Fruits & veggies.",
-              "no": "Lyset er på i 16 timer fra dette tidspunktet hver dag, eller 20 timer i Frukt og grønt."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=mini2"
-              },
-              {
-                "type": "time",
-                "name": "time"
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": null,
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-11-26T12:40:55.535Z",
-      "bugs": null,
-      "homepage": null,
-      "support": null,
-      "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [
-        "homey:wireless:ble"
-      ],
-      "apiScopes": null,
-      "changelog": {
-        "en": "First version. Pair an Auk Mini 2 over Bluetooth, see and change its light and growth modes, and use them in Flows.",
-        "no": "Første versjon. Koble til en Auk Mini 2 over Bluetooth, se og endre lys- og vekstmodus, og bruk dem i Flows."
-      },
-      "compatibility": ">=12.3.0",
-      "tags": {
-        "en": [
-          "auk",
-          "auk mini 2",
-          "indoor garden",
-          "grow light",
-          "bluetooth"
-        ],
-        "no": [
-          "auk",
-          "auk mini 2",
-          "innendørshage",
-          "vekstlys",
-          "bluetooth"
-        ]
-      },
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "0.1.0",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "693170e166abe425474ef471",
-      "type": "user",
-      "userId": "66cccba95d72eb42f920fc53",
-      "name": "Ole Markus With",
-      "verified": false
-    },
-    "communityTopicId": null
+    "communityTopicId": 162097
   }
 ]
