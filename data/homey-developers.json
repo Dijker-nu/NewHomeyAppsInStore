@@ -738,6 +738,12 @@
     "forumUsername": null
   },
   {
+    "developerId": "6af31cb40f89e422d5f237e6",
+    "developerName": "Christian Klauser",
+    "forumUserID": null,
+    "forumUsername": null
+  },
+  {
     "developerId": "6a6f50ee32b0f6166a4eb3ad",
     "developerName": "Christian Krone",
     "forumUserID": null,
@@ -5440,6 +5446,12 @@
     "developerName": "Trond Bildøy",
     "forumUserID": 19026,
     "forumUsername": "TroBil"
+  },
+  {
+    "developerId": "6adcbb2f47d7399db6cc968d",
+    "developerName": "Trond-Daniel Kvalvik",
+    "forumUserID": null,
+    "forumUsername": null
   },
   {
     "developerId": "65b2c359e0e92b510cb923b0",

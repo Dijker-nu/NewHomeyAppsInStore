@@ -1599,10 +1599,10 @@
     "name": "Better Logic Library",
     "developerName": "Arie J. Godschalk",
     "developerId": "602458d0ea27a57b4456e559",
-    "version": "4.2.3",
+    "version": "4.4.1",
     "sourceRepository": "https://github.com/Qluster-IT/nl.qluster-it.BetterLogicLibrary/",
     "publishedAt": "2019-11-12T13:59:37.463Z",
-    "updatedAt": "2026-10-27T09:09:00.884Z",
+    "updatedAt": "2026-11-26T12:49:58.544Z",
     "communityTopicId": 71876
   },
   {
@@ -5207,10 +5207,10 @@
     "name": "School holidays",
     "developerName": "Elmar Kouwenhoven",
     "developerId": "606c2d7950eb3175ac3d0249",
-    "version": "2.4.1",
+    "version": "2.5.0",
     "sourceRepository": "https://github.com/elmarkou/homey.schoolvakanties.nederland",
     "publishedAt": "2021-04-06T09:54:18.251Z",
-    "updatedAt": "2026-05-01T15:34:27.088Z",
+    "updatedAt": "2026-11-26T12:49:58.545Z",
     "communityTopicId": 127566
   },
   {
@@ -5944,10 +5944,10 @@
     "name": "Balboa",
     "developerName": "Tapio Heiskanen",
     "developerId": "6381b62d2c8e04f69d3bbc27",
-    "version": "2.5.1",
+    "version": "2.5.2",
     "sourceRepository": "https://github.com/oh2th-homey/com.balboa",
     "publishedAt": "2022-01-05T13:19:35.420Z",
-    "updatedAt": "2026-06-30T06:07:58.779Z",
+    "updatedAt": "2026-11-26T12:49:58.545Z",
     "communityTopicId": 57870
   },
   {
@@ -7176,10 +7176,10 @@
     "name": "Mitsubishi (WF-RAC)",
     "developerName": "Edwin van de Pol",
     "developerId": "5dcabc2c1c90c866f936638b",
-    "version": "1.5.2",
+    "version": "1.5.3",
     "sourceRepository": "",
     "publishedAt": "2023-03-08T21:26:35.633Z",
-    "updatedAt": "2026-10-29T10:09:55.957Z",
+    "updatedAt": "2026-11-26T12:49:58.545Z",
     "communityTopicId": 77116
   },
   {
@@ -8188,10 +8188,10 @@
     "name": "Polestar",
     "developerName": "Vincent Boer",
     "developerId": "5dcabcc71c90c866f9366a3f",
-    "version": "3.4.0",
+    "version": "3.5.0",
     "sourceRepository": "https://github.com/kaohlive/Polestar",
     "publishedAt": "2023-11-04T14:28:27.602Z",
-    "updatedAt": "2026-08-13T22:35:31.283Z",
+    "updatedAt": "2026-11-26T12:49:58.545Z",
     "communityTopicId": 95083
   },
   {
@@ -10850,10 +10850,10 @@
     "name": "Growatt",
     "developerName": "RM de Gruijter",
     "developerId": "67f4effe00dfe95f8d67b335",
-    "version": "3.2.0",
+    "version": "3.2.1",
     "sourceRepository": "",
     "publishedAt": "2025-04-08T09:44:30.050Z",
-    "updatedAt": "2026-11-18T11:55:18.098Z",
+    "updatedAt": "2026-11-26T12:49:58.546Z",
     "communityTopicId": 134233
   },
   {
@@ -12643,10 +12643,10 @@
     "name": "Rohlik.cz",
     "developerName": "Jiri Pech",
     "developerId": "66c3a07fd17e7883073ccec0",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "sourceRepository": "https://github.com/PechJiri/com.rohlik.app",
     "publishedAt": "2025-12-20T15:19:25.080Z",
-    "updatedAt": "2026-01-13T08:31:24.198Z",
+    "updatedAt": "2026-11-26T12:49:58.546Z",
     "communityTopicId": 147440
   },
   {
@@ -13138,10 +13138,10 @@
     "name": "Indevolt Home Battery",
     "developerName": "Rob Ceelen",
     "developerId": "697be00a1aed127334de870e",
-    "version": "1.8.2",
+    "version": "2.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-01-29T22:32:42.206Z",
-    "updatedAt": "2026-10-15T08:25:54.832Z",
+    "updatedAt": "2026-11-26T12:49:58.546Z",
     "communityTopicId": 148405
   },
   {
@@ -13303,10 +13303,10 @@
     "name": "Flexit GO",
     "developerName": "Ole Markus With",
     "developerId": "693170e166abe425474ef471",
-    "version": "1.14.1",
+    "version": "1.14.2",
     "sourceRepository": "https://github.com/olemarkus/com.barelysufficient.flexit",
     "publishedAt": "2026-02-07T06:11:27.584Z",
-    "updatedAt": "2026-11-10T11:23:16.739Z",
+    "updatedAt": "2026-11-26T12:49:58.546Z",
     "communityTopicId": 151048
   },
   {
@@ -13402,10 +13402,10 @@
     "name": "Fronius GEN24 (Local)",
     "developerName": "Pascal Nohl",
     "developerId": "69898b6b608b9fa107cc795c",
-    "version": "1.3.0",
+    "version": "1.4.2",
     "sourceRepository": "",
     "publishedAt": "2026-02-09T12:01:38.613Z",
-    "updatedAt": "2026-07-04T14:44:28.790Z",
+    "updatedAt": "2026-11-26T12:49:58.546Z",
     "communityTopicId": 151385
   },
   {
@@ -14755,10 +14755,10 @@
     "name": "Mail Hook",
     "developerName": "Elmar Kouwenhoven",
     "developerId": "606c2d7950eb3175ac3d0249",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/elmarkou/homey.mail.hook",
     "publishedAt": "2026-04-09T13:47:06.427Z",
-    "updatedAt": "2026-11-19T11:51:46.155Z",
+    "updatedAt": "2026-11-26T12:49:58.546Z",
     "communityTopicId": 153606
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.3.13",
+    "version": "6.3.15",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-24T13:55:55.248Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -16251,10 +16251,10 @@
     "name": "Eight Sleep",
     "developerName": "Justin Zarb",
     "developerId": "6a35d775cafd650bab526624",
-    "version": "1.0.20",
+    "version": "1.0.22",
     "sourceRepository": "https://github.com/zarbjustin/com.eightsleep",
     "publishedAt": "2026-06-20T00:24:38.411Z",
-    "updatedAt": "2026-10-07T10:23:44.583Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": 156883
   },
   {
@@ -18264,10 +18264,10 @@
     "name": "AlphaESS",
     "developerName": "AlphaESS",
     "developerId": "6a9104f3003391430735937e",
-    "version": "0.7.3",
+    "version": "0.8.1",
     "sourceRepository": "",
     "publishedAt": "2026-09-16T19:10:09.507Z",
-    "updatedAt": "2026-10-27T09:09:00.888Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -18880,10 +18880,10 @@
     "name": "HUUM UKU Sauna",
     "developerName": "Richard Dubs",
     "developerId": "6a63505128cddd02f8f07066",
-    "version": "0.9.4",
+    "version": "0.9.5",
     "sourceRepository": "https://github.com/RickD-CH/com.rickd.huum",
     "publishedAt": "2026-10-05T10:37:08.582Z",
-    "updatedAt": "2026-11-03T11:00:53.912Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": 159173
   },
   {
@@ -19573,10 +19573,10 @@
     "name": "Medication Reminder",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.6.2",
+    "version": "1.6.4",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-11-18T11:55:18.099Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": 161097
   },
   {
@@ -19584,10 +19584,10 @@
     "name": "BYD Vehicle",
     "developerName": "Tom Severa",
     "developerId": "6ad781a0bdc8421d78ca9018",
-    "version": "1.1.6",
+    "version": "1.1.9",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-10-22T16:12:11.825Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": 161114
   },
   {
@@ -19595,10 +19595,10 @@
     "name": "Sensible",
     "developerName": "Thomas Jahnsen",
     "developerId": "69c10924699c29709c9eecab",
-    "version": "1.23.0",
+    "version": "1.29.8",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-11-05T11:09:18.811Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": 160962
   },
   {
@@ -19694,10 +19694,10 @@
     "name": "REMKO Smart-Control Touch",
     "developerName": "Pieter Groot",
     "developerId": "6adddc0e47d7399db6cd1852",
-    "version": "0.1.3",
+    "version": "0.1.8",
     "sourceRepository": "https://github.com/ZenoWebdev/homey-remko",
     "publishedAt": "2026-10-26T17:47:13.466Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -19826,10 +19826,10 @@
     "name": "Happy Sense",
     "developerName": "Fredrik Eidlert",
     "developerId": "6332db19424625865593b51f",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "sourceRepository": "",
     "publishedAt": "2026-10-30T17:22:33.983Z",
-    "updatedAt": "2026-10-30T17:22:33.983Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -19925,10 +19925,10 @@
     "name": "Hoymiles HiOne",
     "developerName": "Reinier SecEnablers",
     "developerId": "69a74690af832c1e4629b6c0",
-    "version": "1.1.10",
+    "version": "1.1.12",
     "sourceRepository": "https://github.com/ItsRaYnor/homey-app-hoymiles-hione",
     "publishedAt": "2026-11-04T18:58:24.866Z",
-    "updatedAt": "2026-11-04T18:58:24.866Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -20057,10 +20057,10 @@
     "name": "Homematic HCU",
     "developerName": "Mario Kempter",
     "developerId": "6910d5e0ae1d27bf09a08cf9",
-    "version": "0.9.1",
+    "version": "1.1.3",
     "sourceRepository": "",
     "publishedAt": "2026-11-09T23:53:44.615Z",
-    "updatedAt": "2026-11-17T12:02:36.343Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": 162110
   },
   {
@@ -20156,10 +20156,10 @@
     "name": "Zenisun",
     "developerName": "Roy PEDRINIS",
     "developerId": "6adbcbe447d7399db6cc41b2",
-    "version": "1.1.6",
+    "version": "1.1.8",
     "sourceRepository": "",
     "publishedAt": "2026-11-12T19:25:21.109Z",
-    "updatedAt": "2026-11-16T11:40:55.316Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -20189,10 +20189,10 @@
     "name": "Christmas Countdown",
     "developerName": "Simon Salvin",
     "developerId": "6acd2e5bbdc8421d78c61bff",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-11-13T18:52:34.721Z",
-    "updatedAt": "2026-11-13T18:52:34.721Z",
+    "updatedAt": "2026-11-26T12:49:58.547Z",
     "communityTopicId": null
   },
   {
@@ -20266,10 +20266,10 @@
     "name": "PoolWise",
     "developerName": "Roy PEDRINIS",
     "developerId": "6adbcbe447d7399db6cc41b2",
-    "version": "1.0.1",
+    "version": "1.3.1",
     "sourceRepository": "",
     "publishedAt": "2026-11-16T19:56:10.997Z",
-    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-26T12:49:58.548Z",
     "communityTopicId": 162164
   },
   {
@@ -20277,10 +20277,10 @@
     "name": "AirWise",
     "developerName": "Roy PEDRINIS",
     "developerId": "6adbcbe447d7399db6cc41b2",
-    "version": "1.6.1",
+    "version": "1.11.0",
     "sourceRepository": "",
     "publishedAt": "2026-11-16T19:56:10.997Z",
-    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-26T12:49:58.548Z",
     "communityTopicId": 162170
   },
   {
@@ -20424,6 +20424,28 @@
     "sourceRepository": "",
     "publishedAt": "2026-11-25T23:50:57.910Z",
     "updatedAt": "2026-11-25T23:50:57.910Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "com.github.hrkvalvik.deepal",
+    "name": "Changan Deepal (Unofficial)",
+    "developerName": "Trond-Daniel Kvalvik",
+    "developerId": "6adcbb2f47d7399db6cc968d",
+    "version": "0.2.1",
+    "sourceRepository": "https://github.com/hrkvalvik/homey-deepal",
+    "publishedAt": "2026-11-26T12:49:17.651Z",
+    "updatedAt": "2026-11-26T12:49:17.651Z",
+    "communityTopicId": null
+  },
+  {
+    "appId": "org.barelysufficient.auk",
+    "name": "Auk",
+    "developerName": "Ole Markus With",
+    "developerId": "693170e166abe425474ef471",
+    "version": "0.1.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-26T12:49:18.677Z",
+    "updatedAt": "2026-11-26T12:49:18.677Z",
     "communityTopicId": null
   }
 ]
