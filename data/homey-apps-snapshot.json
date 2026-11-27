@@ -20491,5 +20491,16 @@
     "publishedAt": "2026-11-27T12:42:27.139Z",
     "updatedAt": "2026-11-27T12:42:27.139Z",
     "communityTopicId": null
+  },
+  {
+    "appId": "dev.charlesderidder.multikit",
+    "name": "Multikit",
+    "developerName": "Charles de Ridder",
+    "developerId": "6afe29f40e42e0aad4b0d7be",
+    "version": "1.0.0",
+    "sourceRepository": "https://github.com/charlesderidder/Multikit",
+    "publishedAt": "2026-11-27T13:15:47.803Z",
+    "updatedAt": "2026-11-27T13:15:47.803Z",
+    "communityTopicId": 70840
   }
 ]
