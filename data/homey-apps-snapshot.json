@@ -309,13 +309,13 @@
   },
   {
     "appId": "com.forest",
-    "name": "Forest",
+    "name": "Forest Group",
     "developerName": "Forest Group B.V.",
     "developerId": "5dcab9521c90c866f936400c",
-    "version": "5.0.5",
+    "version": "5.1.6",
     "sourceRepository": "",
     "publishedAt": "2019-11-12T13:53:22.252Z",
-    "updatedAt": "2026-09-08T09:51:09.782Z",
+    "updatedAt": "2026-11-27T12:43:03.151Z",
     "communityTopicId": null
   },
   {
@@ -5152,10 +5152,10 @@
     "name": "Nimly",
     "developerName": "Nimly AS",
     "developerId": "6abe720e2010b2740167bcaa",
-    "version": "3.6.0",
+    "version": "3.7.0",
     "sourceRepository": "",
     "publishedAt": "2021-03-25T12:47:11.410Z",
-    "updatedAt": "2026-10-02T09:54:22.795Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": 143578
   },
   {
@@ -7506,10 +7506,10 @@
     "name": "Smappee",
     "developerName": "Edwin van de Pol",
     "developerId": "5dcabc2c1c90c866f936638b",
-    "version": "1.3.4",
+    "version": "1.4.1",
     "sourceRepository": "",
     "publishedAt": "2023-06-04T14:12:09.944Z",
-    "updatedAt": "2025-03-31T21:50:04.000Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": 68316
   },
   {
@@ -7990,10 +7990,10 @@
     "name": "Button +",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "1.0.9",
+    "version": "1.0.18",
     "sourceRepository": "",
     "publishedAt": "2023-09-21T21:36:00.487Z",
-    "updatedAt": "2026-10-13T10:46:12.221Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": 89931
   },
   {
@@ -8738,10 +8738,10 @@
     "name": "Powerbaas",
     "developerName": "Powerbaas",
     "developerId": "6ae8f60ff2a6dec528fa573b",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "sourceRepository": "https://github.com/Powerbaas/powerbaas-homey",
     "publishedAt": "2024-01-12T14:59:15.467Z",
-    "updatedAt": "2026-11-13T11:12:41.905Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": null
   },
   {
@@ -8826,10 +8826,10 @@
     "name": "Sofar",
     "developerName": "Adrian Rockall",
     "developerId": "6582174b559f0bfcc1d7bce5",
-    "version": "1.1.61",
+    "version": "1.1.66",
     "sourceRepository": "https://github.com/AdyRock/ady.sofar",
     "publishedAt": "2024-02-02T23:47:59.267Z",
-    "updatedAt": "2026-10-30T10:12:31.888Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": 103017
   },
   {
@@ -9123,10 +9123,10 @@
     "name": "T",
     "developerName": "TP-Link Corporation Pte. Ltd.",
     "developerId": "6a8d44bb9b7803d15aef6080",
-    "version": "2.1.16",
+    "version": "2.1.18",
     "sourceRepository": "",
     "publishedAt": "2024-04-04T10:53:12.827Z",
-    "updatedAt": "2026-05-12T09:28:42.835Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": null
   },
   {
@@ -9618,10 +9618,10 @@
     "name": "TP-Link Deco",
     "developerName": "Mathias Törnblom",
     "developerId": "64e36f1530ca04c6167c9045",
-    "version": "1.4.79",
+    "version": "1.4.88",
     "sourceRepository": "https://github.com/mathiastornblom/net.tornbloms.deco",
     "publishedAt": "2024-08-26T23:36:35.364Z",
-    "updatedAt": "2026-10-13T10:46:12.221Z",
+    "updatedAt": "2026-11-27T12:43:03.152Z",
     "communityTopicId": 115521
   },
   {
@@ -10014,10 +10014,10 @@
     "name": "Viessmann",
     "developerName": "Kenny Moens",
     "developerId": "66ffa09c645b24bd5bc1b47f",
-    "version": "2.2.0",
+    "version": "2.4.0",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/viessmann",
     "publishedAt": "2024-10-22T06:14:41.957Z",
-    "updatedAt": "2026-11-17T12:02:36.342Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 116744
   },
   {
@@ -10410,10 +10410,10 @@
     "name": "Roborock Cloud",
     "developerName": "Kenny Moens",
     "developerId": "66ffa09c645b24bd5bc1b47f",
-    "version": "4.3.0",
+    "version": "5.4.1",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/roborock",
     "publishedAt": "2025-01-17T15:31:33.430Z",
-    "updatedAt": "2026-10-23T08:40:17.686Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 128559
   },
   {
@@ -11378,10 +11378,10 @@
     "name": "Adlar Castra Heatpump",
     "developerName": "H Hi",
     "developerId": "6899ebd945081a3d918b81e4",
-    "version": "2.13.1",
+    "version": "3.13.1",
     "sourceRepository": "https://github.com/hhi/org.hhi.adlar-heatpump",
     "publishedAt": "2025-08-11T13:10:49.087Z",
-    "updatedAt": "2026-06-16T21:21:19.199Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 143690
   },
   {
@@ -12456,10 +12456,10 @@
     "name": "BTicino Door Entry EasyKit",
     "developerName": "Simone Di Maio",
     "developerId": "68ceb8fccbb72125ed109820",
-    "version": "1.2.3",
+    "version": "2.0.0",
     "sourceRepository": "https://github.com/s-dimaio/com.dimapp.bticino.doorentry.git",
     "publishedAt": "2025-12-13T18:22:33.721Z",
-    "updatedAt": "2026-08-30T20:27:29.136Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": null
   },
   {
@@ -12555,10 +12555,10 @@
     "name": "Reolink",
     "developerName": "Reolink Innovation Limited",
     "developerId": "6a8d40389b7803d15aeea8ca",
-    "version": "1.6.2",
+    "version": "1.7.0",
     "sourceRepository": "",
     "publishedAt": "2025-12-17T13:38:47.738Z",
-    "updatedAt": "2026-10-13T10:46:12.222Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 151761
   },
   {
@@ -12577,10 +12577,10 @@
     "name": "MyNissan",
     "developerName": "Simon Andersson",
     "developerId": "67a91ca562b00d00c4d1af7a",
-    "version": "0.0.16",
+    "version": "0.0.18",
     "sourceRepository": "",
     "publishedAt": "2025-12-17T22:55:38.416Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 147954
   },
   {
@@ -13336,10 +13336,10 @@
     "name": "HomeKit Device Bridge",
     "developerName": "Uğur BENEK",
     "developerId": "697f46341aed127334df8978",
-    "version": "2.1.37",
+    "version": "2.2.4",
     "sourceRepository": "",
     "publishedAt": "2026-02-08T11:37:58.911Z",
-    "updatedAt": "2026-10-27T09:09:00.887Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 150931
   },
   {
@@ -13380,10 +13380,10 @@
     "name": "Stellantis Vehicles",
     "developerName": "Martijn de Bont",
     "developerId": "6797f3d4046d79a42f28dcb2",
-    "version": "2.0.1",
+    "version": "2.1.1",
     "sourceRepository": "",
     "publishedAt": "2026-02-08T22:13:44.169Z",
-    "updatedAt": "2026-11-17T12:02:36.342Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": null
   },
   {
@@ -14183,10 +14183,10 @@
     "name": "Skoda",
     "developerName": "Škoda Auto",
     "developerId": "6aa8fe2a3bf2cee70abf525a",
-    "version": "2.8.1",
+    "version": "2.9.0",
     "sourceRepository": "https://gitlab.com/functor-solutions/homey/skoda",
     "publishedAt": "2026-03-16T15:23:15.534Z",
-    "updatedAt": "2026-11-07T10:25:34.159Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 152568
   },
   {
@@ -14590,10 +14590,10 @@
     "name": "Power Profiler",
     "developerName": "Andy van Dongen",
     "developerId": "693fd43f66abe4254753dd39",
-    "version": "1.9.2",
+    "version": "1.11.2",
     "sourceRepository": "",
     "publishedAt": "2026-03-28T10:51:30.738Z",
-    "updatedAt": "2026-10-15T08:25:54.833Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 153056
   },
   {
@@ -14656,10 +14656,10 @@
     "name": "Widget Forge",
     "developerName": "Pascal Nohl",
     "developerId": "69898b6b608b9fa107cc795c",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "sourceRepository": "",
     "publishedAt": "2026-03-31T18:23:19.791Z",
-    "updatedAt": "2026-04-23T20:32:50.441Z",
+    "updatedAt": "2026-11-27T12:43:03.153Z",
     "communityTopicId": 153264
   },
   {
@@ -15822,10 +15822,10 @@
     "name": "HP iLO",
     "developerName": "Jak Spalding",
     "developerId": "69af4693af832c1e462c986f",
-    "version": "1.1.2",
+    "version": "1.3.0",
     "sourceRepository": "https://github.com/jak/io.jak.hp-ilo",
     "publishedAt": "2026-05-24T10:43:40.456Z",
-    "updatedAt": "2026-08-03T12:55:47.882Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": null
   },
   {
@@ -15954,10 +15954,10 @@
     "name": "MCP AI Bridge",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "6.3.15",
+    "version": "6.3.18",
     "sourceRepository": "",
     "publishedAt": "2026-05-26T17:17:27.891Z",
-    "updatedAt": "2026-11-26T12:49:58.547Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": null
   },
   {
@@ -16328,10 +16328,10 @@
     "name": "Alfen Eve Single / ACE EV Charger",
     "developerName": "Barney 3245",
     "developerId": "685462f220832e6198b4c37a",
-    "version": "1.3.7",
+    "version": "1.3.10",
     "sourceRepository": "",
     "publishedAt": "2026-06-26T05:58:00.939Z",
-    "updatedAt": "2026-10-31T09:47:34.829Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": null
   },
   {
@@ -17714,10 +17714,10 @@
     "name": "iDiamant",
     "developerName": "ATX Groupe",
     "developerId": "6a8e12e83bdd81c33f8d4766",
-    "version": "1.3.26",
+    "version": "1.3.27",
     "sourceRepository": "",
     "publishedAt": "2026-08-25T22:04:48.036Z",
-    "updatedAt": "2026-11-19T11:51:46.155Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 159166
   },
   {
@@ -18748,10 +18748,10 @@
     "name": "Oral-B",
     "developerName": "Mark Moorlag",
     "developerId": "6ab593e330dc90a8d6e447b6",
-    "version": "0.3.0",
+    "version": "0.3.3",
     "sourceRepository": "",
     "publishedAt": "2026-09-30T17:07:57.800Z",
-    "updatedAt": "2026-11-04T11:08:59.497Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 160215
   },
   {
@@ -18792,10 +18792,10 @@
     "name": "Atmoce",
     "developerName": "Jo Goossens",
     "developerId": "69e73665fb6dd7068a7cbff1",
-    "version": "1.1.1",
+    "version": "1.2.1",
     "sourceRepository": "https://github.com/jogoossens/com.goossens.atmoce",
     "publishedAt": "2026-09-30T17:08:00.206Z",
-    "updatedAt": "2026-10-29T10:09:55.959Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": null
   },
   {
@@ -19063,17 +19063,6 @@
     "communityTopicId": null
   },
   {
-    "appId": "com.glumpf.zendurecloud",
-    "name": "Zendure Classic",
-    "developerName": "Lars Andresen",
-    "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "1.1.6",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-08T18:05:24.603Z",
-    "updatedAt": "2026-11-02T11:24:40.076Z",
-    "communityTopicId": 160523
-  },
-  {
     "appId": "se.sikth.srv",
     "name": "SRV Waste Collection",
     "developerName": "Fredrik Sundlöf",
@@ -19144,10 +19133,10 @@
     "name": "Widgetkeeper",
     "developerName": "Thomas R. Sidor",
     "developerId": "6a7cc169c6a80eeabce1bb26",
-    "version": "1.2.1",
+    "version": "1.3.2",
     "sourceRepository": "https://github.com/thomassidor/widgetkeeper",
     "publishedAt": "2026-10-09T00:01:11.828Z",
-    "updatedAt": "2026-11-13T11:12:41.906Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 160453
   },
   {
@@ -19573,10 +19562,10 @@
     "name": "Medication Reminder",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.6.4",
+    "version": "1.6.5",
     "sourceRepository": "",
     "publishedAt": "2026-10-22T16:12:11.825Z",
-    "updatedAt": "2026-11-26T12:49:58.547Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 161097
   },
   {
@@ -19771,10 +19760,10 @@
     "name": "Thermex",
     "developerName": "Jon Hye-Knudsen",
     "developerId": "6adf578b47d7399db6cd7de7",
-    "version": "1.1.1",
+    "version": "1.1.4",
     "sourceRepository": "https://github.com/JonHyeKnudsen/dk.hye-knudsen.thermexwifihood",
     "publishedAt": "2026-10-29T17:42:38.096Z",
-    "updatedAt": "2026-10-31T09:47:34.830Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 161368
   },
   {
@@ -19881,10 +19870,10 @@
     "name": "Weekdot",
     "developerName": "Léon van der Linden",
     "developerId": "649eefe59a54fe7531821578",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "sourceRepository": "",
     "publishedAt": "2026-11-03T15:33:59.627Z",
-    "updatedAt": "2026-11-17T12:02:36.343Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 161566
   },
   {
@@ -19980,10 +19969,10 @@
     "name": "DREO (Community)",
     "developerName": "Danny van Soerland",
     "developerId": "69cc140b699c29709ca3a1dc",
-    "version": "1.3.0",
+    "version": "1.3.2",
     "sourceRepository": "",
     "publishedAt": "2026-11-06T11:05:53.836Z",
-    "updatedAt": "2026-11-10T11:23:16.740Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 161466
   },
   {
@@ -20222,10 +20211,10 @@
     "name": "Rointe",
     "developerName": "Simon Salvin",
     "developerId": "6acd2e5bbdc8421d78c61bff",
-    "version": "0.5.6",
+    "version": "0.6.2",
     "sourceRepository": "",
     "publishedAt": "2026-11-16T11:40:29.235Z",
-    "updatedAt": "2026-11-16T11:40:29.235Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 161240
   },
   {
@@ -20299,10 +20288,10 @@
     "name": "Wolf SmartSet",
     "developerName": "Henri Apperloo",
     "developerId": "69b30019af832c1e463170e2",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "sourceRepository": "",
     "publishedAt": "2026-11-16T19:56:10.997Z",
-    "updatedAt": "2026-11-16T19:56:10.997Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": null
   },
   {
@@ -20332,10 +20321,10 @@
     "name": "WARP Charger",
     "developerName": "Lars Andresen",
     "developerId": "6ac0acc5bdc7ced970ff7032",
-    "version": "2.0.1",
+    "version": "2.0.2",
     "sourceRepository": "",
     "publishedAt": "2026-11-19T16:53:48.117Z",
-    "updatedAt": "2026-11-19T16:53:48.117Z",
+    "updatedAt": "2026-11-27T12:43:03.154Z",
     "communityTopicId": 160717
   },
   {
@@ -20445,8 +20434,8 @@
     "version": "0.1.0",
     "sourceRepository": "",
     "publishedAt": "2026-11-26T12:49:18.677Z",
-    "updatedAt": "2026-11-26T12:49:18.677Z",
-    "communityTopicId": null
+    "updatedAt": "2026-11-27T12:43:03.154Z",
+    "communityTopicId": 162715
   },
   {
     "appId": "nl.rilaahq.togsense",
@@ -20480,5 +20469,27 @@
     "publishedAt": "2026-11-26T17:56:48.487Z",
     "updatedAt": "2026-11-26T17:56:48.487Z",
     "communityTopicId": 162097
+  },
+  {
+    "appId": "com.dimplex.ematrix",
+    "name": "Dimplex e-MatriX",
+    "developerName": "Harm Jonkers",
+    "developerId": "6a9f0460336db3df05ad7ccc",
+    "version": "0.1.26",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-27T12:42:27.139Z",
+    "updatedAt": "2026-11-27T12:42:27.139Z",
+    "communityTopicId": 161430
+  },
+  {
+    "appId": "com.samduo",
+    "name": "SAMDUO",
+    "developerName": "SAMDUO",
+    "developerId": "6af2864c72573f07ae8e4068",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-27T12:42:27.139Z",
+    "updatedAt": "2026-11-27T12:42:27.139Z",
+    "communityTopicId": null
   }
 ]

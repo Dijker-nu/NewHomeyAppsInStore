@@ -1,2457 +1,1679 @@
 [
   {
-    "id": "nl.rilaahq.togsense",
-    "rating": null,
-    "liveBuild": {
-      "id": 1,
-      "name": {
-        "en": "TOG Sense",
-        "nl": "TOG Sense",
-        "de": "TOG Sense",
-        "fr": "TOG Sense"
-      },
-      "version": "0.2.0",
-      "readme": {
-        "en": "Knowing what your baby should wear to bed starts with the temperature in the nursery. TOG Sense reads a temperature sensor in the nursery, looks at how cold it will get outside tonight where your Homey is, and shows on your dashboard which bodysuit, sleepsuit and TOG sleeping bag fit tonight, from the inside out. With your child's date of birth the advice also takes age into account, and the app settings list the size and TOG of each item.\nEvery piece of advice follows the safe sleep rules: one bodysuit, at most one sleepsuit and always one sleeping bag, without a blanket or hat in bed. When the room is too cold for that, the advice is to heat the room rather than add another layer. For the best result, choose a sensor near the cot rather than one on the radiator.\n",
-        "de": "Was dein Baby heute Nacht anziehen sollte, hängt von der Temperatur im Kinderzimmer ab. TOG Sense liest einen Temperatursensor im Kinderzimmer, schaut, wie kalt es heute Nacht draußen am Standort deines Homey wird, und zeigt auf deinem Dashboard, welcher Body, welcher Schlafanzug und welcher TOG-Schlafsack heute Nacht passen, von innen nach außen. Mit dem Geburtsdatum deines Kindes berücksichtigt die Empfehlung auch das Alter, und in den Einstellungen der App stehen für jedes Teil Größe und TOG.\nJede Empfehlung folgt den Regeln für sicheren Schlaf: ein Body, höchstens ein Schlafanzug und immer ein Schlafsack, ohne Decke oder Mütze im Bett. Ist das Zimmer dafür zu kalt, lautet die Empfehlung, das Zimmer zu heizen statt eine weitere Schicht anzuziehen. Wähle für das beste Ergebnis einen Sensor beim Bettchen und nicht einen am Heizkörper.\n",
-        "fr": "Ce que votre bébé doit porter cette nuit dépend de la température de sa chambre. TOG Sense lit un capteur de température dans la chambre de bébé, regarde le froid prévu cette nuit à l'emplacement de votre Homey, et affiche sur votre tableau de bord le body, le pyjama et la gigoteuse TOG qui conviennent cette nuit, de l'intérieur vers l'extérieur. Avec la date de naissance de votre enfant, le conseil tient aussi compte de son âge, et les réglages de l'app indiquent la taille et le TOG de chaque pièce.\nChaque conseil suit les règles du sommeil sûr : un body, au plus un pyjama et toujours une gigoteuse, sans couverture ni bonnet au lit. Si la chambre est trop froide pour cela, le conseil est de chauffer la chambre plutôt que d'ajouter une couche. Pour un meilleur résultat, choisissez un capteur près du lit plutôt qu'un capteur sur le radiateur.\n",
-        "nl": "Wat je baby vannacht aan moet, begint bij de temperatuur in de kinderkamer. TOG Sense leest een temperatuursensor in de kinderkamer, kijkt hoe koud het vannacht buiten wordt op de plek van je Homey, en laat op je dashboard zien welke romper, pyjama en TOG-slaapzak vannacht passen, van binnen naar buiten. Met de geboortedatum van je kind houdt het advies ook rekening met de leeftijd, en in de instellingen van de app staan per stuk de maat en de TOG.\nElk advies volgt de regels voor veilig slapen: één romper, hoogstens één pyjama en altijd één slaapzak, zonder deken of mutsje in bed. Is de kamer daarvoor te koud, dan is het advies de kamer te verwarmen in plaats van nog een laag. Kies voor het beste resultaat een sensor bij het bedje en niet een op de radiator.\n"
-      },
-      "description": {
-        "en": "Which bodysuit, sleepsuit and TOG sleeping bag your baby needs tonight",
-        "nl": "Welke romper, pyjama en TOG-slaapzak je baby vannacht aan moet",
-        "de": "Welcher Body, welcher Schlafanzug und welcher TOG-Schlafsack heute Nacht zu deinem Baby passt",
-        "fr": "Quel body, quel pyjama et quelle gigoteuse TOG pour votre bébé cette nuit"
-      },
-      "category": "climate",
-      "brandColor": "#8a1c35",
-      "icon": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/assets/images/large.png",
-      "drivers": null,
-      "flow": {
-        "triggers": null,
-        "conditions": null,
-        "actions": null
-      },
-      "widgets": {
-        "sleepwear": {
-          "name": {
-            "en": "Sleepwear tonight",
-            "nl": "Slaapkleding vannacht",
-            "de": "Schlafkleidung heute Nacht",
-            "fr": "Tenue de nuit ce soir"
-          },
-          "height": 360,
-          "settings": [
-            {
-              "id": "sensor",
-              "type": "autocomplete",
-              "title": {
-                "en": "Nursery temperature sensor",
-                "nl": "Temperatuursensor kinderkamer",
-                "de": "Temperatursensor Kinderzimmer",
-                "fr": "Capteur de température de la chambre"
-              },
-              "hint": {
-                "en": "The advice is calculated from this sensor's temperature, with tonight's outside low at your Homey's location. Choose a sensor in the room, near the bed, not one on the radiator.",
-                "nl": "Het advies wordt berekend met de temperatuur van deze sensor, samen met hoe koud het vannacht buiten wordt op de plek van je Homey. Kies een sensor in de kamer, bij het bedje, en niet een op de radiator.",
-                "de": "Die Empfehlung wird mit der Temperatur dieses Sensors berechnet, zusammen damit, wie kalt es heute Nacht draußen am Standort deines Homey wird. Wähle einen Sensor im Zimmer, beim Bettchen, nicht einen am Heizkörper.",
-                "fr": "Le conseil est calculé avec la température de ce capteur et le froid prévu cette nuit à l'emplacement de votre Homey. Choisissez un capteur dans la chambre, près du lit, pas un capteur sur le radiateur."
-              }
-            },
-            {
-              "id": "born",
-              "type": "text",
-              "title": {
-                "en": "Child's date of birth",
-                "nl": "Geboortedatum kindje",
-                "de": "Geburtsdatum deines Kindes",
-                "fr": "Date de naissance de votre enfant"
-              },
-              "value": "",
-              "hint": {
-                "en": "For example 14-06-2025. Under 3 months a little warmer in a cool room, from 2 years a little lighter; also the sizes on the products page.",
-                "nl": "Bijvoorbeeld 14-06-2025. Jonger dan 3 maanden iets warmer in een frisse kamer, vanaf 2 jaar iets lichter; en de maten op de pagina met producten.",
-                "de": "Zum Beispiel 14.06.2025. Unter 3 Monaten etwas wärmer in einem kühlen Zimmer, ab 2 Jahren etwas leichter; außerdem die Größen auf der Produktseite.",
-                "fr": "Par exemple 14/06/2025. Avant 3 mois un peu plus chaud dans une chambre fraîche, à partir de 2 ans un peu plus léger ; et les tailles sur la page des produits."
-              }
-            },
-            {
-              "id": "warmth",
-              "type": "dropdown",
-              "title": {
-                "en": "Does your child get cold or warm easily?",
-                "nl": "Heeft je kindje het snel koud of warm?",
-                "de": "Friert dein Kind schnell, oder wird ihm schnell warm?",
-                "fr": "Votre enfant a-t-il vite froid ou vite chaud ?"
-              },
-              "value": "gemiddeld",
-              "hint": {
-                "en": "Gets cold easily: calculated as if the room is 1 °C colder; warm easily: 1 °C warmer.",
-                "nl": "Snel koud: gerekend alsof de kamer 1 °C kouder is; snel warm: 1 °C warmer.",
-                "de": "Friert schnell: gerechnet, als wäre das Zimmer 1 °C kälter; wird schnell warm: 1 °C wärmer.",
-                "fr": "A vite froid : calcul comme si la chambre était 1 °C plus froide ; a vite chaud : 1 °C plus chaude."
-              },
-              "values": [
-                {
-                  "id": "gemiddeld",
-                  "label": {
-                    "en": "Average",
-                    "nl": "Gemiddeld",
-                    "de": "Durchschnittlich",
-                    "fr": "Normal"
-                  }
-                },
-                {
-                  "id": "snel_koud",
-                  "label": {
-                    "en": "Gets cold easily",
-                    "nl": "Snel koud",
-                    "de": "Friert schnell",
-                    "fr": "A vite froid"
-                  }
-                },
-                {
-                  "id": "snel_warm",
-                  "label": {
-                    "en": "Gets warm easily",
-                    "nl": "Snel warm",
-                    "de": "Wird schnell warm",
-                    "fr": "A vite chaud"
-                  }
-                }
-              ]
-            }
-          ],
-          "api": {
-            "postAdvice": {
-              "method": "POST",
-              "path": "/advice"
-            }
-          },
-          "id": "sleepwear",
-          "previewDark": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/widgets/sleepwear/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/nl.rilaahq.togsense/1/7f92ca61-d36b-4a86-89c7-a1b7a553df53/widgets/sleepwear/preview-light.png"
-        }
-      },
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-11-26T13:23:12.464Z",
-      "bugs": null,
-      "homepage": "https://togsense.app",
-      "support": null,
-      "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [
-        "homey:manager:api",
-        "homey:manager:geolocation"
-      ],
-      "apiScopes": null,
-      "changelog": {
-        "en": "First test version: the widget shows which bodysuit, sleepsuit and TOG sleeping bag fit tonight, based on the nursery sensor and tonight's outside temperature.",
-        "nl": "Eerste testversie: de widget laat zien welke romper, pyjama en TOG-slaapzak vannacht passen, op basis van de sensor in de kinderkamer en de buitentemperatuur van vannacht.",
-        "de": "Erste Testversion: Das Widget zeigt, welcher Body, welcher Schlafanzug und welcher TOG-Schlafsack heute Nacht passen, anhand des Sensors im Kinderzimmer und der Außentemperatur heute Nacht.",
-        "fr": "Première version de test : le widget indique le body, le pyjama et la gigoteuse TOG qui conviennent cette nuit, selon le capteur de la chambre et la température extérieure de la nuit."
-      },
-      "compatibility": ">=12.3.0",
-      "tags": {
-        "en": [
-          "baby",
-          "tog",
-          "sleeping bag",
-          "nursery",
-          "temperature"
-        ],
-        "nl": [
-          "baby",
-          "tog",
-          "slaapzak",
-          "kinderkamer",
-          "temperatuur"
-        ],
-        "de": [
-          "Baby",
-          "TOG",
-          "Schlafsack",
-          "Kinderzimmer",
-          "Temperatur"
-        ],
-        "fr": [
-          "bébé",
-          "TOG",
-          "gigoteuse",
-          "chambre de bébé",
-          "température"
-        ]
-      },
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "0.2.0",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6afecdd5c1aa7af2c66bcd08",
-      "type": "org",
-      "userId": null,
-      "name": "Rilaa",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "nl.jeffreydebruijn.chargepoints",
+    "id": "com.dimplex.ematrix",
     "rating": null,
     "liveBuild": {
       "id": 2,
       "name": {
-        "en": "Charge Point Finder NL",
-        "nl": "Laadpaal Zoeker"
+        "en": "Dimplex e-MatriX",
+        "nl": "Dimplex e-MatriX",
+        "de": "Dimplex e-MatriX",
+        "fr": "Dimplex e-MatriX",
+        "it": "Dimplex e-MatriX",
+        "sv": "Dimplex e-MatriX",
+        "no": "Dimplex e-MatriX",
+        "es": "Dimplex e-MatriX",
+        "da": "Dimplex e-MatriX",
+        "ru": "Dimplex e-MatriX",
+        "pl": "Dimplex e-MatriX",
+        "ko": "Dimplex e-MatriX",
+        "ar": "Dimplex e-MatriX"
       },
-      "version": "1.0.1",
+      "version": "0.1.26",
       "readme": {
-        "en": "No driveway and no charger at home? Then the question is always the same: is there a public charging point free within walking distance, and what will it cost? Laadpaal Zoeker answers that on your Homey. It shows every public charging point within the radius you choose, which ones are free right now, and the price per kWh and per charging session according to the operator's tariff, so you can walk straight to the cheapest free one.\n\nPick a favourite charging point, such as the one in front of your door, and get a notification the moment it becomes free or occupied. Availability and tariffs come from the open data of the Dutch National Road Traffic Data Portal (NDW), so the app works throughout the Netherlands without an account. Where an operator publishes no tariff, the app shows an approximate price, marked with ±.\n",
-        "nl": "Geen oprit en geen laadpaal thuis? Dan is de vraag steeds dezelfde: is er op loopafstand een openbare laadpaal vrij, en wat kost laden daar? Laadpaal Zoeker geeft het antwoord op je Homey. Je ziet alle openbare laadpalen binnen de straal die je kiest, welke er nu vrij zijn, en de prijs per kWh en per laadsessie volgens het tarief van de exploitant. Zo loop je meteen naar de goedkoopste vrije paal.\n\nKies een favoriete laadpaal, bijvoorbeeld die voor je deur, en krijg een melding zodra hij vrij komt of bezet raakt. Beschikbaarheid en tarieven komen uit de open data van het Nationaal Dataportaal Wegverkeer (NDW), dus de app werkt in heel Nederland en zonder account. Publiceert een exploitant geen tarief, dan toont de app een benadering, herkenbaar aan een ±.\n"
+        "en": "Control your compatible Dimplex e-MatriX electric fireplace locally from Homey Pro over LAN or Bluetooth. Turn the fireplace on or off, adjust the flame level and use supported measurements in your everyday Homey automations.\n\nWhen the controller confirms compatible lighting, Homey can offer a separate lighting device. Available features depend on the model and firmware. Advanced RGB, My Mood and audio functions are experimental in this unofficial community integration.\n",
+        "ar": "تحكّم محليًا في مدفأة Dimplex e-MatriX الكهربائية المتوافقة من خلال Homey Pro عبر الشبكة المحلية أو البلوتوث. يمكنك تشغيل المدفأة وإيقافها وضبط مستوى اللهب واستخدام قراءات المستشعرات المدعومة في إجراءات Homey الآلية.\n\nعندما تؤكد وحدة التحكم وجود إضاءة متوافقة، يمكن لـ Homey عرض جهاز إضاءة منفصل. تختلف الميزات المتاحة بحسب الطراز والبرنامج الثابت. تُعد ميزات RGB وMy Mood والصوت المتقدمة تجريبية في هذا التكامل المجتمعي غير الرسمي.\n",
+        "da": "Styr din kompatible elektriske Dimplex e-MatriX-pejs lokalt fra Homey Pro via LAN eller Bluetooth. Tænd eller sluk pejsen, juster flammeniveauet, og brug tilgængelige målinger i dine Homey-automatiseringer.\n\nNår controlleren bekræfter kompatibel belysning, kan Homey tilbyde en separat belysningsenhed. Funktionerne afhænger af model og firmware. Avancerede RGB-, My Mood- og lydfunktioner er eksperimentelle i denne uofficielle communityintegration.\n",
+        "de": "Steuern Sie Ihren kompatiblen elektrischen Dimplex e-MatriX-Kamin lokal mit Homey Pro über LAN oder Bluetooth. Schalten Sie den Kamin ein oder aus, stellen Sie die Flammenstufe ein und nutzen Sie unterstützte Messwerte in Ihren Homey-Automationen.\n\nWenn die Steuerung kompatible Beleuchtung erkennt, kann Homey ein separates Lichtgerät anbieten. Verfügbare Funktionen hängen vom Modell und der Firmware ab. Erweiterte RGB-, My Mood- und Audiofunktionen sind in dieser inoffiziellen Community-Integration experimentell.\n",
+        "es": "Controla de forma local tu chimenea eléctrica Dimplex e-MatriX compatible desde Homey Pro mediante LAN o Bluetooth. Enciende o apaga la chimenea, ajusta el nivel de las llamas y utiliza las mediciones compatibles en tus automatizaciones de Homey.\n\nCuando el controlador confirma que dispone de iluminación compatible, Homey puede ofrecer un dispositivo de iluminación independiente. Las funciones dependen del modelo y del firmware. Las opciones avanzadas de RGB, My Mood y audio son experimentales en esta integración comunitaria no oficial.\n",
+        "fr": "Pilotez localement votre cheminée électrique Dimplex e-MatriX compatible depuis Homey Pro, par réseau local ou Bluetooth. Allumez ou éteignez le foyer, réglez les flammes et utilisez les mesures disponibles dans vos automatisations Homey.\n\nLorsque le contrôleur confirme la présence d’un éclairage compatible, Homey peut proposer un appareil d’éclairage séparé. Les fonctions dépendent du modèle et du micrologiciel. Les options avancées RGB, My Mood et audio sont expérimentales dans cette intégration communautaire non officielle.\n",
+        "it": "Controlla localmente il tuo caminetto elettrico Dimplex e-MatriX compatibile da Homey Pro tramite LAN o Bluetooth. Accendi o spegni il caminetto, regola l’intensità delle fiamme e usa le misurazioni disponibili nelle automazioni Homey.\n\nQuando il controller conferma la presenza di luci compatibili, Homey può proporre un dispositivo di illuminazione separato. Le funzioni dipendono dal modello e dal firmware. Le opzioni avanzate RGB, My Mood e audio sono sperimentali in questa integrazione non ufficiale della community.\n",
+        "ko": "Homey Pro에서 LAN 또는 Bluetooth를 통해 호환되는 Dimplex e-MatriX 전기 벽난로를 로컬로 제어하세요. 벽난로 전원을 켜거나 끄고 불꽃 세기를 조절하며, 지원되는 센서 값을 Homey 자동화에 활용할 수 있습니다.\n\n컨트롤러가 호환 조명을 확인하면 Homey에서 별도의 조명 기기를 추가할 수 있습니다. 사용 가능한 기능은 모델과 펌웨어에 따라 다릅니다. 고급 RGB, My Mood 및 오디오 기능은 이 비공식 커뮤니티 연동에서 실험적으로 제공됩니다.\n",
+        "nl": "Bedien je compatibele elektrische Dimplex e-MatriX-haard lokaal vanuit Homey Pro via LAN of Bluetooth. Schakel de haard in of uit, regel het vlamniveau en gebruik ondersteunde meetwaarden in je dagelijkse Homey-automatiseringen.\n\nWanneer de controller geschikte verlichting bevestigt, kan Homey een aparte verlichtingstegel aanbieden. De beschikbare functies hangen af van het model en de firmware. Geavanceerde RGB-, My Mood- en audiofuncties zijn experimenteel in deze onofficiële community-integratie.\n",
+        "no": "Styr din kompatible elektriske Dimplex e-MatriX-peis lokalt fra Homey Pro via LAN eller Bluetooth. Slå peisen av og på, juster flammenivået og bruk tilgjengelige måleverdier i Homey-automatiseringene dine.\n\nNår kontrolleren bekrefter kompatibel belysning, kan Homey tilby en egen lysenhet. Tilgjengelige funksjoner avhenger av modell og fastvare. Avanserte RGB-, My Mood- og lydfunksjoner er eksperimentelle i denne uoffisielle fellesskapsintegrasjonen.\n",
+        "pl": "Steruj lokalnie zgodnym kominkiem elektrycznym Dimplex e-MatriX z Homey Pro przez LAN lub Bluetooth. Włączaj i wyłączaj kominek, reguluj poziom płomieni i wykorzystuj dostępne pomiary w automatyzacjach Homey.\n\nJeśli sterownik potwierdzi obsługę oświetlenia, Homey może udostępnić osobne urządzenie do jego sterowania. Dostępność funkcji zależy od modelu i oprogramowania układowego. Zaawansowane funkcje RGB, My Mood i audio są eksperymentalne w tej nieoficjalnej integracji społecznościowej.\n",
+        "ru": "Управляйте совместимым электрическим камином Dimplex e-MatriX локально через Homey Pro по LAN или Bluetooth. Включайте и выключайте камин, настраивайте интенсивность пламени и используйте доступные показания датчиков в автоматизациях Homey.\n\nЕсли контроллер подтверждает поддержку освещения, Homey может предложить отдельное устройство для управления им. Возможности зависят от модели и прошивки. Расширенные функции RGB, My Mood и аудио являются экспериментальными в этой неофициальной интеграции сообщества.\n",
+        "sv": "Styr din kompatibla elektriska Dimplex e-MatriX-eldstad lokalt från Homey Pro via LAN eller Bluetooth. Slå på eller av eldstaden, justera flamnivån och använd tillgängliga mätvärden i dina Homey-automatiseringar.\n\nNär styrenheten bekräftar kompatibel belysning kan Homey erbjuda en separat belysningsenhet. Funktionerna beror på modell och firmware. Avancerade RGB-, My Mood- och ljudfunktioner är experimentella i denna inofficiella communityintegration.\n"
       },
       "description": {
-        "en": "See which public charging point near you is free, and what it costs.",
-        "nl": "Zie welke openbare laadpaal bij jou in de buurt vrij is, en wat hij kost."
+        "en": "Local control for Dimplex e-MatriX electric fireplaces via LAN and Bluetooth.",
+        "nl": "Lokale bediening van elektrische Dimplex e-MatriX-haarden via LAN en Bluetooth.",
+        "de": "Lokale Steuerung elektrischer Dimplex e-MatriX-Kamine über LAN und Bluetooth.",
+        "fr": "Commande locale des cheminées électriques Dimplex e-MatriX via réseau local et Bluetooth.",
+        "it": "Controllo locale dei caminetti elettrici Dimplex e-MatriX via LAN e Bluetooth.",
+        "sv": "Lokal styrning av elektriska Dimplex e-MatriX-eldstäder via LAN och Bluetooth.",
+        "no": "Lokal styring av elektriske Dimplex e-MatriX-peiser via LAN og Bluetooth.",
+        "es": "Control local de chimeneas eléctricas Dimplex e-MatriX por LAN y Bluetooth.",
+        "da": "Lokal styring af elektriske Dimplex e-MatriX-pejse via LAN og Bluetooth.",
+        "ru": "Локальное управление электрическими каминами Dimplex e-MatriX через LAN и Bluetooth.",
+        "pl": "Lokalne sterowanie kominkami elektrycznymi Dimplex e-MatriX przez LAN i Bluetooth.",
+        "ko": "LAN 및 블루투스로 Dimplex e-MatriX 전기 벽난로를 로컬 제어합니다.",
+        "ar": "تحكم محلي بمواقد Dimplex e-MatriX الكهربائية عبر الشبكة المحلية وبلوتوث."
       },
-      "category": "energy",
-      "brandColor": "#1F7A5C",
-      "icon": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/assets/images/large.png",
+      "category": "climate",
+      "brandColor": "#DD2213",
+      "icon": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/assets/images/large.png",
       "drivers": [
         {
-          "id": "chargepoints",
+          "id": "dimplex_ble",
           "name": {
-            "en": "Charging points nearby",
-            "nl": "Laadpalen in de buurt"
-          },
-          "class": "sensor",
-          "capabilities": [
-            "cp_free",
-            "cp_price_text",
-            "cp_session_text",
-            "cp_address",
-            "cp_distance",
-            "cp_nearest",
-            "cp_nearest_distance",
-            "cp_nearest_price_text",
-            "cp_price",
-            "cp_session_cost",
-            "cp_nearest_price"
-          ],
-          "capabilitiesOptions": {
-            "cp_session_text": {
-              "title": {
-                "en": "Cost cheapest session",
-                "nl": "Kosten goedkoopste sessie"
-              }
-            },
-            "cp_session_cost": {
-              "title": {
-                "en": "Cost cheapest session",
-                "nl": "Kosten goedkoopste sessie"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/chargepoints/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/chargepoints/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "cloud"
-          ],
-          "icon": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/chargepoints/assets/icon.svg"
-        },
-        {
-          "id": "favorite",
-          "name": {
-            "en": "Favourite charging point",
-            "nl": "Favoriete laadpaal"
-          },
-          "class": "sensor",
-          "capabilities": [
-            "cp_fav_status",
-            "cp_fav_free",
-            "cp_free",
-            "cp_price_text",
-            "cp_session_text",
-            "cp_price",
-            "cp_session_cost"
-          ],
-          "capabilitiesOptions": {
-            "cp_free": {
-              "title": {
-                "en": "Free connectors",
-                "nl": "Vrije connectors"
-              }
-            },
-            "cp_price": {
-              "title": {
-                "en": "Price",
-                "nl": "Prijs"
-              },
-              "insights": true
-            },
-            "cp_price_text": {
-              "title": {
-                "en": "Price",
-                "nl": "Prijs"
-              }
-            }
-          },
-          "imageSmall": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/favorite/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/favorite/assets/images/large.png",
-          "platforms": [
-            "local"
-          ],
-          "connectivity": [
-            "cloud"
-          ],
-          "icon": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/drivers/favorite/assets/icon.svg"
-        }
-      ],
-      "flow": {
-        "triggers": [
-          {
-            "id": "cheapest_changed",
-            "title": {
-              "en": "The cheapest charging point changed",
-              "nl": "De goedkoopste laadpaal is veranderd"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "fav_became_free",
-            "title": {
-              "en": "My charging point became free",
-              "nl": "Mijn laadpaal is vrij gekomen"
-            },
-            "hint": {
-              "en": "Triggers when no connector was free and now at least one is.",
-              "nl": "Gaat af als er geen connector vrij was en nu minstens één."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=favorite"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kerkstraat 5"
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 1
-              },
-              {
-                "name": "total",
-                "type": "number",
-                "title": {
-                  "en": "Total connectors",
-                  "nl": "Totaal connectors"
-                },
-                "example": 2
-              },
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "fav_became_occupied",
-            "title": {
-              "en": "My charging point became occupied",
-              "nl": "Mijn laadpaal is bezet geraakt"
-            },
-            "hint": {
-              "en": "Triggers when the last free connector is taken.",
-              "nl": "Gaat af als de laatste vrije connector bezet raakt."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=favorite"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kerkstraat 5"
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 1
-              },
-              {
-                "name": "total",
-                "type": "number",
-                "title": {
-                  "en": "Total connectors",
-                  "nl": "Totaal connectors"
-                },
-                "example": 2
-              },
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "fav_status_changed",
-            "title": {
-              "en": "The status of my charging point changed",
-              "nl": "De status van mijn laadpaal is veranderd"
-            },
-            "hint": {
-              "en": "Free, occupied or not reported (no status update for more than 7 days).",
-              "nl": "Vrij, bezet of niet gemeld (langer dan 7 dagen geen statusmelding)."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=favorite"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "status",
-                "type": "string",
-                "title": {
-                  "en": "Status",
-                  "nl": "Status"
-                },
-                "example": "Vrij"
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kerkstraat 5"
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 1
-              },
-              {
-                "name": "total",
-                "type": "number",
-                "title": {
-                  "en": "Total connectors",
-                  "nl": "Totaal connectors"
-                },
-                "example": 2
-              },
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "free_above",
-            "title": {
-              "en": "Free connectors rise above",
-              "nl": "Vrije connectors stijgen boven"
-            },
-            "titleFormatted": {
-              "en": "Free connectors rise above [[count]]",
-              "nl": "Vrije connectors stijgen boven [[count]]"
-            },
-            "hint": {
-              "en": "Triggers once when the number goes from at most this value to above it.",
-              "nl": "Gaat één keer af als het aantal van hooguit deze waarde naar erboven gaat."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              },
-              {
-                "type": "number",
-                "name": "count",
-                "min": 0,
-                "max": 100,
-                "step": 1,
-                "placeholder": {
-                  "en": "2",
-                  "nl": "2"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "free_available",
-            "title": {
-              "en": "A charging point becomes free nearby",
-              "nl": "Er komt een vrije laadpaal in de buurt"
-            },
-            "hint": {
-              "en": "Triggers when there were no free connectors in the search area and now there are.",
-              "nl": "Gaat af als er in het zoekgebied geen vrije connector was en er nu wel een is."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "free_changed",
-            "title": {
-              "en": "The number of free connectors changed",
-              "nl": "Het aantal vrije connectors is veranderd"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              },
-              {
-                "name": "previous_free",
-                "type": "number",
-                "title": {
-                  "en": "Previously free",
-                  "nl": "Eerder vrij"
-                },
-                "example": 2
-              }
-            ]
-          },
-          {
-            "id": "none_free",
-            "title": {
-              "en": "No free charging point left nearby",
-              "nl": "Er is geen vrije laadpaal meer in de buurt"
-            },
-            "hint": {
-              "en": "Triggers when the last free connector in the search area is taken.",
-              "nl": "Gaat af als de laatste vrije connector in het zoekgebied bezet raakt."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "price_below",
-            "title": {
-              "en": "The lowest charging price drops below",
-              "nl": "De laagste laadprijs zakt onder"
-            },
-            "titleFormatted": {
-              "en": "The lowest charging price drops below € [[price]]/kWh",
-              "nl": "De laagste laadprijs zakt onder € [[price]]/kWh"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              },
-              {
-                "type": "number",
-                "name": "price",
-                "min": 0,
-                "max": 5,
-                "step": 0.01,
-                "placeholder": {
-                  "en": "0.35",
-                  "nl": "0,35"
-                }
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          },
-          {
-            "id": "price_dropped",
-            "title": {
-              "en": "The lowest charging price dropped",
-              "nl": "De laagste laadprijs is gedaald"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ],
-            "tokens": [
-              {
-                "name": "price",
-                "type": "number",
-                "title": {
-                  "en": "Price (€/kWh)",
-                  "nl": "Prijs (€/kWh)"
-                },
-                "example": 0.36
-              },
-              {
-                "name": "address",
-                "type": "string",
-                "title": {
-                  "en": "Address",
-                  "nl": "Adres"
-                },
-                "example": "Kooltjesbuurt 1"
-              },
-              {
-                "name": "operator",
-                "type": "string",
-                "title": {
-                  "en": "Operator",
-                  "nl": "Exploitant"
-                },
-                "example": "EQUANS"
-              },
-              {
-                "name": "distance",
-                "type": "number",
-                "title": {
-                  "en": "Distance (m)",
-                  "nl": "Afstand (m)"
-                },
-                "example": 144
-              },
-              {
-                "name": "power",
-                "type": "number",
-                "title": {
-                  "en": "Power (kW)",
-                  "nl": "Vermogen (kW)"
-                },
-                "example": 11
-              },
-              {
-                "name": "free",
-                "type": "number",
-                "title": {
-                  "en": "Free connectors",
-                  "nl": "Vrije connectors"
-                },
-                "example": 3
-              },
-              {
-                "name": "previous",
-                "type": "number",
-                "title": {
-                  "en": "Previous price",
-                  "nl": "Vorige prijs"
-                },
-                "example": 0.4
-              },
-              {
-                "name": "list",
-                "type": "string",
-                "title": {
-                  "en": "Top 3 free",
-                  "nl": "Top 3 vrij"
-                },
-                "example": "1. Kerkstraat 5 - € 0,39 - 2/4 vrij - 120 m"
-              },
-              {
-                "name": "session_cost",
-                "type": "number",
-                "title": {
-                  "en": "Cost per session (€)",
-                  "nl": "Kosten per sessie (€)"
-                },
-                "example": 6.94
-              }
-            ]
-          }
-        ],
-        "conditions": [
-          {
-            "id": "fav_is_free",
-            "title": {
-              "en": "My charging point !{{is|is not}} free",
-              "nl": "Mijn laadpaal !{{is|is niet}} vrij"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=favorite"
-              }
-            ]
-          },
-          {
-            "id": "fav_status_is",
-            "title": {
-              "en": "The status of my charging point !{{is|is not}} ...",
-              "nl": "De status van mijn laadpaal !{{is|is niet}} ..."
-            },
-            "titleFormatted": {
-              "en": "The status of my charging point !{{is|is not}} [[status]]",
-              "nl": "De status van mijn laadpaal !{{is|is niet}} [[status]]"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=favorite"
-              },
-              {
-                "type": "dropdown",
-                "name": "status",
-                "values": [
-                  {
-                    "id": "free",
-                    "label": {
-                      "en": "Free",
-                      "nl": "Vrij"
-                    }
-                  },
-                  {
-                    "id": "occupied",
-                    "label": {
-                      "en": "Occupied",
-                      "nl": "Bezet"
-                    }
-                  },
-                  {
-                    "id": "unknown",
-                    "label": {
-                      "en": "Not reported",
-                      "nl": "Niet gemeld"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "id": "free_at_least",
-            "title": {
-              "en": "At least ... connectors !{{are|are not}} free",
-              "nl": "Er !{{zijn|zijn niet}} minstens ... connectors vrij"
-            },
-            "titleFormatted": {
-              "en": "At least [[count]] connectors !{{are|are not}} free",
-              "nl": "Er !{{zijn|zijn niet}} minstens [[count]] connectors vrij"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              },
-              {
-                "type": "number",
-                "name": "count",
-                "min": 1,
-                "max": 100,
-                "step": 1,
-                "placeholder": {
-                  "en": "1",
-                  "nl": "1"
-                }
-              }
-            ]
-          },
-          {
-            "id": "has_free",
-            "title": {
-              "en": "There is a free charging point nearby",
-              "nl": "Er is een vrije laadpaal in de buurt"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ]
-          },
-          {
-            "id": "price_below",
-            "title": {
-              "en": "The lowest charging price is below",
-              "nl": "De laagste laadprijs is lager dan"
-            },
-            "titleFormatted": {
-              "en": "The lowest charging price is below € [[price]]/kWh",
-              "nl": "De laagste laadprijs is lager dan € [[price]]/kWh"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              },
-              {
-                "type": "number",
-                "name": "price",
-                "min": 0,
-                "max": 5,
-                "step": 0.01,
-                "placeholder": {
-                  "en": "0.35",
-                  "nl": "0,35"
-                }
-              }
-            ]
-          }
-        ],
-        "actions": [
-          {
-            "id": "refresh",
-            "title": {
-              "en": "Refresh charging points now",
-              "nl": "Ververs laadpalen nu"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              }
-            ]
-          },
-          {
-            "id": "set_location",
-            "title": {
-              "en": "Change search location",
-              "nl": "Wijzig zoeklocatie"
-            },
-            "titleFormatted": {
-              "en": "Search around latitude [[lat]] longitude [[lon]]",
-              "nl": "Zoek rond breedtegraad [[lat]] lengtegraad [[lon]]"
-            },
-            "hint": {
-              "en": "Leave empty fields to use the Homey location again.",
-              "nl": "Laat de velden leeg om weer de Homey-locatie te gebruiken."
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              },
-              {
-                "type": "text",
-                "name": "lat",
-                "placeholder": {
-                  "en": "52.3731",
-                  "nl": "52.3731"
-                }
-              },
-              {
-                "type": "text",
-                "name": "lon",
-                "placeholder": {
-                  "en": "4.8926",
-                  "nl": "4.8926"
-                }
-              }
-            ]
-          },
-          {
-            "id": "set_radius",
-            "title": {
-              "en": "Change search radius",
-              "nl": "Wijzig zoekstraal"
-            },
-            "titleFormatted": {
-              "en": "Change search radius to [[radius]] m",
-              "nl": "Wijzig zoekstraal naar [[radius]] m"
-            },
-            "args": [
-              {
-                "type": "device",
-                "name": "device",
-                "filter": "driver_id=chargepoints"
-              },
-              {
-                "type": "number",
-                "name": "radius",
-                "min": 100,
-                "max": 25000,
-                "step": 50,
-                "placeholder": {
-                  "en": "500",
-                  "nl": "500"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      "widgets": {
-        "nearby": {
-          "name": {
-            "en": "Charging points nearby",
-            "nl": "Laadpalen in de buurt"
-          },
-          "settings": [
-            {
-              "id": "device",
-              "type": "autocomplete",
-              "title": {
-                "en": "Device (empty = first)",
-                "nl": "Apparaat (leeg = eerste)"
-              }
-            },
-            {
-              "id": "sort",
-              "type": "dropdown",
-              "title": {
-                "en": "Sort",
-                "nl": "Sorteren"
-              },
-              "value": "distance",
-              "values": [
-                {
-                  "id": "distance",
-                  "title": {
-                    "en": "Nearest first",
-                    "nl": "Dichtstbij eerst"
-                  }
-                },
-                {
-                  "id": "price",
-                  "title": {
-                    "en": "Cheapest first",
-                    "nl": "Goedkoopste eerst"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "priceMode",
-              "type": "dropdown",
-              "title": {
-                "en": "Show price as",
-                "nl": "Prijs tonen als"
-              },
-              "value": "kwh",
-              "values": [
-                {
-                  "id": "kwh",
-                  "title": {
-                    "en": "Per kWh",
-                    "nl": "Per kWh"
-                  }
-                },
-                {
-                  "id": "session",
-                  "title": {
-                    "en": "Per session",
-                    "nl": "Per sessie"
-                  }
-                },
-                {
-                  "id": "both",
-                  "title": {
-                    "en": "Both",
-                    "nl": "Allebei"
-                  }
-                }
-              ]
-            },
-            {
-              "id": "onlyFree",
-              "type": "checkbox",
-              "title": {
-                "en": "Only show free charging points",
-                "nl": "Alleen vrije laadpalen tonen"
-              },
-              "value": false
-            },
-            {
-              "id": "rows",
-              "type": "number",
-              "title": {
-                "en": "Maximum number of rows",
-                "nl": "Maximaal aantal regels"
-              },
-              "value": 8,
-              "min": 1,
-              "max": 30
-            }
-          ],
-          "api": {
-            "getResult": {
-              "method": "GET",
-              "path": "/result/:device"
-            },
-            "refresh": {
-              "method": "POST",
-              "path": "/refresh/:device"
-            }
-          },
-          "id": "nearby",
-          "previewDark": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/widgets/nearby/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/nl.jeffreydebruijn.chargepoints/2/06510ecb-aa7f-4c5b-be96-fa9c4a77be2e/widgets/nearby/preview-light.png"
-        }
-      },
-      "screensavers": [],
-      "homeyCommunityTopicId": null,
-      "state": "live",
-      "stateChangedAt": "2026-11-26T15:01:20.754Z",
-      "bugs": null,
-      "homepage": null,
-      "support": "mailto:info@jeffreydebruijn.nl",
-      "source": null,
-      "contributors": null,
-      "contributing": null,
-      "permissions": [
-        "homey:manager:geolocation"
-      ],
-      "apiScopes": null,
-      "changelog": {
-        "en": "Clearer app description: prices follow the operator tariff, only missing tariffs are approximated (±).",
-        "nl": "Duidelijkere omschrijving: prijzen volgen het tarief van de exploitant, alleen ontbrekende tarieven worden benaderd (±)."
-      },
-      "compatibility": ">=12.3.0",
-      "tags": {
-        "en": [
-          "ev",
-          "charging",
-          "charge point",
-          "public charging",
-          "charging price",
-          "netherlands",
-          "ndw"
-        ],
-        "nl": [
-          "ev",
-          "laadpaal",
-          "laadpunt",
-          "openbaar laden",
-          "laadprijs",
-          "laadtarief",
-          "elektrisch rijden",
-          "ndw"
-        ]
-      },
-      "platforms": [
-        "local"
-      ],
-      "sdk": 3,
-      "platformLocalRequiredFeatures": [],
-      "platformLocalOptionalFeatures": [],
-      "runtime": "nodejs"
-    },
-    "liveVersion": "1.0.1",
-    "testBuild": null,
-    "testVersion": null,
-    "private": false,
-    "sponsoredUrl": {},
-    "author": {
-      "id": "6aecf65372573f07ae70a60c",
-      "type": "org",
-      "userId": null,
-      "name": "JdeB Web Solutions",
-      "verified": false
-    },
-    "communityTopicId": null
-  },
-  {
-    "id": "be.functor.mealie",
-    "rating": null,
-    "liveBuild": {
-      "id": 4,
-      "name": {
-        "en": "Mealie",
-        "nl": "Mealie"
-      },
-      "version": "0.3.0",
-      "readme": {
-        "en": "See today's menu at a glance and keep your meal plan in sync with your smart home. Show what is planned for breakfast, lunch and dinner on your dashboard, and let your flows plan meals.\n\nYour server is reached directly over your network, so Homey and the server must be able to reach each other. Create an API token in your profile to connect.\n",
-        "nl": "Zie in één oogopslag wat er vandaag op het menu staat en houd je maaltijdplanning en boodschappenlijstje in sync met je slimme woning. Toon op je dashboard wat er gepland is voor ontbijt, lunch en avondeten, en laat je flows maaltijden plannen of je boodschappenlijstje aanvullen.\n\nJe server wordt rechtstreeks via je netwerk bereikt, dus Homey en de server moeten elkaar kunnen bereiken. Maak een API-token aan in je profiel om te verbinden.\n"
-      },
-      "description": {
-        "en": "What's for dinner? Your menu, always at hand",
-        "nl": "Wat eten we vandaag? Je menu, altijd bij de hand"
-      },
-      "category": "tools",
-      "brandColor": "#E58325",
-      "icon": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/assets/icon.svg",
-      "imageSmall": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/assets/images/small.png",
-      "imageLarge": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/assets/images/large.png",
-      "drivers": [
-        {
-          "id": "mealplan",
-          "name": {
-            "en": "Meal plan",
-            "nl": "Maaltijdplanning"
+            "en": "e-MatriX (Bluetooth)",
+            "nl": "e-MatriX (Bluetooth)",
+            "de": "e-MatriX (Bluetooth)",
+            "fr": "e-MatriX (Bluetooth)",
+            "it": "e-MatriX (Bluetooth)",
+            "sv": "e-MatriX (Bluetooth)",
+            "no": "e-MatriX (Bluetooth)",
+            "es": "e-MatriX (Bluetooth)",
+            "da": "e-MatriX (Bluetooth)",
+            "ru": "e-MatriX (Bluetooth)",
+            "pl": "e-MatriX (Bluetooth)",
+            "ko": "e-MatriX (Bluetooth)",
+            "ar": "e-MatriX (بلوتوث)"
           },
           "class": "other",
           "capabilities": [
-            "meal_breakfast",
-            "meal_lunch",
-            "meal_dinner",
-            "meal_breakfast_tomorrow",
-            "meal_lunch_tomorrow",
-            "meal_dinner_tomorrow"
+            "onoff",
+            "dim",
+            "measure_temperature",
+            "dimplex_mode",
+            "alarm_generic",
+            "measure_dimplex_errors",
+            "measure_dimplex_warnings",
+            "dimplex_water_level",
+            "alarm_dimplex_water_low",
+            "measure_dimplex_flame_shape",
+            "dimplex_ble_connected",
+            "dimplex_detected_features",
+            "dimplex_firmware",
+            "dimplex_ble_reconnects",
+            "dimplex_ble_errors",
+            "dimplex_connection_latency",
+            "dimplex_connection_last_ok",
+            "dimplex_connection_last_error",
+            "dimplex_ble_rssi",
+            "dimplex_observed_hours"
           ],
-          "imageSmall": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/drivers/mealplan/assets/images/small.png",
-          "imageLarge": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/drivers/mealplan/assets/images/large.png",
+          "capabilitiesOptions": {
+            "dim": {
+              "title": {
+                "en": "Flame level",
+                "nl": "Vlamniveau",
+                "de": "Flammenstufe",
+                "fr": "Niveau des flammes",
+                "it": "Livello fiamma",
+                "sv": "Flamnivå",
+                "no": "Flammenivå",
+                "es": "Nivel de llama",
+                "da": "Flammeniveau",
+                "ru": "Уровень пламени",
+                "pl": "Poziom płomieni",
+                "ko": "불꽃 세기",
+                "ar": "مستوى اللهب"
+              },
+              "min": 0,
+              "max": 1,
+              "step": 0.25,
+              "preventInsights": false
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Room temperature",
+                "nl": "Kamertemperatuur",
+                "de": "Raumtemperatur",
+                "fr": "Température ambiante",
+                "it": "Temperatura ambiente",
+                "sv": "Rumstemperatur",
+                "no": "Romtemperatur",
+                "es": "Temperatura ambiente",
+                "da": "Rumtemperatur",
+                "ru": "Температура в помещении",
+                "pl": "Temperatura pokojowa",
+                "ko": "실내 온도",
+                "ar": "درجة حرارة الغرفة"
+              },
+              "preventInsights": false
+            },
+            "dimplex_water_level": {
+              "uiComponent": "sensor",
+              "preventInsights": true
+            },
+            "alarm_dimplex_water_low": {
+              "uiComponent": "sensor"
+            },
+            "dimplex_mode": {
+              "preventInsights": true
+            },
+            "measure_dimplex_errors": {
+              "preventInsights": false
+            },
+            "measure_dimplex_warnings": {
+              "preventInsights": false
+            },
+            "measure_dimplex_flame_shape": {
+              "preventInsights": true
+            },
+            "dimplex_ble_connected": {
+              "preventInsights": true
+            },
+            "dimplex_detected_features": {
+              "preventInsights": true
+            },
+            "dimplex_firmware": {
+              "preventInsights": true
+            },
+            "dimplex_ble_reconnects": {
+              "preventInsights": false
+            },
+            "dimplex_ble_errors": {
+              "preventInsights": false
+            },
+            "dimplex_connection_latency": {
+              "preventInsights": false
+            },
+            "dimplex_connection_last_ok": {
+              "preventInsights": true
+            },
+            "dimplex_connection_last_error": {
+              "preventInsights": true
+            },
+            "dimplex_ble_rssi": {
+              "preventInsights": false
+            },
+            "dimplex_observed_hours": {
+              "preventInsights": false
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/drivers/dimplex_ble/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/drivers/dimplex_ble/assets/images/large.png",
+          "platforms": [
+            "local"
+          ],
+          "connectivity": [
+            "ble"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/drivers/dimplex_ble/assets/icon.svg"
+        },
+        {
+          "id": "dimplex_lan",
+          "name": {
+            "en": "e-MatriX (LAN)",
+            "nl": "e-MatriX (LAN)",
+            "de": "e-MatriX (LAN)",
+            "fr": "e-MatriX (réseau local)",
+            "it": "e-MatriX (LAN)",
+            "sv": "e-MatriX (LAN)",
+            "no": "e-MatriX (LAN)",
+            "es": "e-MatriX (LAN)",
+            "da": "e-MatriX (LAN)",
+            "ru": "e-MatriX (LAN)",
+            "pl": "e-MatriX (LAN)",
+            "ko": "e-MatriX (LAN)",
+            "ar": "e-MatriX (الشبكة المحلية)"
+          },
+          "class": "other",
+          "capabilities": [
+            "onoff",
+            "dim",
+            "measure_temperature",
+            "dimplex_mode",
+            "alarm_generic",
+            "measure_dimplex_errors",
+            "measure_dimplex_warnings",
+            "meter_dimplex_fire_hours",
+            "dimplex_maintenance_date",
+            "dimplex_connection_latency",
+            "dimplex_connection_last_ok",
+            "dimplex_connection_last_error",
+            "dimplex_connection_reconnects",
+            "dimplex_connection_errors",
+            "dimplex_observed_hours",
+            "dimplex_controller_standby_hours",
+            "dimplex_controller_since_service_hours",
+            "dimplex_maintenance_remaining",
+            "dimplex_thermostat_setpoint",
+            "dimplex_detected_features"
+          ],
+          "capabilitiesOptions": {
+            "dim": {
+              "title": {
+                "en": "Flame level",
+                "nl": "Vlamniveau",
+                "de": "Flammenstufe",
+                "fr": "Niveau des flammes",
+                "it": "Livello fiamma",
+                "sv": "Flamnivå",
+                "no": "Flammenivå",
+                "es": "Nivel de llama",
+                "da": "Flammeniveau",
+                "ru": "Уровень пламени",
+                "pl": "Poziom płomieni",
+                "ko": "불꽃 세기",
+                "ar": "مستوى اللهب"
+              },
+              "min": 0,
+              "max": 1,
+              "step": 0.25,
+              "preventInsights": false
+            },
+            "measure_temperature": {
+              "title": {
+                "en": "Room temperature",
+                "nl": "Kamertemperatuur",
+                "de": "Raumtemperatur",
+                "fr": "Température ambiante",
+                "it": "Temperatura ambiente",
+                "sv": "Rumstemperatur",
+                "no": "Romtemperatur",
+                "es": "Temperatura ambiente",
+                "da": "Rumtemperatur",
+                "ru": "Температура в помещении",
+                "pl": "Temperatura pokojowa",
+                "ko": "실내 온도",
+                "ar": "درجة حرارة الغرفة"
+              },
+              "preventInsights": false
+            },
+            "dimplex_mode": {
+              "preventInsights": true
+            },
+            "measure_dimplex_errors": {
+              "preventInsights": false
+            },
+            "measure_dimplex_warnings": {
+              "preventInsights": false
+            },
+            "meter_dimplex_fire_hours": {
+              "preventInsights": false
+            },
+            "dimplex_maintenance_date": {
+              "preventInsights": true
+            },
+            "dimplex_connection_latency": {
+              "preventInsights": false
+            },
+            "dimplex_connection_last_ok": {
+              "preventInsights": true
+            },
+            "dimplex_connection_last_error": {
+              "preventInsights": true
+            },
+            "dimplex_connection_reconnects": {
+              "preventInsights": false
+            },
+            "dimplex_connection_errors": {
+              "preventInsights": false
+            },
+            "dimplex_observed_hours": {
+              "preventInsights": false
+            },
+            "dimplex_controller_standby_hours": {
+              "preventInsights": false
+            },
+            "dimplex_controller_since_service_hours": {
+              "preventInsights": false
+            },
+            "dimplex_maintenance_remaining": {
+              "preventInsights": false
+            },
+            "dimplex_thermostat_setpoint": {
+              "preventInsights": true
+            },
+            "dimplex_detected_features": {
+              "preventInsights": true
+            }
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/drivers/dimplex_lan/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/drivers/dimplex_lan/assets/images/large.png",
           "platforms": [
             "local"
           ],
           "connectivity": [
             "lan"
           ],
-          "icon": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/drivers/mealplan/assets/icon.svg"
+          "icon": "https://apps.homeycdn.net/app/com.dimplex.ematrix/2/daea1166-6df2-417a-b9fa-adf63ea6d069/drivers/dimplex_lan/assets/icon.svg"
         }
       ],
       "flow": {
         "triggers": [
           {
-            "id": "todays_meal_changed",
+            "id": "connection_lost",
             "title": {
-              "en": "Today's meal changed",
-              "nl": "Het menu van vandaag is gewijzigd"
+              "en": "Connection to Dimplex was lost",
+              "nl": "Verbinding met Dimplex is verbroken",
+              "de": "Verbindung zu Dimplex unterbrochen",
+              "fr": "Connexion à Dimplex perdue",
+              "it": "Connessione a Dimplex persa",
+              "sv": "Anslutningen till Dimplex bröts",
+              "no": "Tilkoblingen til Dimplex ble brutt",
+              "es": "Se perdió la conexión con Dimplex",
+              "da": "Forbindelsen til Dimplex blev afbrudt",
+              "ru": "Соединение с Dimplex потеряно",
+              "pl": "Utracono połączenie z Dimplex",
+              "ko": "Dimplex 연결 끊김",
+              "ar": "انقطع الاتصال بـ Dimplex"
             },
             "titleFormatted": {
-              "en": "Today's [[meal]] changed",
-              "nl": "Het menu voor [[meal]] vandaag is gewijzigd"
+              "en": "Connection to Dimplex was lost",
+              "nl": "Verbinding met Dimplex is verbroken",
+              "de": "Verbindung zu Dimplex unterbrochen",
+              "fr": "Connexion à Dimplex perdue",
+              "it": "Connessione a Dimplex persa",
+              "sv": "Anslutningen till Dimplex bröts",
+              "no": "Tilkoblingen til Dimplex ble brutt",
+              "es": "Se perdió la conexión con Dimplex",
+              "da": "Forbindelsen til Dimplex blev afbrudt",
+              "ru": "Соединение с Dimplex потеряно",
+              "pl": "Utracono połączenie z Dimplex",
+              "ko": "Dimplex 연결 끊김",
+              "ar": "انقطع الاتصال بـ Dimplex"
             },
             "args": [
               {
-                "name": "meal",
-                "type": "dropdown",
+                "name": "device",
+                "type": "device",
                 "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
+                  "en": "Device",
+                  "nl": "Apparaat",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
                 },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  }
-                ]
-              },
+                "filter": "driver_id=dimplex_lan|dimplex_ble"
+              }
+            ]
+          },
+          {
+            "id": "connection_restored",
+            "title": {
+              "en": "Connection to Dimplex was restored",
+              "nl": "Verbinding met Dimplex is hersteld",
+              "de": "Verbindung zu Dimplex wiederhergestellt",
+              "fr": "Connexion à Dimplex rétablie",
+              "it": "Connessione a Dimplex ripristinata",
+              "sv": "Anslutningen till Dimplex återställdes",
+              "no": "Tilkoblingen til Dimplex ble gjenopprettet",
+              "es": "Se restableció la conexión con Dimplex",
+              "da": "Forbindelsen til Dimplex blev genoprettet",
+              "ru": "Соединение с Dimplex восстановлено",
+              "pl": "Przywrócono połączenie z Dimplex",
+              "ko": "Dimplex 연결 복구됨",
+              "ar": "استُعيد الاتصال بـ Dimplex"
+            },
+            "titleFormatted": {
+              "en": "Connection to Dimplex was restored",
+              "nl": "Verbinding met Dimplex is hersteld",
+              "de": "Verbindung zu Dimplex wiederhergestellt",
+              "fr": "Connexion à Dimplex rétablie",
+              "it": "Connessione a Dimplex ripristinata",
+              "sv": "Anslutningen till Dimplex återställdes",
+              "no": "Tilkoblingen til Dimplex ble gjenopprettet",
+              "es": "Se restableció la conexión con Dimplex",
+              "da": "Forbindelsen til Dimplex blev genoprettet",
+              "ru": "Соединение с Dimplex восстановлено",
+              "pl": "Przywrócono połączenie z Dimplex",
+              "ko": "Dimplex 연결 복구됨",
+              "ar": "استُعيد الاتصال بـ Dimplex"
+            },
+            "args": [
               {
                 "name": "device",
                 "type": "device",
-                "filter": "driver_id=mealplan"
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                },
+                "filter": "driver_id=dimplex_lan|dimplex_ble"
+              }
+            ]
+          },
+          {
+            "id": "dimplex_fault_detected",
+            "title": {
+              "en": "A new fireplace fault was detected",
+              "nl": "Er is een nieuwe haardstoring",
+              "de": "Neue Kaminstörung erkannt",
+              "fr": "Nouveau défaut du foyer détecté",
+              "it": "Rilevato un nuovo guasto al camino",
+              "sv": "Ett nytt fel upptäcktes i eldstaden",
+              "no": "En ny peisfeil ble oppdaget",
+              "es": "Se ha detectado un nuevo fallo",
+              "da": "Ny pejsfejl registreret",
+              "ru": "Обнаружена новая неисправность камина",
+              "pl": "Wykryto nową usterkę kominka",
+              "ko": "새 벽난로 오류 감지",
+              "ar": "تم اكتشاف عطل جديد في المدفأة"
+            },
+            "titleFormatted": {
+              "en": "A new fireplace fault was detected",
+              "nl": "Er is een nieuwe haardstoring",
+              "de": "Neue Kaminstörung erkannt",
+              "fr": "Nouveau défaut du foyer détecté",
+              "it": "Rilevato un nuovo guasto al camino",
+              "sv": "Ett nytt fel upptäcktes i eldstaden",
+              "no": "En ny peisfeil ble oppdaget",
+              "es": "Se ha detectado un nuevo fallo",
+              "da": "Ny pejsfejl registreret",
+              "ru": "Обнаружена новая неисправность камина",
+              "pl": "Wykryto nową usterkę kominka",
+              "ko": "새 벽난로 오류 감지",
+              "ar": "تم اكتشاف عطل جديد في المدفأة"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
+                "title": {
+                  "en": "Device",
+                  "nl": "Apparaat",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
               }
             ],
             "tokens": [
               {
-                "name": "name",
-                "type": "string",
+                "name": "error_count",
+                "type": "number",
                 "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "example": {
-                  "en": "Lasagna",
-                  "nl": "Lasagne"
+                  "en": "Number of faults",
+                  "nl": "Aantal storingen",
+                  "de": "Anzahl der Fehler",
+                  "fr": "Nombre de défauts",
+                  "it": "Numero di guasti",
+                  "sv": "Antal fel",
+                  "no": "Antall feil",
+                  "es": "Número de fallos",
+                  "da": "Antal fejl",
+                  "ru": "Количество неисправностей",
+                  "pl": "Liczba usterek",
+                  "ko": "오류 수",
+                  "ar": "عدد الأعطال"
                 }
-              },
+              }
+            ]
+          },
+          {
+            "id": "dimplex_warning_detected",
+            "title": {
+              "en": "A new fireplace warning was detected",
+              "nl": "Er is een nieuwe haardwaarschuwing",
+              "de": "Neue Kaminwarnung erkannt",
+              "fr": "Nouvel avertissement du foyer détecté",
+              "it": "Rilevato un nuovo avviso del camino",
+              "sv": "En ny varning upptäcktes i eldstaden",
+              "no": "En ny peisadvarsel ble oppdaget",
+              "es": "Se ha detectado un nuevo aviso",
+              "da": "Ny pejsadvarsel registreret",
+              "ru": "Обнаружено новое предупреждение камина",
+              "pl": "Wykryto nowe ostrzeżenie kominka",
+              "ko": "새 벽난로 경고 감지",
+              "ar": "تم اكتشاف تحذير جديد للمدفأة"
+            },
+            "titleFormatted": {
+              "en": "A new fireplace warning was detected",
+              "nl": "Er is een nieuwe haardwaarschuwing",
+              "de": "Neue Kaminwarnung erkannt",
+              "fr": "Nouvel avertissement du foyer détecté",
+              "it": "Rilevato un nuovo avviso del camino",
+              "sv": "En ny varning upptäcktes i eldstaden",
+              "no": "En ny peisadvarsel ble oppdaget",
+              "es": "Se ha detectado un nuevo aviso",
+              "da": "Ny pejsadvarsel registreret",
+              "ru": "Обнаружено новое предупреждение камина",
+              "pl": "Wykryto nowe ostrzeżenie kominka",
+              "ko": "새 벽난로 경고 감지",
+              "ar": "تم اكتشاف تحذير جديد للمدفأة"
+            },
+            "args": [
               {
-                "name": "prep_time",
-                "type": "number",
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
                 "title": {
-                  "en": "Prep time (minutes)",
-                  "nl": "Voorbereidingstijd (minuten)"
-                },
-                "example": 30
-              },
-              {
-                "name": "cook_time",
-                "type": "number",
-                "title": {
-                  "en": "Cooking time (minutes)",
-                  "nl": "Kooktijd (minuten)"
-                },
-                "example": 30
-              },
-              {
-                "name": "total_time",
-                "type": "number",
-                "title": {
-                  "en": "Total time (minutes)",
-                  "nl": "Totale tijd (minuten)"
-                },
-                "example": 30
+                  "en": "Device",
+                  "nl": "Apparaat",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
               }
             ],
-            "platforms": [
-              "local"
+            "tokens": [
+              {
+                "name": "warning_count",
+                "type": "number",
+                "title": {
+                  "en": "Number of warnings",
+                  "nl": "Aantal waarschuwingen",
+                  "de": "Anzahl der Warnungen",
+                  "fr": "Nombre d’avertissements",
+                  "it": "Numero di avvisi",
+                  "sv": "Antal varningar",
+                  "no": "Antall advarsler",
+                  "es": "Número de advertencias",
+                  "da": "Antal advarsler",
+                  "ru": "Количество предупреждений",
+                  "pl": "Liczba ostrzeżeń",
+                  "ko": "경고 수",
+                  "ar": "عدد التحذيرات"
+                }
+              }
+            ]
+          },
+          {
+            "id": "fireplace_state_changed",
+            "title": {
+              "en": "Fireplace turned on or off",
+              "nl": "Haard is aan- of uitgegaan",
+              "de": "Kamin ein- oder ausgeschaltet",
+              "fr": "Cheminée allumée ou éteinte",
+              "it": "Caminetto acceso o spento",
+              "sv": "Eldstaden slogs på eller av",
+              "no": "Peisen ble slått på eller av",
+              "es": "Chimenea encendida o apagada",
+              "da": "Pejsen blev tændt eller slukket",
+              "ru": "Камин включился или выключился",
+              "pl": "Kominek został włączony lub wyłączony",
+              "ko": "벽난로 켜짐 또는 꺼짐",
+              "ar": "تم تشغيل الموقد أو إيقافه"
+            },
+            "titleFormatted": {
+              "en": "Fireplace turned on or off",
+              "nl": "Haard is aan- of uitgegaan",
+              "de": "Kamin ein- oder ausgeschaltet",
+              "fr": "Cheminée allumée ou éteinte",
+              "it": "Caminetto acceso o spento",
+              "sv": "Eldstaden slogs på eller av",
+              "no": "Peisen ble slått på eller av",
+              "es": "Chimenea encendida o apagada",
+              "da": "Pejsen blev tændt eller slukket",
+              "ru": "Камин включился или выключился",
+              "pl": "Kominek został włączony lub wyłączony",
+              "ko": "벽난로 켜짐 또는 꺼짐",
+              "ar": "تم تشغيل الموقد أو إيقافه"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "is_on",
+                "type": "boolean",
+                "title": {
+                  "en": "On",
+                  "nl": "Aan",
+                  "de": "Ein",
+                  "fr": "Marche",
+                  "it": "Acceso",
+                  "sv": "På",
+                  "no": "På",
+                  "es": "Encendido",
+                  "da": "Til",
+                  "ru": "Вкл.",
+                  "pl": "Wł.",
+                  "ko": "켜짐",
+                  "ar": "تشغيل"
+                }
+              }
+            ]
+          },
+          {
+            "id": "water_low",
+            "title": {
+              "en": "Water level became low",
+              "nl": "Waterniveau is laag geworden",
+              "de": "Wasserstand wurde niedrig",
+              "fr": "Niveau d’eau devenu bas",
+              "it": "Livello acqua diventato basso",
+              "sv": "Vattennivån blev låg",
+              "no": "Vannivået ble lavt",
+              "es": "El nivel de agua bajó",
+              "da": "Vandstanden blev lav",
+              "ru": "Уровень воды стал низким",
+              "pl": "Poziom wody spadł",
+              "ko": "수위가 낮아짐",
+              "ar": "انخفض مستوى الماء"
+            },
+            "titleFormatted": {
+              "en": "Water level became low",
+              "nl": "Waterniveau is laag geworden",
+              "de": "Wasserstand wurde niedrig",
+              "fr": "Niveau d’eau devenu bas",
+              "it": "Livello acqua diventato basso",
+              "sv": "Vattennivån blev låg",
+              "no": "Vannivået ble lavt",
+              "es": "El nivel de agua bajó",
+              "da": "Vandstanden blev lav",
+              "ru": "Уровень воды стал низким",
+              "pl": "Poziom wody spadł",
+              "ko": "수위가 낮아짐",
+              "ar": "انخفض مستوى الماء"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ],
+            "tokens": [
+              {
+                "name": "level",
+                "type": "string",
+                "title": {
+                  "en": "Water level",
+                  "nl": "Waterniveau",
+                  "de": "Wasserstand",
+                  "fr": "Niveau d’eau",
+                  "it": "Livello acqua",
+                  "sv": "Vattennivå",
+                  "no": "Vannivå",
+                  "es": "Nivel de agua",
+                  "da": "Vandstand",
+                  "ru": "Уровень воды",
+                  "pl": "Poziom wody",
+                  "ko": "수위",
+                  "ar": "مستوى الماء"
+                }
+              }
             ]
           }
         ],
         "conditions": [
           {
-            "id": "meal_planned_today",
+            "id": "fireplace_is_on",
             "title": {
-              "en": "A meal is planned today",
-              "nl": "Er is een maaltijd gepland vandaag"
+              "en": "!{{The fireplace is on|Not: the fireplace is on}}",
+              "nl": "!{{De haard staat aan|Niet: de haard staat aan}}",
+              "de": "!{{Der Kamin ist eingeschaltet|Nicht: Der Kamin ist eingeschaltet}}",
+              "fr": "!{{La cheminée est allumée|Non : la cheminée est allumée}}",
+              "it": "!{{Il caminetto è acceso|Non: il caminetto è acceso}}",
+              "sv": "!{{Eldstaden är på|Inte: eldstaden är på}}",
+              "no": "!{{Peisen er på|Ikke: peisen er på}}",
+              "es": "!{{La chimenea está encendida|No: la chimenea está encendida}}",
+              "da": "!{{Pejsen er tændt|Ikke: pejsen er tændt}}",
+              "ru": "!{{Камин включён|Нет: камин включён}}",
+              "pl": "!{{Kominek jest włączony|Nie: kominek jest włączony}}",
+              "ko": "!{{벽난로가 켜져 있음|아님: 벽난로가 켜져 있음}}",
+              "ar": "!{{الموقد قيد التشغيل|لا: الموقد قيد التشغيل}}"
             },
             "titleFormatted": {
-              "en": "[[meal]] !{{is|isn't}} planned today",
-              "nl": "[[meal]] !{{is|is niet}} gepland voor vandaag"
+              "en": "!{{The fireplace is on|Not: the fireplace is on}}",
+              "nl": "!{{De haard staat aan|Niet: de haard staat aan}}",
+              "de": "!{{Der Kamin ist eingeschaltet|Nicht: Der Kamin ist eingeschaltet}}",
+              "fr": "!{{La cheminée est allumée|Non : la cheminée est allumée}}",
+              "it": "!{{Il caminetto è acceso|Non: il caminetto è acceso}}",
+              "sv": "!{{Eldstaden är på|Inte: eldstaden är på}}",
+              "no": "!{{Peisen er på|Ikke: peisen er på}}",
+              "es": "!{{La chimenea está encendida|No: la chimenea está encendida}}",
+              "da": "!{{Pejsen er tændt|Ikke: pejsen er tændt}}",
+              "ru": "!{{Камин включён|Нет: камин включён}}",
+              "pl": "!{{Kominek jest włączony|Nie: kominek jest włączony}}",
+              "ko": "!{{벽난로가 켜져 있음|아님: 벽난로가 켜져 있음}}",
+              "ar": "!{{الموقد قيد التشغيل|لا: الموقد قيد التشغيل}}"
             },
             "args": [
               {
-                "name": "meal",
-                "type": "dropdown",
-                "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "device",
                 "type": "device",
-                "filter": "driver_id=mealplan"
-              }
-            ],
-            "platforms": [
-              "local"
-            ]
-          },
-          {
-            "id": "meal_planned_tomorrow",
-            "title": {
-              "en": "A meal is planned tomorrow",
-              "nl": "Er is een maaltijd gepland morgen"
-            },
-            "titleFormatted": {
-              "en": "[[meal]] !{{is|isn't}} planned tomorrow",
-              "nl": "[[meal]] !{{is|is niet}} gepland voor morgen"
-            },
-            "args": [
-              {
-                "name": "meal",
-                "type": "dropdown",
-                "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  }
-                ]
-              },
-              {
                 "name": "device",
-                "type": "device",
-                "filter": "driver_id=mealplan"
-              }
-            ],
-            "platforms": [
-              "local"
-            ]
-          },
-          {
-            "id": "meal_takes_time",
-            "title": {
-              "en": "A meal takes longer or shorter than",
-              "nl": "Een maaltijd duurt langer of korter dan"
-            },
-            "titleFormatted": {
-              "en": "[[day]] [[meal]] takes [[comparison]] [[minutes]] minutes in total",
-              "nl": "[[meal]] [[day]] duurt [[comparison]] [[minutes]] minuten in totaal"
-            },
-            "hint": {
-              "en": "Uses the total time of the planned recipe. False when nothing is planned or the recipe has no time.",
-              "nl": "Gebruikt de totale tijd van het geplande recept. Onwaar als er niets gepland is of het recept geen tijd heeft."
-            },
-            "args": [
-              {
-                "name": "day",
-                "type": "dropdown",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
                 "title": {
-                  "en": "Day",
-                  "nl": "Dag"
-                },
-                "values": [
-                  {
-                    "id": "today",
-                    "label": {
-                      "en": "Today's",
-                      "nl": "vandaag"
-                    }
-                  },
-                  {
-                    "id": "tomorrow",
-                    "label": {
-                      "en": "Tomorrow's",
-                      "nl": "morgen"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "meal",
-                "type": "dropdown",
-                "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "comparison",
-                "type": "dropdown",
-                "title": {
-                  "en": "Comparison",
-                  "nl": "Vergelijking"
-                },
-                "values": [
-                  {
-                    "id": "more",
-                    "label": {
-                      "en": "more than",
-                      "nl": "langer dan"
-                    }
-                  },
-                  {
-                    "id": "less",
-                    "label": {
-                      "en": "less than",
-                      "nl": "korter dan"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "minutes",
-                "type": "number",
-                "title": {
-                  "en": "Minutes",
-                  "nl": "Minuten"
-                },
-                "min": 0,
-                "step": 5,
-                "placeholder": {
-                  "en": "45",
-                  "nl": "45"
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
                 }
-              },
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=mealplan"
               }
-            ],
-            "platforms": [
-              "local"
+            ]
+          },
+          {
+            "id": "water_low",
+            "title": {
+              "en": "!{{Water level is low|Not: water level is low}}",
+              "nl": "!{{Waterniveau is laag|Niet: waterniveau is laag}}",
+              "de": "!{{Wasserstand ist niedrig|Nicht: Wasserstand ist niedrig}}",
+              "fr": "!{{Le niveau d’eau est bas|Non : le niveau d’eau est bas}}",
+              "it": "!{{Il livello acqua è basso|Non: il livello acqua è basso}}",
+              "sv": "!{{Vattennivån är låg|Inte: vattennivån är låg}}",
+              "no": "!{{Vannivået er lavt|Ikke: vannivået er lavt}}",
+              "es": "!{{El nivel de agua es bajo|No: el nivel de agua es bajo}}",
+              "da": "!{{Vandstanden er lav|Ikke: vandstanden er lav}}",
+              "ru": "!{{Низкий уровень воды|Нет: низкий уровень воды}}",
+              "pl": "!{{Poziom wody jest niski|Nie: poziom wody jest niski}}",
+              "ko": "!{{수위가 낮음|아님: 수위가 낮음}}",
+              "ar": "!{{مستوى الماء منخفض|لا: مستوى الماء منخفض}}"
+            },
+            "titleFormatted": {
+              "en": "!{{Water level is low|Not: water level is low}}",
+              "nl": "!{{Waterniveau is laag|Niet: waterniveau is laag}}",
+              "de": "!{{Wasserstand ist niedrig|Nicht: Wasserstand ist niedrig}}",
+              "fr": "!{{Le niveau d’eau est bas|Non : le niveau d’eau est bas}}",
+              "it": "!{{Il livello acqua è basso|Non: il livello acqua è basso}}",
+              "sv": "!{{Vattennivån är låg|Inte: vattennivån är låg}}",
+              "no": "!{{Vannivået er lavt|Ikke: vannivået er lavt}}",
+              "es": "!{{El nivel de agua es bajo|No: el nivel de agua es bajo}}",
+              "da": "!{{Vandstanden er lav|Ikke: vandstanden er lav}}",
+              "ru": "!{{Низкий уровень воды|Нет: низкий уровень воды}}",
+              "pl": "!{{Poziom wody jest niski|Nie: poziom wody jest niski}}",
+              "ko": "!{{수위가 낮음|아님: 수위가 낮음}}",
+              "ar": "!{{مستوى الماء منخفض|لا: مستوى الماء منخفض}}"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
             ]
           }
         ],
         "actions": [
           {
-            "id": "add_random_recipe_to_meal_plan",
+            "id": "apply_local_mood_preset",
             "title": {
-              "en": "Add a random recipe to the meal plan",
-              "nl": "Voeg een willekeurig recept toe aan de maaltijdplanning"
+              "en": "Apply saved Homey mood slot",
+              "nl": "Activeer opgeslagen Homey-mood",
+              "de": "Gespeichertes Homey-Lichtprofil anwenden",
+              "fr": "Appliquer un profil d’ambiance Homey",
+              "it": "Applica profilo atmosfera Homey salvato",
+              "sv": "Använd sparad Homey-stämning",
+              "no": "Bruk lagret Homey-stemning",
+              "es": "Aplicar perfil ambiental guardado",
+              "da": "Anvend gemt Homey-stemning",
+              "ru": "Применить сохранённый профиль Homey",
+              "pl": "Zastosuj zapisany profil nastroju Homey",
+              "ko": "저장된 Homey 무드 적용",
+              "ar": "تطبيق أجواء Homey المحفوظة"
             },
             "titleFormatted": {
-              "en": "Plan a random [[meal]] [[day]]",
-              "nl": "Plan een willekeurig [[meal]] [[day]]"
-            },
-            "hint": {
-              "en": "Mealie picks the recipe, following the rules of your meal plan.",
-              "nl": "Mealie kiest het recept volgens de regels van je maaltijdplanning."
+              "nl": "Activeer Homey-sfeerprofiel [[slot]]",
+              "en": "Apply Homey mood profile [[slot]]",
+              "de": "Homey-Lichtprofil [[slot]] anwenden",
+              "fr": "Appliquer le profil Homey [[slot]]",
+              "it": "Applica profilo Homey [[slot]]",
+              "sv": "Använd Homey-profil [[slot]]",
+              "no": "Bruk Homey-profil [[slot]]",
+              "es": "Aplicar perfil Homey [[slot]]",
+              "da": "Anvend Homey-profil [[slot]]",
+              "ru": "Применить профиль Homey [[slot]]",
+              "pl": "Zastosuj profil Homey [[slot]]",
+              "ko": "Homey 무드 프로필 [[slot]] 적용",
+              "ar": "تطبيق أجواء Homey [[slot]]"
             },
             "args": [
-              {
-                "name": "meal",
-                "type": "dropdown",
-                "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  },
-                  {
-                    "id": "side",
-                    "label": {
-                      "en": "Side dish",
-                      "nl": "Bijgerecht"
-                    }
-                  },
-                  {
-                    "id": "snack",
-                    "label": {
-                      "en": "Snack",
-                      "nl": "Snack"
-                    }
-                  },
-                  {
-                    "id": "drink",
-                    "label": {
-                      "en": "Drink",
-                      "nl": "Drankje"
-                    }
-                  },
-                  {
-                    "id": "dessert",
-                    "label": {
-                      "en": "Dessert",
-                      "nl": "Dessert"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "day",
-                "type": "dropdown",
-                "title": {
-                  "en": "Day",
-                  "nl": "Dag"
-                },
-                "values": [
-                  {
-                    "id": "0",
-                    "label": {
-                      "en": "Today",
-                      "nl": "Vandaag"
-                    }
-                  },
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "Tomorrow",
-                      "nl": "Morgen"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "In 2 days",
-                      "nl": "Over 2 dagen"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "In 3 days",
-                      "nl": "Over 3 dagen"
-                    }
-                  },
-                  {
-                    "id": "7",
-                    "label": {
-                      "en": "In a week",
-                      "nl": "Over een week"
-                    }
-                  }
-                ]
-              },
               {
                 "name": "device",
                 "type": "device",
-                "filter": "driver_id=mealplan"
-              }
-            ],
-            "platforms": [
-              "local"
-            ]
-          },
-          {
-            "id": "add_recipe_to_meal_plan",
-            "title": {
-              "en": "Add a recipe to the meal plan",
-              "nl": "Voeg een recept toe aan de maaltijdplanning"
-            },
-            "titleFormatted": {
-              "en": "Plan [[recipe]] as [[meal]] [[day]]",
-              "nl": "Plan [[recipe]] als [[meal]] [[day]]"
-            },
-            "args": [
-              {
-                "name": "recipe",
-                "type": "autocomplete",
+                "filter": "driver_id=dimplex_ble",
                 "title": {
-                  "en": "Recipe",
-                  "nl": "Recept"
-                },
-                "placeholder": {
-                  "en": "Search a recipe",
-                  "nl": "Zoek een recept"
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
                 }
               },
               {
-                "name": "meal",
-                "type": "dropdown",
+                "name": "slot",
+                "type": "number",
+                "min": 1,
+                "max": 3,
                 "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  },
-                  {
-                    "id": "side",
-                    "label": {
-                      "en": "Side dish",
-                      "nl": "Bijgerecht"
-                    }
-                  },
-                  {
-                    "id": "snack",
-                    "label": {
-                      "en": "Snack",
-                      "nl": "Snack"
-                    }
-                  },
-                  {
-                    "id": "drink",
-                    "label": {
-                      "en": "Drink",
-                      "nl": "Drankje"
-                    }
-                  },
-                  {
-                    "id": "dessert",
-                    "label": {
-                      "en": "Dessert",
-                      "nl": "Dessert"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "day",
-                "type": "dropdown",
-                "title": {
-                  "en": "Day",
-                  "nl": "Dag"
-                },
-                "values": [
-                  {
-                    "id": "0",
-                    "label": {
-                      "en": "Today",
-                      "nl": "Vandaag"
-                    }
-                  },
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "Tomorrow",
-                      "nl": "Morgen"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "In 2 days",
-                      "nl": "Over 2 dagen"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "In 3 days",
-                      "nl": "Over 3 dagen"
-                    }
-                  },
-                  {
-                    "id": "7",
-                    "label": {
-                      "en": "In a week",
-                      "nl": "Over een week"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=mealplan"
+                  "en": "Slot (1–3)",
+                  "nl": "Slot (1–3)",
+                  "de": "Speicherplatz (1–3)",
+                  "fr": "Emplacement (1–3)",
+                  "it": "Slot (1–3)",
+                  "sv": "Plats (1–3)",
+                  "no": "Plass (1–3)",
+                  "es": "Ranura (1–3)",
+                  "da": "Plads (1–3)",
+                  "ru": "Слот (1–3)",
+                  "pl": "Slot (1–3)",
+                  "ko": "슬롯 (1–3)",
+                  "ar": "الخانة (1–3)"
+                }
               }
-            ],
-            "platforms": [
-              "local"
             ]
           },
           {
-            "id": "add_text_to_meal_plan",
+            "id": "lighting_off",
             "title": {
-              "en": "Add a note to the meal plan",
-              "nl": "Voeg een notitie toe aan de maaltijdplanning"
+              "en": "Turn mood lighting off",
+              "nl": "Schakel sfeerverlichting uit",
+              "de": "Stimmungslicht ausschalten",
+              "fr": "Éteindre l’éclairage d’ambiance",
+              "it": "Spegni luce d’atmosfera",
+              "sv": "Släck stämningsljuset",
+              "no": "Slå av stemningslyset",
+              "es": "Apagar iluminación ambiental",
+              "da": "Sluk stemningslys",
+              "ru": "Выключить подсветку",
+              "pl": "Wyłącz oświetlenie nastrojowe",
+              "ko": "무드 조명 끄기",
+              "ar": "إطفاء الإضاءة المزاجية"
             },
             "titleFormatted": {
-              "en": "Plan [[text]] as [[meal]] [[day]]",
-              "nl": "Plan [[text]] als [[meal]] [[day]]"
+              "nl": "Schakel sfeerverlichting uit",
+              "en": "Turn mood lighting off",
+              "de": "Stimmungslicht ausschalten",
+              "fr": "Éteindre l’éclairage d’ambiance",
+              "it": "Spegni luce d’atmosfera",
+              "sv": "Släck stämningsljuset",
+              "no": "Slå av stemningslyset",
+              "es": "Apagar iluminación ambiental",
+              "da": "Sluk stemningslys",
+              "ru": "Выключить подсветку",
+              "pl": "Wyłącz oświetlenie nastrojowe",
+              "ko": "무드 조명 끄기",
+              "ar": "إطفاء الإضاءة المزاجية"
             },
             "args": [
               {
-                "name": "text",
-                "type": "text",
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
                 "title": {
-                  "en": "Text",
-                  "nl": "Tekst"
-                },
-                "placeholder": {
-                  "en": "Takeaway",
-                  "nl": "Afhaalmaaltijd"
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ]
+          },
+          {
+            "id": "lighting_on",
+            "title": {
+              "en": "Turn mood lighting on",
+              "nl": "Schakel sfeerverlichting aan",
+              "de": "Stimmungslicht einschalten",
+              "fr": "Allumer l’éclairage d’ambiance",
+              "it": "Accendi luce d’atmosfera",
+              "sv": "Tänd stämningsljuset",
+              "no": "Slå på stemningslyset",
+              "es": "Encender iluminación ambiental",
+              "da": "Tænd stemningslys",
+              "ru": "Включить подсветку",
+              "pl": "Włącz oświetlenie nastrojowe",
+              "ko": "무드 조명 켜기",
+              "ar": "تشغيل الإضاءة المزاجية"
+            },
+            "titleFormatted": {
+              "nl": "Schakel sfeerverlichting aan",
+              "en": "Turn mood lighting on",
+              "de": "Stimmungslicht einschalten",
+              "fr": "Allumer l’éclairage d’ambiance",
+              "it": "Accendi luce d’atmosfera",
+              "sv": "Tänd stämningsljuset",
+              "no": "Slå på stemningslyset",
+              "es": "Encender iluminación ambiental",
+              "da": "Tænd stemningslys",
+              "ru": "Включить подсветку",
+              "pl": "Włącz oświetlenie nastrojowe",
+              "ko": "무드 조명 켜기",
+              "ar": "تشغيل الإضاءة المزاجية"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ]
+          },
+          {
+            "id": "poll_status",
+            "title": {
+              "en": "Refresh e-MatriX status",
+              "nl": "Vernieuw e-MatriX-status",
+              "de": "e-MatriX-Status aktualisieren",
+              "fr": "Actualiser l’état e-MatriX",
+              "it": "Aggiorna stato e-MatriX",
+              "sv": "Uppdatera e-MatriX-status",
+              "no": "Oppdater e-MatriX-status",
+              "es": "Actualizar estado e-MatriX",
+              "da": "Opdater e-MatriX-status",
+              "ru": "Обновить состояние e-MatriX",
+              "pl": "Odśwież stan e-MatriX",
+              "ko": "e-MatriX 상태 새로고침",
+              "ar": "تحديث حالة e-MatriX"
+            },
+            "titleFormatted": {
+              "en": "Refresh e-MatriX status",
+              "nl": "Vernieuw e-MatriX-status",
+              "de": "e-MatriX-Status aktualisieren",
+              "fr": "Actualiser l’état e-MatriX",
+              "it": "Aggiorna stato e-MatriX",
+              "sv": "Uppdatera e-MatriX-status",
+              "no": "Oppdater e-MatriX-status",
+              "es": "Actualizar estado e-MatriX",
+              "da": "Opdater e-MatriX-status",
+              "ru": "Обновить состояние e-MatriX",
+              "pl": "Odśwież stan e-MatriX",
+              "ko": "e-MatriX 상태 새로고침",
+              "ar": "تحديث حالة e-MatriX"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ]
+          },
+          {
+            "id": "read_mood_snapshot",
+            "title": {
+              "en": "Read Dimplex My Mood hardware zones",
+              "nl": "Dimplex My Mood-lichtzones uitlezen",
+              "de": "Dimplex My Mood-Hardwarezonen auslesen",
+              "fr": "Lire les zones matérielles My Mood",
+              "it": "Leggi zone hardware My Mood",
+              "sv": "Läs My Mood-hårdvaruzoner",
+              "no": "Les My Mood-maskinvaresoner",
+              "es": "Leer zonas de hardware My Mood",
+              "da": "Læs My Mood-hardwarezoner",
+              "ru": "Прочитать аппаратные зоны My Mood",
+              "pl": "Odczytaj strefy sprzętowe My Mood",
+              "ko": "My Mood 하드웨어 영역 읽기",
+              "ar": "قراءة مناطق أجهزة My Mood"
+            },
+            "titleFormatted": {
+              "en": "Read Dimplex My Mood hardware zones",
+              "nl": "Dimplex My Mood-lichtzones uitlezen",
+              "de": "Dimplex My Mood-Hardwarezonen auslesen",
+              "fr": "Lire les zones matérielles My Mood",
+              "it": "Leggi zone hardware My Mood",
+              "sv": "Läs My Mood-hårdvaruzoner",
+              "no": "Les My Mood-maskinvaresoner",
+              "es": "Leer zonas de hardware My Mood",
+              "da": "Læs My Mood-hardwarezoner",
+              "ru": "Прочитать аппаратные зоны My Mood",
+              "pl": "Odczytaj strefy sprzętowe My Mood",
+              "ko": "My Mood 하드웨어 영역 읽기",
+              "ar": "قراءة مناطق أجهزة My Mood"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ]
+          },
+          {
+            "id": "rescan_features",
+            "title": {
+              "nl": "Controleer Dimplex-accessoires opnieuw",
+              "en": "Rescan Dimplex accessories",
+              "de": "Dimplex-Zubehör erneut erkennen",
+              "fr": "Rechercher à nouveau les accessoires Dimplex",
+              "it": "Rileva di nuovo accessori Dimplex",
+              "sv": "Sök efter Dimplex-tillbehör igen",
+              "no": "Søk etter Dimplex-tilbehør på nytt",
+              "es": "Buscar de nuevo accesorios Dimplex",
+              "da": "Søg efter Dimplex-tilbehør igen",
+              "ru": "Повторно обнаружить аксессуары Dimplex",
+              "pl": "Wykryj ponownie akcesoria Dimplex",
+              "ko": "Dimplex 액세서리 다시 검색",
+              "ar": "إعادة اكتشاف ملحقات Dimplex"
+            },
+            "titleFormatted": {
+              "nl": "Controleer Dimplex-accessoires opnieuw",
+              "en": "Rescan Dimplex accessories",
+              "de": "Dimplex-Zubehör erneut erkennen",
+              "fr": "Rechercher à nouveau les accessoires Dimplex",
+              "it": "Rileva di nuovo accessori Dimplex",
+              "sv": "Sök efter Dimplex-tillbehör igen",
+              "no": "Søk etter Dimplex-tilbehør på nytt",
+              "es": "Buscar de nuevo accesorios Dimplex",
+              "da": "Søg efter Dimplex-tilbehør igen",
+              "ru": "Повторно обнаружить аксессуары Dimplex",
+              "pl": "Wykryj ponownie akcesoria Dimplex",
+              "ko": "Dimplex 액세서리 다시 검색",
+              "ar": "إعادة اكتشاف ملحقات Dimplex"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              }
+            ]
+          },
+          {
+            "id": "save_local_mood_preset",
+            "title": {
+              "en": "Save Homey mood snapshot to slot",
+              "nl": "Bewaar Homey-mood in slot",
+              "de": "Homey-Lichtprofil in Speicherplatz sichern",
+              "fr": "Enregistrer le profil d’ambiance Homey dans un emplacement",
+              "it": "Salva profilo atmosfera Homey in uno slot",
+              "sv": "Spara Homey-stämning på en plats",
+              "no": "Lagre Homey-stemning i en plass",
+              "es": "Guardar ambiente Homey en ranura",
+              "da": "Gem Homey-stemning på en plads",
+              "ru": "Сохранить профиль Homey в слот",
+              "pl": "Zapisz profil nastroju Homey w slocie",
+              "ko": "Homey 무드를 슬롯에 저장",
+              "ar": "حفظ أجواء Homey في خانة"
+            },
+            "titleFormatted": {
+              "nl": "Sla Homey-sfeerprofiel op in slot [[slot]]",
+              "en": "Save Homey mood profile to slot [[slot]]",
+              "de": "Homey-Lichtprofil in Speicherplatz [[slot]] sichern",
+              "fr": "Enregistrer le profil Homey dans l’emplacement [[slot]]",
+              "it": "Salva profilo Homey nello slot [[slot]]",
+              "sv": "Spara Homey-profil på plats [[slot]]",
+              "no": "Lagre Homey-profil i plass [[slot]]",
+              "es": "Guardar perfil Homey en ranura [[slot]]",
+              "da": "Gem Homey-profil på plads [[slot]]",
+              "ru": "Сохранить профиль Homey в слот [[slot]]",
+              "pl": "Zapisz profil Homey w slocie [[slot]]",
+              "ko": "Homey 무드를 슬롯 [[slot]]에 저장",
+              "ar": "حفظ أجواء Homey في الخانة [[slot]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
                 }
               },
               {
-                "name": "meal",
-                "type": "dropdown",
+                "name": "slot",
+                "type": "number",
+                "min": 1,
+                "max": 3,
                 "title": {
-                  "en": "Meal",
-                  "nl": "Maaltijd"
-                },
-                "values": [
-                  {
-                    "id": "breakfast",
-                    "label": {
-                      "en": "Breakfast",
-                      "nl": "Ontbijt"
-                    }
-                  },
-                  {
-                    "id": "lunch",
-                    "label": {
-                      "en": "Lunch",
-                      "nl": "Lunch"
-                    }
-                  },
-                  {
-                    "id": "dinner",
-                    "label": {
-                      "en": "Dinner",
-                      "nl": "Avondeten"
-                    }
-                  },
-                  {
-                    "id": "side",
-                    "label": {
-                      "en": "Side dish",
-                      "nl": "Bijgerecht"
-                    }
-                  },
-                  {
-                    "id": "snack",
-                    "label": {
-                      "en": "Snack",
-                      "nl": "Snack"
-                    }
-                  },
-                  {
-                    "id": "drink",
-                    "label": {
-                      "en": "Drink",
-                      "nl": "Drankje"
-                    }
-                  },
-                  {
-                    "id": "dessert",
-                    "label": {
-                      "en": "Dessert",
-                      "nl": "Dessert"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "day",
-                "type": "dropdown",
-                "title": {
-                  "en": "Day",
-                  "nl": "Dag"
-                },
-                "values": [
-                  {
-                    "id": "0",
-                    "label": {
-                      "en": "Today",
-                      "nl": "Vandaag"
-                    }
-                  },
-                  {
-                    "id": "1",
-                    "label": {
-                      "en": "Tomorrow",
-                      "nl": "Morgen"
-                    }
-                  },
-                  {
-                    "id": "2",
-                    "label": {
-                      "en": "In 2 days",
-                      "nl": "Over 2 dagen"
-                    }
-                  },
-                  {
-                    "id": "3",
-                    "label": {
-                      "en": "In 3 days",
-                      "nl": "Over 3 dagen"
-                    }
-                  },
-                  {
-                    "id": "7",
-                    "label": {
-                      "en": "In a week",
-                      "nl": "Over een week"
-                    }
-                  }
-                ]
-              },
-              {
-                "name": "device",
-                "type": "device",
-                "filter": "driver_id=mealplan"
+                  "en": "Slot (1–3)",
+                  "nl": "Slot (1–3)",
+                  "de": "Speicherplatz (1–3)",
+                  "fr": "Emplacement (1–3)",
+                  "it": "Slot (1–3)",
+                  "sv": "Plats (1–3)",
+                  "no": "Plass (1–3)",
+                  "es": "Ranura (1–3)",
+                  "da": "Plads (1–3)",
+                  "ru": "Слот (1–3)",
+                  "pl": "Slot (1–3)",
+                  "ko": "슬롯 (1–3)",
+                  "ar": "الخانة (1–3)"
+                }
               }
-            ],
-            "platforms": [
-              "local"
             ]
           },
           {
-            "id": "sync_now",
+            "id": "set_flame_level",
             "title": {
-              "en": "Refresh from Mealie",
-              "nl": "Vernieuwen vanuit Mealie"
+              "en": "Set flame level to [[level]]",
+              "nl": "Stel vlamniveau in op [[level]]",
+              "de": "Flammenstufe auf [[level]] setzen",
+              "fr": "Régler le niveau des flammes sur [[level]]",
+              "it": "Imposta livello fiamma a [[level]]",
+              "sv": "Ställ in flamnivå på [[level]]",
+              "no": "Sett flammenivå til [[level]]",
+              "es": "Ajustar nivel de llama a [[level]]",
+              "da": "Indstil flammeniveau til [[level]]",
+              "ru": "Установить уровень пламени [[level]]",
+              "pl": "Ustaw poziom płomieni na [[level]]",
+              "ko": "불꽃 세기를 [[level]](으)로 설정",
+              "ar": "ضبط مستوى اللهب على [[level]]"
             },
             "titleFormatted": {
-              "en": "Refresh from Mealie",
-              "nl": "Vernieuwen vanuit Mealie"
+              "en": "Set flame level to [[level]]",
+              "nl": "Stel vlamniveau in op [[level]]",
+              "de": "Flammenstufe auf [[level]] setzen",
+              "fr": "Régler le niveau des flammes sur [[level]]",
+              "it": "Imposta livello fiamma a [[level]]",
+              "sv": "Ställ in flamnivå på [[level]]",
+              "no": "Sett flammenivå til [[level]]",
+              "es": "Ajustar nivel de llama a [[level]]",
+              "da": "Indstil flammeniveau til [[level]]",
+              "ru": "Установить уровень пламени [[level]]",
+              "pl": "Ustaw poziom płomieni na [[level]]",
+              "ko": "불꽃 세기를 [[level]](으)로 설정",
+              "ar": "ضبط مستوى اللهب على [[level]]"
+            },
+            "args": [
+              {
+                "type": "device",
+                "name": "device",
+                "filter": "driver_id=dimplex_lan|dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              },
+              {
+                "type": "number",
+                "name": "level",
+                "min": 0,
+                "max": 4
+              }
+            ]
+          },
+          {
+            "id": "set_light_zone_intensity",
+            "title": {
+              "nl": "Stel lichtintensiteit of volume in",
+              "en": "Set lighting intensity or volume",
+              "de": "Lichtintensität oder Lautstärke einstellen",
+              "fr": "Régler l’intensité lumineuse ou le volume",
+              "it": "Imposta intensità luce o volume",
+              "sv": "Ställ in ljusstyrka eller volym",
+              "no": "Still inn lysstyrke eller volum",
+              "es": "Ajustar intensidad de luz o volumen",
+              "da": "Indstil lysstyrke eller lydstyrke",
+              "ru": "Установить яркость или громкость",
+              "pl": "Ustaw jasność lub głośność",
+              "ko": "조명 밝기 또는 음량 설정",
+              "ar": "ضبط شدة الإضاءة أو مستوى الصوت"
+            },
+            "titleFormatted": {
+              "en": "Set [[zone]] to [[value]]%",
+              "nl": "Zet [[zone]] op [[value]]%",
+              "de": "[[zone]] auf [[value]] % setzen",
+              "fr": "Régler [[zone]] sur [[value]] %",
+              "it": "Imposta [[zone]] a [[value]]%",
+              "sv": "Ställ in [[zone]] på [[value]] %",
+              "no": "Sett [[zone]] til [[value]] %",
+              "es": "Ajustar [[zone]] al [[value]] %",
+              "da": "Indstil [[zone]] til [[value]] %",
+              "ru": "Установить [[zone]] на [[value]] %",
+              "pl": "Ustaw [[zone]] na [[value]]%",
+              "ko": "[[zone]]을(를) [[value]]%로 설정",
+              "ar": "ضبط [[zone]] على [[value]]%"
             },
             "args": [
               {
                 "name": "device",
                 "type": "device",
-                "filter": "driver_id=mealplan"
+                "filter": "driver_id=dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              },
+              {
+                "name": "zone",
+                "type": "dropdown",
+                "values": [
+                  {
+                    "id": "bed",
+                    "title": {
+                      "en": "Bed light",
+                      "nl": "Bodemverlichting",
+                      "de": "Glutbett-Beleuchtung",
+                      "fr": "Éclairage du lit de braises",
+                      "it": "Luce letto braci",
+                      "sv": "Glödbäddsljus",
+                      "no": "Glørlys",
+                      "es": "Luz de brasas",
+                      "da": "Glødebelysning",
+                      "ru": "Подсветка углей",
+                      "pl": "Oświetlenie żaru",
+                      "ko": "장작 받침대 조명",
+                      "ar": "إضاءة الجمر"
+                    }
+                  },
+                  {
+                    "id": "spot",
+                    "title": {
+                      "en": "Spotlight",
+                      "nl": "Spotverlichting",
+                      "de": "Spotlicht",
+                      "fr": "Projecteur",
+                      "it": "Faretto",
+                      "sv": "Spotlight",
+                      "no": "Spotlys",
+                      "es": "Foco",
+                      "da": "Spotlys",
+                      "ru": "Точечный светильник",
+                      "pl": "Reflektor",
+                      "ko": "스포트라이트",
+                      "ar": "الإضاءة الموضعية"
+                    }
+                  },
+                  {
+                    "id": "strip1",
+                    "title": {
+                      "en": "Strip 1",
+                      "nl": "Strip 1",
+                      "de": "Streifen 1",
+                      "fr": "Bande 1",
+                      "it": "Striscia 1",
+                      "sv": "Ljuslist 1",
+                      "no": "Lysstripe 1",
+                      "es": "Tira 1",
+                      "da": "Lysstribe 1",
+                      "ru": "Лента 1",
+                      "pl": "Taśma 1",
+                      "ko": "스트립 1",
+                      "ar": "الشريط 1"
+                    }
+                  },
+                  {
+                    "id": "strip2",
+                    "title": {
+                      "en": "Strip 2",
+                      "nl": "Strip 2",
+                      "de": "Streifen 2",
+                      "fr": "Bande 2",
+                      "it": "Striscia 2",
+                      "sv": "Ljuslist 2",
+                      "no": "Lysstripe 2",
+                      "es": "Tira 2",
+                      "da": "Lysstribe 2",
+                      "ru": "Лента 2",
+                      "pl": "Taśma 2",
+                      "ko": "스트립 2",
+                      "ar": "الشريط 2"
+                    }
+                  },
+                  {
+                    "id": "strip3",
+                    "title": {
+                      "en": "Strip 3",
+                      "nl": "Strip 3",
+                      "de": "Streifen 3",
+                      "fr": "Bande 3",
+                      "it": "Striscia 3",
+                      "sv": "Ljuslist 3",
+                      "no": "Lysstripe 3",
+                      "es": "Tira 3",
+                      "da": "Lysstribe 3",
+                      "ru": "Лента 3",
+                      "pl": "Taśma 3",
+                      "ko": "스트립 3",
+                      "ar": "الشريط 3"
+                    }
+                  },
+                  {
+                    "id": "strip4",
+                    "title": {
+                      "en": "Strip 4",
+                      "nl": "Strip 4",
+                      "de": "Streifen 4",
+                      "fr": "Bande 4",
+                      "it": "Striscia 4",
+                      "sv": "Ljuslist 4",
+                      "no": "Lysstripe 4",
+                      "es": "Tira 4",
+                      "da": "Lysstribe 4",
+                      "ru": "Лента 4",
+                      "pl": "Taśma 4",
+                      "ko": "스트립 4",
+                      "ar": "الشريط 4"
+                    }
+                  },
+                  {
+                    "id": "audio",
+                    "title": {
+                      "en": "Audio volume",
+                      "nl": "Geluidsvolume",
+                      "de": "Audiolautstärke",
+                      "fr": "Volume audio",
+                      "it": "Volume audio",
+                      "sv": "Ljudvolym",
+                      "no": "Lydvolum",
+                      "es": "Volumen de audio",
+                      "da": "Lydstyrke",
+                      "ru": "Громкость звука",
+                      "pl": "Głośność dźwięku",
+                      "ko": "오디오 음량",
+                      "ar": "مستوى الصوت"
+                    }
+                  }
+                ],
+                "title": {
+                  "en": "Zone",
+                  "nl": "Zone",
+                  "de": "Zone",
+                  "fr": "Zone",
+                  "it": "Zona",
+                  "sv": "Zon",
+                  "no": "Sone",
+                  "es": "Zona",
+                  "da": "Zone",
+                  "ru": "Зона",
+                  "pl": "Strefa",
+                  "ko": "영역",
+                  "ar": "المنطقة"
+                }
+              },
+              {
+                "name": "value",
+                "type": "number",
+                "min": 0,
+                "max": 100,
+                "title": {
+                  "nl": "Niveau (%)",
+                  "en": "Level (%)",
+                  "de": "Stufe (%)",
+                  "fr": "Niveau (%)",
+                  "it": "Livello (%)",
+                  "sv": "Nivå (%)",
+                  "no": "Nivå (%)",
+                  "es": "Nivel (%)",
+                  "da": "Niveau (%)",
+                  "ru": "Уровень (%)",
+                  "pl": "Poziom (%)",
+                  "ko": "수준 (%)",
+                  "ar": "المستوى (%)"
+                }
               }
-            ],
-            "platforms": [
-              "local"
+            ]
+          },
+          {
+            "id": "set_mood_id",
+            "title": {
+              "en": "Choose Dimplex My Mood ID",
+              "nl": "Dimplex My Mood-ID kiezen",
+              "de": "Dimplex My Mood-ID auswählen",
+              "fr": "Choisir l’ID My Mood de Dimplex",
+              "it": "Scegli ID My Mood Dimplex",
+              "sv": "Välj Dimplex My Mood-ID",
+              "no": "Velg Dimplex My Mood-ID",
+              "es": "Elegir ID My Mood de Dimplex",
+              "da": "Vælg Dimplex My Mood-id",
+              "ru": "Выбрать ID My Mood Dimplex",
+              "pl": "Wybierz ID My Mood Dimplex",
+              "ko": "Dimplex My Mood ID 선택",
+              "ar": "اختيار معرّف Dimplex My Mood"
+            },
+            "titleFormatted": {
+              "en": "Select My Mood ID [[mood_id]]",
+              "nl": "Kies My Mood-ID [[mood_id]]",
+              "de": "My Mood-ID [[mood_id]] wählen",
+              "fr": "Sélectionner l’ID My Mood [[mood_id]]",
+              "it": "Seleziona ID My Mood [[mood_id]]",
+              "sv": "Välj My Mood-ID [[mood_id]]",
+              "no": "Velg My Mood-ID [[mood_id]]",
+              "es": "Seleccionar ID My Mood [[mood_id]]",
+              "da": "Vælg My Mood-id [[mood_id]]",
+              "ru": "Выбрать ID My Mood [[mood_id]]",
+              "pl": "Wybierz ID My Mood [[mood_id]]",
+              "ko": "My Mood ID [[mood_id]] 선택",
+              "ar": "اختيار معرّف My Mood [[mood_id]]"
+            },
+            "args": [
+              {
+                "name": "device",
+                "type": "device",
+                "filter": "driver_id=dimplex_ble",
+                "title": {
+                  "nl": "Apparaat",
+                  "en": "Device",
+                  "de": "Gerät",
+                  "fr": "Appareil",
+                  "it": "Dispositivo",
+                  "sv": "Enhet",
+                  "no": "Enhet",
+                  "es": "Dispositivo",
+                  "da": "Enhed",
+                  "ru": "Устройство",
+                  "pl": "Urządzenie",
+                  "ko": "기기",
+                  "ar": "الجهاز"
+                }
+              },
+              {
+                "name": "mood_id",
+                "type": "number",
+                "min": 0,
+                "max": 536870911,
+                "title": {
+                  "en": "My Mood ID",
+                  "nl": "My Mood-ID",
+                  "de": "My-Mood-ID",
+                  "fr": "ID My Mood",
+                  "it": "ID My Mood",
+                  "sv": "My Mood-ID",
+                  "no": "My Mood-ID",
+                  "es": "ID de My Mood",
+                  "da": "My Mood-id",
+                  "ru": "ID My Mood",
+                  "pl": "Identyfikator My Mood",
+                  "ko": "My Mood ID",
+                  "ar": "معرّف My Mood"
+                }
+              }
             ]
           }
         ]
       },
-      "widgets": {
-        "todays_meals": {
-          "name": {
-            "en": "Today's meals",
-            "nl": "Menu van vandaag"
-          },
-          "height": 200,
-          "settings": [
-            {
-              "id": "device",
-              "type": "autocomplete",
-              "title": {
-                "en": "Meal plan (optional when you have one)",
-                "nl": "Maaltijdplanning (optioneel als je er één hebt)"
-              }
-            },
-            {
-              "id": "show_images",
-              "type": "checkbox",
-              "value": true,
-              "title": {
-                "en": "Show recipe pictures",
-                "nl": "Toon receptafbeeldingen"
-              }
-            }
-          ],
-          "api": {
-            "getState": {
-              "method": "GET",
-              "path": "/state"
-            }
-          },
-          "id": "todays_meals",
-          "previewDark": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/widgets/todays_meals/preview-dark.png",
-          "previewLight": "https://apps.homeycdn.net/app/be.functor.mealie/4/9f2a96e0-b265-4bc7-85e6-a2d67a7c6fdd/widgets/todays_meals/preview-light.png"
-        }
-      },
+      "widgets": null,
       "screensavers": [],
-      "homeyCommunityTopicId": 162097,
+      "homeyCommunityTopicId": 161430,
       "state": "live",
-      "stateChangedAt": "2026-11-26T16:15:24.931Z",
+      "stateChangedAt": "2026-11-27T10:51:27.807Z",
       "bugs": null,
       "homepage": null,
-      "support": "https://community.homey.app/t/162097",
+      "support": "https://community.homey.app/t/app-pro-test-dimplex-itc-control-your-dimplex-e-matrix-fireplace/161430",
       "source": null,
       "contributors": null,
-      "contributing": {
-        "donate": {
-          "paypal": {
-            "username": "functorsolutions"
-          }
-        }
-      },
-      "permissions": [],
+      "contributing": null,
+      "permissions": [
+        "homey:wireless:ble"
+      ],
       "apiScopes": null,
       "changelog": {
-        "en": "Tomorrow's meals as capabilities, prep/cooking/total time tokens on the meal changed trigger, and new conditions: a meal is planned tomorrow, and a meal takes more or less than a number of minutes.",
-        "nl": "Het menu van morgen als capabilities, tokens voor voorbereidings-, kook- en totale tijd bij de menu-gewijzigd-trigger, en nieuwe voorwaarden: er is een maaltijd gepland voor morgen, en een maaltijd duurt langer of korter dan een aantal minuten."
+        "en": "Stability update for LAN and Bluetooth"
       },
-      "compatibility": ">=12.1.0",
+      "compatibility": ">=5.0.0",
       "tags": null,
       "platforms": [
         "local"
@@ -2461,18 +1683,157 @@
       "platformLocalOptionalFeatures": [],
       "runtime": "nodejs"
     },
-    "liveVersion": "0.3.0",
+    "liveVersion": "0.1.26",
     "testBuild": null,
     "testVersion": null,
     "private": false,
     "sponsoredUrl": {},
     "author": {
-      "id": "66ffa09c645b24bd5bc1b47f",
+      "id": "6a9f0460336db3df05ad7ccc",
       "type": "user",
-      "userId": "66ab1174ab6ab8914d6e08cc",
-      "name": "Kenny Moens",
+      "userId": "5cc484bec8a99c0e8d57bfed",
+      "name": "Harm Jonkers",
       "verified": false
     },
-    "communityTopicId": 162097
+    "communityTopicId": 161430
+  },
+  {
+    "id": "com.samduo",
+    "rating": null,
+    "liveBuild": {
+      "id": 1,
+      "name": {
+        "en": "SAMDUO",
+        "de": "SAMDUO",
+        "nl": "SAMDUO"
+      },
+      "version": "1.0.0",
+      "readme": {
+        "en": "Keep an eye on your SAMDUO energy storage from Homey. Connect your E6000, E6000H or P2800 to see how your battery and solar power are being used throughout the day, and control the off-grid output port from your device in Homey.\n\nSign in with your SAMDUO account when adding a device. Your devices must already be linked to that account. An internet connection and access to the SAMDUO cloud service are required.\n",
+        "de": "Behalte deinen SAMDUO-Energiespeicher mit Homey im Blick. Verbinde deinen E6000, E6000H oder P2800, um zu sehen, wie Batterie und Solarstrom im Tagesverlauf genutzt werden, und steuere den Inselnetzausgang über dein Gerät in Homey.\n\nMelde dich beim Hinzufügen eines Geräts mit deinem SAMDUO-Konto an. Deine Geräte müssen bereits mit diesem Konto verknüpft sein. Eine Internetverbindung und der Zugriff auf den SAMDUO-Clouddienst sind erforderlich.\n",
+        "nl": "Houd je SAMDUO-energieopslag in de gaten met Homey. Verbind je E6000, E6000H of P2800 om te zien hoe je batterij en zonnestroom gedurende de dag worden gebruikt, en bedien de off-griduitgang via je apparaat in Homey.\n\nMeld je bij het toevoegen van een apparaat aan met je SAMDUO-account. Je apparaten moeten al aan dat account gekoppeld zijn. Een internetverbinding en toegang tot de SAMDUO-clouddienst zijn vereist.\n"
+      },
+      "description": {
+        "en": "Connects Samduo balcony energy storage devices.",
+        "de": "Verbindet Samduo-Balkonenergiespeicher.",
+        "nl": "Verbindt Samduo-energieopslagsystemen voor het balkon."
+      },
+      "category": "energy",
+      "brandColor": "#000000",
+      "icon": "https://apps.homeycdn.net/app/com.samduo/1/18a03ead-8d4b-41bb-8341-0617938840de/assets/icon.svg",
+      "imageSmall": "https://apps.homeycdn.net/app/com.samduo/1/18a03ead-8d4b-41bb-8341-0617938840de/assets/images/small.png",
+      "imageLarge": "https://apps.homeycdn.net/app/com.samduo/1/18a03ead-8d4b-41bb-8341-0617938840de/assets/images/large.png",
+      "drivers": [
+        {
+          "id": "e6000",
+          "name": {
+            "en": "E6000",
+            "de": "E6000",
+            "nl": "E6000"
+          },
+          "class": "battery",
+          "capabilities": [
+            "measure_power.off_grid",
+            "measure_power.on_grid",
+            "measure_power",
+            "measure_battery",
+            "meter_power.charged",
+            "meter_power.discharged",
+            "inv_backup"
+          ],
+          "capabilitiesOptions": {
+            "measure_power.off_grid": {
+              "title": {
+                "en": "Off-grid",
+                "de": "Inselbetrieb",
+                "nl": "Eilandbedrijf"
+              }
+            },
+            "measure_power.on_grid": {
+              "title": {
+                "en": "On-grid",
+                "de": "Netzleistung",
+                "nl": "Netvermogen"
+              }
+            },
+            "meter_power.charged": {
+              "title": {
+                "en": "Charged Energy",
+                "de": "Geladene Energie",
+                "nl": "Geladen energie"
+              },
+              "decimals": 3
+            },
+            "meter_power.discharged": {
+              "title": {
+                "en": "Discharged Energy",
+                "de": "Entladene Energie",
+                "nl": "Ontladen energie"
+              },
+              "decimals": 3
+            }
+          },
+          "energy": {
+            "homeBattery": true,
+            "meterPowerImportedCapability": "meter_power.charged",
+            "meterPowerExportedCapability": "meter_power.discharged"
+          },
+          "imageSmall": "https://apps.homeycdn.net/app/com.samduo/1/18a03ead-8d4b-41bb-8341-0617938840de/drivers/e6000/assets/images/small.png",
+          "imageLarge": "https://apps.homeycdn.net/app/com.samduo/1/18a03ead-8d4b-41bb-8341-0617938840de/drivers/e6000/assets/images/large.png",
+          "platforms": [
+            "local",
+            "cloud"
+          ],
+          "connectivity": [
+            "cloud"
+          ],
+          "icon": "https://apps.homeycdn.net/app/com.samduo/1/18a03ead-8d4b-41bb-8341-0617938840de/drivers/e6000/assets/icon.svg"
+        }
+      ],
+      "flow": {
+        "triggers": null,
+        "conditions": null,
+        "actions": null
+      },
+      "widgets": null,
+      "screensavers": [],
+      "homeyCommunityTopicId": null,
+      "state": "live",
+      "stateChangedAt": "2026-11-27T08:25:18.297Z",
+      "bugs": null,
+      "homepage": null,
+      "support": "mailto:support@samduo.com",
+      "source": null,
+      "contributors": null,
+      "contributing": null,
+      "permissions": [],
+      "apiScopes": null,
+      "changelog": {
+        "en": "Initial release"
+      },
+      "compatibility": ">=12.13.0",
+      "tags": null,
+      "platforms": [
+        "local",
+        "cloud"
+      ],
+      "sdk": 3,
+      "platformLocalRequiredFeatures": [],
+      "platformLocalOptionalFeatures": [],
+      "runtime": "nodejs"
+    },
+    "liveVersion": "1.0.0",
+    "testBuild": null,
+    "testVersion": null,
+    "private": false,
+    "sponsoredUrl": {},
+    "author": {
+      "id": "6af2864c72573f07ae8e4068",
+      "type": "org",
+      "userId": null,
+      "name": "SAMDUO",
+      "verified": true
+    },
+    "communityTopicId": null
   }
 ]

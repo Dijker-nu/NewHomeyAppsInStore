@@ -1,17 +1,5 @@
 [
   {
-    "appId": "energy.planetpod",
-    "name": "Planetpod",
-    "developerName": "Planetpod",
-    "developerId": "6a9e78d766ae2e8253cdea4f",
-    "version": "1.0.3",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-28T09:49:24.482Z",
-    "updatedAt": "2026-10-28T09:49:24.482Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-28T09:49:24.482Z"
-  },
-  {
     "appId": "com.desi.smart",
     "name": "Desi Smart",
     "developerName": "DESI Smart Lock & Security Systems",
@@ -862,5 +850,29 @@
     "updatedAt": "2026-11-26T17:56:48.487Z",
     "communityTopicId": 162097,
     "discoveredAt": "2026-11-26T17:56:47.010Z"
+  },
+  {
+    "appId": "com.dimplex.ematrix",
+    "name": "Dimplex e-MatriX",
+    "developerName": "Harm Jonkers",
+    "developerId": "6a9f0460336db3df05ad7ccc",
+    "version": "0.1.26",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-27T12:42:27.139Z",
+    "updatedAt": "2026-11-27T12:42:27.139Z",
+    "communityTopicId": 161430,
+    "discoveredAt": "2026-11-27T12:42:27.139Z"
+  },
+  {
+    "appId": "com.samduo",
+    "name": "SAMDUO",
+    "developerName": "SAMDUO",
+    "developerId": "6af2864c72573f07ae8e4068",
+    "version": "1.0.0",
+    "sourceRepository": "",
+    "publishedAt": "2026-11-27T12:42:27.139Z",
+    "updatedAt": "2026-11-27T12:42:27.139Z",
+    "communityTopicId": null,
+    "discoveredAt": "2026-11-27T12:42:27.139Z"
   }
 ]
