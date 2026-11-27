@@ -20502,5 +20502,16 @@
     "publishedAt": "2026-11-27T13:15:47.803Z",
     "updatedAt": "2026-11-27T13:15:47.803Z",
     "communityTopicId": 70840
+  },
+  {
+    "appId": "au.com.aritech.ats",
+    "name": "Aritech ATS",
+    "developerName": "Ignaece Bliekendaal",
+    "developerId": "6a862c99c6a80eeabce6ceee",
+    "version": "0.14.0",
+    "sourceRepository": "https://github.com/5nugg3r/aritech-ats-homey",
+    "publishedAt": "2026-11-27T23:48:14.835Z",
+    "updatedAt": "2026-11-27T23:48:14.835Z",
+    "communityTopicId": 158562
   }
 ]

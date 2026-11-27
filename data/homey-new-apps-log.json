@@ -1,77 +1,5 @@
 [
   {
-    "appId": "com.desi.smart",
-    "name": "Desi Smart",
-    "developerName": "DESI Smart Lock & Security Systems",
-    "developerId": "6a9feaf466ae2e8253114b3d",
-    "version": "1.0.6",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-28T17:32:10.079Z",
-    "updatedAt": "2026-10-28T17:32:10.079Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-28T17:32:10.079Z"
-  },
-  {
-    "appId": "com.gpm.bluetti",
-    "name": "BLUETTI",
-    "developerName": "Gabriel Pedrosa Machado",
-    "developerId": "69782a0e6b884a38a96c58e6",
-    "version": "0.4.1",
-    "sourceRepository": "https://github.com/gpmachado/com.gpm.bluetti",
-    "publishedAt": "2026-10-28T17:32:11.153Z",
-    "updatedAt": "2026-10-28T17:32:11.153Z",
-    "communityTopicId": 160644,
-    "discoveredAt": "2026-10-28T17:32:10.079Z"
-  },
-  {
-    "appId": "dk.elpriser",
-    "name": "Elpriser.dk",
-    "developerName": "Elpriser.dk ApS",
-    "developerId": "6adb64f547d7399db6cc2b7b",
-    "version": "1.0.1",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-28T17:32:11.153Z",
-    "updatedAt": "2026-10-28T17:32:11.153Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-28T17:32:10.079Z"
-  },
-  {
-    "appId": "com.meteoveo",
-    "name": "MeteoVeo",
-    "developerName": "Zsolt Reinhardt",
-    "developerId": "624609ffcd04c7cc9ac94de6",
-    "version": "0.1.1",
-    "sourceRepository": "https://github.com/Meteoveo/homey-meteoveo",
-    "publishedAt": "2026-10-28T17:32:11.848Z",
-    "updatedAt": "2026-10-28T17:32:11.848Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-28T17:32:10.079Z"
-  },
-  {
-    "appId": "io.olae.imapclient",
-    "name": "IMAP Client",
-    "developerName": "Ola Eriksson",
-    "developerId": "604eaa07ea27a57b449d78c2",
-    "version": "1.0.1",
-    "sourceRepository": "",
-    "publishedAt": "2026-10-28T17:32:12.585Z",
-    "updatedAt": "2026-10-28T17:32:12.585Z",
-    "communityTopicId": 161392,
-    "discoveredAt": "2026-10-28T17:32:10.079Z"
-  },
-  {
-    "appId": "io.github.starredev.ramses",
-    "name": "RAMSES ESP",
-    "developerName": "Bryan van der Starre",
-    "developerId": "6ac24d17bdc7ced970ffe259",
-    "version": "1.0.7",
-    "sourceRepository": "https://github.com/starredev/homey-ramses-esp",
-    "publishedAt": "2026-10-28T17:32:12.585Z",
-    "updatedAt": "2026-10-28T17:32:12.585Z",
-    "communityTopicId": null,
-    "discoveredAt": "2026-10-28T17:32:10.079Z"
-  },
-  {
     "appId": "dk.hye-knudsen.thermexwifihood",
     "name": "Thermex",
     "developerName": "Jon Hye-Knudsen",
@@ -886,5 +814,17 @@
     "updatedAt": "2026-11-27T13:15:47.803Z",
     "communityTopicId": 70840,
     "discoveredAt": "2026-11-27T13:15:47.802Z"
+  },
+  {
+    "appId": "au.com.aritech.ats",
+    "name": "Aritech ATS",
+    "developerName": "Ignaece Bliekendaal",
+    "developerId": "6a862c99c6a80eeabce6ceee",
+    "version": "0.14.0",
+    "sourceRepository": "https://github.com/5nugg3r/aritech-ats-homey",
+    "publishedAt": "2026-11-27T23:48:14.835Z",
+    "updatedAt": "2026-11-27T23:48:14.835Z",
+    "communityTopicId": 158562,
+    "discoveredAt": "2026-11-27T23:48:14.835Z"
   }
 ]
